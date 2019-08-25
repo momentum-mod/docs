@@ -1,9 +1,22 @@
 main:
-  - title: "Posts"
-    url: /posts/
+  - title: "Main Site"
+    url: "https://momentum-mod.org"
   - title: "Categories"
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "About"
-    url: /about/
+
+sidebar:
+  - title: "Console Commands"
+    children:
+      - title: "mom_reset"
+        url: /command/mom_reset/
+      - title: "mom_restart"
+        url: /command/mom_restart/
+  - title: "Console Vars"
+  - title: "Guides"
+    children:
+      - title: "How to Create a Docs Page"
+        url: /guide/create-docs-page/
+      - title: "How to Install CS:S Assets"
+        url: /guide/install-css-assets/
