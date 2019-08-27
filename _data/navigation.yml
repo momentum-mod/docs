@@ -16,6 +16,8 @@ sidebar:
   - title: "Console Vars"
   - title: "Guides"
     children:
+      - title: "Basic Zoning"
+        url: /guide/basic-zoning/
       - title: "How to Create a Docs Page"
         url: /guide/create-docs-page/
       - title: "How to Install CS:S Assets"
