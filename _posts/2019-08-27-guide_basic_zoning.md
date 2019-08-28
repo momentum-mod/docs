@@ -7,9 +7,11 @@ tags:
   - basics
 toc: true
 ---
+<img src="/assets/images/guide_headers/guide_basic_zones.jpg" alt="Zone Guide" style="display: block; margin: auto;">
+
 This Guide will cover the most basic usage of the Zoning Tools to create a Start and End Zone.  
 > Looking for Stages and Bonuses?  
-> Try the [Advanced Zoning Guide](/404.html).  
+> Try the [Advanced Zoning Guide](/404.html).
 
 ## Prerequisites
 To follow this Guide you should:
