@@ -1,27 +1,32 @@
-# Minimal Mistakes remote theme starter
+# [Momentum Mod Documentation](https://docs.momentum-mod.org)
 
-Fork this repo for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+![](assets/images/logo.png)
 
-Contains basic configuration to get you a site with:
+> A documentation website for Momentum Mod, running on [Jekyll](https://jekyllrb.com/) and using the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme.
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+## What This Is
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+This repo is an open source collection of documentation for various aspects of the game Momentum Mod. This includes (but is not exactly limited to):
 
----
+ * Documenting Momentum's console commands
+ * Documenting Momentum's console variables
+ * Documenting Momentum's custom entities
+ * Guides for using Momentum Mod or related tools (zone tools, custom entities, etc)
+ * Guides for mapping (**related to Momentum and/or its gametypes**)
 
-## Troubleshooting
+## What This Isn't
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+This repo and website should pertain to being **only** about the game Momentum Mod and its related gametypes (Surf, Bhop, RJ, KZ, etc).
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+This means we do **NOT** want:
+ * General guides about Hammer (this isn't [TopHattWaffle](https://www.youtube.com/user/rocketrascal34) / [Valve Dev Wiki](https://developer.valvesoftware.com/wiki/Category:Level_Design))
+ * Off-topic articles (this isn't [Medium](https://medium.com/))
+ * Map-specific articles (this isn't [a wikia](https://www.fandom.com/))
+
+This may change in the future, but for now, keep it about Momentum.
+
+## Contributing
+
+Pull Requests are highly appreciated! Just branch off of master, make your edits, and open a Pull Request into master describing what you changed. Pages could be edited directly through GitHub, or you can download your fork and edit through a program like [Visual Studio Code](https://code.visualstudio.com/).
+
+If you need a guide for how to contribute, one can be found on the [how-to page](https://docs.momentum-mod.org/guide/create-docs-page/) on the documentation site. Another good resource is to simply look at existing posts, or past commits for reference. Furthermore, another good reference could be asking around in the [Momentum Mod Discord server](https://discord.gg/V4gS7Qg).
