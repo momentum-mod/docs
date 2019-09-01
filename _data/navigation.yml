@@ -18,6 +18,10 @@ sidebar:
     children:
       - title: "Basic Zoning"
         url: /guide/basic-zoning/
+      - title: "Advanced Zoning"
+        url: /guide/advanced-zoning/
+      - title: "Zone Types"
+        url: /guide/zone-types/
       - title: "The PBR Shader"
         url: /guide/pbr-shader/
       - title: "How to Create a Docs Page"
