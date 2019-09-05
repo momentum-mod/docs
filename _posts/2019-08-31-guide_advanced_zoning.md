@@ -54,12 +54,12 @@ And as mentioned before you can have concave shapes like so:
 
 Once you have made the shape you want, you have to use the **Enter** key to move on to extruding it upwards as clicking will only continue to make more lines.  
 
-<img src="/assets/images/zone_guide/adv_point_5.png" alt="Vertical extrusion" style="display: block; margin: auto;">
+<img src="/assets/images/zone_guide/adv_point_5.jpg" alt="Vertical extrusion" style="display: block; margin: auto;">
 
 
 Once the height is where you want it, press **Enter** again.  
 
-<img src="/assets/images/zone_guide/adv_point_6.png" alt="Zone done" style="display: block; margin: auto;">
+<img src="/assets/images/zone_guide/adv_point_6.jpg" alt="Zone done" style="display: block; margin: auto;">
 
 The Zone will change colour and be finalised.  
 

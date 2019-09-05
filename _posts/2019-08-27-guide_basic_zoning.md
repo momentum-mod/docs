@@ -42,7 +42,7 @@ This shows where you will be creating the Zone in the map; it snaps to a grid, s
 ## Creating a Zone
 In this example the Zone will fill this doorway:
 
-<img src="/assets/images/zone_guide/zone_create_0.png" alt="Creating the Zone 1" style="display: block; margin: auto;">
+<img src="/assets/images/zone_guide/zone_create_0.jpg" alt="Creating the Zone 1" style="display: block; margin: auto;">
 
 First, click the ***Create Zone*** button - you will be able to look around again.  
 
@@ -83,7 +83,7 @@ In this example the Zone has become green - it is a Start Zone.
 
 To create the End Zone, go to where you want it and repeat the process, you should have a red cube this time:
 
-<img src="/assets/images/zone_guide/zone_end.png" alt="End Zone" style="display: block; margin: auto;">
+<img src="/assets/images/zone_guide/zone_end.jpg" alt="End Zone" style="display: block; margin: auto;">
 
 ## Saving the Zones
 If all goes well you should be able to click ***Save Zones***, close the GUI and test the map.  
