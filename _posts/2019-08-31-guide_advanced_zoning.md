@@ -44,7 +44,7 @@ Whilst checked, when you begin to draw out a Zone, things will look different:
 
 <img src="/assets/images/zone_guide/adv_point_2.png" alt="Drawing out a line" style="display: block; margin: auto;">
 
-You will begin to draw out a line instead of a rectangle. Click again on it will become a triangle when you move the mouse again:  
+You will begin to draw out a line instead of a rectangle. Click again and it will become a triangle when you move the mouse again:  
 
 <img src="/assets/images/zone_guide/adv_point_3.png" alt="Now it is a triangle" style="display: block; margin: auto;">
 
@@ -86,4 +86,4 @@ This number is for the ordering of Zones.
 
 It is set to 0 by default, which means it is automatically assigned so this is for any ones you want to manually specify.  
 
-The Start triggers begin at 1, so anything you use should start at 2.
+Start triggers begin at 1, so anything you specify should start at 2.
