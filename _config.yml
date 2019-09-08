@@ -60,15 +60,15 @@ plugins:
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/MomentumMod"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/momentum-mod"
     - label: "Discord"
       icon: "fab fa-fw fa-discord"
       url: "https://discord.gg/V4gS7Qg"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/momentum-mod"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/MomentumMod"
 
 defaults:
   # _posts
