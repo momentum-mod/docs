@@ -24,6 +24,8 @@ sidebar:
         url: /guide/zone-types/
       - title: "The PBR Shader"
         url: /guide/pbr-shader/
+      - title: "Parallax-Corrected Cubemaps"
+        url: /guide/parallax-corrected-cubemaps/
       - title: "How to Create a Docs Page"
         url: /guide/create-docs-page/
       - title: "How to Install CS:S Assets"
