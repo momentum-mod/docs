@@ -6,6 +6,7 @@
 $background-color: #161616 !default;
 $text-color: #fff !default;
 $primary-color: #2e66a5 !default;
+$active-color: $primary-color;
 $border-color: mix(#fff, $background-color, 20%) !default;
 $code-background-color: mix(#000, $background-color, 15%) !default;
 $code-background-color-dark: mix(#000, $background-color, 20%) !default;
