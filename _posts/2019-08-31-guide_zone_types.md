@@ -5,6 +5,7 @@ category: guide
 tags:
   - zones
 toc: true
+toc_sticky: true
 ---
 <img src="/assets/images/guide_headers/guide_zone_colours.jpg" alt="Zone Guide" style="display: block; margin: auto;">
 

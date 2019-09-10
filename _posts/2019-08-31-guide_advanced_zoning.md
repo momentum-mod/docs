@@ -6,6 +6,7 @@ tags:
   - zones
   - advanced
 toc: true
+toc_sticky: true
 ---
 <img src="/assets/images/guide_headers/guide_advanced_zoning.jpg" alt="Advanced Zone Guide" style="display: block; margin: auto;">
 
