@@ -6,6 +6,7 @@ tags:
   - zones
   - basics
 toc: true
+toc_sticky: true
 ---
 <img src="/assets/images/guide_headers/guide_basic_zones.jpg" alt="Zone Guide" style="display: block; margin: auto;">
 

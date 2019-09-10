@@ -5,6 +5,7 @@ category: guide
 tags:
   - pbr
 toc: true
+toc_sticky: true
 ---
 <img src="/assets/images/guide_headers/guide_pbr_shader.jpg" alt="PBR Guide" style="display: block; margin: auto;">
 
