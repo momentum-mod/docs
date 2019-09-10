@@ -1,0 +1,9 @@
+order:
+  - name: "Guides"
+    category: "guide"
+  - name: "Entities"
+    category: "entity"
+  - name: "Console Commands"
+    category: "command"
+  - name: "Console Vars"
+    category: "var"
