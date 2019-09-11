@@ -28,18 +28,16 @@ They will create a split on the Timer and can be reset to instead of the beginni
 
 ## Changing Zone Colours
 These are the cvars you can use to change the colours of each Zone type, the colours are in Hexadecimal:  
-```
-mom_zone_start_outline_color 00FF00FF
-mom_zone_stage_outline_color 0000FFFF
-mom_zone_end_outline_color FF0000FF
-mom_zone_checkpoint_outline_color FFFF00FF
-```
+
+ * [mom_zone_start_outline_color](/var/mom_zone_start_outline_color) 00FF00FF
+ * [mom_zone_stage_outline_color](/var/mom_zone_stage_outline_color) 0000FFFF
+ * [mom_zone_end_outline_color](/var/mom_zone_end_outline_color) FF0000FF
+ * [mom_zone_checkpoint_outline_color](/var/mom_zone_checkpoint_outline_color) FFFF00FF
 
 ## Disabling Zone Outlines
 If you wish to disable the Zone appearing altogether, there is a cvar for each type as well:  
-```
-mom_zone_start_outline_enable 1
-mom_zone_stage_outline_enable 1
-mom_zone_end_outline_enable 1
-mom_zone_checkpoint_outline_enable 1
-```
+
+ * [mom_zone_start_outline_enable](/var/mom_zone_start_outline_enable) [0/1]
+ * [mom_zone_stage_outline_enable](/var/mom_zone_start_outline_enable) [0/1]
+ * [mom_zone_end_outline_enable](/var/mom_zone_start_outline_enable) [0/1]
+ * [mom_zone_checkpoint_outline_enable](/var/mom_zone_start_outline_enable) [0/1]
