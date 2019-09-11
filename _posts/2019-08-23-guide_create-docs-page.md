@@ -18,6 +18,22 @@ All pages on this site are hosted in the [Momentum Mod docs GitHub repository](h
  * [Markdown Documentation](https://www.markdownguide.org/)
  * [Minimal Mistakes Documentation](https://mmistakes.github.io/minimal-mistakes/docs/layouts/)
 
+## Setting up Locally
+
+Since this website is static HTML, the requirements to run it are fairly simple compared to traditional websites.
+
+Follow the steps to install [Ruby and Jekyll](https://jekyllrb.com/docs/installation/) for your platform.
+
+Open a terminal with Ruby and change to the directory where you cloned this repository.
+
+<div class="note info">
+<p>If it is your first time running the website, run <br/><code>bundle install</code><br/> first to install dependencies!</p>
+</div>
+
+Run `bundle exec jekyll serve` to host the website. Jekyll hosts the website at [localhost:4000](http://localhost:4000) and automatically reloads to any file changes done to posts, data, or excess files. The only exception is changes made to `_config.yml`, that will require restarting the Jekyll process.
+
+You can use `CTRL+C` to stop the process in the terminal when you are done with it.
+
 ## Creating a new Page
 
 ### Creating the File
@@ -51,22 +67,15 @@ title: # The name of the command or convar, or the Guide/Article name. E.g. "mom
 
 permalink: # If creating a guide, you will need to override this to point to the shorthand of it. E.g. "/guide/create-docs-page/". If not creating a guide, there is typically no need to overwrite this.
 
-category: [command/guide/var] # The category of the post. One of "command", "guide", or "var"
+category: [command/guide/var/entity] # The category of the post. One of "command", "guide", "entity" or "var"
 
 tags:
   - # A list of tags, with each starting on a new line and using a "-" character.
 
 toc: [true/false] # Whether the page should have a Table of Contents. Defaults to false.
+toc_sticky: [true/false] # If you are using the Table of Contents, consider setting this to true if the page is long.
 ---
 ```
-
-### Adding to navigation.yml (Optional)
-
-If you want your page to show up on the sidebar, you will need to edit another file.
-
-Inside of the `_data/` folder is the `navigation.yml` file. Inside of this is where the sidebar order and linking goes.
-
-Insert new entries lexigraphically into the list. Make sure the URLs match the others found in the file, otherwise the page will not highlight itself!
 
 ## Requiring `-mapping`
 If a command or convar requires `-mapping` to work, you may specify it as such in the front matter:
