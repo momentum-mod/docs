@@ -5,5 +5,5 @@ order:
     category: "entity"
   - name: "Console Commands"
     category: "command"
-  - name: "Console Vars"
+  - name: "Console Variables"
     category: "var"
