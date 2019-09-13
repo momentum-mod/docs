@@ -5,28 +5,3 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-
-sidebar:
-  - title: "Console Commands"
-    children:
-      - title: "mom_reset"
-        url: /command/mom_reset/
-      - title: "mom_restart"
-        url: /command/mom_restart/
-  - title: "Console Vars"
-  - title: "Guides"
-    children:
-      - title: "Basic Zoning"
-        url: /guide/basic-zoning/
-      - title: "Advanced Zoning"
-        url: /guide/advanced-zoning/
-      - title: "Zone Types"
-        url: /guide/zone-types/
-      - title: "The PBR Shader"
-        url: /guide/pbr-shader/
-      - title: "Parallax-Corrected Cubemaps"
-        url: /guide/parallax-corrected-cubemaps/
-      - title: "How to Create a Docs Page"
-        url: /guide/create-docs-page/
-      - title: "How to Install CS:S Assets"
-        url: /guide/install-css-assets/
