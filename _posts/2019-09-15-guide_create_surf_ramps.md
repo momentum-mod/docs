@@ -49,7 +49,7 @@ For this guide the dimensions will be 960 x 640 for double sided ramps.
 <img src="/assets/images/ramps_guide/guide_block2.jpg" alt="View of block in hammer" style="display: block; margin: auto;">
 
 Now you need to cut the block you have made in order to create the surfable slanted surface. Using the cutting tool, make one end near the lower corner of the ramp and the other one near the top center. 
-Cycle through the options by pressing `Shift + X` or pressing the tool logo until the part that you want to cut is red and the rest is not. Press enter to cut it.
+Cycle through the options by pressing `Shift + X` or pressing the tool logo until the part that you want to cut is red, and the rest is not. Press enter to cut it.
 
 <img src="/assets/images/ramps_guide/guide_cut.jpg" alt="View of block being cut into ramp in hammer" style="display: block; margin: auto;">
 
@@ -73,7 +73,7 @@ The instinctual thing to do would be to use the cutting tool to slice up the ram
 Doing this alone can cause the collision on your ramps to break near the seams where these slices meet, often causing players to get stuck or lose speed on them.  
   
 This is where the importance of separating visuals from collision comes in. You want your collision on the surfable portion of the ramp to be as simple as possible to avoid these errors. 
-In this case you would want to create a copy of your simple ramp and make it into a world brush using the toWorld button and texture it as **tools/toolsplayerclip** or **tools/toolsinvisible**. This creates a seperate brush to represent the collision for the ramp and will not appear visible in-game.
+In this case you would want to create a copy of your simple ramp and make it into a world brush using the toWorld button and texture it as **tools/toolsplayerclip** or **tools/toolsinvisible**. This creates a separate brush to represent the collision for the ramp and will not appear visible in-game.
 
 <img src="/assets/images/ramps_guide/guide_seperatecollisions.jpg" alt="View of seperate collision brush next to normal ramp" style="display: block; margin: auto;">
 
@@ -85,11 +85,11 @@ Finally move the two versions of the ramp so that they overlap in the exact same
 
 <img src="/assets/images/ramps_guide/guide_mergeramp1.jpg" alt="View of final ramp in hammer" style="display: block; margin: auto;">
 
-With your ramp completed, you can use the cordon tool to seal it off and compile the map to view it in-game. At this point in development normally you just want to test the surf so you don't need to compile with lighting or vis.
+With your ramp completed, you can use the cordon tool to seal it off and compile the map to view it in-game. At this point in development normally you would just want to test the surf, so you don't need to compile with lighting or vis.
 
 <img src="/assets/images/ramps_guide/guide_ingame.jpg" alt="View of ramp in-game" style="display: block; margin: auto;">
 
-There it is! Absolutely stunning! Basically ready for release!
+There it is! Absolutely stunning! Looking ready for release!
 
 ## Curved Surf Ramps
 
@@ -102,8 +102,8 @@ Curved ramps can be helpful on easy maps since beginners will have an easier tim
 <img src="/assets/images/ramps_guide/guide_vertexprecision_transparent.png" alt="Example of vertex precision loss" style="display: block; margin: auto;">
 
 If you have ever zoomed in really close on off grid brushwork you may have noticed that the vertices act a bit strange. 
-Sadly, the way hammer was made does not give mappers infinte precision with their brushwork. 
-This means that the editor has to do some guesswork when dealing with vertices that are not alligned with the grid. 
+Sadly, the way hammer was made does not give mappers infinite precision with their brushwork. 
+This means that the editor has to do some guesswork when dealing with vertices that are not aligned with the grid. 
 Due to this limitation, vertices left off grid will shift very slightly when compiling and loading the map file.  
   
 <img src="/assets/images/ramps_guide/guide_ramp_base.jpg" alt="Surf ramp with a base at the bottom of its segments" style="display: block; margin: auto;">
@@ -124,8 +124,8 @@ To start working on a curved ramp, the first thing you need is a flat one.
 <img src="/assets/images/ramps_guide/guide_ramp_segment.jpg" alt="A single ramp segment in hammer" style="display: block; margin: auto;">
 
 This can be very short since it will be copied and rotated repeatedly to create the illusion of a curve. 
-Generally ramp segments are rotated by 2 to 5 degrees for each time they are copied. 
-Rotating each segment by too much will make the ramp feel bumpy, but giving it too little will require far too many segments to create the curve. 
+Generally, ramp segments are rotated by 2 to 5 degrees for each time they are copied. 
+Rotating each segment by too much will make the ramp feel bumpy but giving it too little will require far too many segments to create the curve. 
 The front and back of the segment can be left as nodraw since when the ramp is finished, most of these faces will not be visible.
   
 <img src="/assets/images/ramps_guide/guide_secondsegment.jpg" alt="A second ramp segment with the rotation tool" style="display: block; margin: auto;">
@@ -138,13 +138,13 @@ From here you can rotate the segment. In this example the segment is rotated by 
   
 Now it's time to line the second segment up to connect it to the first one. 
 With the second segment selected, press `Shift + V` or click on the vertex tool button to enable vertex editing. 
-Normally this tool is used to edit solids but for this tutorial we will just use it to allign brushes. 
+Normally this tool is used to edit solids but for this tutorial we will just use it to align brushes. 
 Drag a box around the selected segment like you would when selecting it in the 2d view, then hit enter to select all of the segment's vertices.
   
 <img src="/assets/images/ramps_guide/guide_align.jpg" alt="Two segments aligned by the vertex tool" style="display: block; margin: auto;">
   
 Make sure all of the vertices are red (meaning they are all selected) and drag the bottom corner of the ramp so that it is connects to the other segment at the bottom. 
-Ensure that both of these ramps are alligned to grid at this anchor point. Now that you have two segments connected properly, 
+Ensure that both of these ramps are aligned to grid at this anchor point. Now that you have two segments connected properly, 
 you can select them both and use the vertex tool again to align the far bottom corner of the second segment to the grid. 
 This is where the next segment will connect.
   
@@ -166,7 +166,7 @@ Afterwards align the new 4 segment ramp to the grid on the farthest bottom corne
 <img src="/assets/images/ramps_guide/guide_align4.jpg" alt="Four segments aligned again" style="display: block; margin: auto;">
   
 You can repeat this process as many times as you want as long as you keep every segment aligned to the ones surrounding it. 
-For this example we will copy all four of the segments and do the process one more time, rotating this time by 20 degrees.
+For this example, we will copy all four of the segments and do the process one more time, rotating this time by 20 degrees.
   
 <img src="/assets/images/ramps_guide/guide_foursegment1.jpg" alt="Four segments have been duplicated" style="display: block; margin: auto;">
   
