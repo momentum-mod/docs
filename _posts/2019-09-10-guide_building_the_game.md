@@ -20,7 +20,7 @@ To make use of this page, you should:
 <div class="note info">
     <p>
 		<center><b><em>Important Note:</em></b></center><br>
-		You'll need Momentum activated on your Steam account in order to be able to test features!<br>  
+		You'll need Momentum activated on your Steam account in order to be able to test online features!<br>  
 		Please reach out to Gocnak explaining why you'd like a key.
     </p>
 </div>
@@ -48,7 +48,7 @@ It may also be called `origin/develop`:
 </div>
 
 ## Windows
-Download Momentum Mod on Steam **(see the important note at the top of this page).**
+Download Momentum Mod on Steam or grab the `MomentumDev` folder from [***Google Drive***](https://drive.google.com/file/d/115xT5IIN-CimKCZQho3xj7uIcYFMSZXm/view).
 
 Download [***Visual Studio 2019***](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16).
 
@@ -56,7 +56,9 @@ Follow [this step on the Valve Dev Wiki](https://developer.valvesoftware.com/wik
 
 Get a Git client like [***GitHub Desktop***](https://desktop.github.com/) if you haven't already and then clone this repository.
 
-Create an extra folder somewhere called `MomentumDev` and copy all of the files from your Steam's `steamapps/common/Momentum Mod` directory into this folder.
+If you downloaded Momentum Mod from Steam, create an extra folder somewhere called `MomentumDev`.
+
+Copy all of the files **except** the `momentum` folder from your Steam's `steamapps/common/Momentum Mod` directory into this folder.
  
 So for example, to get at `client.dll`, it should look like `MomentumDev/momentum/bin/client.dll`. 
 
