@@ -96,6 +96,10 @@ With your ramp completed, you can use the cordon tool to seal it off and compile
 
 There it is! Absolutely stunning! Looking ready for release!
 
+The vmf created during this guide is available [here](/assets/mapsrc/surf_ramp_tutorial/xbmann_basic_ramp.zip).
+  
+    
+  
 ## Curved Surf Ramps
 
 <img src="/assets/images/ramps_guide/headers/halloween.jpg" alt="halloween header" style="display: block; margin: auto;">
@@ -217,6 +221,8 @@ You now have a functioning curved ramp, let's see it in game:
 <img src="/assets/images/ramps_guide/guide_final_ingame.jpg" alt="3d view of final ramp" style="display: block; margin: auto;">
   
 Absolutely stunning! It looks like it was made by someone who really knows what they're doing.
+  
+The vmf created during this guide is available [here](/assets/mapsrc/surf_ramp_tutorial/xbmann_curved_func_detail.zip).
 
 ### Curved Ramps with Func_Brush
 
@@ -309,6 +315,9 @@ Just like that, you have a very smooth looking surf ramp.
 If you find yourself with visual errors on ramps done with this technique, 
 try cutting the base segment for the func_brush into more basic shapes (seperate the base from the triangular part, etc...) to make it easier for the compile process to handle.
 
+The vmf created during this guide is available [here](/assets/mapsrc/surf_ramp_tutorial/xbmann_curved_func_brush.zip).  
+  
+    
 ## Modeling Ramps
 
 ## Helpful Links
