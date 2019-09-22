@@ -24,6 +24,7 @@ toc_sticky: true
 ## Basic Surf Ramps
 
 ### Planning
+<img src="/assets/images/ramps_guide/headers/devstage.jpg" alt="devstage header" style="display: block; margin: auto;">
 
 Before you start to create your ramps in hammer, there are a few factors you should consider:
 - How steep do I want the ramps to be?
@@ -39,6 +40,8 @@ These characteristics of your ramps will inevitably be refined through testing, 
 Look at different surf maps that you enjoy and try to get an idea of how exactly you want yours to pan out.
 
 ### Creating the Base Ramp
+
+<img src="/assets/images/ramps_guide/headers/chateau.jpg" alt="chateau header" style="display: block; margin: auto;">
 
 Once you've figured out what you want your surf to play like, it is time to open hammer!  
   
@@ -67,13 +70,15 @@ Though this can sometimes just be a stylistic choice of the mapper, this can als
 
 ### Detailing the Ramp
 
+<img src="/assets/images/ramps_guide/headers/facility.jpg" alt="facility header" style="display: block; margin: auto;">
+
 Say you are not satisfied with the surfable area being entirely blue dev textures, and you want to spice it up near the top and bottom edge. 
 The instinctual thing to do would be to use the cutting tool to slice up the ramp and then apply new textures.  
   
 Doing this alone can cause the collision on your ramps to break near the seams where these slices meet, often causing players to get stuck or lose speed on them.  
   
 This is where the importance of separating visuals from collision comes in. You want your collision on the surfable portion of the ramp to be as simple as possible to avoid these errors. 
-In this case you would want to create a copy of your simple ramp and make it into a world brush using the toWorld button and texture it as **tools/toolsplayerclip** or **tools/toolsinvisible**. This creates a separate brush to represent the collision for the ramp and will not appear visible in-game.
+In this case you would want to create a copy of your simple ramp and make it into a world brush using the toWorld button and texture it as **tools/toolsplayerclip** or **tools/toolsblockbullet**. This creates a separate brush to represent the collision for the ramp and will not appear visible in-game.
 
 <img src="/assets/images/ramps_guide/guide_seperatecollisions.jpg" alt="View of seperate collision brush next to normal ramp" style="display: block; margin: auto;">
 
@@ -92,6 +97,8 @@ With your ramp completed, you can use the cordon tool to seal it off and compile
 There it is! Absolutely stunning! Looking ready for release!
 
 ## Curved Surf Ramps
+
+<img src="/assets/images/ramps_guide/headers/halloween.jpg" alt="halloween header" style="display: block; margin: auto;">
 
 Although you can do a lot with simple surf ramps, sometimes you will want to add curves to your surf in order to add variety. 
 Curved ramps can be helpful on easy maps since beginners will have an easier time landing on them.
@@ -119,6 +126,8 @@ Momentum hammer also implements a fix similar to HammerPatch.
 
 ### Curved Ramps with Func_Detail
 
+<img src="/assets/images/ramps_guide/headers/blackout.jpg" alt="blackout header" style="display: block; margin: auto;">
+
 To start working on a curved ramp, the first thing you need is a flat one.
   
 <img src="/assets/images/ramps_guide/guide_ramp_segment.jpg" alt="A single ramp segment in hammer" style="display: block; margin: auto;">
@@ -138,7 +147,7 @@ From here you can rotate the segment. In this example the segment is rotated by 
   
 Now it's time to line the second segment up to connect it to the first one. 
 With the second segment selected, press `Shift + V` or click on the vertex tool button to enable vertex editing. 
-Normally this tool is used to edit solids but for this tutorial we will just use it to align brushes. 
+Normally this tool is used to edit solids but for this guide we will just use it to align brushes. 
 Drag a box around the selected segment like you would when selecting it in the 2d view, then hit enter to select all of the segment's vertices.
   
 <img src="/assets/images/ramps_guide/guide_align.jpg" alt="Two segments aligned by the vertex tool" style="display: block; margin: auto;">
@@ -211,12 +220,102 @@ Absolutely stunning! It looks like it was made by someone who really knows what 
 
 ### Curved Ramps with Func_Brush
 
+<img src="/assets/images/ramps_guide/headers/rez2.jpg" alt="rez2 header" style="display: block; margin: auto;">
+
+Similar to straight ramps, curved ramps can only achieve a certain amount of versatility with only func_detail. 
+For instance, trying to rotate each segment by 2.5 with only func_detail can cause for the ramp to have broken collision.  
+  
+Just like last time, you can enhance your curved ramps with the use of playerclip and non-solid func_brush. 
+With func_brush you should avoid overlapping brushes. This can be achieved with the cutting tool and some creativity.  
+  
+We will start off with just the collision of the ramp:  
+
+<img src="/assets/images/ramps_guide/guide_funcbrush_playerclip.jpg" alt="3d view of playerclip ramp" style="display: block; margin: auto">
+
+<img src="/assets/images/ramps_guide/guide_funcbrush_playerclip2d.jpg" alt="2d view of playerclip ramp" style="display: block; margin: auto">     
+  
+This was made just like the func_detail ramps, just using 96-unit long ramp segments and rotating the segment by 2.5 degrees instead of 5. 
+This is fine since it keeps the collision brushes very simple.
+
+For the visual portion things get more complicated. 
+Start by copying a segment from the collision ramp and apply nodraw and textures to it. Keep two copies to use for later.  
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_copies.jpg" alt="view of newly copied segments" style="display: block; margin: auto">    
+  
+Now one of the segments needs to be cut in a way that will keep it from overlapping with the other visual brushes.  
+  
+To do this, rotate the segment by half of the normal rotation value and align the bottom vertex to a grid point. 
+For this example, every segment was rotated by 2.5 degrees. This means that the segment should be rotated by 1.25.
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_rotate1.jpg" alt="rotation for segment" style="display: block; margin: auto">  
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_rotate2.jpg" alt="align the segment to grid" style="display: block; margin: auto">  
+
+Now on the vertex aligned to the grid, use the cutting tool and cut straight upwards. This will take off all of the parts that will be overlapping.
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_cut.jpg" alt="cutting the ramp segment" style="display: block; margin: auto">  
+  
+Repeat this process to the other side, you can rotate it by -2.5 to quickly get it slanted to the other side.
+
+<img src="/assets/images/ramps_guide/guide_funcbrush_secondrotate.jpg" alt="ramp is rotated in the other direction" style="display: block; margin: auto">
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_secondrotate2.jpg" alt="ramp is aligned to grid" style="display: block; margin: auto">
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_secondrotate3.jpg" alt="ramp is cut" style="display: block; margin: auto">
+
+Now rotate by 1.25 again to get the segment back to its original rotation. Your segment should now look like this: 
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_finalsegment.jpg" alt="final segment after cutting" style="display: block; margin: auto">
+  
+Create a curved ramp with this as the base segment. This is done the same way as before by rotating and connecting each segment.
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_fullramp1.jpg" alt="full ramp" style="display: block; margin: auto">
+  
+Notice that with this version of the ramp, nothing is overlapping so the 2d view looks much simpler. 
+When aligning this ramp with the playerclip version there is a problem!
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_fullramp2.jpg" alt="full ramp with playerclip" style="display: block; margin: auto">
+  
+Because of the way these segments were cut, the segment on the end does not line up with the end of the playerclip.   
+  
+Luckily there is still a copy of the original segment before cutting. 
+This can be cut on only one side so that it does not overlap with the previous segments but also lines up with the playerclip at the edge.  
+  
+Use the same method of cutting the segments as before and use `Ctrl + L` on a copy of it to create one for both sides.
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_edgesegment.jpg" alt="edge segments for ramp" style="display: block; margin: auto">
+
+Delete the two edge segments that weren't lining up properly and then align the edge of the ramp to the grid.
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_edgealign1.jpg" alt="aligned edge of the ramp" style="display: block; margin: auto">
+  
+Rotate the corrected segment until it can connect with the others and align it with the rest of the ramp
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_edgealign2.jpg" alt="aligned edge of the ramp" style="display: block; margin: auto">  
+
+Do the same for the other edge of the ramp. 
+After getting the ramp fixed, aligning it with the playerclip ramp shows that it now perfectly matches the collision.
+
+<img src="/assets/images/ramps_guide/guide_funcbrush_corrected.jpg" alt="corrected ramp and collision" style="display: block; margin: auto">
+  
+Now is the time to texture the edges of the ramp that are showing nodraw and make the visual portion into a func_brush with Solidity set to Never Solid.
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_corrected3d.jpg" alt="3d corrected ramp and collision" style="display: block; margin: auto">
+  
+<img src="/assets/images/ramps_guide/guide_funcbrush_ingame.jpg" alt="3d corrected ramp and collision" style="display: block; margin: auto">
+  
+Just like that, you have a very smooth looking surf ramp.  
+  
+If you find yourself with visual errors on ramps done with this technique, 
+try cutting the base segment for the func_brush into more basic shapes (seperate the base from the triangular part, etc...) to make it easier for the compile process to handle.
+
 ## Modeling Ramps
 
 ## Helpful Links
 
+- <a href="https://youtu.be/IGjQZz7pQ1Q" target="_blank">Curved ramp video tutorial by Crayz</a>
+- <a href="https://developer.valvesoftware.com/wiki/Func_detail" target="_blank">func_detail - Valve Developer Community</a>
+- <a href="https://developer.valvesoftware.com/wiki/Func_brush" target="_blank">func_brush - Valve Developer Community</a>
+  
 TODO: 
-- Finish advanced curved ramps
 - Write something about modeling ramps
-- Add helpful links (video tutorials and external mapping guides)
-- Add header images for sections / subsections
