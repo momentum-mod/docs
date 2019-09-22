@@ -14,8 +14,7 @@ This Guide covers the general method of building the latest code from GitHub for
 ## Prerequisites
 To make use of this page, you should:  
 - Be using the Administrator account of the machine you're using
-- Have Momentum activated on your Steam account
-- Have a pot of Coffee (optional)
+- Have a pot of coffee (optional)
 
 <div class="note info">
     <p>
