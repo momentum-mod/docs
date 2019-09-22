@@ -56,13 +56,9 @@ Follow [this step on the Valve Dev Wiki](https://developer.valvesoftware.com/wik
 
 Get a Git client like [***GitHub Desktop***](https://desktop.github.com/) if you haven't already and then clone this repository.
 
-If you downloaded Momentum Mod from Steam, create an extra folder somewhere called `MomentumDev`.
+If you downloaded Momentum Mod from Steam, create an extra folder somewhere called `MomentumDev`, and copy everything from your `steamapps/common/Momentum Mod` folder to it. Then delete the `momentum` folder from `MomentumDev`.
 
-Copy all of the files **except** the `momentum` folder from your Steam's `steamapps/common/Momentum Mod` directory into this folder.
- 
-So for example, to get at `client.dll`, it should look like `MomentumDev/momentum/bin/client.dll`. 
-
-Then delete the `momentum` folder inside of `MomentumDev`.
+Otherwise if you downloaded the `MomentumDev` folder from Google Drive, extract it somewhere.
 
 Edit the `creategameprojects.ps1` file to point the `$path` variable to the full path to `MomentumDev`.  
 
