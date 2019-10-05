@@ -316,12 +316,32 @@ The vmf created during this guide is available [here](/assets/mapsrc/surf_ramp_t
   
     
 ## Modeling Ramps
+<img src="/assets/images/ramps_guide/headers/nebula.jpg" alt="Model Header" style="display: block; margin: auto">
+
+While a lot can be accomplished with brushes, complex brushes and ramps will sometimes reach the limits of what can be done with them. 
+At this point it may be time to look into making the ramps into models.  
+  
+Normally this doesn't need to be done until late in development when doing an art pass for details, 
+but it tends to be a lot more involved and requires experience with modeling software.  
+  
+Model collision can also be prone to having far more rampbugs. 
+While this is fixed in Momentum Mod, it may be a concern for compatibility with other source games.
+Often modeled ramps are used alongside playerclip collision.
+  
+The use of modeled ramps can also help avoid reaching hammer's brush limits by shifting the majority of the detail to static props.
+  
+Two common tools used to create these models are <a href="https://github.com/tuxxi/propper-2013" target="_blank">Propper</a> and <a href="http://steamreview.org/BlenderSourceTools/" target="_blank">Blender Source Tools</a>.
+  
+Propper is an addon for hammer that allows you to convert world brushes directly into compiled model files. 
+  
+Blender Source Tools is an addon for Blender that allows you to export your blender models as source model files.
+  
+Creating and texturing models is a massive topic on it's own so this guide will not look in depth at creating these models.
 
 ## Helpful Links
 
 - <a href="https://youtu.be/IGjQZz7pQ1Q" target="_blank">Curved ramp video tutorial by Crayz</a>
 - <a href="https://developer.valvesoftware.com/wiki/Func_detail" target="_blank">func_detail - Valve Developer Community</a>
 - <a href="https://developer.valvesoftware.com/wiki/Func_brush" target="_blank">func_brush - Valve Developer Community</a>
-  
-TODO: 
-- Write something about modeling ramps
+- <a href="https://developer.valvesoftware.com/wiki/Propper" target="_blank">Propper - Valve Developer Community</a>
+- <a href="https://developer.valvesoftware.com/wiki/Blender_Source_Tools" target="_blank">Blender Source Tools - Valve Developer Community</a>
