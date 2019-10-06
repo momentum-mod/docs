@@ -123,10 +123,19 @@ For curved ramps this means that the portion near the bottom of the ramp where s
 The standard fix for this has been to add a flat "base" portion at the bottom of the ramp segment that you can't surf on. 
 This means that any precision errors would only take place at the base of the ramp and not the surfable portion.  
   
+This is explained in more depth <a href="https://youtu.be/jcC2UKydb9Q" target="_blank">here</a>.  
+  
 More intricate fixes have been made including hammer modifications such as <a href="https://web.archive.org/web/20190611221800/https://forum.facepunch.com/dev/bvenk/Slammin-Source-map-tools/" target="_blank">Slammin tools</a> 
 and <a href="https://github.com/crashfort/HammerPatch" target="_blank">HammerPatch</a>. 
 These improve the precision of the stored vertices and help keep brushwork looking the way it's supposed to. 
 Momentum hammer also implements a fix similar to HammerPatch.
+
+<div class="note info">
+	<p>
+	Note: The purpose of a base portion at the bottom of the ramp is to make the surfable area overlap at all locations.
+	As long as they are used while creating the ramp, they can be deleted afterwards.
+	</p>
+</div>
 
 ### Curved Ramps with Func_Detail
 
