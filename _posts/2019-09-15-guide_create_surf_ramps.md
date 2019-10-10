@@ -5,9 +5,9 @@ permalink: /guide/create-surf-ramps/
 
 category: guide
 tags:
-  -mapping
-  -surf
-  -ramps
+  - mapping
+  - surf
+  - ramps
 
 toc: true
 toc_sticky: true
