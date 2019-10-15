@@ -26,7 +26,7 @@ Note: This guide assumes that you have a basic working knowledge of the hammer e
 Before you start to create your ramps in hammer, there are a few factors you should consider:
 - How steep do I want the ramps to be?
 	- A ramp that is too steep / wide may be considered awkward to board.
-	- People tend to use a <a href="https://docs.google.com/spreadsheets/d/1-K8c2F3EVhTpeyzDAoIfdjmWr1s6H8bEtUQy5cfKEJg/edit?usp=sharing" target="_blank">5:4 ratio</a> for the dimensions of their ramps
+	- People tend to use a [5:4 ratio](https://docs.google.com/spreadsheets/d/1-K8c2F3EVhTpeyzDAoIfdjmWr1s6H8bEtUQy5cfKEJg/edit?usp=sharing){:target="_blank"} for the dimensions of their ramps
 - What size do I want for my ramps?
 	- People may find themselves sliding off the bottoms of small ramps.
 	- They may feel like they are going slow on oversized ramps, it is important to find a balance.
@@ -120,10 +120,10 @@ For curved ramps this means that the portion near the bottom of the ramp where s
 The standard fix for this has been to add a flat "base" portion at the bottom of the ramp segment that you can't surf on. 
 This means that any precision errors would only take place at the base of the ramp and not the surfable portion.  
   
-This is explained in more depth <a href="https://youtu.be/jcC2UKydb9Q" target="_blank">here</a>.  
+This is explained in more depth [here](https://youtu.be/jcC2UKydb9Q){:target="_blank"}.  
   
-More intricate fixes have been made including hammer modifications such as <a href="https://web.archive.org/web/20190611221800/https://forum.facepunch.com/dev/bvenk/Slammin-Source-map-tools/" target="_blank">Slammin tools</a> 
-and <a href="https://github.com/crashfort/HammerPatch" target="_blank">HammerPatch</a>. 
+More intricate fixes have been made including hammer modifications such as [Slammin tools](https://web.archive.org/web/20190611221800/https://forum.facepunch.com/dev/bvenk/Slammin-Source-map-tools/){:target="_blank"} 
+and [HammerPatch](https://github.com/crashfort/HammerPatch){:target="_blank"}. 
 These improve the precision of the stored vertices and help keep brushwork looking the way it's supposed to. 
 Momentum hammer also implements a fix similar to HammerPatch.
 
@@ -339,7 +339,7 @@ Often modeled ramps are used alongside playerclip collision.
   
 The use of modeled ramps can also help avoid reaching hammer's brush limits by shifting the majority of the detail to static props.
   
-Two common tools used to create these models are <a href="https://github.com/tuxxi/propper-2013" target="_blank">Propper</a> and <a href="http://steamreview.org/BlenderSourceTools/" target="_blank">Blender Source Tools</a>.
+Two common tools used to create these models are [Propper](https://github.com/tuxxi/propper-2013){:target="_blank"} and [Blender Source Tools](http://steamreview.org/BlenderSourceTools/){:target="_blank"}.
   
 Propper is an addon for hammer that allows you to convert world brushes directly into compiled model files. 
   
@@ -349,8 +349,8 @@ Creating and texturing models is a massive topic on its own so this guide will n
 
 ## Helpful Links
 
-- <a href="https://youtu.be/IGjQZz7pQ1Q" target="_blank">Curved ramp video tutorial by Crayz</a>
-- <a href="https://developer.valvesoftware.com/wiki/Func_detail" target="_blank">func_detail - Valve Developer Community</a>
-- <a href="https://developer.valvesoftware.com/wiki/Func_brush" target="_blank">func_brush - Valve Developer Community</a>
-- <a href="https://developer.valvesoftware.com/wiki/Propper" target="_blank">Propper - Valve Developer Community</a>
-- <a href="https://developer.valvesoftware.com/wiki/Blender_Source_Tools" target="_blank">Blender Source Tools - Valve Developer Community</a>
+- [Curved ramp video tutorial by Crayz](https://youtu.be/IGjQZz7pQ1Q){:target="_blank"}
+- [func_detail - Valve Developer Community](https://developer.valvesoftware.com/wiki/Func_detail){:target="_blank"}
+- [func_brush - Valve Developer Community](https://developer.valvesoftware.com/wiki/Func_brush){:target="_blank"}
+- [Propper - Valve Developer Community](https://developer.valvesoftware.com/wiki/Propper){:target="_blank"}
+- [Blender Source Tools - Valve Developer Community](https://developer.valvesoftware.com/wiki/Blender_Source_Tools){:target="_blank"}
