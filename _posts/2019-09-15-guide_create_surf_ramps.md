@@ -333,7 +333,7 @@ At this point it may be time to look into making the ramps into models.
 Normally this doesn't need to be done until late in development when doing an art pass for details, 
 but it tends to be a lot more involved and requires experience with modeling software.  
   
-Model collision can also be prone to having far more rampbugs. 
+Model collision without clip brushes can also be prone to having far more rampbugs. 
 While this is fixed in Momentum Mod, it may be a concern for compatibility with other source games.
 Often modeled ramps are used alongside playerclip collision.
   
