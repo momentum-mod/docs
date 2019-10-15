@@ -348,7 +348,7 @@ Propper is an addon for hammer that allows you to convert world brushes directly
   
 Blender Source Tools is an addon for Blender that allows you to export your blender models as source model files.
   
-Creating and texturing models is a massive topic on it's own so this guide will not look in depth at creating these models.
+Creating and texturing models is a massive topic on its own so this guide will not look in depth at creating these models.
 
 ## Helpful Links
 
