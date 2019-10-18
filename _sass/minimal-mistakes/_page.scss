@@ -52,24 +52,6 @@
   }
 }
 
-.note {
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
-    border-color: lightgray;
-    border-radius: 1rem;
-    border-style: solid;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.note.warning {
-    background-color: rgba(255, 0, 0, 0.4);
-}
-
-.note.info {
-    background-color: rgba($primary-color, 0.4);
-}
-
 .page__title {
   margin-top: 0;
   line-height: 1;

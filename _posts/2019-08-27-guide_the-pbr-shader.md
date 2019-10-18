@@ -7,7 +7,7 @@ tags:
 toc: true
 toc_sticky: true
 ---
-<img src="/assets/images/guide_headers/guide_pbr_shader.jpg" alt="PBR Guide" style="display: block; margin: auto;">
+![PBR Guide](/assets/images/guide_headers/guide_pbr_shader.jpg)
 
 The PBR Shader is a handy new tool added to Momentum which allows you to create better looking models with less textures and VMT editing.  
 
@@ -45,24 +45,19 @@ PBR
 `$bumpmap` will be for the Normal texture.  
 `$emissive` will be for any glowing sections of the model.  
 
-<div class="note info">
-    <p>
-        The Emissive texture is a colour texture, not a mask.
-    </p>
-</div>
+{:.notice--danger}
+The Emissive texture is a colour texture, not a mask.
 
 `$envmap` should just be left as `env_cubemap`.  
 
-<div class="note warning">
-    <p>
-        <code>$model 1</code> <b><em>must</em></b> be added for models to work!
-    </p>
-</div>
+{:.notice--info}
+`$model 1` ***must*** be added for models to work!
+
 
 ## Texture Creation - Painter
 When starting a new Project in Painter, you should be fine using the standard ***PBR - Metal Roughness*** template.  
 
-<img src="\assets\images\pbr_guide\pbr_painter_template.jpg" alt="Painter Template" style="display: block; margin: auto;">
+![\assets\images\pbr_guide\pbr_painter_template.jpg](Painter Template)
 
 However, the PBR Shader uses MRAO textures, so a custom export template is needed or the channels must be composited in some other program.
 
@@ -76,6 +71,6 @@ Creating the Base Colour and Normal aren't covered in the Guide, this section is
 
 You can create a MRAO texture by putting the **M**etalness, **R**oughness and **A**mbient **O**cclusion and a white **Uniform Color** Node into an **RGBA Merge** Node like so:
 
-<img src="\assets\images\pbr_guide\pbr_designer_setup.png" alt="Painter Template" style="display: block; margin: auto;">
+![Painter Template](\assets\images\pbr_guide\pbr_designer_setup.png)
 
 You should then have the 3 minimum textures needed for the Shader.

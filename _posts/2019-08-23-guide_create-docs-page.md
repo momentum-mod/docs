@@ -15,6 +15,7 @@ All pages on this site are hosted in the [Momentum Mod docs GitHub repository](h
     * [Posts](https://jekyllrb.com/docs/posts/)
     * [Front matter](https://jekyllrb.com/docs/front-matter/)
     * [Variables](https://jekyllrb.com/docs/variables/)
+    * [Custom attributes in Jekyll](https://digitaldrummerj.me/styling-jekyll-markdown/)
  * [Markdown Documentation](https://www.markdownguide.org/)
  * [Minimal Mistakes Documentation](https://mmistakes.github.io/minimal-mistakes/docs/layouts/)
 
@@ -26,9 +27,8 @@ Follow the steps to install [Ruby and Jekyll](https://jekyllrb.com/docs/installa
 
 Open a terminal with Ruby and change to the directory where you cloned this repository.
 
-<div class="note info">
-<p>If it is your first time running the website, run <br/><code>bundle install</code><br/> first to install dependencies!</p>
-</div>
+{:.notice--info}
+If it is your first time running the website, run `bundle install` first to install dependencies!
 
 Run `bundle exec jekyll serve` to host the website. Jekyll hosts the website at [localhost:4000](http://localhost:4000) and automatically reloads to any file changes done to posts, data, or excess files. The only exception is changes made to `_config.yml`, that will require restarting the Jekyll process.
 
@@ -38,11 +38,9 @@ You can use `CTRL+C` to stop the process in the terminal when you are done with 
 
 ### Creating the File
 
-<div class="note info">
-    <p>
-        If you are creating a new file for the first time, it is recommended to look at the <a href="https://jekyllrb.com/docs/posts/">Jekyll documentation page on posts</a> to get an idea of what this site runs on.
-    </p>
-</div>
+{:.notice--info}
+If you are creating a new file for the first time, it is recommended to look at the [https://jekyllrb.com/docs/posts/](Jekyll documentation page on posts) to get an idea of what this site runs on.
+
 
 A new page should be created inside of the `_posts` directory. Since this site uses Jekyll, a documentation page is going to have to follow their "blog post" file format:  
 `YYYY-MM-DD-<filename>.<ext>`
@@ -77,6 +75,25 @@ toc_sticky: [true/false] # If you are using the Table of Contents, consider sett
 ---
 ```
 
+#### Notices
+
+You can highlight something that's important by prepending a notice tag like so:
+
+```
+{:.notice--danger}
+I'm red!
+
+{:.notice--info}
+This one is blue
+```
+
+{:.notice--danger}
+I'm red!
+
+{:.notice--info}
+This one is blue
+
+
 ## Requiring `-mapping`
 If a command or convar requires `-mapping` to work, you may specify it as such in the front matter:
 ```
@@ -88,13 +105,12 @@ requires_mapping: true
 ```
 
 This will insert the following block at the top of the document:
-<div class="note warning">
-    <h5>Requires <code>-mapping</code></h5>
-    <p>
-        In order to use this command, you have to boot the game with
-        <code>-mapping</code> as a launch parameter!
-    </p>
-</div>
+
+{:.notice--danger}
+**Requires `-mapping`**  
+In order to use this command, you have to boot the game with
+`-mapping` as a launch parameter!
+
 
 ## Further Edits
 
