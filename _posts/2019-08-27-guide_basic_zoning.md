@@ -8,7 +8,8 @@ tags:
 toc: true
 toc_sticky: true
 ---
-![/assets/images/guide_headers/guide_basic_zones.jpg](Zone Guide)
+
+![Zone Guide](/assets/images/guide_headers/guide_basic_zones.jpg)
 
 This Guide will cover the most basic usage of the Zoning Tools to create a Start and End Zone.  
 > Looking for Stages and Bonuses?  
@@ -23,7 +24,7 @@ To follow this Guide you should:
 ## Opening the GUI
 In order to get the GUI to appear, type `mom_zone_showmenu` in the Console, it should look like this:  
 
-![/assets/images/zone_guide/3d_cursor.png](3D Cursor)
+![Zone Menu](/assets/images/zone_guide/zone_menu.png)
 
 {:.notice--info}
 You will lose the ability to look around at some point and your mouse cursor will re-appear.  

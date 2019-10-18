@@ -57,7 +57,7 @@ The Emissive texture is a colour texture, not a mask.
 ## Texture Creation - Painter
 When starting a new Project in Painter, you should be fine using the standard ***PBR - Metal Roughness*** template.  
 
-![\assets\images\pbr_guide\pbr_painter_template.jpg](Painter Template)
+![Painter Template](\assets\images\pbr_guide\pbr_painter_template.jpg)
 
 However, the PBR Shader uses MRAO textures, so a custom export template is needed or the channels must be composited in some other program.
 
