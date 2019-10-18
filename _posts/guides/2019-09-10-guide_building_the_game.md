@@ -18,8 +18,9 @@ To make use of this page, you should:
 
 {:.notice--info}
 **Important Note**  
-You'll need Momentum activated on your Steam account in order to be able to test online features!  
-Please reach out to Gocnak explaining why you'd like a key.
+You'll need Momentum activated on your Steam account in order to test online features or mount assets from other games automatically!
+New Steam keys are currently reserved for users that are making contributions to the game.
+
 
 ## Cloning
 
