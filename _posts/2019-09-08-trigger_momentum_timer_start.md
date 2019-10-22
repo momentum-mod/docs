@@ -12,31 +12,10 @@ tags:
   
 A <a href="https://developer.valvesoftware.com/wiki/Triggers" target="_blank">trigger</a> entity in Momentum Mod that starts the map or bonus upon leaving it.
   
+> Looking for more general info on Zones?   
+> Check the [Zone Types page](/guide/zone-types/).
+
 ## Keyvalues
-
->**Name** (targetname&lt;**string**&gt;)  
-
-The targetname used to identify the entity
-
->**Parent** (parentname&lt;**targetname**&gt;)  
-
-The name of this entity's parent in the movement hierarchy. Entities with parents move with their parent.
-
->**Origin (X Y Z)** (origin&lt;**origin**&gt;)
-
-The position of this entity's center in the world. Rotating entities typically rotate around their origin.
-
->**Start Disabled** (StartDisabled&lt;**boolean**&gt;)
-
-Disable the entity and await activation by other outputs.
-
->**Global Entity Name** (globalname&lt;**string**&gt;)
-
-Name by which this entity is linked to another entity in a different map. When the player transitions to a new map, entities in the new map with globalnames matching entities in the previous map will have the previous map's state copied over their state.
-
->**Filter Name** (filtername&lt;**filter**&gt;)
-
-Specifies the name of the filter entity to be used when deciding whether or not an activator can trigger the entity.
 
 >**Track Number** (track_number&lt;**integer**&gt;)
 
