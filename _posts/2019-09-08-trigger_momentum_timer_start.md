@@ -8,9 +8,9 @@ tags:
 ---
 
 ----
-<img src="/assets/images/trigger_momentum_timer_start/start_zone.jpg" alt="start zone" style="display: block; margin: auto;">
+![start zone](/assets/images/trigger_momentum_timer_start/start_zone.jpg)
   
-A <a href="https://developer.valvesoftware.com/wiki/Triggers" target="_blank">trigger</a> entity in Momentum Mod that starts the map or bonus upon leaving it.
+A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that starts the map or bonus upon leaving it.
   
 > Looking for more general info on Zones?   
 > Check the [Zone Types page](/guide/zone-types/).
