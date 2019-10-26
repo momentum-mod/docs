@@ -8,9 +8,9 @@ tags:
 ---
 
 ----
-<img src="/assets/images/trigger_momentum_timer_stage/stage_zone.jpg" alt="stage zone" style="display: block; margin: auto;">
+![stage zone](/assets/images/trigger_momentum_timer_stage/stage_zone.jpg)
   
-A <a href="https://developer.valvesoftware.com/wiki/Triggers" target="_blank">trigger</a> entity in Momentum Mod that marks the start of a stage.  
+A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that marks the start of a stage.  
 It is used on Staged maps and can be reset to via [`mom_reset`](/command/mom_reset).
 
 <div class="note warning">
