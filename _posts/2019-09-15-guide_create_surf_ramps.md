@@ -5,9 +5,9 @@ permalink: /guide/create-surf-ramps/
 
 category: guide
 tags:
-  -mapping
-  -surf
-  -ramps
+  - mapping
+  - surf
+  - ramps
 
 toc: true
 toc_sticky: true
@@ -29,7 +29,7 @@ toc_sticky: true
 Before you start to create your ramps in hammer, there are a few factors you should consider:
 - How steep do I want the ramps to be?
 	- A ramp that is too steep / wide may be considered awkward to board.
-	- People tend to use a <a href="https://docs.google.com/spreadsheets/d/1-K8c2F3EVhTpeyzDAoIfdjmWr1s6H8bEtUQy5cfKEJg/edit?usp=sharing" target="_blank">5:4 ratio</a> for the dimensions of their ramps
+	- People tend to use a [5:4 ratio](https://docs.google.com/spreadsheets/d/1-K8c2F3EVhTpeyzDAoIfdjmWr1s6H8bEtUQy5cfKEJg/edit?usp=sharing){:target="_blank"} for the dimensions of their ramps
 - What size do I want for my ramps?
 	- People may find themselves sliding off the bottoms of small ramps.
 	- They may feel like they are going slow on oversized ramps, it is important to find a balance.
@@ -123,10 +123,19 @@ For curved ramps this means that the portion near the bottom of the ramp where s
 The standard fix for this has been to add a flat "base" portion at the bottom of the ramp segment that you can't surf on. 
 This means that any precision errors would only take place at the base of the ramp and not the surfable portion.  
   
-More intricate fixes have been made including hammer modifications such as <a href="https://web.archive.org/web/20190611221800/https://forum.facepunch.com/dev/bvenk/Slammin-Source-map-tools/" target="_blank">Slammin tools</a> 
-and <a href="https://github.com/crashfort/HammerPatch" target="_blank">HammerPatch</a>. 
+This is explained in more depth [here](https://youtu.be/jcC2UKydb9Q){:target="_blank"}.  
+  
+More intricate fixes have been made including hammer modifications such as [Slammin tools](https://web.archive.org/web/20190611221800/https://forum.facepunch.com/dev/bvenk/Slammin-Source-map-tools/){:target="_blank"} 
+and [HammerPatch](https://github.com/crashfort/HammerPatch){:target="_blank"}. 
 These improve the precision of the stored vertices and help keep brushwork looking the way it's supposed to. 
 Momentum hammer also implements a fix similar to HammerPatch.
+
+<div class="note info">
+	<p>
+	Note: The purpose of a base portion at the bottom of the ramp is to make the surfable area overlap at all locations.
+	As long as they are used while creating the ramp, they can be deleted afterwards.
+	</p>
+</div>
 
 ### Curved Ramps with Func_Detail
 
@@ -319,12 +328,32 @@ The vmf created during this guide is available [here](/assets/mapsrc/surf_ramp_t
   
     
 ## Modeling Ramps
+<img src="/assets/images/ramps_guide/headers/nebula.jpg" alt="Model Header" style="display: block; margin: auto">
+
+While a lot can be accomplished with brushes, complex brushes and ramps will sometimes reach the limits of what can be done with them. 
+At this point it may be time to look into making the ramps into models.  
+  
+Normally this doesn't need to be done until late in development when doing an art pass for details, 
+but it tends to be a lot more involved and requires experience with modeling software.  
+  
+Model collision without clip brushes can also be prone to having far more rampbugs. 
+While this is fixed in Momentum Mod, it may be a concern for compatibility with other source games.
+Often modeled ramps are used alongside playerclip collision.
+  
+The use of modeled ramps can also help avoid reaching hammer's brush limits by shifting the majority of the detail to static props.
+  
+Two common tools used to create these models are [Propper](https://github.com/tuxxi/propper-2013){:target="_blank"} and [Blender Source Tools](http://steamreview.org/BlenderSourceTools/){:target="_blank"}.
+  
+Propper is an addon for hammer that allows you to convert world brushes directly into compiled model files. 
+  
+Blender Source Tools is an addon for Blender that allows you to export your blender models as source model files.
+  
+Creating and texturing models is a massive topic on its own so this guide will not look in depth at creating these models.
 
 ## Helpful Links
 
-- <a href="https://youtu.be/IGjQZz7pQ1Q" target="_blank">Curved ramp video tutorial by Crayz</a>
-- <a href="https://developer.valvesoftware.com/wiki/Func_detail" target="_blank">func_detail - Valve Developer Community</a>
-- <a href="https://developer.valvesoftware.com/wiki/Func_brush" target="_blank">func_brush - Valve Developer Community</a>
-  
-TODO: 
-- Write something about modeling ramps
+- [Curved ramp video tutorial by Crayz](https://youtu.be/IGjQZz7pQ1Q){:target="_blank"}
+- [func_detail - Valve Developer Community](https://developer.valvesoftware.com/wiki/Func_detail){:target="_blank"}
+- [func_brush - Valve Developer Community](https://developer.valvesoftware.com/wiki/Func_brush){:target="_blank"}
+- [Propper - Valve Developer Community](https://developer.valvesoftware.com/wiki/Propper){:target="_blank"}
+- [Blender Source Tools - Valve Developer Community](https://developer.valvesoftware.com/wiki/Blender_Source_Tools){:target="_blank"}
