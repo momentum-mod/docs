@@ -8,9 +8,9 @@ tags:
 ---
 
 ----
-<img src="/assets/images/trigger_momentum_timer_checkpoint/checkpoint_zone.jpg" alt="checkpoint zone" style="display: block; margin: auto;">
+![checkpoint zone](/assets/images/trigger_momentum_timer_checkpoint/checkpoint_zone.jpg)
   
-A <a href="https://developer.valvesoftware.com/wiki/Triggers" target="_blank">trigger</a> entity in Momentum Mod that splits the timer.  
+A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that splits the timer.  
 It is used on Linear maps and can not be reset to, unlike Stages.
 
 <div class="note warning">
