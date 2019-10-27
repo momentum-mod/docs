@@ -50,6 +50,14 @@ Download Momentum Mod on Steam, or grab the `MomentumDev` folder from [***Google
 
 Download [***Visual Studio 2019***](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16).
 
+<div class="note info">
+    <p>
+When installing Visual Studio, make sure this version is checked:
+
+<img src="/assets/images/build_guide/build6.png" alt="" style="display: block; margin: auto;">
+    </p>
+</div>
+
 Follow [this step on the Valve Dev Wiki](https://developer.valvesoftware.com/wiki/Source_SDK_2013#Unable_to_find_RegKey_for_.vcproj_files_in_solutions_.28Windows.29) to add a missing registry key to your computer.
 
 Get a Git client like [***GitHub Desktop***](https://desktop.github.com/) if you haven't already and then clone the develop branch of the repository.
