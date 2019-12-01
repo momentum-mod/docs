@@ -49,7 +49,7 @@ It may also be called `origin/develop`:
 ## Windows
 Download Momentum Mod on Steam or grab the `MomentumDev` folder from [***Google Drive***](https://drive.google.com/file/d/115xT5IIN-CimKCZQho3xj7uIcYFMSZXm/view).
 
-Download [***Visual Studio 2019***](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16).
+Download [***Visual Studio 2019***](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16) and install Desktop Development with C++.
 
 Follow [this step on the Valve Dev Wiki](https://developer.valvesoftware.com/wiki/Source_SDK_2013#Unable_to_find_RegKey_for_.vcproj_files_in_solutions_.28Windows.29) to add a missing registry key to your computer.
 
