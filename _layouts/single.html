@@ -59,6 +59,21 @@ layout: default
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
+
+        {% comment %} Show the min/max value of the convar if it exists {% endcomment %}
+        {% if page.category == "var" %}
+          {% if page.minimum_value or page.maximum_value %}
+            <div class="cvar-minmax-wrapper">
+              {% if page.minimum_value %}
+                <div class="cvar-minmax"> <i class="fas fa-fw fa-chevron-down" aria-hidden="true"></i> MIN: {{ page.minimum_value }} </div>
+              {% endif %}
+              {% if page.maximum_value %}
+                <div class="cvar-minmax"> <i class="fas fa-fw fa-chevron-up" aria-hidden="true"></i> MAX: {{ page.maximum_value }} </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endif %}
+
         {% include page__taxonomy.html %}
         <p><strong><i class="fas fa-fw fa-edit" aria-hidden="true"></i> <a href="https://github.com/momentum-mod/docs/edit/master/{{ page.path }}">Edit File on GitHub</a></strong></p>
       </footer>
