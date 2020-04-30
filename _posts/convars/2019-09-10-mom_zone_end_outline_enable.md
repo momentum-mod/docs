@@ -6,4 +6,8 @@ tags:
   - stop
   - trigger
   - outline
+minimum_value: 0
+maximum_value: 1
 ---
+
+Enable drawing an outline for the end zone.
