@@ -7,3 +7,5 @@ tags:
   - outline
   - color
 ---
+
+Color of the checkpoint zone(s).

@@ -7,3 +7,5 @@ tags:
   - trigger
   - color
 ---
+
+Color of the end zone.

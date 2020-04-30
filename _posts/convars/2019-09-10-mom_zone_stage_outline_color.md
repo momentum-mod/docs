@@ -8,3 +8,5 @@ tags:
   - color
   - trigger
 ---
+
+Color of the stage zone(s).
