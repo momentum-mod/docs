@@ -1,0 +1,12 @@
+---
+title: mom_sj_decals_enable
+category: var
+tags:
+  - sticky jump
+  - decal
+  - explosion
+minimum_value: 0
+maximum_value: 1
+---
+
+Toggles creating decals of stickybomb explosion.
