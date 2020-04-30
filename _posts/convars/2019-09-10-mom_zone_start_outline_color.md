@@ -8,3 +8,5 @@ tags:
   - trigger
   - color
 ---
+
+Color of the start zone.
