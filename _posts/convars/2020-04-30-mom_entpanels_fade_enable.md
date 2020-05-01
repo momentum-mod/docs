@@ -6,6 +6,7 @@ tags:
   - fade
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 cvar_ref1: mom_entpanels_fade_start
 cvar_ref2: mom_entpanels_fade_dist
 ---

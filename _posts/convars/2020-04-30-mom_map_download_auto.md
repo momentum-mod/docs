@@ -7,6 +7,7 @@ tags:
   - online
 minimum_value: 0
 maximum_value: 1
+default_value: 0
 ---
 
 If enabled, maps will automatically download when updated/added to the library.

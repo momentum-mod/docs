@@ -6,6 +6,7 @@ tags:
   - online
 minimum_value: 0.1
 maximum_value: 2
+default_value: 0.5
 ---
 
 The amount of time to render in the past (in seconds).

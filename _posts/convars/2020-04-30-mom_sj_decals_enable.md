@@ -7,6 +7,7 @@ tags:
   - explosion
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 ---
 
 Toggles creating decals of stickybomb explosion.

@@ -6,6 +6,7 @@ tags:
   - outline
 minimum_value: 0
 maximum_value: 1
+default_value: 0
 cvar_ref: cl_crosshair_style
 ---
 

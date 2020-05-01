@@ -8,6 +8,7 @@ tags:
   - trigger
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 ---
 
 Enable drawing an outline for stage zone(s).

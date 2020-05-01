@@ -5,6 +5,7 @@ tags:
   - crosshair
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 cvar_ref1: cl_crosshair_scale
 cvar_ref2: cl_crosshair_style
 ---

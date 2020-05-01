@@ -6,6 +6,7 @@ tags:
   - stop
   - trigger
   - color
+default_value: FF0000FF
 ---
 
 Color of the end zone.
