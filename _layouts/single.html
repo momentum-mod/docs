@@ -62,13 +62,16 @@ layout: default
 
         {% comment %} Show the min/max value of the convar if it exists {% endcomment %}
         {% if page.category == "var" %}
-          {% if page.minimum_value or page.maximum_value %}
+          {% if page.minimum_value or page.maximum_value or page.default_value %}
             <div class="cvar-minmax-wrapper">
               {% if page.minimum_value %}
                 <div class="cvar-minmax"> <i class="fas fa-fw fa-chevron-down" aria-hidden="true"></i> MIN: {{ page.minimum_value }} </div>
               {% endif %}
               {% if page.maximum_value %}
                 <div class="cvar-minmax"> <i class="fas fa-fw fa-chevron-up" aria-hidden="true"></i> MAX: {{ page.maximum_value }} </div>
+              {% endif %}
+              {% if page.default_value %}
+                <div class="cvar-minmax"> <i class="fas fa-fw fa-check" aria-hidden="true"></i> DEFAULT: {{ page.default_value }} </div>
               {% endif %}
             </div>
           {% endif %}
