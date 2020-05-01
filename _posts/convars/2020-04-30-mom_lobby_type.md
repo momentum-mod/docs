@@ -5,6 +5,7 @@ tags:
   - lobby
 minimum_value: 0
 maximum_value: 2
+default_value: 1
 ---
 
 Sets the type of lobby. Invite only = `0`, Friends only = `1`, Public = `2`.

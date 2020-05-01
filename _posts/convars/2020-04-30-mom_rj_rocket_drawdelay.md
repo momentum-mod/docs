@@ -5,6 +5,7 @@ tags:
   - rocket jump
 minimum_value: 0
 maximum_value: 1
+default_value: 0.2
 ---
 
 Determines how long it takes for rockets to start being drawn after spawning.

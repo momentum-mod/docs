@@ -5,7 +5,8 @@ tags:
   - entity panels
   - fade
 minimum_value: 0
-maximum_value: 1
+maximum_value: 56755.839844
+default_value: 100
 cvar_ref: mom_entpanels_fade_enable
 ---
 

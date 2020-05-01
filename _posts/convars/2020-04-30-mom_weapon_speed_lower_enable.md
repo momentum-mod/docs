@@ -6,6 +6,7 @@ tags:
   - viewmodel
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 cvar_ref: mom_weapon_speed_lower
 ---
 

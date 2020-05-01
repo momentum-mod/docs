@@ -5,6 +5,7 @@ tags:
   - hud
   - damage indicator
   - fade
+default_value: 1
 ---
 
 How long the damage indicator stays on screen at minimum damage.

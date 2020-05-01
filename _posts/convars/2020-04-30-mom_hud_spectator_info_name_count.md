@@ -6,6 +6,7 @@ tags:
   - spectate
 minimum_value: 0
 maximum_value: 100
+default_value: 5
 ---
 
 The max number of names to print of who is spectating you. Unlimited = `0`.

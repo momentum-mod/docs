@@ -7,6 +7,7 @@ tags:
   - outline
   - color
   - trigger
+default_value: 0000FFFF
 ---
 
 Color of the stage zone(s).

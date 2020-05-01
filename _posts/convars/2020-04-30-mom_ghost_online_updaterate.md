@@ -6,6 +6,7 @@ tags:
   - online
 minimum_value: 1
 maximum_value: 50
+default_value: 25
 ---
 
 Number of updates per second for online ghosts.

@@ -6,6 +6,7 @@ tags:
   - strafe sync
 minimum_value: 1
 maximum_value: 2
+default_value: 1
 ---
 
 Toggles the strafe sync type. Sync1 (perfect strafe ticks / total strafe ticks) = `1`, Sync2 (accel ticks / total strafe ticks) = `0`.

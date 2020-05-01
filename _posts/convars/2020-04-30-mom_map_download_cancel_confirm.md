@@ -7,6 +7,7 @@ tags:
   - online
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 ---
 
 If enabled, a confirmation box will pop up when cancelling downloads.

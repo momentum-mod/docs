@@ -8,6 +8,7 @@ tags:
   - checkpoint
   - stop
   - start
+default_value: auto
 concommand_ref1: mom_zone_mark
 concommand_ref2: mom_zone_create
 ---
