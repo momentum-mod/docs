@@ -6,6 +6,7 @@ tags:
   - speedometer
 minimum_value: 0
 maximum_value: 1
+default_value: 0
 ---
 
 Toggles showing the unit labels on the hud (UPS, KM/H, MPH, Energy).

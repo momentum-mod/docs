@@ -6,6 +6,7 @@ tags:
   - online
 minimum_value: 0
 maximum_value: 100
+default_value: 0
 ---
 
 Interpolation ticks to add to rendering online ghosts.

@@ -5,6 +5,7 @@ tags:
   - crosshair
   - outline
 minimum_value: 0
+default_value: 1
 cvar_ref: cl_crosshair_outline_enable
 ---
 

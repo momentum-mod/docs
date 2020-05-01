@@ -6,6 +6,7 @@ tags:
   - replay
 minimum_value: 0
 maximum_value: 1
+default_value: 0
 ---
 
 If enabled, prints out debug info when loading replays.

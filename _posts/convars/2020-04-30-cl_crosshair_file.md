@@ -3,6 +3,7 @@ title: cl_crosshair_file
 category: var
 tags:
   - crosshair
+default_value: crosshair_custom
 cvar_ref: cl_crosshair_style
 ---
 

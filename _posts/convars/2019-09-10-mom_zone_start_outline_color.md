@@ -7,6 +7,7 @@ tags:
   - outline
   - trigger
   - color
+default_value: 00FF00FF
 ---
 
 Color of the start zone.

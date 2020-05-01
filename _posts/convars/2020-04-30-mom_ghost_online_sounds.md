@@ -8,6 +8,7 @@ tags:
   - flashlight
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 ---
 
 Toggle other player's flashlight sounds.

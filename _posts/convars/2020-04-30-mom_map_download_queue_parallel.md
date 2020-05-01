@@ -7,6 +7,7 @@ tags:
   - online
 minimum_value: 1
 maximum_value: 3
+default_value: 3
 cvar_ref: mom_map_download_queue
 ---
 

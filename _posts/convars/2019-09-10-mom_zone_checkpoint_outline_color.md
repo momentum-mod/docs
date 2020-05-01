@@ -6,6 +6,7 @@ tags:
   - checkpoint
   - outline
   - color
+default_value: FFFF00FF
 ---
 
 Color of the checkpoint zone(s).

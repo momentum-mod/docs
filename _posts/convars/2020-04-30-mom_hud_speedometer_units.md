@@ -6,6 +6,7 @@ tags:
   - speedometer
 minimum_value: 1
 maximum_value: 4
+default_value: 1
 ---
 
 Changes the units of measurement of the speedometer.

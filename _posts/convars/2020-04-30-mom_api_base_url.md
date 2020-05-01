@@ -4,6 +4,7 @@ category: var
 tags:
   - debug
   - api
+default_value: https://momentum-mod.org
 ---
 
 The base URL for API requests. 

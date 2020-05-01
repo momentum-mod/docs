@@ -7,6 +7,7 @@ tags:
   - alpha
 minimum_value: 0
 maximum_value: 1
+default_value: 1
 cvar_ref: mom_ghost_online_color_alpha_override
 ---
 
