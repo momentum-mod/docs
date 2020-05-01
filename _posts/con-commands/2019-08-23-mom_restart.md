@@ -3,6 +3,7 @@ title: mom_restart
 category: command
 tags:
   - timer
+  - teleport
 ---
 
 Restarts the player to the start trigger. Optionally takes a track number (default is main track).
