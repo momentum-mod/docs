@@ -77,6 +77,31 @@ layout: default
           {% endif %}
         {% endif %}
 
+        {% comment %} Show the required/optional parameters of the commands if there are any {% endcomment %}
+        {% if page.category == "command" %}
+          {% if page.required_params or page.optional_params %}
+            <div class="com-wrapper">
+              <h1>Parameters:</h1>
+              {% if page.required_params %}
+                <div>
+                  <div class="com-params-label"> <i class="fas fa-fw fa-asterisk" aria-hidden="true"></i> REQUIRED: </div>
+                  {% for required_input in page.required_params %}
+                    <div class="com-params">{% if required_input != page.required_params[0] %} | {% endif %} {{ required_input }} </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              {% if page.optional_params %}
+                <div>
+                  <div class="com-params-label"> <i class="fas fa-fw fa-plus" aria-hidden="true"></i> OPTIONAL: </div>
+                  {% for optional_input in page.optional_params %}
+                    <div class="com-params">{% if optional_input != page.optional_params[0] %} | {% endif %} {{ optional_input }} </div>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endif %}
+
         {% include page__taxonomy.html %}
         <p><strong><i class="fas fa-fw fa-edit" aria-hidden="true"></i> <a href="https://github.com/momentum-mod/docs/edit/master/{{ page.path }}">Edit File on GitHub</a></strong></p>
       </footer>
