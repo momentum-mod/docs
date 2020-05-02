@@ -4,6 +4,8 @@ category: command
 tags:
   - zones
   - trigger
+optional_params:
+  - Yaw in degrees
 ---
 
 Sets the angle the player is looking towards when teleporting to the start zone. Takes in yaw in degrees or uses your current looking angle.

@@ -4,6 +4,8 @@ category: command
 tags:
   - mapcfg
   - map
+required_params: 
+  - Console command or variable
 ---
 
 Adds a command or convar to be executed on start of the map currently being played.

@@ -4,6 +4,8 @@ category: command
 tags:
   - timer
   - teleport
+optional_params:
+  - Track number
 ---
 
 Restarts the player to the start trigger. Optionally takes a track number (default is main track).
