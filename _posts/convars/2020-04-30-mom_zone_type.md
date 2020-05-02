@@ -11,6 +11,7 @@ tags:
 default_value: auto
 concommand_ref1: mom_zone_mark
 concommand_ref2: mom_zone_create
+requires_mapping: true
 ---
 
 Changes the type of zone to be created when using [`{{ page.concommand_ref1 }}`](/command/{{ page.concommand_ref1 }}) / [`{{ page.concommand_ref2 }}`](/command/{{ page.concommand_ref2 }}).

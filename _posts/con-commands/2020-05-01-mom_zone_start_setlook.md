@@ -6,6 +6,7 @@ tags:
   - trigger
 optional_params:
   - Yaw in degrees
+requires_mapping: true
 ---
 
 Sets the angle the player is looking towards when teleporting to the start zone. Takes in yaw in degrees or uses your current looking angle.
