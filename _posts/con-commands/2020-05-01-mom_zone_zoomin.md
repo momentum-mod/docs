@@ -4,6 +4,7 @@ category: command
 tags:
   - zones
   - crosshair
+requires_mapping: true
 cvar_ref: mom_zone_grid
 ---
 
