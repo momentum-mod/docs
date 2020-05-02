@@ -2,7 +2,7 @@
 title: mom_timer_sound_finish_enable
 category: var
 tags:
-  - hud
+  - sound
   - timer
 minimum_value: 0
 maximum_value: 1
