@@ -3,6 +3,10 @@ title: mom_stage_tele
 category: command
 tags:
   - teleport
+required_params: 
+  - Stage number
+optional_params:
+  - Track number
 ---
 
 Teleports the player to the desired stage in a track. Also stops the timer.

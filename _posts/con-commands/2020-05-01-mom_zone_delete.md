@@ -4,6 +4,8 @@ category: command
 tags:
   - zones
   - trigger
+required_params: 
+  - Entity index/Start/Stop/Stage/Checkpoint
 ---
 
 Deletes zone types. Accepts start/stop/stage/checkpoint or an entity index.
