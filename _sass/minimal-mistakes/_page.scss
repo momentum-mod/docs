@@ -98,6 +98,24 @@ body {
   padding-right: 2em;
 }
 
+.com-wrapper {
+  margin-bottom: 0.4em;
+}
+
+.com-params-label {
+  font-size: $type-size-5;
+  font-family: $sans-serif-narrow;
+  font-weight: bold;
+  display: inline;
+  padding-right: 0.4em;
+}
+
+.com-params {
+  font-size: $type-size-5;
+  font-family: $sans-serif-narrow;
+  display: inline;
+}
+
 .page__title {
   margin-top: 0;
   line-height: 1;
