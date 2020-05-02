@@ -4,6 +4,8 @@ category: command
 tags:
   - replay
   - ghost
+required_params: 
+  - MRF (Replay) File
 ---
 
 Begins playback of a replay as a ghost.
