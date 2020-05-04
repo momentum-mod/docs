@@ -27,7 +27,7 @@ Download [***GitHub Desktop***](https://desktop.github.com/), it will require a 
 
 Go to the [***Main Page***](https://github.com/momentum-mod/game) and click ***Clone or Download > Open in Desktop***:  
 
-![](/assets/images/build_guide/build0.png)
+![Github Open In Desktop](/assets/images/build_guide/build0.png)
 
 You should have cloned the `develop` branch.  
 
@@ -35,7 +35,7 @@ If not, switch to it from the top (if you're using GitHub Desktop).
 
 It may also be called `origin/develop`:  
 
-![](/assets/images/build_guide/build1.png)
+![Develop Branch Github Desktop](/assets/images/build_guide/build1.png)
 
 {:.notice--info}
 Your installation of GitHub Desktop may look different, but should otherwise function the same.
@@ -59,24 +59,24 @@ Edit the `creategameprojects.ps1` file to point the `$path` variable to the full
 
 This script will create a symlink of your `mp/game/momentum` folder into the `MomentumDev` folder automatically for you, which allows you to test changes immediately and run the debugger from Visual Studio.
 
-![](/assets/images/build_guide/build2.png)
+![creategameprojects screenshot](/assets/images/build_guide/build2.png)
 
 Run `creategameprojects.bat` **as administrator**.
 
-![](/assets/images/build_guide/build3.png)
+![running creategameprojects](/assets/images/build_guide/build3.png)
 
 {:.notice--info}
 If you can't run it as administrator, start `cmd.exe` as Administrator, then change directory to the Git clone, and run it from `cmd.exe`.
 
 Open `momentum.sln`, go start the pot of coffee, come back a minute later, and click Build...  
 
-![](/assets/images/build_guide/build4.png)
+![Visual Studio build screenshot](/assets/images/build_guide/build4.png)
 
 ...then go finish the pot of coffee and pour yourself some.
 
 Click *Debug*.  
 
-![](/assets/images/build_guide/build5.png)
+![Visual Studio debug screenshot](/assets/images/build_guide/build5.png)
 
 {:.notice--info}
 You can launch with no debugger attached by pressing `CTRL+F5` instead...
