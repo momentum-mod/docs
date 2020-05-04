@@ -53,7 +53,7 @@ If you downloaded Momentum Mod from Steam, create an extra folder somewhere call
 
 Otherwise if you downloaded the `MomentumDev` folder from Google Drive, extract it somewhere.
 
-Edit the `creategameprojects.ps1` file to point the `$path` variable to the full path to `MomentumDev`.  
+Edit the `creategameprojects.ps1` file to point the `$path` variable to the full path of the `MomentumDev` folder.  
 
 This script will create a symlink of your `mp/game/momentum` folder into the `MomentumDev` folder automatically for you, which allows you to test changes immediately and run the debugger from Visual Studio.
 
