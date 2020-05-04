@@ -8,7 +8,7 @@ tags:
 toc: true
 toc_sticky: true
 ---
-<img src="/assets/images/guide_headers/guide_building_the_game.jpg" alt="Build Guide" style="display: block; margin: auto;">
+![Build Guide](/assets/images/guide_headers/guide_building_the_game.jpg){:style="display:block; margin: auto;"}
 
 This Guide covers the general method of building the latest code from GitHub for Momentum for Windows, Linux and macOS.
 ## Prerequisites
@@ -31,7 +31,7 @@ Download [***GitHub Desktop***](https://desktop.github.com/), it will require a 
 
 Go to the [***Main Page***](https://github.com/momentum-mod/game) and click ***Clone or Download > Open in Desktop***:  
 
-<img src="/assets/images/build_guide/build0.png" alt="" style="display: block; margin: auto;">
+![Github Open In Desktop](/assets/images/build_guide/build0.png){:style="display:block; margin: auto;"}
 
 You should have cloned the `develop` branch.  
 
@@ -39,7 +39,7 @@ If not, switch to it from the top (if you're using GitHub Desktop).
 
 It may also be called `origin/develop`:  
 
-<img src="/assets/images/build_guide/build1.png" alt="" style="display: block; margin: auto;">
+![Develop Branch Github Desktop](/assets/images/build_guide/build1.png){:style="display:block; margin: auto;"}
 
 <div class="note info">
     <p>
@@ -54,7 +54,7 @@ Download [***Visual Studio 2019***](https://visualstudio.microsoft.com/thank-you
 
 Your installation only requires the "Desktop development with C++" workload:
 
-![Desktop development with C++ selected](/assets/images/build_guide/build_desktop_c++.png)
+![Desktop development with C++ selected](/assets/images/build_guide/build_desktop_c++.png){:style="display:block; margin: auto;"}
 
 Get a Git client like [***GitHub Desktop***](https://desktop.github.com/) if you haven't already and then clone this repository.
 
@@ -66,11 +66,11 @@ Edit the `creategameprojects.ps1` file to point the `$path` variable to the full
 
 This script will create a symlink of your `mp/game/momentum` folder into the `MomentumDev` folder automatically for you, which allows you to test changes immediately and run the debugger from Visual Studio.
 
-<img src="/assets/images/build_guide/build2.png" alt="" style="display: block; margin: auto;">
+![creategameprojects screenshot](/assets/images/build_guide/build2.png){:style="display:block; margin: auto;"}
 
 Run `creategameprojects.bat` **as administrator**.
 
-<img src="/assets/images/build_guide/build3.png" alt="" style="display: block; margin: auto;">
+![running creategameprojects](/assets/images/build_guide/build3.png){:style="display:block; margin: auto;"}
 
 <div class="note info">
     <p>
@@ -80,13 +80,13 @@ Run `creategameprojects.bat` **as administrator**.
 
 Open `momentum.sln`, go start the pot of coffee, come back a minute later, and click Build...  
 
-<img src="/assets/images/build_guide/build4.png" alt="" style="display: block; margin: auto;">
+![Visual Studio build screenshot](/assets/images/build_guide/build4.png){:style="display:block; margin: auto;"}
 
 ...then go finish the pot of coffee and pour yourself some.
 
 Click *Debug*.  
 
-<img src="/assets/images/build_guide/build5.png" alt="" style="display: block; margin: auto;">
+![Visual Studio debug screenshot](/assets/images/build_guide/build5.png){:style="display:block; margin: auto;"}
 
 <div class="note info">
     <p>
