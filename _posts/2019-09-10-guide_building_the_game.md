@@ -49,8 +49,6 @@ Your installation only requires the "Desktop development with C++" workload:
 
 ![Desktop development with C++ selected](/assets/images/build_guide/build_desktop_c++.png)
 
-Get a Git client like [***GitHub Desktop***](https://desktop.github.com/) if you haven't already and then clone this repository.
-
 If you downloaded Momentum Mod from Steam, create an extra folder somewhere called `MomentumDev`, and copy everything from your `steamapps/common/Momentum Mod` folder to it. Then delete the `momentum` folder from `MomentumDev`.
 
 Otherwise if you downloaded the `MomentumDev` folder from Google Drive, extract it somewhere.
