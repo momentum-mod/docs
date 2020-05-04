@@ -137,18 +137,6 @@ Make sure Steam is open, and you should be able to run `./hl2.sh -game momentum`
 </div>
 
 ## macOS
-macOS is kind of terrible for developers who aren't making iOS apps.
-
-- Install macOS 10.14 or higher.
-- Install Xcode 9.4.1 or older (newer versions won't work as 32bit support is dropped in Xcode 10).
-- Install command-line tools bundled with Xcode.
-- Run `./creategameprojects`
-- Build the target "all"
-- Set up symbolic links as described in the Linux section.
-
-The game should now be startable via the following command:  
-
-```
-./hl2.sh -game momentum -console +developer 2
-```
+  
+macOS support has been dropped indefinitely due to the operating system [no longer supporting 32 bit applications](https://support.apple.com/en-ca/HT208436).
  
