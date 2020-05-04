@@ -19,8 +19,9 @@ To make use of this page, you should:
 <div class="note info">
     <p>
 		<center><b><em>Important Note:</em></b></center><br>
-		You'll need Momentum activated on your Steam account in order to be able to test online features!<br>  
-		Please reach out to Gocnak explaining why you'd like a key.
+		You'll need Momentum activated on your Steam account in order to test online features or mount assets from other games automatically!<br><br>
+
+    New Steam keys are currently reserved for users that are making contributions to the game.
     </p>
 </div>
 
