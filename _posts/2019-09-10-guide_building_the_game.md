@@ -52,6 +52,10 @@ Download Momentum Mod on Steam or grab the `MomentumDev` folder from [***Google 
 
 Download [***Visual Studio 2019***](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16).
 
+Your installation only requires the "Desktop development with C++" workload:
+
+![Desktop development with C++ selected](/assets/images/build_guide/build_desktop_c++.png)
+
 Get a Git client like [***GitHub Desktop***](https://desktop.github.com/) if you haven't already and then clone this repository.
 
 If you downloaded Momentum Mod from Steam, create an extra folder somewhere called `MomentumDev`, and copy everything from your `steamapps/common/Momentum Mod` folder to it. Then delete the `momentum` folder from `MomentumDev`.
