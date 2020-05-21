@@ -1,5 +1,3 @@
-# [Momentum Mod Documentation](https://docs.momentum-mod.org)
-
 ![](assets/images/logo.png)
 
 > A documentation website for Momentum Mod, running on [Jekyll](https://jekyllrb.com/) and using the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme.
