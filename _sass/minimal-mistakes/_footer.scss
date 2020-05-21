@@ -9,7 +9,6 @@
   margin-right: 0;
   width: 100%;
   clear: both;
-  margin-top: 3em;
   color: $muted-text-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -21,9 +20,8 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
-    padding: 0 1em 2em;
-
+    padding: 1em;
+    border-top: 1px solid $border-color;
   }
 
   a {
@@ -44,11 +42,15 @@
 }
 
 .page__footer-copyright {
+  float: left;
+  margin-top: 0.5em;
   font-family: $global-font-family;
   font-size: $type-size-7;
 }
 
 .page__footer-follow {
+  float: right;
+
   ul {
     margin: 0;
     padding: 0;
@@ -62,6 +64,7 @@
     font-family: $sans-serif-narrow;
     font-size: $type-size-6;
     text-transform: uppercase;
+    margin-top: $type-size-6;
   }
 
   li + li:before {
