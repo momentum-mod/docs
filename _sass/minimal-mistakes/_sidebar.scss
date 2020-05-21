@@ -28,11 +28,10 @@
     }
 
     &.sticky {
+      border-right: 1px solid $border-color;
       overflow-y: auto;
-      /* calculate height of nav list
-         viewport height - nav height - masthead x-padding
-      */
-      height: calc(100vh - #{$nav-height} - 2em);
+      overflow-x: hidden;
+      height: calc(100vh);
     }
   }
 
@@ -63,6 +62,8 @@
     font-family: $sans-serif;
     font-size: $type-size-6;
     line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   img {
