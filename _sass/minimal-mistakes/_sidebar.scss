@@ -45,6 +45,10 @@
     margin-bottom: 1em;
   }
 
+  .simplebar-scrollbar::before {
+    background-color: $primary-color;
+  }
+
   h2,
   h3,
   h4,
