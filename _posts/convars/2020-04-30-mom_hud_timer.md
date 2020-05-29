@@ -9,4 +9,4 @@ maximum_value: 1
 default_value: 1
 ---
 
-Toggles display the timer.
+Toggles displaying the timer.
