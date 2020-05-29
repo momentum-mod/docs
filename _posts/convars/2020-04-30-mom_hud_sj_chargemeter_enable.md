@@ -10,4 +10,4 @@ maximum_value: 1
 default_value: 1
 ---
 
-Toggles showing the chargemeter.
+Toggles showing the chargemeter when the sticky launcher is actively equipped.
