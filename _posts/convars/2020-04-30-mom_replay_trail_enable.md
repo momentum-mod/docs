@@ -9,4 +9,4 @@ maximum_value: 1
 default_value: 0
 ---
 
-Toggles the replay ghosts' trail.
+Toggles the replay ghost's trail.
