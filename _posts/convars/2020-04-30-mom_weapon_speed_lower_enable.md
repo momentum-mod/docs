@@ -10,4 +10,5 @@ default_value: 1
 cvar_ref: mom_weapon_speed_lower
 ---
 
-If enabled, the weapon lowering speed will change according to [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}).
+If enabled, changing weapons will lower the previous weapon at a speed set in [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}). 
+When disabled, the weapon will be immediately lowered.
