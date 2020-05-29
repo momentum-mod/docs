@@ -8,4 +8,4 @@ maximum_value: 2
 default_value: 0
 ---
 
-Going forward to backward in the ReplayUI.
+Going forward or backward in the ReplayUI. Pause = `0`, Backwards = `1`, Forwards =`2`.
