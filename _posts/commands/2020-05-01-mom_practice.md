@@ -6,7 +6,13 @@ tags:
 cvar_ref: mom_practice_safeguard
 ---
 
-Toggles practice mode, allowing the player to fly around in noclip during a run. Teleports the player back upon untoggling.
+Toggles practice mode, allowing the player to fly around in noclip. 
+The player keeps their position and velocity when toggled off.
+Additionally, holding the jump key in this mode prevents the player from being teleported.
+
+If toggled on during a run, 
+- the timer will continue to tick
+- when toggled off, the player will teleported back to the position where they first toggled it on
 
 ### Note:
 
