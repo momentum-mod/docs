@@ -47,6 +47,17 @@ For these overrides to take effect they need to be renamed to match the file the
 
 For example, renaming `weapon_momentum_stickylauncher_tf2.txt` to `weapon_momentum_stickylauncher.txt` within `momentum/overrides/scripts/` overrides the sticky launcher script in `momentum/scripts/`. This replaces the momentum default sticky launcher to be the one from TF2.
 
+## Example - Overriding Speedometer Position
+<img src="/assets/images/override-custom-assets_guide/centered_speedo.jpg" alt="Centered Speedometer" style="display: block; margin: auto;">
+
+The resource file for the speedometer is `speedometer.res`, located in `momentum/resource/ui/`.
+Copy this file to `momentum/custom/overrides/resource/ui/` to override the game's base file.
+From this you can modify the positions and fonts of the different speedometers, as well as set a background color.
+
+For example, changing the `"ypos"` field under `"HudSpeedMeter"` changes the vertical position of all speedometers.
+To completely center hud elements, they will have to be moved upwards by half their height. 
+A good value to center the speedometer with the default font is `"c-8"`, which sets the speedometer 8 pixels (half the height of the default font text) above the center.
+
 ## Performance
 Mounting a subfolder is less efficient than a VPK, since the engine has to make a call to the operating system to search the folder each time it needs to open a file.
 For optimal load times use VPKs, since they can be searched by the engine much more efficiently.
