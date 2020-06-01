@@ -10,6 +10,9 @@ tags:
 
 toc: true
 toc_sticky: true
+ccom_wepreloadcur: weapon_reload_script_current
+ccom_wepreload: weapon_reload_scripts
+ccom_resreload: hud_reloadcontrols
 ---
 
 When the game boots, it scans the `momentum/custom/` folder for VPK files and subfolders.
@@ -47,6 +50,8 @@ For these overrides to take effect they need to be renamed to match the file the
 
 For example, renaming `weapon_momentum_stickylauncher_tf2.txt` to `weapon_momentum_stickylauncher.txt` within `momentum/overrides/scripts/` overrides the sticky launcher script in `momentum/scripts/`. This replaces the momentum default sticky launcher to be the one from TF2.
 
+Weapon scripts can be reloaded from within the game by using the console commands [`{{ page.ccom_wepreloadcur }}`](/command/{{ page.ccom_wepreloadcur }}) and/or [`{{ page.ccom_wepreload }}`](/command/{{ page.ccom_wepreload }}).
+
 ## Example - Overriding Speedometer Position
 <img src="/assets/images/override-custom-assets_guide/centered_speedo.jpg" alt="Centered Speedometer" style="display: block; margin: auto;">
 
@@ -57,6 +62,8 @@ From this you can modify the positions and fonts of the different speedometers, 
 For example, changing the `"ypos"` field under `"HudSpeedMeter"` changes the vertical position of all speedometers.
 To completely center hud elements, they will have to be moved upwards by half their height. 
 A good value to center the speedometer with the default font is `"c-8"`, which sets the speedometer 8 pixels (half the height of the default font text) above the center.
+
+Resource control files can be reloaded from within the game by using the console command [`{{ page.ccom_resreload }}`](/command/{{ page.ccom_resreload }}).
 
 ## Performance
 Mounting a subfolder is less efficient than a VPK, since the engine has to make a call to the operating system to search the folder each time it needs to open a file.
