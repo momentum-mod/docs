@@ -16,4 +16,4 @@ If toggled on during a run,
 
 ### Note:
 
-If the timer is running and [`{{ page.cvar_ref }}`]({{ page.cvar_ref }}) is 1, this command will only activate practice mode if the player is not pressing any movement inputs.
+If the timer is running and [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}) is 1, this command will only activate practice mode if the player is not pressing any movement inputs.

@@ -36,4 +36,4 @@ This saves the current speedometer setup to the sticky jump gamemode section of 
 
 Indices for the different gamemodes match the order they appear in the in-game speedometer setting's gamemode dropbox.
 
-See [`{{ page.ccon_ref }}`]({{ page.ccon_ref }}) for loading from this file.
+See [`{{ page.ccon_ref }}`](/command/{{ page.ccon_ref }}) for loading from this file.
