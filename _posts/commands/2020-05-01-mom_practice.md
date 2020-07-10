@@ -3,7 +3,7 @@ title: mom_practice
 category: command
 tags:
   - practice
-cvar_ref: mom_practice_safeguard
+cvar_ref: mom_run_safeguard_practicemode
 ---
 
 Toggles practice mode, allowing the player to fly around in noclip. 
@@ -16,4 +16,4 @@ If toggled on during a run,
 
 ### Note:
 
-If the timer is running and [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}) is 1, this command will only activate practice mode if the player is not pressing any movement inputs.
+This command has an associated safeguard [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}).
