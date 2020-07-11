@@ -8,6 +8,7 @@ optional_params:
   - Stage number
   - Track number
 ccom_ref: mom_restart
+safeguard: mom_run_safeguard_restart_stage
 ---
 
 Teleports the player to the start of the current stage on the current track. 
