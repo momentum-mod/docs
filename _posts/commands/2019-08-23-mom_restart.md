@@ -6,6 +6,7 @@ tags:
   - teleport
 optional_params:
   - Track number
+safeguard: mom_run_safeguard_restart
 ---
 
 Restarts the player to the start trigger. Optionally takes a track number (default is main track).
