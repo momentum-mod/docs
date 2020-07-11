@@ -60,6 +60,15 @@ layout: default
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
 
+        {% comment %} For commands that have an associated safeguard {% endcomment %}
+        {% if page.safeguard %}
+          <p class="page__taxonomy">
+            <strong>This command has an associated run safeguard:</strong> 
+            <a href="/var/{{ page.safeguard }}"><code>{{ page.safeguard }}</code></a>
+          </p>
+          <br>
+        {% endif %}
+
         {% comment %} Show the min/max value of the convar if it exists {% endcomment %}
         {% if page.category == "var" %}
           {% if page.minimum_value or page.maximum_value or page.default_value %}
