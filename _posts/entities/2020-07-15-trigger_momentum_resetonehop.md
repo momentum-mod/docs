@@ -1,9 +1,17 @@
 ---
-title: filter_momentum_progress 
+title:  trigger_momentum_resetonehop
 category: entity
 tags:
- - filter
- - player
+ - trigger
+ - map
+ - track
 ---
-
 ----
+
+Filter that checks to see if the player is at or above the given progress number.
+
+## Output
+
+> OnResetOnehops(**void**)
+
+Fires when all hops are being reset.
