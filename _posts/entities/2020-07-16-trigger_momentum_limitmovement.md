@@ -7,7 +7,8 @@ tags:
 - map
 - ahop
 - bhop
-- track
+- limit
+- restrict
 - movement
 ---
 ----

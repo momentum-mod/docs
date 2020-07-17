@@ -31,7 +31,7 @@ Name of the sound effect to play when exploding.
 
 >input Detonate(**void**)
 
-Force detonation.Force detonation.
+Force detonation.
 
 ## Output
 
