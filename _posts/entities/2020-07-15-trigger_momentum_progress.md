@@ -15,7 +15,6 @@ Used for storing a discrete progress number in the player.
 >**Progress Number** (progress_number&lt;**integer**&gt;)
 
  - **-1**: An optional number to assign to this progress trigger, used by filter_momentum_progress.
- - **>=0**: Progress number.
  
 
 ## Output
