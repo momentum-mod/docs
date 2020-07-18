@@ -16,6 +16,7 @@ Trigger that teleports the player after only one entry, or if they stay inside f
 
 > **Reset hop state if player hops onto another different onehop (32768)**
 
+ ***(Enabled by default)***
 ## Output
 
 > OnHopNoLongerJumpable(**void**)
