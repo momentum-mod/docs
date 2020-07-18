@@ -17,7 +17,7 @@ Rockets and grenades will not detonate inside this area.
 
 >Airborne Only (choices&lt;**integer**&gt;)
 
-Prevent airborne exposions only
+Prevent airborne exposions only. The default value is 0.
 
  - **0**: False
  - **1**: True
