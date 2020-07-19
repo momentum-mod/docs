@@ -35,4 +35,3 @@ The track that this zone belongs to:
 
 >**Teleport the player on EndTouch() instead of StartTouch() (8388608)**  
 Teleports the user to the Remote Destination when the player leaves the trigger instead of when they first touch it.
-
