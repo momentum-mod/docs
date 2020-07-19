@@ -76,6 +76,16 @@ Run `creategameprojects.bat` **as administrator**.
     </p>
 </div>
 
+Navigate to `MomentumDev\bin\` and remove or rename `stdshader*.dll`s.
+
+<div class="note info">
+    <p>
+		If you get the following error:<br>
+    <code>Game shader 'game_shader_dx9.dll' trying to override a base shader 'Aftershock'</code><br>
+    You have not removed or renamed these files.
+    </p>
+</div>
+
 Open `momentum.sln`, go start the pot of coffee, come back a minute later, and click Build...  
 
 ![Visual Studio build screenshot](/assets/images/build_guide/build4.png){:style="display:block; margin: auto;"}
