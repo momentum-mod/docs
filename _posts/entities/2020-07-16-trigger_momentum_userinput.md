@@ -23,6 +23,8 @@ Trigger that fires on user KeyPress if inside trigger.
  - **Attack 2 (7)**
  - **Reload (8)**
 
+The default value is 0.
+
 ## Output
 
 > OnKeyPressed(**void**)
