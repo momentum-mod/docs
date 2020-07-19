@@ -29,7 +29,7 @@ The entity specifying the point to which the player should be teleported.
  - **0**: False
  - **1**: True
 
-The defaule value is 1.
+The default value is 1.
 
 >**Reset the player angles on teleport** (resetang&lt;**choices**&gt;)
  - **0**: False
