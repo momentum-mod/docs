@@ -15,6 +15,16 @@ tags:
 
 Trigger that prevents the player from doing specific keypress movements.
 
+## Keyvalue
+
+>**Track Number** (track_number&lt;**integer**&gt;)
+
+The track that this trigger belongs to: 
+
+ - **-1**: All Tracks
+ - **0**: Main Map
+ - **1+**: Bonus Tracks
+
 ## Flags
 
  >**Prevent the player from moving forward (8192)**
