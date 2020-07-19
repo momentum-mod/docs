@@ -10,6 +10,16 @@ tags:
 
 Trigger that resets all of the onehop triggers the player has touched.
 
+## Keyvalues
+
+>**Track Number** (track_number&lt;**integer**&gt;)
+
+The track that this trigger belongs to: 
+
+ - **-1**: All Tracks
+ - **0**: Main Map
+ - **1+**: Bonus Tracks
+
 ## Output
 
 > OnResetOnehops(**void**)
