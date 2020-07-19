@@ -8,7 +8,7 @@ tags:
 ---
 ----
 
-Filter that checks to see if the player is at or above the given progress number.
+Trigger that resets all of the onehop triggers the player has touched.
 
 ## Output
 
