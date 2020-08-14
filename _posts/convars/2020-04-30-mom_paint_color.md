@@ -1,12 +1,11 @@
 ---
-title: mom_paintgun_color
+title: mom_paint_color
 category: var
 tags:
-  - weapon
-  - paint gun
+  - paint
   - color
   - decal
 default_value: 0000FFFF
 ---
 
-Paint gun decal color.
+Paint decal color.
