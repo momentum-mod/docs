@@ -2,7 +2,7 @@
 title: mom_paint_limit_to_world
 category: var
 tags:
-  - paint gun
+  - paint
   - decal
 minimum_value: 0
 maximum_value: 1
