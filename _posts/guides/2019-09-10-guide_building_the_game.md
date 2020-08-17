@@ -41,7 +41,7 @@ It may also be called `origin/develop`:
 Your installation of GitHub Desktop may look different, but should otherwise function the same.
 
 ## Windows
-Download Momentum Mod on Steam or grab the `MomentumDev` folder from [***Google Drive***](https://drive.google.com/file/d/115xT5IIN-CimKCZQho3xj7uIcYFMSZXm/view).
+Download Momentum Mod on Steam or grab the `MomentumDev` folder from [***Google Drive***](https://drive.google.com/file/d/1HD1Mh8JrCBqP2sh8WJCpfybJGI4BPcZ4/view?usp=sharing).
 
 Download [***Visual Studio 2019***](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16).
 
@@ -95,7 +95,7 @@ Go into its directory and run:
 ./setup_chroot.sh --i386
 ```
 
-Download Momentum Mod on Steam **(see the important note at the top of this page).**
+Download Momentum Mod on Steam **(see the important note at the top of this page)** or from [***Google Drive***](https://drive.google.com/file/d/1tF7Bh6tp3YjaFj2PxybMoPnsavRKAJRK/view).
 
 Clone this repository wherever you'd like.
 
