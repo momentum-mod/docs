@@ -1,5 +1,5 @@
 ---
-title: mom_trigger_teleport_progress
+title: mom_prog_tele
 category: command
 tags:
   - zones
