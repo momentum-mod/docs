@@ -6,4 +6,5 @@ tags:
   - mark
 ---
 
-Marks a starting point inside the start zone trigger for a customized starting location/angle.
+Creates a starting mark (a customized starting location/angle) for the current track.
+Only operates when inside a start zone trigger.
