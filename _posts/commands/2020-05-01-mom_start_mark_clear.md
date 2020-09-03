@@ -4,8 +4,19 @@ category: command
 tags:
   - start
   - mark
+optional_params:
+  - Track number
 ---
 
-Clears the saved start location for the current track if there is one. 
+Clears the current track's saved start location if there is one. 
+Optionally accepts a track number.
 
-Also accepts a track number. Eg. `mom_start_mark_clear 2` clears track 2's start mark.
+## Usage Example
+
+> `mom_start_mark_clear`
+
+Clears the start mark on the current track.
+
+> `mom_start_mark_clear 2`
+
+Clears the start mark on track 2.
