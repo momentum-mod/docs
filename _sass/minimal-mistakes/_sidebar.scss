@@ -64,6 +64,10 @@
     line-height: 1.5;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    a:hover {
+      color: $primary-color;
+    }
   }
 
   img {
