@@ -6,7 +6,7 @@
                 {% for category_ordered in site.data.categories.order %}
                     {% assign payges = site.categories.[{category_ordered.category}]} %}
                     {% if payges != null %}
-                        <span class="nav__sub-title">{{category_ordered.name}}</span>
+                        <span class="sidebar__title">{{category_ordered.name}}</span>
                         <ul>
                             {% assign sorted = payges | sort: "title" %}
                             {% for pag in sorted %}
