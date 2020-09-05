@@ -15,14 +15,14 @@
     @include clearfix;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
+    padding: 0.8em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    font-family: $sans-serif-narrow;
+    font-family: $serif;
 
     nav {
       z-index: 10;
@@ -44,8 +44,9 @@
   display: flex;
   -ms-flex-item-align: center;
   align-self: center;
-  font-weight: bold;
+  font-size: $type-size-3;
   z-index: 20;
+  padding-top: 0.16em;
 }
 
 .site-subtitle {
@@ -71,6 +72,7 @@
   ul {
     margin: 0;
     padding: 0;
+    padding-top: 0.25em;
     clear: both;
     list-style-type: none;
   }
@@ -80,9 +82,10 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  font-size: $type-size-4;
 
   &--lg {
     padding-right: 2em;
-    font-weight: 700;
+    font-weight: 200;
   }
 }
