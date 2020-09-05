@@ -59,12 +59,12 @@
 
   li {
     display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-family: $sans-serif-narrow;
-    font-size: $type-size-6;
+    margin: 0;
+    padding-top: 0.35em;
+    padding-bottom: 0.15em;
+    font-family: $serif;
+    font-size: $type-size-4;
     text-transform: uppercase;
-    margin-top: $type-size-6;
   }
 
   li + li:before {
@@ -74,7 +74,6 @@
 
   a {
     padding-right: 10px;
-    font-weight: bold;
   }
 
   .social-icons {
