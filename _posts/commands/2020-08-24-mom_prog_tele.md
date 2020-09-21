@@ -2,8 +2,7 @@
 title: mom_prog_tele
 category: command
 tags:
-  - zones
-  - triggers
+  - teleport
 requires_mapping: false
 ---
 
