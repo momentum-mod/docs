@@ -6,6 +6,7 @@ tags:
   - alpha
 minimum_value: 0.01
 maximum_value: 1
+default_value: 1
 ---
 
 Controls the opacity of viewmodels.
