@@ -33,7 +33,7 @@ PBR
 	$basetexture "models\props\pbr_asset_d"
 	$mraotexture "models\props\pbr_asset_mrao"
 	$bumpmap "models\props\pbr_asset_n"
-	$emissive "models\props\pbr_asset_e"
+	$emissiontexture "models\props\pbr_asset_e"
 	
 	$envmap "env_cubemap"
 	$model "1"
@@ -43,7 +43,7 @@ PBR
 `$basetexture` will be the Base Colour texture.  
 `$mraotexture` will be the MRAO texture.  
 `$bumpmap` will be for the Normal texture.  
-`$emissive` will be for any glowing sections of the model.  
+`$emissiontexture` will be for any glowing sections of the model.  
 
 {:.notice--danger}
 The Emissive texture is a colour texture, not a mask.
