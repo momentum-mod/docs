@@ -2,7 +2,8 @@
 title: mom_drawer_animation_time
 category: var
 tags:
-  - menu drawer
+  - main menu drawer
+  - main menu
 minimum_value: 0.01
 maximum_value: 500
 default_value: 0.33
