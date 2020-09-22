@@ -2,7 +2,8 @@
 title: mom_drawer_animation_enable
 category: var
 tags:
-  - menu drawer
+  - main menu drawer
+  - main menu
 minimum_value: 0
 maximum_value: 1
 default_value: 1
