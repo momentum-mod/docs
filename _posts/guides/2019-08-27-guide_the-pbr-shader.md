@@ -85,6 +85,19 @@ PBR
 `$parallaxdepth` specifies how “deep” the parallax effect will go.
 `$parallaxcenter` adjusts the centre-point of the parallax effect, nudging it closer or further away from the surface.
 
+<div class="note warning">
+    <p>
+        Parallax Occlusion has its limitations and things to be wary of.<br><br>
+        
+        The Parallax Shader has a limited number of layers to create the depth effect.<br>
+        If you make the height value too intense, these layers become very easy to notice and ruin the effect, as shown below.<br><br>
+
+        <img src="/assets/images/pbr_guide/pbr_layer_example.jpg" alt="Visible layers of Parallax" style="display: block; margin: auto;"><br>
+        
+        Another thing you might notice is that the depth effect continues past the edge of the brush, which can look very strange as well, and is more noticeable on higher depth settings.
+    </p>
+</div>
+
 ## Texture Creation - Painter
 When starting a new Project in Painter, you should be fine using the standard ***PBR - Metal Roughness*** template.  
 
