@@ -9,13 +9,13 @@ toc_sticky: true
 ---
 <img src="/assets/images/guide_headers/guide_pbr_shader.jpg" alt="PBR Guide" style="display: block; margin: auto;">
 
-The PBR shader is a powerful new shader that provides more realistic and versatile rendering of brushes and models within Momentum Mod whilst using less textures and needing fewer VMT tweaks.  
+The Physically Based Rendering (PBR) shader is a powerful new shader that provides more realistic and versatile rendering of brushes and models within Momentum Mod whilst using less textures and needing fewer VMT tweaks.  
 
 PBR extends Source’s shading capacity by storing additional Metalness, Roughness and Ambient Occlusion maps in independent channels of an additional texture called the MRAO.  
 
-Additionally, it uses the Alpha channel of the Normal map as a Height input for Parallax maps.  
+Additionally, it uses the alpha channel of the normal map as a height input for parallax maps.  
 
-This Guide will be a general overview of its use and how to set up textures for it from scratch.
+This guide will be a general overview of its use and how to set up textures for it from scratch.
 
 > The original repo can be found on [GitHub](https://github.com/thexa4/source-pbr).
 
@@ -51,7 +51,7 @@ PBR
 
 <div class="note info">
     <p>
-        The Emission texture is a colour texture, not a mask.
+        The emission texture is a colour texture, not a mask.
     </p>
 </div>
 
@@ -64,7 +64,7 @@ PBR
 </div>
 
 ## VMT Example - Brush
-Here is another example using Parallax, intended for use on a Brush:
+Here is another example using parallax, intended for use on a brush:
 ```
 PBR
 {
@@ -81,12 +81,12 @@ PBR
 
 <div class="note info">
     <p>
-        The Parallax option requires that a Heightmap is embedded into the Alpha Channel of the Normal Map.  
+        The parallax option requires that a height map is embedded into the alpha channel of the normal map.  
         You can check out one way of doing so <a href="#texture-creation---designer">below</a>.
     </p>
 </div>
 
-`$parallax` simply enables the Parallax effect.
+`$parallax` simply enables the parallax effect.
 `$parallaxdepth` specifies how “deep” the parallax effect will go.
 `$parallaxcenter` adjusts the centre-point of the parallax effect, nudging it closer or further away from the surface.
 
@@ -94,7 +94,7 @@ PBR
     <p>
         Parallax Occlusion has its limitations and things to be wary of.<br><br>
         
-        The Parallax Shader has a limited number of layers to create the depth effect.<br>
+        The parallax shader has a limited number of layers to create the depth effect.<br>
         If you make the height value too intense, these layers become very easy to notice and ruin the effect, as shown below.<br><br>
 
         <img src="/assets/images/pbr_guide/pbr_layer_example.jpg" alt="Visible layers of Parallax" style="display: block; margin: auto;"><br>
@@ -104,32 +104,32 @@ PBR
 </div>
 
 ## Texture Creation - Painter
-When starting a new Project in Painter, you should be fine using the standard ***PBR - Metal Roughness*** template.  
+When starting a new project in Painter, you should be fine using the standard ***PBR - Metal Roughness*** template.  
 
 <img src="\assets\images\pbr_guide\pbr_painter_template.jpg" alt="Painter Template" style="display: block; margin: auto;">
 
-However, the PBR Shader uses MRAO textures, so a custom export template is needed otherwise the channels must be packed together into a single texture elsewhere.
+However, the PBR shader uses MRAO textures, so a custom export template is needed otherwise the channels must be packed together into a single texture elsewhere.
 
 You can try this export template, which creates the MRAO texture as well as an Emissive texture if one exists:  
 > [PBR Shader Template](/assets/PBR MRAO Emissive.spexp)
 
 <div class="note warning">
     <p>
-        This template does not include the Heightmap in the Normal Map Alpha for Parallax.
+        This template does not include the height map in the normal map alpha for parallax.
     </p>
 </div>
 
 It can go in the `Allegorithmic\Substance Painter\shelf\export-presets` folder.
 
 ## Texture Creation - Designer
-Creating the Input textures isn’t covered in the Guide - This section simply shows how to composite both the **MRAO** and **Normal** map with the **Height** textures correctly.
+Creating the input textures isn’t covered in the guide - this section simply shows how to composite both the **MRAO** and normal map with the height textures correctly.
 
-You can create a **MRAO** texture by putting the **Metalness**, **Roughness**, **Ambient Occlusion**, and a White *Uniform Color* Node into an *RGBA Merge* Node.
+You can create a MRAO texture by putting the Metalness, Roughness, Ambient Occlusion, and a White *Uniform Color* Node into an *RGBA Merge* Node.
 
-The Normal Map with Height embedded is simpler and can be achieved with an *Alpha Merge* node.
+The normal map with height embedded is simpler and can be achieved with an *Alpha Merge* node.
 
 Both processes are shown below. The MRAO is colour-coded to make it easier to follow:
 
 <img src="\assets\images\pbr_guide\pbr_designer_setup.png" alt="Painter Template" style="display: block; margin: auto;">
 
-You should then have the 3 minimum textures needed for the Shader.
+You should then have the 3 minimum textures needed for the shader.
