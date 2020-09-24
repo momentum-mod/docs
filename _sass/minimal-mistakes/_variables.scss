@@ -12,6 +12,21 @@ $doc-font-size: 16 !default;
 $paragraph-indent: false !default; // true, false (default)
 $indent-var: 1.3em !default;
 
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(BebasNeue-Regular.ttf);
+}
+
+@font-face {
+   font-family: "Noto Sans";
+   src: url(NotoSans-Regular.ttf);
+}
+
+@font-face {
+   font-family: "Source Code Pro";
+   src: url(SourceCodePro-Regular.ttf);
+}
+
 /* system typefaces */
 $serif: "Bebas Neue", Georgia, Times, serif !default;
 $sans-serif: "Noto Sans", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
