@@ -3,10 +3,13 @@ title: func_nogrenades
 category: entity
 tags:
  - func
+ - trigger
  - TF2 
  - limit
- - rocket
- - stickybomb
+ - explosion
+ - rocket jump
+ - sticky jump
+ - conc
 ---
 
 ----
@@ -15,9 +18,11 @@ Rockets and grenades will not detonate inside this area.
 ---
 ## Keyvalues
 
->Airborne Only (choices&lt;**integer**&gt;)
+> Explosive prevention method (explosion_prevention_type&lt;**choices**&gt;)
 
-Prevent airborne exposions only. The default value is 0.
+Determines the method of explosive prevention.
 
- - **0**: False
- - **1**: True
+ - **0**: "[Default] As in TF2, prevents explosives from detonating inside this trigger."
+ - **1**: "Prevent stickybomb detonation only if the stickybomb is airborne."
+ - **2**: "Destroy stickybombs upon them landing, instead of on attempted detonation."
+ - **3**: "Destroy explosive (rocket/stickybomb/etc.) immediately upon it entering the trigger."
