@@ -85,7 +85,7 @@ To create the End Zone, go to where you want it and repeat the process, you shou
 If all goes well you should be able to click ***Save Zones***, close the GUI and test the map.  
 
 Zones are stored in a `.zon` file of the same name as the map.  
-So for this example the map is called *"cubemaptest"* so the `maps/` folder will now have a `cubemaptest.zon` file.
+So for this example the map is called *"cubemaptest"* so the `zones/` folder will now have a `cubemaptest.zon` file.
 
 > This should be enough for basic testing and Linear maps.  
 > For more than one Stage or Bonuses check the [Advanced Zoning](/guide/advanced-zoning/) Guide.
