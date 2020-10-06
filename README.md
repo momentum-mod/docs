@@ -2,6 +2,8 @@
 
 > A documentation website for Momentum Mod, running on [Jekyll](https://jekyllrb.com/) and using the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme.
 
+All documentation is kept up with the game's development branch not our current release version on Steam.
+
 ## What This Is
 
 This repo is an open source collection of documentation for various aspects of the game Momentum Mod. This includes (but is not exactly limited to):
