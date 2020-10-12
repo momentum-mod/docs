@@ -31,7 +31,7 @@ Download [***GitHub Desktop***](https://desktop.github.com/), it will require a 
 
 Go to the [***Main Page***](https://github.com/momentum-mod/game) and click ***Clone or Download > Open in Desktop***:  
 
-![Github Open In Desktop](/assets/images/build_guide/build0.png){:style="display:block; margin: auto;"}
+![Github Open In Desktop](/assets/images/build_guide/github0.png){:style="display:block; margin: auto;"}
 
 You should have cloned the `develop` branch.  
 
