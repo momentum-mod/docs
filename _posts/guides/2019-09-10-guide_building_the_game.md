@@ -58,7 +58,7 @@ Your installation only requires the "Desktop development with C++" workload:
 
 If you downloaded Momentum Mod from Steam, create an extra folder somewhere called `MomentumDev`, and copy everything from your `steamapps/common/Momentum Mod` folder to it. Then delete the `momentum` folder from `MomentumDev`.
 
-Otherwise if you downloaded the `MomentumDev` folder from Google Drive, extract it somewhere.
+Otherwise if you downloaded the `MomentumDev` folder from Google Drive, extract it somewhere. (It doesn't matter where you put it, as long as you can find it again.)
 
 Edit the `creategameprojects.ps1` file to point the `$path` variable to the full path of the `MomentumDev` folder.  
 
