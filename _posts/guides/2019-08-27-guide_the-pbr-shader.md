@@ -25,7 +25,7 @@ To make proper use of this Guide you should:
 - Know how to create textures such as Ambient Occlusion via baking
 - Be able to create PBR textures/work with the PBR Metal/Rough workflow
 - Have either Substance Painter and/or Designer and have some experience with them  
-(Tools such as Photoshop aren't covered but hopefully this guide may help with the general process)
+(Not all tools are covered but hopefully this guide may help with the general process)
 
 Since the PBR Shader uses the PBR workflow, most textures will have to be remade or otherwise edited to work properly.
 
@@ -128,3 +128,33 @@ Both processes are shown below. The MRAO is colour-coded to make it easier to fo
 ![Painter Template](\assets\images\pbr_guide\pbr_designer_setup.png)
 
 You should then have the 3 minimum textures needed for the shader.
+
+## Manual MRAO Creation in Photoshop (Channel Packing)
+If you don't have something like Substance Designer to create an MRAO with, you can create it manually in something like Photoshop if you have several textures you want to create an MRAO from.
+
+The process is simple; you just need all 3 textures required to make an MRAO. The end result should look somewhat similar to this:
+
+<img src="\assets\images\pbr_guide\channel_pack_final_result.jpg" alt="Final Resulting MRAO" style="display: block; margin: auto;">
+
+The only layers you need are those of the 3 textures; add them all, check their properties, and look for these checkboxes:
+
+<img src="\assets\images\pbr_guide\channel_pack_properties_dialog.jpg" alt="Final Resulting MRAO" style="display: block; margin: auto;">
+
+By default, all 3 of these are checked, which is normal. Depending on which texture layer you've selected, change the checkboxes to the following:
+
+Metallic:
+- R Checked
+- G Unchecked
+- B Unchecked
+
+Roughness:
+- R Unchecked
+- G Checked
+- B Unchecked
+
+Ambient Occlusion:
+- R Unchecked
+- G Unchecked
+- B Checked
+
+Afterwards, you should have a strange, but colourful looking image that you can save and make use of in the PBR shader.
