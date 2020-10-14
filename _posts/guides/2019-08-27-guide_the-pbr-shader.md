@@ -22,10 +22,12 @@ This guide will be a general overview of its use and how to set up textures for 
 ## Prerequisites
 To make proper use of this Guide you should:
 - Be on Momentum 0.8.4 or newer
-- Know how to create textures such as Ambient Occlusion via baking
 - Be able to create PBR textures/work with the PBR Metal/Rough workflow
-- Have either Substance Painter and/or Designer and have some experience with them  
-(Not all tools are covered but hopefully this guide may help with the general process)
+- Have either Substance Painter and/or Designer, and have some experience with them for making PBR textures from scratch
+- Know how to create textures such as Ambient Occlusion via baking if you're not using Substance to create them instead
+- Photoshop if you already have PBR textures (Metallic, Roughness, AO) that you just need to create an MRAO from
+
+Not all tools are covered but hopefully this guide may help with the general process.
 
 Since the PBR Shader uses the PBR workflow, most textures will have to be remade or otherwise edited to work properly.
 
