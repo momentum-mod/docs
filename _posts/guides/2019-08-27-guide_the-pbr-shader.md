@@ -135,7 +135,7 @@ Both processes are shown below. The MRAO is colour-coded to make it easier to fo
 You should then have the 3 minimum textures needed for the shader.
 
 ## Manual MRAO Creation in Photoshop (Channel Packing)
-If you don't have something like Substance Designer to create an MRAO with, you can create it manually in something like Photoshop if you have several textures you want to create an MRAO from.
+If you have several textures you want to create an MRAO from and you don't have Substance Designer, you can create it manually in something like Photoshop.
 
 The process is simple; you just need all 3 textures required to make an MRAO. The end result should look somewhat similar to this:
 
@@ -162,4 +162,4 @@ Ambient Occlusion:
 - G Unchecked
 - B Checked
 
-Afterwards, you should have a strange, but colourful looking image that you can save and make use of in the PBR shader.
+Afterwards, you should have a strange, but colourful looking image that you can save and make use of with the PBR shader.
