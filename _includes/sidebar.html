@@ -12,10 +12,11 @@
                             {% for pag in sorted %}
                                 {% if pag.url == page.url %}
                                     {% assign active = "active" %}
+                                    {% assign anchor = "sidebar-anchor" %}
                                 {% else %}
                                     {% assign active = "" %}
                                 {% endif %}
-                                <li><a href="{{ pag.url | relative_url }}" class="{{ active }}">{{ pag.title }}</a></li>
+                                <li><a href="{{ pag.url | relative_url }}" class="{{ active }}" {%if anchor %}id="{{ anchor }}"{% endif %}>{{ pag.title }}</a></li>
                             {% endfor %}
                         </ul>
                     {% endif %}
