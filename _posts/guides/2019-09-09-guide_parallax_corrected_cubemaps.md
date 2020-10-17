@@ -5,6 +5,7 @@ category: guide
 tags:
   - hammer
 toc: true
+toc_sticky: true
 ---
 ![Cubemap Guide](/assets/images/guide_headers/guide_parallax_cubemaps.jpg)
 
