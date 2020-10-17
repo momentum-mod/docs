@@ -76,14 +76,3 @@ When creating an `env_cubemap` you should see an extra option called *"Cubemap B
 This should be all the setup that is required in Hammer.  
 
 You should be able to compile your map as normal and build the cubemaps in game to see the effects if you have any supported materials in the map.  
-
-If you don't, the next section should help you.
-
-## Materials
-Assuming you have an existing material you want to use in conjunction with Parallax-Corrected Cubemaps, all that is required is to change the shader of the `.VMT` from `LightmappedGeneric` to `SDK_LightmappedGeneric` like so:
-
-<img src="/assets/images/cubemap_guide/cube_5.png" alt="VMT edit" style="display: block; margin: auto;">
-
-So, if you want an existing material to have a Parallax-Corrected Cubemap version, simply make a copy and change the first line.  
-
-If you want to make a new one, then make your material as normal, but with the `SDK_LightmappedGeneric` shader as the first line instead.
