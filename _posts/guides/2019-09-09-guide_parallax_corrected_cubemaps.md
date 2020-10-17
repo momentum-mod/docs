@@ -19,7 +19,6 @@ To make use of this page, you should:
 - Be proficient in using the Hammer Editor
 - Have the `momentum.fgd` in your Hammer configuration
 - Know how to use the developer console
-- Know how to edit/create `.VMT` files
 
 ## Components of a Parallax-Corrected Cubemap
 In Hammer, Parallax-Corrected Cubemaps need two entities to function correctly:  
