@@ -33,8 +33,6 @@ In Hammer, Parallax-Corrected Cubemaps need two entities to function correctly:
     </p>
 </div>
 
-Besides this entity setup, you will also need materials which support the shader this feature uses: `SDK_LightmappedGeneric`. This is covered in the [Materials section](#materials) of this page. 
-
 Any regular `LightmappedGeneric` materials will still be able to use the cubemap as normal, this feature simply adds functionality on top of the existing `env_cubemap` in conjunction with an extra entity and shader to use inside `.VMT` files.
 
 <div class="note warning">
