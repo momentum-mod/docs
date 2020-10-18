@@ -8,7 +8,7 @@ tags:
 
 
 ----
-![surf_sluice slides](/assets/images/trigger_momentum_slide/slides.jpg)
+![Slide trigger texture](/assets/images/trigger_momentum_slide/slides.jpg)
 
   
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that allows the player to slide across the surface of a brush without friction. 
