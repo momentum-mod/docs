@@ -14,27 +14,29 @@ Trigger that allows for multiple hops inside of it, and teleports the player if 
 
 >**Track Number** (track_number&lt;**integer**&gt;)
 
-The track that this trigger belongs to: 
+The track that this teleport belongs to: 
 
  - **-1**: All Tracks
  - **0**: Main Map
  - **1+**: Bonus Tracks
 
+Default is -1.
+
 >**Remote Destination** (target&lt;**target_destination**&gt;)  
 
 The entity specifying the point to which the player should be teleported.
 
->**Stop player on teleport** (stop&lt;**choices**&gt;)  
+>**Stop player on teleport** (stop&lt;**choices**&gt;)
  - **0**: False
  - **1**: True
 
-The default value is 1.
+Resets the velocity of the player after being teleported to the Remote Destination. Default is true.
 
 >**Reset the player angles on teleport** (resetang&lt;**choices**&gt;)
  - **0**: False
  - **1**: True
 
-The default value is 1.
+Resets the view angles of the player after being teleported to the Remote Destination. Default is true.
 
 >**Hold Time (seconds)** (hold&lt;**float**&gt;)
 

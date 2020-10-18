@@ -17,19 +17,29 @@ A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} 
 
 >**Track Number** (track_number&lt;**integer**&gt;)
 
-The track that this zone belongs to: 
+The track that this teleport belongs to: 
 
  - **-1**: All Tracks
  - **0**: Main Map
  - **1+**: Bonus Tracks
 
->**Stop player on teleport** (stop&lt;**boolean**&gt;)
+Default is -1.
 
- Resets the velocity of the player after being teleported to the Remote Destination.
+>**Remote Destination** (target&lt;**target_destination**&gt;)  
 
->**Reset the player angles on teleport** (resetang&lt;**boolean**&gt;)
+The entity specifying the point to which the player should be teleported.
 
- Resets the view angles of the player after being teleported to the Remote Destination.
+>**Stop player on teleport** (stop&lt;**choices**&gt;)
+ - **0**: False
+ - **1**: True
+
+Resets the velocity of the player after being teleported to the Remote Destination. Default is true.
+
+>**Reset the player angles on teleport** (resetang&lt;**choices**&gt;)
+ - **0**: False
+ - **1**: True
+
+Resets the view angles of the player after being teleported to the Remote Destination. Default is true.
 
 ## Flags
 
