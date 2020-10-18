@@ -8,7 +8,7 @@ tags:
 ---
 
 ----
-![start zone](/assets/images/trigger_momentum_timer_start/start_zone.jpg)
+![Start tool texture](/assets/images/trigger_momentum_timer_start/start.jpg)
   
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that starts the map or bonus upon leaving it.
   
