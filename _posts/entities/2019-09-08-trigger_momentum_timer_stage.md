@@ -9,7 +9,7 @@ ccom_ref: mom_restart_stage
 ---
 
 ----
-![stage zone](/assets/images/trigger_momentum_timer_stage/stage_zone.jpg)
+![Stage tool texture](/assets/images/trigger_momentum_timer_stage/stage.jpg)
   
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that marks the start of a stage.  
 It is used on Staged maps and can be reset to via [`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }}).
