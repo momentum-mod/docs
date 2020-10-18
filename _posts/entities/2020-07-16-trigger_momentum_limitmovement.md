@@ -12,6 +12,8 @@ tags:
 - movement
 ---
 ----
+![Limitmovement trigger texture](/assets/images/trigger_momentum_limitmovement/limitmovement.jpg)
+
 
 Trigger that prevents the player from doing specific keypress movements.
 
