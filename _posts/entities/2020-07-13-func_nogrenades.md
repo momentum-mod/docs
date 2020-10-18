@@ -13,9 +13,12 @@ tags:
 ---
 
 ----
+![Nogrenade trigger texture](/assets/images/func_nogrenades/func_nogrenades.jpg)
+
+
 Rockets and grenades will not detonate inside this area.
 
----
+
 ## Keyvalues
 
 > Explosive prevention method (explosion_prevention_type&lt;**choices**&gt;)
