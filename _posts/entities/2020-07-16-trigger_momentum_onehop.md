@@ -40,6 +40,12 @@ Resets the velocity of the player after being teleported to the Remote Destinati
 
 Resets the view angles of the player after being teleported to the Remote Destination. Default is true.
 
+>**Fail Teleport** (fail&lt;**choices**&gt;)
+ - **0**: False
+ - **1**: True
+
+Indicates whether this teleport is for failing a level. Default is false.
+
 >**Hold Time (seconds)** (hold&lt;**float**&gt;)
 
 If the player is in this trigger for longer than this (in seconds), teleport them to the most recent progress trigger.
