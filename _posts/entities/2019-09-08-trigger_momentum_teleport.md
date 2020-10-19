@@ -41,6 +41,12 @@ Resets the velocity of the player after being teleported to the Remote Destinati
 
 Resets the view angles of the player after being teleported to the Remote Destination. Default is true.
 
+>**Fail Teleport** (fail&lt;**choices**&gt;)
+ - **0**: False
+ - **1**: True
+
+Indicates whether this teleport is for failing a level. Default is false.
+
 ## Flags
 
 >**Teleport the player on EndTouch() instead of StartTouch() (8388608)**  
