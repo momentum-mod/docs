@@ -5,6 +5,7 @@ tags:
  - timer
  - trigger
  - start
+tool_texture: trigger_start
 ---
 
 ----

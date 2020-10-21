@@ -4,8 +4,8 @@ category: entity
 tags:
  - teleport
  - trigger
+tool_texture: trigger_teleport
 ---
-
 
 ----
 ![teleport trigger](/assets/images/trigger_momentum_teleport/momentum_teleport.jpg)

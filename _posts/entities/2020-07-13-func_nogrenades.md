@@ -10,6 +10,7 @@ tags:
  - rocket jump
  - sticky jump
  - conc
+tool_texture: trigger_nogrenades
 ---
 
 ----

@@ -111,6 +111,16 @@ layout: default
           {% endif %}
         {% endif %}
 
+        {% comment %} Show the min/max value of the convar if it exists {% endcomment %}
+        {% if page.category == "entity" %}
+          {% if page.tool_texture %}
+            <blockquote>
+              A material for the tool texture shown in the header image can be found in <code>materials/tools/{{ page.tool_texture }}</code>.<br>
+              It is entirely optional and functions identically to the normal trigger texture.
+            </blockquote>
+          {% endif %}
+        {% endif %}
+
         {% include page__taxonomy.html %}
         <p><strong><i class="fas fa-fw fa-edit" aria-hidden="true"></i> <a href="https://github.com/momentum-mod/docs/edit/master/{{ page.path }}">Edit File on GitHub</a></strong></p>
       </footer>

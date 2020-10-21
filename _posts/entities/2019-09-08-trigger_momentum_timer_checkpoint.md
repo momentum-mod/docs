@@ -5,6 +5,7 @@ tags:
  - timer
  - trigger
  - checkpoint
+tool_texture: trigger_checkpoint
 ---
 
 ----
