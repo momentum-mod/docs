@@ -62,17 +62,16 @@ layout: default
 
         {% comment %} For commands that have an associated safeguard {% endcomment %}
         {% if page.safeguard %}
-          <p class="page__taxonomy">
-            <strong>This command has an associated run safeguard:</strong> 
+          <blockquote>
+            This command has an associated run safeguard:
             <a href="/var/{{ page.safeguard }}"><code>{{ page.safeguard }}</code></a>
-          </p>
-          <br>
+          </blockquote>
         {% endif %}
 
         {% comment %} Show the min/max value of the convar if it exists {% endcomment %}
         {% if page.category == "var" %}
           {% if page.minimum_value or page.maximum_value or page.default_value %}
-            <div class="cvar-minmax-wrapper">
+            <blockquote>
               {% if page.minimum_value %}
                 <div class="cvar-minmax"> <i class="fas fa-fw fa-chevron-down" aria-hidden="true"></i> MIN: {{ page.minimum_value }} </div>
               {% endif %}
@@ -82,32 +81,28 @@ layout: default
               {% if page.default_value %}
                 <div class="cvar-minmax"> <i class="fas fa-fw fa-check" aria-hidden="true"></i> DEFAULT: {{ page.default_value }} </div>
               {% endif %}
-            </div>
+            </blockquote>
           {% endif %}
         {% endif %}
 
         {% comment %} Show the required/optional parameters of the commands if there are any {% endcomment %}
         {% if page.category == "command" %}
           {% if page.required_params or page.optional_params %}
-            <div class="com-wrapper">
+            <blockquote>
               <h1>Parameters:</h1>
               {% if page.required_params %}
-                <div>
-                  <div class="com-params-label"> <i class="fas fa-fw fa-asterisk" aria-hidden="true"></i> REQUIRED: </div>
-                  {% for required_input in page.required_params %}
-                    <div class="com-params">{% if required_input != page.required_params[0] %} | {% endif %} {{ required_input }} </div>
-                  {% endfor %}
-                </div>
+                <div class="com-params-label"> <i class="fas fa-fw fa-asterisk" aria-hidden="true"></i> REQUIRED: </div>
+                {% for required_input in page.required_params %}
+                  <div class="com-params">{% if required_input != page.required_params[0] %} | {% endif %} {{ required_input }} </div>
+                {% endfor %}
               {% endif %}
               {% if page.optional_params %}
-                <div>
-                  <div class="com-params-label"> <i class="fas fa-fw fa-plus" aria-hidden="true"></i> OPTIONAL: </div>
-                  {% for optional_input in page.optional_params %}
-                    <div class="com-params">{% if optional_input != page.optional_params[0] %} | {% endif %} {{ optional_input }} </div>
-                  {% endfor %}
-                </div>
+                <div class="com-params-label"> <i class="fas fa-fw fa-plus" aria-hidden="true"></i> OPTIONAL: </div>
+                {% for optional_input in page.optional_params %}
+                  <div class="com-params">{% if optional_input != page.optional_params[0] %} | {% endif %} {{ optional_input }} </div>
+                {% endfor %}
               {% endif %}
-            </div>
+            </blockquote>
           {% endif %}
         {% endif %}
 

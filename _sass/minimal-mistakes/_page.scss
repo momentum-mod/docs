@@ -91,20 +91,12 @@ body {
     background-color: rgba($primary-color, 0.4);
 }
 
-.cvar-minmax-wrapper {
-  margin-bottom: 0.4em;
-}
-
 .cvar-minmax {
   font-size: $type-size-5;
   font-family: $sans-serif-narrow;
   font-weight: bold;
   display: inline;
   padding-right: 2em;
-}
-
-.com-wrapper {
-  margin-bottom: 0.4em;
 }
 
 .com-params-label {
