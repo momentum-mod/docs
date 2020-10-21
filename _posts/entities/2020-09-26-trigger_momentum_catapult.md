@@ -5,6 +5,7 @@ tags:
 - trigger
 - player
 - TF2
+tool_texture: trigger_catapult
 ---
 ----
 ![Catapult trigger texture](/assets/images/trigger_momentum_catapult/catapult.jpg)

@@ -6,6 +6,7 @@ tags:
  - trigger
  - stage
 ccom_ref: mom_restart_stage
+tool_texture: trigger_stage
 ---
 
 ----

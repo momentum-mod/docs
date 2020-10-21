@@ -5,6 +5,7 @@ tags:
  - timer
  - trigger
  - stop
+tool_texture: trigger_stop
 ---
 
 ----
