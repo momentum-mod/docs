@@ -9,7 +9,11 @@ optional_params:
 safeguard: mom_run_safeguard_restart
 ---
 
-Restarts the player to the start trigger. Optionally takes a track number (default is main track).
+Restarts the player to the start zone on the current track.
+If no start zone is found, the player will be teleported to the spawn position.
+Optionally takes a track number as a parameter, which can be used to get to bonus'.
+
+In the tricksurf gamemode this teleports the player back to their currently tracked trick, if there is any.
 
 ## Usage Examples
 
@@ -29,8 +33,3 @@ This will teleport the player to the start of the current track.
 
 This will teleport the player to the start of bonus 1 (track 1). If the player is not on bonus 1, the command will also set their timer to bonus 1.
 Use `mom_restart 2` to get to bonus 2, `mom_restart 3` to get to bonus 3, etc.
-
-## Notes
-
-If no start zone is found, the player will be teleported to a spawn position.
-
