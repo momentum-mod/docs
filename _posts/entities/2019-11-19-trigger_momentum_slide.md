@@ -4,6 +4,7 @@ category: entity
 tags:
  - slide
  - trigger
+tool_texture: trigger_slide
 ---
 
 
