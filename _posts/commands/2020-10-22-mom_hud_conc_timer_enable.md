@@ -4,6 +4,7 @@ category: command
 tags:
   - conc
   - timer
+  - HUD
 ---
 
 Toggles the conc timer on or off.
