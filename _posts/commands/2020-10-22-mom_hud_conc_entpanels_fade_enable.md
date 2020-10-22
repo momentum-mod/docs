@@ -4,6 +4,7 @@ category: command
 tags:
   - conc
   - UI
+  - HUD
 ---
 
 Toggles whether the conc ent panels fade after a certain distance.
