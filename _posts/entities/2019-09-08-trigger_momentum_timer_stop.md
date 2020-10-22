@@ -33,3 +33,8 @@ The track that this zone belongs to:
  - Zone number 1 is reserved for start triggers.
  - Zone numbers 2 and up are for stage / checkpoint triggers.  
 
+>**Cancel Timer** (cancel&lt;**choices**&gt;)
+ - **0**: False
+ - **1**: True
+
+If true, the timer will be canceled upon the player's entry, preventing the run from being submitted. Default is false.
