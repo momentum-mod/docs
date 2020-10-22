@@ -4,6 +4,7 @@ category: command
 tags:
   - conc
   - timer
+  - HUD
 ---
 
 Toggles whether the countdown for the conc timer is shown.
