@@ -1,5 +1,5 @@
 ---
-title: mom_zone_end_outline_color
+title: mom_zone_end_draw_color
 category: var
 tags:
   - zones
@@ -9,4 +9,4 @@ tags:
 default_value: FF0000FF
 ---
 
-Color of the end zone.
+Color of the end zone(s).
