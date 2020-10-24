@@ -1,10 +1,10 @@
 ---
-title: mom_zone_checkpoint_outline_color
+title: mom_zone_checkpoint_draw_color
 category: var
 tags:
   - zones
   - checkpoint
-  - outline
+  - trigger
   - color
 default_value: FFFF00FF
 ---
