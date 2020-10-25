@@ -84,7 +84,7 @@ If it is above 0, then you are creating Zones for a Bonus instead, the number co
 
 To teleport to a bonus, or back to the main track use the [`mom_restart`](https://docs.momentum-mod.org/command/mom_restart/) command.  
 
-In this example, to get to Bonus 3, you would use `mom_restart 3`.
+In this example, to get to bonus 3, you would use `mom_restart 3`.
 
 ## Zone Number
 This number is for the ordering of Zones.  
