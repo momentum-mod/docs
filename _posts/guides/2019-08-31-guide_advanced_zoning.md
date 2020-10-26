@@ -7,6 +7,7 @@ tags:
   - advanced
 toc: true
 toc_sticky: true
+cmd_ref: mom_restart
 ---
 <img src="/assets/images/guide_headers/guide_advanced_zoning.jpg" alt="Advanced Zone Guide" style="display: block; margin: auto;">
 
@@ -81,6 +82,10 @@ By default, this number will be 0, which indicates that you are creating Zones f
 If it is above 0, then you are creating Zones for a Bonus instead, the number corresponding to which Bonus it is.  
 
 *For example, Track Number 3 would be for the 3rd bonus.*
+
+To teleport to a bonus, or back to the main track use the [`{{page.cmd_ref}}`](/command/{{page.cmd_ref}}) command.  
+
+In this example, to get to bonus 3, you would use `mom_restart 3`.
 
 ## Zone Number
 This number is for the ordering of Zones.  
