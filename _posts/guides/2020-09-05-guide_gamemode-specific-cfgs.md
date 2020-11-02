@@ -15,7 +15,7 @@ ccom_resreload: hud_reloadcontrols
 ccom_speedoload: mom_hud_speedometer_loadcfg
 ---
 
-<img src="/assets/images/gamemode-specific-cfgs_guide/custom-speedo-layout.png" alt="Custom Speedometer Layout" style="display: block; margin: auto;">
+![Custom Speedometer Layout](/assets/images/gamemode-specific-cfgs_guide/custom-speedo-layout.png)
 
 This guide covers all gamemode-specific settings available to players, at least at the time of writing.
 
