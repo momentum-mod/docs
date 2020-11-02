@@ -44,7 +44,7 @@ Some examples of incorrect file structures are:
 In these examples, `models` and `materials` are search customs, meaning that `custom_model.mdl` and `custom_material.vmt` exist at the root of the game's virtual filesystem instead of in their appropriate folders.
 
 ## Example - Overriding Weapon Script
-<img src="/assets/images/override-custom-assets_guide/weapon_compare.jpg" alt="Weapon Model Comparison" style="display: block; margin: auto;">
+![Weapon Model Comparison](/assets/images/override-custom-assets_guide/weapon_compare.jpg)
 
 Inside `momentum/custom/overrides/scripts/` there are some weapon script overrides available.
 For these overrides to take effect they need to be renamed to match the file they are overriding in `momentum/scripts/`.
@@ -56,7 +56,7 @@ Weapon scripts can be reloaded from within the game by using the console command
 ## Example - Overriding Speedometer Position
 Note that gamemode specific speedometer layouts can be set in `momentum/cfg/speedometer.vdf` (see the [guide for gamemode specific configurations](/guide/{{ page.guide_GSC }}#speedometer)).
 
-<img src="/assets/images/override-custom-assets_guide/centered_speedo.png" alt="Centered Speedometer" style="display: block; margin: auto;">
+![Centered Speedometer](/assets/images/override-custom-assets_guide/centered_speedo.png)
 
 The resource file for the speedometer is `speedometer.res`, located in `momentum/resource/ui/`.
 Copy this file to `momentum/custom/overrides/resource/ui/` to override the game's base file.

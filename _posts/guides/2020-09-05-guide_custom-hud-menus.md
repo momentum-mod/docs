@@ -14,7 +14,7 @@ ccom_show: mom_hud_menu_show
 ccom_reload: mom_hud_menu_reload
 ---
 
-<img src="/assets/images/custom-hud-menus_guide/custom-hud-menus-header.png" alt="Hud Menu" style="display: block; margin: auto;">
+![Hud Menu](/assets/images/custom-hud-menus_guide/custom-hud-menus-header.png)
 
 This guide covers how to make a custom hud menu, such as the saveloc or ruler menus.
 
