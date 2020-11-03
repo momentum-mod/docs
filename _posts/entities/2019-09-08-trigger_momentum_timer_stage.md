@@ -15,11 +15,8 @@ tool_texture: trigger_stage
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that marks the start of a stage.  
 It is used on Staged maps and can be reset to via [`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }}).
 
-<div class="note warning">
-    <p>
-        Stage Zones cannot be used at the same time as Checkpoint Zones.
-    </p>
-</div>
+{:.notice--danger}
+Stage Zones cannot be used at the same time as Checkpoint Zones.
 
 > Looking for more general info on Zones?   
 > Check the [Zone Types page](/guide/zone-types/).
