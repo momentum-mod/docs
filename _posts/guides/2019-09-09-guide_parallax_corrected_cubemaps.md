@@ -34,22 +34,24 @@ This is normal and allows you to more easily select the brush if you have made i
 Any regular `LightmappedGeneric` materials will still be able to use the cubemap as normal, this feature simply adds functionality on top of the existing `env_cubemap` in conjunction with an extra entity and shader to use inside `.VMT` files.
 
 <div class="notice--warning">
-    <p>
         There are some important things to take note of:
+        <br><br>
+		<li>The <code>parallax_obb</code> entity must be a single box brush.</li>
+		<li>The Parallax-Corrected cubemap is still built the same way regular cubemaps are.</li>
+		<p>
+		This means that you may have distortion in the reflections depending on where you place the <code>env_cubemap</code> and the shape of the <code>parallax_obb</code> brush.
+		</p>
 		
-		<li>The <code>parallax_obb</code> entity must be a single box brush.</li><br>
-		
-		<li>The Parallax-Corrected cubemap is still built the same way regular cubemaps are.<br><br>
-		This means that you may have distortion in the reflections depending on where you place the <code>env_cubemap</code> and the shape of the <code>parallax_obb</code> brush.<br><br>
-		
-		This example has a wide room with a low ceiling as well as the cubemap entity not quite in the centre:<br><br>
-		
-		<img src="/assets/images/cubemap_guide/cube_4.jpg" alt="Distortion example" style="display: block; margin: auto;">
+		<p>
+		This example has a wide room with a low ceiling as well as the cubemap entity not quite in the centre:
+		</p>
+		<img src="/assets/images/cubemap_guide/cube_4.jpg" alt="Distortion example">
 
-		<br>Parallax-Corrected cubemaps work best in box-shaped rooms and areas, the closer to a cube shape your <code>parallax_obb</code> is, the less obvious distortion that you will likely get.<br><br>
+		<p>
+		Parallax-Corrected cubemaps work best in box-shaped rooms and areas, the closer to a cube shape your <code>parallax_obb</code> is, the less obvious distortion that you will likely get.
+		</p>
 		
-		You should place the <code>env_cubemap</code> in the centre of the <code>parallax_obb</code> brush instead of at head height.</li>	
-    </p>
+		You should place the <code>env_cubemap</code> in the centre of the <code>parallax_obb</code> brush instead of at head height.
 </div>
 
 ## Hammer

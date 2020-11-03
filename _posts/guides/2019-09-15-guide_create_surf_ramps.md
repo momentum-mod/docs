@@ -127,12 +127,9 @@ and [HammerPatch](https://github.com/crashfort/HammerPatch){:target="_blank"}.
 These improve the precision of the stored vertices and help keep brushwork looking the way it's supposed to. 
 Momentum hammer also implements a fix similar to HammerPatch.
 
-<div class="note info">
-	<p>
-	Note: The purpose of a base portion at the bottom of the ramp is to make the surfable area overlap at all locations.
-	As long as they are used while creating the ramp, they can be deleted afterwards.
-	</p>
-</div>
+{:.notice--info}
+Note: The purpose of a base portion at the bottom of the ramp is to make the surfable area overlap at all locations.
+As long as they are used while creating the ramp, they can be deleted afterwards.
 
 ### Curved Ramps with Func_Detail
 
@@ -325,7 +322,7 @@ The vmf created during this guide is available [here](/assets/mapsrc/surf_ramp_t
   
     
 ## Modeling Ramps
-<img src="/assets/images/ramps_guide/headers/nebula.jpg" alt="Model Header" style="display: block; margin: auto">
+![Model Header](/assets/images/ramps_guide/headers/nebula.jpg)
 
 While a lot can be accomplished with brushes, complex brushes and ramps will sometimes reach the limits of what can be done with them. 
 At this point it may be time to look into making the ramps into models.  

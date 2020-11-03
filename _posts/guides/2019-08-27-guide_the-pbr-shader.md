@@ -126,11 +126,11 @@ If you have several textures you want to create an MRAO from and you don't have 
 
 The process is simple; you just need all 3 textures required to make an MRAO. The end result should look somewhat similar to this:
 
-![\assets\images\pbr_guide\channel_pack_final_result.jpg](Final Resulting MRAO)
+![Final Resulting MRAO](\assets\images\pbr_guide\channel_pack_final_result.jpg)
 
 The only layers you need are those of the 3 textures; add them all, check their properties, and look for these checkboxes:
 
-![\assets\images\pbr_guide\channel_pack_properties_dialog.jpg](Channel Pack Properties Dialog)
+![Channel Pack Properties Dialog](\assets\images\pbr_guide\channel_pack_properties_dialog.jpg)
 
 By default, all 3 of these are checked, which is normal. Depending on which texture layer you've selected, change the checkboxes to the following:
 
