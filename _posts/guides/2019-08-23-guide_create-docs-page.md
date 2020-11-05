@@ -85,6 +85,9 @@ I'm red!
 
 {:.notice--info}
 This one is blue
+
+{:.notice--warning}
+Yellow notice
 ```
 
 {:.notice--danger}
@@ -93,6 +96,8 @@ I'm red!
 {:.notice--info}
 This one is blue
 
+{:.notice--warning}
+Yellow notice
 
 ## Requiring `-mapping`
 If a command or convar requires `-mapping` to work, you may specify it as such in the front matter:
