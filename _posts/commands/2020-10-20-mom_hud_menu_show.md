@@ -29,5 +29,5 @@ Parses the `cfg/menu/savelocmenu.vdf` file and shows the hud menu if it isn't al
 
 Parses the `cfg/menu/rulermenu.vdf` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 
----
-**Note:** To create your own hud menu see [this guide](/guide/{{ page.guide_ref }}).
+{:.notice--info}
+To create your own hud menu see [this guide](/guide/{{ page.guide_ref }}).

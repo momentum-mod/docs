@@ -66,7 +66,8 @@ Default is 0.30.
 
 Direction (angle) to launch the player in. 
 
-**NOTE:** If porting from TF2 and this is set to exactly vertical, you need to multiply "Player speed" by 1.5.
+{:.notice--danger}
+If porting from TF2 and this is set to exactly vertical, you need to multiply "Player speed" by 1.5.
 This does not apply to using the launch target method.
 
 > Launch target (launchTarget&lt;**target_entity_name**&gt;) 
