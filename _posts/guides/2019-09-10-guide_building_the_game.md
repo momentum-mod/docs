@@ -90,7 +90,7 @@ sudo apt-get install build-essential gcc-multilib g++-multilib
 
 Git clone the [Steam Runtime repository](https://github.com/ValveSoftware/steam-runtime).
 
-Download [GCC 9 patch](https://github.com/momentum-mod/docs/releases/download/{TAG}/gcc-9.diff) and copy it to runtime's directory.
+Download [GCC 9 patch](https://github.com/momentum-mod/docs/releases/download/linux1.0.0/gcc-9.diff) and copy it to runtime's directory.
 
 Go into its directory and run: 
 ```
