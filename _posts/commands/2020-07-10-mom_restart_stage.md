@@ -11,11 +11,12 @@ ccom_ref: mom_restart
 safeguard: mom_run_safeguard_restart_stage
 ---
 
-Teleports the player to the start of the current stage (the stage zone to be specific) on the current track, if the player is not already in the zone.
-Optionally takes a stage number, or both stage and track numbers as parameters, with the default track being the current track.
+Restarts the player to the start of the current stage on the current track; the player is teleported to their stage start mark if they have one, otherwise they are teleported to the middle of the stage zone.
 
-This command will reset the timer if the desired stage and track is not the one the player is currently on.
+Optionally takes a stage number, or both stage and track numbers as parameters.
+
 Also, it deliberately does nothing in the tricksurf gamemode.
+This command will only reset the timer if the desired stage and track is not the one the player is currently on.
 
 ## Usage Examples
 
