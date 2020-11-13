@@ -15,8 +15,9 @@ Restarts the player to the start of the current stage on the current track; the 
 
 Optionally takes a stage number, or both stage and track numbers as parameters.
 
-Also, it deliberately does nothing in the tricksurf gamemode.
-This command will only reset the timer if the desired stage and track is not the one the player is currently on.
+{:.notice--info}
+This command will only reset the timer if the desired stage and track is not the one the player is currently on. 
+Also, it deliberately does nothing on linear tracks and in the tricksurf gamemode.
 
 ## Usage Examples
 
