@@ -9,8 +9,9 @@ optional_params:
 safeguard: mom_run_safeguard_restart
 ---
 
-Restarts the player to the start zone on the current track.
-If no start zone is found, the player will be teleported to the spawn position.
+Restarts the player to the start of the current track; the player is teleported to their start mark if they have one, otherwise they are teleported to the middle of the start zone.
+If there is no start zone, the player will be teleported to the spawn position.
+
 Optionally takes a track number as a parameter, which can be used to get to bonus'.
 
 In the tricksurf gamemode this teleports the player back to their currently tracked trick, if there is any.
