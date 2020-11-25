@@ -90,12 +90,9 @@ sudo apt-get install build-essential gcc-multilib g++-multilib
 
 Git clone the [Steam Runtime repository](https://github.com/ValveSoftware/steam-runtime).
 
-Download [GCC 9 patch](https://github.com/momentum-mod/docs/releases/download/linux1.0.0/gcc-9.diff) and copy it to runtime's directory.
-
 Go into its directory and run: 
 ```
-git apply gcc-9.diff
-./setup_chroot.sh --amd64
+./setup_chroot.sh --i386
 ```
 
 Download Momentum Mod on Steam **(see the important note at the top of this page)** or from [***Google Drive***](https://drive.google.com/file/d/1tF7Bh6tp3YjaFj2PxybMoPnsavRKAJRK/view).
@@ -113,7 +110,7 @@ Symlink the `mp/game/momentum/` folder from your Git clone over to this `Momentu
 To compile the game, run the following commands in the `mp/src/` directory of your clone:
 ```
 ./creategameprojects  
-sudo schroot --chroot steamrt_scout_amd64 -- make -f games.mak
+sudo schroot --chroot steamrt_scout_i386 -- make -f games.mak
 ```
 
 Make sure Steam is open, and you should be able to run `./hl2.sh -game momentum` in the `MomentumDev` folder to launch the game.
