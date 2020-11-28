@@ -336,11 +336,11 @@ Often modeled ramps are used alongside playerclip collision.
   
 The use of modeled ramps can also help avoid reaching hammer's brush limits by shifting the majority of the detail to static props.
   
-Two common tools used to create these models are [Propper](https://github.com/tuxxi/propper-2013){:target="_blank"} and [Blender Source Tools](http://steamreview.org/BlenderSourceTools/){:target="_blank"}.
+Common tools used to create these models are [Propper](https://github.com/tuxxi/propper-2013){:target="_blank"}, [SourceOps](https://github.com/bonjorno7/SourceOps){:target="blank"} and [Blender Source Tools](http://steamreview.org/BlenderSourceTools/){:target="_blank"}.
   
 Propper is an addon for hammer that allows you to convert world brushes directly into compiled model files. 
   
-Blender Source Tools is an addon for Blender that allows you to export your blender models as source model files.
+SourceOps and Blender Source Tools are addons for Blender that allow you to export your blender models as source model files.
   
 Creating and texturing models is a massive topic on its own so this guide will not look in depth at creating these models.
 
@@ -350,4 +350,6 @@ Creating and texturing models is a massive topic on its own so this guide will n
 - [func_detail - Valve Developer Community](https://developer.valvesoftware.com/wiki/Func_detail){:target="_blank"}
 - [func_brush - Valve Developer Community](https://developer.valvesoftware.com/wiki/Func_brush){:target="_blank"}
 - [Propper - Valve Developer Community](https://developer.valvesoftware.com/wiki/Propper){:target="_blank"}
+- [SourceOps - Valve Developer Community](https://developer.valvesoftware.com/wiki/SourceOps){:target="_blank"}
+- [SourceOps - Discord](https://discord.gg/N35zhHm){:target="_blank"}
 - [Blender Source Tools - Valve Developer Community](https://developer.valvesoftware.com/wiki/Blender_Source_Tools){:target="_blank"}
