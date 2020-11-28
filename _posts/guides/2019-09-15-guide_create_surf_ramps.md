@@ -336,7 +336,7 @@ Often modeled ramps are used alongside playerclip collision.
   
 The use of modeled ramps can also help avoid reaching hammer's brush limits by shifting the majority of the detail to static props.
   
-Common tools used to create these models are [Propper](https://github.com/tuxxi/propper-2013){:target="_blank"}, [SourceOps](https://github.com/bonjorno7/SourceOps){:target="blank"} and [Blender Source Tools](http://steamreview.org/BlenderSourceTools/){:target="_blank"}.
+Common tools used to create these models are [Propper](https://github.com/tuxxi/propper-2013){:target="_blank"}, [SourceOps](https://github.com/bonjorno7/SourceOps){:target="_blank"} and [Blender Source Tools](http://steamreview.org/BlenderSourceTools/){:target="_blank"}.
   
 Propper is an addon for hammer that allows you to convert world brushes directly into compiled model files. 
   
