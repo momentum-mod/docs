@@ -7,4 +7,32 @@ tags:
   - cs:s
 ---
 
-TODO: Show how to install CS:S assets from SteamCMD
+
+This Guide covers how to install CS:S assets from SteamCMD.
+## Prerequisites 
+- An internet connection.
+- some free space on your pc. (~20GB)
+
+## Getting SteamCMD
+
+- Make a folder for SteamCMD.
+- Inside of it download [***SteamCMD***](https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip), and unzip it. 
+- Start steamcmd.exe and wait until you got 'Steam>' waiting for your input.
+
+## Getting CSS files
+
+inside SteamCMD, type or paste each of the following line in the order :
+- `login anonymous`
+- `force_install_dir ./css`
+- `app_update 232330 validate`
+
+Now for unpacking it do :
+- Hold Ctrl+Shift then right click on the 'css' folder and select "Open command window here" or "Open PowerShell here".
+- Inside of it type or paste `.\bin\vpk.exe .\cstrike\cstrike_pak_dir.vpk`. (wait for it to do his stuff)
+- Now everything is extracted and should be in a folder called 'cstrike_pak_dir' in 'css/cstrike'.
+- from 'css/cstrike' copy the 'materials', 'models' and 'sound' folder and paste it to your Momentum folder.
+
+## Test and cleaning
+now everything should be good.
+- Start the game and load a map with css assets,if everything looks normal you are done. 
+- you can now delete the whole SteamCMD folder.
