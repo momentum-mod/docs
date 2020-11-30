@@ -4,6 +4,7 @@ category: entity
 tags:
  - explosion
  - TF2
+ - point entity
 ---
 
 ----
