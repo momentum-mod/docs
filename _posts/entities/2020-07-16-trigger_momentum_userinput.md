@@ -29,4 +29,12 @@ The default value is 0.
 
 > OnKeyPressed(**void**)
 
-Fires when the desired key is pressed
+Fires when the desired key is pressed.
+
+> OnKeyHeld(**void**)
+
+Fires when the desired key is held.
+
+> OnKeyReleased(**void**)
+
+Fires when the desired key is released.
