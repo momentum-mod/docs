@@ -11,6 +11,11 @@ toc_sticky: true
 ![Build Guide](/assets/images/guide_headers/guide_building_the_game.jpg){:style="display:block; margin: auto;"}
 
 This Guide covers the general method of building the latest code from GitHub for Momentum for Windows, Linux and macOS.
+
+{:.notice--info}
+**Important Note**
+If you just want to try out the most recent publicly available version, you can grab a ready-to-use, already compiled build from the [Releases page](https://github.com/momentum-mod/game/releases/tag/0.8.7-public-eval). You only need to follow this guide for debugging and development purposes.
+
 ## Prerequisites
 To make use of this page, you should:  
 - Be using the Administrator account of the machine you're using
