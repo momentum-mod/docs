@@ -1,15 +1,18 @@
 ---
-title: trigger_momentum_teleport_progress
+title: trigger_teleport
 category: entity
 tags:
- - trigger
+ - teleport
  - map
  - track
- - teleport
+ - trigger
+tool_texture: trigger_teleport
 ---
 
-----  
-Trigger that teleports the player to their last touched `trigger_momentum_progress`.
+----
+![teleport trigger](/assets/images/trigger_momentum_teleport/momentum_teleport.jpg)
+  
+A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that teleports entities that touch it. Entities are teleported to the Remote Destination.
 
 
 ## Keyvalues
@@ -26,7 +29,7 @@ Default is -1.
 
 >**Remote Destination** (target&lt;**target_destination**&gt;)  
 
-Ignored for this trigger.
+The entity specifying the point to which the player should be teleported.
 
 >**Local Destination Landmark** (landmark&lt;**target_destination**&gt;)  
 

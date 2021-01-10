@@ -10,7 +10,7 @@ tags:
 ----
   
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that modifies the velocity of players that touch it. 
-This allows mappers to change how and when the velocity is applied, providing more customization than the normal trigger_push.
+This allows mappers to change how and when the velocity is applied, providing more customization than the normal `trigger_push`.
 
 
 ## Keyvalues
@@ -25,24 +25,47 @@ The track that this zone belongs to:
 
 >**Push Direction (Pitch Yaw Roll)** (pushdir&lt;**angle**&gt;)
 
- Defines the direction at which the player will be pushed.
+Defines the direction at which the player will be pushed.
 
 >**Force of the push** (force&lt;**integer**&gt;)
 
- General force of the push (velocity in units per second). Ignored if the "*Use the direction vector as final force instead of calculating it by force amount*" flag is set.
+General force of the push (velocity in units per second).
+Ignored if the "*Use the direction vector as final force instead of calculating it by force amount*" flag is set.
 
->**Handling of player's velocity** (increase&lt;**choice**&gt;)
+>**Push mode** (increase&lt;**choice**&gt;)
 
- Defines how the velocity should be applied to the player.
+Defines how the velocity should be applied to the player.
 
- - **Set player velocity to final push force (0)** 
-    - Sets the player's velocity to exactly the force defined in the entity.
- - **Increase the player's current velocity by push final force amount (1)** 
-    - Adds the velocity from the push on top of the user's current velocity.
- - **Only set the player's velocity to the final push velocity if player's velocity is lower than final push velocity (2)**
-    - Sets the player's velocity to exactly the force defined in the entity but only when the player is moving slower than the push defined.
- - **Act as basevelocity (3)**
-    - Sets the basevelocity of the player like a trigger_multiple boost would.
+ - **0; Set velocity**: Sets the player's velocity to exactly the force defined in the entity.
+ - **1; Add velocity**: Adds the velocity from the push on top of the user's current velocity.
+ - **2; Set velocity if lower**: Sets the player's velocity to exactly the force defined in the entity but only when the player is moving slower than the push defined.
+ - **3; Add velocity if lower**: Adds the velocity from the push on top of the user's current velocity but only when the player is moving slower than the push defined.
+ - **4; Basevelocity**: Sets the basevelocity of the player like a `trigger_multiple` boost would.
+ - **5; Variable push**: Applies an increasing/decreasing (can be a curve) impulse every tick over a specified duration.
+
+Default is "Add velocity if lower"; 3.
+
+>**Variable push duration** (varpushduration&lt;**float**&gt;)
+
+Duration of a variable push in seconds. Ignored if "Push mode" is not "Variable Push".
+Default is 1.
+
+>**Variable push bias** (varpushbias&lt;**float**&gt;)
+
+The curve bias of a variable push. 
+Higher values bias the curve towards the end. 
+0.5 is linear.
+Ignored if "Push mode" is not "Variable Push".
+Default is linear; 0.5.
+
+>**Variable push mode** (varpushincrease&lt;**choices**&gt;)
+
+Defines whether the variable push increases or decreases over its duration.
+Ignored if "Push mode" is not "Variable Push".
+Default is decreasing; 0.
+
+ - **0; Decreasing**:
+ - **1; Increasing**:
 
 ## Flags
 
