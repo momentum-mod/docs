@@ -11,7 +11,7 @@ tags:
 This guide covers how to install CS:S assets using SteamCMD.
 ## Prerequisites 
 - An internet connection.
-- some free space on your pc. (~20GB)
+- Some free space on your PC. (~20GB)
 
 ## Getting SteamCMD
 
