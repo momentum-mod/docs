@@ -31,8 +31,3 @@ Now for unpacking it do :
 - Inside of it type or paste `.\bin\vpk.exe .\cstrike\cstrike_pak_dir.vpk`. (wait for it to do his stuff)
 - Now everything is extracted and should be in a folder called 'cstrike_pak_dir' in 'css/cstrike'.
 - from 'css/cstrike' copy the 'materials', 'models' and 'sound' folder and paste it to your Momentum folder.
-
-## Test and cleaning
-now everything should be good.
-- Start the game and load a map with css assets,if everything looks normal you are done. 
-- you can now delete the whole SteamCMD folder.
