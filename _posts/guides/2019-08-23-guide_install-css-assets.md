@@ -21,7 +21,7 @@ This guide covers how to install CS:S assets using SteamCMD.
 
 ## Getting CSS files
 
-inside SteamCMD, type or paste each of the following line in the order :
+Inside SteamCMD, type or paste each of the following line in the order:
 - `login anonymous`
 - `force_install_dir ./css`
 - `app_update 232330 validate`
