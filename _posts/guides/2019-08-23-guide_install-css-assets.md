@@ -28,7 +28,7 @@ Inside SteamCMD, type or paste each of the following line in the order:
 - `force_install_dir ./css`
 - `app_update 232330 validate`
 
-## Installing CSS files
+## Installing CS:S files
 
 - Inside your css folder move the folder `cstrike` at the root of the momentum folder.
 - Inside the momentum folder open `momentum\gameinfo.txt`:
