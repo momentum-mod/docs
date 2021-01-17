@@ -30,18 +30,15 @@ Inside SteamCMD, type or paste each of the following line in the order:
 
 ## Installing CS:S files
 
-- Inside your css folder move the folder `cstrike` at the root of the momentum folder.
-- Inside the momentum folder open `momentum\gameinfo.txt`:
+- Inside your css folder go into the folder `cstrike` and copy/cut all `.vpk` files starting with the name `cstrike_pak_`.
+- From your momentum folder go to `momentum\custom`, create a folder `cstrikesource` and past all previous `.vpk` inside of it.
+- Finaly from the momentum folder open `momentum\gameinfo.txt`:
   - Find:
   ```
-  game                "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Source\cstrike\cstrike_pak.vpk"
-  game                "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Source\cstrike\download"
-  game                "C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Source\cstrike"
+              game				|all_source_engine_paths|hl2/hl2_misc.vpk
   ```
-   - And replace it by:
+   - And add the following in a new line right after:
   ```
-  game				|all_source_engine_paths|cstrike/cstrike_pak.vpk
-  game				|all_source_engine_paths|cstrike/download
-  game				|all_source_engine_paths|cstrike
+              game				momentum/custom/cstrikesource/cstrike_pak_dir.vpk
   ```
   - Save
