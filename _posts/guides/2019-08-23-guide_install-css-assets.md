@@ -21,7 +21,7 @@ https://developer.valvesoftware.com/wiki/SteamCMD
 - Inside of it download [***SteamCMD***](https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip), and unzip it. 
 - Start steamcmd.exe and wait until you got 'Steam>' waiting for your input.
 
-## Getting CSS files
+## Getting CS:S files
 
 Inside SteamCMD, type or paste each of the following line in the order:
 - `login anonymous`
@@ -45,4 +45,3 @@ Inside SteamCMD, type or paste each of the following line in the order:
   game				|all_source_engine_paths|cstrike
   ```
   - Save
-
