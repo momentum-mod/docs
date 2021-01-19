@@ -15,7 +15,7 @@ This guide covers how to install CS:S assets using SteamCMD.
 
 ## Getting SteamCMD
 For Linux/Mac refer to Valve's guide:
-https://developer.valvesoftware.com/wiki/SteamCMD
+[***developer.valvesoftware.com/wiki/SteamCMD***](https://developer.valvesoftware.com/wiki/SteamCMD)
 ### Windows:
 - Make a folder for SteamCMD.
 - Inside of it download [***SteamCMD***](https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip), and unzip it. 
