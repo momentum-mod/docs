@@ -19,7 +19,7 @@ https://developer.valvesoftware.com/wiki/SteamCMD
 ### Windows:
 - Make a folder for SteamCMD.
 - Inside of it download [***SteamCMD***](https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip), and unzip it. 
-- Start steamcmd.exe and wait until you got 'Steam>' waiting for your input.
+- Start steamcmd.exe and wait until you got `Steam>` waiting for your input.
 
 ## Getting CS:S files
 
