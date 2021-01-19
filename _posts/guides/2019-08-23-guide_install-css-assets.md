@@ -30,7 +30,7 @@ Inside SteamCMD, type or paste each of the following line in the order:
 
 ## Installing CS:S files
 
-- Inside your css folder go into the folder `cstrike` and copy/cut all `.vpk` files starting with the name `cstrike_pak_`.
+- Inside your SteamCMD folder go into the folder `css/cstrike` and copy/cut all `.vpk` files starting with the name `cstrike_pak_`.
 - From your momentum folder go to `momentum\custom`, create a folder `cstrikesource` and paste all previous `.vpk` inside of it.
 - Finally from the momentum folder open `momentum\gameinfo.txt`:
   - Find:
