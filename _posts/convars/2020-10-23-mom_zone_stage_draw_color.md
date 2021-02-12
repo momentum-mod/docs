@@ -6,7 +6,7 @@ tags:
   - stage
   - color
   - trigger
-default_value: 0000FFFF
+default_value: 0 0 255 255
 ---
 
-Color of the stage zone(s).
+Color of the stage zone(s) in RGBA format.

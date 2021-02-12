@@ -6,7 +6,7 @@ tags:
   - player
   - color
   - alpha
-default_value: FF00FFFF
+default_value: 255 0 255 255
 ---
 
-The color & alpha of the player's ghost.  Accepts hex color value in format RRGGBBAA. If RRGGBB is supplied, the alpha is set to 0x4B (75).
+The color & alpha of the player's ghost. Accepts color value in format RGBA. If RGB is supplied, the alpha is set to 255.

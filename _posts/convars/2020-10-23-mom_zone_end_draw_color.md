@@ -6,7 +6,7 @@ tags:
   - stop
   - trigger
   - color
-default_value: FF0000FF
+default_value: 255 0 0 255
 ---
 
-Color of the end zone(s).
+Color of the end zone(s) in RGBA format.

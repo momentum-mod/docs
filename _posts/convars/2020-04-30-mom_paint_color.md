@@ -5,7 +5,7 @@ tags:
   - paint
   - color
   - decal
-default_value: 0000FFFF
+default_value: 0 0 255 255
 ---
 
-Paint decal color.
+Paint decal color in RGBA.

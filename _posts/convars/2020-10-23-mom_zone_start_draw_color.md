@@ -6,7 +6,7 @@ tags:
   - start
   - trigger
   - color
-default_value: 00FF00FF
+default_value: 0 255 0 255
 ---
 
-Color of the start zone(s).
+Color of the start zone(s) in RGBA format.
