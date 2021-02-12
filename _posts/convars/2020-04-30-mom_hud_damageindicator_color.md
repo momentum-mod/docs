@@ -5,7 +5,7 @@ tags:
   - hud
   - damage indicator
   - color
-default_value: 980000
+default_value: 152 0 0
 ---
 
-RGB color of the damage indicator.
+RGB color of the damage indicator. Alpha is ignored.

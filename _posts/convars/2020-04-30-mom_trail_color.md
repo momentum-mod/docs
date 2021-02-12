@@ -5,7 +5,7 @@ tags:
   - trail
   - color
   - player
-default_value: FF00FFFF
+default_value: 255 0 255 255
 ---
 
-The player's trail color. Accepts hex color value in format RRGGBBAA.
+The player's trail color. Accepts color value in format RGBA.

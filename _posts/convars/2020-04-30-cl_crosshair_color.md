@@ -5,7 +5,7 @@ tags:
   - crosshair
   - color
   - alpha
-default_value: FF0000FF
+default_value: 255 0 0 255
 ---
 
-Set the crosshair's color. Accepts hex color value in format RRGGBBAA. If RRGGBB is supplied, alpha is set to 0x4B (75).
+Set the crosshair's color. Accepts color value in format RGBA. If RGB is supplied, alpha is set to 255.
