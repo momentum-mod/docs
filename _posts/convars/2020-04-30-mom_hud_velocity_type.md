@@ -10,4 +10,4 @@ maximum_value: 1
 default_value: 0
 ---
 
-The velocity type used in comparisons and map finished panels. Absolute = `0`, Horizontal = `0`.
+The velocity type used in comparisons and map finished panels. Absolute = `0`, Horizontal = `1`.
