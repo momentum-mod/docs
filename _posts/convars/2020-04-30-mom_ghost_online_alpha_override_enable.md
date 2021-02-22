@@ -1,5 +1,5 @@
 ---
-title: mom_ghost_alpha_override_enable
+title: mom_ghost_online_alpha_override_enable
 category: var
 tags:
   - ghost
@@ -8,7 +8,7 @@ tags:
 minimum_value: 0
 maximum_value: 1
 default_value: 1
-cvar_ref: mom_ghost_online_color_alpha_override
+cvar_ref: mom_ghost_online_alpha_override
 ---
 
 Toggle overriding other player's ghost alpha values to the one defined in [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}).
