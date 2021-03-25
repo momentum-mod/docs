@@ -8,7 +8,7 @@ tags:
   - parkour
 ccom_ref1: mom_restart
 ccom_ref2: mom_restart_stage
-ent_ref1: trigger_momentum_teleport
+ent_ref1: trigger_teleport
 ent_ref2: trigger_momentum_teleport_progress
 ent_ref3: trigger_momentum_multihop
 ent_ref4: trigger_momentum_onehop
