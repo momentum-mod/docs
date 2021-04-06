@@ -16,9 +16,7 @@ tool_texture: trigger_nogrenades
 ----
 ![Nogrenade trigger texture](/assets/images/func_nogrenades/func_nogrenades.jpg)
 
-
-Rockets and grenades will not detonate inside this area.
-
+Rockets, stickybombs, conc grenades, and other explosives will not detonate/explode inside this area.
 
 ## Keyvalues
 
@@ -26,7 +24,7 @@ Rockets and grenades will not detonate inside this area.
 
 Determines the method of explosive prevention.
 
- - **0**: "[Default] As in TF2, prevents explosives from detonating inside this trigger."
- - **1**: "Prevent stickybomb detonation only if the stickybomb is airborne."
- - **2**: "Destroy stickybombs upon them landing, instead of on attempted detonation."
- - **3**: "Destroy explosive (rocket/stickybomb/etc.) immediately upon it entering the trigger."
+ - **0**: "[Default] Fizzle explosives upon detonation. This is the TF2 default."
+ - **1**: "Fizzle only airborne (handheld concs included) explosives upon detonation."
+ - **2**: "Fizzle upon landing instead of on attempted detonation."
+ - **3**: "Fizzle explosive immediately upon it entering the trigger."
