@@ -5,7 +5,6 @@ tags:
   - conc
   - sound
   - bounce
-  - speed
 minimum_value: 0
 maximum_value: 10
 default_value: 0.1
