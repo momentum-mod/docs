@@ -14,8 +14,8 @@ Error texture to use on world geometry.
 
 ![purple error](/assets/images/mat_error_texture_type/utopia_replace_bad.jpg){:style="width:20%;border-radius:5px;"}
 
-`0: Purple error texture`
+`0: Unlit purple error texture`
 
 ![grey error](/assets/images/mat_error_texture_replace/utopia_replace.jpg){:style="width:20%;border-radius:5px;"}
 
-`1: Grey error texture`
+`1: Grey lightmapped error texture`
