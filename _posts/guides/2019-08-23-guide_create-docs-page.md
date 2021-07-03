@@ -39,7 +39,7 @@ You can use `CTRL+C` to stop the process in the terminal when you are done with 
 ### Creating the File
 
 {:.notice--info}
-If you are creating a new file for the first time, it is recommended to look at the [https://jekyllrb.com/docs/posts/](Jekyll documentation page on posts) to get an idea of what this site runs on.
+If you are creating a new file for the first time, it is recommended to look at the [Jekyll documentation page on posts](https://jekyllrb.com/docs/posts/) to get an idea of what this site runs on.
 
 
 A new page should be created inside of the `_posts` directory. Since this site uses Jekyll, a documentation page is going to have to follow their "blog post" file format:  
