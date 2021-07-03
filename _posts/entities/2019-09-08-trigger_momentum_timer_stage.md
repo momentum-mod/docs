@@ -39,3 +39,6 @@ The track that this zone belongs to:
  - Zone number 1 is reserved for start triggers.
  - Zone numbers 2 and up are for stage / checkpoint triggers.  
 
+>**Remote Destination** (target&lt;**target_destination**&gt;)  
+
+The entity specifying the point to which the player should be teleported.

@@ -38,6 +38,10 @@ The track that this zone belongs to:
 
  The maximum speed in Units Per Second that the user can have while leaving the start zone. The default speed is 350 UPS and it will only be applied depending on the limit speed type.
 
+>**Remote Destination** (target&lt;**target_destination**&gt;)  
+
+The entity specifying the point to which the player should be teleported.
+
  >**Look angles** (look_angles&lt;**angle**&gt;)
 
  Where the player will look when teleported to the start.
