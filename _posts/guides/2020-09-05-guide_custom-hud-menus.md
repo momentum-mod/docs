@@ -34,7 +34,7 @@ The parameter for this command will autofill with all the available hud menus.
 ## File reading/writing
 Hud menus are stored in and read from `cfg/menus/` as `.vdf` files.
 Files with the suffix `_default` are not read from unless their counterpart does not exist. 
-In which case, it will copied and have the suffix removed for reading.
+In which case, it will be copied and have the suffix removed for reading.
 
 ## Custom hud menus how-to
 A simple hud menu with just one command looks like:

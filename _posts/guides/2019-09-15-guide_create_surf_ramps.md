@@ -77,7 +77,7 @@ Doing this alone can cause the collision on your ramps to break near the seams w
 This is where the importance of separating visuals from collision comes in. You want your collision on the surfable portion of the ramp to be as simple as possible to avoid these errors. 
 In this case you would want to create a copy of your simple ramp and make it into a world brush using the toWorld button and texture it as **tools/toolsplayerclip** or **tools/toolsblockbullet**. This creates a separate brush to represent the collision for the ramp and will not appear visible in-game.
 
-![View of seperate collision brush next to normal ramp](/assets/images/ramps_guide/guide_seperatecollisions.jpg)
+![View of separate collision brush next to normal ramp](/assets/images/ramps_guide/guide_separatecollisions.jpg)
 
 Now you can cut the visual representation of the ramp however you want. When finished you need to make sure the cut version of the ramp is not solid. 
 To do so, use `Ctrl + T` or double click the ramp if it is already a func_detail and change the class to a func_brush. Change the "Solidity" property of the func_brush to "Never Solid".

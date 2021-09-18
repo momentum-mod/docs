@@ -9,7 +9,7 @@ default_value: 0
 ---
 
 Forces gamemode to the specified gamemode number given; must not be in-game to change.  
-If this cvar isn't set to its default, your times will not submitted upon map completion.
+If this cvar isn't set to its default, your times will not be submitted upon map completion.
 
 {:.notice--info}
 If you wish to use this cvar with official maps, you should instead use the "Start Map In Specific Gamemode" option in the Map Selector's context menu.

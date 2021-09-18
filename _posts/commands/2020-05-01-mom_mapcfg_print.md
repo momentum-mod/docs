@@ -7,4 +7,4 @@ tags:
   - printout
 ---
 
-Prints out the commands/variables storedin the mapcfg for the current map.
+Prints out the commands/variables stored in the mapcfg for the current map.

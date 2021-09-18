@@ -9,7 +9,7 @@ toc_sticky: true
 ---
 ![PBR Guide](/assets/images/guide_headers/guide_pbr_shader.jpg)
 
-The Physically Based Rendering (PBR) shader is a powerful new shader that provides more realistic and versatile rendering of brushes and models within Momentum Mod whilst using less textures and needing fewer VMT tweaks.  
+The Physically Based Rendering (PBR) shader is a powerful new shader that provides more realistic and versatile rendering of brushes and models within Momentum Mod whilst using fewer textures and needing fewer VMT tweaks.  
 
 PBR extends Source’s shading capacity by storing additional Metalness, Roughness and Ambient Occlusion maps in independent channels of an additional texture called the MRAO.  
 
