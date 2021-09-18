@@ -12,4 +12,4 @@ Additionally, holding the jump key in this mode prevents the player from being t
 
 If toggled on during a run, 
 - the timer will continue to tick
-- when toggled off, the player will teleported back to the position where they first toggled it on
+- when toggled off, the player will be teleported back to the position where they first toggled it on
