@@ -1,5 +1,5 @@
 ---
-title: filter_momentum_velocity
+title: filter_velocity
 category: entity
 tags:
  - filter
