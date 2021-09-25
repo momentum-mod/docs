@@ -1,5 +1,5 @@
 ---
-title: trigger_momentum_userinput
+title: trigger_userinput
 category: entity
 tags:
 - trigger
