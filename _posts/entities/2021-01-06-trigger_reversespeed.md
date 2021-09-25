@@ -1,5 +1,5 @@
 ---
-title: trigger_momentum_reversespeed
+title: trigger_reversespeed
 category: entity
 tags:
  - trigger
