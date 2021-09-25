@@ -1,5 +1,5 @@
 ---
-title: trigger_momentum_setspeed
+title: trigger_setspeed
 category: entity
 tags:
  - trigger
