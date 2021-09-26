@@ -14,16 +14,6 @@ Trigger that teleports the player to their last touched `trigger_momentum_progre
 
 ## Keyvalues
 
->**Track Number** (track_number&lt;**integer**&gt;)
-
-The track that this teleport belongs to: 
-
- - **-1**: All Tracks
- - **0**: Main Map
- - **1+**: Bonus Tracks
-
-Default is -1.
-
 >**Remote Destination** (target&lt;**target_destination**&gt;)  
 
 Ignored for this trigger.
