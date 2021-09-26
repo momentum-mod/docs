@@ -81,26 +81,6 @@ Use in conjunction with the "OnCatapulted" output to create velocity checking tr
 Only works when "Use threshold check" is enabled.
 Default is off; 0.
 
-> OnThink (OnThink&lt;**integer**&gt;) 
-
-If set to 1, the trigger fires on an interval set by "Interval".
-Default is off; 0.
-
-> Interval (Interval&lt;**float**&gt;) 
-
-Time in seconds between updates when "OnThink" is set to 1.
-Default is 1.
-
-> Every tick (EveryTick&lt;**integer**&gt;) 
-
-Trigger fires every tick if set to 1.
-Default is off; 0.
-
-> Height offset (heightOffset&lt;**float**&gt;) 
-
-Offsets the origin of the player vertically, in units.
-Default legacy value is 32 units from TF2.
-
 ## Output
 
 > OnCatapulted(**void**)
