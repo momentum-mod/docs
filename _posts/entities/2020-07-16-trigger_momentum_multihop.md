@@ -12,16 +12,6 @@ Trigger that allows for multiple hops inside of it, and teleports the player if 
 
 ## Keyvalues
 
->**Track Number** (track_number&lt;**integer**&gt;)
-
-The track that this teleport belongs to: 
-
- - **-1**: All Tracks
- - **0**: Main Map
- - **1+**: Bonus Tracks
-
-Default is -1.
-
 >**Remote Destination** (target&lt;**target_destination**&gt;)  
 
 The entity specifying the point to which the player should be teleported.

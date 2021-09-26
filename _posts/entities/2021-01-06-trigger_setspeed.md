@@ -16,14 +16,6 @@ If you want to send the player in a specific direction, use a [catapult](/entity
 
 ## Keyvalues
 
->**Track Number** (track_number&lt;**integer**&gt;)
-
-The track that this zone belongs to:
-
- - **-1**: All Tracks **(Default)**
- - **0**: Main Map
- - **1+**: Bonus Tracks
-
 >**Keep horizontal speed** (KeepHorizontalSpeed&lt;**integer**&gt;)
 
  Whether or not the trigger affects the player's horizontal (x/y axis) speed:
