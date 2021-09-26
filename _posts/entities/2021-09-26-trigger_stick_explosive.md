@@ -27,18 +27,18 @@ Defaults to 0.
 
 ## Input
 
->input Stick(**void**)
+> Stick(**void**)
 
 Sticks all explosives in this area.
 
->input Unstick(**void**)
+> Unstick(**void**)
 
 Unsticks all explosives in this area.
 
->input Explode(**void**)
+> Explode(**void**)
 
 Explodes all explosives in this area.
 
->input Fizzle(**void**)
+> Fizzle(**void**)
 
 Fizzles all explosives in this area.

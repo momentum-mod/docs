@@ -15,9 +15,14 @@ A trigger volume that launches the player at a specified speed towards a target 
 
 ## Keyvalues
 
-> Player speed (playerSpeed&lt;**float**&gt;) 
+> Player speed (playerspeed&lt;**float**&gt;) 
 
-The base speed to launch the player at in units per second.
+Speed at which to launch the players (u/sec).
+Default is 450.
+
+> Physics speed (physicsspeed&lt;**float**&gt;)
+
+Speed at which to launch physics objects (u/sec).
 Default is 450.
 
 > Use threshold check (useThresholdCheck&lt;**integer**&gt;)
@@ -80,6 +85,24 @@ If set to 1, the trigger only checks the velocity of the touching object and doe
 Use in conjunction with the "OnCatapulted" output to create velocity checking triggers. 
 Only works when "Use threshold check" is enabled.
 Default is off; 0.
+
+## Input
+
+> SetPlayerSpeed(**float**)
+
+Set the speed to launch the player at (field `playerSpeed`).
+
+> SetPhysicsSpeed(**float**)
+
+Set the speed to launch the physics objects at (field `physicsspeed`).
+
+> SetLaunchTarget(**target_entity_name**)
+
+Set the entity to try hit when launched (field `launchTarget`).
+
+> SetExactVelocityChoiceType(**integer**)
+
+Set the Exact Solution Method (field `exactVelocityChoiceType`).
 
 ## Output
 
