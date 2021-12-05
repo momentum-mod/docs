@@ -1,6 +1,6 @@
 Momentum uses the following fonts with their respective licenses below:
 
-1. Bebas Nueue
+1. Bebas Neue (modified by tsa96)
 
 Originally downloaded from: https://fonts.google.com/specimen/Bebas+Neue
 
