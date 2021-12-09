@@ -1,5 +1,5 @@
 ---
-title: Chaos Hammer AngelScript Interface Value Types
+title: Chaos Hammer AngelScript Value Types
 category: api
 tags:
   - api
