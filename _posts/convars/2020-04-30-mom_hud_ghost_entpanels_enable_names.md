@@ -1,5 +1,5 @@
 ---
-title: mom_entpanels_enable_names
+title: mom_hud_ghost_entpanels_enable_names
 category: var
 tags:
   - entity panels
