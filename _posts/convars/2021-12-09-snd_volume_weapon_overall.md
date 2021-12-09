@@ -11,6 +11,6 @@ default_value: 1
 ---
 
 {:.notice--info}
-Unlike [snd_volume_weapon_player]({% post_url 2021-12-09-snd_volume_weapon_player %}), this cvar is for _any_ weapon sounds
+Unlike [`snd_volume_weapon_player`](/var/snd_volume_weapon_player), this cvar is for _any_ weapon sounds
 
 Set the volume for sounds located in the `momentum/sound/weapons/` directory.
