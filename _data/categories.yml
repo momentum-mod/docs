@@ -1,4 +1,6 @@
-order:
+order: 
+  - name: "API Reference"
+    category: "api"
   - name: "Guides"
     category: "guide"
   - name: "Entities"
