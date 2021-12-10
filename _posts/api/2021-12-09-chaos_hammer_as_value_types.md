@@ -6,22 +6,11 @@ tags:
   - reference
   - chaos
   - hammer
+toc: true
+toc_sticky: true
 ---
 
 This page outlines the various Chaos Hammer AngelScript value types.
-
-# Table of Contents
-- [`CMapFace`](#cmapface)
-- [`Color`](#color)
-- [`GUIData`](#guidata)
-- [`MeshBuilder`](#meshbuilder)
-- [`QAngle`](#qangle)
-- [`VMatrix`](#vmatrix)
-- [`Vector`](#vector)
-- [`Vector2D`](#vector2d)
-- [`Vector4D`](#vector4d)
-- [`dictionaryValue`](#dictionaryvalue)
-- [`string`](#string)
 
 ## `CMapFace`
 ```cpp

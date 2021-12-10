@@ -1,51 +1,16 @@
 ---
-title: Chaos Hammer AngelScript Global Functions and Properties
+title: Chaos Hammer AngelScript Global Functions
 category: api
 tags:
   - api
   - reference
   - chaos
   - hammer
+toc: true
+toc_sticky: true
 ---
 
-This page outlines the various Chaos Hammer AngelScript global functions and properties.
-
-# Table of Contents
-
-- [Global Functions](#global-functions)
-  - [`FindMaterial`](#findmaterial)
-  - [`GetDefaultTextureName`](#getdefaulttexturename)
-  - [`abs`](#abs)
-  - [`acos`](#acos)
-  - [`asin`](#asin)
-  - [`atan`](#atan)
-  - [`atan2`](#atan2)
-  - [`ceil`](#ceil)
-  - [`closeTo`](#closeto)
-  - [`cos`](#cos)
-  - [`cosh`](#cosh)
-  - [`floor`](#floor)
-  - [`fpFromIEEE`](#fpfromieee)
-  - [`fpToIEEE`](#fptoieee)
-  - [`fraction`](#fraction)
-  - [`getExceptionInfo`](#getexceptioninfo)
-  - [`join`](#join)
-  - [`log`](#log)
-  - [`log10`](#log10)
-  - [`pow`](#pow)
-  - [`print`](#print)
-  - [`rint`](#rint)
-  - [`sin`](#sin)
-  - [`sinh`](#sinh)
-  - [`sqrt`](#sqrt)
-  - [`tan`](#tan)
-  - [`tanh`](#tanh)
-  - [`throw`](#throw)
-- [Global Properties](#global-properties)
-  - [`vec3_angle`](#vec3_angle)
-  - [`vec3_invalid`](#vec3_invalid)
-  - [`vec3_origin`](#vec3_origin)
-  - [`vec4_origin`](#vec4_origin)
+This page outlines the various Chaos Hammer AngelScript global functions.
 
 ## Global Functions
 
@@ -223,30 +188,4 @@ float tanh(float)
 
 ```cpp
 void throw(const string&in)
-```
-
-## Global Properties
-
-### `vec3_angle`
-
-```cpp
-const QAngle vec3_angle
-```
-
-### `vec3_invalid`
-
-```cpp
-const Vector vec3_invalid
-```
- 
-### `vec3_origin`
-
-```cpp
-const Vector vec3_origin
-```
-
-### `vec4_origin`
-
-```cpp
-const Vector4D vec4_origin
 ```

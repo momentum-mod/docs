@@ -6,17 +6,11 @@ tags:
   - reference
   - chaos
   - hammer
+toc: true
+toc_sticky: true
 ---
 
 This page outlines the various Chaos Hammer AngelScript enums.
-
-# Table of Contents
-
-- [`GuiElement`](#guielement)
-- [`InitTexFlags`](#inittexflags)
-- [`PrimitiveType`](#primitivetype)
-- [`RenderMode`](#rendermode)
-- [`TextureAlignment`](#texturealignment)
 
 ## `GuiElement`
 

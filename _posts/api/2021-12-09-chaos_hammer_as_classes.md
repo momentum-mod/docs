@@ -6,22 +6,11 @@ tags:
   - reference
   - chaos
   - hammer
+toc: true
+toc_sticky: true
 ---
 
 This page outlines the various Chaos Hammer AngelScript classes.
-
-# Table of Contents
-
-- [`BoundBox`](#boundbox)
-- [`CMapClass`](#cmapclass)
-- [`CMapGroup`](#cmapgroup)
-- [`Material`](#material)
-- [`Render`](#render)
-- [`ScriptSolid`](#scriptsolid)
-- [`array<class T>`](#arrayclass-t)
-- [`dictionary`](#dictionary)
-- [`grid<class T>`](#gridclass-t)
-
 
 ## `BoundBox`
 

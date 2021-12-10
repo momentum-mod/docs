@@ -7,6 +7,8 @@ tags:
   - chaos
   - hammer
   - example
+toc: true
+toc_sticky: true
 ---
 
 This contains an example Chaos Hammer AngelScript implementation.
