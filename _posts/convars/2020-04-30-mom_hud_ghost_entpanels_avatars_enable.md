@@ -1,5 +1,5 @@
 ---
-title: mom_entpanels_enable_names
+title: mom_hud_ghost_entpanels_avatars_enable
 category: var
 tags:
   - entity panels
@@ -8,4 +8,4 @@ maximum_value: 1
 default_value: 1
 ---
 
-Toggles showing other player's name panels.
+Toggles showing other player's steam avatar panels.
