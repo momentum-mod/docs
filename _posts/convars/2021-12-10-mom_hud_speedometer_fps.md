@@ -4,8 +4,6 @@ category: var
 tags:
   - hud
   - speedometer
-minimum_value: 1
-maximum_value: 0 (Uncapped)
 default_value: 120
 ---
 
