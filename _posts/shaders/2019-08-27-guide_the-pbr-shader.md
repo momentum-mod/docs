@@ -4,6 +4,7 @@ permalink: /shader/pbr-shader/
 category: shader
 tags:
   - pbr
+  - shader
 toc: true
 toc_sticky: true
 ---

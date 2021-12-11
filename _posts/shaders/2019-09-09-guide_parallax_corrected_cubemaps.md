@@ -3,7 +3,7 @@ title: Parallax-Corrected Cubemaps
 permalink: /shader/parallax-corrected-cubemaps/
 category: shader
 tags:
-  - hammer
+  - mapping
 toc: true
 toc_sticky: true
 ---
