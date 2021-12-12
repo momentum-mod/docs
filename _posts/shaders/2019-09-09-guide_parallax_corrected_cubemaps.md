@@ -1,9 +1,9 @@
 ---
 title: Parallax-Corrected Cubemaps
-permalink: /guide/parallax-corrected-cubemaps/
-category: guide
+permalink: /shader/parallax-corrected-cubemaps/
+category: shader
 tags:
-  - hammer
+  - mapping
 toc: true
 toc_sticky: true
 ---

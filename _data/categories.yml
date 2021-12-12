@@ -7,3 +7,5 @@ order:
     category: "command"
   - name: "Console Variables"
     category: "var"
+  - name: "Shaders"
+    category: "shader"
