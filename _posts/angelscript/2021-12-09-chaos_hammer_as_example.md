@@ -1,5 +1,5 @@
 ---
-title: Chaos Hammer AngelScript Example
+title: Example
 category: angelscript
 tags:
   - api
@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
 ---
 
-This contains an example Chaos Hammer AngelScript implementation.
+This page contains various Chaos Hammer AngelScript examples.
 
 ## `ExampleWedge`
 
