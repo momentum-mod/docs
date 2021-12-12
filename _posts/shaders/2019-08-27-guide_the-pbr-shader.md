@@ -1,9 +1,10 @@
 ---
 title: The PBR Shader
-permalink: /guide/pbr-shader/
-category: guide
+permalink: /shader/pbr-shader/
+category: shader
 tags:
   - pbr
+  - shader
 toc: true
 toc_sticky: true
 ---

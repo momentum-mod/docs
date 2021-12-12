@@ -1,8 +1,10 @@
 order: 
-  - name: "API Reference"
-    category: "api"
+  - name: "AngelScript Hammer API"
+    category: "angelscript"
   - name: "Guides"
     category: "guide"
+  - name: "Shaders"
+    category: "shader"
   - name: "Entities"
     category: "entity"
   - name: "Console Commands"
