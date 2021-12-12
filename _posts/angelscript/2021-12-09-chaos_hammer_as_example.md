@@ -1,5 +1,5 @@
 ---
-title: Example
+title: Examples
 category: angelscript
 tags:
   - api
