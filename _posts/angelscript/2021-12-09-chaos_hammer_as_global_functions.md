@@ -92,7 +92,7 @@ float floor(float)
 
 ### `fpFromIEEE`
 
-```cpp
+```as
 float fpFromIEEE(uint)
 
 double fpFromIEEE(uint64)
@@ -100,7 +100,7 @@ double fpFromIEEE(uint64)
 
 ### `fpToIEEE`
 
-```cpp
+```as
 uint fpToIEEE(float)
 
 uint64 fpToIEEE(double)
@@ -108,84 +108,84 @@ uint64 fpToIEEE(double)
 
 ### `fraction`
 
-```cpp
+```as
 float fraction(float)
 ```
 
 ### `getExceptionInfo`
 
-```cpp
+```as
 string getExceptionInfo()
 ```
 
 ### `join`
 
-```cpp
+```as
 string join(const string[]&in, const string&in)
 ```
 
 ### `log`
 
-```cpp
+```as
 float log(float)
 ```
 
 ### `log10`
 
-```cpp
+```as
 float log10(float)
 ```
 
 ### `pow`
 
-```cpp
+```as
 float pow(float, float)
 ```
 
 ### `print`
 
-```cpp
+```as
 void print(const string&in)
 ```
 
 ### `rint`
 
-```cpp
+```as
 float rint(float)
 ```
 
 ### `sin`
 
-```cpp
+```as
 float sin(float)
 ```
 
 ### `sinh`
 
-```cpp
+```as
 float sinh(float)
 ```
 
 ### `sqrt`
 
-```cpp
+```as
 float sqrt(float)
 ```
 
 ### `tan`
 
-```cpp
+```as
 float tan(float)
 ```
 
 ### `tanh`
 
-```cpp
+```as
 float tanh(float)
 ```
 
 ### `throw`
 
-```cpp
+```as
 void throw(const string&in)
 ```
