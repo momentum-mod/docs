@@ -1,6 +1,6 @@
 ---
 title: Chaos Hammer AngelScript Global Functions
-category: api
+category: angelscript
 tags:
   - api
   - reference
@@ -16,56 +16,56 @@ This page outlines the various Chaos Hammer AngelScript global functions.
 
 ### `FindMaterial`
 
-```cpp
+```as
 Material@ FindMaterial(const string&in name)
 
 ```
 
 ### `GetDefaultTextureName`
 
-```cpp
+```as
 string GetDefaultTextureName()
 ```
 
 ### `abs`
 
-```cpp
+```as
 float abs(float)
 ```
 
 ### `acos`
 
-```cpp
+```as
 float acos(float)
 ```
 
 ### `asin`
 
-```cpp
+```as
 float asin(float)
 ```
 
 ### `atan`
 
-```cpp
+```as
 float atan(float)
 ```
 
 ### `atan2`
 
-```cpp
+```as
 float atan2(float, float)
 ```
 
 ### `ceil`
 
-```cpp
+```as
 float ceil(float)
 ```
 
 ### `closeTo`
 
-```cpp
+```as
 bool closeTo(float, float, float = 0.00001f)
 
 bool closeTo(double, double, double = 0.0000000001)
@@ -73,19 +73,19 @@ bool closeTo(double, double, double = 0.0000000001)
 
 ### `cos`
 
-```cpp
+```as
 float cos(float)
 ```
 
 ### `cosh`
 
-```cpp
+```as
 float cosh(float)
 ```
 
 ### `floor`
 
-```cpp
+```as
 float floor(float)
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: Chaos Hammer AngelScript Classes
-category: api
+category: angelscript
 tags:
   - api
   - reference
@@ -14,7 +14,7 @@ This page outlines the various Chaos Hammer AngelScript classes.
 
 ## `BoundBox`
 
-```cpp
+```as
 class BoundBox
 {
   void GetBoundsCenter(Vector&out center) const;
@@ -27,7 +27,7 @@ class BoundBox
 
 ## `CMapClass`
 
-```cpp
+```as
 class CMapClass
 {
 }
@@ -35,7 +35,7 @@ class CMapClass
 
 ## `CMapGroup`
 
-```cpp
+```as
 class CMapGroup
 {
   CMapGroup@ CMapGroup();
@@ -51,7 +51,7 @@ class CMapGroup
 
 ## `CMapSolid`
 
-```cpp
+```as
 class CMapSolid
 {
   CMapSolid@ CMapSolid();
@@ -68,7 +68,7 @@ class CMapSolid
 
 ## `Material`
 
-```cpp
+```as
 class Material
 {
 }
@@ -76,7 +76,7 @@ class Material
 
 ## `Render`
 
-```cpp
+```as
 class Render
 {
   void BeginLocalTransfrom(const VMatrix&in, bool transform);
@@ -106,7 +106,7 @@ class Render
 
 ## `ScriptSolid`
 
-```cpp
+```as
 interface ScriptSolid
 {
   GUIData[]@ GetGuiData() const;
@@ -118,7 +118,7 @@ interface ScriptSolid
 
 ## `array<class T>`
 
-```cpp
+```as
 class array<class T>
 {
   T[]@ array(int&in);
@@ -155,7 +155,7 @@ class array<class T>
 
 ## `dictionary`
 
-```cpp
+```as
 class dictionary
 {
   dictionary@ dictionary();
@@ -180,7 +180,7 @@ class dictionary
 
 ## `grid<class T>`
 
-```cpp
+```as
 class grid<class T>
 {
   grid<T>@ grid(int&in);

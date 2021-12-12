@@ -1,6 +1,6 @@
 ---
 title: Chaos Hammer AngelScript Enums
-category: api
+category: angelscript
 tags:
   - api
   - reference
@@ -14,7 +14,7 @@ This page outlines the various Chaos Hammer AngelScript enums.
 
 ## `GuiElement`
 
-```cpp
+```as
 enum GuiElement
 {
   Label = 0,
@@ -25,7 +25,7 @@ enum GuiElement
 
 ## `InitTexFlags`
 
-```cpp
+```as
 enum InitTexFlags
 {
   INIT_TEXTURE_FORCE = 1,
@@ -39,7 +39,7 @@ enum InitTexFlags
 
 ## `PrimitiveType`
 
-```cpp
+```as
 enum PrimitiveType
 {
   MATERIAL_LINES = 1,
@@ -52,7 +52,7 @@ enum PrimitiveType
 
 ## `RenderMode`
 
-```cpp
+```as
 enum RenderMode
 {
   RENDER_MODE_WIREFRAME = 4,
@@ -65,7 +65,7 @@ enum RenderMode
 
 ## `TextureAlignment`
 
-```cpp
+```as
 enum TextureAlignment
 {
   TEXTURE_ALIGN_NONE = 0,

@@ -1,6 +1,6 @@
 ---
 title: Chaos Hammer AngelScript Value Types
-category: api
+category: angelscript
 tags:
   - api
   - reference
@@ -13,7 +13,8 @@ toc_sticky: true
 This page outlines the various Chaos Hammer AngelScript value types.
 
 ## `CMapFace`
-```cpp
+
+```as
 class CMapFace
 {
   CMapFace();
@@ -24,7 +25,7 @@ class CMapFace
 
 ## `Color`
 
-```cpp
+```as
 class Color
 {
   Color();
@@ -43,7 +44,8 @@ class Color
 ```
 
 ## `GUIData`
-```cpp
+
+```as
 class GUIData
 {
   GUIData(GuiElement type, const string&in label, int64 defVal);
@@ -54,7 +56,8 @@ class GUIData
 ```
 
 ## `MeshBuilder`
-```cpp
+
+```as
 class MeshBuilder
 {
   MeshBuilder();
@@ -75,7 +78,8 @@ class MeshBuilder
 ```
 
 ## `QAngle`
-```cpp
+
+```as
 class QAngle
 {
   QAngle();
@@ -106,7 +110,8 @@ class QAngle
 ```
 
 ## `VMatrix`
-```cpp
+
+```as
 class VMatrix
 {
   VMatrix();
@@ -148,7 +153,8 @@ class VMatrix
 ```
 
 ## `Vector`
-```cpp
+
+```as
 class Vector
 {
   Vector();
@@ -204,7 +210,8 @@ class Vector
 ```
 
 ## `Vector2D`
-```cpp
+
+```as
 class Vector2D
 {
   Vector2D();
@@ -249,7 +256,8 @@ class Vector2D
 ```
 
 ## `Vector4D`
-```cpp
+
+```as
 class Vector4D
 {
   Vector4D();
@@ -288,7 +296,8 @@ class Vector4D
 ```
 
 ## `dictionaryValue`
-```cpp
+
+```as
 class dictionaryValue
 {
   dictionaryValue();
@@ -307,7 +316,8 @@ class dictionaryValue
 ```
 
 ## `string`
-```cpp
+
+```as
 {
   string();
   string(const string&in other);

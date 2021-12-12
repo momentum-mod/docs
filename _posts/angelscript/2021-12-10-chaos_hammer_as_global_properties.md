@@ -1,6 +1,6 @@
 ---
 title: Chaos Hammer AngelScript Global Properties
-category: api
+category: angelscript
 tags:
   - api
   - reference
@@ -16,24 +16,24 @@ This page outlines the various Chaos Hammer AngelScript global properties.
 
 ### `vec3_angle`
 
-```cpp
+```as
 const QAngle vec3_angle
 ```
 
 ### `vec3_invalid`
 
-```cpp
+```as
 const Vector vec3_invalid
 ```
  
 ### `vec3_origin`
 
-```cpp
+```as
 const Vector vec3_origin
 ```
 
 ### `vec4_origin`
 
-```cpp
+```as
 const Vector4D vec4_origin
 ```

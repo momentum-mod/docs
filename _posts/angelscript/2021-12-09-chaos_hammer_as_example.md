@@ -1,6 +1,6 @@
 ---
 title: Chaos Hammer AngelScript Example
-category: api
+category: angelscript
 tags:
   - api
   - reference
@@ -15,7 +15,7 @@ This contains an example Chaos Hammer AngelScript implementation.
 
 ## `ExampleWedge`
 
-```cpp
+```as
 [Solid("script_wedge")]
 class ExampleWedge : ScriptSolid
 {
