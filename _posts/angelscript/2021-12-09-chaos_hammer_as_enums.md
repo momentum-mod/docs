@@ -1,5 +1,5 @@
 ---
-title: Enums
+title: Chaos Hammer AngelScript Enums
 category: angelscript
 tags:
   - api

@@ -1,5 +1,5 @@
 ---
-title: Examples
+title: Chaos Hammer AngelScript Examples
 category: angelscript
 tags:
   - api

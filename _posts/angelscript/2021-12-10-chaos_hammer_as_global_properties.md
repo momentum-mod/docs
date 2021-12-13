@@ -1,5 +1,5 @@
 ---
-title: Global Properties
+title: Chaos Hammer AngelScript Global Properties
 category: angelscript
 tags:
   - api

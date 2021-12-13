@@ -1,5 +1,5 @@
 ---
-title: Global Functions
+title: Chaos Hammer AngelScript Global Functions
 category: angelscript
 tags:
   - api
