@@ -12,7 +12,6 @@ toc: true
 toc_sticky: true
 ccom_wepreloadcur: weapon_reload_script_current
 ccom_wepreload: weapon_reload_scripts
-ccom_resreload: hud_reloadcontrols
 guide_GSC: gamemode-specific-cfgs
 ---
 
@@ -52,9 +51,6 @@ For these overrides to take effect they need to be renamed to match the file the
 For example, renaming `weapon_momentum_stickylauncher_tf2.txt` to `weapon_momentum_stickylauncher.txt` within `momentum/overrides/scripts/` overrides the sticky launcher script in `momentum/scripts/`. This replaces the momentum default sticky launcher to be the one from TF2.
 
 Weapon scripts can be reloaded from within the game by using the console commands [`{{ page.ccom_wepreloadcur }}`](/command/{{ page.ccom_wepreloadcur }}) and/or [`{{ page.ccom_wepreload }}`](/command/{{ page.ccom_wepreload }}).
-
-## Reloading Within the Game
-To reload all control resource files, including the ones you are overriding, use the command [`{{ page.ccom_resreload }}`](/command/{{ page.ccom_resreload }}).
 
 ## Performance
 Mounting a subfolder is less efficient than a VPK, since the engine has to make a call to the operating system to search the folder each time it needs to open a file.
