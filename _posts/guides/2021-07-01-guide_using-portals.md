@@ -34,7 +34,10 @@ World portals are placeable entities that emulate a connection between two point
 The way that portals are drawn is by rendering a complete extra copy of the world on the far end of the connection and drawing it in addition to the physical world that the player interacts with. For that reason alone it is highly recommended to limit the number of portals visible at any given time to help player framerate if at all possible. 
 
 {:.notice--warning}
-The maximum amount of portals that can be on screen at once is <code>4</code>! This limit can be ignored with the <code>r_portal_fastpath 0</code> command at the cost of potential framerate issues. 
+The maximum amount of portals that can be on screen at once is `4`! This limit can be ignored with the `r_portal_fastpath 0` command at the cost of potential framerate issues.
+
+{:.notice--warning}
+The maximum size for world portals _must_ be less than `1024` for both the `width` and `height` keyvalues, otherwise the game will crash. This means the maximum world portal size is `2046`x`2046` (`1023` width, `1023` height).
 
 ## How to Make a World Portal
 
