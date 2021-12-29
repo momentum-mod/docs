@@ -53,21 +53,6 @@ For example, renaming `weapon_momentum_stickylauncher_tf2.txt` to `weapon_moment
 
 Weapon scripts can be reloaded from within the game by using the console commands [`{{ page.ccom_wepreloadcur }}`](/command/{{ page.ccom_wepreloadcur }}) and/or [`{{ page.ccom_wepreload }}`](/command/{{ page.ccom_wepreload }}).
 
-## Example - Overriding Speedometer Position
-
-![Centered Speedometer](/assets/images/override-custom-assets_guide/centered_speedo.png)
-
-{:.notice--info}
-Gamemode specific speedometer layouts can be set in `momentum/cfg/speedometer.vdf` (see the [guide for gamemode specific configurations](/guide/{{ page.guide_GSC }}#speedometer)).
-
-The resource file for the speedometer is `speedometer.res`, located in `momentum/resource/ui/`.
-Copy this file to `momentum/custom/overrides/resource/ui/` to override the game's base file.
-From this you can modify each speedometer's position, font, width, background color, etc.
-
-For example, changing the `"ypos"` field under `"HudSpeedMeter"` changes the vertical position of all speedometers.
-To completely center hud elements, they will have to be moved upwards by half their height. 
-A good value to center the speedometer with the default font is `"c-8"`, which sets the speedometer 8 pixels (half the height of the default font text) above the center.
-
 ## Reloading Within the Game
 To reload all control resource files, including the ones you are overriding, use the command [`{{ page.ccom_resreload }}`](/command/{{ page.ccom_resreload }}).
 
