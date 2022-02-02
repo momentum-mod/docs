@@ -1,5 +1,5 @@
 ---
-title: mom_hud_mapinfo_show_mapname
+title: mom_hud_mapinfo_zonetype_enable
 category: var
 tags:
   - hud
@@ -10,4 +10,4 @@ maximum_value: 1
 default_value: 1
 ---
 
-Toggles showing the map name.
+Toggles showing zone type (staged or linear) in map info on the HUD.
