@@ -9,7 +9,7 @@ default_value: 1
 ---
 
 {:.notice--info}
-This convar has no effect on weapon-focused gamemodes such as Rocket Jump, Sticky Jump, Conc, and Defrag.
+This convar has no effect on weapon-focused gamemodes such as Rocket Jump, Sticky Jump, Conc, and Defrag, and cannot be changed while the timer is running.
 
 Sets the weapons desirability for when the player spawns.
 0 = None, 1 = Mode-recommended weapons, 2 = All allowed weapons.
