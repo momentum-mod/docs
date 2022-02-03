@@ -1,5 +1,5 @@
 ---
-title: mom_hud_mapinfo_show_difficulty
+title: mom_hud_mapinfo_enable
 category: var
 tags:
   - hud
@@ -7,7 +7,7 @@ tags:
   - map info
 minimum_value: 0
 maximum_value: 1
-default_value: 0
+default_value: 1
 ---
 
-Toggles showing the map difficulty.
+Toggles showing the map info on the HUD.

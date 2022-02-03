@@ -1,5 +1,5 @@
 ---
-title: mom_hud_mapinfo_show_status
+title: mom_hud_mapinfo_tier_enable
 category: var
 tags:
   - hud
@@ -10,4 +10,4 @@ maximum_value: 1
 default_value: 1
 ---
 
-Toggles showing the map status.
+Toggles showing tier in map info on the HUD.
