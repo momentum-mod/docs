@@ -1,5 +1,5 @@
 ---
-title: mom_timer_sound_start_enable
+title: mom_hud_timer_sound_start_enable
 category: var
 tags:
   - sound
