@@ -3,7 +3,8 @@ title: mom_df_physics
 category: var
 tags:
   - defrag
-  - physics
+  - movement
+  - player
 requires_mapping: true
 minimum_value: 0
 maximum_value: 1
