@@ -9,4 +9,4 @@ maximum_value: 64
 default_value: 8
 ---
 
-Controls how many sides does each 3D zone line have.
+Controls how many sides each 3D zone line has.
