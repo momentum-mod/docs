@@ -7,4 +7,4 @@ tags:
 safeguard: mom_run_safeguard_saveloc_tele
 ---
 
-Teleports the player to their current saved location. If player holds down the key it will load the saveloc and freeze the player in place, releasing the key will unfreeze the player.
+Teleports the player to their current saved location. Binding +mom_saveloc_current and holding the set key down, freezes the player and loads the saveloc. Upon releasing the set key (-mom_saveloc_current) will unfreeze the player.
