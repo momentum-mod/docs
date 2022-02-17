@@ -7,10 +7,8 @@ category: guide
 
 tags:
   - rank
-  - ranking
   - xp
   - experience
-  - exp
   - cosmetic
 
 toc: true
@@ -18,21 +16,22 @@ toc: true
 toc_sticky: true
 ---
 
-# Momentum Ranked-Points System
+# Ranked-Points System
 
 **The points you earn from your time on a map is the sum of the points awarded from each of these 3 systems described below: WR/top10 points + formula points + group points.**
 
+{:.notice--info}
 The systems described here are complete; we are in agreement that this is what the Ranked-Points should look like. The values chosen for percentiles, WR points, etc. are still up for debate; however, these should be simple to change later, should we decide to change them, because of the design of the system. For now, we consider the values to be informed-guess placeholders.
 
-<sub>_There are no “base completion points”; the formula system somewhat accounts for this, but we’ve determined that it is not worth having a system of its own._</sub>
+> There are no “base completion points”; the formula system somewhat accounts for this, but we’ve determined that it is not worth having a system of its own
 
-<sub>Aside -- Motivation:</sub>
+<sub>Aside -- Motivation;</sub>
 
 <sub>Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain “percentile” blocks. The formula system awards points simply according to a formula with a single parameter -- the player’s rank.
-The group system should award more points than the formula system: it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.</sub>
+The group system should award more points than the formula system; it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.</sub>
 
 
-## WRs and Top10s system:
+## WRs and Top10s system
 
 WRs award a fixed number of points for all maps. For now, we set this to be 3,000 points.
 Ranks 2-10 award some percentage of the WR points.
@@ -50,37 +49,38 @@ Rank 9 = 1365 points = 45.5% of WR
 Rank 10 = 1290 points = 43% of WR
 ```
 
-## Formula system:
+## Formula system
 
-Points awarded is some equation of the form [ A / (rank + B) ]. A is a scaling constant, B is a smoothing constant.\
-We choose A = 50000, B = 49.\
-**Points = 50000 / (rank + 49)**\
+Points awarded is some equation of the form `A / (rank + B)`, where `A` is a scaling constant, and `B` is a smoothing constant.\
+We choose `A` = 50000, `B` = 49.\
+In this case the graph shows our equation `Points = 50000 / (rank + 49)`\
 ![Formula Graph](https://i.imgur.com/wjoJYNg.png)
 
-y axis designates points awarded\
-X axis designates player rank on a map
+{:.notice--info}
+X axis designates player rank on a map,\
+y axis designates points awarded
 
 <sub>Ex:\
 Player sets a time of rank 468 on a map with 1333 completions.\
-Formula points awarded = 50000 / (468 + 49) = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)</sub>
+Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)</sub>
 
 
-## (New) Group System:
+## (New) Group System
 
 (based on @Joe’s & Jux’s comments about minimum group sizes)\
 (plus lots of help from Jux and Aux)
 
 4 groups, loosely “percentile”-based (in fact, a function of #completions, but not as simple as a percentage). Instead of calculating group boundaries directly from percentiles, we calculate group _sizes_ based on a simple maximizing function --
 
-Group size = max(A(x), minSize)
+Group size = `max(A(x), minSize)`
 
 <sup>_max(A, B) simply returns the value of the larger parameter._\
 _A is a function of #completions, minSize_</sup>
 
 Group 1 always starts at rank 11, and its size is determined from its group size formula.
 
-The formula to determine group size, A(x) (where x is the # of completions of the map), is:\
-_A(x) = SF * (x^E)_, where SF and E are defined uniquely for each group:
+The formula to determine group size, A(x) (where x is the # of completions of the map), is\
+`_A(x) = SF * (x^E)`, where SF and E are defined uniquely for each group:\
 SF = Scale factor, E = Exponent
 ```
 Group 1: E = 0.5, SF = 1
