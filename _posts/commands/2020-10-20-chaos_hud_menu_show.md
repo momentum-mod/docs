@@ -1,5 +1,5 @@
 ---
-title: mom_hud_menu_show
+title: chaos_hud_menu_show
 category: command
 tags:
   - hud
@@ -8,7 +8,7 @@ tags:
   - ruler
 required_params: 
   - Menu name (file name)
-ccom_ref: mom_hud_menu_reload
+ccom_ref: chaos_hud_menu_reload
 guide_ref: custom-hud-menus
 ---
 
@@ -21,11 +21,11 @@ To parse the filenames again, see [`{{ page.ccom_ref }}`](/command/{{ page.ccom_
 
 ## Usage Examples
 
->`mom_hud_menu_show savelocmenu`
+>`chaos_hud_menu_show savelocmenu`
 
 Parses the `cfg/menu/savelocmenu.vdf` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 
->`mom_hud_menu_show rulermenu`
+>`chaos_hud_menu_show rulermenu`
 
 Parses the `cfg/menu/rulermenu.vdf` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 
