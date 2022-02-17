@@ -26,7 +26,6 @@ There are a few hud menus that ship with the game:
 - Map commands menu (more aimed towards mappers)
 
 You can create however many custom menus as you'd like, but only one can be displayed at a time.
-They are also limited to a maximum of 9 commands, not including an optional close command.
 
 To open a hud menu, use [`{{ page.ccom_show }}`](/command/{{ page.ccom_show }}).
 The parameter for this command will autofill with all the available hud menus.
@@ -50,7 +49,7 @@ A simple hud menu with just one command looks like:
   ]
 }
 ```
-`"1"` refers to the number in the menu the command is at, `"label"` is the text that shows for the button on the menu, and `"command"` is the console command that's inputted into console.
+`"label"` is the text that shows for the button on the menu, and `"command"` is the console command that's inputted into console.
 
 Adding more commands is then as simple as:
 ```
@@ -75,7 +74,6 @@ Adding more commands is then as simple as:
 }
 ```
 As in this example, labels and commands can be duplicated.
-Hud menus allow a maximum of 9 commands, accessed through numbers 1-9.
 
 There is the ability to execute a command on close as well, via the `"close_command"` keyvalue:
 ```
