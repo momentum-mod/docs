@@ -32,8 +32,7 @@ To open a hud menu, use [`{{ page.ccom_show }}`](/command/{{ page.ccom_show }}).
 The parameter for this command will autofill with all the available hud menus.
 
 ## File reading/writing
-Hud menus are stored in and read from `cfg/menus/` as `.kv3` files.
-Hud menus utilize Valve developed data format known as KeyValues3 (KV3).
+Hud menus utilize Valve developed data format known as KeyValues3 (KV3). They are stored in and read from `cfg/menus/` as `.kv3` files
 Files with the suffix `_default` are not read from unless their counterpart does not exist. 
 In which case, it will be copied and have the suffix removed for reading.
 
