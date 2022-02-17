@@ -4,7 +4,7 @@ category: command
 tags:
   - hud
   - hud menu
-ccom_ref: chaoshud_menu_show
+ccom_ref: chaos_hud_menu_show
 ---
 
 Reloads the hud menu names for parameter completion for [`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }}).
