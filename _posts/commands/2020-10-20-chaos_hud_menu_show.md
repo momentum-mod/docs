@@ -23,11 +23,11 @@ To parse the filenames again, see [`{{ page.ccom_ref }}`](/command/{{ page.ccom_
 
 >`chaos_hud_menu_show savelocmenu`
 
-Parses the `cfg/menu/savelocmenu.vdf` file and shows the hud menu if it isn't already open. If it is open already, hides it.
+Parses the `cfg/menu/savelocmenu.kv3` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 
 >`chaos_hud_menu_show rulermenu`
 
-Parses the `cfg/menu/rulermenu.vdf` file and shows the hud menu if it isn't already open. If it is open already, hides it.
+Parses the `cfg/menu/rulermenu.kv3` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 
 {:.notice--info}
 To create your own hud menu see [this guide](/guide/{{ page.guide_ref }}).
