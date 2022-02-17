@@ -60,8 +60,8 @@ In this case the graph shows our equation `Points = 50000 / (rank + 49)`\
 X axis designates player rank on a map,\
 y axis designates points awarded
 
-<sub>Ex:\
-Player sets a time of rank 468 on a map with 1333 completions.\
+<sub>Ex:<br>
+Player sets a time of rank 468 on a map with 1333 completions.<br>
 Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)</sub>
 
 
@@ -79,9 +79,9 @@ _A is a function of #completions, minSize_</sup>
 
 Group 1 always starts at rank 11, and its size is determined from its group size formula.
 
-The formula to determine group size, A(x) (where x is the # of completions of the map), is\
-`_A(x) = SF * (x^E)`, where SF and E are defined uniquely for each group:\
-SF = Scale factor, E = Exponent
+The formula to determine group size, `A(x)` (where `x` is the # of completions of the map), is\
+`_A(x) = SF * (x^E)`, where `SF` and `E` are defined uniquely for each group:\
+`SF` = Scale factor, `E` = Exponent
 ```
 Group 1: E = 0.5, SF = 1
 Group 2: E = 0.56, SF = 1.5
@@ -103,15 +103,15 @@ On a map with 400 completions:
 Group 1 size = max(1 * 400^0.5, 10) = max(20, 10) = 20
 Group 2 size = max(1.5 * 400^0.56, 45) = max(42.98, 45) = 45
 Group 3 size = max(2 * 400^0.62, 125) = max(82, 125) = 125
-Group 4 size = max(2.5 * 400^0.68, 250) = max(147, 250) = 250</sup>
+Group 4 size = max(2.5 * 400^0.68, 250) = max(147, 250) = 250
 ```
 
 <sup>Therefore:</sup>
 
 ```
-Group 1 = ranks 11-30 (begins from rank 11, contains 20 spots)\
-Group 2 = ranks 31-75 (begins from rank 31 = end of G1, contains 45 spots)\
-Group 3 = ranks 76-200 (begins from rank 76 = end of G2, contains 125 spots)\
+Group 1 = ranks 11-30 (begins from rank 11, contains 20 spots)
+Group 2 = ranks 31-75 (begins from rank 31 = end of G1, contains 45 spots)
+Group 3 = ranks 76-200 (begins from rank 76 = end of G2, contains 125 spots)
 Group 4 = ranks 201-450 -- note this exceeds #completions (400)! So it extends all the way to rank 400, and anyone who completes the map is automatically in at least group 4.
 ```
 
