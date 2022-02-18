@@ -97,7 +97,7 @@ Group 3: minSize = 125
 Group 4: minSize = 250
 ```
 
-<sup>Ex.\
+<sup>Ex.<br>
 On a map with 400 completions:
 ```
 Group 1 size = max(1 * 400^0.5, 10) = max(20, 10) = 20
