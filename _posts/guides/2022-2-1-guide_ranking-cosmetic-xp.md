@@ -74,7 +74,7 @@ Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that th
 
 Group size = `max(A(x), minSize)`
 
-<sup>_max(A, B) simply returns the value of the larger parameter._\
+<sup>_max(A, B) simply returns the value of the larger parameter._<br>
 _A is a function of #completions, minSize_</sup>
 
 Group 1 always starts at rank 11, and its size is determined from its group size formula.
