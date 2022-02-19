@@ -1,6 +1,6 @@
 ---
-title: The PBR Shader
-permalink: /shader/pbr-shader/
+title: Physically Based Rendering
+permalink: /shader/physically-based-rendering/
 category: shader
 tags:
   - pbr
