@@ -1,5 +1,5 @@
 ---
-title: mom_hud_menu_hide
+title: chaos_hud_menu_hide
 category: command
 tags:
   - hud
