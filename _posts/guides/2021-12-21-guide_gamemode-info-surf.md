@@ -17,7 +17,7 @@ toc_sticky: true
 
 ## What is Surf?
 
-Surf is a very popular gamemode that derives from the same source bug as bhop and ahop. Even thought it came from a bug it became one of the most popular minigames on games like cs:s cs:go team fortress 2 etc.
+Surf is a very popular gamemode that comes from increasing sv_airaccelerate to give better air control. It quickly became one of the most popular gamemodes on games like cs:s, cs:go, team fortress 2 etc.
 
 ## History of Surf
 
@@ -27,7 +27,7 @@ Surf is a very popular gamemode that derives from the same source bug as bhop an
 
 ## How Surf Works
 
-You can surf by holding A on the right side of the ramp and D on the left without holding W.
-When getting on a ramp you need to look downwards, then slowly turn your camera until the bottom where you should be looking flat with the ramp.
-If you want to jump you need to slowly start looking at the ramp and when you're halfway up look directly at it.
-When you are mid-air its beneficial to strafe by looking left while holding A then switcing to looking right while holding D and repeating that.
+Surfing on a ramp requires holding A on the right side of the ramp and D on the left, without holding W.
+When boarding a ramp you need to look downwards, then slowly turn your camera until the bottom where you should be looking flat with the ramp.
+If you want to jump off a ramp you need to slowly look towards it.
+When you are mid-air its beneficial to strafe by holding A and turning left, then quickly switching to holding D and turning right then doing that motion again.
