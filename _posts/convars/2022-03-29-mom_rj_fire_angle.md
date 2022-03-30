@@ -2,8 +2,8 @@
 title: mom_rj_fire_angle
 category: var
 tags:
-  -rocket jump
-  -weapon
+  - rocket jump
+  - weapon
 minimum_value: 0
 maximum_value: 2
 default_value: 0
