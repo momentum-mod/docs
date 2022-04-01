@@ -5,8 +5,8 @@ tags:
   - rocket jump
   - weapon
 minimum_value: 4
-maximum_value: 8
-default_value: 16
+maximum_value: 16
+default_value: 8
 ---
 
 Helps with fixing some surf/ramp bugs.
