@@ -11,4 +11,4 @@ default_value: 1
 ccom_ref1: mom_mv_jump_z_offset
 ---
 
-Makes the player jump to the exact same height ever jump. The height if affected by [`{{ page.ccom_ref1 }}`](/command/{{ page.ccom_ref1 }}).
+Makes the player jump to the exact same height every jump. The height if affected by [`{{ page.ccom_ref1 }}`](/command/{{ page.ccom_ref1 }}).
