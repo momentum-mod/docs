@@ -8,8 +8,6 @@ category: guide
 tags:
   - quake3
   - mapping
-  - maps
-  - source  
   - porting
   - defrag
   - guide  
