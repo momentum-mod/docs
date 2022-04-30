@@ -67,7 +67,7 @@ Now click File > Open, and open the .map file you are converting. Once it has lo
 
 Before you open this VMF in Hammer however, there's one more thing we should do. Download a tool called [GoldSrc2Source](https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer). Click Find VMF and navigate the VMF file you just saved in J.A.C.K. Select it and click repair, it's best to have all parameters marked in GoldSrc2Soure in the vast majority of cases.
 
-![GOLDSRC2SOURCE PARAMETERS](/assets/images/goldsrc_to_source_guide/GLDSRC_2_SRC_PARAMETERS)
+![GOLDSRC2SOURCE PARAMETERS](/assets/images/goldsrc_to_source_guide/GLDSRC_2_SRC_PARAMETERS.png)
 
 Finally, load Hammer and open the VMF! There will likely be a few missing textures through the map, but these will be tool textures. Find them and replace them to their[Source equivalent](https://developer.valvesoftware.com/wiki/Tool_texture).
 
