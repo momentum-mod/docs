@@ -8,6 +8,7 @@ category: guide
 tags:
   - bhop
   - climb
+  - conc
   - mapping
   - porting
   - guide  
@@ -21,7 +22,7 @@ Before you start, you should know that maps with simple geometry work best for p
 **Prerequisites**:
 - Have a basic understanding of Goldsrc, Valve Hammer Editor, and potentially Trenchbroom
  
-## Download the .BSP and (optionally) the .WAD
+## Download the .BSP and (in some cases) the .WAD
 
 You can download maps from [Xtreme-Jumps](https://xtreme-jumps.eu/download.php?list.9) or by joining an Adrenaline Gamer Kreedz server, and switcihg the map with `agmap.` The BSP is the actual map file, and the WAD contains the textures used in the map, although in most cases custom textures will be embedded into the BSP.
 
@@ -53,7 +54,7 @@ The resulting folders should be placed in the materials folder of the game you a
 
 ## If using BSPTwoMap
 
-Download [Trenchbroom](https://github.com/TrenchBroom/TrenchBroom/releases) set it up for Half-Life(experimental). Open the map with J.A.C.K (see below) remove and then fix the invalid brushes. You will need to do it in J.A.C.K and not hammer. Then, open the .map and go around combining mutiple brushes that would be one single brush by control-clicking them all, and press control+j (convex merge). This will take a long time if it's a large and complex map.
+Download [Trenchbroom](https://github.com/TrenchBroom/TrenchBroom/releases) set it up for Half-Life(experimental). Open the map with J.A.C.K (see below) remove and then fix the invalid brushes. You will need to do it in J.A.C.K and not Hammer. Then, open the .map and go around combining mutiple brushes that would be one single brush by control-clicking them all, and press control+j (convex merge). This will take a long time if it's a large and complex map.
 
 ![MERGING BRUSHES](/assets/images/goldsrc_to_source_guide/TRENCHBROOM_MERGE.png)
 
@@ -65,7 +66,7 @@ Once it is installed, open J.A.C.K. and click Tools > Options, or press F2 to br
 
 ![SETTINGS PANEL](/assets/images/goldsrc_to_source_guide/SETTINGS_PANEL.png)
 
-Now click File > Open, and open the .map file you are converting. Once it has loaded, there will likely invalid solids that stretch to infinity. Delete these now, you'll need to remake them later. Click File > Save As... and save as a "Half-Life VMF."
+Now click File > Open, and open the .map file you are converting. Once it has loaded, there will likely invalid solids that stretch to infinity. Delete these now, you'll need to remake them later. Click File > Save As... and save as a "Half-Life VMF".
 
 Before you open this VMF in Hammer however, there's one more thing we should do. Download a tool called [GoldSrc2Source](https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer). Click Find VMF and navigate the VMF file you just saved in J.A.C.K. Select it and click repair, it's best to have all parameters marked in GoldSrc2Soure in the vast majority of cases.
 
