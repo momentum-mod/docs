@@ -68,7 +68,7 @@ Once it is installed, open J.A.C.K. and click Tools > Options, or press F2 to br
 
 Now click File > Open, and open the .map file you are converting. Once it has loaded, there will likely invalid solids that stretch to infinity. Delete these now, you'll need to remake them later. Click File > Save As... and save as a "Half-Life VMF".
 
-Before you open this VMF in Hammer however, there's one more thing we should do. Download a tool called [GoldSrc2Source](https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer). Click Find VMF and navigate the VMF file you just saved in J.A.C.K. Select it and click repair, it's best to have all parameters marked in GoldSrc2Soure in the vast majority of cases.
+Before you open this VMF in Hammer however, there's one more thing we should do. Download a tool called [GoldSrc2Source](https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer). Click Find VMF and navigate the VMF file you just saved in J.A.C.K. Select it and click repair, it's best to have all parameters marked in GoldSrc2Source in the vast majority of cases.
 
 ![GOLDSRC2SOURCE PARAMETERS](/assets/images/goldsrc_to_source_guide/GLDSRC_2_SRC_PARAMETERS.png)
 
@@ -76,7 +76,7 @@ Finally, load Hammer and open the VMF! There will likely be a few missing textur
 
 ## Converting entities
 
-Now you can start converting the entities to their Source equivalents. The trigger_multiple entities used for controlling the timer should be converted to the momentum mod zone system; 
+Now you can start converting the entities to their Source equivalents. The trigger_multiple entities that are used for controlling the timer should be converted to the momentum mod zone system; 
 - [trigger_momentum_timer_start](/entity/trigger_momentum_timer_start/)
 - [trigger_momentum_timer_checkpoint](/entity/trigger_momentum_timer_checkpoint/)
 - [trigger_momentum_timer_stop](/entity/trigger_momentum_timer_stop/)
