@@ -24,25 +24,25 @@ Before you start, you should know that maps with simple geometry work best for p
  
 ## Download the .BSP and (in some cases) the .WAD
 
-You can download maps from [Xtreme-Jumps](https://xtreme-jumps.eu/download.php?list.9) or by joining an Adrenaline Gamer Kreedz server, and switcihg the map with `agmap.` The BSP is the actual map file, and the WAD contains the textures used in the map, although in most cases custom textures will be embedded into the BSP.
+You can download maps from [Xtreme-Jumps](https://xtreme-jumps.eu/download.php?list.9) or by joining an Adrenaline Gamer Kreedz server, and switcing the map with `agmap`. The BSP is the actual map file, and the WAD contains the textures used in the map, although in most cases custom textures will be embedded into the BSP.
 
 ## Obtaining the .map file
  
 You will need the .map/.rmf/.jmf file for the map you wish to port to Source. It will make your life much easier if you can get the original from the creator, however it is not required.
 
-## Decompiling with WinBSPC
+### What decompiler to use?
+
+[Both are pretty bad.](https://valvedev.info/guides/goldsrc-map-decompilers-bsptwomap-vs-winbspc/) Goldsrc doesn't store original brush geometry in its BSPs like Source does. WinBSPC decompiles the map by carving it out of a large box the size of the map. As such, while the geometry is usually workable in-game, it's very hard to edit should you want to make any changes. BSPTwoMap on the other hand, directly spits out the polygons in the map, converted into brushes. As such, a box would instead of taking one brush, use 5 or 6. This can be fixed by opening Trenchbroom and manually combining all the brushes. While it is a long process, it results in much better geometry that is easier to edit. Another bonus of BSPTwoMap is that it automatically extracts embedded textures in the map into a .WAD.
+
+### Decompiling with WinBSPC
 
 Open [WinBSPC](https://valvedev.info/tools/winbspc/), in the top left corner select file > convert. Navigate to the BSP file you wish to decompile and select it. Choose Convert to: MAP, and best match texturing. Choose the desired output folder and click OK.
 
 ![DECOMPILE PARAMETERS](/assets/images/goldsrc_to_source_guide/WINBSPC_PARAMETERS.png)
 
-## Decompiling with BSPTwoMap
+### Decompiling with BSPTwoMap
 
-[BSPTwoMap](https://valvedev.info/tools/bsptwomap/), is a command-line application, so simply drag the bsp onto to .exe to decompile it.
-
-## What decompiler to use?
-
-[Both are pretty bad.](https://valvedev.info/guides/goldsrc-map-decompilers-bsptwomap-vs-winbspc/) Goldsrc doesn't store original brush geometry in its BSPs like Source does. WinBSPC decompiles the map by carving it out of a large box the size of the map. As such, while the geometry is usually workable in-game, it's very hard to edit should you want to make any changes. BSPTwoMap on the other hand, directly spits out the polygons in the map, converted into brushes. As such, a box would instead of taking one brush, use 5 or 6. This can be fixed by opening trenchbroom and manually combining all the brushes. While it is a long process, it results in much better geometry that is easier to edit. Another bonus of BSPTwoMap is that it automatically extracts embedded textures in the map into a .WAD.
+[BSPTwoMap](https://valvedev.info/tools/bsptwomap/), is a command-line application, simply drag the bsp onto to .exe to decompile it.
 
 ## Converting the textures
 
@@ -66,7 +66,7 @@ Once it is installed, open J.A.C.K. and click Tools > Options, or press F2 to br
 
 ![SETTINGS PANEL](/assets/images/goldsrc_to_source_guide/SETTINGS_PANEL.png)
 
-Now click File > Open, and open the .map file you are converting. Once it has loaded, there will likely invalid solids that stretch to infinity. Delete these now, you'll need to remake them later. Click File > Save As... and save as a "Half-Life VMF".
+Now click File > Open, and open the .map file you are converting. Once it has loaded, there will likely be invalid solids that stretch to infinity. Delete these now, you'll need to remake them later. Click File > Save As... and save as a "Half-Life VMF".
 
 Before you open this VMF in Hammer however, there's one more thing we should do. Download a tool called [GoldSrc2Source](https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer). Click Find VMF and navigate the VMF file you just saved in J.A.C.K. Select it and click repair, it's best to have all parameters marked in GoldSrc2Source in the vast majority of cases.
 
