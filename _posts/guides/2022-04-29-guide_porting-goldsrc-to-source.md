@@ -24,7 +24,7 @@ Before you start, you should know that maps with simple geometry work best for p
  
 ## Download the .BSP and (in some cases) the .WAD
 
-You can download maps from [Xtreme-Jumps](https://xtreme-jumps.eu/download.php?list.9) or by joining an Adrenaline Gamer Kreedz server, and switcing the map with `agmap`. The BSP is the actual map file, and the WAD contains the textures used in the map, although in most cases custom textures will be embedded into the BSP.
+You can download maps from [Xtreme-Jumps](https://xtreme-jumps.eu/download.php?list.9) or by joining an Adrenaline Gamer Kreedz server, and switching the map with `agmap`. The BSP is the actual map file, and the WAD contains the textures used in the map, although in most cases custom textures will be embedded into the BSP.
 
 ## Obtaining the .map file
  
