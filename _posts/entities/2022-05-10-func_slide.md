@@ -17,7 +17,7 @@ A brush entity that allows the player to slide across the surface of it without 
 
 >**Allow jumping** (AllowJump&lt;**boolean**&gt;)
 
- Allow the player to jump while sliding. The player is still required to be on a surface that isn't too steep to stand on.
+ Allows the player to jump while sliding. The player is still required to be on a surface that isn't too steep to stand on.
 
 >**Disable gravity** (DisableGravity&lt;**boolean**&gt;)
 
