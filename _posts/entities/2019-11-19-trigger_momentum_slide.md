@@ -5,12 +5,14 @@ tags:
  - slide
  - trigger
 tool_texture: trigger_slide
+ccom_ref: func_slide
 ---
 
 
 ----
 ![Slide trigger texture](/assets/images/trigger_momentum_slide/slides.jpg)
 
+**NOTE: Depreciated, use [`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }})**
   
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that allows the player to slide across the surface of a brush without friction. 
 This must be placed above the brush in order for the slide to work.
