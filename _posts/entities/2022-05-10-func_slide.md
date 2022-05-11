@@ -13,13 +13,13 @@ A brush entity that allows the player to slide across the surface of it without 
 
 >**Keep player on slide surface** (StayOnSlide&lt;**boolean**&gt;)
 
- Forces the player to stay on the brush, even if it suddenly curves downwards or launches the player upwards.
+Keep the player attached to the slide surface (for example, when sliding down ground of increasing steepness).
 
 >**Allow jumping** (AllowJump&lt;**boolean**&gt;)
 
- Allows the player to jump while sliding. The player is still required to be on a surface that isn't too steep to stand on.
+Allow the player to jump while sliding. The player is still required to be on a surface that is not too steep to stand on in order to jump.
 
 >**Disable gravity** (DisableGravity&lt;**boolean**&gt;)
 
- Removes the effects of gravity on the brush, allowing for people to slide up impossible slopes.
+ Disable gravity while sliding.
 
