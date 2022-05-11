@@ -5,7 +5,8 @@ tags:
  - slide
  - func
 ---
- 
+
+----
 A brush entity that allows the player to slide across the surface of it without friction. 
 
 ## Keyvalues
