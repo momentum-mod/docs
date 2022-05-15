@@ -1,5 +1,5 @@
 ---
-title: mom_comparisons
+title: mom_hud_comparisons_enable
 category: var
 tags:
   - hud
@@ -9,4 +9,4 @@ maximum_value: 1
 default_value: 1
 ---
 
-Toggles the run comparisons panel.
+Shows the run comparison panel. 0 = OFF, 1 = ON
