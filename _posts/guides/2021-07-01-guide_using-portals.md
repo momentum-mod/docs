@@ -75,9 +75,9 @@ In order to create a portal a `linked_portal_door` entity must be placed in the 
 
 VRAD can cast light through portals, but they must but static, as well as VRAD being passed with `-PortalTraversalLighting`.
 
-First ensure both the `Static Portal` and `Start Active` keyvalues are set to `Yes`. Next, navigate to Hammer's expert compile mode, located by pressing F9 then the `Expert...` button on the bottom left. Next, locate `$light_exe`, click on it and add `-PortalTraversalLighting` before the existing text on the right where it says `Parameters:`. Optionally, you can add `-PortalTraversalAO` to calculate ambient occlusion through portals aswell, however it can increase compile times by a lot for not much benefit.
+First ensure both the `Static Portal` and `Start Active` keyvalues are set to `Yes`. Next, navigate to Hammer's expert compile mode, located by pressing F9, then the `Expert...` button on the bottom left. Next, locate `$light_exe`, click on it and add `-PortalTraversalLighting` before the existing text on the right where it says `Parameters:`. Optionally, you can add `-PortalTraversalAO` to calculate ambient occlusion through portals aswell, however it can increase compile times dramatically for not much benefit.
 
-![Expert settings](/assets/images/using-portals_guides/portal-lighting-parameters.jpg)
+![Expert settings](/assets/images/using-portals_guide/portal-lighting-parameters.jpg)
 
 
 ## Common Uses of Portals
