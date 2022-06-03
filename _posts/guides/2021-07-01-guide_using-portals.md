@@ -33,8 +33,6 @@ World portals are placeable entities that emulate a connection between two point
 
 The way that portals are drawn is by rendering a complete extra copy of the world on the far end of the connection and drawing it in addition to the physical world that the player interacts with. For that reason alone it is highly recommended to limit the number of portals visible at any given time to help player framerate if at all possible. 
 
-{:.notice--warning}
-The maximum amount of portals that can be on screen at once is `4`! This limit can be ignored with the `r_portal_fastpath 0` command at the cost of potential framerate issues.
 
 {:.notice--warning}
 The keyvalues for world portals specify both half-width and half-height, which means that the maximum size for world portals _must_ be less than `1024` for both the [half-]`width` and [half-]`height` KVs otherwise the game will crash. This means the maximum world portal size is `2046`x`2046` (`1023` half-width; `1023` half-height).
@@ -48,6 +46,7 @@ The entity used to create a world portal is `linked_portal_door`. Key values of 
 - `Linked Partner` - The name of the other `linked_portal_door` to create a portal with
 - `Half-Width` - The distance in Hammer Units to either side of the entity. This will determine how wide the portal is on compilation.
 - `Half-Height` - The distance in Hammer Units above and below the entity. This will determine how tall the portal is on compilation.
+- `Static Portal` - Whether or not VRAD can cast light through the portal, consequentially meaning the portal never moves or toggles off.
 - `Start Active` - Whether or not this portal will be active as soon as the map loads. If set to false, an input from another entity is required to make the portal functional.
 
 <div class="notice--info">
@@ -71,6 +70,15 @@ In order to create a portal a `linked_portal_door` entity must be placed in the 
 	</p>
 	<img src="/assets/images/using-portals_guide/door.jpg" alt="Door">
 </div>
+
+### How to Enable Static Portal Lighting
+
+VRAD can cast light through portals, but they must but static, as well as VRAD being passed with `-PortalTraversalLighting`.
+
+First ensure both the `Static Portal` and `Start Active` keyvalues are set to `Yes`. Next, navigate to Hammer's expert compile mode, located by pressing F9 then the `Expert...` button on the bottom left. Next, locate `$light_exe`, click on it and add `-PortalTraversalLighting` before the existing text on the right where it says `Parameters:`. Optionally, you can add `-PortalTraversalAO` to calculate ambient occlusion through portals aswell, however it can increase compile times by a lot for not much benefit.
+
+![Expert settings](/assets/images/using-portals_guides/portal-lighting-parameters.jpg)
+
 
 ## Common Uses of Portals
 ### Impossible Hallway
