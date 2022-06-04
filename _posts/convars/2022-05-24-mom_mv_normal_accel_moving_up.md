@@ -4,6 +4,7 @@ category: var
 tags:
   - player
   - movement
+requires_mapping: true
 minimum_value: 0
 maximum_value: 1
 default_value: 0
