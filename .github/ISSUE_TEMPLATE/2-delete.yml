@@ -1,0 +1,17 @@
+name: ❌ Deleting Documentation
+description: Something needs to be deleted.
+labels: ["deletion"]
+body:
+- type: textarea
+  attributes:
+    label: Describe what needs deleted.
+    description: A clear and concise description of what you want to be deleted
+    placeholder: X is no longer applicable to Momentum Mod because...
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional context
+    description: Add any other context about what needs deleted here.
+  validations:
+    required: false

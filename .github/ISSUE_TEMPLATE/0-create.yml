@@ -1,0 +1,23 @@
+name: 📝Creating Documentation
+description: Something needs to be created.
+labels: ["creation"]
+body:
+- type: textarea
+  attributes:
+    label: Describe what needs documented
+    description: A clear and concise description of what needs documenting
+    placeholder: X has no documentation...
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Things to include in the documentation
+    description: Add possible things to include in the documentation here
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional context
+    description: Add any other context about what needs documented here.
+  validations:
+    required: false
