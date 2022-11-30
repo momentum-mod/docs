@@ -18,6 +18,7 @@ Hammer++ was not made for Momentum Mod, but can be configured to work with the g
 **Prerequisites**:
 - [GCFScape](https://nemstools.github.io/pages/GCFScape-Download.html)
 - [Hammer++ CS:GO Build](https://ficool2.github.io/HammerPlusPlus-Website/download.html)
+- About 42 GB of disk space (depending on how many games are mounted)
  
 ## Hammer++ Configuration
 
