@@ -13,7 +13,7 @@ toc: true
 
 toc_sticky: true
 ---
-Hammer++ is not officially supported for Momentum Mod, but can be configured to work with the game by following this guide.
+Momentum Mod is not officially supported by Hammer++, but can be made compatible by following this guide.
 
 **Prerequisites**:
 - [GCFScape](https://nemstools.github.io/pages/GCFScape-Download.html)
