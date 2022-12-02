@@ -35,14 +35,14 @@ In order for Hammer++ to load content from the various games that Momentum Mod m
 
 1. Extract materials, models, and sounds from .vpk files:
     - Extract `Counter-Strike Global Offensive\csgo\pak01_dir.vpk` into `Counter-Strike Global Offensive\csgo\csgo_content`
-    - Extract `Portal\portal\portal_pak_dir.vpk` into `Counter-Strike Global Offensive\csgo\portal_content`
+    - Extract `Counter-Strike Source\cstrike\cstrike_pak_dir.vpk` into `Counter-Strike Global Offensive\csgo\cstrike_content`
     - Extract `Portal 2\portal2\pak01_dir.vpk` into `Counter-Strike Global Offensive\csgo\portal2_content`
     - Extract `Team Fortress 2\tf\tf2_misc_dir.vpk` and `Team Fortress 2\tf\tf2_textures_dir.vpk` into `Counter-Strike Global Offensive\csgo\tf2_content`
 2. Mount Momentum Mod content by running this command in a command prompt: `mklink /D "<path to steam games>\Counter-Strike Global Offensive\csgo\momentum_content" "<path to steam games>\Momentum Mod Playtest\momentum"`
 3. Open `Momentum Mod Playtest\momentum\gameinfo.txt` and copy the following contents into the SearchPaths section:
 ```
 game        "csgo/csgo_content"
-game        "csgo/portal_content"
+game        "csgo/cstrike_content"
 game        "csgo/portal2_content"
 game        "csgo/tf2_content"
 game        "csgo/momentum_content"
