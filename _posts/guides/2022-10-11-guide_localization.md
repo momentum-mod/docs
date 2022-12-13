@@ -74,6 +74,29 @@ Add the new term referenced in the code, and any context if you'd like to help e
 
 After the term is added, head to the English section, and give it the proper English value for it.
 
+### Bulk Adding Terms
+
+For adding many terms at a time, common when making entirely new pages or components, it's easiest to add all the new terms to a JSON file and import them all at once.
+
+Create a JSON file in the below format, where terms are the token names (**without** a `#` at the start!) and definitions are the English strings.
+
+```json
+[
+    {
+        "term": "",
+        "definition": ""
+    },
+    {
+        "term": "",
+        "definition": ""
+    }
+]
+```
+
+then, go to the Import page on the POEditor dashboard, upload that JSON file, and set "Also import translations to a language" to English, as below.
+
+![](/assets/images/localization/loc-bulk-add-terms.jpg)
+
 ### Changing Term Values
 
 If there's a term that should have its text updated, find it in the English section and update its value.
