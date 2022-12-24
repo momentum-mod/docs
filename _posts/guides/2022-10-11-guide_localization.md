@@ -93,7 +93,7 @@ Create a JSON file in the below format, where terms are the token names (**witho
 ]
 ```
 
-then, go to the Import page on the POEditor dashboard, upload that JSON file, and set "Also import translations to a language" to English, as below.
+Then, go to the Import page on the POEditor dashboard, upload that JSON file, and set "Also import translations to a language" to English, as below.
 
 ![](/assets/images/localization/loc-bulk-add-terms.jpg)
 
