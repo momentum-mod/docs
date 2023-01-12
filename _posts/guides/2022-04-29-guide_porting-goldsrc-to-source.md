@@ -124,6 +124,8 @@ Download VTFEdit here: https://github.com/NeilJed/VTFLib
   
 With VTFEdit installed, navigate to Tools -> Convert WAD File. Select a .wad to be converted and a relevant folder for the output. Make sure "Create VMT Files" is checked as creating them manually can get quite tedious. The .vmt files generated will not preserve any of the properties of the original textures in the WAD. In other words a glass texture will not be transparent without designating it as such manually in the .vmt file.  
 
+![alt text](https://i.imgur.com/MzowYcc.png)
+
 Occasionally VTFEdit will stall on certain textures in a WAD preventing the conversion from finishing. If this happens the WAD must be edited to remove the offending texture. This can be done with SLADE.
 
 Download SLADE here: https://slade.mancubus.net/index.php?page=downloads
