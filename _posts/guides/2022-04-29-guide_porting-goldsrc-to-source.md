@@ -24,11 +24,13 @@ Before you start, you should know that maps with simple geometry work best for p
  
 ## Download the .BSP and (in some cases) the .WAD
 
-You can download maps from [Xtreme-Jumps](https://xtreme-jumps.eu/download.php?list.9) or by joining an Adrenaline Gamer Kreedz server, and switching the map with `agmap`. The BSP is the actual map file, and the WAD contains the textures used in the map, although in most cases custom textures will be embedded into the BSP.
+Most Team Fortress Classic skill maps can be found on the TFC Refugees forum here: https://www.tfcrefugees.com/resources/categories/conc.4/  
+Maps downloaded from this forum always include any relevant custom content not packed into the map itself. Additionally many maps have descriptions and author info text documents included.  
+Of the files downloaded, the BSP is the actual map file, and the WAD contains the textures used in the map. In most cases custom textures will be embedded into the BSP itself.
 
 ## Obtaining the .map file
  
-You will need the .map/.rmf/.jmf file for the map you wish to port to Source. It will make your life much easier if you can get the original from the creator, however it is not required.
+You will need the .map or .rmf file for the map you wish to port to Source. It will make your life much easier if you can get the original from the creator, however it is not required.
 
 ### What decompiler to use?
 
@@ -60,7 +62,7 @@ This decompiler has the following advantages over the other options:
 
 ### Modified BSP Converter (MBSPC)
 Download available here: https://gamebanana.com/tools/6565  
-While not as good as HUSK MD, MBSPC is responsible for a large portion of the ports currently playable in Momentum Mod.
+While not as good as HUSK MD, MBSPC is responsible for a large portion of the ports currently playable in Momentum Mod. Decompiles with this tool give similar results to those of HUSK MD.
 The pros and cons of this decompiler are as follows:
 - Exclusively Tree-Based decompiles
 - Last updated in 2012
@@ -69,16 +71,46 @@ The pros and cons of this decompiler are as follows:
 - Customizable decompile options
 - Does not automatically extract embedded textures
 
+### Windows BSP Convert (WinBSPC)
+Download available here: https://gamebanana.com/tools/download/5030  
+The original Tree-Based decompiler for GoldSrc. Functionally obsolete with the existence of MBSPC and HUSK MD.
+The pros and cons of this decompiler are as follows:
+- Exclusively Tree-Based decompiles
+- Has not been updated since the early 2000s
+- Has a GUI
+- Prone to crashing and failing to decompile all types of maps
+- Customizable decompile options
+- Does not automatically extract embedded textures
 
+### BSP Viewer (BSPV)
+Download available here: https://nemstools.github.io/pages/BSP_Viewer-Download.html  
+The precursor to Crafty, both these programs are stand alone tools that are capable of loading and viewing BSPs without having any game open. BSPV is capable of Face-To-Brush decompiles, but this feature was removed in Crafty.  
+The pros and cons of this decompiler are as follows:  
+- Exclusively Face-To-Brush decompiles
+- Has not been updated since the early 2000s
+- Has a GUI
+- Rarely if ever crashes when attempting to decompile
+- Decompiles are almost always thousands of brushes over Hammer's limit
+- Prone to generating [spaghetti](https://i.imgur.com/1mIOKCV.png)
+- Limited decompile customization options
+- Does not automatically extract embedded textures
 
-
+### BSP2MAP
+Download available here: https://www.moddb.com/games/half-life/downloads/bsp2map1  
+The original GoldSrc decompiler. This tool really should never be used at this point as BSPV and HUSK MD provide better results for Face-To-Brush decompilation.  
+The pros and cons of this decompiler are as follows:  
+- Exclusively Face-To-Brush decompiles 
+- Has not been updated since the early 2000s
+- Command line only, no GUI
+- Does not typically crash when decompiling
+- Prone to generating [spaghetti](https://i.imgur.com/1mIOKCV.png)
+- Limited decompile customization options
+- Can extract embedded textures
 
 
 ### Decompiling with WinBSPC
 
-Open [WinBSPC](https://valvedev.info/tools/winbspc/), in the top left corner select file > convert. Navigate to the BSP file you wish to decompile and select it. Choose Convert to: MAP, and best match texturing. Choose the desired output folder and click OK.
-
-![DECOMPILE PARAMETERS](/assets/images/goldsrc_to_source_guide/WINBSPC_PARAMETERS.png)
+Open [WinBSPC](https://valvedev.info/tools/winbspc/), in the top left corner select file > convert. Navigate to the BSP file you wish to decompile and select it. Select the "MAP" option under "Convert to" and make sure "best match texturing" is not selected under "MAP options". Choose the desired output folder and click OK.
 
 ### Decompiling with BSPTwoMap
 
@@ -86,7 +118,19 @@ Open [WinBSPC](https://valvedev.info/tools/winbspc/), in the top left corner sel
 
 ## Converting the textures
 
-Some maps don't embed textures and simply come with a .WAD however most do not. As mentioned earlier, BSPTwoMap will extract them on decompile, it's recommended to simply decompile the BSP again with BSPTwoMap to get the .WAD even if you're using WinBSPC. Once you've obtained the .WAD, you need to convert it to Source materials. This is done with a program called xwad. Xwad is a command line application, you can get it by downloading the Source SDK on steam, (NOT 2007 or 2013) and navigating the bin folder where the developer tools are stored. You'll need to create a .bat and add the parameters -BaseDir (location of the momentum folder) -WadFile (location of the .wad) and -vtex (automatically calls vtex to convert the created TGA files into VTF files). The .bat would look a little something like this:
+Assuming you are using HUSK MD, after decompiling a .wad file with all the relevant textures will be generated. This .wad file will need to be converted into .vtf and .vmt files so that the textures are usable in source. The easiest way to convert these textures is with VTFEdit.  
+
+Download VTFEdit here: https://github.com/NeilJed/VTFLib  
+  
+With VTFEdit installed, navigate to Tools -> Convert WAD File. Select a .wad to be converted and a relevant folder for the output. Make sure "Create VMT Files" is checked as creating them manually can get quite tedious. The .vmt files generated will not preserve any of the properties of the original textures in the WAD. In other words a glass texture will not be transparent without designating it as such manually in the .vmt file.  
+
+Occasionally VTFEdit will stall on certain textures in a WAD preventing the conversion from finishing. If this happens the WAD must be edited to remove the offending texture. This can be done with SLADE.
+
+Download SLADE here: https://slade.mancubus.net/index.php?page=downloads
+
+Open the troublesome .wad file in SLADE. Read the output log of VTFEdit where it will name the problematic texture. Simply select and delete this texture in SLADE, and then save the .wad file. Repeat this process if VTFEdit stalls during the conversion again.
+
+If you do not want to download VTFEdit, this can be done through a program called xwad. Xwad is a command line application, you can get it by downloading the Source SDK on steam, (NOT 2007 or 2013) and navigating the bin folder where the developer tools are stored. You'll need to create a .bat and add the parameters -BaseDir (location of the momentum folder) -WadFile (location of the .wad) and -vtex (automatically calls vtex to convert the created TGA files into VTF files). The .bat would look a little something like this:
 
 `xwad -BaseDir [PATH TO MOMENTUM FOLDER] -WadFile [PATH TO .WAD] -vtex`
 
