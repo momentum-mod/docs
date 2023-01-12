@@ -32,7 +32,47 @@ You will need the .map/.rmf/.jmf file for the map you wish to port to Source. It
 
 ### What decompiler to use?
 
-[Both are pretty bad.](https://valvedev.info/guides/goldsrc-map-decompilers-bsptwomap-vs-winbspc/) Goldsrc doesn't store original brush geometry in its BSPs like Source does. WinBSPC decompiles the map by carving it out of a large box the size of the map. As such, while the geometry is usually workable in-game, it's very hard to edit should you want to make any changes. BSPTwoMap on the other hand, directly spits out the polygons in the map, converted into brushes. As such, a box would instead of taking one brush, use 5 or 6. This can be fixed by opening Trenchbroom and manually combining all the brushes. While it is a long process, it results in much better geometry that is easier to edit. Another bonus of BSPTwoMap is that it automatically extracts embedded textures in the map into a .WAD.
+There are five decompilers available for GoldSrc maps. They are listed from best to worst as follows:
+- Half Life Unified SDK Map Decompiler (HUSK MD)
+- Modified BSP Converter (MBSPC)
+- Windows BSP Converter (WinBSPC)
+- BSP Viewer (BSPV)
+- BSP2MAP
+
+Goldsrc does not store original brush geometry in its BSPs like Source does. As a result decompiles will not be "clean" in the sense that there will be very odd looking geometry generated compared to a decompile of a Source map.  
+
+The two methods of decompilation can be described as "Tree-Based" and "Face-To-Brush". Tree-Based decompiles or the "cube" generate map files that appear as if the map geometry is carved out of the center of a cube. While not easy to work with when trying to modify a decompiled map, this method is the better of the two. This is primarily due to how this method prevents leaks.  
+
+Face-To-Brush decompilation converts every single brush face into its own separate 1 unit thick brush. This method is the worse of the two mainly due to all the texture z-fighting that arises on convex corners. This method typically results in a map file which exceeds Hammer's brush limit. In most cases—especially for porting movemment maps like conc—a Tree-Based decompile is better to work with.  
+
+More information on this is available on the release page of HUSK MD.   
+
+### Half Life Unified SDK Map Decompiler (HUSK MD)
+Download available here: https://github.com/SamVanheer/HalfLife.UnifiedSdk.MapDecompiler  
+<ins>This is by far the best decompiler to use.</ins> It cannot be reiterated enough that any attempts at porting GoldSrc content should start with this decompiler. The vast majority of information on GoldSrc map decompiling and porting is outdated. Old guides will typically point to WinBSPC or BSP2MAP, but these tools are practically obsolete at this point.  
+This decompiler has the following advantages over the other options:
+ - Offers both Tree-Based and Face-To-Brush decompiles
+ - In active development
+ - Modern GUI
+ - Rarely if ever crashes when attempting to decompile
+ - Customizable decompile options
+ - Can automatically extract embedded textures
+
+### Modified BSP Converter (MBSPC)
+Download available here: https://gamebanana.com/tools/6565  
+While not as good as HUSK MD, MBSPC is responsible for a large portion of the ports currently playable in Momentum Mod.
+The pros and cons of this decompiler are as follows:
+- Exclusively Tree-Based decompiles
+- Last updated in 2012
+- No GUI, command line only
+- Rarely if ever crashes when attempting to decompile
+- Customizable decompile options
+- Does not automatically extract embedded textures
+
+
+
+
+
 
 ### Decompiling with WinBSPC
 
