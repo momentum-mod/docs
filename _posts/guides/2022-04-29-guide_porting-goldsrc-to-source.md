@@ -17,6 +17,7 @@ toc: true
 
 toc_sticky: true
 ---
+## This guide is a work in progress. If you have questions or problems ask for help in the Momentum Mod Discord.
 Before you start, you should know that maps with simple geometry work best for porting. Complex geometry can cause invalid solids which will need to be manually remade, and some textures will need to be realigned.
 
 **Prerequisites**:
