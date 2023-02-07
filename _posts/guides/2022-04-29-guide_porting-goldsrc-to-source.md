@@ -36,11 +36,11 @@ You will need the .map or .rmf file for the map you wish to port to Source. It w
 ### What decompiler to use?
 
 There are five decompilers available for GoldSrc maps. They are listed from best to worst as follows:
-- Half Life Unified SDK Map Decompiler (HUSK MD)
-- Modified BSP Converter (MBSPC)
-- Windows BSP Converter (WinBSPC)
-- BSP Viewer (BSPV)
-- BSP2MAP
+- [Half Life Unified SDK Map Decompiler (HUSK MD)](https://github.com/SamVanheer/halflife-unified-sdk)
+- [Modified BSP Converter (MBSPC)](https://gamebanana.com/tools/6565)
+- [Windows BSP Converter (WinBSPC)](https://gamebanana.com/tools/5030)
+- [BSP Viewer (BSPV)](https://nemstools.github.io/subpages/Comments/BSP_Viewer.html#p83)
+- [BSP2MAP](https://gamebanana.com/tools/4782)
 
 Goldsrc does not store original brush geometry in its BSPs like Source does. As a result decompiles will not be "clean" in the sense that there will be very odd looking geometry generated compared to a decompile of a Source map.  
 
@@ -92,7 +92,7 @@ The pros and cons of this decompiler are as follows:
 - Has a GUI
 - Rarely if ever crashes when attempting to decompile
 - Decompiles are almost always thousands of brushes over Hammer's limit
-- Prone to generating [spaghetti](https://i.imgur.com/1mIOKCV.png)
+- Prone to generating [spaghetti](/assets/images/goldsrc_to_source_guide/hammer_spaghetti.png)
 - Limited decompile customization options
 - Does not automatically extract embedded textures
 
@@ -104,7 +104,7 @@ The pros and cons of this decompiler are as follows:
 - Has not been updated since the early 2000s
 - Command line only, no GUI
 - Does not typically crash when decompiling
-- Prone to generating [spaghetti](https://i.imgur.com/1mIOKCV.png)
+- Prone to generating [spaghetti](/assets/images/goldsrc_to_source_guide/hammer_spaghetti.png)
 - Limited decompile customization options
 - Can extract embedded textures
 
@@ -125,7 +125,7 @@ Download VTFEdit here: https://github.com/NeilJed/VTFLib
   
 With VTFEdit installed, navigate to Tools -> Convert WAD File. Select a .wad to be converted and a relevant folder for the output. Make sure "Create VMT Files" is checked as creating them manually can get quite tedious. The .vmt files generated will not preserve any of the properties of the original textures in the WAD. In other words a glass texture will not be transparent without designating it as such manually in the .vmt file.  
 
-![alt text](https://i.imgur.com/MzowYcc.png)
+![vtfedit_convert_wad](/assets/images/goldsrc_to_source_guide/vtfedit_convert_wad.png)
 
 Occasionally VTFEdit will stall on certain textures in a WAD preventing the conversion from finishing. If this happens the WAD must be edited to remove the offending texture. This can be done with SLADE.
 
