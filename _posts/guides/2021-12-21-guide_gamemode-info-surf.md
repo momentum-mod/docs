@@ -17,7 +17,7 @@ toc_sticky: true
 
 ## What is Surf?
 
-Surf is a very popular gamemode
+Surf is a very popular gamemode where people surf on ramps to get to the goal.
 
 ## History of Surf
 
@@ -27,4 +27,4 @@ Surf is a very popular gamemode
 
 ## How Surf Works
 
-TODO
+Surf works by sliding across a ramp by holding the strafe key that is facing towards it. If there is a ramp curved inward that you want surf on and you have a good amount of speed, press the opposite facing strafe key to negate any horizontal velocity gained. If you are high up in the air and you want to gain speed, you can airstrafe to increase your velocity.
