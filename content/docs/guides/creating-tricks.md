@@ -21,9 +21,10 @@ tags:
 
 This guide covers how to create tricks for the tricksurf gamemode.
 
-{:.notice--danger}
+{{< hint danger >}}
 Disclaimer:
 Creating tricks and tricksurf as a whole is in the initial phase of implementation, meaning that later on in development there will be UI for most of the actions required for creating tricks.
+{{< /hint >}}
 
 ## Prerequisites
 

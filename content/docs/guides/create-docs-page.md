@@ -28,9 +28,10 @@ Follow the steps to install [Ruby and Jekyll](https://jekyllrb.com/docs/installa
 
 Open a terminal with Ruby and change to the directory where you cloned this repository.
 
-{:.notice--info}
+{{< hint info >}}
 If it is your first time running the website, run `bundle install` first to install dependencies!
 
+{{< /hint >}}
 Run `bundle exec jekyll serve` to host the website. Jekyll hosts the website at [localhost:4000](http://localhost:4000) and automatically reloads to any file changes done to posts, data, or excess files. The only exception is changes made to `_config.yml`, that will require restarting the Jekyll process.
 
 You can use `CTRL+C` to stop the process in the terminal when you are done with it.
@@ -39,9 +40,10 @@ You can use `CTRL+C` to stop the process in the terminal when you are done with 
 
 ### Creating the File
 
-{:.notice--info}
+{{< hint info >}}
 If you are creating a new file for the first time, it is recommended to look at the [Jekyll documentation page on posts](https://jekyllrb.com/docs/posts/) to get an idea of what this site runs on.
 
+{{< /hint >}}
 A new page should be created inside of the `_posts` directory. Since this site uses Jekyll, a documentation page is going to have to follow their "blog post" file format:  
 `YYYY-MM-DD-<filename>.<ext>`
 
@@ -81,25 +83,31 @@ toc_sticky: [true/false] # If you are using the Table of Contents, consider sett
 You can highlight something that's important by prepending a notice tag like so:
 
 ```
-{:.notice--danger}
+{{< hint danger >}}
 I'm red!
 
-{:.notice--info}
+{{< /hint >}}
+{{< hint info >}}
 This one is blue
 
-{:.notice--warning}
+{{< /hint >}}
+{{< hint warning >}}
 Yellow notice
 ```
+{{< /hint >}}
 
-{:.notice--danger}
+{{< hint danger >}}
 I'm red!
 
-{:.notice--info}
+{{< /hint >}}
+{{< hint info >}}
 This one is blue
 
-{:.notice--warning}
+{{< /hint >}}
+{{< hint warning >}}
 Yellow notice
 
+{{< /hint >}}
 ## Requiring `-mapping`
 
 If a command or convar requires `-mapping` to work, you may specify it as such in the front matter:
@@ -114,9 +122,10 @@ requires_mapping: true
 
 This will insert the following block at the top of the document:
 
-{:.notice--danger}
+{{< hint danger >}}
 **Requires `-mapping`**  
 In order to use this command, you have to boot the game with
+{{< /hint >}}
 `-mapping` as a launch parameter!
 
 ## Further Edits

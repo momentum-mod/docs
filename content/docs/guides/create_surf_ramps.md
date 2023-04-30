@@ -12,9 +12,10 @@ tags:
 
 ![Ramp Guide Header](/images/guide_headers/guide_create_surf_ramps.jpg)
 
-{:.notice--info}
+{{< hint info >}}
 Note: This guide assumes that you have a basic working knowledge of the hammer editor and the tools used.
 
+{{< /hint >}}
 ## Basic Surf Ramps
 
 ### Planning
@@ -123,9 +124,10 @@ and [HammerPatch](https://github.com/crashfort/HammerPatch){:target="\_blank"}.
 These improve the precision of the stored vertices and help keep brushwork looking the way it's supposed to.
 Momentum hammer also implements a fix similar to HammerPatch.
 
-{:.notice--info}
+{{< hint info >}}
 Note: The purpose of a base portion at the bottom of the ramp is to make the surfable area overlap at all locations.
 As long as they are used while creating the ramp, they can be deleted afterwards.
+{{< /hint >}}
 
 ### Curved Ramps with Func_Detail
 

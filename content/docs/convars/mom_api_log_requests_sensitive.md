@@ -15,5 +15,6 @@ tags:
 
 If enabled, API requests that are sensitive will be logged to console.
 
-{:.notice--danger}
+{{< hint danger >}}
 Only set this if you know what you are doing! This could potentially expose an API key!
+{{< /hint >}}

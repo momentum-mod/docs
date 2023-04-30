@@ -57,14 +57,16 @@ PBR
 `$bumpmap` will be for the Normal texture.  
 `$emissiontexture` will be for any glowing sections of the model.
 
-{:.notice--danger}
+{{< hint danger >}}
 The emission texture is a colour texture, not a mask.
 
+{{< /hint >}}
 `$envmap` should just be left as `env_cubemap`.
 
-{:.notice--info}
+{{< hint info >}}
 `$model 1` **_must_** be added for models to work!
 
+{{< /hint >}}
 ## VMT Example - Brush
 
 Here is another example using parallax, intended for use on a brush:
@@ -83,17 +85,19 @@ PBR
 }
 ```
 
-{:.notice--info}
+{{< hint info >}}
 The parallax option requires that a height map is embedded into the alpha channel of the normal map.  
 You can check out one way of doing so [below](#texture-creation---designer).
+{{< /hint >}}
 
 `$parallax` simply enables the parallax effect.
 `$parallaxdepth` specifies how �deep� the parallax effect will go.
 `$parallaxcenter` adjusts the centre-point of the parallax effect, nudging it closer or further away from the surface.
 
-{:.notice--warning}
+{{< hint warning >}}
 Parallax Occlusion has its limitations and things to be wary of.<br><br>  
 The parallax shader has a limited number of layers to create the depth effect.<br>
+{{< /hint >}}
 If you make the height value too intense, these layers become very easy to notice and ruin the effect, as shown below.<br><br>
 ![Visible layers of Parallax](/images/pbr_guide/pbr_layer_example.jpg)
 Another thing you might notice is that the depth effect continues past the edge of the brush, which can look very strange as well, and is more noticeable on higher depth settings.
@@ -110,9 +114,10 @@ You can try this export template, which creates the MRAO texture as well as an E
 
 > [PBR Shader Template](/PBR MRAO Emissive.spexp)
 
-{:.notice--warning}
+{{< hint warning >}}
 This template does not include the height map in the normal map alpha for parallax.
 
+{{< /hint >}}
 It can go in the `Allegorithmic\Substance Painter\shelf\export-presets` folder.
 
 ## Texture Creation - Designer

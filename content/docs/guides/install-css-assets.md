@@ -68,5 +68,6 @@ Inside SteamCMD, type or paste each of the following line in the order:
   ```
   - Save
 
-{:.notice--warning}
+{{< hint warning >}}
 Note that any updates we may do to `gameinfo.txt` could cause this entry to be deleted, so if CS:S assets stop showing up, make sure to make this edit again!
+{{< /hint >}}

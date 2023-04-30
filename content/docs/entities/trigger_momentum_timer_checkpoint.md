@@ -18,9 +18,10 @@ tool_texture: trigger_checkpoint
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that splits the timer.  
 It is used on Linear maps and can not be reset to, unlike Stages.
 
-{:.notice--danger}
+{{< hint danger >}}
 Checkpoint Zones cannot be used at the same time as Stage Zones.
 
+{{< /hint >}}
 > Looking for more general info on Zones?  
 > Check the [Zone Types page](/guide/zone-types/).
 

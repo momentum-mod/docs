@@ -31,9 +31,10 @@ World portals are placeable entities that emulate a connection between two point
 
 The way that portals are drawn is by rendering a complete extra copy of the world on the far end of the connection and drawing it in addition to the physical world that the player interacts with. For that reason alone it is highly recommended to limit the number of portals visible at any given time to help player framerate if at all possible.
 
-{:.notice--warning}
+{{< hint warning >}}
 The keyvalues for world portals specify both half-width and half-height, which means that the maximum size for world portals _must_ be less than `1024` for both the [half-]`width` and [half-]`height` KVs otherwise the game will crash. This means the maximum world portal size is `2046`x`2046` (`1023` half-width; `1023` half-height).
 
+{{< /hint >}}
 ## How to Make a World Portal
 
 ### The linked_portal_door Point Entity
@@ -87,9 +88,10 @@ An impossible hallway is one that is appears to be longer or shorter than it tru
 
 ![Impossible Hallway](/images/using-portals_guide/impossible-hallway.jpg)
 
-{:.notice--info}
+{{< hint info >}}
 In order to create a fully seamless transition using a portal all details at either end must identical. This includes mundane issues such as props, texture allignment, and particles. However, lighting calculations do not factor portals into their calculations and thus must be manually replicated on both ends to make the seam completely invisible.
 
+{{< /hint >}}
 ### Impossible Roundabout
 
 Another common illusion that uses world portals is an impossible roundabout. An impossible roundabout will include multiple separate rooms that each have multiple portal entities connecting them to the previous/next area. An example of such a layout can be seen below:
@@ -108,9 +110,10 @@ There are many solutions to an issue with skyboxes like this one. Typically, a p
 
 ![Skybox Wall](/images/using-portals_guide/skybox-wall.jpg)
 
-{:.notice--info}
+{{< hint info >}}
 
 <div class="notice--info">
+{{< /hint >}}
 	<p>
 		Given that a skybox simply layers itself behind any other section of the level that is being rendered, traditional optimization tools can be used in many scenarios to hide the problematic section of the level much easier than a portal, except with the added bonus of better performance.
 		<br><br>

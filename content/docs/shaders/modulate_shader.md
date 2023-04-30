@@ -9,9 +9,10 @@ tags:
 
 # Modulate Shader
 
-{:.notice--warning}
+{{< hint warning >}}
 The `$hdrscale` parameter is only present in the `DX11` version of the shader
 
+{{< /hint >}}
 This shader adds an `$hdrscale` parameter that functions as a multiplier for the final result, so an `$hdrscale` of `2` is equivalent to having `$mod2x`.
 
 Examples:
