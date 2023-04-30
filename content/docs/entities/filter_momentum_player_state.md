@@ -8,8 +8,6 @@ tags:
 
 # filter_momentum_player_state
 
----
-
 Filter that checks the player's movement state.
 
 ## Keyvalues

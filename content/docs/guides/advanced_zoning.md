@@ -36,6 +36,7 @@ This will only apply once the Start Zone has been created.
 You should bind this to a key for ease of use, although there is currently a bind to the Right Alt key by default. There is no visual indication but if you check the cvar, it will have changed.
 
 {{< /hint >}}
+
 ## Stages and Checkpoints
 
 Stages and Checkpoints cannot be created with the Auto Mode in the Zoning Tools, so you must change it manually via the drop-down menu.
@@ -76,6 +77,7 @@ The Zone will change colour and be finalised.
 Make sure to click **_Save Zones_** when you are done!
 
 {{< /hint >}}
+
 ## Track Number
 
 Track Number defines whether the Zones you create are for the main map or any bonuses that it might have.

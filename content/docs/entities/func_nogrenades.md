@@ -16,8 +16,6 @@ tool_texture: trigger_nogrenades
 
 # func_nogrenades
 
----
-
 ![Nogrenade trigger texture](/images/func_nogrenades/func_nogrenades.jpg)
 
 Rockets, stickybombs, conc grenades, and other explosives will not detonate/explode inside this area.

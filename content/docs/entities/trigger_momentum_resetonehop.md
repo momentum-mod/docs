@@ -10,8 +10,6 @@ tags:
 
 # trigger_momentum_resetonehop
 
----
-
 Trigger that resets all of the onehop triggers the player has touched.
 
 ## Keyvalues

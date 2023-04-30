@@ -12,8 +12,6 @@ tool_texture: trigger_stage
 
 # trigger_momentum_timer_stage
 
----
-
 ![Stage tool texture](/images/trigger_momentum_timer_stage/stage.jpg)
 
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that marks the start of a stage.  
@@ -23,6 +21,7 @@ It is used on Staged maps and can be reset to via [`{{ page.ccom_ref }}`](/comma
 Stage Zones cannot be used at the same time as Checkpoint Zones.
 
 {{< /hint >}}
+
 > Looking for more general info on Zones?  
 > Check the [Zone Types page](/guide/zone-types/).
 

@@ -11,8 +11,6 @@ tags:
 
 # trigger_momentum_onehop
 
----
-
 Trigger that teleports the player after only one entry, or if they stay inside for longer than the hold time.
 
 ## Keyvalues

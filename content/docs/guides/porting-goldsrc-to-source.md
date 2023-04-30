@@ -45,7 +45,7 @@ Goldsrc does not store original brush geometry in its BSPs like Source does. As 
 
 The two methods of decompilation can be described as "Tree-Based" and "Face-To-Brush". Tree-Based decompiles or the "cube" generate map files that appear as if the map geometry is carved out of the center of a cube. While not easy to work with when trying to modify a decompiled map, this method is the better of the two. This is primarily due to how this method prevents leaks.
 
-Face-To-Brush decompilation converts every single brush face into its own separate 1 unit thick brush. This method is the worse of the two mainly due to all the texture z-fighting that arises on convex corners. This method typically results in a map file which exceeds Hammer's brush limit. In most cases�especially for porting movemment maps like conc�a Tree-Based decompile is better to work with.
+Face-To-Brush decompilation converts every single brush face into its own separate 1 unit thick brush. This method is the worse of the two mainly due to all the texture z-fighting that arises on convex corners. This method typically results in a map file which exceeds Hammer's brush limit. In most cases'especially for porting movemment maps like conc'a Tree-Based decompile is better to work with.
 
 More information on this is available on the release page of HUSK MD.
 
@@ -181,6 +181,6 @@ Push trigger values probably need to be adjusted, or they should be replaced wit
 
 ## Final polish
 
-Now it�s time to put the final polish on the map. Fix up any broken geometry (although there might not be any if the map is simple enough), fix the lighting issues if there are any, and align any textures that may have become misaligned. You also might have to func_detail some of the brushes if there are a lot of small details, in order to cut down compile times.
+Now it's time to put the final polish on the map. Fix up any broken geometry (although there might not be any if the map is simple enough), fix the lighting issues if there are any, and align any textures that may have become misaligned. You also might have to func_detail some of the brushes if there are a lot of small details, in order to cut down compile times.
 
 You can now compile the map!

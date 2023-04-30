@@ -13,7 +13,7 @@ tags:
 
 ## What is Ahop?
 
-Ahop, short for "**_A_**ccelerated **_Hop_**", comes from the Orange Box versions of Half-Life 2, its episodes, and Portal 1. Ahop comes from [Valve's attempt](#technical-explanation) to remove bunnyhopping in an older version of the game. By either hopping completely backwards or holding/pressing the back movement key while hopping, players can gain extreme amounts of velocity.
+Ahop, short for "**A**ccelerated **Hop**", comes from the Orange Box versions of Half-Life 2, its episodes, and Portal 1. Ahop comes from [Valve's attempt](#technical-explanation) to remove bunnyhopping in an older version of the game. By either hopping completely backwards or holding/pressing the back movement key while hopping, players can gain extreme amounts of velocity.
 
 Ahop movement can be commonly found in Any% Speedruns for [Half-Life 2](https://www.youtube.com/watch?v=NV-AWxqYAgc), [its episodes](https://www.youtube.com/watch?v=pSe8RMcQHeY) and [Portal 1](https://www.youtube.com/watch?v=mC47O6mKHJY).
 

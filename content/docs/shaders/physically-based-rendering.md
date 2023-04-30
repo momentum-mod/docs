@@ -13,7 +13,7 @@ tags:
 
 The Physically Based Rendering (PBR) shader is a powerful new shader that provides more realistic and versatile rendering of brushes and models within Momentum Mod whilst using fewer textures and needing fewer VMT tweaks.
 
-PBR extends Source�s shading capacity by storing additional Metalness, Roughness and Ambient Occlusion maps in independent channels of an additional texture called the MRAO.
+PBR extends Source's shading capacity by storing additional Metalness, Roughness and Ambient Occlusion maps in independent channels of an additional texture called the MRAO.
 
 Additionally, it uses the alpha channel of the normal map as a height input for parallax maps.
 
@@ -59,14 +59,14 @@ PBR
 
 {{< hint danger >}}
 The emission texture is a colour texture, not a mask.
-
 {{< /hint >}}
+
 `$envmap` should just be left as `env_cubemap`.
 
 {{< hint info >}}
 `$model 1` **_must_** be added for models to work!
-
 {{< /hint >}}
+
 ## VMT Example - Brush
 
 Here is another example using parallax, intended for use on a brush:
@@ -91,7 +91,7 @@ You can check out one way of doing so [below](#texture-creation---designer).
 {{< /hint >}}
 
 `$parallax` simply enables the parallax effect.
-`$parallaxdepth` specifies how �deep� the parallax effect will go.
+`$parallaxdepth` specifies how 'deep' the parallax effect will go.
 `$parallaxcenter` adjusts the centre-point of the parallax effect, nudging it closer or further away from the surface.
 
 {{< hint warning >}}
@@ -116,13 +116,13 @@ You can try this export template, which creates the MRAO texture as well as an E
 
 {{< hint warning >}}
 This template does not include the height map in the normal map alpha for parallax.
-
 {{< /hint >}}
+
 It can go in the `Allegorithmic\Substance Painter\shelf\export-presets` folder.
 
 ## Texture Creation - Designer
 
-Creating the input textures isn�t covered in the guide - this section simply shows how to composite both the **MRAO** and normal map with the height textures correctly.
+Creating the input textures isn't covered in the guide - this section simply shows how to composite both the **MRAO** and normal map with the height textures correctly.
 
 You can create a MRAO texture by putting the Metalness, Roughness, Ambient Occlusion, and a White _Uniform Color_ Node into an _RGBA Merge_ Node.
 

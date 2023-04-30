@@ -62,6 +62,7 @@ If something's broken, then, first of all, excellent find! You can report issues
 **This section of the documentation is for Momentum Mod team developers only!**
 
 {{< /hint >}}
+
 ### Adding Terms
 
 Adding terms is quick and easy through the POEditor page.

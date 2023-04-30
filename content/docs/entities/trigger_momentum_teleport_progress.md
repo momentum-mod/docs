@@ -11,8 +11,6 @@ tags:
 
 # trigger_momentum_teleport_progress
 
----
-
 Trigger that teleports the player to their last touched `trigger_momentum_progress`.
 
 ## Keyvalues
