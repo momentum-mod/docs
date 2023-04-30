@@ -8,7 +8,7 @@ tags:
 
 # Parallax-Corrected Cubemaps
 
-![Cubemap Guide](/assets/images/guide_headers/guide_parallax_cubemaps.jpg)
+![Cubemap Guide](/images/guide_headers/guide_parallax_cubemaps.jpg)
 
 This page covers Momentum's implementation of Parallax-Corrected Cubemaps, created with a combination of custom entities and materials.
 
@@ -30,7 +30,7 @@ In Hammer, Parallax-Corrected Cubemaps need two entities to function correctly:
 - A trigger brush tied to a `parallax_obb` entity - must be named
 - An `env_cubemap` with "Cubemap Bounds" set to the name of the `parallax_obb`
 
-![Entities in Hammer](/assets/images/cubemap_guide/cube_0.jpg)
+![Entities in Hammer](/images/cubemap_guide/cube_0.jpg)
 
 {:.notice--info}
 You may notice a box appear in the centre of the brush when you tie it to a `parallax_obb` entity like shown above.  
@@ -50,7 +50,7 @@ Any regular `LightmappedGeneric` materials will still be able to use the cubemap
 		<p>
 		This example has a wide room with a low ceiling as well as the cubemap entity not quite in the centre:
 		</p>
-		<img src="/assets/images/cubemap_guide/cube_4.jpg" alt="Distortion example">
+		<img src="/images/cubemap_guide/cube_4.jpg" alt="Distortion example">
 
     	<p>
     	Parallax-Corrected cubemaps work best in box-shaped rooms and areas, the closer to a cube shape your <code>parallax_obb</code> is, the less obvious distortion that you will likely get.
@@ -66,17 +66,17 @@ Here is the process of creating the necessary entities in Hammer for this featur
 
 The first thing you should do is to create the "bounding box" of the cubemap with a trigger brush. Make it so that it fits the room as closely as possible.
 
-![Brush creation](/assets/images/cubemap_guide/cube_2.jpg)
+![Brush creation](/images/cubemap_guide/cube_2.jpg)
 
 Once you've made the trigger brush, tie it to a `parallax_obb` entity and give it a name:
 
-![Brush entity dialog](/assets/images/cubemap_guide/cube_3.png)
+![Brush entity dialog](/images/cubemap_guide/cube_3.png)
 
 That's all that is needed for the brush, onto the cubemap entity itself.
 
 When creating an `env_cubemap` you should see an extra option called _"Cubemap Bounds"_. Set it to the name of the `parallax_obb` you just created.
 
-![Cubemap entity](/assets/images/cubemap_guide/cube_1.png)
+![Cubemap entity](/images/cubemap_guide/cube_1.png)
 
 This should be all the setup that is required in Hammer.
 

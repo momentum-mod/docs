@@ -17,7 +17,7 @@ tags:
 
 # How to Create Tricks
 
-![Creating Tricks Guide](/assets/images/guide_headers/guide_creating_tricks.jpg)
+![Creating Tricks Guide](/images/guide_headers/guide_creating_tricks.jpg)
 
 This guide covers how to create tricks for the tricksurf gamemode.
 
@@ -39,7 +39,7 @@ To follow this guide you should:
 Use the zoning menu accessed via [`{{ page.cmd_zone_menu_ref }}`](/command/{{ page.cmd_zone_menu_ref }}) to create trick zones all around the map.
 Use the tricks zone type:
 
-![Tricks zone type](/assets/images/creating-tricks_guide/tricks-zone.jpg)
+![Tricks zone type](/images/creating-tricks_guide/tricks-zone.jpg)
 
 These zones will be used later to record (create) tricks.
 
@@ -70,7 +70,7 @@ In both cases, `id` refers to the ID of the trick, which corresponds to the list
 
 ## The UI
 
-![Creating Tricks Guide](/assets/images/creating-tricks_guide/tricks-UI.jpg)
+![Creating Tricks Guide](/images/creating-tricks_guide/tricks-UI.jpg)
 
 The trick UI replaces the scoreboard for tricksurf, accessed via TAB by default.
 

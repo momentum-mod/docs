@@ -44,7 +44,7 @@ In these examples, `models` and `materials` are search customs, meaning that `cu
 
 ## Example - Overriding Weapon Script
 
-![Weapon Model Comparison](/assets/images/override-custom-assets_guide/weapon_compare.jpg)
+![Weapon Model Comparison](/images/override-custom-assets_guide/weapon_compare.jpg)
 
 Inside `momentum/custom/overrides/scripts/` there are some weapon script overrides available.
 For these overrides to take effect they need to be renamed to match the file they are overriding in `momentum/scripts/`.

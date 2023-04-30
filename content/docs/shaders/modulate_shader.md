@@ -17,10 +17,10 @@ This shader adds an `$hdrscale` parameter that functions as a multiplier for the
 Examples:
 
 `$hdrscale 1`
-![hdrscale_1](/assets/images/modulate_shader_guide/hdrscale_1.jpg)
+![hdrscale_1](/images/modulate_shader_guide/hdrscale_1.jpg)
 
 `$hdrscale 2`
-![hdrscale_2](/assets/images/modulate_shader_guide/hdrscale_2.jpg)
+![hdrscale_2](/images/modulate_shader_guide/hdrscale_2.jpg)
 
 `$hdrscale 10`
-![hdrscale_10](/assets/images/modulate_shader_guide/hdrscale_10.jpg)
+![hdrscale_10](/images/modulate_shader_guide/hdrscale_10.jpg)

@@ -13,7 +13,7 @@ tool_texture: trigger_start
 
 ---
 
-![Start tool texture](/assets/images/trigger_momentum_timer_start/start.jpg)
+![Start tool texture](/images/trigger_momentum_timer_start/start.jpg)
 
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that starts the map or bonus upon leaving it.
 

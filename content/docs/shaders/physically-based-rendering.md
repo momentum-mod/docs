@@ -9,7 +9,7 @@ tags:
 
 # Physically Based Rendering
 
-![PBR Guide](/assets/images/guide_headers/guide_pbr_shader.jpg)
+![PBR Guide](/images/guide_headers/guide_pbr_shader.jpg)
 
 The Physically Based Rendering (PBR) shader is a powerful new shader that provides more realistic and versatile rendering of brushes and models within Momentum Mod whilst using fewer textures and needing fewer VMT tweaks.
 
@@ -95,7 +95,7 @@ You can check out one way of doing so [below](#texture-creation---designer).
 Parallax Occlusion has its limitations and things to be wary of.<br><br>  
 The parallax shader has a limited number of layers to create the depth effect.<br>
 If you make the height value too intense, these layers become very easy to notice and ruin the effect, as shown below.<br><br>
-![Visible layers of Parallax](/assets/images/pbr_guide/pbr_layer_example.jpg)
+![Visible layers of Parallax](/images/pbr_guide/pbr_layer_example.jpg)
 Another thing you might notice is that the depth effect continues past the edge of the brush, which can look very strange as well, and is more noticeable on higher depth settings.
 
 ## Texture Creation - Painter
@@ -108,7 +108,7 @@ However, the PBR shader uses MRAO textures, so a custom export template is neede
 
 You can try this export template, which creates the MRAO texture as well as an Emissive texture if one exists:
 
-> [PBR Shader Template](/assets/PBR MRAO Emissive.spexp)
+> [PBR Shader Template](/PBR MRAO Emissive.spexp)
 
 {:.notice--warning}
 This template does not include the height map in the normal map alpha for parallax.

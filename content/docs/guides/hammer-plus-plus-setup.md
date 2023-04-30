@@ -23,8 +23,8 @@ Momentum Mod is not officially supported by Hammer++, but can be made compatible
 2. Run hammerplusplus.exe
 3. Copy the following configuration:
 
-![Hammer++ Game Configurations](/assets/images/hammer-plus-plus-setup/hammer_game_configurations.png)
-![Hammer++ Build Programs](/assets/images/hammer-plus-plus-setup/hammer_build_programs.png)
+![Hammer++ Game Configurations](/images/hammer-plus-plus-setup/hammer_game_configurations.png)
+![Hammer++ Build Programs](/images/hammer-plus-plus-setup/hammer_build_programs.png)
 
 ## Mounting Games
 

@@ -16,7 +16,7 @@ tags:
 
 # Zone Types
 
-![Zone Guide](/assets/images/guide_headers/guide_zone_colours.jpg)
+![Zone Guide](/images/guide_headers/guide_zone_colours.jpg)
 
 This page covers what zones you will see in Momentum.
 
@@ -31,11 +31,11 @@ The 4 zones you will see are **_start zones_** and **_end zones_**, which usuall
 **_Stage zones_** are <span style="color:blue">blue</span> and for staged maps, marking the start of a stage.
 They will create a split on the timer and can be reset to instead of the beginning of the map.
 
-![Stage Timer](/assets/images/zone_type_guide/stage_timer.png)
+![Stage Timer](/images/zone_type_guide/stage_timer.png)
 
 **_Checkpoint zones_** are <span style="color:yellow">yellow</span> and can be placed anywhere as they don't mark the beginning of a stage, they only split the timer in a similar manner to a stage zone.
 
-![Checkpoint Timer](/assets/images/zone_type_guide/checkpoint_timer.png)
+![Checkpoint Timer](/images/zone_type_guide/checkpoint_timer.png)
 
 ## Changing Zone Colors
 
