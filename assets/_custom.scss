@@ -1,0 +1,155 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 100rem;
+}
+
+.book-page {
+  min-width: $body-min-width;
+  height: 100%;
+  flex-grow: 1;
+  padding: 2rem 1rem;
+
+  h1 {
+    font-size: 3rem;
+    font-family: "Bebas Neue", Roboto, sans-serif;
+
+    &::after {
+      content: " ";
+      display: block;
+      margin-top: 12px;
+      height: 1px;
+      background-color: var(--gray-200);
+    }
+  }
+}
+
+.book-brand {
+  width: 100%;
+  a {
+    justify-content: center;
+  }
+  img {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  span {
+    font-size: 1.75rem;
+    width: 10rem;
+    margin-top: 4px;
+    font-family: "Bebas Neue";
+  }
+}
+
+.book-menu {
+  font-size: $font-size-14;
+
+  .book-menu-content {
+    margin: 2rem 0;
+    padding: 0 $padding-16;
+    border-right: 1px solid var(--gray-200);
+    width: $menu-width;
+
+    input.toggle + label::after {
+      content: "";
+    }
+
+    li {
+      margin: 0.5rem 0.1rem;
+    }
+
+    > ul > :has(a) {
+      margin: 0;
+    }
+
+    nav > ul > li {
+      padding: 0.75rem;
+      margin: 4px 0;
+      border-radius: $border-radius;
+
+      transition-property: background-color;
+      transition-duration: 0.1s;
+      transition-timing-function: ease-in;
+
+      // Selector hell I know, just capturing the case where a list contains a
+      // sub-list, helps to break stuff up a bit.
+      ul > li:has(ul) {
+        margin: 16px 0;
+      }
+
+      &:has(input):hover,
+      &:has(input.toggle:checked) {
+        background-color: var(--gray-100);
+      }
+
+      input.toggle:checked + label {
+        margin-bottom: 8px;
+      }
+
+      &:has(> a) {
+        margin-top: 16px;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      > label > a {
+        font-size: 1rem;
+        font-weight: 500;
+        word-wrap: break-word;
+
+        &::after {
+          content: "";
+        }
+      }
+
+      ul {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+}
+
+.book-toc {
+  .book-toc-content {
+    margin: 2rem 0;
+
+    a {
+      font-size: 0.8rem;
+    }
+  }
+
+  nav > ul > li:first-child {
+    margin-top: 0;
+  }
+}
+
+blockquote {
+  padding-left: 16px !important;
+  background-color: var(--gray-100);
+}
+
+// Scrollbars
+
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.book-menu {
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 1px;
+  }
+
+  :hover::-webkit-scrollbar-thumb {
+    margin: 16px 0;
+    background: var(--gray-500);
+  }
+}
