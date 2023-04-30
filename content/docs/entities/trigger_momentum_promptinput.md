@@ -11,8 +11,6 @@ tags:
 
 # trigger_momentum_promptinput
 
----
-
 Trigger that prompts the player to press up to three keys inside it's volume.
 
 ## Keyvalues

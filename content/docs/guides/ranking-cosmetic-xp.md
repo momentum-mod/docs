@@ -11,7 +11,7 @@ tags:
 
 # Ranking Points & Cosmetic XP
 
-# Ranked-Points System
+## Ranked-Points System
 
 **The points you earn from your time on a map is the sum of the points awarded from each of these 3 systems described below: WR/top10 points + formula points + group points.**
 
@@ -19,14 +19,15 @@ tags:
 The systems described here are complete; we are in agreement that this is what the Ranked-Points should look like. The values chosen for percentiles, WR points, etc. are still up for debate; however, these should be simple to change later, should we decide to change them, because of the design of the system. For now, we consider the values to be informed-guess placeholders.
 
 {{< /hint >}}
-> There are no �base completion points�; the formula system somewhat accounts for this, but we�ve determined that it is not worth having a system of its own
+
+> There are no 'base completion points'; the formula system somewhat accounts for this, but we've determined that it is not worth having a system of its own
 
 <sub>Aside -- Motivation;</sub>
 
-<sub>Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain �percentile� blocks. The formula system awards points simply according to a formula with a single parameter -- the player�s rank.
+<sub>Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain 'percentile' blocks. The formula system awards points simply according to a formula with a single parameter -- the player's rank.
 The group system should award more points than the formula system; it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.</sub>
 
-## WRs and Top10s system
+### WRs and Top10s system
 
 WRs award a fixed number of points for all maps. For now, we set this to be 3,000 points.
 Ranks 2-10 award some percentage of the WR points.
@@ -44,7 +45,7 @@ Rank 9 = 1365 points = 45.5% of WR
 Rank 10 = 1290 points = 43% of WR
 ```
 
-## Formula system
+### Formula system
 
 Points awarded is some equation of the form `A / (rank + B)`, where `A` is a scaling constant, and `B` is a smoothing constant.\
 We choose `A` = 50000, `B` = 49.\
@@ -60,12 +61,12 @@ y axis designates points awarded
 Player sets a time of rank 468 on a map with 1333 completions.<br>
 Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)</sub>
 
-## (New) Group System
+### (New) Group System
 
-(based on @Joe�s & Jux�s comments about minimum group sizes)\
+(based on @Joe's & Jux's comments about minimum group sizes)\
 (plus lots of help from Jux and Aux)
 
-4 groups, loosely �percentile�-based (in fact, a function of #completions, but not as simple as a percentage). Instead of calculating group boundaries directly from percentiles, we calculate group _sizes_ based on a simple maximizing function --
+4 groups, loosely 'percentile'-based (in fact, a function of #completions, but not as simple as a percentage). Instead of calculating group boundaries directly from percentiles, we calculate group _sizes_ based on a simple maximizing function --
 
 Group size = `max(A(x), minSize)`
 
@@ -123,12 +124,12 @@ Group 2 = 390 points = 13% of WR
 Group 1 = 600 points = 20% of WR
 ```
 
-# Cosmetic XP
+## Cosmetic XP
 
 > For more advanced info about cosmetics\
 > Make a copy of [The spreadsheet](https://docs.google.com/spreadsheets/d/1JiHJYsxlGPXAZqCPh7-paJI6U_TH-Ro0H0OWDFCiA74)
 
-## 0 - 50
+### 0 - 50
 
 | Level | Exp in level | Total exp |
 | ----- | ------------ | --------- |
@@ -183,7 +184,7 @@ Group 1 = 600 points = 20% of WR
 | 049   | 265,000      | 5,555,000 |
 | 050   | 270,000      | 5,825,000 |
 
-## 50 - 100
+### 50 - 100
 
 {{< hint info >}}
 | Type | Amount | Percentage |
@@ -245,7 +246,7 @@ Group 1 = 600 points = 20% of WR
 | 099   | 1,010,000    | 37,005,000 |
 | 100   | 1,020,000    | 38,025,000 |
 
-## 100 - 150
+### 100 - 150
 
 {{< hint info >}}
 | Type | Amount | Percentage |
@@ -307,7 +308,7 @@ Group 1 = 600 points = 20% of WR
 | 149   | 2,020,000    | 124,505,000 |
 | 150   | 2,020,000    | 126,525,000 |
 
-## 150 - 200
+### 150 - 200
 
 {{< hint info >}}
 | Type | Amount | Percentage |

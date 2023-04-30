@@ -9,8 +9,6 @@ tags:
 
 # filter_momentum_track_number
 
----
-
 Filter a player based on if their track number is the one defined here. -1 defaults to true.
 
 ## Keyvalues

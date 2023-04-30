@@ -10,8 +10,6 @@ tags:
 
 # momentum_generic_bomb
 
----
-
 Generic Bomb
 
 ## Keyvalues

@@ -9,8 +9,6 @@ tags:
 
 # env_surface_teleport
 
----
-
 An entity that teleports the player when they stand on a specified material surface.
 
 ## Keyvalues

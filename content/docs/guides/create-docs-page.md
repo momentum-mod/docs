@@ -94,6 +94,7 @@ This one is blue
 {{< hint warning >}}
 Yellow notice
 ```
+
 {{< /hint >}}
 
 {{< hint danger >}}
@@ -108,6 +109,7 @@ This one is blue
 Yellow notice
 
 {{< /hint >}}
+
 ## Requiring `-mapping`
 
 If a command or convar requires `-mapping` to work, you may specify it as such in the front matter:

@@ -52,6 +52,7 @@ game        "csgo/momentum_content"
 **Warning:** If Hammer++ crashes on startup, you may have to delete the particles folders that were extracted from the .vpk files.
 
 {{< /hint >}}
+
 ## Lights.rad Setup
 
 In order to support light emitting textures from Portal 2, copy the contents from `Portal 2\portal2\lights.rad` and paste them into `Counter-Strike Global Offensive\csgo\lights.rad`

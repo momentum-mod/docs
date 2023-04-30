@@ -9,8 +9,6 @@ tags:
 
 # trigger_momentum_push
 
----
-
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that modifies the velocity of players that touch it.
 This allows mappers to change how and when the velocity is applied, providing more customization than the normal `trigger_push`.
 

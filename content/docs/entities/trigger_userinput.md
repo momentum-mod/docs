@@ -11,8 +11,6 @@ tags:
 
 # trigger_userinput
 
----
-
 Trigger that fires on user KeyPress if inside trigger.
 
 ## Keyvalues

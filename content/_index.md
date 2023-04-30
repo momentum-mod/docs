@@ -3,39 +3,36 @@ title: Introduction
 type: docs
 ---
 
-# Acerbo datus maxime
+![](images/logo.png)
 
-{{< columns >}}
+> A documentation website for Momentum Mod, running on [Hugo](https://gohugo.io/) and using the [Hugo Book](https://github.com/alex-shpak/hugo-book) theme.
 
-## Astris ipse furtiva
+All documentation is kept up with the game's development branch not our current release version on Steam.
 
-Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
-olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
-modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
+## What This Is
 
-<--->
+This repo is an open source collection of documentation for various aspects of the game Momentum Mod. This includes (but is not exactly limited to):
 
-## Suis quot vota
+- Documenting Momentum's console commands
+- Documenting Momentum's console variables
+- Documenting Momentum's custom entities
+- Guides for using Momentum Mod or related tools (zone tools, custom entities, etc)
+- Guides for mapping (**related to Momentum and/or its gametypes**)
 
-Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
-miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
-nunc! Fragosis suae dextra geruntur functus vulgata.
-{{< /columns >}}
+## What This Isn't
 
-## Tempora nisi nunc
+This repo and website should pertain to being **only** about the game Momentum Mod and its related gametypes (Surf, Bhop, RJ, KZ, etc).
 
-Lorem **markdownum** emicat gestu. Cannis sol pressit ducta. **Est** Idaei,
-tremens ausim se tutaeque, illi ulnis hausit, sed, lumina cutem. Quae avis
-sequens!
+This means we do **NOT** want:
 
-    var panel = ram_design;
-    if (backup + system) {
-        file.readPoint = network_native;
-        sidebar_engine_device(cell_tftp_raster,
-                dual_login_paper.adf_vci.application_reader_design(
-                graphicsNvramCdma, lpi_footer_snmp, integer_model));
-    }
+- General guides about Hammer (this isn't [TopHattWaffle](https://www.youtube.com/user/rocketrascal34) / [Valve Dev Wiki](https://developer.valvesoftware.com/wiki/Category:Level_Design))
+- Off-topic articles (this isn't [Medium](https://medium.com/))
+- Map-specific articles (this isn't [a wikia](https://www.fandom.com/))
 
-## Locis suis novi cum suoque decidit eadem
+This may change in the future, but for now, keep it about Momentum.
 
-Idmoniae ripis, at aves, ali missa adest, ut _et autem_, et ab?
+## Contributing
+
+Pull Requests are highly appreciated! Just branch off of master, make your edits, and open a Pull Request into master describing what you changed. Pages could be edited directly through GitHub, or you can download your fork and edit through a program like [Visual Studio Code](https://code.visualstudio.com/).
+
+If you need a guide for how to contribute, one can be found on the [how-to page](https://docs.momentum-mod.org/guide/create-docs-page/) on the documentation site. Another good resource is to simply look at existing posts, or past commits for reference. Furthermore, another good reference could be asking around in the [Momentum Mod Discord server](https://discord.gg/momentummod).

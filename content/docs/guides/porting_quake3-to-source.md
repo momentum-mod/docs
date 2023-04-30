@@ -34,13 +34,13 @@ First, extract the .bsp of the map you want to decompile from the pk3, and place
 
 Next, create a .bat file in the same folder as the Q3Map2.exe containing the following;
 
-`�[PATH TO q3map2.exe]" -game q3a -convert -format map [NAME OF THE BSP].bsp`
+`'[PATH TO q3map2.exe]" -game q3a -convert -format map [NAME OF THE BSP].bsp`
 
 Running the .bat file should output the decompiled .map file into the same folder.
 
 ## Preparing the level for Hammer
 
-Once you have the .map file, open it in Radiant and check that the geometry of the map isn�t too large. It has to be able to fit into the Valve Hammer Editor grid, which has a maximum size of 32768^3 units. Also make sure the map geometry is as centered as you can get it on the x y z axes.
+Once you have the .map file, open it in Radiant and check that the geometry of the map isn't too large. It has to be able to fit into the Valve Hammer Editor grid, which has a maximum size of 32768^3 units. Also make sure the map geometry is as centered as you can get it on the x y z axes.
 
 ![MAP IN RADIANT WITH MEASUREMENTS](/images/quake3_to_source_guide/MAP_IN_RADIANT_WITH_MEASUREMENTS.png)
 
@@ -64,13 +64,13 @@ Now click File > Open, and open the .map file you are converting. Once it has lo
 
 Load Hammer and open the VMF. You may get an invalid solids warning the first time you load the map, this will tell you how many brushes have been broken during conversion. Hopefully this number is in the single digits.
 
-If the map doesn�t fit within the grid bounds, you have done one of the steps incorrectly in the �[Preparing the level for Hammer](/guide/porting-quake3-maps-to-source/#preparing-the-level-for-hammer)� section and will have to go back and repeat the whole process from there.
+If the map doesn't fit within the grid bounds, you have done one of the steps incorrectly in the '[Preparing the level for Hammer](/guide/porting-quake3-maps-to-source/#preparing-the-level-for-hammer)' section and will have to go back and repeat the whole process from there.
 
 If the geometry fits into the grid, you can close Hammer for now.
 
 ## Converting textures
 
-Now you need to convert the textures to work in source. If the map uses custom textures, they will be included in the pk3 of the map. If the map uses Quake 3 textures, you will need to find them in Quake 3�s pak0.pk3 file, or replace them with different textures (with the map creators permission).
+Now you need to convert the textures to work in source. If the map uses custom textures, they will be included in the pk3 of the map. If the map uses Quake 3 textures, you will need to find them in Quake 3's pak0.pk3 file, or replace them with different textures (with the map creators permission).
 
 Open the pk3 file and find the textures folder. Inside the textures folder will be some more sub folders. Copy all of these sub folders into the Materials folder of the game you are using Hammer for. It is important that you keep the folder structures the same when converting, or Hammer will not be able to identify where the textures are.
 
@@ -80,7 +80,7 @@ Open [VMT-Editor](https://gira-x.github.io/VMT-Editor/) and click Tools > Conver
 
 Once all of the textures are converted, now you need to create the VMTs. Click Tools > Batch VMT and select all of the VTFs you have just created. You do not have to do this one folder at a time, you can select all of them. Once all of the textures are selected, press Batch.
 
-And you�re done! Reopen Hammer and load up the map. You should see working textures in the 3D view.
+And you're done! Reopen Hammer and load up the map. You should see working textures in the 3D view.
 
 There will most likely still be some missing textures, but these will be tool textures that Source has an equivalent version of that you should replace them with. For a full list of Source tool textures and their uses read here: [https://developer.valvesoftware.com/wiki/Tool_textures](https://developer.valvesoftware.com/wiki/Tool_textures)
 
@@ -100,6 +100,6 @@ Launch pads should be replaced with a [trigger_catapult](/entity/trigger_catapul
 
 ## Final polish
 
-Now it�s time to put the final polish on the map. Fix up any broken geometry (although there might not be any if the map is simple enough), add some lighting and align any textures that may have become misaligned. You also might have to func_detail some of the brushes if there are a lot of small details, in order to cut down compile times.
+Now it's time to put the final polish on the map. Fix up any broken geometry (although there might not be any if the map is simple enough), add some lighting and align any textures that may have become misaligned. You also might have to func_detail some of the brushes if there are a lot of small details, in order to cut down compile times.
 
 You can now compile the map!
