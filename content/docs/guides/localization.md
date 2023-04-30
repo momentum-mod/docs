@@ -23,7 +23,7 @@ It's recommended that you go [into POEditor Account settings](https://poeditor.c
 
 Keep an eye out for "Fuzzy" terms first and foremost, these are terms that have been updated on the English side and potentially need retranslation!
 
-![](/assets/images/localization/loc-fuzzy-terms.jpg)
+![](/images/localization/loc-fuzzy-terms.jpg)
 
 You may use comments on the individual terms to discuss clarification, or better yet, the individual language forums inside of [our Localization channel on Discord](https://discord.com/channels/235111289435717633/1019822630204870747).
 
@@ -35,7 +35,7 @@ Are you really passionate about the language you help out with? Want some extra 
 
 We're looking for specific individuals that can act as the "lead" for specific languages. These individuals will become proofreaders, and given the power to mark terms as "proofread" once the translation is deemed good enough to their quality standards.
 
-![](/assets/images/localization/loc-proofread-toggle.jpg)
+![](/images/localization/loc-proofread-toggle.jpg)
 
 Similarly, we're expecting proofreaders to be testing the strings for their language (see below) to ensure the game is looking good. The Momentum Mod team will work closely with proofreaders to ensure every bit of User Interface can accommodate languages.
 
@@ -45,7 +45,7 @@ Every push to Steam that the team does will update the terms to the latest avail
 
 Inside of your `Momentum Mod Playtest/momentum/resource/` folder will be a ton of text files labeled `momentum_<language>.txt`. These are the localization files that Momentum Mod uses to apply the translations to the User Interface in the game.
 
-![](/assets/images/localization/loc-local-files.jpg)
+![](/images/localization/loc-local-files.jpg)
 
 You can open the `momentum_<language>.txt` of choice and make edits inside of this file. If you want to see what a token looks like with a different value, search for the text as it appears in the game, edit the value, save the file, and reload Momentum Mod.
 
@@ -65,11 +65,11 @@ Adding terms is quick and easy through the POEditor page.
 
 At [the Project dashboard](https://poeditor.com/projects/view?id=156379), click the "Terms" tab and at the bottom of the page, the "Add Term" button.
 
-![](/assets/images/localization/loc-add-terms.jpg)
+![](/images/localization/loc-add-terms.jpg)
 
 Add the new term referenced in the code, and any context if you'd like to help explain how the term is being used.
 
-![](/assets/images/localization/loc-new-term.jpg)
+![](/images/localization/loc-new-term.jpg)
 
 After the term is added, head to the English section, and give it the proper English value for it.
 
@@ -94,7 +94,7 @@ Create a JSON file in the below format, where terms are the token names (**witho
 
 Then, go to the Import page on the POEditor dashboard, upload that JSON file, and set "Also import translations to a language" to English, as below.
 
-![](/assets/images/localization/loc-bulk-add-terms.jpg)
+![](/images/localization/loc-bulk-add-terms.jpg)
 
 ### Changing Term Values
 

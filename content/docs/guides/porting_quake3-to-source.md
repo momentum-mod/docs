@@ -42,11 +42,11 @@ Running the .bat file should output the decompiled .map file into the same folde
 
 Once you have the .map file, open it in Radiant and check that the geometry of the map isn�t too large. It has to be able to fit into the Valve Hammer Editor grid, which has a maximum size of 32768^3 units. Also make sure the map geometry is as centered as you can get it on the x y z axes.
 
-![MAP IN RADIANT WITH MEASUREMENTS](/assets/images/quake3_to_source_guide/MAP_IN_RADIANT_WITH_MEASUREMENTS.png)
+![MAP IN RADIANT WITH MEASUREMENTS](/images/quake3_to_source_guide/MAP_IN_RADIANT_WITH_MEASUREMENTS.png)
 
 If the map is too large - like in this example - you will need to split it into smaller segments, and stitch them together with seamless world portals afterwards in Hammer.
 
-![MAP CUT IN HALF AND REARRANGED](/assets/images/quake3_to_source_guide/MAP_CUT_IN_HALF_AND_REARRANGED.png)
+![MAP CUT IN HALF AND REARRANGED](/images/quake3_to_source_guide/MAP_CUT_IN_HALF_AND_REARRANGED.png)
 
 Next, delete all patches and models if there are any as these will not work in Hammer. You can use the filters in Radiant under View > Filter to find them.
 
@@ -58,7 +58,7 @@ Download [https://jack.hlfx.ru/en/download.html](https://jack.hlfx.ru/en/downloa
 
 Once it is installed, open J.A.C.K. and click Tools > Options, or press F2 to bring up the settings. In the Game Profiles tab, make sure that the map type is set to Quake III before trying to open the .map file, otherwise the map may fail to load.
 
-![SETTINGS PANEL](/assets/images/quake3_to_source_guide/SETTINGS_PANEL.png)
+![SETTINGS PANEL](/images/quake3_to_source_guide/SETTINGS_PANEL.png)
 
 Now click File > Open, and open the .map file you are converting. Once it has loaded, change the map type again to Half-Life/TFC and click File > Save As, and make sure the file type is set to Half-Life VMF. You should now have a VMF version that works in Hammer.
 

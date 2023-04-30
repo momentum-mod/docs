@@ -13,7 +13,7 @@ tool_texture: trigger_stop
 
 ---
 
-![Stop tool texture](/assets/images/trigger_momentum_timer_stop/stop.jpg)
+![Stop tool texture](/images/trigger_momentum_timer_stop/stop.jpg)
 
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that ends the map or bonus upon entering it.
 

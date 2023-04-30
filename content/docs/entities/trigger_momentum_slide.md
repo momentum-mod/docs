@@ -12,7 +12,7 @@ tool_texture: trigger_slide
 
 ---
 
-![Slide trigger texture](/assets/images/trigger_momentum_slide/slides.jpg)
+![Slide trigger texture](/images/trigger_momentum_slide/slides.jpg)
 
 **NOTE: Depreciated, use [`func_slide`](/entity/func_slide) instead.**
 

@@ -10,7 +10,7 @@ tags:
 
 # Advanced Zoning
 
-![Advanced Zone Guide](/assets/images/guide_headers/guide_advanced_zoning.jpg)
+![Advanced Zone Guide](/images/guide_headers/guide_advanced_zoning.jpg)
 
 This Guide will cover most other things regarding the Zoning Tools, as well as more advanced uses.
 
@@ -48,23 +48,23 @@ If you want a more interesting Zone shape, the "Point-based Zone Construction" o
 
 Whilst checked, when you begin to draw out a Zone, things will look different:
 
-![Drawing out a line](/assets/images/zone_guide/adv_point_2.png)
+![Drawing out a line](/images/zone_guide/adv_point_2.png)
 
 You will begin to draw out a line instead of a rectangle. Click again and it will become a triangle when you move the mouse again:
 
-![Now it is a triangle](/assets/images/zone_guide/adv_point_3.png)
+![Now it is a triangle](/images/zone_guide/adv_point_3.png)
 
 And as mentioned before you can have concave shapes like so:
 
-![Concave shape](/assets/images/zone_guide/adv_point_4.png)
+![Concave shape](/images/zone_guide/adv_point_4.png)
 
 Once you have made the shape you want, you have to use the **Enter** key to move on to extruding it upwards as clicking will only continue to make more lines.
 
-![Vertical extrusion](/assets/images/zone_guide/adv_point_5.jpg)
+![Vertical extrusion](/images/zone_guide/adv_point_5.jpg)
 
 Once the height is where you want it, press **Enter** again.
 
-![Zone done](/assets/images/zone_guide/adv_point_6.jpg)
+![Zone done](/images/zone_guide/adv_point_6.jpg)
 
 The Zone will change colour and be finalised.
 

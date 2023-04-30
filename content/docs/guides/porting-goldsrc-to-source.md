@@ -99,7 +99,7 @@ The pros and cons of this decompiler are as follows:
 - Has a GUI
 - Rarely if ever crashes when attempting to decompile
 - Decompiles are almost always thousands of brushes over Hammer's limit
-- Prone to generating [spaghetti](/assets/images/goldsrc_to_source_guide/hammer_spaghetti.png)
+- Prone to generating [spaghetti](/images/goldsrc_to_source_guide/hammer_spaghetti.png)
 - Limited decompile customization options
 - Does not automatically extract embedded textures
 
@@ -113,7 +113,7 @@ The pros and cons of this decompiler are as follows:
 - Has not been updated since the early 2000s
 - Command line only, no GUI
 - Does not typically crash when decompiling
-- Prone to generating [spaghetti](/assets/images/goldsrc_to_source_guide/hammer_spaghetti.png)
+- Prone to generating [spaghetti](/images/goldsrc_to_source_guide/hammer_spaghetti.png)
 - Limited decompile customization options
 - Can extract embedded textures
 
@@ -133,7 +133,7 @@ Download VTFEdit here: https://github.com/NeilJed/VTFLib
 
 With VTFEdit installed, navigate to Tools -> Convert WAD File. Select a .wad to be converted and a relevant folder for the output. Make sure "Create VMT Files" is checked as creating them manually can get quite tedious. The .vmt files generated will not preserve any of the properties of the original textures in the WAD. In other words a glass texture will not be transparent without designating it as such manually in the .vmt file.
 
-![vtfedit_convert_wad](/assets/images/goldsrc_to_source_guide/vtfedit_convert_wad.png)
+![vtfedit_convert_wad](/images/goldsrc_to_source_guide/vtfedit_convert_wad.png)
 
 Occasionally VTFEdit will stall on certain textures in a WAD preventing the conversion from finishing. If this happens the WAD must be edited to remove the offending texture. This can be done with SLADE.
 
@@ -151,7 +151,7 @@ The resulting folders should be placed in the materials folder of the game you a
 
 Download [Trenchbroom](https://github.com/TrenchBroom/TrenchBroom/releases) set it up for Half-Life(experimental). Open the map with J.A.C.K (see below) remove and then fix the invalid brushes. You will need to do it in J.A.C.K and not Hammer. Then, open the .map and go around combining mutiple brushes that would be one single brush by control-clicking them all, and press control+j (convex merge). This will take a long time if it's a large and complex map.
 
-![MERGING BRUSHES](/assets/images/goldsrc_to_source_guide/TRENCHBROOM_MERGE.png)
+![MERGING BRUSHES](/images/goldsrc_to_source_guide/TRENCHBROOM_MERGE.png)
 
 ## Converting .map to .vmf
 
@@ -159,13 +159,13 @@ Download [J.A.C.K](https://jack.hlfx.ru/en/download.html) and install it. You do
 
 Once it is installed, open J.A.C.K. and click Tools > Options, or press F2 to bring up the settings. In the Game Profiles tab, make sure that the map type is set to Half-Life / TFC before trying to open the .map file, otherwise the map may fail to load.
 
-![SETTINGS PANEL](/assets/images/goldsrc_to_source_guide/SETTINGS_PANEL.png)
+![SETTINGS PANEL](/images/goldsrc_to_source_guide/SETTINGS_PANEL.png)
 
 Now click File > Open, and open the .map file you are converting. Once it has loaded, there will likely be invalid solids that stretch to infinity. Delete these now, you'll need to remake them later. Click File > Save As... and save as a "Half-Life VMF".
 
 Before you open this VMF in Hammer however, there's one more thing we should do. Download a tool called [GoldSrc2Source](https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer). Click Find VMF and navigate the VMF file you just saved in J.A.C.K. Select it and click repair, it's best to have all parameters marked in GoldSrc2Source in the vast majority of cases.
 
-![GOLDSRC2SOURCE PARAMETERS](/assets/images/goldsrc_to_source_guide/GLDSRC_2_SRC_PARAMETERS.png)
+![GOLDSRC2SOURCE PARAMETERS](/images/goldsrc_to_source_guide/GLDSRC_2_SRC_PARAMETERS.png)
 
 Finally, load Hammer and open the VMF! There will likely be a few missing textures through the map, but these will be tool textures. Find them and replace them to their [Source equivalent](https://developer.valvesoftware.com/wiki/Tool_texture).
 

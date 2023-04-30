@@ -11,7 +11,7 @@ tags:
 
 # Custom HUD Menus
 
-![Hud Menu](/assets/images/custom-hud-menus_guide/custom-hud-menus-header.png)
+![Hud Menu](/images/custom-hud-menus_guide/custom-hud-menus-header.png)
 
 This guide covers how to make a custom hud menu, such as the saveloc or ruler menus.
 
