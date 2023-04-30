@@ -8,20 +8,21 @@ All documentation is kept up with the game's development branch not our current 
 
 This repo is an open source collection of documentation for various aspects of the game Momentum Mod. This includes (but is not exactly limited to):
 
- * Documenting Momentum's console commands
- * Documenting Momentum's console variables
- * Documenting Momentum's custom entities
- * Guides for using Momentum Mod or related tools (zone tools, custom entities, etc)
- * Guides for mapping (**related to Momentum and/or its gametypes**)
+- Documenting Momentum's console commands
+- Documenting Momentum's console variables
+- Documenting Momentum's custom entities
+- Guides for using Momentum Mod or related tools (zone tools, custom entities, etc)
+- Guides for mapping (**related to Momentum and/or its gametypes**)
 
 ## What This Isn't
 
 This repo and website should pertain to being **only** about the game Momentum Mod and its related gametypes (Surf, Bhop, RJ, KZ, etc).
 
 This means we do **NOT** want:
- * General guides about Hammer (this isn't [TopHattWaffle](https://www.youtube.com/user/rocketrascal34) / [Valve Dev Wiki](https://developer.valvesoftware.com/wiki/Category:Level_Design))
- * Off-topic articles (this isn't [Medium](https://medium.com/))
- * Map-specific articles (this isn't [a wikia](https://www.fandom.com/))
+
+- General guides about Hammer (this isn't [TopHattWaffle](https://www.youtube.com/user/rocketrascal34) / [Valve Dev Wiki](https://developer.valvesoftware.com/wiki/Category:Level_Design))
+- Off-topic articles (this isn't [Medium](https://medium.com/))
+- Map-specific articles (this isn't [a wikia](https://www.fandom.com/))
 
 This may change in the future, but for now, keep it about Momentum.
 
