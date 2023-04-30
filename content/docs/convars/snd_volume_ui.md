@@ -1,13 +1,16 @@
 ---
 title: snd_volume_ui
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - sound
   - volume
   - ui
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# snd_volume_ui
 
 Set the volume for sounds located in the `momentum/sound/ui/` directory.

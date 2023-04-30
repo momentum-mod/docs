@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_accel
-category: var
+categories:
+  - var
+default_value: 4.25
 tags:
   - parkour
   - movement
   - player
-default_value: 4.25
 ---
+
+# sv_wallrun_accel
 
 Changes the wallrun acceleration.

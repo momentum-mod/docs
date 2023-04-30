@@ -1,11 +1,14 @@
 ---
 title: mom_replay_selection
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 2
+minimum_value: 0
 tags:
   - replay
-minimum_value: 0
-maximum_value: 2
-default_value: 0
 ---
+
+# mom_replay_selection
 
 Going forward or backward in the ReplayUI. Pause = `0`, Backwards = `1`, Forwards =`2`.

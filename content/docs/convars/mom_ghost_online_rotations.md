@@ -1,12 +1,15 @@
 ---
 title: mom_ghost_online_rotations
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - ghost
   - online
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mom_ghost_online_rotations
 
 Toggles wonky rotations of ghosts.

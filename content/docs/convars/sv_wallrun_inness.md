@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_inness
-category: var
+categories:
+  - var
+default_value: 360
 tags:
   - parkour
   - movement
   - player
-default_value: 360
 ---
+
+# sv_wallrun_inness
 
 Changes the scaling factor for how much to steer inward toward the wall when wallrunning.

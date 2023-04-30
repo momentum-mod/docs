@@ -1,9 +1,12 @@
 ---
 title: mom_replay_goto_end
-category: command
+categories:
+  - command
 tags:
   - replay
   - ghost
 ---
+
+# mom_replay_goto_end
 
 Goes to the end of the currently spectated replay.

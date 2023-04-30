@@ -1,21 +1,16 @@
 ---
-title: "Gamemode Guide: Tricksurf"
-
+categories:
+  - guide
 permalink: /guide/gamemode-tricksurf/
-
-category: guide
-
 tags:
   - gamemode
   - info
   - surf
   - tricksurf
   - tsurf
-
-toc: true
-
-toc_sticky: true
 ---
+
+# Gamemode Guide: Tricksurf
 
 ## What is Tricksurf?
 
@@ -23,7 +18,7 @@ A spinoff mode formed from the Surf game mode, players can create and complete s
 
 ## History of Tricksurf
 
-It all started on 
+It all started on
 https://zskyworld.com/
 
 And then died, RIP.

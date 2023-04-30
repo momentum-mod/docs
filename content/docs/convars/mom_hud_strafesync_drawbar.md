@@ -1,12 +1,15 @@
 ---
 title: mom_hud_strafesync_drawbar
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
   - strafe sync
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_strafesync_drawbar
 
 Toggles displaying the visual strafe sync bar.

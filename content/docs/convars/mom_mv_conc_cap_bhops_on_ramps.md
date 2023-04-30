@@ -1,14 +1,17 @@
 ---
 title: mom_mv_conc_cap_bhops_on_ramps
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
+requires_mapping: true
 tags:
   - player
   - movement
   - conc
-requires_mapping: true
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mom_mv_conc_cap_bhops_on_ramps
 
 If bhop capping is enabled, this caps jump speed on ramps as well. 1 = ON, 0 = OFF.

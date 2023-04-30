@@ -1,8 +1,11 @@
 ---
 title: mom_timer_stop
-category: command
+categories:
+  - command
 tags:
   - timer
 ---
+
+# mom_timer_stop
 
 Stops the timer if it is currently running.

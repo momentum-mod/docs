@@ -1,23 +1,19 @@
 ---
-title: "Gamemode Guide: Bhop"
-
+categories:
+  - guide
 permalink: /guide/gamemode-bhop/
-
-category: guide
-
 tags:
   - gamemode
   - info
   - bhop
   - bunnyhop
-
-toc: true
-toc_sticky: true
 ---
+
+# Gamemode Guide: Bhop
 
 ## What is Bhop?
 
-Bhop, short for "***B***unny ***Hop***", is a very popular gamemode found in many games, such as CS:GO, TF2, and others.
+Bhop, short for "**_B_**unny **_Hop_**", is a very popular gamemode found in many games, such as CS:GO, TF2, and others.
 
 ## History of Bhop
 

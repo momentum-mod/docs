@@ -1,13 +1,16 @@
 ---
 title: mom_restart
-category: command
-tags:
-  - timer
-  - teleport
+categories:
+  - command
 optional_params:
   - Track number
 safeguard: mom_run_safeguard_restart
+tags:
+  - timer
+  - teleport
 ---
+
+# mom_restart
 
 Restarts the player to the start of the current track; the player is teleported to their start mark if they have one, otherwise they are teleported to the middle of the start zone.
 If there is no start zone, the player will be teleported to the spawn position.

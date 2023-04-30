@@ -1,8 +1,11 @@
 ---
 title: mom_saveloc_close
-category: command
+categories:
+  - command
 tags:
   - saveloc
 ---
+
+# mom_saveloc_close
 
 Closes the saveloc menu.

@@ -1,10 +1,13 @@
 ---
 title: mom_spectate_stop
-category: command
+categories:
+  - command
 tags:
   - spectate
   - online
   - lobby
 ---
+
+# mom_spectate_stop
 
 Stops spectating.

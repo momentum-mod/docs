@@ -1,11 +1,14 @@
 ---
 title: mom_hud_status_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_status_enable
 
 Toggles showing hud status, which displays information about which zone you are in, which saveloc was last loaded, whether you are in practice mode, etc.

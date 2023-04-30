@@ -1,16 +1,18 @@
 ---
 title: mat_error_texture_advanced
-category: var
+categories:
+  - var
+cvar_ref: mat_error_texture_advanced_basetexture
+default_value: 0
+maximum_value: 2
+minimum_value: 0
 tags:
   - error
   - texture
   - material
-minimum_value: 0
-maximum_value: 2
-default_value: 0
-
-cvar_ref: mat_error_texture_advanced_basetexture
 ---
+
+# mat_error_texture_advanced
 
 Whether to try and replace error textures with more meaningful ones for gameplay (see also [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }})).
 

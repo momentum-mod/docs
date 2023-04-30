@@ -1,14 +1,17 @@
 ---
 title: mat_error_texture_replace
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - error
   - texture
   - material
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mat_error_texture_replace
 
 Replace every non-translucent texture with error texture.
 

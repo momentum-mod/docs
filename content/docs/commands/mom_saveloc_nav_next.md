@@ -1,10 +1,13 @@
 ---
 title: mom_saveloc_nav_next
-category: command
+categories:
+  - command
+safeguard: mom_run_safeguard_saveloc_tele
 tags:
   - saveloc
   - teleport
-safeguard: mom_run_safeguard_saveloc_tele
 ---
+
+# mom_saveloc_nav_next
 
 Goes forwards through the saveloc list, while teleporting the player to each.

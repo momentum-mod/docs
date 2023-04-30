@@ -1,13 +1,16 @@
 ---
 title: mom_zone_crosshair
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
+requires_mapping: true
 tags:
   - zones
   - crosshair
-minimum_value: 0
-maximum_value: 1
-default_value: 1
-requires_mapping: true
 ---
+
+# mom_zone_crosshair
 
 Toggles the draw of the zoning crosshair/reticle.

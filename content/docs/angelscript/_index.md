@@ -1,6 +1,7 @@
 ---
-title: Angelscript (Chaos Hammer)
-weight: 100
-bookFlatSection: true
 bookCollapseSection: true
+bookFlatSection: true
+weight: 100
 ---
+
+# Angelscript (Chaos Hammer)

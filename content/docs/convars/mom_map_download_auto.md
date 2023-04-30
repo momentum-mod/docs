@@ -1,13 +1,16 @@
 ---
 title: mom_map_download_auto
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - map
   - download
   - online
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mom_map_download_auto
 
 If enabled, maps will automatically download when updated/added to the library.

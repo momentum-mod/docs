@@ -1,14 +1,17 @@
 ---
 title: mom_hud_conc_timer_countdown
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - conc
   - conc timer
   - weapon
   - hud
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mom_hud_conc_timer_countdown
 
 Toggles whether the countdown for the conc timer is shown.

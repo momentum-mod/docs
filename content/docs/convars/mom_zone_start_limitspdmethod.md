@@ -1,14 +1,17 @@
 ---
 title: mom_zone_start_limitspdmethod
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
+requires_mapping: true
 tags:
   - zones
   - trigger
   - start
-minimum_value: 0
-maximum_value: 1
-default_value: 1
-requires_mapping: true
 ---
+
+# mom_zone_start_limitspdmethod
 
 Changes the limit speed method used in the start zone. Take into account player z-velocity = `0`, Ignore z-velocity = `1`.

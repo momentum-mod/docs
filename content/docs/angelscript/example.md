@@ -1,15 +1,15 @@
 ---
-title: Chaos Hammer AngelScript Examples
-category: angelscript
+categories:
+  - angelscript
 tags:
   - api
   - reference
   - chaos
   - hammer
   - example
-toc: true
-toc_sticky: true
 ---
+
+# Chaos Hammer AngelScript Examples
 
 This page contains various Chaos Hammer AngelScript examples.
 
@@ -269,7 +269,7 @@ class ExampleWedge : ScriptSolid
     builder.Normal( vec3_origin );
     builder.TexCoord( 0, tc3 );
     builder.AdvanceVertex();
-    
+
     pos.x = origin[0] + width;
     pos.y = origin[1] + depth;
     pos.z = origin[2] - height;

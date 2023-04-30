@@ -1,12 +1,15 @@
 ---
 title: sv_df_airstrafeaccelerate
-category: var
+categories:
+  - var
+default_value: 6.7
+requires_mapping: true
 tags:
   - defrag
   - movement
   - player
-requires_mapping: true
-default_value: 6.7
 ---
+
+# sv_df_airstrafeaccelerate
 
 Defrag CPM airstrafe acceleration for A/D movement.

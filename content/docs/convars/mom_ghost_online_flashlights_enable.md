@@ -1,12 +1,15 @@
 ---
 title: mom_ghost_online_flashlights_enable
-category: var
+categories:
+  - var
+maximum_value: 1
+minimum_value: 0
 tags:
   - ghost
   - online
   - flashlight
-minimum_value: 0
-maximum_value: 1
 ---
+
+# mom_ghost_online_flashlights_enable
 
 Toggles drawing other ghosts' flashlights.

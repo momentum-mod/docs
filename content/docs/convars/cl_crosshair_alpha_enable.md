@@ -1,12 +1,15 @@
 ---
 title: cl_crosshair_alpha_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - crosshair
   - alpha
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# cl_crosshair_alpha_enable
 
 Toggles the crosshair transparency.

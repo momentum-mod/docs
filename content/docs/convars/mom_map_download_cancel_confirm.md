@@ -1,13 +1,16 @@
 ---
 title: mom_map_download_cancel_confirm
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - map
   - download
   - online
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_map_download_cancel_confirm
 
 If enabled, a confirmation box will pop up when cancelling downloads.

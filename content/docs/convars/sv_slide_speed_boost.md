@@ -1,11 +1,14 @@
 ---
 title: sv_slide_speed_boost
-category: var
+categories:
+  - var
+default_value: 75
 tags:
   - parkour
   - movement
   - player
-default_value: 75
 ---
+
+# sv_slide_speed_boost
 
 Changes the powerslide's speed boost.

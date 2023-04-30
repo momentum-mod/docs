@@ -1,9 +1,12 @@
 ---
 title: mom_zone_create
-category: command
+categories:
+  - command
+requires_mapping: true
 tags:
   - zones
-requires_mapping: true
 ---
+
+# mom_zone_create
 
 Creates the zone that you are done building.

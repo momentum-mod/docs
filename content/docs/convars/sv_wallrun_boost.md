@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_boost
-category: var
+categories:
+  - var
+default_value: 60
 tags:
   - parkour
   - movement
   - player
-default_value: 60
 ---
+
+# sv_wallrun_boost
 
 Changes the wallrun speed boost.

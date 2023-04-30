@@ -1,5 +1,4 @@
 ---
-title: Chaos Hammer AngelScript Enums
 categories:
   - angelscript
 tags:
@@ -7,9 +6,9 @@ tags:
   - reference
   - chaos
   - hammer
-toc: true
-toc_sticky: true
 ---
+
+# Chaos Hammer AngelScript Enums
 
 This page outlines the various Chaos Hammer AngelScript enums.
 

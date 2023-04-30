@@ -1,12 +1,15 @@
 ---
 title: mom_player_weapon_spawn_desirability
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 2
+minimum_value: 0
 tags:
   - weapon
-minimum_value: 0
-maximum_value: 2
-default_value: 1
 ---
+
+# mom_player_weapon_spawn_desirability
 
 {:.notice--info}
 This convar has no effect on weapon-focused gamemodes such as Rocket Jump, Sticky Jump, Conc, and Defrag, and cannot be changed while the timer is running.

@@ -1,12 +1,15 @@
 ---
 title: r_viewmodel_opacity
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0.01
 tags:
   - viewmodel
   - alpha
-minimum_value: 0.01
-maximum_value: 1
-default_value: 1
 ---
+
+# r_viewmodel_opacity
 
 Controls the opacity of viewmodels.

@@ -1,14 +1,17 @@
 ---
 title: mom_hud_conc_timer_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - conc
   - conc timer
   - weapon
   - hud
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_conc_timer_enable
 
 Toggles the conc timer.

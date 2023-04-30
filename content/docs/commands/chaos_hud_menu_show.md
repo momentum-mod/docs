@@ -1,16 +1,19 @@
 ---
 title: chaos_hud_menu_show
-category: command
+categories:
+  - command
+ccom_ref: chaos_hud_menu_reload
+guide_ref: custom-hud-menus
+required_params:
+  - Menu name (file name)
 tags:
   - hud
   - hud menu
   - saveloc
   - ruler
-required_params: 
-  - Menu name (file name)
-ccom_ref: chaos_hud_menu_reload
-guide_ref: custom-hud-menus
 ---
+
+# chaos_hud_menu_show
 
 Opens a hud menu. Accepts the hud menu itself.
 
@@ -21,11 +24,11 @@ To parse the filenames again, see [`{{ page.ccom_ref }}`](/command/{{ page.ccom_
 
 ## Usage Examples
 
->`chaos_hud_menu_show savelocmenu`
+> `chaos_hud_menu_show savelocmenu`
 
 Parses the `cfg/menu/savelocmenu.kv3` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 
->`chaos_hud_menu_show rulermenu`
+> `chaos_hud_menu_show rulermenu`
 
 Parses the `cfg/menu/rulermenu.kv3` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 

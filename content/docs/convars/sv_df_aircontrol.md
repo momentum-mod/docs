@@ -1,12 +1,15 @@
 ---
 title: sv_df_aircontrol
-category: var
+categories:
+  - var
+default_value: 135
+requires_mapping: true
 tags:
   - defrag
   - movement
   - player
-requires_mapping: true
-default_value: 135
 ---
+
+# sv_df_aircontrol
 
 Defrag CPM aircontrol multiplier.

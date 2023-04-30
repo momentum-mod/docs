@@ -1,17 +1,16 @@
 ---
-title: Localizing Momentum Mod
+categories:
+  - guide
 permalink: /guide/localization/
-category: guide
 tags:
   - localization
   - languages
   - poeditor
   - translate
   - translation
-
-toc: true
-toc_sticky: true
 ---
+
+# Localizing Momentum Mod
 
 As Momentum Mod aims to be a global platform for everyone around the world to enjoy, it only makes sense that we offer support for the various languages players may know. Unfortunately however, nobody on the Momentum Mod team knows every language, so we need your help!
 
@@ -82,14 +81,14 @@ Create a JSON file in the below format, where terms are the token names (**witho
 
 ```json
 [
-    {
-        "term": "",
-        "definition": ""
-    },
-    {
-        "term": "",
-        "definition": ""
-    }
+  {
+    "term": "",
+    "definition": ""
+  },
+  {
+    "term": "",
+    "definition": ""
+  }
 ]
 ```
 
@@ -112,12 +111,14 @@ This script requires [the latest version of Python 3](https://www.python.org/dow
 To run this script, open a terminal and set the following variables:
 
 On Windows (PowerShell):
+
 ```powershell
 $Env:POEDITOR_PROJECT_ID = "156379"
 $Env:POEDITOR_API_KEY = "(your read-only API key)"
 ```
 
 On Linux:
+
 ```sh
 export POEDITOR_PROJECT_ID=156379
 export POEDITOR_API_KEY=<your read-only API key>
@@ -127,14 +128,17 @@ export POEDITOR_API_KEY=<your read-only API key>
 You may want to add these to your system variables so that you don't have to set them every time. On Windows this is via `Edit System Environment variables`, on Linux, via your `.bashrc` file.
 
 And then you can call the script:
+
 ```sh
 python ./get_poeditor_strings.py
 ```
 
 You may pass in a specific language code (see the `get_poeditor_strings.py` file for all of them) to get that specific language. For example:
+
 ```sh
 python ./get_poeditor_strings.py "en"
 ```
+
 would fetch and generate the `momentum_english.txt` localization file.
 
 If you get an error about the API key, reach out to Goc about getting Admin access to POEditor.

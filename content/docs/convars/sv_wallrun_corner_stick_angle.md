@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_corner_stick_angle
-category: var
+categories:
+  - var
+default_value: 80
 tags:
   - parkour
   - movement
   - player
-default_value: 80
 ---
+
+# sv_wallrun_corner_stick_angle
 
 Changes the max angle of the wall normal to end a wallrun. Higher values allow the player to wallrun across sharper turns.

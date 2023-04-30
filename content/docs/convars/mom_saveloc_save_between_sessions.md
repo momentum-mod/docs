@@ -1,11 +1,14 @@
 ---
 title: mom_saveloc_save_between_sessions
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - saveloc
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_saveloc_save_between_sessions
 
 If enabled, savelocs will be saved between sessions of the same map.

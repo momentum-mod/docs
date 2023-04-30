@@ -1,11 +1,13 @@
 ---
-title: Modulate Shader
+categories:
+  - shader
 permalink: /shader/modulate-shader/
-category: shader
 tags:
   - modulate
   - shader
 ---
+
+# Modulate Shader
 
 {:.notice--warning}
 The `$hdrscale` parameter is only present in the `DX11` version of the shader

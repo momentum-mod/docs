@@ -1,6 +1,11 @@
 ---
 title: mom_zone_type
-category: var
+categories:
+  - var
+concommand_ref1: mom_zone_mark
+concommand_ref2: mom_zone_create
+default_value: auto
+requires_mapping: true
 tags:
   - zones
   - trigger
@@ -8,11 +13,9 @@ tags:
   - checkpoint
   - stop
   - start
-default_value: auto
-concommand_ref1: mom_zone_mark
-concommand_ref2: mom_zone_create
-requires_mapping: true
 ---
+
+# mom_zone_type
 
 Changes the type of zone to be created when using [`{{ page.concommand_ref1 }}`](/command/{{ page.concommand_ref1 }}) / [`{{ page.concommand_ref2 }}`](/command/{{ page.concommand_ref2 }}).
 

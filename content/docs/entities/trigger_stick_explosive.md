@@ -1,27 +1,28 @@
 ---
 title: trigger_stick_explosive
-category: entity
+categories:
+  - entity
 tags:
- - rocket jump
- - sticky jump
- - conc
- - trigger
+  - rocket jump
+  - sticky jump
+  - conc
+  - trigger
 ---
 
-----
+# trigger_stick_explosive
 
-  
+---
+
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that can stick explosives to or inside of its area.
-
 
 ## Keyvalues
 
->**Method of explosive stick** (mode&lt;**choices**&gt;)
-  
+> **Method of explosive stick** (mode&lt;**choices**&gt;)
+
 Explosive sticking behavior.
 
- - **0**: Stick on collision inside this area
- - **1**: Stick on entering this area
+- **0**: Stick on collision inside this area
+- **1**: Stick on entering this area
 
 Defaults to 0.
 

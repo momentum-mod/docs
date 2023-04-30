@@ -1,11 +1,14 @@
 ---
 title: mom_replay_goto
-category: command
+categories:
+  - command
+required_params:
+  - Tick
 tags:
   - replay
   - ghost
-required_params: 
-  - Tick
 ---
+
+# mom_replay_goto
 
 Goes to the specified tick in the currently spectated replay.

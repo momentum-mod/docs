@@ -1,12 +1,15 @@
 ---
 title: mom_zone_end_draw_color
-category: var
+categories:
+  - var
+default_value: 255 0 0 255
 tags:
   - zones
   - stop
   - trigger
   - color
-default_value: 255 0 0 255
 ---
+
+# mom_zone_end_draw_color
 
 Color of the end zone(s) in RGBA format.

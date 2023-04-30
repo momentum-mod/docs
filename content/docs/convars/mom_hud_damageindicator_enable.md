@@ -1,12 +1,15 @@
 ---
 title: mom_hud_damageindicator_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
   - damage indicator
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_damageindicator_enable
 
 Toggles showing the damage indicator.

@@ -1,12 +1,15 @@
 ---
 title: mom_discord_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - discord
   - rich presence
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_discord_enable
 
 Toggles the Discord rich-presence (RPC) functionality.

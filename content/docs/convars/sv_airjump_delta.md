@@ -1,12 +1,15 @@
 ---
 title: sv_airjump_delta
-category: var
+categories:
+  - var
+default_value: 125
 tags:
   - parkour
   - movement
   - player
-default_value: 125
 ---
+
+# sv_airjump_delta
 
 Changes the velocity scaling amount for changing direction during an airjump.
 Higher values allow the player to retain more speed when airjumping at angles further away from the direction of the player's current velocity.

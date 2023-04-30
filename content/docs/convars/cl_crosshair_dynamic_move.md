@@ -1,11 +1,14 @@
 ---
 title: cl_crosshair_dynamic_move
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - crosshair
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# cl_crosshair_dynamic_move
 
 Toggles dynamic crosshair behavior with player movement.

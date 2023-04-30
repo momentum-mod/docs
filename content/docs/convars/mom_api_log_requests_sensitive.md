@@ -1,14 +1,17 @@
 ---
 title: mom_api_log_requests_sensitive
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - debug
   - logging
   - api
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mom_api_log_requests_sensitive
 
 If enabled, API requests that are sensitive will be logged to console.
 

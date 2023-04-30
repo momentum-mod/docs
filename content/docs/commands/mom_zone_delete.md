@@ -1,13 +1,16 @@
 ---
 title: mom_zone_delete
-category: command
+categories:
+  - command
+required_params:
+  - Entity index/Start/Stop/Stage/Checkpoint
+requires_mapping: true
 tags:
   - zones
   - trigger
-required_params: 
-  - Entity index/Start/Stop/Stage/Checkpoint
-requires_mapping: true
 ---
+
+# mom_zone_delete
 
 Deletes zone types. Accepts start/stop/stage/checkpoint or an entity index.
 

@@ -1,11 +1,14 @@
 ---
 title: mom_hud_speedometer_fps
-category: var
+categories:
+  - var
+default_value: 120
 tags:
   - hud
   - speedometer
-default_value: 120
 ---
+
+# mom_hud_speedometer_fps
 
 {:.notice--info}
 Setting this value to `0` removes the limit (uncapped)

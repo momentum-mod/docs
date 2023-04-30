@@ -1,11 +1,14 @@
 ---
 title: sv_slide_lock
-category: var
+categories:
+  - var
+default_value: 0
 tags:
   - parkour
   - movement
   - player
-default_value: 0
 ---
+
+# sv_slide_lock
 
 Changes whether to lock your move direction when sliding.

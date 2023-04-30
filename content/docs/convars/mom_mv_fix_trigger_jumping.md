@@ -1,12 +1,15 @@
 ---
 title: mom_mv_fix_trigger_jumping
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - player
   - movement
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_mv_fix_trigger_jumping
 
 Fixes the player being able to jump off the ground if grounded with a trigger under the player.

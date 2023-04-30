@@ -1,12 +1,15 @@
 ---
 title: mom_tricks_map_tele_create
-category: command
+categories:
+  - command
+required_params:
+  - Map teleport name
+requires_mapping: true
 tags:
   - tricksurf
   - teleport
-required_params: 
-  - Map teleport name
-requires_mapping: true
 ---
+
+# mom_tricks_map_tele_create
 
 Creates a map teleport of a given name.

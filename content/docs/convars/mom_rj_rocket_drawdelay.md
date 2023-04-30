@@ -1,11 +1,14 @@
 ---
 title: mom_rj_rocket_drawdelay
-category: var
+categories:
+  - var
+default_value: 0.2
+maximum_value: 1
+minimum_value: 0
 tags:
   - rocket jump
-minimum_value: 0
-maximum_value: 1
-default_value: 0.2
 ---
+
+# mom_rj_rocket_drawdelay
 
 Determines how long it takes for rockets to start being drawn after spawning.

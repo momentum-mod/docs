@@ -1,11 +1,14 @@
 ---
 title: mom_hud_ghost_entpanels_opacity
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - entity panels
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_ghost_entpanels_opacity
 
 Controls the baseline opacity for entity panels; distance fading fades from this opacity value to `0`.

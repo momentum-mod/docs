@@ -1,11 +1,14 @@
 ---
 title: mom_trail_color
-category: var
+categories:
+  - var
+default_value: 255 0 255 255
 tags:
   - trail
   - color
   - player
-default_value: 255 0 255 255
 ---
+
+# mom_trail_color
 
 The player's trail color. Accepts color value in format RGBA.

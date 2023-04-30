@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_stick_angle
-category: var
+categories:
+  - var
+default_value: 45
 tags:
   - parkour
   - movement
   - player
-default_value: 45
 ---
+
+# sv_wallrun_stick_angle
 
 Changes the min angle away from the wall normal for the player to wallrun.

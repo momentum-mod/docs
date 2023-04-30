@@ -1,5 +1,6 @@
 ---
-weight: 20
-bookFlatSection: true
+title: Entities
 bookCollapseSection: true
+bookFlatSection: true
+weight: 20
 ---

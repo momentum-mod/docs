@@ -1,12 +1,15 @@
 ---
 title: mom_conc_debug_show_radius
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - conc
   - debug
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mom_conc_debug_show_radius
 
 Toggles showing the conc grenade's explosion radius after detonation.

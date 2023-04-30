@@ -1,8 +1,11 @@
 ---
 title: mom_version
-category: command
+categories:
+  - command
 tags:
   - printout
 ---
+
+# mom_version
 
 Prints the current installed version of Momentum Mod.

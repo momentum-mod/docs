@@ -1,27 +1,32 @@
 ---
-title: Parallax-Corrected Cubemaps
+categories:
+  - shader
 permalink: /shader/parallax-corrected-cubemaps/
-category: shader
 tags:
   - mapping
-toc: true
-toc_sticky: true
 ---
+
+# Parallax-Corrected Cubemaps
+
 ![Cubemap Guide](/assets/images/guide_headers/guide_parallax_cubemaps.jpg)
 
-This page covers Momentum's implementation of Parallax-Corrected Cubemaps, created with a combination of custom entities and materials.    
+This page covers Momentum's implementation of Parallax-Corrected Cubemaps, created with a combination of custom entities and materials.
 
 > Thanks to Brian Charles for his work on this feature.  
-> More technical information can be found on the [Valve Developer Wiki Page](https://developer.valvesoftware.com/wiki/Parallax_Corrected_Cubemaps).  
+> More technical information can be found on the [Valve Developer Wiki Page](https://developer.valvesoftware.com/wiki/Parallax_Corrected_Cubemaps).
 
 ## Prerequisites
-To make use of this page, you should:   
+
+To make use of this page, you should:
+
 - Be proficient in using the Hammer Editor
 - Have the `momentum.fgd` in your Hammer configuration
 - Know how to use the developer console
 
 ## Components of a Parallax-Corrected Cubemap
-In Hammer, Parallax-Corrected Cubemaps need two entities to function correctly:  
+
+In Hammer, Parallax-Corrected Cubemaps need two entities to function correctly:
+
 - A trigger brush tied to a `parallax_obb` entity - must be named
 - An `env_cubemap` with "Cubemap Bounds" set to the name of the `parallax_obb`
 
@@ -47,17 +52,19 @@ Any regular `LightmappedGeneric` materials will still be able to use the cubemap
 		</p>
 		<img src="/assets/images/cubemap_guide/cube_4.jpg" alt="Distortion example">
 
-		<p>
-		Parallax-Corrected cubemaps work best in box-shaped rooms and areas, the closer to a cube shape your <code>parallax_obb</code> is, the less obvious distortion that you will likely get.
-		</p>
-		
-		You should place the <code>env_cubemap</code> in the centre of the <code>parallax_obb</code> brush instead of at head height.
+    	<p>
+    	Parallax-Corrected cubemaps work best in box-shaped rooms and areas, the closer to a cube shape your <code>parallax_obb</code> is, the less obvious distortion that you will likely get.
+    	</p>
+
+    	You should place the <code>env_cubemap</code> in the centre of the <code>parallax_obb</code> brush instead of at head height.
+
 </div>
 
 ## Hammer
-Here is the process of creating the necessary entities in Hammer for this feature to work in a room you've already made.  
 
-The first thing you should do is to create the "bounding box" of the cubemap with a trigger brush. Make it so that it fits the room as closely as possible.  
+Here is the process of creating the necessary entities in Hammer for this feature to work in a room you've already made.
+
+The first thing you should do is to create the "bounding box" of the cubemap with a trigger brush. Make it so that it fits the room as closely as possible.
 
 ![Brush creation](/assets/images/cubemap_guide/cube_2.jpg)
 
@@ -67,10 +74,10 @@ Once you've made the trigger brush, tie it to a `parallax_obb` entity and give i
 
 That's all that is needed for the brush, onto the cubemap entity itself.
 
-When creating an `env_cubemap` you should see an extra option called *"Cubemap Bounds"*. Set it to the name of the `parallax_obb` you just created.
+When creating an `env_cubemap` you should see an extra option called _"Cubemap Bounds"_. Set it to the name of the `parallax_obb` you just created.
 
 ![Cubemap entity](/assets/images/cubemap_guide/cube_1.png)
 
-This should be all the setup that is required in Hammer.  
+This should be all the setup that is required in Hammer.
 
-You should be able to compile your map as normal and build the cubemaps in game to see the effects if you have any supported materials in the map.  
+You should be able to compile your map as normal and build the cubemaps in game to see the effects if you have any supported materials in the map.

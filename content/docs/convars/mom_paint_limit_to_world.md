@@ -1,12 +1,15 @@
 ---
 title: mom_paint_limit_to_world
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - paint
   - decal
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# mom_paint_limit_to_world
 
 When enabled, limits applying the paint decals to only world geometry.

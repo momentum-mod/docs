@@ -1,11 +1,14 @@
 ---
 title: cl_crosshair_color
-category: var
+categories:
+  - var
+default_value: 255 0 0 255
 tags:
   - crosshair
   - color
   - alpha
-default_value: 255 0 0 255
 ---
+
+# cl_crosshair_color
 
 Set the crosshair's color. Accepts color value in format RGBA. If RGB is supplied, alpha is set to 255.

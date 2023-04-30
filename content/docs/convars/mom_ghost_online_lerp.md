@@ -1,12 +1,15 @@
 ---
 title: mom_ghost_online_lerp
-category: var
+categories:
+  - var
+default_value: 0.5
+maximum_value: 2
+minimum_value: 0.1
 tags:
   - ghost
   - online
-minimum_value: 0.1
-maximum_value: 2
-default_value: 0.5
 ---
+
+# mom_ghost_online_lerp
 
 The amount of time to render in the past (in seconds).

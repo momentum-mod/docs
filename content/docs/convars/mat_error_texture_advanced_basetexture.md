@@ -1,13 +1,16 @@
 ---
 title: mat_error_texture_advanced_basetexture
-category: var
+categories:
+  - var
+cvar_ref: mat_error_texture_advanced
+default_value: white
 tags:
   - error
   - texture
   - material
-default_value: white
-cvar_ref: mat_error_texture_advanced
 ---
+
+# mat_error_texture_advanced_basetexture
 
 Which texture should be used as a base for reflectivity-based error textures (see [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }})).
 

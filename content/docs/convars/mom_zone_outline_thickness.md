@@ -1,12 +1,15 @@
 ---
 title: mom_zone_outline_thickness
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 16
+minimum_value: 1
 tags:
   - zone
   - outline
-minimum_value: 1
-maximum_value: 16
-default_value: 1
 ---
+
+# mom_zone_outline_thickness
 
 Controls thickness of zone outlines.

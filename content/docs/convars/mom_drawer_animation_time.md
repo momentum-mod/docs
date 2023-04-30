@@ -1,12 +1,15 @@
 ---
 title: mom_drawer_animation_time
-category: var
+categories:
+  - var
+default_value: 0.33
+maximum_value: 500
+minimum_value: 0.01
 tags:
   - main menu drawer
   - main menu
-minimum_value: 0.01
-maximum_value: 500
-default_value: 0.33
 ---
+
+# mom_drawer_animation_time
 
 Controls the amount of time the main menu drawer opening/closing animation lasts, in seconds.

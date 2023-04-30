@@ -1,24 +1,21 @@
 ---
-title: How to Override Custom Assets
-
+categories:
+  - guide
+ccom_wepreload: weapon_reload_scripts
+ccom_wepreloadcur: weapon_reload_script_current
+guide_GSC: gamemode-specific-cfgs
 permalink: /guide/override-custom-assets/
-
-category: guide
 tags:
   - hud
   - weapon
-
-toc: true
-toc_sticky: true
-ccom_wepreloadcur: weapon_reload_script_current
-ccom_wepreload: weapon_reload_scripts
-guide_GSC: gamemode-specific-cfgs
 ---
 
-When the game boots, it scans the `momentum/custom/` folder for VPK files and subfolders.
-For steam users, this will be 
+# How to Override Custom Assets
 
-> `Steam/steamapps/common/Momentum Mod/momentum/custom/` 
+When the game boots, it scans the `momentum/custom/` folder for VPK files and subfolders.
+For steam users, this will be
+
+> `Steam/steamapps/common/Momentum Mod/momentum/custom/`
 
 under the steam install path.
 
@@ -26,9 +23,11 @@ Each VPK and subfolder is added as a "search custom", meaning that the files ins
 Using this is recommended over modifying the game's files, as the `custom` folder will persist when installing an update or using Steam's "verify integrity of game files" feature.
 
 ## File Structure Examples
+
 Here are some examples of correct file structure:
-- `momentum/custom/some_mod.vpk` 
-- `momentum/custom/another_mod.vpk` 
+
+- `momentum/custom/some_mod.vpk`
+- `momentum/custom/another_mod.vpk`
 - `momentum/custom/my_custom_stuff/`
 - `momentum/custom/my_custom_stuff/models/custom_model.mdl`
 - `momentum/custom/my_custom_stuff/materials/custom_material.vmt`
@@ -36,13 +35,15 @@ Here are some examples of correct file structure:
 
 In these examples, `some_mod.vpk`, `another_mod.vpk`, and `my_custom_stuff` will be added as search customs.
 
-Some examples of incorrect file structures are: 
+Some examples of incorrect file structures are:
+
 - `momentum/custom/models/custom_model.mdl`
 - `momentum/custom/materials/custom_material.vmt`
 
 In these examples, `models` and `materials` are search customs, meaning that `custom_model.mdl` and `custom_material.vmt` exist at the root of the game's virtual filesystem instead of in their appropriate folders.
 
 ## Example - Overriding Weapon Script
+
 ![Weapon Model Comparison](/assets/images/override-custom-assets_guide/weapon_compare.jpg)
 
 Inside `momentum/custom/overrides/scripts/` there are some weapon script overrides available.
@@ -53,5 +54,6 @@ For example, renaming `weapon_momentum_stickylauncher_tf2.txt` to `weapon_moment
 Weapon scripts can be reloaded from within the game by using the console commands [`{{ page.ccom_wepreloadcur }}`](/command/{{ page.ccom_wepreloadcur }}) and/or [`{{ page.ccom_wepreload }}`](/command/{{ page.ccom_wepreload }}).
 
 ## Performance
+
 Mounting a subfolder is less efficient than a VPK, since the engine has to make a call to the operating system to search the folder each time it needs to open a file.
 For optimal load times use VPKs, since they can be searched by the engine much more efficiently.

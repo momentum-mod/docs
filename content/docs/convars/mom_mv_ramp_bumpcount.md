@@ -1,12 +1,15 @@
 ---
 title: mom_mv_ramp_bumpcount
-category: var
+categories:
+  - var
+default_value: 8
+maximum_value: 16
+minimum_value: 4
 tags:
   - rocket jump
   - weapon
-minimum_value: 4
-maximum_value: 16
-default_value: 8
 ---
+
+# mom_mv_ramp_bumpcount
 
 Helps with fixing some surf/ramp bugs.

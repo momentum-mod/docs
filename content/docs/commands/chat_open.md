@@ -1,10 +1,13 @@
 ---
 title: chat_open
-category: command
+categories:
+  - command
+safeguard: mom_run_safeguard_chat_open
 tags:
   - hud
   - chat
-safeguard: mom_run_safeguard_chat_open
 ---
+
+# chat_open
 
 Opens the in-game chat window.

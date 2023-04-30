@@ -1,10 +1,13 @@
 ---
 title: mom_teledests_color
-category: var
+categories:
+  - var
+default_value: 255 255 255 255
 tags:
   - teleport destinations
   - color
-default_value: 255 255 255 255
 ---
+
+# mom_teledests_color
 
 Changes the color of drawn teleport destinations in RGBA format.

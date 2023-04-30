@@ -1,5 +1,6 @@
 ---
-weight: 20
-bookFlatSection: true
+title: Commands
 bookCollapseSection: true
+bookFlatSection: true
+weight: 20
 ---

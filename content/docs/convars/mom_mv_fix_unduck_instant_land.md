@@ -1,12 +1,15 @@
 ---
 title: mom_mv_fix_unduck_instant_land
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - player
   - movement
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_mv_fix_unduck_instant_land
 
 Fixes being able to unduck in midair and land without activating triggers. (Also known as jumpbugs or duckbugs).

@@ -1,14 +1,17 @@
 ---
 title: mom_sj_sound_charge_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - weapon
   - sticky jump
   - charge meter
   - sound
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_sj_sound_charge_enable
 
 Toggles the sticky launcher charging sound.

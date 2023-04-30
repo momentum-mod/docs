@@ -1,11 +1,14 @@
 ---
 title: mom_hud_versioninfo_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_versioninfo_enable
 
 Toggles showing the current momentum version.

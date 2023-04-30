@@ -1,11 +1,14 @@
 ---
 title: mom_discord_debug
-category: command
+categories:
+  - command
 tags:
   - discord
   - debug
   - printout
 ---
+
+# mom_discord_debug
 
 Helps debug Discord integration. Prints out the party ID (steam lobby ID), spectate secret, and join secret.
 

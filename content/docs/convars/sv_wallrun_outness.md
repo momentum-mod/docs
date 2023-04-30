@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_outness
-category: var
+categories:
+  - var
+default_value: 300
 tags:
   - parkour
   - movement
   - player
-default_value: 300
 ---
+
+# sv_wallrun_outness
 
 Changes the scaling factor for how much to steer outward around obstacles when wallrunning.

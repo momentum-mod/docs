@@ -1,9 +1,12 @@
 ---
 title: sv_noclipspeed_sprint_multiplier
-category: var
+categories:
+  - var
+default_value: 0.5
 tags:
   - practice
-default_value: 0.5
 ---
+
+# sv_noclipspeed_sprint_multiplier
 
 Changes the speed multiplier when holding sprint in noclip or practice mode.

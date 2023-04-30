@@ -1,11 +1,14 @@
 ---
 title: sv_coyote_time
-category: var
+categories:
+  - var
+default_value: 0.2
 tags:
   - parkour
   - movement
   - player
-default_value: 0.2
 ---
+
+# sv_coyote_time
 
 Changes the time after leaving a surface that jumps are still allowed, in seconds.

@@ -1,9 +1,12 @@
 ---
 title: mom_prog_tele
-category: command
+categories:
+  - command
+requires_mapping: false
 tags:
   - teleport
-requires_mapping: false
 ---
+
+# mom_prog_tele
 
 Teleports the player to the last touched progress trigger.

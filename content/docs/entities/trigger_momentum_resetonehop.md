@@ -1,24 +1,28 @@
 ---
-title:  trigger_momentum_resetonehop
-category: entity
+title: trigger_momentum_resetonehop
+categories:
+  - entity
 tags:
- - trigger
- - map
- - track
+  - trigger
+  - map
+  - track
 ---
-----
+
+# trigger_momentum_resetonehop
+
+---
 
 Trigger that resets all of the onehop triggers the player has touched.
 
 ## Keyvalues
 
->**Track Number** (track_number&lt;**integer**&gt;)
+> **Track Number** (track_number&lt;**integer**&gt;)
 
-The track that this trigger belongs to: 
+The track that this trigger belongs to:
 
- - **-1**: All Tracks
- - **0**: Main Map
- - **1+**: Bonus Tracks
+- **-1**: All Tracks
+- **0**: Main Map
+- **1+**: Bonus Tracks
 
 ## Output
 

@@ -1,12 +1,15 @@
 ---
 title: mom_hud_timer_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
   - timer
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_timer_enable
 
 Toggles displaying the timer.

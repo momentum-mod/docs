@@ -1,10 +1,13 @@
 ---
 title: mom_tricks_track_trick
-category: command
+categories:
+  - command
+required_params:
+  - Trick ID
 tags:
   - tricksurf
-required_params: 
-  - Trick ID
 ---
+
+# mom_tricks_track_trick
 
 Tracks a trick to complete, taking the trick ID as the parameter.

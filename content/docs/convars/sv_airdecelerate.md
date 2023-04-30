@@ -1,12 +1,15 @@
 ---
 title: sv_airdecelerate
-category: var
+categories:
+  - var
+requires_mapping: true
 tags:
   - conc
   - movement
   - player
-requires_mapping: true
 ---
+
+# sv_airdecelerate
 
 Like `sv_airaccelerate`, but for air slowdown only (`+back`).
 

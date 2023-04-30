@@ -1,11 +1,14 @@
 ---
 title: cl_crosshair_t
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
 tags:
   - crosshair
-minimum_value: 0
-maximum_value: 1
-default_value: 0
 ---
+
+# cl_crosshair_t
 
 Toggles the T style crosshair.

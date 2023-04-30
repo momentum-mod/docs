@@ -1,11 +1,14 @@
 ---
 title: mom_conc_particle_trail_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - conc
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_conc_particle_trail_enable
 
 Toggles whether the conc grenade has a trail particle or not. 0 = OFF, 1 = ON.

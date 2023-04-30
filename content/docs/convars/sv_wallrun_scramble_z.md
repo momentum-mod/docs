@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_scramble_z
-category: var
+categories:
+  - var
+default_value: 28
 tags:
   - parkour
   - movement
   - player
-default_value: 28
 ---
+
+# sv_wallrun_scramble_z
 
 Changes the max height the player can climb to.

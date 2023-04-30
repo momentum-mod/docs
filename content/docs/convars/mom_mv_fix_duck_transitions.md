@@ -1,12 +1,15 @@
 ---
 title: mom_mv_fix_duck_transitions
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - movement
   - player
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_mv_fix_duck_transitions
 
 Fixes the Quantum Crouch glitch when reducking during stand animation.

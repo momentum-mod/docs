@@ -1,20 +1,16 @@
 ---
-title: "Gamemode Guide: Parkour"
-
+categories:
+  - guide
 permalink: /guide/gamemode-parkour/
-
-category: guide
-
 tags:
   - gamemode
   - info
   - parkour
   - pk
   - titanfall
-
-toc: true
-toc_sticky: true
 ---
+
+# Gamemode Guide: Parkour
 
 ## What is Parkour?
 

@@ -1,12 +1,15 @@
 ---
 title: mom_drawer_animation_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - main menu drawer
   - main menu
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_drawer_animation_enable
 
 Toggle the opening/closing animation of the main menu drawer panel.
