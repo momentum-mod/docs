@@ -1,0 +1,15 @@
+# Generated files by Hugo
+/public/
+/resources/_gen/
+hugo_stats.json
+.hugo_build.lock
+
+# Hugo executables
+hugo.exe
+hugo.darwin
+hugo.linux
+
+### VSCode ###
+.vscode/*
+!.vscode/extensions.json
+*.code-workspace
