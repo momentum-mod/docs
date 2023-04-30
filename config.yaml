@@ -1,27 +1,38 @@
 baseURL: 'https://docs.momentum-mod.org/'
 title: Momentum Mod Documentation
+description: Momentum Mod Documentation
 theme: hugo-book
 enableGitInfo: true
 disablePathToLower: true
 params:
+  # Theme is set based on light/dark mode preference set in the browser/OS
   BookTheme: auto
   BookToC: true
-  BookRepo: 'https://github.com/momentum-mod/docs'
+  BookRepo: https://github.com/momentum-mod/docs
   BookCommitPath: commit
   BookDateFormat: 'Jan 2, 2006'
-  BookEditPath: edit/master/exampleSite
+  BookEditPath: edit/master
   BookComments: false
+  BookLogo: 'images/masthead.png'
 taxonomies:
   category: categories
   tag: tags
+permalinks:
+  # Hugo pages are grouped into "archetype" so the docs pages need to live in
+  # content/docs/ rather than just content/. So this slice removes the "docs"
+  # bit from the URL. Hugo is neat!
+  docs: /:sections[1:]/:filename/
 menu:
   after:
+    - name: Categories
+      pageRef: /categories/
+      weight: 10
+    - name: Tags
+      pageRef: /tags/
+      weight: 10
     - name: Main Site
       url: 'https://momentum-mod.org'
-      weight: 1
-    - name: Github
-      url: 'https://github.com/momentum-mod/docs'
-      weight: 2
-    - name: Discord
-      url: 'https://discord.gg/momentummod'
-      weight: 3
+      weight: 20
+markup:
+  highlight:
+    style: onedark
