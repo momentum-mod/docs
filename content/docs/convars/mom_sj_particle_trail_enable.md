@@ -1,13 +1,16 @@
 ---
 title: mom_sj_particle_trail_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - sticky jump
   - particle
   - trail
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_sj_particle_trail_enable
 
 Toggles the stickybomb trail particle.

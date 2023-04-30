@@ -1,11 +1,14 @@
 ---
 title: cl_crosshair_style
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 2
+minimum_value: 0
 tags:
   - crosshair
-minimum_value: 0
-maximum_value: 2
-default_value: 0
 ---
+
+# cl_crosshair_style
 
 Sets the crosshair style. CS:S = `0`, User CVars = `1`, Custom VTF = `2`.

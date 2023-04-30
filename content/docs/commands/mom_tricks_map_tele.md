@@ -1,11 +1,14 @@
 ---
 title: mom_tricks_map_tele
-category: command
+categories:
+  - command
+required_params:
+  - Map teleport index
 tags:
   - tricksurf
   - teleport
-required_params: 
-  - Map teleport index
 ---
+
+# mom_tricks_map_tele
 
 Teleports to a given map tele by index, which is 1-based.

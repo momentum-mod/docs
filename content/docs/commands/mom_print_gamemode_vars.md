@@ -1,8 +1,11 @@
 ---
 title: mom_print_gamemode_vars
-category: command
+categories:
+  - command
 tags:
   - printout
 ---
+
+# mom_print_gamemode_vars
 
 Prints out the currently set gamemode related variables (max velocity, air accelerate, etc.).

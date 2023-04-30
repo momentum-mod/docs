@@ -1,12 +1,15 @@
 ---
 title: mom_menu_model_rotation_speed
-category: var
+categories:
+  - var
+default_value: 10
+maximum_value: 1000
+minimum_value: -1000
 tags:
   - main menu model
   - main menu
-minimum_value: -1000
-maximum_value: 1000
-default_value: 10
 ---
+
+# mom_menu_model_rotation_speed
 
 Controls how fast the main menu model spins.

@@ -1,13 +1,16 @@
 ---
 title: mom_hud_sj_stickycount_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
   - sticky jump
   - sticky count
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_sj_stickycount_enable
 
 Toggles the stickybomb counter.

@@ -1,14 +1,17 @@
 ---
 title: mom_start_mark_clear
-category: command
+categories:
+  - command
+optional_params:
+  - Track number
 tags:
   - start
   - mark
-optional_params:
-  - Track number
 ---
 
-Clears the current track's saved start location if there is one. 
+# mom_start_mark_clear
+
+Clears the current track's saved start location if there is one.
 Optionally accepts a track number.
 
 ## Usage Example

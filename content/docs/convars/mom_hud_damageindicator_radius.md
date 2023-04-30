@@ -1,10 +1,13 @@
 ---
 title: mom_hud_damageindicator_radius
-category: var
+categories:
+  - var
+default_value: 120
 tags:
   - hud
   - damage indicator
-default_value: 120
 ---
+
+# mom_hud_damageindicator_radius
 
 How far away the damage indicators are from the crosshair.

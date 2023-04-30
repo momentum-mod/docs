@@ -1,11 +1,14 @@
 ---
 title: mom_run_safeguard_doublepress_maxtime
-category: var
+categories:
+  - var
+default_value: 0.5
+maximum_value: 5
+minimum_value: 0
 tags:
   - safeguard
-minimum_value: 0
-maximum_value: 5
-default_value: 0.5
 ---
+
+# mom_run_safeguard_doublepress_maxtime
 
 Controls the maximum amount time (in seconds) that a double press is registered for run safeguards with the doublepress safeguard mode active.

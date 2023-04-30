@@ -1,20 +1,15 @@
 ---
-title: Ranking Points & Cosmetic XP
-
+categories:
+  - guide
 permalink: /guide/ranking-cosmetic-xp/
-
-category: guide
-
 tags:
   - rank
   - xp
   - experience
   - cosmetic
-
-toc: true
-
-toc_sticky: true
 ---
+
+# Ranking Points & Cosmetic XP
 
 # Ranked-Points System
 
@@ -23,13 +18,12 @@ toc_sticky: true
 {:.notice--info}
 The systems described here are complete; we are in agreement that this is what the Ranked-Points should look like. The values chosen for percentiles, WR points, etc. are still up for debate; however, these should be simple to change later, should we decide to change them, because of the design of the system. For now, we consider the values to be informed-guess placeholders.
 
-> There are no “base completion points”; the formula system somewhat accounts for this, but we’ve determined that it is not worth having a system of its own
+> There are no �base completion points�; the formula system somewhat accounts for this, but we�ve determined that it is not worth having a system of its own
 
 <sub>Aside -- Motivation;</sub>
 
-<sub>Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain “percentile” blocks. The formula system awards points simply according to a formula with a single parameter -- the player’s rank.
+<sub>Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain �percentile� blocks. The formula system awards points simply according to a formula with a single parameter -- the player�s rank.
 The group system should award more points than the formula system; it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.</sub>
-
 
 ## WRs and Top10s system
 
@@ -64,13 +58,12 @@ y axis designates points awarded
 Player sets a time of rank 468 on a map with 1333 completions.<br>
 Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)</sub>
 
-
 ## (New) Group System
 
-(based on @Joe’s & Jux’s comments about minimum group sizes)\
+(based on @Joe�s & Jux�s comments about minimum group sizes)\
 (plus lots of help from Jux and Aux)
 
-4 groups, loosely “percentile”-based (in fact, a function of #completions, but not as simple as a percentage). Instead of calculating group boundaries directly from percentiles, we calculate group _sizes_ based on a simple maximizing function --
+4 groups, loosely �percentile�-based (in fact, a function of #completions, but not as simple as a percentage). Instead of calculating group boundaries directly from percentiles, we calculate group _sizes_ based on a simple maximizing function --
 
 Group size = `max(A(x), minSize)`
 
@@ -82,6 +75,7 @@ Group 1 always starts at rank 11, and its size is determined from its group size
 The formula to determine group size, `A(x)` (where `x` is the # of completions of the map), is\
 `_A(x) = SF * (x^E)`, where `SF` and `E` are defined uniquely for each group:\
 `SF` = Scale factor, `E` = Exponent
+
 ```
 Group 1: E = 0.5, SF = 1
 Group 2: E = 0.56, SF = 1.5
@@ -90,6 +84,7 @@ Group 4: E = 0.68, SF = 2.5
 ```
 
 minSize is another parameter which varies per group:
+
 ```
 Group 1: minSize = 10
 Group 2: minSize = 45
@@ -99,6 +94,7 @@ Group 4: minSize = 250
 
 <sup>Ex.<br>
 On a map with 400 completions:
+
 ```
 Group 1 size = max(1 * 400^0.5, 10) = max(20, 10) = 20
 Group 2 size = max(1.5 * 400^0.56, 45) = max(42.98, 45) = 45
@@ -133,7 +129,7 @@ Group 1 = 600 points = 20% of WR
 ## 0 - 50
 
 | Level | Exp in level | Total exp |
-|-------|--------------|-----------|
+| ----- | ------------ | --------- |
 | 001   | 21,000       | 21,000    |
 | 002   | 22,000       | 43,000    |
 | 003   | 23,000       | 66,000    |
@@ -188,13 +184,13 @@ Group 1 = 600 points = 20% of WR
 ## 50 - 100
 
 {:.notice--info}
-| Type                 | Amount     | Percentage |
+| Type | Amount | Percentage |
 |----------------------|------------|------------|
-| Per-level increase   | 750,000    | 277.78%    |
-| Total exp difference | 31,180,000 | 635.28%    |
+| Per-level increase | 750,000 | 277.78% |
+| Total exp difference | 31,180,000 | 635.28% |
 
 | Level | Exp in level | Total exp  |
-|-------|--------------|------------|
+| ----- | ------------ | ---------- |
 | 051   | 326,000      | 6,151,000  |
 | 052   | 332,000      | 6,483,000  |
 | 053   | 338,000      | 6,821,000  |
@@ -249,13 +245,13 @@ Group 1 = 600 points = 20% of WR
 ## 100 - 150
 
 {:.notice--info}
-| Type                 | Amount     | Percentage |
+| Type | Amount | Percentage |
 |----------------------|------------|------------|
-| Per-level increase   | 1,000,000  | 98.04%     |
-| Total exp difference | 86,480,000 | 327.43%    |
+| Per-level increase | 1,000,000 | 98.04% |
+| Total exp difference | 86,480,000 | 327.43% |
 
 | Level | Exp in level | Total exp   |
-|-------|--------------|-------------|
+| ----- | ------------ | ----------- |
 | 101   | 1,520,000    | 39,545,000  |
 | 102   | 1,520,000    | 41,065,000  |
 | 103   | 1,520,000    | 42,585,000  |
@@ -310,13 +306,13 @@ Group 1 = 600 points = 20% of WR
 ## 150 - 200
 
 {:.notice--info}
-| Type                 | Amount      | Percentage |
+| Type | Amount | Percentage |
 |----------------------|-------------|------------|
-| Per-level increase   | 1,000,000   | 49.50%     |
-| Total exp difference | 135,480,000 | 207.08%    |
+| Per-level increase | 1,000,000 | 49.50% |
+| Total exp difference | 135,480,000 | 207.08% |
 
 | Level | Exp in level | Total exp   |
-|-------|--------------|-------------|
+| ----- | ------------ | ----------- |
 | 151   | 2,520,000    | 129,045,000 |
 | 152   | 2,520,000    | 131,565,000 |
 | 153   | 2,520,000    | 134,085,000 |

@@ -1,14 +1,14 @@
 ---
-title: Chaos Hammer AngelScript Global Properties
-category: angelscript
+categories:
+  - angelscript
 tags:
   - api
   - reference
   - chaos
   - hammer
-toc: true
-toc_sticky: true
 ---
+
+# Chaos Hammer AngelScript Global Properties
 
 This page outlines the various Chaos Hammer AngelScript global properties.
 
@@ -25,7 +25,7 @@ const QAngle vec3_angle
 ```as
 const Vector vec3_invalid
 ```
- 
+
 ### `vec3_origin`
 
 ```as

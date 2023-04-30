@@ -1,11 +1,14 @@
 ---
 title: mom_lobby_type
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 2
+minimum_value: 0
 tags:
   - lobby
-minimum_value: 0
-maximum_value: 2
-default_value: 1
 ---
+
+# mom_lobby_type
 
 Sets the type of lobby. Invite only = `0`, Friends only = `1`, Public = `2`.

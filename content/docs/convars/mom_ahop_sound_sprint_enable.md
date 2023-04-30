@@ -1,13 +1,16 @@
 ---
 title: mom_ahop_sound_sprint_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - player
   - ahop
   - sound
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_ahop_sound_sprint_enable
 
 Toggles the sound made when enabling sprint.

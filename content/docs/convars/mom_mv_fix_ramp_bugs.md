@@ -1,12 +1,15 @@
 ---
 title: mom_mv_fix_ramp_bugs
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - movement
   - player
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_mv_fix_ramp_bugs
 
 Fixes some movement trace errors that incorrectly stop the player.

@@ -1,13 +1,16 @@
 ---
 title: mom_zone_usenewmethod
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 1
+minimum_value: 0
+requires_mapping: true
 tags:
   - zones
   - trigger
-minimum_value: 0
-maximum_value: 1
-default_value: 0
-requires_mapping: true
 ---
+
+# mom_zone_usenewmethod
 
 Toggles using new point-based zoning method by Mehis.

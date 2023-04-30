@@ -1,11 +1,14 @@
 ---
 title: chaos_hud_menu_reload
-category: command
+categories:
+  - command
+ccom_ref: chaos_hud_menu_show
 tags:
   - hud
   - hud menu
-ccom_ref: chaos_hud_menu_show
 ---
+
+# chaos_hud_menu_reload
 
 Reloads the hud menu names for parameter completion for [`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }}).
 

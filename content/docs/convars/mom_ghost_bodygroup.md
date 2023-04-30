@@ -1,11 +1,14 @@
 ---
 title: mom_ghost_bodygroup
-category: var
+categories:
+  - var
+maximum_value: 14
+minimum_value: 0
 tags:
   - ghost
   - player
-minimum_value: 0
-maximum_value: 14
 ---
+
+# mom_ghost_bodygroup
 
 Changes the appearance bodygroup (shape).

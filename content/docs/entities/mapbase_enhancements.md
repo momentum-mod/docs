@@ -1,18 +1,23 @@
 ---
-title: Mapbase Enhancements
-category: entity
+title: mapbase_enhancements
+categories:
+  - entity
 tags:
-- mapbase
-- filter
-- point entity
+  - mapbase
+  - filter
+  - point entity
 ---
-----
+
+# Mapbase Enhancements
+
+---
 
 This page covers the various additions and enhancements from [Mapbase](https://www.moddb.com/mods/mapbase).
 
 ## Filters
 
 Added the following [Mapbase filters](https://github.com/mapbase-source/source-sdk-2013/wiki/Filters):
+
 - `filter_activator_context`
 - `filter_activator_involume`
 - `filter_activator_keyfield`
@@ -21,7 +26,8 @@ Added the following [Mapbase filters](https://github.com/mapbase-source/source-s
 
 ## Logic Entities
 
-Added the following logic entities from Mapbase: 
+Added the following logic entities from Mapbase:
+
 - `point_camera_ortho`
 - `math_vector`
 - `math_mod`

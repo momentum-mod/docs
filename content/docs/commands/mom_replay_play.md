@@ -1,12 +1,15 @@
 ---
 title: mom_replay_play
-category: command
+categories:
+  - command
+required_params:
+  - MRF (Replay) File
 tags:
   - replay
   - ghost
-required_params: 
-  - MRF (Replay) File
 ---
+
+# mom_replay_play
 
 Begins playback of a specified replay in first-person mode.
 

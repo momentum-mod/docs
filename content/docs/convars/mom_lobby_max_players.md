@@ -1,11 +1,14 @@
 ---
 title: mom_lobby_max_players
-category: var
+categories:
+  - var
+default_value: 16
+maximum_value: 250
+minimum_value: 2
 tags:
   - lobby
-minimum_value: 2
-maximum_value: 250
-default_value: 16
 ---
+
+# mom_lobby_max_players
 
 Sets the maximum number of players allowed in lobbies you create.

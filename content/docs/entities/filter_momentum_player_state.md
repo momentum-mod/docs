@@ -1,20 +1,23 @@
 ---
 title: filter_momentum_player_state
-category: entity
+categories:
+  - entity
 tags:
- - filter
+  - filter
 ---
 
-----
-Filter that checks the player's movement state.
+# filter_momentum_player_state
 
+---
+
+Filter that checks the player's movement state.
 
 ## Keyvalues
 
->**Player State** (player_state&lt;**choices**&gt;)
+> **Player State** (player_state&lt;**choices**&gt;)
 
- - **0**: "Grounded"
- - **1**: "Surfing"
- - **2**: "Bunnyhopping"
+- **0**: "Grounded"
+- **1**: "Surfing"
+- **2**: "Bunnyhopping"
 
 Default is Grounded; 0.

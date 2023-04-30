@@ -1,14 +1,17 @@
 ---
 title: mom_zone_checkpoint_draw_mode
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 4
+minimum_value: 0
 tags:
   - zones
   - checkpoint
   - trigger
-minimum_value: 0
-maximum_value: 4
-default_value: 1
 ---
+
+# mom_zone_checkpoint_draw_mode
 
 Changes the draw mode of the checkpoint zone(s).
 0 = Off; invisible, 1 = Outlines, 2 = Outlines as overlays (see through walls), 3 = Faces, 4 = Faces as overlays (see through walls).

@@ -1,12 +1,15 @@
 ---
 title: mom_hud_speedometer_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
   - speedometer
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_speedometer_enable
 
 Toggles the entire speedometer panel on or off.

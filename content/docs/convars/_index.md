@@ -1,5 +1,6 @@
 ---
-weight: 20
-bookFlatSection: true
+title: Console Variables
 bookCollapseSection: true
+bookFlatSection: true
+weight: 20
 ---

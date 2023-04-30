@@ -1,14 +1,14 @@
 ---
-title: Chaos Hammer AngelScript Value Types
-category: angelscript
+categories:
+  - angelscript
 tags:
   - api
   - reference
   - chaos
   - hammer
-toc: true
-toc_sticky: true
 ---
+
+# Chaos Hammer AngelScript Value Types
 
 This page outlines the various Chaos Hammer AngelScript value types.
 

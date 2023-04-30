@@ -1,14 +1,14 @@
 ---
-title: Chaos Hammer AngelScript Global Functions
-category: angelscript
+categories:
+  - angelscript
 tags:
   - api
   - reference
   - chaos
   - hammer
-toc: true
-toc_sticky: true
 ---
+
+# Chaos Hammer AngelScript Global Functions
 
 This page outlines the various Chaos Hammer AngelScript global functions.
 
@@ -88,7 +88,6 @@ float cosh(float)
 ```as
 float floor(float)
 ```
-
 
 ### `fpFromIEEE`
 

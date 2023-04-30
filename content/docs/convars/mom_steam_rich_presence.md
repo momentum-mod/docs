@@ -1,12 +1,15 @@
 ---
 title: mom_steam_rich_presence
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - steam
   - rich presence
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_steam_rich_presence
 
 Toggles Steam rich presence.

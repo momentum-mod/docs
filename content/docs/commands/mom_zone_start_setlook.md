@@ -1,13 +1,16 @@
 ---
 title: mom_zone_start_setlook
-category: command
-tags:
-  - zones
-  - trigger
+categories:
+  - command
 optional_params:
   - Yaw in degrees
 requires_mapping: true
+tags:
+  - zones
+  - trigger
 ---
+
+# mom_zone_start_setlook
 
 Sets the angle the player is looking towards when teleporting to the start zone. Takes in yaw in degrees or uses your current looking angle.
 

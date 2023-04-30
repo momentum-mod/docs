@@ -1,10 +1,13 @@
 ---
 title: mom_hud_damageindicator_maxheight
-category: var
+categories:
+  - var
+default_value: 120
 tags:
   - hud
   - damage indicator
-default_value: 120
 ---
+
+# mom_hud_damageindicator_maxheight
 
 Height of the damage indicator at maximum damage.

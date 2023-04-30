@@ -1,14 +1,17 @@
 ---
 title: mom_stage_mark_clear
-category: command
+categories:
+  - command
+optional_params:
+  - Stage number
 tags:
   - stage
   - mark
-optional_params:
-  - Stage number
 ---
 
-Clears the current stage zone's saved start location if there is one. 
+# mom_stage_mark_clear
+
+Clears the current stage zone's saved start location if there is one.
 Optionally accepts a stage number.
 
 ## Usage Example

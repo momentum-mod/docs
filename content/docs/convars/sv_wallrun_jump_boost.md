@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_jump_boost
-category: var
+categories:
+  - var
+default_value: 0.15
 tags:
   - parkour
   - movement
   - player
-default_value: 0.15
 ---
+
+# sv_wallrun_jump_boost
 
 Changes the fraction of wallrun speed to add to jump speed.

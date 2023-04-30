@@ -1,14 +1,17 @@
 ---
 title: mom_hud_conc_entpanels_panel_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - conc
   - entity panels
   - weapon
   - hud
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_conc_entpanels_panel_enable
 
 Toggles whether the cont entity panels display the panel with the remaining fuse timer.

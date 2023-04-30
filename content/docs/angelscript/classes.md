@@ -1,14 +1,14 @@
 ---
-title: Classes
-category: angelscript
+categories:
+  - angelscript
 tags:
   - api
   - reference
   - chaos
   - hammer
-toc: true
-toc_sticky: true
 ---
+
+# Classes
 
 This page outlines the various Chaos Hammer AngelScript classes.
 

@@ -1,13 +1,16 @@
 ---
 title: mom_run_safeguard_change_map
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - safeguard
   - map
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_run_safeguard_change_map
 
 Toggles the safeguard for changing map during a run.
 

@@ -1,10 +1,13 @@
 ---
 title: mom_hud_damageindicator_minheight
-category: var
+categories:
+  - var
+default_value: 60
 tags:
   - hud
   - damage indicator
-default_value: 60
 ---
+
+# mom_hud_damageindicator_minheight
 
 Height of the damage indicator at minimum damage.

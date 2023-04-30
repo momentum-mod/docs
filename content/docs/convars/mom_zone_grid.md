@@ -1,13 +1,16 @@
 ---
 title: mom_zone_grid
-category: var
+categories:
+  - var
+default_value: 8
+maximum_value: 64
+minimum_value: 1
+requires_mapping: true
 tags:
   - zones
   - trigger
-minimum_value: 1
-maximum_value: 64
-default_value: 8
-requires_mapping: true
 ---
+
+# mom_zone_grid
 
 The grid size used to create zones.

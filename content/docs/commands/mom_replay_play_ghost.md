@@ -1,12 +1,15 @@
 ---
 title: mom_replay_play_ghost
-category: command
+categories:
+  - command
+required_params:
+  - MRF (Replay) File
 tags:
   - replay
   - ghost
-required_params: 
-  - MRF (Replay) File
 ---
+
+# mom_replay_play_ghost
 
 Begins playback of a replay as a ghost.
 

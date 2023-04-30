@@ -1,12 +1,15 @@
 ---
 title: mom_ghost_interp_ticks
-category: var
+categories:
+  - var
+default_value: 0
+maximum_value: 100
+minimum_value: 0
 tags:
   - ghost
   - online
-minimum_value: 0
-maximum_value: 100
-default_value: 0
 ---
+
+# mom_ghost_interp_ticks
 
 Interpolation ticks to add to rendering online ghosts.

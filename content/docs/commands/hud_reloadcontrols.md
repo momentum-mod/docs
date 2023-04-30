@@ -1,8 +1,11 @@
 ---
 title: hud_reloadcontrols
-category: command
+categories:
+  - command
 tags:
   - hud
 ---
+
+# hud_reloadcontrols
 
 Reloads the control resource files for hud elements.

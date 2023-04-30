@@ -1,10 +1,13 @@
 ---
 title: mom_mapcfg_print
-category: command
+categories:
+  - command
 tags:
   - mapcfg
   - map
   - printout
 ---
+
+# mom_mapcfg_print
 
 Prints out the commands/variables stored in the mapcfg for the current map.

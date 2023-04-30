@@ -1,10 +1,13 @@
 ---
 title: mom_zone_showmenu
-category: command
+categories:
+  - command
+requires_mapping: true
 tags:
   - zones
   - hud
-requires_mapping: true
 ---
+
+# mom_zone_showmenu
 
 Shows the zoning menu.

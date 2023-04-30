@@ -1,11 +1,14 @@
 ---
 title: mom_paint_color
-category: var
+categories:
+  - var
+default_value: 0 0 255 255
 tags:
   - paint
   - color
   - decal
-default_value: 0 0 255 255
 ---
+
+# mom_paint_color
 
 Paint decal color in RGBA.

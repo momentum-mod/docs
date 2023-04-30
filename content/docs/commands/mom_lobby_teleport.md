@@ -1,15 +1,18 @@
 ---
 title: mom_lobby_teleport
-category: command
+categories:
+  - command
+required_params:
+  - Target's Steam ID or player name
 tags:
   - lobby
   - online
   - teleport
-required_params: 
-  - Target's Steam ID or player name
 ---
 
-Teleport to a given lobby member given their Steam ID or name. 
+# mom_lobby_teleport
+
+Teleport to a given lobby member given their Steam ID or name.
 The target must be on the same map.
 
 ## Usage Examples

@@ -1,10 +1,13 @@
 ---
 title: mom_api_base_url
-category: var
+categories:
+  - var
+default_value: https://momentum-mod.org
 tags:
   - debug
   - api
-default_value: https://momentum-mod.org
 ---
 
-The base URL for API requests. 
+# mom_api_base_url
+
+The base URL for API requests.

@@ -1,13 +1,16 @@
 ---
 title: mom_ghost_online_trail_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - trail
   - ghost
   - online
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_ghost_online_trail_enable
 
 Toggles drawing other ghost's trails.

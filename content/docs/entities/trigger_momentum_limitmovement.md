@@ -1,58 +1,70 @@
 ---
 title: trigger_momentum_limitmovement
-category: entity
+categories:
+  - entity
 tags:
-- trigger
-- player
-- map
-- ahop
-- bhop
-- limit
-- restrict
-- movement
+  - trigger
+  - player
+  - map
+  - ahop
+  - bhop
+  - limit
+  - restrict
+  - movement
 ---
-----
-![Limitmovement trigger texture](/assets/images/trigger_momentum_limitmovement/limitmovement.jpg)
 
+# trigger_momentum_limitmovement
+
+---
+
+![Limitmovement trigger texture](/assets/images/trigger_momentum_limitmovement/limitmovement.jpg)
 
 Trigger that prevents the player from doing specific keypress movements.
 
 ## Keyvalue
 
->**Track Number** (track_number&lt;**integer**&gt;)
+> **Track Number** (track_number&lt;**integer**&gt;)
 
-The track that this trigger belongs to: 
+The track that this trigger belongs to:
 
- - **-1**: All Tracks
- - **0**: Main Map
- - **1+**: Bonus Tracks
+- **-1**: All Tracks
+- **0**: Main Map
+- **1+**: Bonus Tracks
 
 ## Flags
 
- >**Prevent the player from moving forward (8192)**
+> **Prevent the player from moving forward (8192)**
 
- ***(Disabled by default)***
- >**Prevent the player from moving to the left (16384)**
- 
- ***(Disabled by default)***
- >**Prevent the player from moving to the right (32768)**
- 
- ***(Disabled by default)***
- >**Prevent the player from moving backward (65536)**
- 
- ***(Disabled by default)***
- >**Prevent the player from jumping (131072)**
- 
- ***(Disabled by default)***
- >**Prevent the player from crouching (262144)**
- 
- ***(Disabled by default)***
- >**Prevent the player from bhopping (524288)**
- 
- ***(Disabled by default)***
- >**Prevent the player from walking (1048576)**
- 
- ***(Disabled by default)***
- >**Prevent the player from sprinting (2097152)**
+**_(Disabled by default)_**
 
-  ***(Disabled by default)***
+> **Prevent the player from moving to the left (16384)**
+
+**_(Disabled by default)_**
+
+> **Prevent the player from moving to the right (32768)**
+
+**_(Disabled by default)_**
+
+> **Prevent the player from moving backward (65536)**
+
+**_(Disabled by default)_**
+
+> **Prevent the player from jumping (131072)**
+
+**_(Disabled by default)_**
+
+> **Prevent the player from crouching (262144)**
+
+**_(Disabled by default)_**
+
+> **Prevent the player from bhopping (524288)**
+
+**_(Disabled by default)_**
+
+> **Prevent the player from walking (1048576)**
+
+**_(Disabled by default)_**
+
+> **Prevent the player from sprinting (2097152)**
+
+**_(Disabled by default)_**

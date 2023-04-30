@@ -1,12 +1,15 @@
 ---
 title: mom_chat_sound_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - chat
   - sound
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_chat_sound_enable
 
 Toggles playing a sound on sending or recieving a chat message.

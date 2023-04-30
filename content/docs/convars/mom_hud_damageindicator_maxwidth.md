@@ -1,10 +1,13 @@
 ---
 title: mom_hud_damageindicator_maxwidth
-category: var
+categories:
+  - var
+default_value: 20
 tags:
   - hud
   - damage indicator
-default_value: 20
 ---
+
+# mom_hud_damageindicator_maxwidth
 
 Width of the damage indicator at maximum damage.

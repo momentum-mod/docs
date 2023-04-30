@@ -1,11 +1,14 @@
 ---
 title: mom_chat_typing_status_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - chat
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_chat_typing_status_enable
 
 Toggles showing your typing status in the lobby.

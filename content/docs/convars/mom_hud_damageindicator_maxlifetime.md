@@ -1,11 +1,14 @@
 ---
 title: mom_hud_damageindicator_maxlifetime
-category: var
+categories:
+  - var
+default_value: 1
 tags:
   - hud
   - damage indicator
   - fade
-default_value: 1
 ---
+
+# mom_hud_damageindicator_maxlifetime
 
 How long the damage indicator stays on screen at maximum damage.

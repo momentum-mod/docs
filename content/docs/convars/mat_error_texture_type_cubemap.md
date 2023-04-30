@@ -1,14 +1,17 @@
 ---
 title: mat_error_texture_type_cubemap
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 2
+minimum_value: 0
 tags:
   - error
   - texture
   - material
-minimum_value: 0
-maximum_value: 2
-default_value: 1
 ---
+
+# mat_error_texture_type_cubemap
 
 Error texture to use on cubemaps.
 

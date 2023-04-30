@@ -1,12 +1,15 @@
 ---
 title: mom_paint_scale
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0.001
 tags:
   - paint
   - decal
-minimum_value: 0.001
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_paint_scale
 
 Scale of the paint decals.

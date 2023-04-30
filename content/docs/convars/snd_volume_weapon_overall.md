@@ -1,14 +1,17 @@
 ---
 title: snd_volume_weapon_overall
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - sound
   - volume
   - weapon
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# snd_volume_weapon_overall
 
 {:.notice--info}
 Unlike [`snd_volume_weapon_player`](/var/snd_volume_weapon_player), this cvar is for _any_ weapon sounds

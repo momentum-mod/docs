@@ -1,11 +1,14 @@
 ---
 title: mom_practice_warning_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - practice
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_practice_warning_enable
 
 Toggles the warning for enabling practice mode during a run.

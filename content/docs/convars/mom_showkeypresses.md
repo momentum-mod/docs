@@ -1,11 +1,14 @@
 ---
 title: mom_showkeypresses
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - hud
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_showkeypresses
 
 Toggles showing keypresses and strafe/jump counter.

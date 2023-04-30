@@ -1,23 +1,24 @@
 ---
-title: How to Create a Documentation Page
+categories:
+  - guide
 permalink: /guide/create-docs-page/
-category: guide
 tags:
   - meta
-toc: true
-toc_sticky: true
 ---
+
+# How to Create a Documentation Page
 
 All pages on this site are hosted in the [Momentum Mod docs GitHub repository](https://github.com/momentum-mod/docs). The site uses Jekyll with the Minimal Mistakes theme, and is entirely open source.
 
 ## References
- * [Jekyll Documentation](https://jekyllrb.com/docs/)
-    * [Posts](https://jekyllrb.com/docs/posts/)
-    * [Front matter](https://jekyllrb.com/docs/front-matter/)
-    * [Variables](https://jekyllrb.com/docs/variables/)
-    * [Custom attributes in Jekyll](https://digitaldrummerj.me/styling-jekyll-markdown/)
- * [Markdown Documentation](https://www.markdownguide.org/)
- * [Minimal Mistakes Documentation](https://mmistakes.github.io/minimal-mistakes/docs/layouts/)
+
+- [Jekyll Documentation](https://jekyllrb.com/docs/)
+  - [Posts](https://jekyllrb.com/docs/posts/)
+  - [Front matter](https://jekyllrb.com/docs/front-matter/)
+  - [Variables](https://jekyllrb.com/docs/variables/)
+  - [Custom attributes in Jekyll](https://digitaldrummerj.me/styling-jekyll-markdown/)
+- [Markdown Documentation](https://www.markdownguide.org/)
+- [Minimal Mistakes Documentation](https://mmistakes.github.io/minimal-mistakes/docs/layouts/)
 
 ## Setting up Locally
 
@@ -41,22 +42,22 @@ You can use `CTRL+C` to stop the process in the terminal when you are done with 
 {:.notice--info}
 If you are creating a new file for the first time, it is recommended to look at the [Jekyll documentation page on posts](https://jekyllrb.com/docs/posts/) to get an idea of what this site runs on.
 
-
 A new page should be created inside of the `_posts` directory. Since this site uses Jekyll, a documentation page is going to have to follow their "blog post" file format:  
 `YYYY-MM-DD-<filename>.<ext>`
 
- * `YYYY-MM-DD` is the date the file was created.
- * `<filename>` is either the name of the command/variable, or if it is a guide, is split up into two parts: `guide_<name>`, where `<name>` is the shorthand of the guide's name.
-    * Command/Convar example: `2019-08-25-mom_restart.md`
-    * Guide example: `2019-08-25-guide_create-docs-page.md`
- * `<ext>` is the file's extension, for most cases, will be `.md`, signifying a markdown file. It can be `.html` if need be, but for readability, keep it `.md` as most markdown files can have HTML embedded in them anyways.
+- `YYYY-MM-DD` is the date the file was created.
+- `<filename>` is either the name of the command/variable, or if it is a guide, is split up into two parts: `guide_<name>`, where `<name>` is the shorthand of the guide's name.
+  - Command/Convar example: `2019-08-25-mom_restart.md`
+  - Guide example: `2019-08-25-guide_create-docs-page.md`
+- `<ext>` is the file's extension, for most cases, will be `.md`, signifying a markdown file. It can be `.html` if need be, but for readability, keep it `.md` as most markdown files can have HTML embedded in them anyways.
 
 {% assign pagename = page.path | split: "/" %}
 
-For example, this file name is:   
+For example, this file name is:  
 <code>{{ pagename[1] }}</code>
 
 #### Front Matter
+
 All pages begin with something called the "Front Matter". It's a Jekyll concept that adds variables and describes what the page is, and is used in processing when converting to an actual webpage. The main variables inside of the front matter that you will need to use are:
 
 ```
@@ -100,7 +101,9 @@ This one is blue
 Yellow notice
 
 ## Requiring `-mapping`
+
 If a command or convar requires `-mapping` to work, you may specify it as such in the front matter:
+
 ```
 ---
 [...]
@@ -115,7 +118,6 @@ This will insert the following block at the top of the document:
 **Requires `-mapping`**  
 In order to use this command, you have to boot the game with
 `-mapping` as a launch parameter!
-
 
 ## Further Edits
 

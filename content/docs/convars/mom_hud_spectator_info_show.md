@@ -1,12 +1,15 @@
 ---
 title: mom_hud_spectator_info_show
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 2
+minimum_value: 0
 tags:
   - hud
   - spectate
-minimum_value: 0
-maximum_value: 2
-default_value: 1
 ---
+
+# mom_hud_spectator_info_show
 
 Toggles showing the spectator panel. Off = `0`, On when there are spectators = `1`, Always on = `2`.

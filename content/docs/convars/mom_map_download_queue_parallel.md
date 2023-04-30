@@ -1,15 +1,17 @@
 ---
 title: mom_map_download_queue_parallel
-category: var
+categories:
+  - var
+cvar_ref: mom_map_download_queue
+default_value: 3
+maximum_value: 3
+minimum_value: 1
 tags:
   - map
   - download
   - online
-minimum_value: 1
-maximum_value: 3
-default_value: 3
-cvar_ref: mom_map_download_queue
 ---
 
-The number of parallel map downloads if [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}) is enabled.
+# mom_map_download_queue_parallel
 
+The number of parallel map downloads if [`{{ page.cvar_ref }}`](/var/{{ page.cvar_ref }}) is enabled.

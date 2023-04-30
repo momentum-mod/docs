@@ -1,12 +1,15 @@
 ---
 title: mom_mv_fix_nojump_slope_boosts
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - player
   - movement
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_mv_fix_nojump_slope_boosts
 
 Fixes receiving free vertical velocity when hitting slopes without jumping.

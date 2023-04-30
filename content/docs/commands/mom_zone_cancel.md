@@ -1,9 +1,12 @@
 ---
 title: mom_zone_cancel
-category: command
+categories:
+  - command
+requires_mapping: true
 tags:
   - zones
-requires_mapping: true
 ---
+
+# mom_zone_cancel
 
 Cancels the building of the current zone.

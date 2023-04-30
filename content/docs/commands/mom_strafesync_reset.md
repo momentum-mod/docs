@@ -1,8 +1,11 @@
 ---
 title: mom_strafesync_reset
-category: command
+categories:
+  - command
 tags:
   - strafe sync
 ---
+
+# mom_strafesync_reset
 
 If the timer is disabled, this command resets the strafe sync.

@@ -1,12 +1,15 @@
 ---
 title: mom_mv_ramp_initial_retrace_length
-category: var
+categories:
+  - var
+default_value: 0.2
+maximum_value: 5
+minimum_value: 0.2
 tags:
   - movement
   - player
-minimum_value: 0.2
-maximum_value: 5
-default_value: 0.2
 ---
+
+# mom_mv_ramp_initial_retrace_length
 
 The amount of units used in the offset for retraces.

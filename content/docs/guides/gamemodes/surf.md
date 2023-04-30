@@ -1,19 +1,14 @@
 ---
-title: "Gamemode Guide: Surf"
-
+categories:
+  - guide
 permalink: /guide/gamemode-surf/
-
-category: guide
-
 tags:
   - gamemode
   - info
   - surf
-
-toc: true
-
-toc_sticky: true
 ---
+
+# Gamemode Guide: Surf
 
 ## What is Surf?
 

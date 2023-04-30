@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_lookness
-category: var
+categories:
+  - var
+default_value: 1
 tags:
   - parkour
   - movement
   - player
-default_value: 1
 ---
+
+# sv_wallrun_lookness
 
 Changes the scaling factor for adjusting the player's view to look where they're going when wallrunning.

@@ -1,9 +1,12 @@
 ---
 title: mom_zone_generate
-category: command
+categories:
+  - command
+requires_mapping: true
 tags:
   - zones
-requires_mapping: true
 ---
+
+# mom_zone_generate
 
 Generates the .zon file for map zones.

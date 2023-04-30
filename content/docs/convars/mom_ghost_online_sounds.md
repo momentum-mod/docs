@@ -1,14 +1,17 @@
 ---
-title: mom_ghost_sounds
-category: var
+title: mom_ghost_online_sounds
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - ghost
   - online
   - sound
   - flashlight
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_ghost_sounds
 
 Toggle other player's flashlight sounds.

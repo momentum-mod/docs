@@ -1,15 +1,18 @@
 ---
 title: mom_spectate
-category: command
+categories:
+  - command
+optional_params:
+  - Target's Steam ID or player name
 tags:
   - spectate
   - online
   - lobby
-optional_params:
-  - Target's Steam ID or player name
 ---
 
-Starts spectating. 
+# mom_spectate
+
+Starts spectating.
 Starts in free roam spectate mode if there are no active ghosts (players) on your map.
 
 Takes an optional parameter that is either the steam ID or name of the player to spectate.

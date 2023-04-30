@@ -1,11 +1,14 @@
 ---
 title: sv_wallrun_anticipation
-category: var
+categories:
+  - var
+default_value: 2
 tags:
   - parkour
   - movement
   - player
-default_value: 2
 ---
+
+# sv_wallrun_anticipation
 
 Changes the anticipation logic for wallrunning, 0 = None; 1 = Eye roll only, 2 - Full (bumps).

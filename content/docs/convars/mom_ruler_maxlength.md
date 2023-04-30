@@ -1,11 +1,14 @@
 ---
 title: mom_ruler_maxlength
-category: var
+categories:
+  - var
+default_value: 2000
+maximum_value: 56755.839844
+minimum_value: 0
 tags:
   - ruler
-minimum_value: 0
-maximum_value: 56755.839844
-default_value: 2000
 ---
+
+# mom_ruler_maxlength
 
 Sets the maximum length of the measuring tool.

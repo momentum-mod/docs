@@ -1,13 +1,16 @@
 ---
 title: mom_rj_decals_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - rocket jump
   - decal
   - explosion
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_rj_decals_enable
 
 Toggles creating decals on rocket explosion.

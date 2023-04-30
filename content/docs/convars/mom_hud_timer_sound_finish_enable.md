@@ -1,12 +1,15 @@
 ---
 title: mom_hud_timer_sound_finish_enable
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - sound
   - timer
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# mom_hud_timer_sound_finish_enable
 
 Toggles sound on timer finish.

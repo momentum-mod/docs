@@ -1,14 +1,17 @@
 ---
 title: snd_volume_weapon_player
-category: var
+categories:
+  - var
+default_value: 1
+maximum_value: 1
+minimum_value: 0
 tags:
   - sound
   - volume
   - weapon
-minimum_value: 0
-maximum_value: 1
-default_value: 1
 ---
+
+# snd_volume_weapon_player
 
 {:.notice--info}
 Note that these sounds originate from the local player

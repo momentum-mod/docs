@@ -1,19 +1,15 @@
 ---
-title: "Gamemode Guide: Defrag"
-
+categories:
+  - guide
 permalink: /guide/gamemode-defrag/
-
-category: guide
-
 tags:
   - gamemode
   - info
   - defrag
   - quake
-
-toc: true
-toc_sticky: true
 ---
+
+# Gamemode Guide: Defrag
 
 ## What is Defrag?
 
