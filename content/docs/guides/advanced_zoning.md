@@ -1,7 +1,6 @@
 ---
 categories:
   - guide
-cmd_ref: mom_restart
 permalink: /guide/advanced-zoning/
 tags:
   - zones
@@ -88,7 +87,7 @@ If it is above 0, then you are creating Zones for a Bonus instead, the number co
 
 _For example, Track Number 3 would be for the 3rd bonus._
 
-To teleport to a bonus, or back to the main track use the [`{{page.cmd_ref}}`](/command/{{page.cmd_ref}}) command.
+To teleport to a bonus, or back to the main track use the {{< cmdref mom_restart >}} command.
 
 In this example, to get to bonus 3, you would use `mom_restart 3`.
 

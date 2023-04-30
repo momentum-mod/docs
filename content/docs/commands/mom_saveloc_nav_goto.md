@@ -2,7 +2,6 @@
 title: mom_saveloc_nav_goto
 categories:
   - command
-ccom_ref: mom_saveloc_create
 required_params:
   - saveloc number
 requires_mapping: false
@@ -17,7 +16,7 @@ Goes to the given saveloc number in the list, teleporting the player to it.
 
 ## Usage Examples
 
-[`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }})
+[`mom_saveloc_create`](/command/mom_saveloc_create)
 
 Creates a save, starting at the number 1
 
