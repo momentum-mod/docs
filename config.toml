@@ -1,3 +1,31 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'https://docs.momentum-mod.org/'
+title = 'Momentum Mod Documentation'
+
+theme = 'hugo-book'
+
+
+enableGitInfo = true
+disablePathToLower = true
+
+[menu]
+[[menu.after]]
+	name = "Main Site"
+	url = "https://momentum-mod.org"
+	weight = 1
+[[menu.after]]
+	name = "Github"
+	url = "https://github.com/momentum-mod/docs"
+	weight = 2
+[[menu.after]]
+	name = "Discord"
+	url = "https://discord.gg/momentummod"
+	weight = 3
+
+[params]
+	BookTheme = 'auto'
+	BookToC = true
+	BookRepo = 'https://github.com/momentum-mod/docs'
+	BookCommitPath = 'commit'
+	BookDateFormat = 'Jan 2, 2006'
+	BookEditPath = 'edit/master/exampleSite'
+	BookComments = false
