@@ -2,7 +2,6 @@
 title: trigger_momentum_timer_stage
 categories:
   - entity
-ccom_ref: mom_restart_stage
 tags:
   - timer
   - trigger
@@ -15,7 +14,7 @@ tool_texture: trigger_stage
 ![Stage tool texture](/images/trigger_momentum_timer_stage/stage.jpg)
 
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that marks the start of a stage.  
-It is used on Staged maps and can be reset to via [`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }}).
+It is used on Staged maps and can be reset to via {{< cmdref mom_restart_stage >}}.
 
 {{< hint danger >}}
 Stage Zones cannot be used at the same time as Checkpoint Zones.

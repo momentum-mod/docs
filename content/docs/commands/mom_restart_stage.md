@@ -2,7 +2,6 @@
 title: mom_restart_stage
 categories:
   - command
-ccom_ref: mom_restart
 optional_params:
   - Stage number
   - Track number
@@ -35,7 +34,7 @@ Teleports the player to stage 4 of the current track, if they're not already in 
 
 > `mom_restart_stage 1`
 
-Teleports the player to the start of current track, effectively the same functionality as [`{{ page.ccom_ref }}`](/command/{{ page.ccom_ref }}).
+Teleports the player to the start of current track, effectively the same functionality as {{< cmdref mom_restart >}}.
 
 > `mom_restart_stage 5 3`
 

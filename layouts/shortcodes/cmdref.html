@@ -1,0 +1,5 @@
+{{ with .Get 0 }}
+<a href="/commands/{{ . }}/" title="{{ . }}">
+  <code>{{ . }}</code>
+</a>
+{{ end }}

@@ -1,0 +1,5 @@
+{{ with .Get 0 }}
+<a href="/entities/{{ . }}/" title="{{ . }}">
+  <code>{{ . }}</code>
+</a>
+{{ end }}

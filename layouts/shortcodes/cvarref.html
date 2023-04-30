@@ -1,0 +1,5 @@
+{{ with .Get 0 }}
+<a href="/convars/{{ . }}/" title="{{ . }}">
+  <code>{{ . }}</code>
+</a>
+{{ end }}
