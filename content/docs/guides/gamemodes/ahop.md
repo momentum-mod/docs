@@ -149,6 +149,7 @@ flSpeedAddition -= flNewSpeed - flMaxSpeed
 
 So, after only 2 jumps, the player's speed becomes 1333 UPS!
 
-{:.notice--info}
+{{< hint info >}}
 Fun fact!  
 The movement was immediately patched out of (or just never inside of) Team Fortress 2, however, upon [inspecting the publicly-available SDK 2013 code](https://github.com/ValveSoftware/source-sdk-2013/blob/master/sp/src/game/shared/gamemovement.cpp#L2469), one may notice that this glitch was actually _intentionally left in by Valve_, under a check to see if the player is in a singleplayer game (`gpGlobals->maxclients == 1`).
+{{< /hint >}}

@@ -19,5 +19,6 @@ Adds a command or convar to be executed on start of the map currently being play
 
 If this is done while in a map, `mom_mapcfg_print` will execute whenever that map is loaded.
 
-{:.notice--info}
+{{< hint info >}}
 Recursion is blocked. That is, `mom_mapcfg_add mom_mapcfg_add` will do nothing.
+{{< /hint >}}

@@ -18,9 +18,10 @@ As Momentum Mod aims to be a global platform for everyone around the world to en
 
 To help with bringing Momentum Mod to your language, first **[join our POEditor project](https://poeditor.com/join/project/LZnIxNDkJ4)** and join any languages with which you are comfortable helping out in.
 
-{:.notice--info}
+{{< hint info >}}
 It's recommended that you go [into POEditor Account settings](https://poeditor.com/account/) and rename your profile to your Discord username, and let us know who you are in [the Momentum Mod Discord's **"POEditor Account Link"** forum](https://discord.com/channels/235111289435717633/1029301620799963217). **This is the only way to get a key from your translation work!!**
 
+{{< /hint >}}
 Keep an eye out for "Fuzzy" terms first and foremost, these are terms that have been updated on the English side and potentially need retranslation!
 
 ![](/images/localization/loc-fuzzy-terms.jpg)
@@ -49,16 +50,18 @@ Inside of your `Momentum Mod Playtest/momentum/resource/` folder will be a ton o
 
 You can open the `momentum_<language>.txt` of choice and make edits inside of this file. If you want to see what a token looks like with a different value, search for the text as it appears in the game, edit the value, save the file, and reload Momentum Mod.
 
-{:.notice--warning}
+{{< hint warning >}}
 It is important to save this file in the **`UTF-8`** file format! You may need to use something other than Notepad to do so, as Notepad may default to saving it as "ASCII" which will mess up the encoding!
 
+{{< /hint >}}
 If something's broken, then, first of all, excellent find! You can report issues with translations inside our Discord server, under that language's specific Localization forum post. The proofreaders and Momentum Mod team will investigate it further and fix it in due time.
 
 ## Momentum Developers Section
 
-{:.notice--danger}
+{{< hint danger >}}
 **This section of the documentation is for Momentum Mod team developers only!**
 
+{{< /hint >}}
 ### Adding Terms
 
 Adding terms is quick and easy through the POEditor page.
@@ -124,9 +127,10 @@ export POEDITOR_PROJECT_ID=156379
 export POEDITOR_API_KEY=<your read-only API key>
 ```
 
-{:.notice--info}
+{{< hint info >}}
 You may want to add these to your system variables so that you don't have to set them every time. On Windows this is via `Edit System Environment variables`, on Linux, via your `.bashrc` file.
 
+{{< /hint >}}
 And then you can call the script:
 
 ```sh

@@ -13,7 +13,8 @@ tags:
 
 # snd_volume_weapon_player
 
-{:.notice--info}
+{{< hint info >}}
 Note that these sounds originate from the local player
 
+{{< /hint >}}
 Set the volume for sounds located in the `momentum/sound/weapons/` directory.

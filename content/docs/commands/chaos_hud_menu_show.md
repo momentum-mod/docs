@@ -32,5 +32,6 @@ Parses the `cfg/menu/savelocmenu.kv3` file and shows the hud menu if it isn't al
 
 Parses the `cfg/menu/rulermenu.kv3` file and shows the hud menu if it isn't already open. If it is open already, hides it.
 
-{:.notice--info}
+{{< hint info >}}
 To create your own hud menu see [this guide](/guide/{{ page.guide_ref }}).
+{{< /hint >}}

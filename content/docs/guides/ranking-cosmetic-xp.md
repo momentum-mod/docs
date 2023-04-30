@@ -15,9 +15,10 @@ tags:
 
 **The points you earn from your time on a map is the sum of the points awarded from each of these 3 systems described below: WR/top10 points + formula points + group points.**
 
-{:.notice--info}
+{{< hint info >}}
 The systems described here are complete; we are in agreement that this is what the Ranked-Points should look like. The values chosen for percentiles, WR points, etc. are still up for debate; however, these should be simple to change later, should we decide to change them, because of the design of the system. For now, we consider the values to be informed-guess placeholders.
 
+{{< /hint >}}
 > There are no �base completion points�; the formula system somewhat accounts for this, but we�ve determined that it is not worth having a system of its own
 
 <sub>Aside -- Motivation;</sub>
@@ -50,9 +51,10 @@ We choose `A` = 50000, `B` = 49.\
 In this case the graph shows our equation `Points = 50000 / (rank + 49)`\
 ![Formula Graph](https://i.imgur.com/wjoJYNg.png)
 
-{:.notice--info}
+{{< hint info >}}
 X axis designates player rank on a map,\
 y axis designates points awarded
+{{< /hint >}}
 
 <sub>Ex:<br>
 Player sets a time of rank 468 on a map with 1333 completions.<br>
@@ -183,9 +185,10 @@ Group 1 = 600 points = 20% of WR
 
 ## 50 - 100
 
-{:.notice--info}
+{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|------------|------------|
+{{< /hint >}}
 | Per-level increase | 750,000 | 277.78% |
 | Total exp difference | 31,180,000 | 635.28% |
 
@@ -244,9 +247,10 @@ Group 1 = 600 points = 20% of WR
 
 ## 100 - 150
 
-{:.notice--info}
+{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|------------|------------|
+{{< /hint >}}
 | Per-level increase | 1,000,000 | 98.04% |
 | Total exp difference | 86,480,000 | 327.43% |
 
@@ -305,9 +309,10 @@ Group 1 = 600 points = 20% of WR
 
 ## 150 - 200
 
-{:.notice--info}
+{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|-------------|------------|
+{{< /hint >}}
 | Per-level increase | 1,000,000 | 49.50% |
 | Total exp difference | 135,480,000 | 207.08% |
 

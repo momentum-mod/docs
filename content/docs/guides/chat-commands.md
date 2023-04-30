@@ -15,12 +15,14 @@ tags:
 
 This guide covers all of the supported chat commands and potential inputs they have. These commands can be entered in chat at any time regardless of being in a lobby or not.
 
-{:.notice--info}
+{{< hint info >}}
 All commands are activated by using "/" or "!" or "." and then the trigger keywords listed below. Example: "/spec" or ".spec" or "!spec" all trigger the "Spectate Player" command.
 
-{:.notice--danger}
+{{< /hint >}}
+{{< hint danger >}}
 Do not make "say binds"!! Instead, prefer to create binds to the linked commands. There will never be any exclusive chat commands; they all directly tie to console commands/variables!
 
+{{< /hint >}}
 | Command           |                     Triggers                     |                                    Functional Equivalent                                     | Examples                                                                                                                                                                                                                                                          |
 | :---------------- | :----------------------------------------------: | :------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Bonus Teleport    |                **`"b", "bonus"`**                |          **[`mom_restart <bonus>`](/command/mom_restart)** <br>(or `"/r <bonus>"`)           | `/b 2` teleports the player to Bonus Track 2.<br>`/b` does not work and will let you know that it requires a specific track number. Consider doing **`/r`** if you wish to restart the track.                                                                     |

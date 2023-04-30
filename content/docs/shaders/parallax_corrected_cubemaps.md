@@ -32,9 +32,10 @@ In Hammer, Parallax-Corrected Cubemaps need two entities to function correctly:
 
 ![Entities in Hammer](/images/cubemap_guide/cube_0.jpg)
 
-{:.notice--info}
+{{< hint info >}}
 You may notice a box appear in the centre of the brush when you tie it to a `parallax_obb` entity like shown above.  
 This is normal and allows you to more easily select the brush if you have made it match the shape of the room.
+{{< /hint >}}
 
 Any regular `LightmappedGeneric` materials will still be able to use the cubemap as normal, this feature simply adds functionality on top of the existing `env_cubemap` in conjunction with an extra entity and shader to use inside `.VMT` files.
 
