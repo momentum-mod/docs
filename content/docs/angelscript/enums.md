@@ -1,6 +1,7 @@
 ---
 title: Chaos Hammer AngelScript Enums
-category: angelscript
+categories:
+  - angelscript
 tags:
   - api
   - reference
