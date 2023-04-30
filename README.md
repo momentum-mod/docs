@@ -1,6 +1,6 @@
 ![](assets/images/logo.png)
 
-> A documentation website for Momentum Mod, running on [Jekyll](https://jekyllrb.com/) and using the [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) theme.
+> A documentation website for Momentum Mod, running on [Hugo](https://gohugo.io/) and using the [Hugo Book](https://github.com/alex-shpak/hugo-book) theme.
 
 All documentation is kept up with the game's development branch not our current release version on Steam.
 
