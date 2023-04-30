@@ -1,5 +1,5 @@
 ---
-title: Chaos Hammer AngelScript Classes
+title: Classes
 category: angelscript
 tags:
   - api
