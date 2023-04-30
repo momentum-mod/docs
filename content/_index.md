@@ -3,7 +3,7 @@ title: Introduction
 type: docs
 ---
 
-![](images/logo.png)
+{{< img style="width: 40rem; display:block; margin: 2rem auto 3rem auto;" src="images/logo.png" >}}
 
 > A documentation website for Momentum Mod, running on [Hugo](https://gohugo.io/) and using the [Hugo Book](https://github.com/alex-shpak/hugo-book) theme.
 

@@ -15,11 +15,14 @@ tags:
 
 Error texture to use on cubemaps.
 
-![mat_error_texture_type_cubemap 0](/images/mat_error_texture_type_cubemap/cubemap_type_0.jpg){:style="width:40%;border-radius:5px;"}  
+{{< img src="/images/mat_error_texture_type_cubemap/cubemap_type_0.jpg" style="width:50%;" >}}
+
 `0: unlit purple-black`
 
-![mat_error_texture_type_cubemap 1](/images/mat_error_texture_type_cubemap/cubemap_type_1.jpg){:style="width:40%;border-radius:5px;"}  
+{{< img src="/images/mat_error_texture_type_cubemap/cubemap_type_1.jpg" style="width:50%;" >}}
+
 `1: black`
 
-![mat_error_texture_type_cubemap 2](/images/mat_error_texture_type_cubemap/cubemap_type_2.jpg){:style="width:40%;border-radius:5px;"}  
+{{< img src="/images/mat_error_texture_type_cubemap/cubemap_type_2.jpg" style="width:50%;" >}}
+
 `2: engine/defaultcubemap`
