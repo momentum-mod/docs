@@ -29,13 +29,16 @@ body {
 
 .book-brand {
   width: 100%;
+
   a {
     justify-content: center;
   }
+
   img {
     height: 3.5rem;
     width: 3.5rem;
   }
+
   span {
     font-size: 1.75rem;
     width: 10rem;
@@ -130,6 +133,36 @@ body {
 blockquote {
   padding-left: 16px !important;
   background-color: var(--gray-100);
+}
+
+blockquote,
+.outer-hint {
+  padding-left: 16px !important;
+  background-color: var(--gray-100);
+}
+
+.outer-hint {
+  border-radius: $border-radius;
+  padding: 1rem;
+
+  &.info {
+	background-color: var(--hint-color-info);
+  }  
+
+  &.danger {
+	background-color: var(--hint-color-danger);
+  }  
+  
+  &.warning {
+	background-color: var(--hint-color-warning);
+  }
+
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+  }
 }
 
 // Scrollbars
