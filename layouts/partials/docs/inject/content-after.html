@@ -11,6 +11,23 @@
       {{ if ( isset .Params "default_value" ) }}
         <span><i>Default:</i> {{ .Param "default_value" }}</span>
       {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
+
+{{ if eq ( index .Params.categories 0 ) "command" }}
+  {{ if (or ( isset .Params "required_params" ) ( isset .Params "optional_params" ) ) }}
+    <div>
+      <h2>Parameters</h2>
+      {{ with .Params.required_params }}
+        <span><i>Required:</i> {{ delimit . ", " }}</span>
+      {{ end }}
+      {{ with .Params.optional_params }}
+        <span><i>Optional:</i> {{ delimit . ", " }}</span>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
 
 {{ if eq ( index .Params.categories 0 ) "entity" }}
   {{ with .Params.tool_texture }}
