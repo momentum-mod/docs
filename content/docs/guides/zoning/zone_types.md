@@ -10,7 +10,6 @@ cvar_stage_draw_color: mom_zone_stage_draw_color
 cvar_stage_draw_mode: mom_zone_stage_draw_mode
 cvar_start_draw_color: mom_zone_start_draw_color
 cvar_start_draw_mode: mom_zone_start_draw_mode
-permalink: /guide/zone-types/
 tags:
   - zones
 ---

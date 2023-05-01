@@ -1,7 +1,6 @@
 ---
 categories:
   - guide
-permalink: /guide/gamemode-rocket-jump/
 tags:
   - gamemode
   - info

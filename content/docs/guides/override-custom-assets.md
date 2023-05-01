@@ -5,7 +5,6 @@ categories:
 ccom_wepreload: weapon_reload_scripts
 ccom_wepreloadcur: weapon_reload_script_current
 guide_GSC: gamemode-specific-cfgs
-permalink: /guide/override-custom-assets/
 tags:
   - hud
   - weapon

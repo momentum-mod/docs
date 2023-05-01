@@ -2,7 +2,6 @@
 title: Localization
 categories:
   - guide
-permalink: /guide/localization/
 tags:
   - localization
   - languages

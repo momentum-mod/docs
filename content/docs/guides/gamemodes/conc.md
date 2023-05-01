@@ -1,7 +1,6 @@
 ---
 categories:
   - guide
-permalink: /guide/gamemode-conc/
 tags:
   - gamemode
   - info

@@ -1,7 +1,6 @@
 ---
 categories:
   - shader
-permalink: /shader/parallax-corrected-cubemaps/
 tags:
   - mapping
 ---

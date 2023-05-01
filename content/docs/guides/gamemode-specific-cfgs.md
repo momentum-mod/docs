@@ -2,7 +2,6 @@
 title: Gamemode Specific CFGs
 categories:
   - guide
-permalink: /guide/gamemode-specific-cfgs/
 tags:
   - hud
   - cfg

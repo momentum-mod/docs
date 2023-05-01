@@ -2,7 +2,6 @@
 title: XP Systems
 categories:
   - guide
-permalink: /guide/ranking-cosmetic-xp/
 tags:
   - rank
   - xp

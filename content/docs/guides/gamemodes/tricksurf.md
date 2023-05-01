@@ -1,7 +1,6 @@
 ---
 categories:
   - guide
-permalink: /guide/gamemode-tricksurf/
 tags:
   - gamemode
   - info

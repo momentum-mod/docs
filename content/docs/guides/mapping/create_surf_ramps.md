@@ -2,7 +2,6 @@
 title: Creating Surf Ramps
 categories:
   - guide
-permalink: /guide/create-surf-ramps/
 tags:
   - mapping
   - surf
