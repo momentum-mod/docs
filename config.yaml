@@ -14,6 +14,10 @@ params:
   BookEditPath: edit/master
   BookComments: false
   BookLogo: 'images/masthead.png'
+  # This isn't part of Hugo-Book, it's a hack we do to use to use a different 
+  # string here than the `title` property. ("Momentum Mod Documentation" in
+  # the branding looks bad.)
+  BrandTitle: Documentation
 taxonomies:
   category: categories
   tag: tags
