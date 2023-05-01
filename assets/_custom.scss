@@ -13,17 +13,11 @@ body {
   flex-grow: 1;
   padding: 2rem 1rem;
 
-  h1 {
+  .page-title {
     font-size: 3rem;
+    margin: 0;
+    padding: 0;
     font-family: "Bebas Neue", Roboto, sans-serif;
-
-    &::after {
-      content: " ";
-      display: block;
-      margin-top: 12px;
-      height: 1px;
-      background-color: var(--gray-200);
-    }
   }
 }
 
@@ -142,18 +136,14 @@ blockquote,
 
 .outer-hint {
   border-radius: $border-radius;
-  padding: 1rem;
+  padding: 0.75rem;
+  margin: 0 0 1rem 0;
 
-  &.info {
-	background-color: var(--hint-color-info);
-  }  
-
-  &.danger {
-	background-color: var(--hint-color-danger);
-  }  
-  
-  &.warning {
-	background-color: var(--hint-color-warning);
+  @each $name, $color in $hint-colors {
+    &.#{$name} {
+      border-color: $color;
+      background-color: rgba($color, 0.5);
+    }
   }
 
   h4,
@@ -162,6 +152,40 @@ blockquote,
     margin: 0 0 0.5rem 0;
     font-weight: 700;
   }
+}
+
+.horizontal-separator {
+  display: block;
+  margin: 12px 0 16px;
+  height: 0.9px;
+  background-color: var(--gray-200);
+}
+
+.tags,
+.categories {
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: white;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.25rem;
+  }
+
+  span {
+    font-weight: 500;
+    margin-right: 0.5rem;
+  }
+
+  a {
+    font-style: italic;
+    margin-right: 0.75rem;
+  }
+}
+
+.tags {
+  margin-bottom: 0.75rem;
 }
 
 // Scrollbars
