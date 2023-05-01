@@ -47,28 +47,25 @@ The entity used to create a world portal is `linked_portal_door`. Key values of 
 - `Static Portal` - Whether or not VRAD can cast light through the portal, consequentially meaning the portal never moves or toggles off.
 - `Start Active` - Whether or not this portal will be active as soon as the map loads. If set to false, an input from another entity is required to make the portal functional.
 
-<div class="notice--info">
-	<p>
-		<code>half-width</code> and <code>half-height</code> should typically match between the two entities at either end of the connection, otherwise players may see visual artifacts or get stuck in geometry.
-		<br><br>
-		The rotation of either <code>linked_portal_door</code>, however, do not have to match! Creating two portals that have different orientations will cause the player's camera to automatically correct itself on the other end of the portal. 
-	</p>
-</div>
+{{< hint info >}}
+`half-width` and `half-height` should typically match between the two entities at either end of the connection, otherwise players may see visual artifacts or get stuck in geometry.
 
-### How to Place a Portal.
+The rotation of either `linked_portal_door`, however, do *not* have to match! Creating two portals that have different orientations will cause the player's camera to automatically correct itself on the other end of the portal.
+{{< /hint >}}
+
+
+### How to Place a Portal
 
 In order to create a portal a `linked_portal_door` entity must be placed in the center of the desired location. Orientation is determined by the rotation of the point entity. In the 3D viewport the red axis points to where the open face of the portal will be, the green axis is where the `half-width` value will be used, and the blue axis is where the `half-height` value will be used.
 
 ![Gizmo](/images/using-portals_guide/gizmo.jpg)
 
-<div class="notice--warning">
-	<p>
-		Warning! Portals cannot be placed too close to a wall, otherwise the player can get stuck going through them!
-		<br><br>
-		The minimum distance between a portal's entity and the wall behind it should be about <code>32</code> units. In order to add a portal flush with a wall a setup like the following can be used:
-	</p>
-	<img src="/images/using-portals_guide/door.jpg" alt="Door">
-</div>
+{{< hint warning >}}
+Warning! Portals cannot be placed too close to a wall, otherwise the player can get stuck going through them!
+
+The minimum distance between a portal's entity and the wall behind it should be about `32` units. In order to add a portal flush with a wall a setup like the following can be used:
+![Door](/images/using-portals_guide/door.jpg)
+{{< /hint >}}
 
 ### How to Enable Static Portal Lighting
 
@@ -109,15 +106,10 @@ There are many solutions to an issue with skyboxes like this one. Typically, a p
 ![Skybox Wall](/images/using-portals_guide/skybox-wall.jpg)
 
 {{< hint info >}}
+Given that a skybox simply layers itself behind any other section of the level that is being rendered, traditional optimization tools can be used in many scenarios to hide the problematic section of the level much easier than a portal, except with the added bonus of better performance.
 
-<div class="notice--info">
+While this is out of the scope of this guide, [interlopers.net](https://www.interlopers.net/optimization/index.php?chapter=intro) has an excellent guide about this subject that should help anybody trying to use traditional optimization to hide something behind a skybox.
 {{< /hint >}}
-	<p>
-		Given that a skybox simply layers itself behind any other section of the level that is being rendered, traditional optimization tools can be used in many scenarios to hide the problematic section of the level much easier than a portal, except with the added bonus of better performance.
-		<br><br>
-		While this is out of the scope of this guide, <a href="https://www.interlopers.net/optimization/index.php?chapter=intro">interlopers.net</a> has an excellent guide about this subject that should help anybody trying to use traditional optimization to hide something behind a skybox.
-	</p>
-</div>
 
 If adding a portal is truly the best option, it can be relatively straightforward to implement. The portal must go somewhere between the skybox that is being looked through and what is being seen through the level.
 
