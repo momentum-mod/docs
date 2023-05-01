@@ -2,7 +2,6 @@
 titles: World Portals
 categories:
   - guide
-permalink: /guide/using-portals/
 tags:
   - portals
   - mapping

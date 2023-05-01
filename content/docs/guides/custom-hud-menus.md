@@ -4,7 +4,6 @@ categories:
   - guide
 ccom_reload: chaos_HUD_menu_reload
 ccom_show: chaos_HUD_menu_show
-permalink: /guide/custom-HUD-menus/
 tags:
   - HUD
   - HUD menu

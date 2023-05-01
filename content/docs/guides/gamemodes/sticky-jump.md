@@ -1,7 +1,6 @@
 ---
 categories:
   - guide
-permalink: /guide/gamemode-sticky-jump/
 tags:
   - gamemode
   - info

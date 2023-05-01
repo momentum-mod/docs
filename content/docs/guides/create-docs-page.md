@@ -2,7 +2,6 @@
 title: Creating Docs Pages
 categories:
   - guide
-permalink: /guide/create-docs-page/
 tags:
   - meta
 ---
@@ -67,7 +66,6 @@ All pages begin with something called the "Front Matter". It's a Jekyll concept 
 ---
 title: # The name of the command or convar, or the Guide/Article name. E.g. "mom_restart" or "How to Create a Docs Page"
 
-permalink: # If creating a guide, you will need to override this to point to the shorthand of it. E.g. "/guide/create-docs-page/". If not creating a guide, there is typically no need to overwrite this.
 
 category: [command/guide/var/entity] # The category of the post. One of "command", "guide", "entity" or "var"
 

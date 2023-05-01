@@ -1,7 +1,6 @@
 ---
 categories:
   - shader
-permalink: /shader/modulate-shader/
 tags:
   - modulate
   - shader

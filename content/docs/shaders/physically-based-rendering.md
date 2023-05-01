@@ -1,7 +1,6 @@
 ---
 categories:
   - shader
-permalink: /shader/physically-based-rendering/
 tags:
   - pbr
   - shader

@@ -2,7 +2,6 @@
 title: Chat Commands
 categories:
   - guide
-permalink: /guide/chat-commands/
 tags:
   - chat
   - commands

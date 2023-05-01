@@ -2,7 +2,6 @@
 title: Porting Goldsrc maps to Source
 categories:
   - guide
-permalink: /guide/porting-goldsrc-maps-to-source/
 tags:
   - bhop
   - climb
