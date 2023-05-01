@@ -1,24 +1,26 @@
 ---
+title: Static HUD Menus
 categories:
   - guide
-ccom_reload: chaos_hud_menu_reload
-ccom_show: chaos_hud_menu_show
-permalink: /guide/custom-hud-menus/
+ccom_reload: chaos_HUD_menu_reload
+ccom_show: chaos_HUD_menu_show
+permalink: /guide/custom-HUD-menus/
 tags:
-  - hud
-  - hud menu
+  - HUD
+  - HUD menu
 ---
 
-# Custom HUD Menus
+# Custom static HUD Menus
 
-![Hud Menu](/images/custom-hud-menus_guide/custom-hud-menus-header.png)
+![HUD Menu](/images/custom-hud-menus_guide/custom-hud-menus-header.png)
 
-This guide covers how to make a custom hud menu, such as the saveloc or ruler menus.
+This guide covers how to make a custom HUD menu, such as the saveloc or ruler menus.
+Note that this does *not* cover how to make custom Panorama menus more generally, just **Static HUD menus**, which are controlled by `slot0-9` keys and mimick the VGUI panels commonly used on game servers for e.g. `!nominate`, `!votemap`.
 
-## Hud menus overview
+## HUD menus overview
 
-Hud menus are a nice way to add many commands/cvars into a single menu.
-There are a few hud menus that ship with the game:
+HUD menus are a nice way to add many commands/cvars into a single menu.
+There are a few HUD menus that ship with the game:
 
 - Saveloc menu
 - Ruler menu
@@ -26,18 +28,18 @@ There are a few hud menus that ship with the game:
 
 You can create however many custom menus as you'd like, but only one can be displayed at a time.
 
-To open a hud menu, use [`{{ page.ccom_show }}`](/command/{{ page.ccom_show }}).
-The parameter for this command will autofill with all the available hud menus.
+To open a HUD menu, use {{< cmdref chaos_HUD_menu_show >}}.
+The parameter for this command will autofill with all the available HUD menus.
 
 ## File reading/writing
 
-Hud menus utilize Valve developed data format known as KeyValues3 (KV3). They are stored in and read from `cfg/menus/` as `.kv3` files
+HUD menus utilize Valve developed data format known as KeyValues3 (KV3). They are stored in and read from `cfg/menus/` as `.kv3` files
 Files with the suffix `_default` are not read from unless their counterpart does not exist.
 In which case, it will be copied and have the suffix removed for reading.
 
-## Custom hud menus how-to
+## Custom HUD menus how-to
 
-A simple hud menu with just one command looks like:
+A simple HUD menu with just one command looks like:
 
 ```
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->

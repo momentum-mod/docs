@@ -1,4 +1,5 @@
 ---
+title: Overriding Custom Assets
 categories:
   - guide
 ccom_wepreload: weapon_reload_scripts

@@ -1,7 +1,7 @@
 ---
+title: Collectibles
 categories:
   - guide
-permalink: /guide/collectibles/
 tags:
   - mapping
   - collectibles

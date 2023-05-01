@@ -1,4 +1,5 @@
 ---
+title: Creating Tricks
 categories:
   - guide
 permalink: /guide/creating-tricks/

@@ -1,4 +1,5 @@
 ---
+title: Zone Types
 categories:
   - guide
 cvar_checkpoint_draw_color: mom_zone_checkpoint_draw_color
