@@ -15,6 +15,6 @@ tags:
 
 {{< hint info >}}
 Note that these sounds originate from the local player
-
 {{< /hint >}}
+
 Set the volume for sounds located in the `momentum/sound/weapons/` directory.

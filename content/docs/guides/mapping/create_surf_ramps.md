@@ -14,7 +14,6 @@ tags:
 
 {{< hint info >}}
 Note: This guide assumes that you have a basic working knowledge of the hammer editor and the tools used.
-
 {{< /hint >}}
 
 ## Basic Surf Ramps

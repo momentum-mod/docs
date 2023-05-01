@@ -30,8 +30,8 @@ Open a terminal with Ruby and change to the directory where you cloned this repo
 
 {{< hint info >}}
 If it is your first time running the website, run `bundle install` first to install dependencies!
-
 {{< /hint >}}
+
 Run `bundle exec jekyll serve` to host the website. Jekyll hosts the website at [localhost:4000](http://localhost:4000) and automatically reloads to any file changes done to posts, data, or excess files. The only exception is changes made to `_config.yml`, that will require restarting the Jekyll process.
 
 You can use `CTRL+C` to stop the process in the terminal when you are done with it.
@@ -42,8 +42,8 @@ You can use `CTRL+C` to stop the process in the terminal when you are done with 
 
 {{< hint info >}}
 If you are creating a new file for the first time, it is recommended to look at the [Jekyll documentation page on posts](https://jekyllrb.com/docs/posts/) to get an idea of what this site runs on.
-
 {{< /hint >}}
+
 A new page should be created inside of the `_posts` directory. Since this site uses Jekyll, a documentation page is going to have to follow their "blog post" file format:  
 `YYYY-MM-DD-<filename>.<ext>`
 
@@ -84,29 +84,23 @@ You can highlight something that's important by prepending a notice tag like so:
 ```
 {{< hint danger >}}
 I'm red!
-
 {{< /hint >}}
 {{< hint info >}}
 This one is blue
-
 {{< /hint >}}
 {{< hint warning >}}
 Yellow notice
 ```
-
 {{< /hint >}}
 
 {{< hint danger >}}
 I'm red!
-
 {{< /hint >}}
 {{< hint info >}}
 This one is blue
-
 {{< /hint >}}
 {{< hint warning >}}
 Yellow notice
-
 {{< /hint >}}
 
 ## Requiring `-mapping`

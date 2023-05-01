@@ -20,8 +20,8 @@ To help with bringing Momentum Mod to your language, first **[join our POEditor 
 
 {{< hint info >}}
 It's recommended that you go [into POEditor Account settings](https://poeditor.com/account/) and rename your profile to your Discord username, and let us know who you are in [the Momentum Mod Discord's **"POEditor Account Link"** forum](https://discord.com/channels/235111289435717633/1029301620799963217). **This is the only way to get a key from your translation work!!**
-
 {{< /hint >}}
+
 Keep an eye out for "Fuzzy" terms first and foremost, these are terms that have been updated on the English side and potentially need retranslation!
 
 ![](/images/localization/loc-fuzzy-terms.jpg)
@@ -52,15 +52,14 @@ You can open the `momentum_<language>.txt` of choice and make edits inside of th
 
 {{< hint warning >}}
 It is important to save this file in the **`UTF-8`** file format! You may need to use something other than Notepad to do so, as Notepad may default to saving it as "ASCII" which will mess up the encoding!
-
 {{< /hint >}}
+
 If something's broken, then, first of all, excellent find! You can report issues with translations inside our Discord server, under that language's specific Localization forum post. The proofreaders and Momentum Mod team will investigate it further and fix it in due time.
 
 ## Momentum Developers Section
 
 {{< hint danger >}}
 **This section of the documentation is for Momentum Mod team developers only!**
-
 {{< /hint >}}
 
 ### Adding Terms
@@ -130,8 +129,8 @@ export POEDITOR_API_KEY=<your read-only API key>
 
 {{< hint info >}}
 You may want to add these to your system variables so that you don't have to set them every time. On Windows this is via `Edit System Environment variables`, on Linux, via your `.bashrc` file.
-
 {{< /hint >}}
+
 And then you can call the script:
 
 ```sh

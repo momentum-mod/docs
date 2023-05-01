@@ -50,7 +50,6 @@ game        "csgo/momentum_content"
 
 {{< hint danger >}}
 **Warning:** If Hammer++ crashes on startup, you may have to delete the particles folders that were extracted from the .vpk files.
-
 {{< /hint >}}
 
 ## Lights.rad Setup

@@ -17,11 +17,9 @@ This guide covers all of the supported chat commands and potential inputs they h
 
 {{< hint info >}}
 All commands are activated by using "/" or "!" or "." and then the trigger keywords listed below. Example: "/spec" or ".spec" or "!spec" all trigger the "Spectate Player" command.
-
 {{< /hint >}}
 {{< hint danger >}}
 Do not make "say binds"!! Instead, prefer to create binds to the linked commands. There will never be any exclusive chat commands; they all directly tie to console commands/variables!
-
 {{< /hint >}}
 | Command | Triggers | Functional Equivalent | Examples |
 | :---------------- | :----------------------------------------------: | :------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

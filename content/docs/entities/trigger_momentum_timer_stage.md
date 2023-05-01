@@ -18,7 +18,6 @@ It is used on Staged maps and can be reset to via {{< cmdref mom_restart_stage >
 
 {{< hint danger >}}
 Stage Zones cannot be used at the same time as Checkpoint Zones.
-
 {{< /hint >}}
 
 > Looking for more general info on Zones?  
