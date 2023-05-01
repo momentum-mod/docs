@@ -7,8 +7,6 @@ tags:
   - collectibles
 ---
 
-# How to Use Collectibles
-
 This guide covers how to use collectibles in Momentum Mod. Collectibles are a tool that lets mappers create non-linear, staged maps.
 
 ## Prerequisites

@@ -9,8 +9,6 @@ tags:
 tool_texture: trigger_checkpoint
 ---
 
-# trigger_momentum_timer_checkpoint
-
 ![Checkpoint tool texture](/images/trigger_momentum_timer_checkpoint/checkpoint.jpg)
 
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that splits the timer.  

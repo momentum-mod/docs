@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_disable_impact_view_punch
-
 Disables view roll upon hitting objects at high speeds.

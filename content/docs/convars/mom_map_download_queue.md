@@ -11,6 +11,4 @@ tags:
   - online
 ---
 
-# mom_map_download_queue
-
 If enabled, maps will be queued to download, allowing parallel downloads. The number of parallel downloads is set using {{< cvarref mom_map_download_queue_parallel >}}.

@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_lookahead
-
 Changes the amount of time (in seconds) to lookahead for bumps or corners when wallrunning.

@@ -9,6 +9,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_dynamic_move
-
 Toggles dynamic crosshair behavior with player movement.

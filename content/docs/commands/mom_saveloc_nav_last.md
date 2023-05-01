@@ -8,6 +8,4 @@ tags:
   - teleport
 ---
 
-# mom_saveloc_nav_last
-
 Goes to the last saveloc in the list and teleports the player to it.

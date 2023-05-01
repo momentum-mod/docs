@@ -11,6 +11,4 @@ tags:
   - map info
 ---
 
-# mom_hud_mapinfo_tier_enable
-
 Toggles showing tier in map info on the HUD.

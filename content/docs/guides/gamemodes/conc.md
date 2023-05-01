@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Conc"
 categories:
   - guide
 tags:
@@ -7,8 +8,6 @@ tags:
   - conc
   - concussion grenade
 ---
-
-# Gamemode Guide: Conc
 
 ## What is Conc?
 

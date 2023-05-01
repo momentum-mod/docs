@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# mom_mv_fix_ramp_bugs
-
 Fixes some movement trace errors that incorrectly stop the player.

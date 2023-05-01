@@ -12,6 +12,4 @@ tags:
   - online
 ---
 
-# mom_ghost_online_conc_alpha
-
 Sets the ghost conc grenade alpha value. 10 = more transparent, 255 = opaque.

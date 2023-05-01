@@ -11,8 +11,6 @@ tags:
   - weapon
 ---
 
-# snd_volume_weapon_player
-
 {{< hint info >}}
 Note that these sounds originate from the local player
 {{< /hint >}}

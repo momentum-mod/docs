@@ -10,6 +10,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_stage_draw_color
-
 Color of the stage zone(s) in RGBA format.

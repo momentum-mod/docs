@@ -1,4 +1,6 @@
 ---
+long_title: Angelscript Global Properties
+weight: 10
 categories:
   - angelscript
 tags:
@@ -7,8 +9,6 @@ tags:
   - chaos
   - hammer
 ---
-
-# Chaos Hammer AngelScript Global Properties
 
 This page outlines the various Chaos Hammer AngelScript global properties.
 

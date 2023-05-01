@@ -8,6 +8,4 @@ tags:
   - hud
 ---
 
-# mom_zone_showmenu
-
 Shows the zoning menu.

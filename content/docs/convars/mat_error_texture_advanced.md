@@ -11,8 +11,6 @@ tags:
   - material
 ---
 
-# mat_error_texture_advanced
-
 Whether to try and replace error textures with more meaningful ones for gameplay (see also {{< cvarref mat_error_texture_advanced_basetexture >}}).
 
 {{< img src="/images/mat_error_texture_advanced/advanced_error_texture_0.jpg" style="width:50%;" >}}

@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_jump_push
-
 Changes the fraction of player speed when they push off a wall.

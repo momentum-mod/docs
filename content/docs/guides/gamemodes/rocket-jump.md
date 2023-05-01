@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Rocket Jump"
 categories:
   - guide
 tags:
@@ -7,8 +8,6 @@ tags:
   - rocket jump
   - rj
 ---
-
-# Gamemode Guide: Rocket Jump
 
 ## What is Rocket Jump?
 

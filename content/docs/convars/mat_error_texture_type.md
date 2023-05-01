@@ -11,8 +11,6 @@ tags:
   - material
 ---
 
-# mat_error_texture_type
-
 Error texture to use on world geometry.
 
 ![purple error](/images/mat_error_texture_type/utopia_replace_bad.jpg){:style="width:20%;border-radius:5px;"}

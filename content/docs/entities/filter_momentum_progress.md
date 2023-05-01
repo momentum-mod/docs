@@ -7,8 +7,6 @@ tags:
   - player
 ---
 
-# filter_momentum_progress
-
 Filter that checks to see if the player is at or above the given progress number.
 
 ## Keyvalues

@@ -10,6 +10,4 @@ tags:
   - comparisons
 ---
 
-# mom_hud_comparisons_enable
-
 Shows the run comparison panel. 0 = OFF, 1 = ON

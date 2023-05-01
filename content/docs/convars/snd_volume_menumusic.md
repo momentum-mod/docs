@@ -11,6 +11,4 @@ tags:
   - music
 ---
 
-# snd_volume_menumusic
-
 Set the volume for sounds with the `mainmenu` substring.

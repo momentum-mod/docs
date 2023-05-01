@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# sv_df_aircontrol
-
 Defrag CPM aircontrol multiplier.

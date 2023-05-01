@@ -12,6 +12,4 @@ tags:
   - conc
 ---
 
-# mom_mv_conc_bhop_friction_speed
-
 Minimum horizontal speed before friction starts applying while jumping in conc. 0 = no friction applied.

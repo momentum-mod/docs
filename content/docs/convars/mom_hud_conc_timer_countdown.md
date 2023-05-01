@@ -12,6 +12,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_timer_countdown
-
 Toggles whether the countdown for the conc timer is shown.

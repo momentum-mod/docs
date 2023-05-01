@@ -12,6 +12,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_entpanels_label_enable
-
 Toggles whether the conc entity panels display a label with the remaining fuse timer in seconds.

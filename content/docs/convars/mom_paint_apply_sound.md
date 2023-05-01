@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_paint_apply_sound
-
 Toggles the paint apply sound.

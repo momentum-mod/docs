@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_jump_boost
-
 Changes the fraction of wallrun speed to add to jump speed.

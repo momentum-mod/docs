@@ -10,6 +10,4 @@ tags:
   - timer
 ---
 
-# mom_hud_timer_enable
-
 Toggles displaying the timer.

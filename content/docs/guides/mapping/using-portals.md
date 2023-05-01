@@ -7,8 +7,6 @@ tags:
   - mapping
 ---
 
-# How to Use World Portals
-
 ![Portal Guide Header](/images/using-portals_guide/header.jpg)
 
 This page covers Momentum Mod's implementation of world portals, how they work, how to add them into a map, as well as the limitations associated with the technology.

@@ -10,8 +10,6 @@ tags:
 tool_texture: trigger_teleport
 ---
 
-# trigger_teleport
-
 ![teleport trigger](/images/trigger_momentum_teleport/momentum_teleport.jpg)
 
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that teleports entities that touch it. Entities are teleported to the Remote Destination.

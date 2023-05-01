@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# mom_mv_ramp_initial_retrace_length
-
 The amount of units used in the offset for retraces.

@@ -11,6 +11,4 @@ tags:
   - sound
 ---
 
-# mom_sj_sound_detonate_success_enable
-
 Toggles the sticky launcher detonate success sound.

@@ -11,6 +11,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_auto_make_stage
-
 Whether the "auto" setting for {{< cvarref mom_zone_type >}} should create a stage zone or an end zone (after initial start zone).

@@ -9,6 +9,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_style
-
 Sets the crosshair style. CS:S = `0`, User CVars = `1`, Custom VTF = `2`.

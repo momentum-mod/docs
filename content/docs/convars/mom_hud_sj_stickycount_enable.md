@@ -11,6 +11,4 @@ tags:
   - sticky count
 ---
 
-# mom_hud_sj_stickycount_enable
-
 Toggles the stickybomb counter.

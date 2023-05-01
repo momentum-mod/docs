@@ -10,6 +10,4 @@ tags:
   - outline
 ---
 
-# cl_crosshair_outline_enable
-
 Toggles using a black outline around the crosshair. Takes effect when {{< cvarref cl_crosshair_style >}} is `0` or `1`.

@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_fix_duck_collision
-
 Fixes headbugs by updating the player's bounding box after the duck code instead of at the end of each tick.

@@ -9,8 +9,6 @@ tags:
 tool_texture: trigger_catapult
 ---
 
-# trigger_catapult
-
 ![Catapult trigger texture](/images/trigger_catapult/catapult.jpg)
 
 A trigger volume that launches the player at a specified speed towards a target or in a direction. This entity also contains some filtering for the players velocity and entry angle.

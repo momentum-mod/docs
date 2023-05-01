@@ -10,8 +10,6 @@ tags:
   - teleport
 ---
 
-# mom_lobby_teleport
-
 Teleport to a given lobby member given their Steam ID or name.
 The target must be on the same map.
 

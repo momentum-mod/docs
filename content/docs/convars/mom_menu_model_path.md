@@ -8,6 +8,4 @@ tags:
   - main menu
 ---
 
-# mom_menu_model_path
-
 Changes the model used in the main menu model panel.

@@ -11,7 +11,5 @@ tags:
   - alpha
 ---
 
-# mom_zone_draw_faces_alpha_override
-
 Alpha override for drawing zone faces.
 To enable, see {{< cvarref mom_zone_draw_alpha_override_toggle >}}.

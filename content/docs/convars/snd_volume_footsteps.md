@@ -11,6 +11,4 @@ tags:
   - footsteps
 ---
 
-# snd_volume_footsteps
-
 Set the volume for sounds located in the `momentum/sound/footsteps/` directory.

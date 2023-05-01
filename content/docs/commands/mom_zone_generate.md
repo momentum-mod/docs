@@ -7,6 +7,4 @@ tags:
   - zones
 ---
 
-# mom_zone_generate
-
 Generates the .zon file for map zones.

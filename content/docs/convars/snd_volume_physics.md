@@ -11,6 +11,4 @@ tags:
   - physics
 ---
 
-# snd_volume_physics
-
 Set the volume for sounds located in the `momentum/sound/physics/` directory.

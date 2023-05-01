@@ -10,6 +10,4 @@ tags:
   - decal
 ---
 
-# mom_paint_scale
-
 Scale of the paint decals.

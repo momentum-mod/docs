@@ -8,6 +8,4 @@ tags:
   - spectate
 ---
 
-# mom_chat_spectate_tag
-
 Changes the spectate tag used in chat to denote spectating players.

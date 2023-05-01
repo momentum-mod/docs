@@ -8,6 +8,4 @@ tags:
   - crosshair
 ---
 
-# mom_zone_zoomout
-
 Increases the maximum distance of the zoning reticle. The amount increased is equivalent to the grid size (see {{< cvarref mom_zone_grid >}}).

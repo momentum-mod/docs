@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Climb"
 categories:
   - guide
 tags:
@@ -8,8 +9,6 @@ tags:
   - kz
   - xc
 ---
-
-# Gamemode Guide: Climb
 
 ## What is Climb?
 

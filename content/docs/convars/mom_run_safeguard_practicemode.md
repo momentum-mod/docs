@@ -10,8 +10,6 @@ tags:
   - safeguard
 ---
 
-# mom_run_safeguard_practicemode
-
 Changes the safeguard for enabling practice mode during a run.
 
 Off = `0`, Enable only when not pressing any movement keys = `1`, Enable only on double press =`2`.

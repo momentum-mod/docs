@@ -10,6 +10,4 @@ tags:
   - online
 ---
 
-# mom_ghost_online_rotations
-
 Toggles wonky rotations of ghosts.

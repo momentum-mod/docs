@@ -10,6 +10,4 @@ tags:
   - spectate
 ---
 
-# mom_hud_spectator_info_show_names
-
 Toggles showing the names of who is spectating you.

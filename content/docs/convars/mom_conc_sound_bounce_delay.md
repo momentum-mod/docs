@@ -11,6 +11,4 @@ tags:
   - bounce
 ---
 
-# mom_conc_sound_bounce_delay
-
 Control the minimum time in seconds between a conc grenade's bounce sounds.

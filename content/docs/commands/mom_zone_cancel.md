@@ -7,6 +7,4 @@ tags:
   - zones
 ---
 
-# mom_zone_cancel
-
 Cancels the building of the current zone.

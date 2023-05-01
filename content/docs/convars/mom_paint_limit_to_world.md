@@ -10,6 +10,4 @@ tags:
   - decal
 ---
 
-# mom_paint_limit_to_world
-
 When enabled, limits applying the paint decals to only world geometry.

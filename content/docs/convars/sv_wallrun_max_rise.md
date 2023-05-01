@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_max_rise
-
 Changes the limit on upward velocity for wallrunning.

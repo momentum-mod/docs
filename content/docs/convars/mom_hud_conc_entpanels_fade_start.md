@@ -13,6 +13,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_entpanels_fade_start
-
 The distance (in units) at which conc entity panels start to fade. This fade is enabled using {{< cvarref mom_hud_conc_entpanels_fade_enable >}}.

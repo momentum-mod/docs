@@ -10,8 +10,6 @@ tags:
   - lobby
 ---
 
-# mom_spectate
-
 Starts spectating.
 Starts in free roam spectate mode if there are no active ghosts (players) on your map.
 

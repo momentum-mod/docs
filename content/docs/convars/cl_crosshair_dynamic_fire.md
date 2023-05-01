@@ -9,6 +9,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_dynamic_fire
-
 Toggles dynamic crosshair behavior with weapon firing.

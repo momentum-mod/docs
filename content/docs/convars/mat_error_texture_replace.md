@@ -11,8 +11,6 @@ tags:
   - material
 ---
 
-# mat_error_texture_replace
-
 Replace every non-translucent texture with error texture.
 
 {{< img src="/images/mat_error_texture_replace/utopia_replace.jpg" style="width:50%;" >}}

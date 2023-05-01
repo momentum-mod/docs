@@ -7,8 +7,6 @@ tags:
   - tricksurf
 ---
 
-# How to Create Tricks
-
 ![Creating Tricks Guide](/images/guide_headers/guide_creating_tricks.jpg)
 
 This guide covers how to create tricks for the tricksurf gamemode.

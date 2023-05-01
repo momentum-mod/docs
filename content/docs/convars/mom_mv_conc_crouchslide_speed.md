@@ -12,6 +12,4 @@ tags:
   - conc
 ---
 
-# mom_mv_conc_crouchslide_speed
-
 Minimum speed to initiate a crouchslide in conc. 0 = OFF.

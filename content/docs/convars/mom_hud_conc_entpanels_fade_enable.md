@@ -13,6 +13,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_entpanels_fade_enable
-
 Toggles whether the conc entity panels fade after a certain distance. This distance is set using {{< cvarref mom_hud_conc_entpanels_fade_start >}} and {{< cvarref mom_hud_conc_entpanels_fade_dist >}}.

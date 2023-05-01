@@ -9,8 +9,6 @@ tags:
 tool_texture: trigger_stage
 ---
 
-# trigger_momentum_timer_stage
-
 ![Stage tool texture](/images/trigger_momentum_timer_stage/stage.jpg)
 
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} entity in Momentum Mod that marks the start of a stage.  

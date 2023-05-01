@@ -12,6 +12,4 @@ tags:
   - alpha
 ---
 
-# mom_ghost_online_sticky_alpha
-
 Sets the ghost stickybomb alpha value.

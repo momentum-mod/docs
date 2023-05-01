@@ -1,4 +1,6 @@
 ---
+long_title: Angelscript Enums
+weight: 10
 categories:
   - angelscript
 tags:
@@ -7,8 +9,6 @@ tags:
   - chaos
   - hammer
 ---
-
-# Chaos Hammer AngelScript Enums
 
 This page outlines the various Chaos Hammer AngelScript enums.
 

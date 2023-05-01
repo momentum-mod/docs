@@ -8,8 +8,6 @@ tags:
   - advanced
 ---
 
-# Advanced Zoning
-
 ![Advanced Zone Guide](/images/guide_headers/guide_advanced_zoning.jpg)
 
 This Guide will cover most other things regarding the Zoning Tools, as well as more advanced uses.

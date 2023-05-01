@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# mom_mv_key_movement_ignores_roll
-
 Ignores view roll angle when determining the direction for applying force imposed by movement keys (e.g. +moveleft). This fixes accidental counter-strafing when being rolled by a portal.

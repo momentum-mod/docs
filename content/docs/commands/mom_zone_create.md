@@ -7,6 +7,4 @@ tags:
   - zones
 ---
 
-# mom_zone_create
-
 Creates the zone that you are done building.

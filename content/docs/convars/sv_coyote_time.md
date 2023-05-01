@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_coyote_time
-
 Changes the time after leaving a surface that jumps are still allowed, in seconds.

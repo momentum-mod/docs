@@ -11,6 +11,4 @@ tags:
   - explosion
 ---
 
-# mom_sj_decals_enable
-
 Toggles creating decals of stickybomb explosion.

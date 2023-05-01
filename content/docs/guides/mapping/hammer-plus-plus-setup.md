@@ -7,8 +7,6 @@ tags:
   - tools
 ---
 
-# Hammer++ for Momentum Mod
-
 Momentum Mod is not officially supported by Hammer++, but can be made compatible by following this guide.
 
 **Prerequisites**:

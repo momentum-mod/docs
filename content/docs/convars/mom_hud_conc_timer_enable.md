@@ -12,6 +12,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_timer_enable
-
 Toggles the conc timer.

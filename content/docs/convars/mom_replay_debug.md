@@ -10,6 +10,4 @@ tags:
   - replay
 ---
 
-# mom_replay_debug
-
 If enabled, prints out debug info when loading replays.

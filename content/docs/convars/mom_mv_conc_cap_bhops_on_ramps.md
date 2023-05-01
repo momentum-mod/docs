@@ -12,6 +12,4 @@ tags:
   - conc
 ---
 
-# mom_mv_conc_cap_bhops_on_ramps
-
 If bhop capping is enabled, this caps jump speed on ramps as well. 1 = ON, 0 = OFF.

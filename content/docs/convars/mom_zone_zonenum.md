@@ -11,6 +11,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_zonenum
-
 Sets the zone number. Use `0` to automatically determine one, otherwise start from `2`.

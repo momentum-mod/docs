@@ -9,6 +9,4 @@ tags:
   - decal
 ---
 
-# mom_paint_color
-
 Paint decal color in RGBA.

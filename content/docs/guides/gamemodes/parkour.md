@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Parkour"
 categories:
   - guide
 tags:
@@ -8,8 +9,6 @@ tags:
   - pk
   - titanfall
 ---
-
-# Gamemode Guide: Parkour
 
 ## What is Parkour?
 

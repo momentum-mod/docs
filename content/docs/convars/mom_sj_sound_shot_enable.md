@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_sj_sound_shot_enable
-
 Toggles the stickybomb launcher firing sound.

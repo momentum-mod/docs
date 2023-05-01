@@ -9,6 +9,4 @@ tags:
   - ghost
 ---
 
-# mom_replay_goto
-
 Goes to the specified tick in the currently spectated replay.

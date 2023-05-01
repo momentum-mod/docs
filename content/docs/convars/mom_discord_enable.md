@@ -10,6 +10,4 @@ tags:
   - rich presence
 ---
 
-# mom_discord_enable
-
 Toggles the Discord rich-presence (RPC) functionality.

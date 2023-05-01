@@ -9,6 +9,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_dot
-
 Toggles crosshair dot.

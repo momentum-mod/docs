@@ -11,6 +11,4 @@ tags:
   - crosshair
 ---
 
-# mom_zone_crosshair
-
 Toggles the draw of the zoning crosshair/reticle.

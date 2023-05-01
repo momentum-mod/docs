@@ -9,8 +9,6 @@ tags:
   - safeguard
 ---
 
-# mom_run_safeguard_restart
-
 Changes the safeguard for restarting the current run.
 
 Off = `0`, Restart only when not pressing any movement keys = `1`, Restart only on double press =`2`.

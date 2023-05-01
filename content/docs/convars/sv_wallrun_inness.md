@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_inness
-
 Changes the scaling factor for how much to steer inward toward the wall when wallrunning.

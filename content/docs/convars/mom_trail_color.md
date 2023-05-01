@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# mom_trail_color
-
 The player's trail color. Accepts color value in format RGBA.

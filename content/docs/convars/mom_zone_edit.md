@@ -11,6 +11,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_edit
-
 Toggles zone editing

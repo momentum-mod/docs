@@ -8,8 +8,6 @@ tags:
   - map
 ---
 
-# trigger_momentum_progress
-
 Used for storing a discrete progress number in the player.
 
 ## Keyvalues

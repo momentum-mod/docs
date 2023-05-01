@@ -10,8 +10,6 @@ tags:
   - trigger
 ---
 
-# mom_zone_delete
-
 Deletes zone types. Accepts start/stop/stage/checkpoint or an entity index.
 
 ## Usage Examples

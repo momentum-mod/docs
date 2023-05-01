@@ -11,6 +11,4 @@ tags:
   - bounce
 ---
 
-# mom_conc_sound_bounce_min_speed
-
 Control the minimum speed a conc must be traveling to trigger a bounce sound.

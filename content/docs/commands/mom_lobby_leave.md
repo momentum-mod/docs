@@ -7,6 +7,4 @@ tags:
   - online
 ---
 
-# mom_lobby_leave
-
 Leaves the current lobby.

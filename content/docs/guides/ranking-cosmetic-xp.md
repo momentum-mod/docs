@@ -9,8 +9,6 @@ tags:
   - cosmetic
 ---
 
-# Ranking Points & Cosmetic XP
-
 ## Ranked-Points System
 
 **The points you earn from your time on a map is the sum of the points awarded from each of these 3 systems described below: WR/top10 points + formula points + group points.**

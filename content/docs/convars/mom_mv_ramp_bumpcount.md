@@ -10,6 +10,4 @@ tags:
   - weapon
 ---
 
-# mom_mv_ramp_bumpcount
-
 Helps with fixing some surf/ramp bugs.

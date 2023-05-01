@@ -12,6 +12,4 @@ tags:
   - player
 ---
 
-# mom_df_physics
-
 Defrag physics mode (0 = VQ3, 1 = CPM).

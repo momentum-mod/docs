@@ -7,6 +7,4 @@ tags:
   - practice
 ---
 
-# sv_noclipspeed_sprint_multiplier
-
 Changes the speed multiplier when holding sprint in noclip or practice mode.

@@ -9,6 +9,4 @@ tags:
   - teleport destinations
 ---
 
-# mom_teledests_draw
-
 Toggles drawing teleport destinations.

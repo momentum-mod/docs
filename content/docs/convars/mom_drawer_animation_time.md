@@ -10,6 +10,4 @@ tags:
   - main menu
 ---
 
-# mom_drawer_animation_time
-
 Controls the amount of time the main menu drawer opening/closing animation lasts, in seconds.

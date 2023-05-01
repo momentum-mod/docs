@@ -10,6 +10,4 @@ tags:
   - spectate
 ---
 
-# mom_hud_spectator_info_show
-
 Toggles showing the spectator panel. Off = `0`, On when there are spectators = `1`, Always on = `2`.

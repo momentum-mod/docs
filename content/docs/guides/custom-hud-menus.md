@@ -9,8 +9,6 @@ tags:
   - HUD menu
 ---
 
-# Custom static HUD Menus
-
 ![HUD Menu](/images/custom-hud-menus_guide/custom-hud-menus-header.png)
 
 This guide covers how to make a custom HUD menu, such as the saveloc or ruler menus.

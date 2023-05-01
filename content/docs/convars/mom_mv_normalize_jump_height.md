@@ -11,6 +11,4 @@ tags:
   - cs:s
 ---
 
-# mom_mv_normalize_jump_height
-
 Makes the player jump to the exact same height every jump. The height if affected by {{< cvarref mom_mv_jump_z_offset >}}.

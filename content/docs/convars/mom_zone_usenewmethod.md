@@ -11,6 +11,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_usenewmethod
-
 Toggles using new point-based zoning method by Mehis.

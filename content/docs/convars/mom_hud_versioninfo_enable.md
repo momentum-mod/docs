@@ -9,6 +9,4 @@ tags:
   - hud
 ---
 
-# mom_hud_versioninfo_enable
-
 Toggles showing the current momentum version.

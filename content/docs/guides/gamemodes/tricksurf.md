@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Tricksurf"
 categories:
   - guide
 tags:
@@ -8,8 +9,6 @@ tags:
   - tricksurf
   - tsurf
 ---
-
-# Gamemode Guide: Tricksurf
 
 ## What is Tricksurf?
 

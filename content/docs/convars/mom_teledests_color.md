@@ -8,6 +8,4 @@ tags:
   - color
 ---
 
-# mom_teledests_color
-
 Changes the color of drawn teleport destinations in RGBA format.

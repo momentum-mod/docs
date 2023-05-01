@@ -9,6 +9,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_scale_enable
-
 Toggles whether crosshair scales to the resolution defined in {{< cvarref cl_crosshair_scale >}}. Takes effect when {{< cvarref cl_crosshair_style >}} is `0`.

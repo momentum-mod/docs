@@ -9,8 +9,6 @@ tags:
   - ghost
 ---
 
-# mom_replay_play
-
 Begins playback of a specified replay in first-person mode.
 
 This accepts an `mrf` file. Eg:

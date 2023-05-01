@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_chat_sound_enable
-
 Toggles playing a sound on sending or recieving a chat message.

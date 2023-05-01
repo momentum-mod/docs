@@ -10,8 +10,6 @@ tags:
   - goto
 ---
 
-# mom_saveloc_nav_goto
-
 Goes to the given saveloc number in the list, teleporting the player to it.
 
 ## Usage Examples

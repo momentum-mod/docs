@@ -8,6 +8,4 @@ tags:
   - ruler
 ---
 
-# mom_ruler_duration
-
 Sets the amount of seconds a measurement is shown for before fading out.

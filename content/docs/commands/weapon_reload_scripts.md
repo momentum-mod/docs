@@ -6,6 +6,4 @@ tags:
   - weapon
 ---
 
-# weapon_reload_scripts
-
 Reloads all weapon scripts.

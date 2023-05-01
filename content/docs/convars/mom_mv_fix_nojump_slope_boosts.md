@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_fix_nojump_slope_boosts
-
 Fixes receiving free vertical velocity when hitting slopes without jumping.

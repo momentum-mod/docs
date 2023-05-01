@@ -12,6 +12,4 @@ tags:
   - flashlight
 ---
 
-# mom_ghost_sounds
-
 Toggle other player's flashlight sounds.

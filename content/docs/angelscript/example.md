@@ -1,4 +1,6 @@
 ---
+long_title: Angelscript examples
+weight: 100
 categories:
   - angelscript
 tags:
@@ -8,8 +10,6 @@ tags:
   - hammer
   - example
 ---
-
-# Chaos Hammer AngelScript Examples
 
 This page contains various Chaos Hammer AngelScript examples.
 

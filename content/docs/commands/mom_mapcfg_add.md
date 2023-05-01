@@ -9,8 +9,6 @@ tags:
   - map
 ---
 
-# mom_mapcfg_add
-
 Adds a command or convar to be executed on start of the map currently being played.
 
 ## Usage Example

@@ -10,6 +10,4 @@ tags:
   - flashlight
 ---
 
-# mom_ghost_online_flashlights_enable
-
 Toggles drawing other ghosts' flashlights.

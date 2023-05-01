@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# mom_trail_enable
-
 Toggles the player's trail (in seconds).

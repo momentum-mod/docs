@@ -9,6 +9,4 @@ tags:
   - teleport
 ---
 
-# mom_tricks_map_tele
-
 Teleports to a given map tele by index, which is 1-based.

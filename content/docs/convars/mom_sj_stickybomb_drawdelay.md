@@ -9,6 +9,4 @@ tags:
   - sticky jump
 ---
 
-# mom_sj_stickybomb_drawdelay
-
 Determines how long it takes for stickybombs to start being drawn after spawning.

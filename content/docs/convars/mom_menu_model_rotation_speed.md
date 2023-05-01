@@ -10,6 +10,4 @@ tags:
   - main menu
 ---
 
-# mom_menu_model_rotation_speed
-
 Controls how fast the main menu model spins.

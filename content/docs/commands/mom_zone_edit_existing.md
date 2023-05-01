@@ -10,6 +10,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_edit_existing
-
 Edits an existing zone. Only accepts an entity index.

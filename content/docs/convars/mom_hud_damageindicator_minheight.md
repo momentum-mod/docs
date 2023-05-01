@@ -8,6 +8,4 @@ tags:
   - damage indicator
 ---
 
-# mom_hud_damageindicator_minheight
-
 Height of the damage indicator at minimum damage.

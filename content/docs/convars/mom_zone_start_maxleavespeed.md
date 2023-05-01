@@ -12,6 +12,4 @@ tags:
   - start
 ---
 
-# mom_zone_start_maxleavespeed
-
 Max leave speed for the start trigger. `0` to disable.

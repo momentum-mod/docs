@@ -11,8 +11,6 @@ tags:
   - teleport
 ---
 
-# mom_restart_stage
-
 Restarts the player to the start of the current stage on the current track; the player is teleported to their stage start mark if they have one, otherwise they are teleported to the middle of the stage zone.
 
 Optionally takes a stage number, or both stage and track numbers as parameters.

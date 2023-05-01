@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_lookness
-
 Changes the scaling factor for adjusting the player's view to look where they're going when wallrunning.

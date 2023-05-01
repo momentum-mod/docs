@@ -8,8 +8,6 @@ tags:
   - point entity
 ---
 
-# momentum_generic_bomb
-
 Generic Bomb
 
 ## Keyvalues

@@ -9,8 +9,6 @@ tags:
   - mark
 ---
 
-# mom_stage_mark_clear
-
 Clears the current stage zone's saved start location if there is one.
 Optionally accepts a stage number.
 

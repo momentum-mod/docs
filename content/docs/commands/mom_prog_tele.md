@@ -7,6 +7,4 @@ tags:
   - teleport
 ---
 
-# mom_prog_tele
-
 Teleports the player to the last touched progress trigger.

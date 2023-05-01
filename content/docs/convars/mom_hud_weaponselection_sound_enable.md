@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_hud_weaponselection_sound_enable
-
 Toggles playing the weapon switch sound.

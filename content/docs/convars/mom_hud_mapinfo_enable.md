@@ -11,6 +11,4 @@ tags:
   - map info
 ---
 
-# mom_hud_mapinfo_enable
-
 Toggles showing the map info on the HUD.

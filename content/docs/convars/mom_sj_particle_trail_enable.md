@@ -11,6 +11,4 @@ tags:
   - trail
 ---
 
-# mom_sj_particle_trail_enable
-
 Toggles the stickybomb trail particle.

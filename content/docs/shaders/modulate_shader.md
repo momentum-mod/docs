@@ -6,8 +6,6 @@ tags:
   - shader
 ---
 
-# Modulate Shader
-
 {{< hint warning >}}
 The `$hdrscale` parameter is only present in the `DX11` version of the shader
 {{< /hint >}}

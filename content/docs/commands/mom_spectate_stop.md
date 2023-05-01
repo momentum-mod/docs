@@ -8,6 +8,4 @@ tags:
   - lobby
 ---
 
-# mom_spectate_stop
-
 Stops spectating.

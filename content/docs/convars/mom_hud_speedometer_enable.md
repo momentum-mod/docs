@@ -10,6 +10,4 @@ tags:
   - speedometer
 ---
 
-# mom_hud_speedometer_enable
-
 Toggles the entire speedometer panel on or off.

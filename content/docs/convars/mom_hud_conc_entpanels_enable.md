@@ -12,6 +12,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_entpanels_enable
-
 Toggles whether concs have their fuse timer displayed above them as an entity panel.

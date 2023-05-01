@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_time
-
 Changes the max wallrun duration, in milliseconds.

@@ -7,6 +7,4 @@ tags:
   - ghost
 ---
 
-# mom_replay_play_loaded
-
 Begins playback of a loaded replay in first person, if there is one.

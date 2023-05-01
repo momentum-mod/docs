@@ -6,8 +6,6 @@ tags:
   - trigger
 ---
 
-# trigger_reversespeed
-
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} for reversing the speed of the player in a particular axis.
 
 ## Keyvalues

@@ -8,8 +8,6 @@ tags:
   - weapon
 ---
 
-# How to Override Custom Assets
-
 When the game boots, it scans the `momentum/custom/` folder for VPK files and subfolders.
 For steam users, this will be
 

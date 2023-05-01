@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# mom_mv_use_old_gamemovement
-
 Use the old movement code from before the code refactor.

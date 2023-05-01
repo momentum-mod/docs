@@ -12,6 +12,4 @@ tags:
   - conc
 ---
 
-# mom_mv_conc_crouchslide_accelerate
-
 The amount of ground acceleration to apply while crouchsliding in conc.

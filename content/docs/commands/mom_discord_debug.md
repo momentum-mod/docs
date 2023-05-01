@@ -8,8 +8,6 @@ tags:
   - printout
 ---
 
-# mom_discord_debug
-
 Helps debug Discord integration. Prints out the party ID (steam lobby ID), spectate secret, and join secret.
 
 ### Join secret

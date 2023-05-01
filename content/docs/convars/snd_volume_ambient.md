@@ -11,6 +11,4 @@ tags:
   - ambient
 ---
 
-# snd_volume_ambient
-
 Set the volume for sounds located in the `momentum/sound/ambient/` directory.

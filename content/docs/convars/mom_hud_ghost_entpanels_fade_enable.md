@@ -10,6 +10,4 @@ tags:
   - fade
 ---
 
-# mom_hud_ghost_entpanels_fade_enable
-
 Toggles the entity panels fading out based on distance. This distance is set using {{< cvarref mom_hud_ghost_entpanels_fade_start >}} and {{< cvarref mom_hud_ghost_entpanels_fade_dist >}}.

@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_conc_sound_bounce_enable
-
 Toggle whether the conc makes a sound when it bounces. 0 = OFF, 1 = ON.

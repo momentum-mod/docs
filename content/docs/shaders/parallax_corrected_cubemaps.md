@@ -5,8 +5,6 @@ tags:
   - mapping
 ---
 
-# Parallax-Corrected Cubemaps
-
 ![Cubemap Guide](/images/guide_headers/guide_parallax_cubemaps.jpg)
 
 This page covers Momentum's implementation of Parallax-Corrected Cubemaps, created with a combination of custom entities and materials.
