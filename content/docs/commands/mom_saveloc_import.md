@@ -8,8 +8,6 @@ tags:
   - saveloc
 ---
 
-# mom_saveloc_import
-
 Imports savelocs from another map into the current map.
 Includes parameter autocompletion, which fills with maps that have at least one saveloc.
 

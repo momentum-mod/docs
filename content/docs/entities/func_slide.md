@@ -7,8 +7,6 @@ tags:
   - func
 ---
 
-# func_slide
-
 A brush entity that allows the player to slide across the surface of it without friction.
 
 ## Keyvalues

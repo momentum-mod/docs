@@ -11,6 +11,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_grid
-
 The grid size used to create zones.

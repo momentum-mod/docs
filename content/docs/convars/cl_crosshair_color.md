@@ -9,6 +9,4 @@ tags:
   - alpha
 ---
 
-# cl_crosshair_color
-
 Set the crosshair's color. Accepts color value in format RGBA. If RGB is supplied, alpha is set to 255.

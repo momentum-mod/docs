@@ -9,6 +9,4 @@ tags:
   - replay
 ---
 
-# mom_replay_selection
-
 Going forward or backward in the ReplayUI. Pause = `0`, Backwards = `1`, Forwards =`2`.

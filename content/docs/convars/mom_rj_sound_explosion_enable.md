@@ -11,6 +11,4 @@ tags:
   - sound
 ---
 
-# mom_rj_sound_explosion_enable
-
 Toggles the rocket explosion sound.

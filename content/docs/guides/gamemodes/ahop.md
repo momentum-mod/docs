@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Ahop"
 categories:
   - guide
 tags:
@@ -7,8 +8,6 @@ tags:
   - ahop
   - accelerated hop
 ---
-
-# Gamemode Guide: Ahop
 
 ## What is Ahop?
 

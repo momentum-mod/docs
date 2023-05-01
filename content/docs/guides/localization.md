@@ -10,8 +10,6 @@ tags:
   - translation
 ---
 
-# Localizing Momentum Mod
-
 As Momentum Mod aims to be a global platform for everyone around the world to enjoy, it only makes sense that we offer support for the various languages players may know. Unfortunately however, nobody on the Momentum Mod team knows every language, so we need your help!
 
 ## Translating on POEditor

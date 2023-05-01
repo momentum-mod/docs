@@ -10,6 +10,4 @@ tags:
   - fade
 ---
 
-# mom_hud_ghost_entpanels_fade_start
-
 The distance (in units) at which entity panels start to fade. This fade is enabled using {{< cvarref mom_hud_ghost_entpanels_fade_enable >}}.

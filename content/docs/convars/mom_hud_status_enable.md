@@ -9,6 +9,4 @@ tags:
   - hud
 ---
 
-# mom_hud_status_enable
-
 Toggles showing hud status, which displays information about which zone you are in, which saveloc was last loaded, whether you are in practice mode, etc.

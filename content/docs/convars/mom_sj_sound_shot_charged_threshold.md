@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_sj_sound_shot_charged_threshold
-
 Controls the amount of time (in seconds) a stickybomb needs to be charged before playing a more powerful version of the sticky shot sound.

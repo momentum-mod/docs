@@ -8,8 +8,6 @@ tags:
   - speedometer
 ---
 
-# mom_hud_speedometer_fps
-
 {{< hint info >}}
 Setting this value to `0` removes the limit (uncapped)
 {{< /hint >}}

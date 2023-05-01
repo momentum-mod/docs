@@ -11,6 +11,4 @@ tags:
   - ladder
 ---
 
-# mom_mv_ladder_edge_grabbing
-
 Enables automatically attaching to ladders when walking off a floor above them.

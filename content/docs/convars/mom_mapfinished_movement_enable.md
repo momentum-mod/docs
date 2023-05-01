@@ -10,6 +10,4 @@ tags:
   - map finished
 ---
 
-# mom_mapfinished_movement_enable
-
 Toggles being able to move after completing a run.

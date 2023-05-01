@@ -11,6 +11,4 @@ tags:
   - charge meter
 ---
 
-# mom_hud_sj_chargemeter_enable
-
 Toggles showing the chargemeter when the sticky launcher is actively equipped.

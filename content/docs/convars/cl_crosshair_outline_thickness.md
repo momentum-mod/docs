@@ -9,6 +9,4 @@ tags:
   - outline
 ---
 
-# cl_crosshair_outline_thickness
-
 Sets the thickness of the crosshair's outline. Takes effect when {{< cvarref cl_crosshair_outline_enable >}} is `1`.

@@ -6,8 +6,6 @@ tags:
   - meta
 ---
 
-# How to Create a Documentation Page
-
 All pages on this site are hosted in the [Momentum Mod docs GitHub repository](https://github.com/momentum-mod/docs). The site uses Jekyll with the Minimal Mistakes theme, and is entirely open source.
 
 ## References

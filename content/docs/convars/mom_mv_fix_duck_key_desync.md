@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_fix_duck_key_desync
-
 Handle desync between the duck key being pressed and the real duck state better. (e.g. when the duck state is changed by a saveloc)

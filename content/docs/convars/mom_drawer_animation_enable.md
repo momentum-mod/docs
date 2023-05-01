@@ -10,6 +10,4 @@ tags:
   - main menu
 ---
 
-# mom_drawer_animation_enable
-
 Toggle the opening/closing animation of the main menu drawer panel.

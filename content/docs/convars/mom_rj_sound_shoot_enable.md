@@ -11,6 +11,4 @@ tags:
   - sound
 ---
 
-# mom_rj_sound_shoot_enable
-
 Toggles the rocket shooting sound.

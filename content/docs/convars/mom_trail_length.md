@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# mom_trail_length
-
 The length of the player's trail (in seconds).

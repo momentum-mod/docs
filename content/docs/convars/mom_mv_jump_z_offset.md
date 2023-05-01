@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_jump_z_offset
-
 The amount of units on the Z axis to offset each time the player jumps when jump height normalization is enabled.

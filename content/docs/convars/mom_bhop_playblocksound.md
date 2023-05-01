@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_bhop_playblocksound
-
 Toggles the door bhop block sound.

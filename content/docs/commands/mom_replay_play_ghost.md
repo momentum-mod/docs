@@ -9,8 +9,6 @@ tags:
   - ghost
 ---
 
-# mom_replay_play_ghost
-
 Begins playback of a replay as a ghost.
 
 This accepts an `mrf` file. Eg:

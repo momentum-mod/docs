@@ -7,8 +7,6 @@ tags:
   - collectible system
 ---
 
-# filter_momentum_collectibles
-
 Filter that checks whether the player is at or above the given collectible count.
 
 ## Keyvalues

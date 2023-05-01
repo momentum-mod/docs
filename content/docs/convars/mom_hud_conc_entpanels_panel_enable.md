@@ -12,6 +12,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_entpanels_panel_enable
-
 Toggles whether the cont entity panels display the panel with the remaining fuse timer.

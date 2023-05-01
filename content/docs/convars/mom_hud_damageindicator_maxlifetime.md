@@ -9,6 +9,4 @@ tags:
   - fade
 ---
 
-# mom_hud_damageindicator_maxlifetime
-
 How long the damage indicator stays on screen at maximum damage.

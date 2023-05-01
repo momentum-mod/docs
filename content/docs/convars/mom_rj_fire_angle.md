@@ -10,6 +10,4 @@ tags:
   - weapon
 ---
 
-# mom_rj_fire_angle
-
 Decides where rockets are fired from, 0 is The Original (center), 1 is Stock (side), and 2 is the Cow Mangler (hybrid).

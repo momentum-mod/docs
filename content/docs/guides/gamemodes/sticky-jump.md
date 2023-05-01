@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Sticky Jump"
 categories:
   - guide
 tags:
@@ -7,8 +8,6 @@ tags:
   - sticky jump
   - sj
 ---
-
-# Gamemode Guide: Sticky Jump
 
 ## What is Sticky Jump?
 

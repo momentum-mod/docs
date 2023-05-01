@@ -7,6 +7,4 @@ tags:
   - online
 ---
 
-# mom_lobby_create
-
 Starts hosting a lobby.

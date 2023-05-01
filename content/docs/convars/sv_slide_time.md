@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_slide_time
-
 Changes the max powerslide time, in milliseconds.

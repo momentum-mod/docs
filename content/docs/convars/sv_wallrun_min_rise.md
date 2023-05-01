@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_min_rise
-
 Changes the limit on downward velocity for wallrunning.

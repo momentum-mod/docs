@@ -9,6 +9,4 @@ tags:
   - lobby
 ---
 
-# mom_lobby_max_players
-
 Sets the maximum number of players allowed in lobbies you create.

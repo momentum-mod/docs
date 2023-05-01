@@ -12,6 +12,4 @@ tags:
   - start
 ---
 
-# mom_zone_start_limitspdmethod
-
 Changes the limit speed method used in the start zone. Take into account player z-velocity = `0`, Ignore z-velocity = `1`.

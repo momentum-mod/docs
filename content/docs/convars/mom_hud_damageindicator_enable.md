@@ -10,6 +10,4 @@ tags:
   - damage indicator
 ---
 
-# mom_hud_damageindicator_enable
-
 Toggles showing the damage indicator.

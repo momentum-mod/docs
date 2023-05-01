@@ -11,8 +11,6 @@ tags:
   - api
 ---
 
-# mom_api_log_requests_sensitive
-
 If enabled, API requests that are sensitive will be logged to console.
 
 {{< hint danger >}}

@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Surf"
 categories:
   - guide
 tags:
@@ -6,8 +7,6 @@ tags:
   - info
   - surf
 ---
-
-# Gamemode Guide: Surf
 
 ## What is Surf?
 

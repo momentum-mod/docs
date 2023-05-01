@@ -7,8 +7,6 @@ tags:
   - practice
 ---
 
-# mom_practice
-
 Toggles practice mode, allowing the player to fly around in noclip.
 The player keeps their position and velocity when toggled off.
 Additionally, holding the jump key in this mode prevents the player from being teleported.

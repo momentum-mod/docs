@@ -11,6 +11,4 @@ tags:
   - ui
 ---
 
-# snd_volume_ui
-
 Set the volume for sounds located in the `momentum/sound/ui/` directory.

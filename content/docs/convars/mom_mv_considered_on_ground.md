@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_considered_on_ground
-
 Amount of units off the ground the player needs to be before being considered on the ground.

@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Defrag"
 categories:
   - guide
 tags:
@@ -7,8 +8,6 @@ tags:
   - defrag
   - quake
 ---
-
-# Gamemode Guide: Defrag
 
 ## What is Defrag?
 

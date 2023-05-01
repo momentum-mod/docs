@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_speed
-
 Changes the wallrun speed.

@@ -12,6 +12,4 @@ tags:
   - track
 ---
 
-# mom_zone_track
-
 What track to create the zone for. Main track = `0`, above `0` is a bonus track.

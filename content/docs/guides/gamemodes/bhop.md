@@ -1,4 +1,5 @@
 ---
+long_title: "Gamemode Guide: Bhop"
 categories:
   - guide
 tags:
@@ -7,8 +8,6 @@ tags:
   - bhop
   - bunnyhop
 ---
-
-# Gamemode Guide: Bhop
 
 ## What is Bhop?
 

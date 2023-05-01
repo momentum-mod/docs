@@ -1,4 +1,6 @@
 ---
+long_title: Angelscript Value Types
+weight: 10
 categories:
   - angelscript
 tags:
@@ -7,8 +9,6 @@ tags:
   - chaos
   - hammer
 ---
-
-# Chaos Hammer AngelScript Value Types
 
 This page outlines the various Chaos Hammer AngelScript value types.
 

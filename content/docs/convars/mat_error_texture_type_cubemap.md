@@ -11,8 +11,6 @@ tags:
   - material
 ---
 
-# mat_error_texture_type_cubemap
-
 Error texture to use on cubemaps.
 
 {{< img src="/images/mat_error_texture_type_cubemap/cubemap_type_0.jpg" style="width:50%;" >}}

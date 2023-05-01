@@ -8,6 +8,4 @@ tags:
   - damage indicator
 ---
 
-# mom_hud_damageindicator_maxheight
-
 Height of the damage indicator at maximum damage.

@@ -10,8 +10,6 @@ tags:
   - teleport
 ---
 
-# mom_restart
-
 Restarts the player to the start of the current track; the player is teleported to their start mark if they have one, otherwise they are teleported to the middle of the start zone.
 If there is no start zone, the player will be teleported to the spawn position.
 

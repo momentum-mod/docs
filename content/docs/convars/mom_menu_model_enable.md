@@ -10,6 +10,4 @@ tags:
   - main menu
 ---
 
-# mom_menu_model_enable
-
 Toggles whether the rotating model on the main menu is drawn.

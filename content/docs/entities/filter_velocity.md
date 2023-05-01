@@ -6,8 +6,6 @@ tags:
   - filter
 ---
 
-# filter_velocity
-
 Filter that checks the player's velocity.
 
 ## Keyvalues

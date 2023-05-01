@@ -9,6 +9,4 @@ tags:
   - settings
 ---
 
-# mom_settings_remember_tab
-
 Toggles whether the game will remember which settings tab you last had open.

@@ -7,6 +7,4 @@ tags:
   - viewmodel
 ---
 
-# viewmodel_offset_x
-
 Controls the offset of the viewmodel in the X coordinate. For other coordinates see {{< cvarref viewmodel_offset_y >}} and {{< cvarref viewmodel_offset_z >}}.

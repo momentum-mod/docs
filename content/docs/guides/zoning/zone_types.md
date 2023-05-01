@@ -6,8 +6,6 @@ tags:
   - zones
 ---
 
-# Zone Types
-
 ![Zone Guide](/images/guide_headers/guide_zone_colours.jpg)
 
 This page covers what zones you will see in Momentum.

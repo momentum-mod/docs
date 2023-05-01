@@ -9,8 +9,6 @@ tags:
   - safeguard
 ---
 
-# mom_run_safeguard_quit_map
-
 Toggles the safeguard for quitting to the main menu during a run.
 
 Confirmation will be requested via a popup if set to 1 (on) and the timer is running.

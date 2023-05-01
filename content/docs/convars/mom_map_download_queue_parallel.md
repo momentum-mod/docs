@@ -11,6 +11,4 @@ tags:
   - online
 ---
 
-# mom_map_download_queue_parallel
-
 The number of parallel map downloads if {{< cvarref mom_map_download_queue >}} is enabled.

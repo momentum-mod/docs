@@ -10,6 +10,4 @@ tags:
   - trail
 ---
 
-# mom_replay_trail_enable
-
 Toggles the replay ghost's trail.

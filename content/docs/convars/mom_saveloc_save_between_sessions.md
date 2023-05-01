@@ -9,6 +9,4 @@ tags:
   - saveloc
 ---
 
-# mom_saveloc_save_between_sessions
-
 If enabled, savelocs will be saved between sessions of the same map.

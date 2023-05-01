@@ -9,6 +9,4 @@ tags:
   - teleport
 ---
 
-# mom_tricks_tele_to_trick
-
 Teleports the player to the start zone of the given trick.

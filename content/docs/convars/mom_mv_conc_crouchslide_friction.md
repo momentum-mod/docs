@@ -12,6 +12,4 @@ tags:
   - conc
 ---
 
-# mom_mv_conc_crouchslide_friction
-
 The amount of friction to apply in conc while crouchsliding.

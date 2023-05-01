@@ -10,6 +10,4 @@ tags:
   - rich presence
 ---
 
-# mom_steam_rich_presence
-
 Toggles Steam rich presence.

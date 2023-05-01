@@ -11,7 +11,5 @@ tags:
   - trigger
 ---
 
-# mom_zone_checkpoint_draw_mode
-
 Changes the draw mode of the checkpoint zone(s).
 0 = Off; invisible, 1 = Outlines, 2 = Outlines as overlays (see through walls), 3 = Faces, 4 = Faces as overlays (see through walls).

@@ -7,6 +7,4 @@ tags:
   - zones
 ---
 
-# mom_zone_back
-
 Goes back a step when zone building.

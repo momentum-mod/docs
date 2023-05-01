@@ -8,8 +8,6 @@ tags:
   - basics
 ---
 
-# Basic Zoning
-
 ![Zone Guide](/images/guide_headers/guide_basic_zones.jpg)
 
 This Guide will cover the most basic usage of the Zoning Tools to create a Start and End Zone.

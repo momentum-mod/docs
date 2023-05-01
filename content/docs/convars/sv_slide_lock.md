@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_slide_lock
-
 Changes whether to lock your move direction when sliding.

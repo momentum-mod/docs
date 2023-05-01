@@ -10,6 +10,4 @@ tags:
   - alpha
 ---
 
-# mom_ghost_color
-
 The color & alpha of the player's ghost. Accepts color value in format RGBA. If RGB is supplied, the alpha is set to 255.

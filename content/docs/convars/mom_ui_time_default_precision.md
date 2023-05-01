@@ -11,6 +11,4 @@ tags:
   - timer
 ---
 
-# mom_ui_time_default_precision
-
 Default time precision for UI displaying (g:time custom dialog variable handler).

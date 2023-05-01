@@ -11,6 +11,4 @@ tags:
   - sound
 ---
 
-# mom_sj_sound_explosion_enable
-
 Toggles the stickybomb explosion sound.

@@ -9,8 +9,6 @@ tags:
   - material
 ---
 
-# mat_error_texture_advanced_basetexture
-
 Which texture should be used as a base for reflectivity-based error textures (see {{< cvarref mat_error_texture_advanced >}}).
 
 {{< img src="/images/mat_error_texture_advanced/advanced_error_texture_1.jpg" style="width:50%;" >}}

@@ -9,6 +9,4 @@ tags:
   - ruler
 ---
 
-# mom_ruler_maxlength
-
 Sets the maximum length of the measuring tool.

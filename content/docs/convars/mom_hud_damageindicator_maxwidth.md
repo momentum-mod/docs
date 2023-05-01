@@ -8,6 +8,4 @@ tags:
   - damage indicator
 ---
 
-# mom_hud_damageindicator_maxwidth
-
 Width of the damage indicator at maximum damage.

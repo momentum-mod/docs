@@ -9,8 +9,6 @@ tags:
   - gamemode
 ---
 
-# mom_gamemode_override
-
 Forces gamemode to the specified gamemode number given; must not be in-game to change.  
 If this cvar isn't set to its default, your times will not be submitted upon map completion.
 

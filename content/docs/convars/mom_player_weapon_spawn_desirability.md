@@ -9,8 +9,6 @@ tags:
   - weapon
 ---
 
-# mom_player_weapon_spawn_desirability
-
 {{< hint info >}}
 This convar has no effect on weapon-focused gamemodes such as Rocket Jump, Sticky Jump, Conc, and Defrag, and cannot be changed while the timer is running.
 {{< /hint >}}

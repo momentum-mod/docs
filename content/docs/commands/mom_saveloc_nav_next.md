@@ -8,6 +8,4 @@ tags:
   - teleport
 ---
 
-# mom_saveloc_nav_next
-
 Goes forwards through the saveloc list, while teleporting the player to each.

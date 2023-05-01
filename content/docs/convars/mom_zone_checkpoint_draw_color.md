@@ -10,6 +10,4 @@ tags:
   - color
 ---
 
-# mom_zone_checkpoint_draw_color
-
 Color of the checkpoint zone(s) in RGBA format.

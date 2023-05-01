@@ -10,6 +10,4 @@ tags:
   - timer
 ---
 
-# mom_hud_timer_sound_finish_enable
-
 Toggles sound on timer finish.

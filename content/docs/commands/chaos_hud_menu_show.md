@@ -11,8 +11,6 @@ tags:
   - ruler
 ---
 
-# chaos_hud_menu_show
-
 Opens a hud menu. Accepts the hud menu itself.
 
 Calling this again with the same hud menu name will close the menu. Calling it with a different hud menu name will open that one after closing the currently opened one, if there is any.

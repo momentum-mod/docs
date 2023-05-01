@@ -10,6 +10,4 @@ tags:
   - chat
 ---
 
-# mom_chat_timestamps_enable
-
 Toggles timestamps on chat messages.

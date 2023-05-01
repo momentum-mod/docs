@@ -10,6 +10,4 @@ tags:
   - alpha
 ---
 
-# cl_crosshair_alpha_enable
-
 Toggles the crosshair transparency.

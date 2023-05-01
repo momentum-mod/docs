@@ -10,6 +10,4 @@ tags:
   - strafe sync
 ---
 
-# mom_hud_strafesync_type
-
 Toggles the strafe sync type. Sync1 (perfect strafe ticks / total strafe ticks) = `1`, Sync2 (accel ticks / total strafe ticks) = `0`.

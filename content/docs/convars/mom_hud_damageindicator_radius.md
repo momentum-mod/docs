@@ -8,6 +8,4 @@ tags:
   - damage indicator
 ---
 
-# mom_hud_damageindicator_radius
-
 How far away the damage indicators are from the crosshair.

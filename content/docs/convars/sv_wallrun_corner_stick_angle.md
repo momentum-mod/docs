@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_corner_stick_angle
-
 Changes the max angle of the wall normal to end a wallrun. Higher values allow the player to wallrun across sharper turns.

@@ -8,6 +8,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_thickness
-
 Sets the thickness of a crosshair line. Takes effect when {{< cvarref cl_crosshair_style >}} is `1`.

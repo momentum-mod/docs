@@ -9,6 +9,4 @@ tags:
   - viewmodel
 ---
 
-# mom_weapon_speed_lower
-
 Controls the weapon lowering speed if {{< cvarref mom_weapon_speed_lower_enable >}} is enabled.

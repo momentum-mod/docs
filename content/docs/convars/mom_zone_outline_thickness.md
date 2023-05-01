@@ -10,6 +10,4 @@ tags:
   - outline
 ---
 
-# mom_zone_outline_thickness
-
 Controls thickness of zone outlines.

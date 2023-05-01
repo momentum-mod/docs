@@ -9,6 +9,4 @@ tags:
   - safeguard
 ---
 
-# mom_run_safeguard_warning_delay
-
 Controls the amount of time (in seconds) between warning the player that the desired command is safeguarded.

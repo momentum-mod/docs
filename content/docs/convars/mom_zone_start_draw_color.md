@@ -10,6 +10,4 @@ tags:
   - color
 ---
 
-# mom_zone_start_draw_color
-
 Color of the start zone(s) in RGBA format.

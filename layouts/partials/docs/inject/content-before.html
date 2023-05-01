@@ -1,0 +1,23 @@
+{{ $title := "" }}
+{{ with .File }}
+	{{ $title = .File.BaseFileName }}
+{{ end }}
+{{ if .Param "long_title" }}
+	{{ $title = .Param "long_title" }}
+{{ else if .Param "title" }}
+	{{ $title = .Param "title" }}
+{{ end }}
+
+{{ if .IsPage }}
+	<h1 class="page-title">{{ $title }}</h1>
+
+	<div class="horizontal-separator"></div>
+
+	{{ if .Param "requires_mapping" }}
+		<blockquote class="outer-hint danger">
+			<h4>Requires <code>-mapping</code></h4>
+			In order to use this command, you have to boot the game with
+			<code>-mapping</code> as a launch parameter!
+		</blockquote>
+	{{ end }}
+{{ end }}

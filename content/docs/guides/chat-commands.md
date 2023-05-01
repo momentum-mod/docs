@@ -11,8 +11,6 @@ tags:
   - spec
 ---
 
-# Chat Commands
-
 This guide covers all of the supported chat commands and potential inputs they have. These commands can be entered in chat at any time regardless of being in a lobby or not.
 
 {{< hint info >}}

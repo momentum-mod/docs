@@ -10,6 +10,4 @@ tags:
   - player
 ---
 
-# sv_df_airstrafeaccelerate
-
 Defrag CPM airstrafe acceleration for A/D movement.

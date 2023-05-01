@@ -6,6 +6,4 @@ tags:
   - timer
 ---
 
-# mom_timer_stop
-
 Stops the timer if it is currently running.

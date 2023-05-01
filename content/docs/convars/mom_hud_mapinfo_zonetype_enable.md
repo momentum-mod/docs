@@ -11,6 +11,4 @@ tags:
   - map info
 ---
 
-# mom_hud_mapinfo_zonetype_enable
-
 Toggles showing zone type (staged or linear) in map info on the HUD.

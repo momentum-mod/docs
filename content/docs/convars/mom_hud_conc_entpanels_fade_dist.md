@@ -13,6 +13,4 @@ tags:
   - hud
 ---
 
-# mom_hud_conc_entpanels_fade_dist
-
 The amount of units to linearly fade the conc ent panel over. This fade is enabled using {{< cvarref mom_hud_conc_entpanels_fade_enable >}}.

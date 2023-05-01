@@ -9,6 +9,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_gap_use_weapon_value
-
 Toggles using defined crosshair distances per weapon.

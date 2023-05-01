@@ -10,6 +10,4 @@ tags:
   - online
 ---
 
-# mom_ghost_online_lerp
-
 The amount of time to render in the past (in seconds).

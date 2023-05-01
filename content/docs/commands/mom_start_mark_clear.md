@@ -9,8 +9,6 @@ tags:
   - mark
 ---
 
-# mom_start_mark_clear
-
 Clears the current track's saved start location if there is one.
 Optionally accepts a track number.
 

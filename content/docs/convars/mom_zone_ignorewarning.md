@@ -11,6 +11,4 @@ tags:
   - trigger
 ---
 
-# mom_zone_ignorewarning
-
 Toggles letting you create zones despite map already having both start and end zone.

@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_stick_angle
-
 Changes the min angle away from the wall normal for the player to wallrun.

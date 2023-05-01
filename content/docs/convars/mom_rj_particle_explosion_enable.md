@@ -11,6 +11,4 @@ tags:
   - particle
 ---
 
-# mom_rj_particle_explosion_enable
-
 Toggles the particles for rocket explosions.

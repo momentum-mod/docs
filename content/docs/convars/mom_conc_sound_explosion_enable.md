@@ -11,6 +11,4 @@ tags:
   - explosion
 ---
 
-# mom_conc_sound_explosion_enable
-
 Toggles the conc explosion sound. 0 = OFF, 1 = ON.

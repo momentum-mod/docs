@@ -10,6 +10,4 @@ tags:
   - outline
 ---
 
-# mom_zone_outline_subdiv_count
-
 Controls how many sides each 3D zone line has.

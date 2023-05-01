@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_scramble_z
-
 Changes the max height the player can climb to.

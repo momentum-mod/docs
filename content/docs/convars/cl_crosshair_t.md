@@ -9,6 +9,4 @@ tags:
   - crosshair
 ---
 
-# cl_crosshair_t
-
 Toggles the T style crosshair.

@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_fix_unduck_instant_land
-
 Fixes being able to unduck in midair and land without activating triggers. (Also known as jumpbugs or duckbugs).

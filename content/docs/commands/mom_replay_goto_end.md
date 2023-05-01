@@ -7,6 +7,4 @@ tags:
   - ghost
 ---
 
-# mom_replay_goto_end
-
 Goes to the end of the currently spectated replay.

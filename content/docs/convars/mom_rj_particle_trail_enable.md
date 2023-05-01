@@ -11,6 +11,4 @@ tags:
   - trail
 ---
 
-# mom_rj_particle_trail_enable
-
 Toggles the rocket trail particle.

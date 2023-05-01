@@ -11,6 +11,4 @@ tags:
   - online
 ---
 
-# mom_map_download_cancel_confirm
-
 If enabled, a confirmation box will pop up when cancelling downloads.

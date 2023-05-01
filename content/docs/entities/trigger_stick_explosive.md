@@ -9,8 +9,6 @@ tags:
   - trigger
 ---
 
-# trigger_stick_explosive
-
 A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that can stick explosives to or inside of its area.
 
 ## Keyvalues

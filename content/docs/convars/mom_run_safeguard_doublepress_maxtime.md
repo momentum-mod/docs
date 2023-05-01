@@ -9,6 +9,4 @@ tags:
   - safeguard
 ---
 
-# mom_run_safeguard_doublepress_maxtime
-
 Controls the maximum amount time (in seconds) that a double press is registered for run safeguards with the doublepress safeguard mode active.

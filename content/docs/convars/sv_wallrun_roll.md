@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_roll
-
 Changes the roll of the wallrun view angle.

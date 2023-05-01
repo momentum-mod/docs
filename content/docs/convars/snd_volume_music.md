@@ -11,6 +11,4 @@ tags:
   - music
 ---
 
-# snd_volume_music
-
 Set the volume for sounds located in the `momentum/sound/music/` directory.

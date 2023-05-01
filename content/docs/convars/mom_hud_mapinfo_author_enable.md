@@ -11,6 +11,4 @@ tags:
   - map info
 ---
 
-# mom_hud_mapinfo_author_enable
-
 Toggles showing author(s) in the map info on the HUD.

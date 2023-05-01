@@ -9,6 +9,4 @@ tags:
   - ruler
 ---
 
-# mom_ruler_width
-
 Sets the width of the beam that connects the two endpoints.

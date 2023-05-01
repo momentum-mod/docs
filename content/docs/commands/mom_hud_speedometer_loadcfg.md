@@ -7,8 +7,6 @@ tags:
   - speedometer
 ---
 
-# mom_hud_speedometer_loadcfg
-
 Loads the speedometer setup for the current gamemode from `momentum/cfg/speedometer.vdf`.
 For steam users, this will be
 

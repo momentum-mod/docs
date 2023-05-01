@@ -7,6 +7,4 @@ tags:
   - ghost
 ---
 
-# mom_replay_pause
-
 Toggles pausing and playing of the currently spectated replay.

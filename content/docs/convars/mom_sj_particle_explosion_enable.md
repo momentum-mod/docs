@@ -11,6 +11,4 @@ tags:
   - particle
 ---
 
-# mom_sj_particle_explosion_enable
-
 Toggles the particles for stickybomb explosion.

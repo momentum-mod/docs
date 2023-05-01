@@ -8,8 +8,6 @@ tags:
 tool_texture: trigger_slide
 ---
 
-# trigger_momentum_slide
-
 ![Slide trigger texture](/images/trigger_momentum_slide/slides.jpg)
 
 **NOTE: Depreciated, use [`func_slide`](/entity/func_slide) instead.**

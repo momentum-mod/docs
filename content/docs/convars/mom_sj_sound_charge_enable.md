@@ -12,6 +12,4 @@ tags:
   - sound
 ---
 
-# mom_sj_sound_charge_enable
-
 Toggles the sticky launcher charging sound.

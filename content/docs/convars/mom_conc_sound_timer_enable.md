@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_conc_sound_timer_enable
-
 Toggles the conc timer sound. 0 = OFF, 1 = ON.

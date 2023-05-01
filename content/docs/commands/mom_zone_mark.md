@@ -7,6 +7,4 @@ tags:
   - zones
 ---
 
-# mom_zone_mark
-
 Starts building a zone.

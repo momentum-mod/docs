@@ -10,6 +10,4 @@ tags:
   - teleport
 ---
 
-# mom_tricks_map_tele_create
-
 Creates a map teleport of a given name.

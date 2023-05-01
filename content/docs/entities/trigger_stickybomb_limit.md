@@ -7,8 +7,6 @@ tags:
   - sticky jump
 ---
 
-# trigger_stickybomb_limit
-
 A trigger that controls the maximum number of stickybombs the player is allowed to shoot.
 
 ## Keyvalues

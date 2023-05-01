@@ -9,6 +9,4 @@ tags:
   - practice
 ---
 
-# mom_practice_warning_enable
-
 Toggles the warning for enabling practice mode during a run.

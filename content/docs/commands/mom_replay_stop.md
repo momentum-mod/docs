@@ -7,6 +7,4 @@ tags:
   - ghost
 ---
 
-# mom_replay_stop
-
 Stops playing the current replay.

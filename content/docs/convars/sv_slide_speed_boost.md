@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_slide_speed_boost
-
 Changes the powerslide's speed boost.

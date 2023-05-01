@@ -10,6 +10,4 @@ tags:
   - debug
 ---
 
-# mom_conc_debug_show_radius
-
 Toggles showing the conc grenade's explosion radius after detonation.

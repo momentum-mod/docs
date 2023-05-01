@@ -8,6 +8,4 @@ tags:
   - damage indicator
 ---
 
-# mom_hud_damageindicator_minwidth
-
 Width of the damage indicator at minimum damage.

@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# mom_ghost_bodygroup
-
 Changes the appearance bodygroup (shape).

@@ -10,6 +10,4 @@ tags:
   - strafe sync
 ---
 
-# mom_hud_strafesync_drawbar
-
 Toggles displaying the visual strafe sync bar.

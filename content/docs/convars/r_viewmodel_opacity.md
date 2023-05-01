@@ -10,6 +10,4 @@ tags:
   - alpha
 ---
 
-# r_viewmodel_opacity
-
 Controls the opacity of viewmodels.

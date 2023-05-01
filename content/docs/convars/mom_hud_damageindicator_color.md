@@ -9,6 +9,4 @@ tags:
   - color
 ---
 
-# mom_hud_damageindicator_color
-
 RGB color of the damage indicator. Alpha is ignored.

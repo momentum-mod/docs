@@ -8,8 +8,6 @@ tags:
   - ramps
 ---
 
-# How to Create Surf Ramps
-
 ![Ramp Guide Header](/images/guide_headers/guide_create_surf_ramps.jpg)
 
 {{< hint info >}}

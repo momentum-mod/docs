@@ -10,6 +10,4 @@ tags:
   - sound
 ---
 
-# mom_conc_sound_fizzle_enable
-
 Toggles whether the conc makes a sound when it fizzles. 0 = OFF, 1 = ON.

@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_accel
-
 Changes the wallrun acceleration.

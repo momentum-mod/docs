@@ -12,6 +12,4 @@ tags:
   - debug
 ---
 
-# mom_zone_debug
-
 Toggles debugging mode for zoning.

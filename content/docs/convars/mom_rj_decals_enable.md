@@ -11,6 +11,4 @@ tags:
   - explosion
 ---
 
-# mom_rj_decals_enable
-
 Toggles creating decals on rocket explosion.

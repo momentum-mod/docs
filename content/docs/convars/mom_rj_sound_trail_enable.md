@@ -11,6 +11,4 @@ tags:
   - sound
 ---
 
-# mom_rj_sound_trail_enable
-
 Toggles the rocket trail sound.

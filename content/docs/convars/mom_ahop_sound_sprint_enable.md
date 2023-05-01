@@ -11,6 +11,4 @@ tags:
   - sound
 ---
 
-# mom_ahop_sound_sprint_enable
-
 Toggles the sound made when enabling sprint.

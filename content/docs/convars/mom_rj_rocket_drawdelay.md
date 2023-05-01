@@ -9,6 +9,4 @@ tags:
   - rocket jump
 ---
 
-# mom_rj_rocket_drawdelay
-
 Determines how long it takes for rockets to start being drawn after spawning.

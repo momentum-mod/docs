@@ -11,6 +11,4 @@ tags:
   - alpha
 ---
 
-# mom_ghost_online_alpha_override
-
 Overrides ghost alphas to be this value if {{< cvarref mom_ghost_online_alpha_override_enable >}} is enabled.

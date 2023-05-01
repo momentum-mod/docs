@@ -8,6 +8,4 @@ tags:
   - chat
 ---
 
-# chat_open
-
 Opens the in-game chat window.

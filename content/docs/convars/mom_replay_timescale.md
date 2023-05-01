@@ -9,6 +9,4 @@ tags:
   - replay
 ---
 
-# mom_replay_timescale
-
 The timescale of a replay. Normal = `1`, Slower is <`1`, Faster is >`1`.

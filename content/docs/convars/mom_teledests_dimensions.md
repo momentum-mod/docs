@@ -9,6 +9,4 @@ tags:
   - teleport destinations
 ---
 
-# mom_teledests_dimensions
-
 Changes the width/length of drawn teleport destinations, which are drawn as squares.

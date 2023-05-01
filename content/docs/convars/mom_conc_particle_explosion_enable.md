@@ -10,6 +10,4 @@ tags:
   - explosion
 ---
 
-# mom_conc_particle_explosion_enable
-
 Toggles the particles for conc explosions. 0 = OFF, 1 = ON.

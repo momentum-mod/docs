@@ -6,6 +6,4 @@ tags:
   - printout
 ---
 
-# mom_version
-
 Prints the current installed version of Momentum Mod.

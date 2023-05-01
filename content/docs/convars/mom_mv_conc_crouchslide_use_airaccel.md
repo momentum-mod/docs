@@ -12,6 +12,4 @@ tags:
   - conc
 ---
 
-# mom_mv_conc_crouchslide_use_airaccel
-
 The type of acceleration to use when crouchsliding in conc. 0 = Ground, 1 = Air.

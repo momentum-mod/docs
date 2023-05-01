@@ -9,6 +9,4 @@ tags:
   - player
 ---
 
-# sv_wallrun_anticipation
-
 Changes the anticipation logic for wallrunning, 0 = None; 1 = Eye roll only, 2 - Full (bumps).

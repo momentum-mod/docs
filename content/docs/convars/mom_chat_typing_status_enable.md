@@ -9,6 +9,4 @@ tags:
   - chat
 ---
 
-# mom_chat_typing_status_enable
-
 Toggles showing your typing status in the lobby.

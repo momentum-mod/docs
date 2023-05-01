@@ -10,6 +10,4 @@ tags:
   - movement
 ---
 
-# mom_mv_allow_zero_gravity
-
 Allows zero gravity scale instead of falling back on normal gravity.

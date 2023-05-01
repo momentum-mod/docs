@@ -9,6 +9,4 @@ tags:
   - hud
 ---
 
-# mom_showkeypresses
-
 Toggles showing keypresses and strafe/jump counter.

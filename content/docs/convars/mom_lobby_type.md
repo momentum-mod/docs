@@ -9,6 +9,4 @@ tags:
   - lobby
 ---
 
-# mom_lobby_type
-
 Sets the type of lobby. Invite only = `0`, Friends only = `1`, Public = `2`.

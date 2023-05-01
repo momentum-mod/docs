@@ -10,6 +10,4 @@ tags:
   - online
 ---
 
-# mom_ghost_interp_ticks
-
 Interpolation ticks to add to rendering online ghosts.

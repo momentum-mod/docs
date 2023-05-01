@@ -11,6 +11,4 @@ tags:
   - api
 ---
 
-# mom_api_log_requests
-
 If enabled, API requests will be logged to console.

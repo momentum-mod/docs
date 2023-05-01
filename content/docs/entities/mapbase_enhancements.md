@@ -8,8 +8,6 @@ tags:
   - point entity
 ---
 
-# Mapbase Enhancements
-
 This page covers the various additions and enhancements from [Mapbase](https://www.moddb.com/mods/mapbase).
 
 ## Filters

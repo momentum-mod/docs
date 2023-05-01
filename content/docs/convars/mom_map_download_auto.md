@@ -11,6 +11,4 @@ tags:
   - online
 ---
 
-# mom_map_download_auto
-
 If enabled, maps will automatically download when updated/added to the library.
