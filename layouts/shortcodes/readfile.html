@@ -1,0 +1,11 @@
+{{ $regex := default "^$" (.Get "regex") }}
+{{ $replace := .Get "replace" }}
+{{ $file := .Get "file" }}
+
+{{- if eq (.Get "markdown") "true" -}}
+	{{- replaceRE $regex $replace ( $file | readFile ) | markdownify -}}
+{{- else if  (.Get "highlight") -}}
+	{{- replaceRE $regex $replace ( highlight ($file | readFile) (.Get "highlight") ) -}}
+{{- else -}}
+	{{ replaceRE $regex $replace ( $file  | readFile ) | safeHTML }}
+{{- end -}}
