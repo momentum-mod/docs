@@ -188,6 +188,23 @@ blockquote,
   margin-bottom: 0.75rem;
 }
 
+
+// Pinching this from theme/_markdown.scss because I want to use this in templated stuff.
+blockquote {
+  margin: $padding-16 0;
+  padding: $padding-8 $padding-16 $padding-8 ($padding-16 - $padding-4); //to keep total left space 16dp
+
+  border-inline-start: $padding-4 solid var(--gray-200);
+  border-radius: $border-radius;
+
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
 // Scrollbars
 
 body {
