@@ -1,3 +1,20 @@
+{{ if eq ( index .Params.categories 0 ) "var" }}
+  {{ if (or ( isset .Params "minimum_value" ) ( isset .Params "maximum_value" ) ( isset .Params "default_value" ) ) }}
+    <div>
+      {{/* Can't use `with` here as 0 is falsey */}}
+      {{ if ( isset .Params "minimum_value" ) }}
+        <span><i>Min:</i> {{ .Param "minimum_value" }}</span>
+      {{ end }}
+      {{ if ( isset .Params "maximum_value" ) }}
+        <span><i>Max:</i> {{ .Param "maximum_value" }}</span>
+      {{ end }}
+      {{ if ( isset .Params "default_value" ) }}
+        <span><i>Default:</i> {{ .Param "default_value" }}</span>
+      {{ end }}
+    </blockquote>
+  {{ end }}
+{{ end }}
+
 <div class="horizontal-separator"></div>
 
 {{ if .IsPage }}
