@@ -9,7 +9,7 @@ tags:
   - trigger
 ---
 
-A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} volume that can stick explosives to or inside of its area.
+A [trigger](https://developer.valvesoftware.com/wiki/Triggers) volume that can stick explosives to or inside of its area.
 
 ## Keyvalues
 

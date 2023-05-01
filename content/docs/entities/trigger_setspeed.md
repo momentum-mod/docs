@@ -6,7 +6,7 @@ tags:
   - trigger
 ---
 
-A [trigger](https://developer.valvesoftware.com/wiki/Triggers){:target="blank"} for setting the speed of the player in a particular axis or direction.
+A [trigger](https://developer.valvesoftware.com/wiki/Triggers) for setting the speed of the player in a particular axis or direction.
 If you want to change the player's velocity, use a [push trigger](/entity/trigger_momentum_push/) instead.
 If you want to send the player in a specific direction, use a [catapult](/entity/trigger_catapult/) instead.
 
