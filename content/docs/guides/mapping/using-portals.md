@@ -33,7 +33,6 @@ The way that portals are drawn is by rendering a complete extra copy of the worl
 
 {{< hint warning >}}
 The keyvalues for world portals specify both half-width and half-height, which means that the maximum size for world portals _must_ be less than `1024` for both the [half-]`width` and [half-]`height` KVs otherwise the game will crash. This means the maximum world portal size is `2046`x`2046` (`1023` half-width; `1023` half-height).
-
 {{< /hint >}}
 
 ## How to Make a World Portal
@@ -91,7 +90,6 @@ An impossible hallway is one that is appears to be longer or shorter than it tru
 
 {{< hint info >}}
 In order to create a fully seamless transition using a portal all details at either end must identical. This includes mundane issues such as props, texture allignment, and particles. However, lighting calculations do not factor portals into their calculations and thus must be manually replicated on both ends to make the seam completely invisible.
-
 {{< /hint >}}
 
 ### Impossible Roundabout

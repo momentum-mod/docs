@@ -18,7 +18,6 @@ It is used on Linear maps and can not be reset to, unlike Stages.
 
 {{< hint danger >}}
 Checkpoint Zones cannot be used at the same time as Stage Zones.
-
 {{< /hint >}}
 
 > Looking for more general info on Zones?  

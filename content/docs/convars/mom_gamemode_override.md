@@ -16,7 +16,6 @@ If this cvar isn't set to its default, your times will not be submitted upon map
 
 {{< hint info >}}
 If you wish to use this cvar with official maps, you should instead use the "Start Map In Specific Gamemode" option in the Map Selector's context menu.
-
 {{< /hint >}}
 
 ## Gamemodes

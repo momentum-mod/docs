@@ -17,7 +17,6 @@ tags:
 
 {{< hint info >}}
 The systems described here are complete; we are in agreement that this is what the Ranked-Points should look like. The values chosen for percentiles, WR points, etc. are still up for debate; however, these should be simple to change later, should we decide to change them, because of the design of the system. For now, we consider the values to be informed-guess placeholders.
-
 {{< /hint >}}
 
 > There are no 'base completion points'; the formula system somewhat accounts for this, but we've determined that it is not worth having a system of its own

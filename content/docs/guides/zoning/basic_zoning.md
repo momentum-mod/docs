@@ -35,6 +35,7 @@ In order to get the GUI to appear, type `mom_zone_showmenu` in the Console, it s
 You will lose the ability to look around at some point and your mouse cursor will re-appear.  
 To be able to look around again, right-click the GUI.  
 {{< /hint >}}
+
 Right-clicking will toggle between looking around and interacting with the GUI.
 
 To get started, click the **_Enable Zone Editing_** checkbox, the other options will become available.  
@@ -54,8 +55,8 @@ First, click the **_Create Zone_** button - you will be able to look around agai
 
 {{< hint info >}}
 If you want to start again at any point, click **_Cancel Zone_**.
-
 {{< /hint >}}
+
 Then find one of the corners of the Zone you want to create, so for this example that could be at the rear-right of the doorway:
 
 ![Creating the Zone 2](/images/zone_guide/zone_create_1.jpg)
@@ -72,8 +73,8 @@ Starting moving the mouse upwards to set the height of the Zone:
 
 {{< hint info >}}
 The height of a Zone does not snap to the grid currently, so you will have to eyeball it!
-
 {{< /hint >}}
+
 If you are satisfied with the Zone click again and the outline will change colour:
 
 ![Creating the Zone 5](/images/zone_guide/zone_create_4.jpg)

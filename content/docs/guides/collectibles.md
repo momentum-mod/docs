@@ -29,7 +29,6 @@ Collectibles are added to the player with the `AddCollectible` input targeted at
 
 {{< hint warning >}}
 Collectibles will not work if they are not named.
-
 {{< /hint >}}
 ![Example Button](/images/collectibles_guide/button_collectible_io_1.png)
 

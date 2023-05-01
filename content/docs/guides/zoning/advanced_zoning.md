@@ -34,7 +34,6 @@ This will only apply once the Start Zone has been created.
 
 {{< hint info >}}
 You should bind this to a key for ease of use, although there is currently a bind to the Right Alt key by default. There is no visual indication but if you check the cvar, it will have changed.
-
 {{< /hint >}}
 
 ## Stages and Checkpoints
@@ -75,7 +74,6 @@ The Zone will change colour and be finalised.
 
 {{< hint info >}}
 Make sure to click **_Save Zones_** when you are done!
-
 {{< /hint >}}
 
 ## Track Number
