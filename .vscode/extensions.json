@@ -1,0 +1,6 @@
+{
+  "recommendations": [
+    "kaellarkin.hugo-shortcode-syntax",
+    "budparr.language-hugo-vscode"
+  ]
+}
