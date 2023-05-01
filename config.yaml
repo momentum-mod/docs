@@ -28,15 +28,21 @@ permalinks:
   docs: /:sections[1:]/:filename/
 menu:
   after:
-    - name: Categories
-      pageRef: /categories/
-      weight: 10
     - name: Tags
       pageRef: /tags/
       weight: 10
+    - name: Categories
+      pageRef: /categories/
+      weight: 20
     - name: Main Site
       url: 'https://momentum-mod.org'
-      weight: 20
+      weight: 30
+    - name: Github
+      url: 'https://github.com/momentum-mod'
+      weight: 40
+    - name: Discord
+      url: 'https://discord.gg/momentummod'
+      weight: 50
 markup:
   highlight:
     style: onedark
