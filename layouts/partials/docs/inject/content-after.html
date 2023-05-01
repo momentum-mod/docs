@@ -11,6 +11,12 @@
       {{ if ( isset .Params "default_value" ) }}
         <span><i>Default:</i> {{ .Param "default_value" }}</span>
       {{ end }}
+
+{{ if eq ( index .Params.categories 0 ) "entity" }}
+  {{ with .Params.tool_texture }}
+    <blockquote>
+      A material for the tool texture shown in the header image can be found in <code>materials/tools/{{ . }}</code>.<br>
+      It is entirely optional and functions identically to the normal trigger texture.
     </blockquote>
   {{ end }}
 {{ end }}
