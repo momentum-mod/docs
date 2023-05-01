@@ -1,4 +1,6 @@
 ---
+title: Advanced Zoning
+weight: 11 # Basic gets 10, keeps them in order
 categories:
   - guide
 permalink: /guide/advanced-zoning/

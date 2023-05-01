@@ -1,4 +1,6 @@
 ---
+title: Basic Zoning
+weight: 10
 categories:
   - guide
 permalink: /guide/basic-zoning/

@@ -1,4 +1,5 @@
 ---
+title: Creating Docs Pages
 categories:
   - guide
 permalink: /guide/create-docs-page/

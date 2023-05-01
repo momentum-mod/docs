@@ -1,4 +1,5 @@
 ---
+title: Localization
 categories:
   - guide
 permalink: /guide/localization/

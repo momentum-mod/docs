@@ -1,4 +1,5 @@
 ---
+title: Hammer++ Setup
 categories:
   - guide
 permalink: /guide/hammer-plus-plus-setup/
