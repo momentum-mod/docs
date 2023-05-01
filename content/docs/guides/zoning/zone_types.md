@@ -2,14 +2,6 @@
 title: Zone Types
 categories:
   - guide
-cvar_checkpoint_draw_color: mom_zone_checkpoint_draw_color
-cvar_checkpoint_draw_mode: mom_zone_checkpoint_draw_mode
-cvar_end_draw_color: mom_zone_end_draw_color
-cvar_end_draw_mode: mom_zone_end_draw_mode
-cvar_stage_draw_color: mom_zone_stage_draw_color
-cvar_stage_draw_mode: mom_zone_stage_draw_mode
-cvar_start_draw_color: mom_zone_start_draw_color
-cvar_start_draw_mode: mom_zone_start_draw_mode
 tags:
   - zones
 ---
@@ -41,16 +33,16 @@ They will create a split on the timer and can be reset to instead of the beginni
 
 These are the cvars you can use to change the colors of each zone type:
 
-- [`{{ page.cvar_start_draw_color }}`](/var/{{ page.cvar_start_draw_color }})
-- [`{{ page.cvar_end_draw_color }}`](/var/{{ page.cvar_end_draw_color }})
-- [`{{ page.cvar_stage_draw_color }}`](/var/{{ page.cvar_stage_draw_color }})
-- [`{{ page.cvar_checkpoint_draw_color }}`](/var/{{ page.cvar_checkpoint_draw_color }})
+- {{< cvarref mom_zone_checkpoint_draw_color >}}
+- {{< cvarref mom_zone_end_draw_color >}}
+- {{< cvarref mom_zone_stage_draw_color >}}
+- {{< cvarref mom_zone_start_draw_color >}}
 
 ## Changing Zone Render Mode
 
 There are cvars for each zone rendering mode, which can be used to disable them, draw them as outlines or faces, and even draw them through walls:
 
-- [`{{ page.cvar_start_draw_mode }}`](/var/{{ page.cvar_start_draw_mode }})
-- [`{{ page.cvar_end_draw_mode }}`](/var/{{ page.cvar_end_draw_mode }})
-- [`{{ page.cvar_stage_draw_mode }}`](/var/{{ page. cvar_stage_draw_mode }})
-- [`{{ page.cvar_checkpoint_draw_mode }}`](/var/{{ page.cvar_checkpoint_draw_mode }})
+- {{< cvarref mom_zone_checkpoint_draw_mode >}}
+- {{< cvarref mom_zone_end_draw_mode >}}
+- {{< cvarref mom_zone_stage_draw_mode >}}
+- {{< cvarref mom_zone_start_draw_mode >}}

@@ -2,9 +2,7 @@
 title: Overriding Custom Assets
 categories:
   - guide
-ccom_wepreload: weapon_reload_scripts
 ccom_wepreloadcur: weapon_reload_script_current
-guide_GSC: gamemode-specific-cfgs
 tags:
   - hud
   - weapon
@@ -51,7 +49,7 @@ For these overrides to take effect they need to be renamed to match the file the
 
 For example, renaming `weapon_momentum_stickylauncher_tf2.txt` to `weapon_momentum_stickylauncher.txt` within `momentum/overrides/scripts/` overrides the sticky launcher script in `momentum/scripts/`. This replaces the momentum default sticky launcher to be the one from TF2.
 
-Weapon scripts can be reloaded from within the game by using the console commands [`{{ page.ccom_wepreloadcur }}`](/command/{{ page.ccom_wepreloadcur }}) and/or [`{{ page.ccom_wepreload }}`](/command/{{ page.ccom_wepreload }}).
+Weapon scripts can be reloaded from within the game by using the console commands {{< cmdref weapon_reload_scripts >}} and/or {{< cmdref weapon_reload_script_current >}}.
 
 ## Performance
 

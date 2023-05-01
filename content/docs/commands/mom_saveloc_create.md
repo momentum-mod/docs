@@ -9,4 +9,4 @@ tags:
 # mom_saveloc_create
 
 Creates a saveloc which saves the player's state.
-When called in a start zone, creates a start mark instead (see [`mom_start_mark_create`](/command/mom_start_mark_create)).
+When called in a start zone, creates a start mark instead (see {{< cvarref mom_start_mark_create >}}).
