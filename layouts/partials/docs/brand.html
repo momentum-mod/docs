@@ -1,0 +1,16 @@
+<!-- 
+	This is a copy of themes/hugo-book/layouts/partials/brand.html, just overriding
+	the .Site.Title usage to use .Site.Params.BrandTitle so we can use a different
+	string here.
+ -->
+<h2 class="book-brand">
+  <a
+    class="flex align-center"
+    href="{{ cond (not .Site.Home.File) .Sites.First.Home.RelPermalink .Site.Home.RelPermalink }}"
+  >
+    {{- with .Site.Params.BookLogo -}}
+    <img src="{{ . | relURL }}" alt="Logo" />
+    {{- end -}}
+    <span>{{ .Site.Params.BrandTitle }}</span>
+  </a>
+</h2>
