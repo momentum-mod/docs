@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  max-width: 100rem;
+  max-width: 120rem;
 }
 
 .book-page {
@@ -76,6 +76,12 @@ body {
         margin: 16px 0;
       }
 
+      &:has(label):hover {
+        > label > a {
+          opacity: 1;
+        }
+      }
+
       &:has(input):hover,
       &:has(input.toggle:checked) {
         background-color: var(--gray-100);
@@ -126,12 +132,25 @@ body {
 blockquote {
   padding-left: 16px !important;
   background-color: var(--gray-100);
+
+  > * {
+    margin: 0.25rem 0;
+  }
 }
 
 blockquote,
 .outer-hint {
   padding-left: 16px !important;
   background-color: var(--gray-100);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0.25rem !important;
+  }
 }
 
 .outer-hint {
@@ -187,7 +206,6 @@ blockquote,
 .tags {
   margin-bottom: 0.75rem;
 }
-
 
 // Pinching this from theme/_markdown.scss because I want to use this in templated stuff.
 blockquote {
