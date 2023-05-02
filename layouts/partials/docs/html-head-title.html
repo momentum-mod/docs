@@ -1,0 +1,5 @@
+{{ if eq .RelPermalink "/" }}
+  {{ .Site.Title }}
+{{ else }}
+  {{ .Title }} | {{ .Site.Title }}
+{{ end }}
