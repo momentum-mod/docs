@@ -4,123 +4,212 @@ categories:
   - guide
 tags:
   - meta
+  - contributing
 ---
 
-All pages on this site are hosted in the [Momentum Mod docs GitHub repository](https://github.com/momentum-mod/docs). The site uses Jekyll with the Minimal Mistakes theme, and is entirely open source.
+All pages on this site are hosted in the [Momentum Mod docs GitHub repository](https://github.com/momentum-mod/docs). The site uses [Hugo](https://gohugo.io/) with the [Hugo Book](https://github.com/alex-shpak/hugo-book), and is entirely open source.
 
-## References
+Content on the site is written using [Markdown](https://www.markdownguide.org/), a simple and lightweight markup language. This allows docs pages to be written in a much more accessible format than HTML.
 
-- [Jekyll Documentation](https://jekyllrb.com/docs/)
-  - [Posts](https://jekyllrb.com/docs/posts/)
-  - [Front matter](https://jekyllrb.com/docs/front-matter/)
-  - [Variables](https://jekyllrb.com/docs/variables/)
-  - [Custom attributes in Jekyll](https://digitaldrummerj.me/styling-jekyll-markdown/)
-- [Markdown Documentation](https://www.markdownguide.org/)
-- [Minimal Mistakes Documentation](https://mmistakes.github.io/minimal-mistakes/docs/layouts/)
+{{< hint info >}}
+
+If you're having trouble with any parts of this guide, please feel free to ask for help in the `#docs` channel on our [Discord](https://discord.gg/momentummod). It's completely fine if you've not used a command line or Git before, we're happy to help you through the process. 
+
+{{< /hint >}}
 
 ## Setting up Locally
 
-Since this website is static HTML, the requirements to run it are fairly simple compared to traditional websites.
+The two prerequisites for local development are:
 
-Follow the steps to install [Ruby and Jekyll](https://jekyllrb.com/docs/installation/) for your platform.
-
-Open a terminal with Ruby and change to the directory where you cloned this repository.
-
-{{< hint info >}}
-If it is your first time running the website, run `bundle install` first to install dependencies!
-{{< /hint >}}
-
-Run `bundle exec jekyll serve` to host the website. Jekyll hosts the website at [localhost:4000](http://localhost:4000) and automatically reloads to any file changes done to posts, data, or excess files. The only exception is changes made to `_config.yml`, that will require restarting the Jekyll process.
-
-You can use `CTRL+C` to stop the process in the terminal when you are done with it.
-
-## Creating a new Page
-
-### Creating the File
+- [Git](https://git-scm.com/) ([_download_](https://git-scm.com/download/)), the version control system used by this repository
+- [Hugo](https://gohugo.io/) ([_download_ - make sure you install the **extended version!**](https://gohugo.io/installation/)), the static site generator used to turn markdown content into HTML pages, create menu sections, etc...
 
 {{< hint info >}}
-If you are creating a new file for the first time, it is recommended to look at the [Jekyll documentation page on posts](https://jekyllrb.com/docs/posts/) to get an idea of what this site runs on.
-{{< /hint >}}
 
-A new page should be created inside of the `_posts` directory. Since this site uses Jekyll, a documentation page is going to have to follow their "blog post" file format:  
-`YYYY-MM-DD-<filename>.<ext>`
+#### For Windows users
 
-- `YYYY-MM-DD` is the date the file was created.
-- `<filename>` is either the name of the command/variable, or if it is a guide, is split up into two parts: `guide_<name>`, where `<name>` is the shorthand of the guide's name.
-  - Command/Convar example: `2019-08-25-mom_restart.md`
-  - Guide example: `2019-08-25-guide_create-docs-page.md`
-- `<ext>` is the file's extension, for most cases, will be `.md`, signifying a markdown file. It can be `.html` if need be, but for readability, keep it `.md` as most markdown files can have HTML embedded in them anyways.
-
-{% assign pagename = page.path | split: "/" %}
-
-For example, this file name is:  
-<code>{{ pagename[1] }}</code>
-
-#### Front Matter
-
-All pages begin with something called the "Front Matter". It's a Jekyll concept that adds variables and describes what the page is, and is used in processing when converting to an actual webpage. The main variables inside of the front matter that you will need to use are:
+If you don't have a preferred package manager, Winget now ships with Windows and should be able to handle everything for you. Open a terminal as administrator, and run
 
 ```
+winget install Hugo.Hugo.Extended
+```
+
+If you don't have a preferred terminal setup already, we highly recommend use either of these, and not `cmd.exe`:
+
+- **Powershell** (which ships with Windows) or
+- **Git Bash** (which you can install as part of the _Git for Windows_ setup from the above Git download page).
+
+{{< /hint >}}
+
+Then, clone the repo with
+
+```
+git clone --recurse-submodules https://github.com/<github name>/<fork name>
+```
+
+{{< hint info >}}
+
+Using Git is beyond the scope of this guide, and well-covered elsewhere. If you're new to Git, we recommended [this guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) by Github.
+
+Follow that guide up to the end of the [Creating a branch to work on](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#creating-a-branch-to-work-on) section, then check out the below content. Once you're finished making your changes, see the rest of the guide for how to commit and pull-request them.
+
+{{< /hint >}}
+
+With your fork cloned locally, within the `docs` directory in your terminal (you made need to run `cd docs` if you've just cloned) run:
+
+```
+hugo server
+```
+
+This will build the docs and host them on a local server at <http://localhost:1313>. As you make changes to the docs, Hugo will automatically rebuild and refresh the browser window.
+
+When you are finished making changes, press `Ctrl + C` in the terminal to shut down the Hugo server.
+
+## Creating a new page
+
+Pages exists inside the `content/docs` directory. To create a new page, make a markdown file in its relevant subsection. For example, the markdown for this current page lives in `content/docs/guides/create-docs-page.md`.
+
+### Markdown
+
+The essential content of all pages is in Markdown. Specifically, Hugo uses [this package](https://github.com/gomarkdown/markdown). We won't provide a specific markdown guide here, as there are numerous resources online. Here's a useful [cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) that should cover everything needed for contributing here.
+
+### Front Matter
+
+All pages begin with something called the "Front Matter". This is [YAML](https://yaml.org) markup used to express metadata about the page, demarcated using `---`.
+For example, here's the front matter for this page:
+
+```yaml
 ---
-title: # The name of the command or convar, or the Guide/Article name. E.g. "mom_restart" or "How to Create a Docs Page"
-
-
-category: [command/guide/var/entity] # The category of the post. One of "command", "guide", "entity" or "var"
-
+title: Creating Docs Pages
+categories:
+  - guide
 tags:
-  - # A list of tags, with each starting on a new line and using a "-" character.
-
-toc: [true/false] # Whether the page should have a Table of Contents. Defaults to false.
-toc_sticky: [true/false] # If you are using the Table of Contents, consider setting this to true if the page is long.
+  - meta
+  - contributing
 ---
 ```
 
-#### Notices
+#### `title`
+
+The `title` property denotes the title of the page, displayed at the top of the page and used in the menu and other parts of the site autogenerated by Hugo.
+
+{{< hint warning >}}
+For templating reasons we insert the `title` value at the top of the page automatically. You do _not_ need to add a title explicitly in markdown!
+{{< /hint >}}
+
+#### `categories`
+
+The broad section of the docs the page is related to, typically this in the same as the directory name the page lives in, and one of `guide`, `command`, `var`, `entity`.
+
+Technically, a page can have multiple categories (hence being named `categories` not `category`), but this is just a Hugo thing. In practically all cases, a page only needs to have a single category.
+
+#### `tags`
+
+A list of tags that apply to the page. Try to think of tags that apply to this and similar pages (can always look at the tags used by similar pages), just don't use anything overly broad like "momentum" or "var".
+
+#### `weight`
+
+Controls the position of the page in the side menu. The lower the weight, the higher on the menu. Pages with equal or no weights are ordered alphabetically.
+
+#### `long_title`
+
+Overrides the value of `title` used at the top of the page. For when a page should have a longer title on the page itself, but use `title` in the menu.
+
+#### `requires_mapping`
+
+If `true`, displays a warning at the top of the page that the `-mapping` launch option is required. _(will be removed in the future when `-mapping` mode is removed)_
+
+#### command only: `safeguard`
+
+Links to a corresponding run safeguard convar.
+
+#### command only: `required_params`
+
+Displays a list of required params to use with the command.
+
+#### command only: `optional_params`
+
+Displays a list of optional params to use with the command.
+
+#### var only: `minimum_value`
+
+Minimum value of the convar the page is for.
+
+#### var only: `maximum_value`
+
+Minimum value of the convar the page is for.
+
+#### var only: `default_value`
+
+Minimum value of the convar the page is for.
+
+#### entity only: `tool_texture`
+
+Informs about a specific tool texture that must be used with the brush entity.
+
+### Shortcodes
+
+Shortcodes are sections of markdown that Hugo applies specific formatting to. We do _not_ allow raw HTML, if specific formatting is needed, it should usually be a shortcode.
+
+#### Hints
 
 You can highlight something that's important by prepending a notice tag like so:
 
+```md
+{{</* hint danger */>}}
+I'm red!
+{{</* /hint */>}}
 ```
+
+is displayed as
 {{< hint danger >}}
 I'm red!
 {{< /hint >}}
+
+likewise,
+
+```md
+{{</* hint info */>}}
+This one is blue
+{{</* /hint */>}}
+```
+
+is displayed as
 {{< hint info >}}
 This one is blue
 {{< /hint >}}
+
+and
+
+```md
+{{</* hint warning */>}}
+This one is yellow
+{{</* /hint */>}}
+```
+
+is displayed as
 {{< hint warning >}}
-Yellow notice
-```
+This one is yellow
 {{< /hint >}}
 
-{{< hint danger >}}
-I'm red!
-{{< /hint >}}
-{{< hint info >}}
-This one is blue
-{{< /hint >}}
-{{< hint warning >}}
-Yellow notice
-{{< /hint >}}
+#### Refs
 
-## Requiring `-mapping`
+As a convenient way to reference other pages using minimal markdown, we include shortcodes called `cmdref`, `varref`, `entref` and `guideref`. For example, for the {{< cmdref mom_restart >}} command, use
 
-If a command or convar requires `-mapping` to work, you may specify it as such in the front matter:
-
-```
----
-[...]
-requires_mapping: true
-[...]
----
+```md
+{{</* cmdref mom_restart */>}}
 ```
 
-This will insert the following block at the top of the document:
+#### img
 
-{{< hint danger >}}
-**Requires `-mapping`**  
-In order to use this command, you have to boot the game with
-{{< /hint >}}
-`-mapping` as a launch parameter!
+You can apply specific CSS styling to `<img>` elements using `{{</* img style="CSS STYLING" src="IMAGE SOURCE" */>}}`
 
-## Further Edits
+#### color
 
-If you want to make style changes or introduce new layouts, you will have to clone the repository to do so. The site is based on the [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes), so a lot of the files you may need could be found there.
+You can apply specific CSS color codes to text using `{{</* color */>}}`. E.g. `{{</* color color="lightgreen" text="green" */>}}` renders as {{< color color="lightgreen" text="green" >}}.
+
+#### Others
+
+Our theme, [Hugo Book](https://github.com/alex-shpak/hugo-book), includes some other shortcodes we don't currently use, which can be found [here](https://hugo-book-demo.netlify.app/docs/shortcodes/buttons/).
+
+Contributors needing custom shortcodes for other reasons are welcome to create new ones, just please add mentions of them to this section.
