@@ -20,11 +20,4 @@
 			<code>-mapping</code> as a launch parameter!
 		</blockquote>
 	{{ end }}
-
-  {{ with .Param "safeguard" }}
-    <blockquote class="outer-hint">
-        This command has an associated run safeguard:
-        <a href="/var/{{ . }}"><code>{{ . }}</code></a>
-    </blockquote>
-  {{ end }}
 {{ end }}

@@ -16,6 +16,12 @@
 {{ end }}
 
 {{ if eq ( index .Params.categories 0 ) "command" }}
+  {{ with .Param "safeguard" }}
+    <blockquote class="outer-hint">
+        This command has an associated run safeguard:
+        <a href="/var/{{ . }}"><code>{{ . }}</code></a>
+    </blockquote>
+  {{ end }}
   {{ if (or ( isset .Params "required_params" ) ( isset .Params "optional_params" ) ) }}
     <div>
       <h2>Parameters</h2>
