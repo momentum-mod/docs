@@ -1,4 +1,5 @@
 ---
+title: The PBR Shader
 categories:
   - shader
 tags:

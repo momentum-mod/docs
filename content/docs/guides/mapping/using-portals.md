@@ -1,5 +1,5 @@
 ---
-titles: World Portals
+title: World Portals
 categories:
   - guide
 tags:

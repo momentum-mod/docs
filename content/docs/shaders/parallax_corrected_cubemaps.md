@@ -1,4 +1,5 @@
 ---
+title: Parallax Corrected Cubemaps
 categories:
   - shader
 tags:
