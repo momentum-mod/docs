@@ -8,4 +8,4 @@ tags:
   - crosshair
 ---
 
-Decreases the maximum distance of the zoning reticle. The amount decreased is equivalent to the grid size (see {{< cvarref mom_zone_grid >}}).
+Decreases the maximum distance of the zoning reticle. The amount decreased is equivalent to the grid size (see {{< varref mom_zone_grid >}}).
