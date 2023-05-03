@@ -5,7 +5,6 @@ categories:
   - guide
 tags:
   - zones
-  - advanced
 ---
 
 ![Advanced Zone Guide](/images/guide_headers/guide_advanced_zoning.jpg)

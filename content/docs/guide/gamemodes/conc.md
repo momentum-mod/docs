@@ -4,9 +4,8 @@ categories:
   - guide
 tags:
   - gamemode
-  - info
   - conc
-  - concussion grenade
+  - TFC
 ---
 
 ## What is Conc?

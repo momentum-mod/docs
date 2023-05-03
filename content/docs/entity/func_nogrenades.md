@@ -6,7 +6,6 @@ tags:
   - func
   - trigger
   - TF2
-  - limit
   - explosion
   - rocket jump
   - sticky jump

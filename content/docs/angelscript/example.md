@@ -5,10 +5,8 @@ categories:
   - angelscript
 tags:
   - api
-  - reference
   - strata
   - hammer
-  - example
 ---
 
 This page contains various Strata Hammer AngelScript examples.

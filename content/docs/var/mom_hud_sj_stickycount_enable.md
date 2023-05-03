@@ -8,7 +8,6 @@ minimum_value: 0
 tags:
   - hud
   - sticky jump
-  - sticky count
 ---
 
 Toggles the stickybomb counter.

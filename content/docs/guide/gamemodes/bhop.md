@@ -4,9 +4,7 @@ categories:
   - guide
 tags:
   - gamemode
-  - info
   - bhop
-  - bunnyhop
 ---
 
 ## What is Bhop?

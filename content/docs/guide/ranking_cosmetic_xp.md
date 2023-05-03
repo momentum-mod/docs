@@ -5,7 +5,6 @@ categories:
 tags:
   - rank
   - xp
-  - experience
   - cosmetic
 ---
 

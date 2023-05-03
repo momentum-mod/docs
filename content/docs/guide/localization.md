@@ -5,8 +5,6 @@ categories:
 tags:
   - localization
   - languages
-  - poeditor
-  - translate
   - translation
 ---
 

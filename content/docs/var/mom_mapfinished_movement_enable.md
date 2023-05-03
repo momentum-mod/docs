@@ -7,7 +7,6 @@ maximum_value: 1
 minimum_value: 0
 tags:
   - movement
-  - map finished
 ---
 
 Toggles being able to move after completing a run.

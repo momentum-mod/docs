@@ -4,7 +4,6 @@ categories:
   - guide
 tags:
   - gamemode
-  - info
   - rocket jump
   - rj
 ---

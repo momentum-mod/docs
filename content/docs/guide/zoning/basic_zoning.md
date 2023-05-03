@@ -5,7 +5,6 @@ categories:
   - guide
 tags:
   - zones
-  - basics
 ---
 
 ![Zone Guide](/images/guide_headers/guide_basic_zones.jpg)

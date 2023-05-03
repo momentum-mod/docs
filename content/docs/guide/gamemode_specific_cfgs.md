@@ -4,7 +4,6 @@ categories:
   - guide
 tags:
   - hud
-  - cfg
 ---
 
 This guide covers all gamemode-specific settings available to players, at least at the time of writing.

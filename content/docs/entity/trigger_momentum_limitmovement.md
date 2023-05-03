@@ -8,8 +8,6 @@ tags:
   - map
   - ahop
   - bhop
-  - limit
-  - restrict
   - movement
 ---
 
