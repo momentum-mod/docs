@@ -104,13 +104,13 @@ Another thing you might notice is that the depth effect continues past the edge 
 
 When starting a new project in Painter, you should be fine using the standard **_PBR - Metal Roughness_** template.
 
-![Painter Template](\assets\images\pbr_guide\pbr_painter_template.jpg)
+![Painter Template](/images/pbr_guide/pbr_painter_template.jpg)
 
 However, the PBR shader uses MRAO textures, so a custom export template is needed otherwise the channels must be packed together into a single texture elsewhere.
 
 You can try this export template, which creates the MRAO texture as well as an Emissive texture if one exists:
 
-> [PBR Shader Template](/PBR MRAO Emissive.spexp)
+[PBR Shader Template](/misc/PBR_MRAO_Emissive.spexp)
 
 {{< hint warning >}}
 This template does not include the height map in the normal map alpha for parallax.
@@ -128,7 +128,7 @@ The normal map with height embedded is simpler and can be achieved with an _Alph
 
 Both processes are shown below. The MRAO is colour-coded to make it easier to follow:
 
-![Painter Template](\assets\images\pbr_guide\pbr_designer_setup.png)
+![Painter Template](/images/pbr_guide/pbr_designer_setup.png)
 
 You should then have the 3 minimum textures needed for the shader.
 
@@ -138,11 +138,11 @@ If you have several textures you want to create an MRAO from and you don't have 
 
 The process is simple; you just need all 3 textures required to make an MRAO. The end result should look somewhat similar to this:
 
-![Final Resulting MRAO](\assets\images\pbr_guide\channel_pack_final_result.jpg)
+![Final Resulting MRAO](/images/pbr_guide/channel_pack_final_result.jpg)
 
 The only layers you need are those of the 3 textures; add them all, check their properties, and look for these checkboxes:
 
-![Channel Pack Properties Dialog](\assets\images\pbr_guide\channel_pack_properties_dialog.jpg)
+![Channel Pack Properties Dialog](/images/pbr_guide/channel_pack_properties_dialog.jpg)
 
 By default, all 3 of these are checked, which is normal. Depending on which texture layer you've selected, change the checkboxes to the following:
 
