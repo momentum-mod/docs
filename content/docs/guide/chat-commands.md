@@ -4,7 +4,6 @@ categories:
   - guide
 tags:
   - chat
-  - commands
   - say
   - showclips
   - showtriggers

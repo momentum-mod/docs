@@ -8,7 +8,6 @@ tags:
   - conc
   - mapping
   - porting
-  - guide
 ---
 
 ## This guide is a work in progress. If you have questions or problems ask for help in the Momentum Mod Discord.

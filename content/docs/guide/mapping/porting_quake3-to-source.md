@@ -7,7 +7,6 @@ tags:
   - mapping
   - porting
   - defrag
-  - guide
 ---
 
 Before you start, you should know that maps with simple geometry work best for porting. Complex geometry can cause invalid solids as vertices tend to shift around if they are off grid, and you will be forced to recreate a lot of the brushes manually. Patches and props cannot be ported across either, so choose maps without those or you will have to spend a lot of time manually replacing them in Hammer.
