@@ -12,4 +12,4 @@ tags:
   - conc
 ---
 
-The amount of friction to apply when jumping in conc, if over the minimum speed set in[`mom_mv_conc_bhop_friction_speed`](/convar/mom_mv_conc_bhop_friction_speed)
+The amount of friction to apply when jumping in conc, if over the minimum speed set in[`mom_mv_conc_bhop_friction_speed`](/var/mom_mv_conc_bhop_friction_speed)

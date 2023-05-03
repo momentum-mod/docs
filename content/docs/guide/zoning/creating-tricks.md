@@ -20,7 +20,7 @@ Creating tricks and tricksurf as a whole is in the initial phase of implementati
 
 To follow this guide you should:
 
-- Know the basics of using the zoning tools (see the [guide on basic zoning](guides/basic-zoning))
+- Know the basics of using the zoning tools (see the [guide on basic zoning](guide/basic-zoning))
 - Be on Momentum 0.8.6+
 - Be running Momentum in mapping mode via the `-mapping` launch parameter
 - Have the developer console enabled and be able to use it
