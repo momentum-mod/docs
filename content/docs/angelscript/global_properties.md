@@ -6,11 +6,11 @@ categories:
 tags:
   - api
   - reference
-  - chaos
+  - strata
   - hammer
 ---
 
-This page outlines the various Chaos Hammer AngelScript global properties.
+This page outlines the various Strata Hammer AngelScript global properties.
 
 ## Global Properties
 
