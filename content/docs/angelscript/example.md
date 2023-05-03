@@ -6,12 +6,12 @@ categories:
 tags:
   - api
   - reference
-  - chaos
+  - strata
   - hammer
   - example
 ---
 
-This page contains various Chaos Hammer AngelScript examples.
+This page contains various Strata Hammer AngelScript examples.
 
 ## `ExampleWedge`
 

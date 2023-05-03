@@ -6,11 +6,11 @@ categories:
 tags:
   - api
   - reference
-  - chaos
+  - strata
   - hammer
 ---
 
-This page outlines the various Chaos Hammer AngelScript value types.
+This page outlines the various Strata Hammer AngelScript value types.
 
 ## `CMapFace`
 
