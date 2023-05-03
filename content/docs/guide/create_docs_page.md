@@ -67,7 +67,15 @@ When you are finished making changes, press `Ctrl + C` in the terminal to shut d
 
 ## Creating a new page
 
-Pages exists inside the `content/docs` directory. To create a new page, make a markdown file in its relevant subsection. For example, the markdown for this current page lives in `content/docs/guide/create-docs-page.md`.
+Pages exists inside the `content/docs` directory. To create a new page, make a markdown file in its relevant subsection. For example, the markdown for this current page lives in `content/docs/guide/create_docs_page.md`.
+
+{{< hint warning >}}
+
+Always split words in filenames using `_` underscores, not hyphens - e.g. `create_docs_pages.md` not `create-docs-pages.md`.
+
+Page URLs are based on filenames, so it's worth keeping this consistent.
+
+{{< /hint >}}
 
 ### Markdown
 
