@@ -72,17 +72,22 @@ body {
 
       // Selector hell I know, just capturing the case where a list contains a
       // sub-list, helps to break stuff up a bit.
-      ul > li:has(ul) {
-        margin: 16px 0;
+      > ul {
+        margin-top: 16px;
+        > li > ul {
+          margin-bottom: 8px;
+        }
       }
 
       &:has(label):hover {
+        background-color: var(--gray-100);
+
+        // Override behaviour of theme where it lowers opacity of items on hover
         > label > a {
           opacity: 1;
         }
       }
 
-      &:has(input):hover,
       &:has(input.toggle:checked) {
         background-color: var(--gray-100);
       }
@@ -140,8 +145,8 @@ blockquote {
 
 blockquote,
 .outer-hint {
-  padding-left: 16px !important;
   background-color: var(--gray-100);
+  padding: 12px 0px 12px 16px !important;
 
   h1,
   h2,
@@ -210,7 +215,7 @@ blockquote,
 // Pinching this from theme/_markdown.scss because I want to use this in templated stuff.
 blockquote {
   margin: $padding-16 0;
-  padding: $padding-8 $padding-16 $padding-8 ($padding-16 - $padding-4); //to keep total left space 16dp
+  padding: $padding-16 $padding-16 $padding-16 ($padding-16 - $padding-4); //to keep total left space 16dp
 
   border-inline-start: $padding-4 solid var(--gray-200);
   border-radius: $border-radius;
