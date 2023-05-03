@@ -4,10 +4,8 @@ categories:
   - guide
 tags:
   - gamemode
-  - info
   - surf
   - tricksurf
-  - tsurf
 ---
 
 ## What is Tricksurf?

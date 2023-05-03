@@ -4,9 +4,7 @@ categories:
   - guide
 tags:
   - gamemode
-  - info
   - ahop
-  - accelerated hop
 ---
 
 ## What is Ahop?

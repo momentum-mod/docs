@@ -7,7 +7,7 @@ maximum_value: 1
 minimum_value: 0
 tags:
   - conc
-  - conc timer
+  - timer
   - weapon
   - hud
 ---

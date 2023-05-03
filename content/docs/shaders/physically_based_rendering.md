@@ -4,7 +4,6 @@ categories:
   - shader
 tags:
   - pbr
-  - shader
 ---
 
 ![PBR Guide](/images/guide_headers/guide_pbr_shader.jpg)

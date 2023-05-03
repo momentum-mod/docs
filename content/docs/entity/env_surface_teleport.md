@@ -3,7 +3,6 @@ title: env_surface_teleport
 categories:
   - entity
 tags:
-  - env
   - teleport
 ---
 

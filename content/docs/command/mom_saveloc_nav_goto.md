@@ -7,7 +7,6 @@ required_params:
 requires_mapping: false
 tags:
   - saveloc
-  - goto
 ---
 
 Goes to the given saveloc number in the list, teleporting the player to it.

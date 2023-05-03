@@ -5,7 +5,6 @@ categories:
   - angelscript
 tags:
   - api
-  - reference
   - strata
   - hammer
 ---

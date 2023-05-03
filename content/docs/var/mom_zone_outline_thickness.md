@@ -6,7 +6,7 @@ default_value: 1
 maximum_value: 16
 minimum_value: 1
 tags:
-  - zone
+  - zones
   - outline
 ---
 
