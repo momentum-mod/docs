@@ -22,4 +22,6 @@ TODO
 
 ## How Sticky Jump Works
 
-TODO
+Typically the player shoots a stickybomb at the ground, then jumps, crouchs, and detonates the sticky all in extremely quick succession. If done properly the player will go flying in a certain direction.
+
+Stickybombs take a few seconds to arm before they're able to be detonated, marked by the three circles on the HUD and a brief flash when they're ready. Because of this, pogoing (or bouncing multiple times in a row without touching the ground) can be much more involved than in rocket jumping. The player must predict where they will land and shoot there ahead of time, so that the sticky is armed and ready by the time they're above it. Essentially the player must always place the next sticky before detonating the previous one. Also as stickies don't require surfaces to detonate, players can sometimes detonate a sticky in the air to allow extra height, though this takes even more precision.
