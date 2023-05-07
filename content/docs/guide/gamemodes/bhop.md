@@ -11,13 +11,13 @@ tags:
 
 Bhop, short for "**B**unny **Hop**", is a very popular gamemode found in many games, such as CS:GO, TF2, and others.
 
-In order to maximize the likelihood of inputting the jump exactly when you hit the ground, players used to bind jump to the scroll wheel, and then roll their mouse wheel very fast whenever they were about to hit the ground. This is sometimes known as *traditional* style bhopping. This method has fallen out of favor though, as unless the player can frame-perfectly input every jump command the best the player can hope for is a 50% chance of not losing speed. It's more common now to rely on *autobhop*, an addon or mod which inputs a jump on the exact frame the player hits the ground every time. This functionality is built into MomentumMod
+The core mechanic, "bhopping", is when the player jumps repeatedly, the moment they hit the ground, allowing them to maintain their current velocity. In order to maximize the likelihood of inputting the jump exactly when you hit the ground, players used to bind jump to the scroll wheel, and then roll their mouse wheel very fast whenever they were about to hit the ground. This is sometimes known as *traditional* style bhopping. This method has fallen out of favor though, as unless the player can frame-perfectly input every jump command the best the player can hope for is a 50% chance of not losing speed. It's more common now to rely on *autobhop*, an addon or mod which inputs a jump on the exact frame the player hits the ground every time. This functionality is built into MomentumMod
 
 ## History of Bhop
 
 **TODO:** full history of bhop, mentioning defrag probably as the grandpa. Some paragraphs might have to be relocated here, I'm not totally sure where each explanation should be.
 
-## How Bhop Works (Non-Technical)
+## How Bhop Works
 
 Normally when the player hits the ground, they slow down from friction. If the player instead jumps the exact frame they hit the ground, they will maintain their speed. Players can then combine this with air-strafing to accelerate faster and faster with each consecutive hop.
 
@@ -34,9 +34,9 @@ There is a nearly endless amount of complexity in doing this to the greatest eff
 
 ## Technical Explanation
 
-Movement in source is made up of a player's orientation, velocity, and acceleration (each represented by a vector). The acceleration vector is determined by the orientation and which directional keys the player is pressing (the rate of air acceleration is generally about 10 times the player's normal maximum walking speed per second, which is what makes characters feel responsive in mid-air).
+Movement in Source is made up of a player's orientation, velocity, and acceleration (each represented by a vector). The acceleration vector is determined by the orientation and which directional keys the player is pressing (the rate of air acceleration is generally about 10 times the player's normal maximum walking speed per second, which is what makes characters feel responsive in mid-air).
 
-Now, in order to prevent players from gaining infinite speed simply by holding W and space, the source engine adds an air-speed limit (not to be confused with sv_airaccelerate, sv_maxspeed, or sv_maxacceleration). This air speed limit isn't an absolute cap, rather each tick the player's velocity is projected onto their acceleration. If the magnitude of this projection is less than the speed limit, the acceleration is applied clamped to the limit. If this projection is greater than the speed limit, acceleration is ignored. This means that for acceleration vectors very close to the velocity vector, acceleration is almost always ignored if the magnitude of the velocity vector is greater than the speed cap. To put it in perspective, the default air speed limit 30 HU/s. In CS:GO, a player holding the Negev (the heaviest weapon) runs at 150 HU/s, and in tf2 a heavy with a revved-up minigun runs at 110 HU/s.
+Now, in order to prevent players from gaining infinite speed simply by holding W and space, the Source engine adds an air-speed limit (not to be confused with sv_airaccelerate, sv_maxspeed, or sv_maxacceleration). This air speed limit isn't an absolute cap, rather each tick the player's velocity is projected onto their acceleration. If the magnitude of this projection is less than the speed limit, the acceleration is applied clamped to the limit. If this projection is greater than the speed limit, acceleration is ignored. This means that for acceleration vectors very close to the velocity vector, acceleration is almost always ignored if the magnitude of the velocity vector is greater than the speed cap. To put it in perspective, the default air speed limit 30 HU/s. In CS:GO, a player holding the Negev (the heaviest weapon) runs at 150 HU/s, and in TF2 a heavy with a revved-up Brass Beast at 44 HU/s.
 
 To calculate the smallest angle a player can accelerate at in order for this acceleration to get around the speed cap with the expression 
 
