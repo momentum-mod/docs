@@ -17,9 +17,11 @@ Momentum Mod's implementation of Parkour comes from [the implementation found in
 
 ## History of Parkour
 
-Titanfall 2 was released, and boom, Parkour.
+Parkour is an athletic pursuit originating in France in the 20th century. Originally it began as a form of athletic training for soldiers called the "méthode naturelle" (natural method). These exercises were very effective at training balance, strength, and agility. The courses they would run were known as "parcours du combant", from which the word "parkour" originates. This information has nothing to do with video games, however, and is therefore worthless.
 
-TODO fill this out
+Parkour made its way into video games in 2007 when Assasin's Creed was released, and then again when Mirror's Edge was released the next year. Those early attempts laid the groundwork. Respawn then developed Titanfall 2, a game developed in the Source engine, which took lessons from all the complex first-person movement systems that had come before. It wed the ideas of other first person parkour systems with a newfound fluidity and expressiveness that allowed for more movement options at any given moment than any of the previous games.
+
+The game combined this fast-paced parkour with combat within the game very effectively, though the level that really made this ability shine came before the game even started: the training course. In being timed, and allowing players to compete against the developers of the game for fastest times, it really brought out the competitive aspect of the movement mechanics. Even people who weren't normally into speedrunning wanted to have the fastest times on this level. In the end, a lot of tech from this level made its way into the full-game speedruns, and helped kickstart the game's speedrunning scene in general.
 
 ## How Parkour Works
 
