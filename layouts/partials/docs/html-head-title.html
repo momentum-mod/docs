@@ -1,5 +1,7 @@
 {{ if eq .RelPermalink "/" }}
   {{ .Site.Title }}
+{{ else if .Param "long_title" }}
+	{{ .Param "long_title" }} | {{ .Site.Title }}
 {{ else }}
   {{ .Title }} | {{ .Site.Title }}
 {{ end }}
