@@ -15,7 +15,7 @@ Surf is a very popular gamemode in which a player slides down a ramp to gain spe
 
 3kliksphilip has created an excellent video going over the history of Surf with Mariowned, the creator of the gamemode:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qw3V7ohU3-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="qw3V7ohU3-U" >}}
 
 ## How Surf Works
 
