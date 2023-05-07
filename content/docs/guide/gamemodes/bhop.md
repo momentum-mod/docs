@@ -38,4 +38,8 @@ Movement in source is made up of a player's orientation, velocity, and accelerat
 
 Now, in order to prevent players from gaining infinite speed simply by holding W and space, the source engine adds an air-speed limit (not to be confused with sv_airaccelerate, sv_maxspeed, or sv_maxacceleration). This air speed limit isn't an absolute cap, rather each tick the player's velocity is projected onto their acceleration. If the magnitude of this projection is less than the speed limit, the acceleration is applied clamped to the limit. If this projection is greater than the speed limit, acceleration is ignored. This means that for acceleration vectors very close to the velocity vector, acceleration is almost always ignored if the magnitude of the velocity vector is greater than the speed cap. To put it in perspective, the default air speed limit 30 HU/s. In CS:GO, a player holding the Negev (the heaviest weapon) runs at 150 HU/s, and in tf2 a heavy with a revved-up minigun runs at 110 HU/s.
 
-To calculate the smallest angle a player can accelerate at in order for this acceleration to get around the speed cap with the expression `acos(limit/|speed|)`. This minimal angle is desireable as the smaller the angle the greater the contribution to forward speed.
+To calculate the smallest angle a player can accelerate at in order for this acceleration to get around the speed cap with the expression 
+
+$$ acos (\frac{limit}{\vert{speed}\vert}\) $$
+
+This minimal angle is desireable as the smaller the angle the greater the contribution to forward speed.
