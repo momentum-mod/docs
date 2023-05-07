@@ -27,4 +27,4 @@ The game combined this fast-paced parkour with combat within the game very effec
 
 We don't have Parkour fully working yet but watch this helpful video by Titanfall 2 speedrunner Bryonato to see how it will work:
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C_cXYyA4LaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube id="C_cXYyA4LaU" >}}
