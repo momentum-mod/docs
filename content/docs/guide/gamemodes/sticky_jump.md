@@ -10,7 +10,7 @@ tags:
 
 ## What is Sticky Jump?
 
-Based on the Demoman class from Team Fortress 2, players shoot explosives that stick to surfaces and must be detonated manually, which players then uses to propel themselves around the map. Up to 3 of these arcing bombs can be used at once to go at extremely high speeds, or used in alternation to "pogo" on the floor, walls, or even in the air.
+Based on the Demoman class from Team Fortress 2, players shoot explosives that stick to surfaces and must be detonated manually, which players can then use to propel themselves around the map. Up to 3 of these arcing bombs can be used at once to go at extremely high speeds, or used in alternation to "pogo" on the floor, walls, or even in the air.
 
 ## History of Sticky Jump
 
