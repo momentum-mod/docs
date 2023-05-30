@@ -5,6 +5,7 @@ categories:
 tags:
   - gamemode
   - bhop
+math: true
 ---
 
 ## What is Bhop?
