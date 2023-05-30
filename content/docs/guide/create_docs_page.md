@@ -5,6 +5,7 @@ categories:
 tags:
   - meta
   - contributing
+math: true
 ---
 
 All pages on this site are hosted in the [Momentum Mod docs GitHub repository](https://github.com/momentum-mod/docs). The site uses [Hugo](https://gohugo.io/) with the [Hugo Book](https://github.com/alex-shpak/hugo-book), and is entirely open source.
@@ -122,6 +123,16 @@ Controls the position of the page in the side menu. The lower the weight, the hi
 #### `long_title`
 
 Overrides the value of `title` used at the top of the page. For when a page should have a longer title on the page itself, but use `title` in the menu.
+
+#### `math`
+
+Enables math typesetting using [KaTeX](https://katex.org/). By setting `math` to `true`, any blocks enclosed with `$$` will be treated as LaTeX code. For example,
+
+```$$ e^{ \pm i\theta } = \cos \theta \pm i\sin \theta $$```
+
+will be rendered as
+
+$$ e^{ \pm i\theta } = \cos \theta \pm i\sin \theta $$
 
 #### `requires_mapping`
 
