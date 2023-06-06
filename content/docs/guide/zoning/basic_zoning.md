@@ -12,7 +12,7 @@ tags:
 This Guide will cover the most basic usage of the Zoning Tools to create a Start and End Zone.
 
 > Looking for Stages and Bonuses?  
-> Try the [Advanced Zoning Guide](/guide/advanced-zoning/).
+> Try the [Advanced Zoning Guide](/guide/zoning/advanced_zoning/).
 
 ## Prerequisites
 
