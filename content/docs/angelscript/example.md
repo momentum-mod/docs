@@ -9,9 +9,9 @@ tags:
   - hammer
 ---
 
-This page contains various Strata Hammer AngelScript examples. At the moment, the scripts can be used to create new brush types for the MomentumMod Hammer Editor.
+This page contains various examples of how to use AngelScript to create new brush types in the Strata Hammer Editor.
 
-To use the examples create a new file inside the `Momentum Mod Playtest/hammer/scripts` folder (create the folder if it does not exist yet). The scripts have to be saved with the extension `.as`. Afterwards, the new brush types can be used by first selecting the `Block Tool` within Hammer and then  changing the `Categories` combo-box in the right bar to `Scriptable`. The combo-box `Objects` below then contains the new scripted brushes.
+To use the examples create a new file inside the `Momentum Mod Playtest/hammer/scripts` folder (create the folder if it does not exist yet). The scripts have to be saved with the extension `.as`. Afterwards, the new brush types can be used by first selecting the `Block Tool` within Hammer and then changing the `Categories` combo-box in the right bar to `Scriptable`. The combo-box `Objects` below then contains the new scripted brushes.
 
 ## `ExampleWedge` (`script_wedge.as`)
 
