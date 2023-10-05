@@ -79,7 +79,7 @@ If you are satisfied with the Zone click again and the outline will change colou
 In this example the Zone has become green - it is a Start Zone.
 
 > Want to find out more about Zones?  
-> Check the [Zone Types](/guide/zone-types/) Guide.
+> Check the [Zone Types](/guide/zoning/zone_types/) Guide.
 
 To create the End Zone, go to where you want it and repeat the process, you should have a red cube this time:
 
@@ -93,4 +93,4 @@ Zones are stored in a `.zon` file of the same name as the map.
 So for this example the map is called _"cubemaptest"_ so the `zones/` folder will now have a `cubemaptest.zon` file.
 
 > This should be enough for basic testing and Linear maps.  
-> For more than one Stage or Bonuses check the [Advanced Zoning](/guide/advanced-zoning/) Guide.
+> For more than one Stage or Bonuses check the [Advanced Zoning](/guide/zoning/advanced_zoning/) Guide.
