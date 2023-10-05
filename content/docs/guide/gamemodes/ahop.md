@@ -17,7 +17,7 @@ The specific version of Ahop implemented in Momentum Mod is based on the one fou
 
 ## History of Ahop
 
-In the days before Valve's Orange Box, Half-Life 2's main method of movement was [Defrag](/guide/gamemode-defrag)-esque, only requiring holding W and jumping to gain moderate amounts of speed. An example can be found in the Half-Life 2 speedrun, "Half-Life 2 Done Quick":
+In the days before Valve's Orange Box, Half-Life 2's main method of movement was [Defrag](/guide/gamemodes/defrag/)-esque, only requiring holding W and jumping to gain moderate amounts of speed. An example can be found in the Half-Life 2 speedrun, "Half-Life 2 Done Quick":
 
 When Valve released the Orange Box in 2007, they bundled Half-Life 2, all of its episodes, Portal and Team Fortress 2 into one package. This updated Half-Life 2 and its episodes to utilize a version of the movement that aimed to "fix" this old-style bunnyhopping across all of the games.
 
