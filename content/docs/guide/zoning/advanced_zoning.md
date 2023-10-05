@@ -12,13 +12,13 @@ tags:
 This Guide will cover most other things regarding the Zoning Tools, as well as more advanced uses.
 
 > Looking for the Basics?  
-> Read the [Basic Zoning](/guide/basic-zoning/) Guide.
+> Read the [Basic Zoning](/guide/zoning/basic_zoning/) Guide.
 
 ## Prerequisites
 
 To follow this Guide you should:
 
-- Know the [basics](/guide/basic-zoning/) of using the Zoning Tools
+- Know the [basics](/guide/zoning/basic_zoning/) of using the Zoning Tools
 - Be on Momentum 0.8.0+
 - Be running Momentum with `-mapping`
 - Have the Developer Console enabled and be able to use it
@@ -38,7 +38,7 @@ You should bind this to a key for ease of use, although there is currently a bin
 Stages and Checkpoints cannot be created with the Auto Mode in the Zoning Tools, so you must change it manually via the drop-down menu.
 
 > Want to know more about Stages and Checkpoints?  
-> Check the [Zone Types](/guide/zone-types/) Guide.
+> Check the [Zone Types](/guide/zoning/zone_types/) Guide.
 
 ## Concave and more complex Zone shapes
 
@@ -67,7 +67,7 @@ Once the height is where you want it, press **Enter** again.
 The Zone will change colour and be finalised.
 
 > Want to find out more about the Zones in Momentum?  
-> Check the [Zone Types](/guide/zone-types/) Guide.
+> Check the [Zone Types](/guide/zoning/zone_types/) Guide.
 
 {{< hint info >}}
 Make sure to click **_Save Zones_** when you are done!
