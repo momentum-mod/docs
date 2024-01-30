@@ -24,11 +24,13 @@ Starts spectating.
 > `mom_spectate <player-name-here>`
 
 Starts spectating player with matching player name.
-For example, `aaa`, `aaaa`, `aaab`, etc.
+For example, `mom_spectate aaa`
+
+would start spectating player `aaa`.
 
 > `mom_spectate <steam-ID-here>`
 
-Starts spectating player with matching steam ID. 
+Starts spectating the player with matching steam ID. 
 For example, 
 
 > `mom_spectate 99999999999999999`
