@@ -21,10 +21,18 @@ Takes an optional parameter that is either the steam ID or name of the player to
 
 Starts spectating.
 
-> `mom_spectate aaa`
+> `mom_spectate <player-name-here>`
 
-Starts spectating player with name `aaa`, `aaaa`, `aaab`, etc.
+Starts spectating player with matching player name.
+For example, `mom_spectate aaa`
+
+would start spectating player `aaa`.
+
+> `mom_spectate <steam-ID-here>`
+
+Starts spectating the player with matching steam ID. 
+For example, 
 
 > `mom_spectate 99999999999999999`
 
-Starts spectating player with steam ID `99999999999999999`.
+would start spectating the player with steam ID `99999999999999999`.
