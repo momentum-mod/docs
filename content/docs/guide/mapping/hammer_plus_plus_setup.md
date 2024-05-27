@@ -36,7 +36,7 @@ In order for Hammer++ to load content from the various games that Momentum Mod m
 "mountcfg"
 {
     "cstrike"	"C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Source\cstrike"
-    "tf"		"C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf"
+    "tf"	"C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2\tf"
     "portal"	"C:\Program Files (x86)\Steam\steamapps\common\Portal\portal"
     "portal2"	"C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2"
     "momentum"	"C:\Program Files (x86)\Steam\steamapps\common\Momentum Mod Playtest\momentum"
@@ -48,7 +48,7 @@ In order for Hammer++ to load content from the various games that Momentum Mod m
 **Prerequisites**:
 - [GCFScape](https://nemstools.github.io/pages/GCFScape-Download.html)
 - [Hammer++ CS:GO Build](https://ficool2.github.io/HammerPlusPlus-Website/download.html)
-- About 42 GB of disk space (depending on how many games are mounted)
+- About 32 GB of disk space (depending on how many games are mounted)
 
 ## Hammer++ Configuration
 
@@ -65,14 +65,13 @@ In order for Hammer++ to load content from the various games that Momentum Mod m
 In order for Hammer++ to load content from the various games that Momentum Mod mounts, follow these steps:
 
 1. Extract materials, models, and sounds from .vpk files:
-    - Extract `Counter-Strike Global Offensive\csgo\pak01_dir.vpk` into `Counter-Strike Global Offensive\csgo\mounted_content\csgo_content`
     - Extract `Counter-Strike Source\cstrike\cstrike_pak_dir.vpk` into `Counter-Strike Global Offensive\csgo\mounted_content\cstrike_content`
     - Extract `Portal 2\portal2\pak01_dir.vpk` into `Counter-Strike Global Offensive\csgo\mounted_content\portal2_content`
     - Extract `Team Fortress 2\tf\tf2_misc_dir.vpk` and `Team Fortress 2\tf\tf2_textures_dir.vpk` into `Counter-Strike Global Offensive\csgo\mounted_content\tf2_content`
 2. Mount Momentum Mod content by running this command in a command prompt: `mklink /D "<path to steam games>\Counter-Strike Global Offensive\csgo\mounted_content\momentum_content" "<path to steam games>\Momentum Mod Playtest\momentum"`
 3. Open `Momentum Mod Playtest\momentum\gameinfo.txt` and copy the following contents into the SearchPaths section:
 ```
-game        "csgo/mounted_content/csgo_content"
+game        "csgo/pak01_dir.vpk"
 game        "csgo/mounted_content/cstrike_content"
 game        "csgo/mounted_content/portal2_content"
 game        "csgo/mounted_content/tf2_content"
