@@ -1,6 +1,7 @@
 ---
 title: momentum_weapon_spawner 
-category: entity
+category: 
+  - entity
 tags:
  - point entity
  - weapons
@@ -16,7 +17,7 @@ The amount of time in seconds before a weapon can be picked up again. If this va
 
 >**Weapon Name** (WeaponName&lt;**string**&gt;)
 
-Name of the weapon to give the player. Must be one of the names listed on [Weapon System](/guide/weapon-system/).
+Name of the weapon to give the player. Must be one of the names listed on [Weapon System](https://docs.momentum-mod.org/guide/mapping/weapon_system/).
 
 >**Pickup Ammo** (PickupAmmo&lt;**integer**&gt;)
 
