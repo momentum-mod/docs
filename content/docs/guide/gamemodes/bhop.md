@@ -16,7 +16,17 @@ The core mechanic, "bhopping", is when the player jumps repeatedly, the moment t
 
 ## History of Bhop
 
-**TODO:** full history of bhop, mentioning defrag probably as the grandpa. Some paragraphs might have to be relocated here, I'm not totally sure where each explanation should be.
+Bunny hop, commonly referred to as "Bhop" is a basic yet unique movement technique that originated in the early days of first-person shooter (FPS) games, while it's hard to pinpoint the exact time and era of its origin, it was first popularised in modding communities mostly revolving around Quake. 
+
+One of the earliest predecessors to bhop is the game mode called "Defrag" which emerged in the Quake series. Defrag focused on the craft of efficient and skillful movements through various obstacle courses. In no time players realized that through combining jumping and strafing they could gain momentum and navigate much quicker and easier through different obstacles.
+
+As the FPS genre grew, gaining more and more popularity so did bunny hopping. The technique gained significant popularity in the Counter-Strike series and Half-Life 2, in which it was used in many different unique ways to help out with different speedruns. In these games, players discovered that by perfectly timing jumping and strafing, they could maintain or even accelerate their speed.
+
+Bunny hopping became a big part of the Counter-Strike series, with players practicing and perfecting the technique to gain an edge in matches. The skill ceiling for bunny hopping was high, requiring hours and hours of practice and precise timing and coordination to execute successfully and consistently. In professional matches, skilled bunny hoppers could surprise opponents with unexpected speed making it a strategic advantage.
+
+Counter-Strike: Global Offensive (Cs:go) now known as Counter-Strike 2 (CS2) keeps continuing the bunny hopping traditions albeit with significant modifications to make it harder and less consistent whitelist not gaining as much speed as in older source engine games despite that fact there is community made servers for it which are made so you could have the similar feeling to the past while it's still not the same.
+
+(good video to watch https://www.youtube.com/watch?v=n1HowpVX-hU)
 
 ## How Bhop Works
 
