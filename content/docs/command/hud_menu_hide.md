@@ -1,5 +1,5 @@
 ---
-title: chaos_hud_menu_hide
+title: hud_menu_hide
 categories:
   - command
 tags:

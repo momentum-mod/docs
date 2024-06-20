@@ -2,8 +2,8 @@
 title: Static HUD Menus
 categories:
   - guide
-ccom_reload: chaos_HUD_menu_reload
-ccom_show: chaos_HUD_menu_show
+ccom_reload: HUD_menu_reload
+ccom_show: HUD_menu_show
 tags:
   - HUD
   - HUD menu
@@ -25,7 +25,7 @@ There are a few HUD menus that ship with the game:
 
 You can create however many custom menus as you'd like, but only one can be displayed at a time.
 
-To open a HUD menu, use {{< cmdref chaos_HUD_menu_show >}}.
+To open a HUD menu, use {{< cmdref HUD_menu_show >}}.
 The parameter for this command will autofill with all the available HUD menus.
 
 ## File reading/writing
