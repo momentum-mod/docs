@@ -1,5 +1,5 @@
 ---
-title: chaos_hud_menu_reload
+title: hud_menu_reload
 categories:
   - command
 tags:
@@ -7,6 +7,6 @@ tags:
   - hud menu
 ---
 
-Reloads the hud menu names for parameter completion for {{< cmdref chaos_hud_menu_show >}}.
+Reloads the hud menu names for parameter completion for {{< cmdref hud_menu_show >}}.
 
 The menu names are the file names of the files in `cfg/menus/`, skipping those that end with `_default`.
