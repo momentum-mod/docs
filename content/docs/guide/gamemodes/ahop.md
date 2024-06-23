@@ -47,11 +47,11 @@ Accelerated Forwards Hop, or AFH, is the hardest of the three methods to perform
 
 Once you've gained some speed while ABH-ing, you can turn around and start pressing S every time you jump, allowing you to see where you're going. In games with relatively high air acceleration like Half-Life 2, the more precise your S-taps are. the more speed you'll preserve since the longer you hold S the more you decelerate yourself while in the air. On the other hand on games like Portal with lower air acceleration, you can simply hold S to do AFH's.
 
-### Technical Explanation
+## Technical Explanation
 
 All of the following code can be observed in full on [the publicly-available Source SDK 2013 codebase](https://github.com/ValveSoftware/source-sdk-2013/blob/master/sp/src/game/shared/gamemovement.cpp#L2469) provided by Valve. The following explanation was taken from [the SourceRuns wiki page](https://wiki.sourceruns.org/wiki/Accelerated_Back_Hopping).
 
-#### Calculating Speed
+### Calculating Speed
 
 The game goes through a few steps to decide how much to add to the player's speed and whether to subtract instead.
 
@@ -96,7 +96,7 @@ if ( flNewSpeed > flMaxSpeed )
 
 After all the steps above, the game takes the newly acquired `flSpeedAddition` and apply it onto the player's speed.
 
-#### Valve's Flaw
+### Valve's Flaw
 
 Normally, an ABH is done by doing a backwards sprint-jump, crouching in midair, landing and continuing to jump without holding any directional keys. In the calculations below, it's assumed that inputs are frame-perfect without any loss of speed.
 
