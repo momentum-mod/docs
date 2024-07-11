@@ -21,4 +21,6 @@ As Valve built their (new for the time) Goldsrc engine on top of the Quake Engin
 
 ## How Rocket Jump Works
 
-TODO (TF2 wiki seems like a decent source)
+A rocket jump is a technique used in various first-person shooter (FPS) games, mostly in games such Team Fortress 2 (TF2) and Quake , where a player utilizes the explosive force of a rocket launcher to propel themselves to higher or more advantageous positions. The basic concept involves firing a rocket at the ground or a nearby surface and jumping at the exact moment of the explosion to ride the blast wave and gain vertical momentum.
+
+(TODO add a step by step guide on how it works etc)
