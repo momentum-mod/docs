@@ -10,7 +10,7 @@ tags:
 ---
 ## What is Climb?
 
-Climb, also known as Kreedz **Climb**ing (KZ) or Xtreme **Climb** (XC), is a popular gamemode found in every Counter-Strike game. The goal of Climb is to get from point A to point B in a map in the quickest time possible. It's series of platforming challenges that can be best simplified as "trick jumps" which pull from the big 3 movement disciplines in source, Strafing, Bhop, and Surf/Slide to challenge players in scaling its maps. players are not forced to consecutively string together jumps unlike bhop or surf. This is great for players who only care about completion or are learning the map. However, for speedrunning, stopping to get your bearings is inadvisable.
+Climb, also known as Kreedz **Climb**ing (KZ) or Xtreme **Climb** (XC), is a popular gamemode found in every Counter-Strike game. The goal of Climb is to get from point A to point B in a map in the quickest time possible. It's series of platforming challenges that can be best simplified as "trick jumps" which pull from the big 3 movement disciplines in source, Strafing, Bhop, and Surf/Slide to challenge players in scaling its maps. 
 
 ## History of Climb
 
