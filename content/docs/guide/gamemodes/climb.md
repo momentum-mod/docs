@@ -42,7 +42,7 @@ Bhopping has its own speedcap: **TBD (Momkz)**.      **380 (KZT)**,      **300 (
 This cap is seperate from the **maxvelocity** cap (how fast the engine lets you go before not bothering to give anymore speed 3500 by default).  
 Anytime you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
 as soon as they try to jump off the ground with this speed, the cap will proc. If the player reaches this cap and tries to jump again,  
-thier speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.  
+thier speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**. 
 
 However this Bhop cap still allows the player to gain more speed than a pre-strafe hence, bhopping has the potential to go further than a longjump. Useful to remember when dealing with diffcult longjumps (although this may form a bad habit that keeps you from improving) or, on harder maps, a required bhop jump.
 Bhop jumps can also be required by the mapper by using "bhop blocks" that teleport you back if you try standing on them, same as the Bhop gamemode.
@@ -74,10 +74,12 @@ Climb has some techniques of its own rarely seen outside of its gamemode.
 
 **Ladder Jumps**: The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more simillar to surfing. Gain speed with the climb and flick off near the top. Just like surfing, the way you flick off dictactes your trajectory, and whether you trade speed for height and vice versa.  
 
-**Standups**: If you crouch close enough to the ground (TODO: get exact units) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened up beneath you and uncrouches. This behavior gives you a nice grace period to execute a frame-perfect (or tick-perfect) outcome. 
+**Crouch Bhops**: Staying crouched while bhopping. It may be required in a map when going underneath a low celling. Crouching will raise your collision box (you tuck in your legs) and potentially keep you in the air longer, however it will also limit your ablity to turn in the air and thus gain speed as well. This speed disadvantage is negated if you have already reached the Bhop speedcap on KZT since you will remain at 380 regardless of how much speed you try to gain.  
 
-**Standup Bhops**: Combines Standups with bhoping, the idea is that crouching in the air raises your collison (you tuck in your legs) and allows you to stay in the air longer. usually you want to stay uncrouched in the air for airstrafing purposes, so best of both worlds is that you perfectly time and hold your crouch so that you only "tuck your legs" to get the extra distance. Sounds like a tall order but thanks to how "Standups" behave, to get the best outcome you only have to time the beginning of the crouch to be inside this window and the engine does the rest of the timing. This is not a replacement for regular bhops, since you may prefer to land sooner and jump sooner, Standup bhops are only for squeezing extra distance out of a jump in an optimal manner. 
+**Standups**: While in the air, if you crouch close enough to the ground (TODO: get exact units) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened up beneath you and uncrouches. This behavior gives you a nice grace period to execute a frame-perfect. (or tick-perfect) outcome. (Note that the faster you are falling, the shorter the grace period is).  
+
+**Standup Bhops**: Combines Standups with bhoping, the idea is that the best of both worlds is that you perfectly time and hold your crouch so that you only "tuck your legs" to get the extra distance. Sounds like a tall order but thanks to how "Standups" behave, to get the best outcome you only have to time the beginning of the crouch to be inside this window and the engine does the rest of the timing. This is not a replacement for regular bhops or crouch bhops, since you may prefer to land sooner and jump sooner or need to aviod map hazards. Standup bhops are only for squeezing extra distance out of a jump in an optimal manner. 
 
 **Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory but is a cornerstone skill built off of the fundamentals and is required to be competitive. 
 
-TODO: Crouch bhop, Gstrafe, other advanced techs
+TODO: Gstrafe, other advanced techs
