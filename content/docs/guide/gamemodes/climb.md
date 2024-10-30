@@ -44,7 +44,7 @@ Anytime you jump the Bhop speed cap will be used meaning even if the player gain
 as soon as they try to jump off the ground with this speed, the cap will proc. If the player reaches this cap and tries to jump again,  
 thier speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.  
 
-However this Bhop cap still allows the player to gain more speed than a pre-strafe hence, bhopping has the potential to go further than a longjump. Useful to remember when dealing with diffcult longjumps or, on harder maps, a required bhop jump.
+However this Bhop cap still allows the player to gain more speed than a pre-strafe hence, bhopping has the potential to go further than a longjump. Useful to remember when dealing with diffcult longjumps (although this may form a bad habit that keeps you from improving) or, on harder maps, a required bhop jump.
 Bhop jumps can also be required by the mapper by using "bhop blocks" that teleport you back if you try standing on them, same as the Bhop gamemode.
 
 ### Surf
@@ -66,12 +66,18 @@ This means that jumping up to something slows you down longer since you land ear
 For speedrunning getting around this stamnia is a top prority for optimzing runs. For completion players only certain types of platforms make stamina a cause for concern namely ones that are to small or awkward to get a running start from a standsill.
 [This doc goes into futher detail](https://kzguide.gitlab.io/techniques/stamina/).
 
-### Advanced Techniques
+### Advanced Techniques 
 
 Climb has some techniques of its own rarely seen outside of its gamemode.
 
 **Fast Ladder Climbing**: Ladders can be climbed by "walking into them". If you are directly facing the ladder hold W, if sideways A/D. If you face the ladder diagonally you can climb the ladder both ways. If you hold W and A/D the speeds add onto each other resulting in a much faster climb.    
 
 **Ladder Jumps**: The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more simillar to surfing. Gain speed with the climb and flick off near the top. Just like surfing, the way you flick off dictactes your trajectory, and whether you trade speed for height and vice versa.  
-  
+
+**Standups**: If you crouch close enough to the ground (TODO: get exact units) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened up beneath you and uncrouches. This behavior gives you a nice grace period to execute a frame-perfect (or tick-perfect) outcome. 
+
+**Standup Bhops**: Combines Standups with bhoping, the idea is that crouching in the air raises your collison (you tuck in your legs) and allows you to stay in the air longer. usually you want to stay uncrouched in the air for airstrafing purposes, so best of both worlds is that you perfectly time and hold your crouch so that you only "tuck your legs" to get the extra distance. Sounds like a tall order but thanks to how "Standups" behave, to get the best outcome you only have to time the beginning of the crouch to be inside this window and the engine does the rest of the timing. This is not a replacement for regular bhops, since you may prefer to land sooner and jump sooner, Standup bhops are only for squeezing extra distance out of a jump in an optimal manner. 
+
+**Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory but is a cornerstone skill built off of the fundamentals and is required to be competitive. 
+
 TODO: Crouch bhop, Gstrafe, other advanced techs
