@@ -80,6 +80,13 @@ Climb has some techniques of its own rarely seen outside of its gamemode.
 
 **Standup Bhops**: Combines Standups with bhoping, the idea is that the best of both worlds is that you perfectly time and hold your crouch so that you only "tuck your legs" to get the extra distance. Sounds like a tall order but thanks to how "Standups" behave, to get the best outcome you only have to time the beginning of the crouch to be inside this window and the engine does the rest of the timing. This is not a replacement for regular bhops or crouch bhops, since you may prefer to land sooner and jump sooner or need to aviod map hazards. Standup bhops are only for squeezing extra distance out of a jump in an optimal manner. 
 
+**Double Duck [1.6 Climb only]**: In 1.6 Climb, while on the ground pressing duck and releasing it before you are fully on the ground will cause the game to unduck you prematurely, the result is that you pop 18 units off the ground (very small compared to a jump) you can improve this height by crouching again in the air resulting in being 36 units off the ground (better but still small compared to a jump).  
+you can use Double Ducks to climb small humps without wasting time overshooting with a jump, but in addition to this they have 1 big advantage over jumps:
+**ducking is not considered a jump so the jump-land penalty does not proc.**  
+This means you can gain speed with air strafing without worrying about slowing down upon landing. Generally used by first gaining speed with a prestrafe than double ducking to gain more speed in the air, land then finally jump. This is called a Count jump. It can also be used in a bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a CountJump. 
+
+**Duck Roll [1.6 Climb only]**: It is possible to do a "bhop" sequence comprised entirely of Double Ducks. This lets you get pass the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequent you must duck compared to jumps in a bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. DuckRoll's effectivness heavily depends on the map.
+
 **Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory but is a cornerstone skill built off of the fundamentals and is required to be competitive. 
 
 TODO: Gstrafe, other advanced techs
