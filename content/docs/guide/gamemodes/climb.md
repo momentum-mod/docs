@@ -29,7 +29,7 @@ It has become so popular that it has branched off into other games like **Half-L
 Strafing is the most common focus for maps. Strafing can come in the form of long jumps and taking indirect lines.  
 **Airstrafing** works in the same way as in the Bhop and Surf gamemodes; using a strafe key (A or D) while guiding the mouse off in that direction causes the player to receive more speed.  
 A **Prestrafe** is a tehcnique that has been patch out of counterstrike since CSGO but has been re-added for the Climb gamemode. While on the ground, players hold **both** the W and strafe keys and guide the mouse into the direction they are moving, right for W+D and left for W+A. Perfoming a prestrafe correctly while let you gain speed on the ground. Gaining speed before the jump and while in the air lets you travel futher. This is called a **Long Jump**. There are 2 other forms of longjump in 1.6 that are more advanced, [Count Jumps](https://kz-rush.com/en/page/countjump-physics) and [High Jumps](https://kz-rush.com/page/highjump-physics).  
-Note that since strafing on ground and in the air causes the player to deviate from their intended destination (assuming it is straight in front of them), prestrafing is usually done only before jumps rather than constantly, and long jumps typically incoroporate multiple left and right airstrafes into a jump which counteract eachother and keep the player close to a straight line.    
+Note that since Airstrafing causes the player to deviate from their intended destination (assuming it is straight in front of them), Long Jumps typically incoroporate multiple left and right Airstrafes into a jump which counteract each other and keep the player close to a straight line. These multiple starfes in opposite directions gives the apperance of a "flicky" or "jittery" Airstrafe but a lot of practices goes into syncing the A and D keys with quick but smooth mouse movements.
 
 Sometimes you may not be able to take a direct line due to an obstruction.  
 The 2 most common forms of this is rounding a corner (often without being able to see the next platform) and 2 platforms separated by a thin wall.
@@ -38,7 +38,7 @@ In this case, air strafing is not used to gain speed but as a form of air contro
 ### Bhop
 
 Bhopping has reduced potential compared to the Bhop game mode.  
-Bhopping has its own speedcap: **TBD (Momkz)**.      **380 (KZT)**,      **300 (1.6 Climb)**.  
+Bhopping has its own speedcap: **TBD (Momkz)**.      **380 (KZT)**,      **300 (1.6 Climb)**. The default running speed in all Climb modes is 250.  
 This cap is seperate from the **maxvelocity** cap (how fast the engine lets you go before not bothering to give anymore speed 3500 by default).  
 Anytime you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
 as soon as they try to jump off the ground with this speed, the cap will proc. If the player reaches this cap and tries to jump again,  
@@ -49,8 +49,8 @@ Bhop jumps can also be required by the mapper by using "Bhop Blocks" that telepo
 
 ### Surf
 
-Surf is very similar to its game mode counterpart.  
-As such, Maps made with MomClimb and KZT in mind can have more tradtional surf sections. The length and diffculty of these sections is entirely up to the map. Usually they are much shorter (sometimes only 1 ramp) compared to dedicated Surf maps.  
+Surf is very similar to its game mode counterpart. All Climb modes are 100 tick while the Surf gamemode is 66 tick. This means gaining speed is quicker and losing speed is harder in Climb compared to Surf.  
+Maps made with MomClimb and KZT in mind can have tradtional surf sections. The length and diffculty of these sections is entirely up to the map. Usually they are much shorter (sometimes only 1 ramp) compared to dedicated Surf maps.  
 1.6 Climb has a special version of Surf called **Slide**.  
 1.6 Climb has much lower airacelleration  (10aa compared to MomClimb and KZT's 100aa). This means players can't as easily flick onto a ramp ("board") and genearate speed, or flick off a ramp and generate height.    
 Because of this "Slide" sections are usually brief and focus on keeping on the board rather than gaining enough speed to fly off.
