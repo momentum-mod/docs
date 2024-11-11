@@ -44,8 +44,8 @@ Anytime you jump the Bhop speed cap will be used meaning even if the player gain
 as soon as they try to jump off the ground with this speed, the cap will proc. If the player reaches this cap and tries to jump again,  
 thier speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**. 
 
-However this Bhop cap still allows the player to gain more speed than a PreStrafe hence, Bhopping has the potential to go further than a Long Jump. Useful to remember when dealing with diffcult Long Jumps (although this may form a bad habit if relied upon) or, on harder maps, a required Bhop jump.
-Bhop jumps can also be required by the mapper by using "Bhop Blocks" that teleport you back if you try standing on them, same as the Bhop gamemode.
+However this Bhop cap still allows the player to gain more speed than a Prestrafe hence, Bhopping has the potential to go further than a Long Jump. Useful to remember when dealing with diffcult Long Jumps (although this may form a bad habit if relied upon).  
+Bhop jumps can also be required by the mapper by using "Bhop Blocks" that teleport you back if you try standing on them, same as the Bhop gamemode. Conversely, mappers can also add triggers that disable Bhops inside an area.  
 
 ### Surf
 
