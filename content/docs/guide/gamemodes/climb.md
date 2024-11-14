@@ -86,8 +86,9 @@ you can use Double Ducks to climb small humps without wasting time overshooting 
 **ducking is not considered a jump so the jump-land penalty does not proc.**  
 This means you can gain speed with air strafing without worrying about slowing down upon landing. Generally used by first gaining speed with a prestrafe than double ducking to gain more speed in the air, land then finally jump. This is called a Count Jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a Bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a Count Jump. 
 
-**Duck Roll [1.6 Climb only]**: It is possible to do a "Bhop" sequence comprised entirely of Double Ducks. This lets you get pass the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequent you must duck compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. DuckRoll's effectivness heavily depends on the map.
+**Duck Roll [1.6 Climb only]**: Sometimes called Silent Walking, Russian Walking, or G-strafe in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
+It is possible to do a "Bhop" sequence comprised entirely of Double Ducks. This lets you get pass the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequent you must duck compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. DuckRoll's effectivness heavily depends on the map.
 
-**Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory but is a cornerstone skill built off of the fundamentals and is required to be competitive. 
+**Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off of the fundamentals and is required to be competitive. 
 
-TODO: Gstrafe, other advanced techs
+TODO: other advanced techs?
