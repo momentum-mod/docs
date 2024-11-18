@@ -11,17 +11,13 @@ tags:
 
 ## What is Climb?
 
-Climb, also known as Kreedz **Climb**ing (KZ) or Xtreme **Climb** (XC), is a popular gamemode found in every Counter-Strike game.   
-The goal of Climb is to get from point A to point B in a map in the quickest time possible.  
+Climb, also known as **Kreedz** (KZ) in CS 1.6 and CSGO, or **Xtreme Climb** (XC) in CSS, is a popular, community gamemode found in every Counter-Strike game.  
 Climb is a series of platforming challenges that can be best simplified as "trick jumps" which pull from the big 3 movement disciplines in source:  
-Strafing, Bhop, and Surf to challenge players in scaling its maps.
+Strafing, Bhop, and Surf to challenge players in scaling its maps from beginning to end.
 
 ## History of Climb
 
-Climb started in Counter-Strike 1.1. A mapper named Kreedz decided to make a fun mess-around map that did not have the usual defuse objective for his friends. Kreedz enjoys climbing as a hobby, so he felt that there should be some trees you could climb. Kreedz found this aspect of the map to be particularly fun. He made more maps with a focus on this climbing aspect, and named them with a kz_ tag as a sort of signature. Eventually they caught on and the kz_ tag stuck!  
-It has become so popular that it has branched off into other games like **Half-Life** and even spawned its own game, [Kreedz Climbing](https://store.steampowered.com/app/626680/Kreedz_Climbing/).  
-[Xtreme-Jumps](https://xtreme-jumps.eu/news.php) is currently the central hub for CS 1.6 Climb
-
+Climb started in Counter-Strike 1.1. A mapper named Kreedz decided to make a fun, mess-around map called **kz_hauntedhouse** that did not have the usual defuse objective for his friends. Kreedz named all his maps with a **kz_** tag as a sort of signature. Kreedz enjoys climbing as a hobby, so he felt that there should be some trees you could climb.  Kreedz found this aspect of the map to be particularly fun and so did others. He started making more mess-around maps with this climbing aspect sprinkled in, and eventually made **kz_giantbean** which was entirely focused on climbing. With the popularity of kz_giantbean and Kreedz making the first timer entity that could be placed into maps. Mappers would approach Kreedz to have thier maps evaluated and if it was deemed to be up to standard, Kreedz would give them the timer entity and allow it to have the **kz_** tag as a seal of approval. Even after Kreedz departure from mapping, the popularity of these climbing maps was enough to go on to other Counter-Strike games and keep Kreedz as its namesake.
 ## How Climb Works
 
 ### Strafing
