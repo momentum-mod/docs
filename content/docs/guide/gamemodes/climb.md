@@ -13,27 +13,27 @@ tags:
 
 Climb, also known as **Kreedz** (KZ) in CS 1.6 and CSGO, or **Xtreme Climb** (XC) in CSS, is a popular, community gamemode found in every Counter-Strike game.  
 Climb is a series of platforming challenges that can be best simplified as "trick jumps" which pull from the big 3 movement disciplines in source:  
-Strafing, Bhop, and Surf to challenge players in scaling its maps from beginning to end.
+**Strafe**, **Bunnyhop** (Bhop), and **Surf** to challenge players in scaling its maps from beginning to end.
 
 ## History of Climb
 
 Climb started in Counter-Strike 1.1. A mapper named Kreedz decided to make a fun, mess-around map called **kz_hauntedhouse** that did not have the usual defuse objective for his friends. Kreedz named all his maps with a **kz_** tag as a sort of signature. Kreedz enjoys climbing as a hobby, so he felt that there should be some trees you could climb.  Kreedz found this aspect of the map to be particularly fun and so did others. He started making more mess-around maps with this climbing aspect sprinkled in, and eventually made **kz_giantbean** which was entirely focused on climbing and featued a built-in timer made by Kreedz. With the popularity of kz_giantbean and Kreedz making the first timer entity that could be placed into maps, Kreedz formed a community around these climb maps. Mappers would approach Kreedz to have thier maps evaluated and if it was deemed to be up to standard, Kreedz would give them the timer entity and allow it to have the **kz_** tag as a seal of approval. Even after Kreedz's departure from mapping, the popularity of these climbing maps was enough to go on to other Counter-Strike games and keep Kreedz as its namesake.
 ## How Climb Works
 
-### Strafing
+### Strafe
 
-Strafing is the most common focus for maps. Strafing can come in the form of Long Jumps and taking indirect lines.  
+Strafe is the most common focus for maps. Strafing can come in the form of Long Jumps and taking indirect lines.  
 **Airstrafing** works in the same way as in the Bhop and Surf gamemodes; using a strafe key (A or D) while guiding the mouse off in that direction causes the player to receive more speed.  
-A **Prestrafe** is a tehcnique that has been patch out of Counter-Strike since CSGO but has been re-added for the Climb gamemode. While on the ground, players hold **both** the W and strafe keys and guide the mouse into the direction they are moving, right for W+D and left for W+A. Perfoming a prestrafe correctly will let you gain speed on the ground. Gaining speed before the jump and while in the air lets you travel futher. This is called a **Long Jump**. There are 2 other forms of Long Jump in 1.6 that are more advanced, [Count Jumps](https://kz-rush.com/en/page/countjump-physics) and [High Jumps](https://kz-rush.com/page/highjump-physics).  
+A **Prestrafe** is a tehcnique that has been patch out of Counter-Strike since CSGO but has been re-added for the Climb gamemode. While on the ground, players hold **both** the W and strafe keys and guide the mouse into the direction they are moving, right for W+D and left for W+A. Perfoming a prestrafe correctly will let you gain speed on the ground. Gaining speed before the jump and while in the air lets you travel futher. This is called a **Long Jump**. 
 Note that since Airstrafing causes the player to deviate from their intended destination (assuming it is straight in front of them), Long Jumps typically incoroporate multiple left and right Airstrafes into a jump which counteract each other and keep the player close to a straight line. These multiple starfes in opposite directions gives the apperance of a "flicky" or "jittery" Airstrafe but a lot of practices goes into syncing the A and D keys with quick but smooth mouse movements.
 
 Sometimes you may not be able to take a direct line due to an obstruction.  
 The 2 most common forms of this is rounding a corner (often without being able to see the next platform) and 2 platforms separated by a thin wall.
 In this case, air strafing is not used to gain speed but as a form of air control. The principle is the same but typically smooth turns that stay close to the wall are needed (don't bump into the wall or else you will take out all your speed and fall straight down!).  
 
-### Bhop
+### Bunnyhop (Bhop)
 
-Bhopping has reduced potential compared to the Bhop game mode.  
+Bhop has reduced potential compared to the Bhop game mode.  
 Bhopping has its own speedcap: **TBD (Momkz)**.      **380 (KZT)**,      **300 (1.6 Climb)**. The default running speed in all Climb modes is 250.  
 This cap is seperate from the **maxvelocity** cap (how fast the engine lets you go before not bothering to give anymore speed 3500 by default).  
 Anytime you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
@@ -80,11 +80,20 @@ Crouching will also limit your ablity to turn in the air and thus gain speed as 
 **Double Duck [1.6 Climb only]**: In 1.6 Climb, while on the ground pressing duck and releasing it before you are fully on the ground will cause the game to unduck you prematurely, the result is that you pop 18 units off the ground (very small compared to a jump) you can improve this height by crouching again in the air resulting in being 36 units off the ground (better but still small compared to a jump).  
 you can use Double Ducks to climb small humps without wasting time overshooting with a jump, but in addition to this they have 1 big advantage over jumps:
 **ducking is not considered a jump so the jump-land penalty does not proc.**  
-This means you can gain speed with air strafing without worrying about slowing down upon landing. Generally used by first gaining speed with a prestrafe than double ducking to gain more speed in the air, land then finally jump. This is called a Count Jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a Bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a Count Jump. 
+This means you can gain speed with air strafing without worrying about slowing down upon landing. This is the used in Count Jumps.   
+
+**Count Jump [1.6 Climb only]**: Done by first gaining speed with a prestrafe than double ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a Bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a **Count Jump**. 
 
 **Duck Roll [1.6 Climb only]**: Sometimes called Silent Walking, Russian Walking, or G-strafe in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
-It is possible to do a "Bhop" sequence comprised entirely of Double Ducks. This lets you get pass the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequent you must duck compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. DuckRoll's effectivness heavily depends on the map.
+It is possible to do a "Bhop" sequence comprised entirely of Double Ducks. This lets you get pass the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequent you must duck compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. DuckRoll's effectivness heavily depends on the map.  
+
+**High Jump [1.6 Climb only]**: In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge if it is set higher than 1, you will slow down slightly every time you try to jump from the edge of a platform. These are edge friction for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**.  
+**[Note that 1.6 Climb is the only Climb mode whose edge frction is diffrent then the normal friction]**.  
+To get around this you must "trick" the game that you are not next to an edge. You are considered to be next to an edge if all these conditions are true:   
+**1. you are moving**.  
+**2. in the direction you are moving, an "invisible line" 16 units in front of the bottom-center of your collision box (your feet) does not intersect with anything solid**.  
+**3. From that end of the 16 unit invisible line, another 70 units (52 units if crouched) invisble line pointing down does not insersect with anything solid**.  
+To simplify, this means if the platform is not 70 units (52 units if crouched) off the ground you are never considered "next to edge". [For refrenece player height is 72 units].   
+If you are moving in a direction that does not intersect with a platform's edge you are not considered "next to an edge" regardless of how close you actually are to it. We can use this to maintain a normal speed. High Jumps are normally done by moving perpendicular to the edge you want to jump from and then only turning towards to edge for your pre-strafe. This minimizes the amount of time you are slowed down due to the edge friction while still gaining some speed from the pre-strafe. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
 
 **Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off of the fundamentals and is required to be competitive. 
-
-TODO: other advanced techs?
