@@ -59,7 +59,7 @@ Any time the player jumps (not when they are in the air for any other reason suc
 Whenever the player lands, they will be slowed for however much time is left on the timer.
 For reference, if a player jumps and lands on flat ground about 0.66 seconds or about half the time is taken.
 This means that jumping up to something slows you down longer since you land earlier. And jumping to something beneath will slow you less or not at all.  
-**The slowdown affects both horizontal and vertical movemnt: running is slower but also your jump height is reduced**.  
+**The slowdown affects both horizontal and vertical movement: running is slower but also your jump height is reduced**.  
 **A Bhop, even a perfect one, does not circumvent the verticle movemnt penalty: Bhops will always get smaller height compared to a normal jump, thus they may not always give you the best distance or be able to reach high places**.  
 For speedrunning getting around this stamnia is a top prority for optimzing runs. For completion players only certain types of platforms make stamina a cause for concern namely ones that are to small or awkward to get a running start from a standsill.
 [This doc goes into futher detail](https://kzguide.gitlab.io/techniques/stamina/).
