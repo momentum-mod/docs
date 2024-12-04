@@ -91,9 +91,11 @@ you can use Double Ducks to climb small humps without wasting time overshooting 
 **crouching is not considered a jump so the jump-land penalty does not activate.**  
 This means you can gain speed with air strafing without worrying about slowing down upon landing. This is the used in Count Jumps.   
 
-**Count Jump [1.6 Climb only]**: Done by first gaining speed with a Prestrafe than double ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a Bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a **Count Jump**. 
+**Count Jump [1.6 Climb only]**: Done by first gaining speed with a Prestrafe than double ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a Bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a **Count Jump**.  
+
 **Duck Roll [1.6 Climb only]**: Sometimes called G-strafe in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
 It is a "Bhop" sequence comprised entirely of Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. Duck Roll’s effectiveness heavily depends on the map.  
+
 **High Jump [1.6 Climb only]**: In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**. 
 >[!NOTE]
 > Currently, 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction
@@ -114,25 +116,4 @@ There is a way to "trick" the game into thinking you are not next to an edge eve
 **Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive.
 
 
-**Duck Roll [1.6 Climb only]**: Sometimes called G-strafe in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
-It is a "Bhop" sequence comprised entirely of Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. Duck Roll’s effectiveness heavily depends on the map.  
-
-**High Jump [1.6 Climb only]**: In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**. 
->[!NOTE]
-> Currently, 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction
-
->[!IMPORTANT]
->You are considered to be next to an edge if:   
->**In the direction you are moving (not facing), 36/18 units down and 16 units forward from the player’s origin  
->(This works out to be the bottom edge of your collision box) spawn a box of identical dimensions to the player’s collision box  
->(32 unit width, 32 unit depth, 72/36 unit height) whose origin is from that point,
->move the box down 34 units while checking if it intersects with anything. If there was nothing in its path, the player is next to an edge**.  
->**[unit/unit -> units if standing/units if crouching]**.
-
-To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  
-![image](../../../../assets/High_Jump.png)  
-In most cases this works as intended; two examples that were not considered edges had platforms/walls so close that the player would not have fell or would need to be precisely placed so that the edge check is initially true but fails at some point after. It is not very feasible to detect exactly how far away a platform is nor is it useful to negate edge friction for a platform that is that close. Most players would naturally jump a bit before the edge to land on a platform that close. This is where the High Jump comes in.   
-There is a way "trick" the game into thinking you are not next to an edge even when you are on a high up platform with nothing close. Remember the engine only checks in the direction you are moving, so if you are moving in a direction that causes the “edge check box” to touch something, you are not considered "next to an edge" regardless of how close you actually are to one. We can use this to maintain a normal speed. High Jumps are typically done by moving perpendicular to the edge you want to jump from while sticking very close it, and then only turning towards the edge for your pre-strafe. This minimizes the amount of time you are slowed down due to edge friction while still gaining some speed from the pre-strafe. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
-
-**Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive.
 
