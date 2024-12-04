@@ -28,7 +28,7 @@ A **Prestrafe** is a technique that has been patched out of Counter-Strike since
 Note that since Airstrafing causes the player to deviate from their intended destination (assuming it is straight in front of them), Long Jumps typically incorporates multiple left and right Airstrafes into a jump which counteract each other and keep the player close to a straight line. These multiple strafes in opposite directions gives the appearance of a "flicky" or "jittery" Airstrafe but a lot of practice goes into syncing the A and D keys with quick but smooth mouse movements.
 
 Sometimes you may not be able to take a direct line due to an obstruction.  
-The 2 most common forms of this are rounding a corner (often without being able to see the next platform) and 2 platforms separated by a thin wall.
+The two most common forms of this are rounding a corner (often without being able to see the next platform) and 2 platforms separated by a thin wall.
 In this case, air strafing is not used to gain speed but as a form of air control. The principle is the same but typically smooth turns that stay close to the wall are needed (don't bump into the wall or else you will take out all your speed and fall straight down!).  
 
 ### Bunnyhop (Bhop)
@@ -39,7 +39,8 @@ This cap is separate from the **max velocity** cap (how fast the engine lets you
 Any time you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
 as soon as they try to jump off the ground with this speed, the cap will activate. If the player reaches this cap and tries to jump again,  
 their speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.  
-(**Note that friction is applied after the Bhop speedcap, so an imperfect Bhop will reduce your speed starting from the reset amount**)
+>[!NOTE] 
+>Friction is applied after the Bhop speedcap, so an imperfect Bhop will reduce your speed starting from the reset amount
 
 However, this Bhop cap still allows the player to gain more speed than a Prestrafe hence, Bhopping has the potential to go further than a Long Jump. Useful to remember when dealing with difficult Long Jumps (although this may form a bad habit if relied upon).  
 Bhop jumps can also be required by the mapper by using "Bhop Blocks" that teleport you back if you try standing on them, same as the Bhop game mode. Conversely, mappers can also add triggers that disable Bhops inside an area.  
@@ -60,7 +61,9 @@ Any time the player jumps (not when they are in the air for any other reason suc
 Whenever the player lands, they will be slowed for however much time is left on the timer. The severity of the slowdown is also proportional to how much time is left on the timer, so you will move slower at the beginning of the timer compared to near the end of the timer.
 For reference, if a player jumps and lands on flat ground about 0.66 seconds or about half the time is taken.
 This means that jumping up to something slows you down longer and harder since you land earlier while jumping to something beneath will slow you less for a shorter duration or not at all if the timer completely expires.  
-**The slowdown affects both horizontal and vertical movement: running is slower but also your jump height is reduced**.  
+>[!IMPORTANT]
+>The slowdown affects both horizontal and vertical movement: running is slower but also your jump height is reduced
+
 A Bhop, even a perfect one, does not circumvent the vertical movement penalty: Bhops will always get smaller height compared to a normal jump, unless the Bhop was done after falling long enough to expire the stamina timer, or the Bhop was done after walking off a platform rather than jumping off.  
 Thus, Bhops may not always give you the best distance or be able to reach high places, but it is important to keep the exceptions in mind.  
 For speedrunning getting around this stamina is a top priority for optimizing runs. For completion players only certain types of platforms make stamina a cause for concern, namely ones that are too small or awkward to get a running start from a standstill.
@@ -75,7 +78,7 @@ For speedrunning getting around this stamina is a top priority for optimizing ru
 
 **Ladder Jump**: The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more similar to surfing. Gain speed with the climb and flick off near the top. Just like surfing, the way you flick off dictates your trajectory, and whether you trade speed for height and vice versa.  
 
-**Crouch Bhop**: Bhopping starting in a crouch position. It may be required in a map when going underneath a low ceiling. Doing a normal Bhop and crouching in the air will raise your collision box up 18 units (you tuck in your legs), so to go underneath a hazard you must start the Bhop crouched and usually stay crouched.  ![image](../../../../assets/Crouch_Bhop.png)  
+**Crouch Bhop**: Bhopping starting in a crouch position. It may be required in a map when going underneath a low ceiling. Doing a normal Bhop and crouching in the air will raise your collision box up 18 units (you tuck in your legs), so to go underneath a hazard you must start the Bhop crouched and usually stay crouched.  ![image](../../../../assets/Crouch_Bhop.png)
 Crouching will also limit your ability to turn in the air and thus gain speed as well. This speed disadvantage is negated if you have already reached the Bhop speed cap on KZT since you will remain at 380 regardless of how much speed you try to gain.  
 
 **Standup**: While in the air, if you crouch close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened up beneath you and uncrouches. This behavior gives you a nice grace period to execute a frame-perfect (or tick-perfect) outcome. (Note that the faster you are falling, the shorter the grace period is).  
@@ -91,16 +94,23 @@ This means you can gain speed with air strafing without worrying about slowing d
 **Count Jump [1.6 Climb only]**: Done by first gaining speed with a Prestrafe than double ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a Bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a **Count Jump**. 
 
 **Duck Roll [1.6 Climb only]**: Sometimes called G-strafe in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
-It is possible to do a "Bhop" sequence comprised entirely of Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. Duck Roll’s effectiveness heavily depends on the map.  
+It is a "Bhop" sequence comprised entirely of Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. Duck Roll’s effectiveness heavily depends on the map.  
 
-**High Jump [1.6 Climb only]**: In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**.  
-**[Notice that 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction]**.  
-You are considered to be next to an edge if:   
-** In the direction you are moving (not facing), 36/18 units down and 16 units forward from the player’s origin (This works out to be the bottom edge of your collision box) spawn a box of identical dimensions to the player’s collision box (32 unit width, 32 unit depth, 72/36 unit height whose origin is from that point, move the box down 34 units while checking if it touches anything. If there was nothing in its path, the player is next to an edge.  
-**[unit/unit -> units if standing/units if crouching]**.  
- To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  
+**High Jump [1.6 Climb only]**: In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**. 
+>[!NOTE]
+> Currently, 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction
+
+>[!IMPORTANT]
+>You are considered to be next to an edge if:   
+>**In the direction you are moving (not facing), 36/18 units down and 16 units forward from the player’s origin  
+>(This works out to be the bottom edge of your collision box) spawn a box of identical dimensions to the player’s collision box  
+>(32 unit width, 32 unit depth, 72/36 unit height) whose origin is from that point,
+>move the box down 34 units while checking if it intersects with anything. If there was nothing in its path, the player is next to an edge**.  
+>**[unit/unit -> units if standing/units if crouching]**.
+
+To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  
 ![image](../../../../assets/High_Jump.png)  
-I most cases this works as intended; two examples that were not considered edges had platforms/walls so close that the player would not have fell or would need to be precisely placed so that the edge check is initially true but fails at some point after. It is not very feasible to detect exactly how far away a platform is nor is it useful to negate edge friction for a platform that is that close. Most players would naturally jump a bit before the edge to land on a platform that close. This is where the High Jump comes in.   
+In most cases this works as intended; two examples that were not considered edges had platforms/walls so close that the player would not have fell or would need to be precisely placed so that the edge check is initially true but fails at some point after. It is not very feasible to detect exactly how far away a platform is nor is it useful to negate edge friction for a platform that is that close. Most players would naturally jump a bit before the edge to land on a platform that close. This is where the High Jump comes in.   
 There is  a way "trick" the game into thinking you are not next to an edge even when you are on a high up platform with nothing close. Remember the engine only checks in the direction you are moving, so if you are moving in a direction that causes the “edge check box” to touch something, you are not considered "next to an edge" regardless of how close you actually are to one. We can use this to maintain a normal speed. High Jumps are typically done by moving perpendicular to the edge you want to jump from while sticking very close it, and then only turning towards the edge for your pre-strafe. This minimizes the amount of time you are slowed down due to edge friction while still gaining some speed from the pre-strafe. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
 
 **Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive.
