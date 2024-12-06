@@ -44,17 +44,14 @@ Any regular `LightmappedGeneric` materials will still be able to use the cubemap
 		<li>The Parallax-Corrected cubemap is still built the same way regular cubemaps are.</li>
 		<p>
 		This means that you may have distortion in the reflections depending on where you place the <code>env_cubemap</code> and the shape of the <code>parallax_obb</code> brush.
-		</p>
-		
+		</p> <br>
 		<p>
 		This example has a wide room with a low ceiling as well as the cubemap entity not quite in the centre:
 		</p>
-		<img src="/images/cubemap_guide/cube_4.jpg" alt="Distortion example">
-
+		<img src="/images/cubemap_guide/cube_4.jpg" alt="Distortion example"> <br>
     	<p>
     	Parallax-Corrected cubemaps work best in box-shaped rooms and areas, the closer to a cube shape your <code>parallax_obb</code> is, the less obvious distortion that you will likely get.
-    	</p>
-
+    	</p> <br>
     	You should place the <code>env_cubemap</code> in the centre of the <code>parallax_obb</code> brush instead of at head height.
 
 </div>
