@@ -46,12 +46,12 @@ This means that you may have distortion in the reflections depending on where yo
 
 This example has a wide room with a low ceiling as well as the cubemap entity not quite in the centre:
 
-<img src="/images/cubemap_guide/cube_4.jpg" alt="Distortion example">
+![Distortion example](/images/cubemap_guide/cube_4.jpg)
 
 Parallax-Corrected cubemaps work best in box-shaped rooms and areas, the closer to a cube shape your `parallax_obb` is, the less obvious distortion that you will likely get.
 
 You should place the `env_cubemap` in the centre of the `parallax_obb` brush instead of at head height.
-{{ /hint }}
+{{< /hint >}}
 
 ## Hammer
 
