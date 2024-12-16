@@ -66,13 +66,11 @@ This means that jumping up to something slows you down longer and harder since y
 
 A Bhop, even a perfect one, does not circumvent the vertical movement penalty: Bhops will always get smaller height compared to a normal jump, unless the Bhop was done after falling long enough to expire the stamina timer, or the Bhop was done after walking off a platform rather than jumping off.  
 Thus, Bhops may not always give you the best distance or be able to reach high places, but it is important to keep the exceptions in mind.  
-For speedrunning getting around this stamina is a top priority for optimizing runs. For completion players only certain types of platforms make stamina a cause for concern, namely ones that are too small or awkward to get a running start from a standstill.
-[This doc goes into further detail](https://kzguide.gitlab.io/techniques/stamina/).
+[for more technical details and exact values, refer to this doc](https://kzguide.gitlab.io/techniques/stamina/).
 
 ---
 ## Advanced Techniques 
-
-### Climb has some techniques of its own rarely seen outside of its game mode.
+Climb has some techniques of its own rarely seen outside of its game mode.
 
 **Fast Ladder Climbing**: Ladders can be climbed by "walking into them". If you are directly facing the ladder hold W, if sideways A/D. If you face the ladder diagonally you can climb the ladder both ways. If you hold W and A/D the speeds add onto each other resulting in a much faster climb.    
 
@@ -82,19 +80,21 @@ For speedrunning getting around this stamina is a top priority for optimizing ru
 This is great when trying to avoid map hazards like low ceilings, since you stay low to the ground while keeping a small collision box if you choose to stay crouched.  ![image](../../../../assets/Crouch_Bhop.png)
 Crouching will also limit your ability to turn in the air and thus gain speed as well. 
 
-**Standup**: While in the air, if you crouch close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened up beneath you and uncrouches. This behavior gives you a nice grace period to execute a frame-perfect (or tick-perfect) outcome. (Note that the faster you are falling, the shorter the grace period is).  
+**Standup**: While in the air, if you crouch close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a nice grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land. (Note that the faster you are falling, the shorter the grace period is).  
 
 **Standup Bhop**: Combines a Standup with a Bhop. The result is you gain extra airtime and distance with your crouch, but your next jump is in the standing position meaning you can “tuck in your legs” again and get the extra 18 units of height. This technique is especially useful in 1.6 Climb since you will also bleed slightly more time off stamina by staying in the air longer.   
 Standup Bhops are not a replacement for regular Bhops or Crouch Bhops, since you may prefer to land sooner and jump sooner or need to avoid map hazards.  
 
-**Double Duck [1.6 Climb only]**: In 1.6 Climb, while on the ground pressing crouch and releasing it before you are fully on the ground will cause the game to uncrouch you prematurely, the result is that you pop 18 units off the ground (very small compared to a jump) you can improve this height by crouching again in the air resulting in being 36 units off the ground (better but still small compared to a jump).  
+**Double Duck [1.6 Climb only]**: In 1.6 Climb, while on the ground pressing crouch and releasing it before you are fully on the ground will cause the game to uncrouch you prematurely, the result is that you pop 18 units off the ground (very small compared to a jump) you can improve this height by crouching again in the air resulting in being 36 units off the ground (better but still small compared to a jump).  Binding crouch to the scroll wheel makes these rapid crouches easier. 
 you can use Double Ducks to climb small humps without wasting time overshooting with a jump, but in addition to this they have one big advantage over jumps:
-**crouching is not considered a jump so the jump-land penalty does not activate.**  
-This means you can gain speed with air strafing without worrying about slowing down upon landing. This is used in Count Jumps.   
+**crouching is not considered a jump, so the jump-land penalty does not activate.**  
+This means you can gain speed with air strafing without worrying about slowing down upon landing. This is used in Count Jumps.  If you wish to perform a Standup version that will give the most airtime it is better to have another bind for crouch on a keyboard so that it can be held.
 
-**Count Jump [1.6 Climb only]**: Done by first gaining speed with a Prestrafe than Double Ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and most be timed just like a Bhop with the first tap of duck being right as you land and the second tap being right after. This is also sometimes called a **Count Jump**.  
-**Duck Roll [1.6 Climb only]**: Sometimes called G-strafe in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
-It is a "Bhop" sequence comprised entirely of Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. Duck Roll’s effectiveness heavily depends on the map.  
+
+**Count Jump [1.6 Climb only]**: Done by first gaining speed with a Prestrafe than Double Ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence, and most be timed just like a Bhop. This is also sometimes called a **Count Jump**.    
+**Duck Roll [1.6 Climb only]**: Sometimes called Ground Strafing or G-Strafing  in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
+It is a "Bhop" sequence comprised entirely of rapid Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. In Climb it is usually used after landing from a surf or slide to maintain high speed. Since Duck Rolls are just many Double Ducks, it is possible to perform a Standup version that requires holding crouch for a little bit after doing a Double Duck which preserves speed a little better. 
+Duck Roll’s effectiveness heavily depends on the map.  
 **High Jump [1.6 Climb only]**: In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**. 
 >[!NOTE]
 > Currently, 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction
@@ -113,3 +113,6 @@ In most cases this works as intended; two examples that were not considered edge
 There is a way to "trick" the game into thinking you are not next to an edge even when you are on a high up platform with nothing close. Remember the engine only checks in the direction you are moving, so if you are moving in a direction that causes the “edge check box” to touch something, you are not considered "next to an edge" regardless of how close you actually are to one. We can use this to maintain a normal speed. High Jumps are typically done by moving perpendicular to the edge you want to jump from while sticking very close it, and then only turning towards the edge for your pre-strafe. This minimizes the amount of time you are slowed down due to edge friction while still gaining some speed from the pre-strafe. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
 
 **Comboing**: More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive.
+
+
+
