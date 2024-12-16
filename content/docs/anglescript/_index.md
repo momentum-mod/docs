@@ -1,6 +1,6 @@
 ---
-title: Commands
+title: Angelscript (Strata Hammer)
 bookCollapseSection: true
 bookFlatSection: true
-weight: 20
+weight: 100
 ---
