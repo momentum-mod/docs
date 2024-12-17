@@ -76,12 +76,13 @@ Climb has some techniques of its own rarely seen outside of its game mode.
 Ladders can be climbed by "walking into them". If you are directly facing the ladder hold W, if sideways A/D. If you face the ladder diagonally you can climb the ladder both ways. If you hold W and A/D the speeds add onto each other resulting in a much faster climb.    
 
 ### Ladder Jump
- The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more similar to surfing. Gain speed with the climb and flick off near the top. Just like surfing, the way you flick off dictates your trajectory, and whether you trade speed for height and vice versa.  
+The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more similar to surfing. Gain speed with the climb and flick off near the top. Just like surfing, the way you flick off dictates your trajectory, and whether you trade speed for height and vice versa.  
 
 ### Crouch Bhop
- Bhopping starting in a crouch position. While standing if you jump you can crouch in the air you raise your collision box up 18 units (you tuck in your legs). If you start in a crouched position and jump you will not be able to get this extra 18 units of height.  
+Bhopping starting in a crouch position. If a jump is started from a standing position, crouching in the air will raise your collision box up 18 units (you tuck in your legs). If you start in a crouched position and jump you will not be able to get this extra 18 units of height.  
 This is great when trying to avoid map hazards like low ceilings, since you stay low to the ground while keeping a small collision box if you choose to stay crouched.  ![image](../../../../assets/Crouch_Bhop.png)
-Crouching will also limit your ability to turn in the air and thus gain speed as well. 
+>[!NOTE]
+>Crouching will also limit your ability to turn in the air and thus gain speed as well.  
 
 ### Standup 
 While in the air, if you crouch close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a nice grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land. (Note that the faster you are falling, the shorter the grace period is).  
