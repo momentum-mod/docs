@@ -85,7 +85,9 @@ This is great when trying to avoid map hazards like low ceilings, since you stay
 >Crouching will also limit your ability to turn in the air and thus gain speed as well.  
 
 ### Standup 
-While in the air, if you crouch close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a nice grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land. (Note that the faster you are falling, the shorter the grace period is).  
+For maximum airtime, it is best to stay crouched as you are about to land, but what if you need airtime but want to land in a standing position? If you crouch close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land.
+>[!NOTE]
+>The faster you are falling, the shorter the grace period is
 
 ### Standup Bhop
 Combines a Standup with a Bhop. The result is you gain extra airtime and distance with your crouch, but your next jump is in the standing position meaning you can “tuck in your legs” again and get the extra 18 units of height. This technique is especially useful in 1.6 Climb since you will also bleed slightly more time off stamina by staying in the air longer.   
