@@ -47,7 +47,7 @@ Bhop jumps can also be required by the mapper by using "Bhop Blocks" that telepo
 
 ### Surf
 
-Surf is very similar to its game mode counterpart. All Climb modes are 100 tick while the Surf game mode is 66 tick. This means gaining speed is quicker and losing speed is harder in Climb compared to Surf.  
+Surf is very similar to its game mode counterpart. KZT  is 128 tick, MomClimb and 1.6 Climb are 100 tick while the Surf game mode is 66 tick. This means gaining speed is quicker and losing speed is harder in Climb compared to Surf.  
 Maps made with MomClimb and KZT in mind can have traditional surf sections. The length and difficulty of these sections are entirely up to the map. Usually they are much shorter (sometimes only 1 ramp) compared to dedicated Surf maps.  
 1.6 Climb has a special version of Surf called **Slide**.  
 1.6 Climb has much lower air acceleration (10aa compared to MomClimb and KZT's 100aa). This means players can't as easily flick onto a ramp ("board") and generate speed or flick off a ramp and generate height.    
@@ -76,7 +76,7 @@ Climb has some techniques of its own rarely seen outside of its game mode.
 Ladders can be climbed by "walking into them". If you are directly facing the ladder hold W, if sideways A/D. If you face the ladder diagonally you can climb the ladder both ways. If you hold W and A/D the speeds add onto each other resulting in a much faster climb.    
 
 ### Ladder Jump
-The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more similar to surfing. Gain speed with the climb and flick off near the top. Just like surfing, the way you flick off dictates your trajectory, and whether you trade speed for height and vice versa.  
+The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more like surfing. The way you flick off dictates your trajectory, and whether you trade speed for height and vice versa.  However, unlike surfing there is no acceleration or deceleration on ladders, so speed changes instantly when you move your mouse or change inputs.
 
 ### Crouch Bhop
 Bhopping starting in a crouch position. If a jump is started from a standing position, crouching in the air will raise your collision box up 18 units (you tuck in your legs). If you start in a crouched position and jump you will not be able to get this extra 18 units of height.  
@@ -84,24 +84,24 @@ This is great when trying to avoid map hazards like low ceilings, since you stay
 >[!NOTE]
 >Crouching will also limit your ability to turn in the air and thus gain speed as well.  
 
-### Standup 
-For maximum airtime, it is best to stay crouched as you are about to land, but what if you need airtime but want to land in a standing position? If you crouch close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land.
+### Standup (1.6 Climb Only)
+For maximum airtime, it is best to stay crouched as you are about to land, but what if you need airtime but want to land in a standing position? If you are in a crouching position close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land.
 >[!NOTE]
 >The faster you are falling, the shorter the grace period is
 
-### Standup Bhop
+### Standup Bhop (1.6 Climb Only)
 Combines a Standup with a Bhop. The result is you gain extra airtime and distance with your crouch, but your next jump is in the standing position meaning you can “tuck in your legs” again and get the extra 18 units of height. This technique is especially useful in 1.6 Climb since you will also bleed slightly more time off stamina by staying in the air longer.   
 Standup Bhops are not a replacement for regular Bhops or Crouch Bhops, since you may prefer to land sooner and jump sooner or need to avoid map hazards.  
 
 ### Double Duck [1.6 Climb only]
-In 1.6 Climb, while on the ground pressing crouch and releasing it before you are fully on the ground will cause the game to uncrouch you prematurely, the result is that you pop 18 units off the ground (very small compared to a jump) you can improve this height by crouching again in the air resulting in being 36 units off the ground (better but still small compared to a jump).  Binding crouch to the scroll wheel makes these rapid crouches easier. 
+In 1.6 Climb, while on the ground pressing crouch and releasing it before you are fully crouched will cause the game to uncrouch you prematurely, the result is that you pop 18 units off the ground (very small compared to a jump) you can improve this height by crouching again in the air resulting in being 36 units off the ground (better but still small compared to a jump).  Binding crouch to the scroll wheel makes these rapid crouches easier. 
 you can use Double Ducks to climb small humps without wasting time overshooting with a jump, but in addition to this they have one big advantage over jumps:
 **crouching is not considered a jump, so the jump-land penalty does not activate.**  
 This means you can gain speed with air strafing without worrying about slowing down upon landing. This is used in Count Jumps.  If you wish to perform a Standup version that will give the most airtime it is better to have another bind for crouch on a keyboard so that it can be held.
 
 
 ### Count Jump [1.6 Climb only]
-Done by first gaining speed with a Prestrafe than Double Ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. This is also sometimes called a **Count Jump**.    
+Done by first gaining speed with a Prestrafe then Double Ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. This is also sometimes called a **Count Jump**.    
 ### Duck Roll [1.6 Climb only]
 Sometimes called Ground Strafing or G-Strafing  in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
 It is a "Bhop" sequence comprised entirely of rapid Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. In Climb it is usually used after landing from a surf or slide to maintain high speed. Since Duck Rolls are just many Double Ducks, it is possible to perform a Standup version that requires holding crouch for a little bit after doing a Double Duck which preserves speed a little better. 
