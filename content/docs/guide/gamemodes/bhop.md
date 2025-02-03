@@ -16,7 +16,13 @@ The core mechanic, "bhopping", is when the player jumps repeatedly, the moment t
 
 ## History of Bhop
 
-**TODO:** full history of bhop, mentioning defrag probably as the grandpa. Some paragraphs might have to be relocated here, I'm not totally sure where each explanation should be.
+Bhopping was unintentionally introduced, and discovered, in Quake 1, released in 1996. Players found that strafing increased their speed, and that jumping off the ground allowed them to maintain that speed. Bhopping was birthed from the combination of these techniques, among future refinements, and became popular amongst the Quake speedrunning community. The developers were unhappy with this exploiting of the movement mechanics, and nerfed air strafing in Quake 2 and subsequent titles, though the community found ways to keep the movement tech alive.
+
+In 1998 Half Life was released, based on the Quake and Quake 2 engines, reintroducing air strafing and revitalizing bunny hopping. As in Quake, dedicated players went on to optimize their times by maximizing movement speed with bhopping and related techniques (wall strafing, ceiling strafing, etc.). When Counter-Strike released in 2000, originally a mod for Half Life, staying faithful to Half Life's movement mechanics was a priority, including bhopping. That said, the developers opted to implement a speed cap to keep gameplay balanced. This speed cap was later removed in Counter-Strike: Source in 2004, and bhopping became a core mechanic in the game. At this point, bhopping was as valuable a skill in competitive play as aim or game sense.
+
+As people became more skilled at bhopping, and more fond of using the mechanic for its own sake, a bhopping-specific community began to arise. This arguably began with the release of DeFRaG in 2000, a mod for Quake III Arena. DeFRaG introduced features like timers, ghost mode, and learning tools, making bhopping more accessible to casual players. The mod gave rise to a competitive community, through which players would download custom-created maps, attempt to complete them in the shortest time possible, and upload their times to online leaderboards. This planted the seed for bhop communities, and multiplayer bhop servers, to spread across numerous games, including CSS, CS:GO, Garry's Mod, and Team Fortress 2.
+
+Counter-Strike: Global Offensive was released in 2012, and shortly thereafter Valve once again nerfed bhopping to protect the competitive integrity of the game. This pushed fans of the mechanic further into the custom server scene, and seemed to mark the end of an era for skill-based movement in competitive gaming. Today however, multiple games have leaned back into movement-based gameplay, with battle royale games like Apex Legends and Fortnite, and even single player games like Doom Eternal, and Titanfall 2.
 
 ## How Bhop Works
 
