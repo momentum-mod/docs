@@ -11,7 +11,7 @@ tags:
 
 ## What is Climb?
 
-Climb, also known as **Kreedz** (KZ) in CS 1.6 and CSGO, or **Xtreme Climb** (XC) in CSS, is a popular, community game mode found in every Counter-Strike game.  
+Climb, also known as **Kreedz** (KZ) in CS 1.6 and CSGO, or **Xtreme Climb** (XC) in CSS, is a popular community game mode found in every Counter-Strike game.  
 Climb is a series of platforming challenges that can be best simplified as "trick jumps" which pull from the big 3 movement disciplines in source:  
 **Strafe**, **Bunnyhop** (Bhop), and **Surf** to challenge players in scaling its maps as fast as possible.
 
