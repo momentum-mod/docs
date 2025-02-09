@@ -6,6 +6,7 @@ tags:
   - rank
   - xp
   - cosmetic
+math: true
 ---
 
 ## Ranked-Points System
@@ -64,16 +65,18 @@ Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that th
 
 4 groups, loosely 'percentile'-based (in fact, a function of #completions, but not as simple as a percentage). Instead of calculating group boundaries directly from percentiles, we calculate group _sizes_ based on a simple maximizing function --
 
-Group size = `max(A(x), minSize)`
 
-<sup>_max(A, B) simply returns the value of the larger parameter._<br>
-_A is a function of #completions, minSize_</sup>
+$$ Group\space Size = max(A(x), minSize) $$
+
+$ max(A, B) $ simply returns the value of the larger parameter.
+_A is a function of #completions, minSize_
 
 Group 1 always starts at rank 11, and its size is determined from its group size formula.
 
-The formula to determine group size, `A(x)` (where `x` is the # of completions of the map), is\
-`_A(x) = SF * (x^E)`, where `SF` and `E` are defined uniquely for each group:\
-`SF` = Scale factor, `E` = Exponent
+The formula to determine group size, $ A(x) $ (where $ x $ is the # of completions of the map), is
+$$ A(x) = SF * (x^E) $$
+where $ SF $ and $ E $ are defined uniquely for each group:
+$ SF = Scale factor $, $ E = Exponent $
 
 ```
 Group 1: E = 0.5, SF = 1
@@ -122,8 +125,7 @@ Group 1 = 600 points = 20% of WR
 
 ## Cosmetic XP
 
-> For more advanced info about cosmetics\
-> Make a copy of [The spreadsheet](https://docs.google.com/spreadsheets/d/1JiHJYsxlGPXAZqCPh7-paJI6U_TH-Ro0H0OWDFCiA74)
+> For more advanced info about cosmetics make a copy of [The spreadsheet](https://docs.google.com/spreadsheets/d/1JiHJYsxlGPXAZqCPh7-paJI6U_TH-Ro0H0OWDFCiA74)
 
 ### 0 - 50
 
@@ -182,10 +184,8 @@ Group 1 = 600 points = 20% of WR
 
 ### 50 - 100
 
-{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|------------|------------|
-{{< /hint >}}
 | Per-level increase | 750,000 | 277.78% |
 | Total exp difference | 31,180,000 | 635.28% |
 
@@ -244,10 +244,8 @@ Group 1 = 600 points = 20% of WR
 
 ### 100 - 150
 
-{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|------------|------------|
-{{< /hint >}}
 | Per-level increase | 1,000,000 | 98.04% |
 | Total exp difference | 86,480,000 | 327.43% |
 
@@ -306,10 +304,8 @@ Group 1 = 600 points = 20% of WR
 
 ### 150 - 200
 
-{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|-------------|------------|
-{{< /hint >}}
 | Per-level increase | 1,000,000 | 49.50% |
 | Total exp difference | 135,480,000 | 207.08% |
 
