@@ -80,7 +80,7 @@ The speed you gain from fast ladder climbing is enough to fling you into the air
 
 ### Crouch Bhop
 Bhopping starting in a crouch position. If a jump is started from a standing position, crouching in the air will raise your collision box up 18 units (you tuck in your legs). If you start in a crouched position and jump you will not be able to get this extra 18 units of height.  
-This is great when trying to avoid map hazards like low ceilings, since you stay low to the ground while keeping a small collision box if you choose to stay crouched.  ![crouch bhop](/static/images/climb/Crouch_Bhop.png)
+This is great when trying to avoid map hazards like low ceilings, since you stay low to the ground while keeping a small collision box if you choose to stay crouched.  ![crouch bhop](/images/climb/Crouch_Bhop.png)
 >[!NOTE]
 >Crouching will also limit your ability to turn in the air and thus gain speed as well.  
 
@@ -121,7 +121,7 @@ In Source and Goldsrc there exists a property called **edge friction** it decide
 >**[unit/unit -> units if standing/units if crouching]**.
 
 To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  If not, edge friction is enabled
-![high jump](/static/images/climb/High_Jump.png)  
+![high jump](/images/climb/High_Jump.png)  
 In most cases this works as intended; two examples that were not considered edges had platforms/walls so close that the player would not have fell or would need to be precisely placed so that the edge check is initially true but fails at some point after. It is not very feasible to detect exactly how far away a platform is nor is it useful to negate edge friction for a platform that is that close. Most players would naturally jump a bit before the edge to land on a platform that close. This is where the High Jump comes in.   
 There is a way to "trick" the game into thinking you are not next to an edge even when you are on a high up platform with nothing close. Remember the engine only checks in the direction you are moving, so if you are moving in a direction that causes the “edge check box” to touch something, you are not considered "next to an edge" regardless of how close you actually are to one. We can use this to maintain a normal speed. High Jumps are typically done by moving perpendicular to the edge you want to jump from while sticking very close it, and then only turning towards the edge for your pre-strafe. This minimizes the amount of time you are slowed down due to edge friction while still gaining some speed from the pre-strafe. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
 
