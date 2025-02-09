@@ -18,10 +18,10 @@ The systems described here are complete; we are in agreement that this is what t
 
 > There are no 'base completion points'; the formula system somewhat accounts for this, but we've determined that it is not worth having a system of its own
 
-<sub>Aside -- Motivation;</sub>
+### Aside -- Motivation
 
-<sub>Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain 'percentile' blocks. The formula system awards points simply according to a formula with a single parameter -- the player's rank.
-The group system should award more points than the formula system; it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.</sub>
+Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain 'percentile' blocks. The formula system awards points simply according to a formula with a single parameter -- the player's rank.
+The group system should award more points than the formula system; it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.
 
 ### WRs and Top10s system
 
@@ -53,9 +53,9 @@ X axis designates player rank on a map,\
 y axis designates points awarded
 {{< /hint >}}
 
-<sub>Ex:<br>
-Player sets a time of rank 468 on a map with 1333 completions.<br>
-Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)</sub>
+#### Example
+Player sets a time of rank 468 on a map with 1333 completions.
+Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)
 
 ### (New) Group System
 
@@ -91,7 +91,7 @@ Group 3: minSize = 125
 Group 4: minSize = 250
 ```
 
-<sup>Ex.<br>
+#### Example
 On a map with 400 completions:
 
 ```
@@ -101,7 +101,7 @@ Group 3 size = max(2 * 400^0.62, 125) = max(82, 125) = 125
 Group 4 size = max(2.5 * 400^0.68, 250) = max(147, 250) = 250
 ```
 
-<sup>Therefore:</sup>
+#### Example
 
 ```
 Group 1 = ranks 11-30 (begins from rank 11, contains 20 spots)
@@ -110,8 +110,8 @@ Group 3 = ranks 76-200 (begins from rank 76 = end of G2, contains 125 spots)
 Group 4 = ranks 201-450 -- note this exceeds #completions (400)! So it extends all the way to rank 400, and anyone who completes the map is automatically in at least group 4.
 ```
 
-**Group Points**:\
- <sup>(going by WR points = 3000) (no particular pattern; eyeballed). Keep in mind that you also get points from the formula!</sup>
+### Group Points
+##### (going by WR points = 3000) (no particular pattern; eyeballed). Keep in mind that you also get points from the formula!
 
 ```
 Group 4 = 90 points = 3% of WR
