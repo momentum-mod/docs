@@ -39,8 +39,9 @@ This cap is separate from the **max velocity** cap (how fast the engine lets you
 Any time you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
 as soon as they try to jump off the ground with this speed, the cap will activate. If the player reaches this cap and tries to jump again,  
 their speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.  
->[!NOTE] 
->Friction is applied after the Bhop speed cap, so an imperfect Bhop will reduce your speed starting from the reset amount
+{{< hint info >}}
+Friction is applied after the Bhop speed cap, so an imperfect Bhop will reduce your speed starting from the reset amount
+{{< /hint >}} 
 
 However, this Bhop cap still allows the player to gain more speed than a Prestrafe hence, Bhopping has the potential to go further than a Long Jump. Useful to remember when dealing with difficult Long Jumps (although this may form a bad habit if relied upon).  
 Bhop jumps can also be required by the mapper by using "Bhop Blocks" that teleport you back if you try standing on them, same as the Bhop game mode. Conversely, mappers can also add triggers that disable Bhops inside an area.  
@@ -61,9 +62,9 @@ Any time the player jumps (not when they are in the air for any other reason suc
 Whenever the player lands, they will be slowed for however much time is left on the timer. The severity of the slowdown is also proportional to how much time is left on the timer, so you will move slower at the beginning of the timer compared to near the end of the timer.
 For reference, if a player jumps and lands on flat ground about 0.66 seconds or about half the time is taken.
 This means that jumping up to something slows you down longer and harder since you land earlier while jumping to something beneath will slow you less for a shorter duration or not at all if the timer completely expires.  
->[!IMPORTANT]
->The slowdown affects both horizontal and vertical movement: running is slower but also your jump height is reduced
-
+{{< hint warning >}}
+The slowdown affects both horizontal and vertical movement: running is slower but also your jump height is reduced
+{{< /hint >}}
 A Bhop, even a perfect one, does not circumvent the vertical movement penalty: Bhops will always get smaller height compared to a normal jump, unless the Bhop was done after falling long enough to expire the stamina timer, or the Bhop was done after walking off a platform rather than jumping off.  
 Thus, Bhops may not always give you the best distance or be able to reach high places, but it is important to keep the exceptions in mind.  
 [for more technical details and exact values, refer to this doc](https://kzguide.gitlab.io/techniques/stamina/).
@@ -81,13 +82,15 @@ The speed you gain from fast ladder climbing is enough to fling you into the air
 ### Crouch Bhop
 Bhopping starting in a crouch position. If a jump is started from a standing position, crouching in the air will raise your collision box up 18 units (you tuck in your legs). If you start in a crouched position and jump you will not be able to get this extra 18 units of height.  
 This is great when trying to avoid map hazards like low ceilings, since you stay low to the ground while keeping a small collision box if you choose to stay crouched.  ![crouch bhop](/images/climb/Crouch_Bhop.png)
->[!NOTE]
->Crouching will also limit your ability to turn in the air and thus gain speed as well.  
-
+{{< hint info >}}
+Crouching will also limit your ability to turn in the air and thus gain speed as well.
+{{< /hint >}}
+  
 ### Standup (1.6 Climb Only)
 For maximum airtime, it is best to stay crouched as you are about to land, but what if you need airtime but want to land in a standing position? If you are in a crouching position close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land.
->[!NOTE]
->The faster you are falling, the shorter the grace period is
+{{< hint info >}}
+The faster you are falling, the shorter the grace period is
+{{< /hint >}}
 
 ### Standup Bhop (1.6 Climb Only)
 Combines a Standup with a Bhop. The result is you gain extra airtime and distance with your crouch, but your next jump is in the standing position meaning you can “tuck in your legs” again and get the extra 18 units of height. This technique is especially useful in 1.6 Climb since you will also bleed slightly more time off stamina by staying in the air longer.   
@@ -99,9 +102,9 @@ you can use Double Ducks to climb small humps without wasting time overshooting 
 **crouching is not considered a jump, so the jump-land penalty does not activate.**  
 This means you can gain speed with air strafing without worrying about slowing down upon landing. This is used in Count Jumps.  If you wish to perform a Standup version that will give the most airtime it is better to have another bind for crouch on a keyboard so that it can be held.
 
-
 ### Count Jump [1.6 Climb only]
-Done by first gaining speed with a Prestrafe then Double Ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. This is also sometimes called a **Count Jump**.    
+Done by first gaining speed with a Prestrafe then Double Ducking to gain more speed in the air, land then finally jump. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. This is also sometimes called a **Count Jump**. 
+
 ### Duck Roll [1.6 Climb only]
 Sometimes called Ground Strafing or G-Strafing  in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
 It is a "Bhop" sequence comprised entirely of rapid Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. In Climb it is usually used after landing from a surf or slide to maintain high speed. Since Duck Rolls are just many Double Ducks, it is possible to perform a Standup version that requires holding crouch for a little bit after doing a Double Duck which preserves speed a little better. 
@@ -109,17 +112,17 @@ Duck Roll’s effectiveness heavily depends on the map.
 
 ### High Jump [1.6 Climb only] 
 In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**. 
->[!NOTE]
-> Currently, 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction
-
->[!IMPORTANT]
->You are considered to be next to an edge if:   
->**In the direction you are moving (not facing), 36/18 units down and 16 units forward from the player’s origin  
->(This works out to be the bottom edge of your collision box) spawn a box of identical dimensions to the player’s collision box  
->(32 unit width, 32 unit depth, 72/36 unit height) whose origin is from that point,
->move the box down 34 units while checking if it intersects with anything. If there was nothing in its path, the player is next to an edge**.  
->**[unit/unit -> units if standing/units if crouching]**.
-
+{{< hint info >}}
+Currently, 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction
+{{< /hint >}}
+{{< hint warning >}}
+You are considered to be next to an edge if:   
+In the direction you are moving (not facing), 36/18 units down and 16 units forward from the player’s origin  
+(This works out to be the bottom edge of your collision box) spawn a box of identical dimensions to the player’s collision box  
+(32 unit width, 32 unit depth, 72/36 unit height) whose origin is from that point,
+move the box down 34 units while checking if it intersects with anything. If there was nothing in its path, the player is next to an edge.  
+**[unit/unit -> units if standing/units if crouching]**.
+{{< /hint >}}
 To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  If not, edge friction is enabled
 ![high jump](/images/climb/High_Jump.png)  
 In most cases this works as intended; two examples that were not considered edges had platforms/walls so close that the player would not have fell or would need to be precisely placed so that the edge check is initially true but fails at some point after. It is not very feasible to detect exactly how far away a platform is nor is it useful to negate edge friction for a platform that is that close. Most players would naturally jump a bit before the edge to land on a platform that close. This is where the High Jump comes in.   
