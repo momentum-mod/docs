@@ -92,11 +92,10 @@ You can check out one way of doing so [below](#texture-creation---designer).
 `$parallaxcenter` adjusts the centre-point of the parallax effect, nudging it closer or further away from the surface.
 
 {{< hint warning >}}
-Parallax Occlusion has its limitations and things to be wary of.<br><br>  
-The parallax shader has a limited number of layers to create the depth effect.<br>
+Parallax Occlusion has its limitations and things to be wary of. The parallax shader has a limited number of layers to create the depth effect.
 {{< /hint >}}
 
-If you make the height value too intense, these layers become very easy to notice and ruin the effect, as shown below.<br><br>
+If you make the height value too intense, these layers become very easy to notice and ruin the effect, as shown below.
 ![Visible layers of Parallax](/images/pbr_guide/pbr_layer_example.jpg)
 Another thing you might notice is that the depth effect continues past the edge of the brush, which can look very strange as well, and is more noticeable on higher depth settings.
 
