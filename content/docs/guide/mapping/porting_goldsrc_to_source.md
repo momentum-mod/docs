@@ -48,8 +48,12 @@ More information on this is available on the release page of HUSK MD.
 
 ### Half Life Unified SDK Map Decompiler (HUSK MD)
 
-Download available here: https://github.com/SamVanheer/HalfLife.UnifiedSdk.MapDecompiler  
-<ins>This is by far the best decompiler to use.</ins> It cannot be reiterated enough that any attempts at porting GoldSrc content should start with this decompiler. The vast majority of information on GoldSrc map decompiling and porting is outdated. Old guides will typically point to WinBSPC or BSP2MAP, but these tools are practically obsolete at this point.  
+Download available here: https://github.com/SamVanheer/HalfLife.UnifiedSdk.MapDecompiler
+
+{{< hint info >}}
+This is by far the best decompiler to use.
+It cannot be reiterated enough that any attempts at porting GoldSrc content should start with this decompiler. The vast majority of information on GoldSrc map decompiling and porting is outdated. Old guides will typically point to WinBSPC or BSP2MAP, but these tools are practically obsolete at this point.
+{{< /hint >}}
 This decompiler has the following advantages over the other options:
 
 - Offers both Tree-Based and Face-To-Brush decompiles

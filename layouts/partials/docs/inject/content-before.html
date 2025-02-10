@@ -1,6 +1,6 @@
 {{ $title := "" }}
 {{ with .File }}
-	{{ $title = .File.BaseFileName | humanize | title }}
+	{{ $title = .BaseFileName | humanize | title }}
 {{ end }}
 {{ if .Param "long_title" }}
 	{{ $title = .Param "long_title" }}

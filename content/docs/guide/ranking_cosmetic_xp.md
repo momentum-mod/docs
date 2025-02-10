@@ -6,6 +6,7 @@ tags:
   - rank
   - xp
   - cosmetic
+math: true
 ---
 
 ## Ranked-Points System
@@ -18,10 +19,10 @@ The systems described here are complete; we are in agreement that this is what t
 
 > There are no 'base completion points'; the formula system somewhat accounts for this, but we've determined that it is not worth having a system of its own
 
-<sub>Aside -- Motivation;</sub>
+### Aside -- Motivation
 
-<sub>Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain 'percentile' blocks. The formula system awards points simply according to a formula with a single parameter -- the player's rank.
-The group system should award more points than the formula system; it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.</sub>
+Times ranked beyond the top10 are awarded points according to 2 systems: the Group system, and a Formula system. The group system rewards discrete bundles of points for players ranking within certain 'percentile' blocks. The formula system awards points simply according to a formula with a single parameter -- the player's rank.
+The group system should award more points than the formula system; it should be the primary goal of the player to improve to the next group. The formula system simply provides bonus ranked points for improving within a group, so the player does not feel like intermediate improvements are a waste of effort.
 
 ### WRs and Top10s system
 
@@ -53,9 +54,9 @@ X axis designates player rank on a map,\
 y axis designates points awarded
 {{< /hint >}}
 
-<sub>Ex:<br>
-Player sets a time of rank 468 on a map with 1333 completions.<br>
-Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)</sub>
+#### Example
+Player sets a time of rank 468 on a map with 1333 completions.
+Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that the # of completions on the map did not affect the points awarded!)
 
 ### (New) Group System
 
@@ -64,16 +65,18 @@ Formula points awarded = `50000 / (468 + 49)` = 96.7 => 97 points. (Note that th
 
 4 groups, loosely 'percentile'-based (in fact, a function of #completions, but not as simple as a percentage). Instead of calculating group boundaries directly from percentiles, we calculate group _sizes_ based on a simple maximizing function --
 
-Group size = `max(A(x), minSize)`
 
-<sup>_max(A, B) simply returns the value of the larger parameter._<br>
-_A is a function of #completions, minSize_</sup>
+$$ Group\space Size = max(A(x), minSize) $$
+
+$ max(A, B) $ simply returns the value of the larger parameter.
+_A is a function of #completions, minSize_
 
 Group 1 always starts at rank 11, and its size is determined from its group size formula.
 
-The formula to determine group size, `A(x)` (where `x` is the # of completions of the map), is\
-`_A(x) = SF * (x^E)`, where `SF` and `E` are defined uniquely for each group:\
-`SF` = Scale factor, `E` = Exponent
+The formula to determine group size, $ A(x) $ (where $ x $ is the # of completions of the map), is
+$$ A(x) = SF * (x^E) $$
+where $ SF $ and $ E $ are defined uniquely for each group:
+$ SF = Scale factor $, $ E = Exponent $
 
 ```
 Group 1: E = 0.5, SF = 1
@@ -91,7 +94,7 @@ Group 3: minSize = 125
 Group 4: minSize = 250
 ```
 
-<sup>Ex.<br>
+#### Example
 On a map with 400 completions:
 
 ```
@@ -101,7 +104,7 @@ Group 3 size = max(2 * 400^0.62, 125) = max(82, 125) = 125
 Group 4 size = max(2.5 * 400^0.68, 250) = max(147, 250) = 250
 ```
 
-<sup>Therefore:</sup>
+#### Example
 
 ```
 Group 1 = ranks 11-30 (begins from rank 11, contains 20 spots)
@@ -110,8 +113,8 @@ Group 3 = ranks 76-200 (begins from rank 76 = end of G2, contains 125 spots)
 Group 4 = ranks 201-450 -- note this exceeds #completions (400)! So it extends all the way to rank 400, and anyone who completes the map is automatically in at least group 4.
 ```
 
-**Group Points**:\
- <sup>(going by WR points = 3000) (no particular pattern; eyeballed). Keep in mind that you also get points from the formula!</sup>
+### Group Points
+##### (going by WR points = 3000) (no particular pattern; eyeballed). Keep in mind that you also get points from the formula!
 
 ```
 Group 4 = 90 points = 3% of WR
@@ -122,8 +125,7 @@ Group 1 = 600 points = 20% of WR
 
 ## Cosmetic XP
 
-> For more advanced info about cosmetics\
-> Make a copy of [The spreadsheet](https://docs.google.com/spreadsheets/d/1JiHJYsxlGPXAZqCPh7-paJI6U_TH-Ro0H0OWDFCiA74)
+> For more advanced info about cosmetics make a copy of [The spreadsheet](https://docs.google.com/spreadsheets/d/1JiHJYsxlGPXAZqCPh7-paJI6U_TH-Ro0H0OWDFCiA74)
 
 ### 0 - 50
 
@@ -182,10 +184,8 @@ Group 1 = 600 points = 20% of WR
 
 ### 50 - 100
 
-{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|------------|------------|
-{{< /hint >}}
 | Per-level increase | 750,000 | 277.78% |
 | Total exp difference | 31,180,000 | 635.28% |
 
@@ -244,10 +244,8 @@ Group 1 = 600 points = 20% of WR
 
 ### 100 - 150
 
-{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|------------|------------|
-{{< /hint >}}
 | Per-level increase | 1,000,000 | 98.04% |
 | Total exp difference | 86,480,000 | 327.43% |
 
@@ -306,10 +304,8 @@ Group 1 = 600 points = 20% of WR
 
 ### 150 - 200
 
-{{< hint info >}}
 | Type | Amount | Percentage |
 |----------------------|-------------|------------|
-{{< /hint >}}
 | Per-level increase | 1,000,000 | 49.50% |
 | Total exp difference | 135,480,000 | 207.08% |
 
