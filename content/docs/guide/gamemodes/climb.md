@@ -132,6 +132,7 @@ There is a way to "trick" the game into thinking you are not next to an edge eve
 KZT’s origin as a server plugin for CSGO gives it a unique implementation of Prestrafe. Prestrafe functions as a speed boost that is tracked separately from a player’s move speed, The player’s “final move speed” = “normal move speed” + “Prestrafe boost”. In KZT, the value stored in player’s “Prestrafe boost” is not affected by friction instead, it will gradually return to 0 if it hits its maximum of +25 or if the player stops Prestrafing while grounded. 
 {{< hint info >}}
 The amount your mouse has to move for a Prestrafe in KZT is more lenient compared to 1.6 Climb, your Prestrafe path can be closer to a straight line
+{{</hint>}}
 {{< hint info >}}
 You can get around the +25 rule by briefly failing to Prestrafe once you reach max “Prestrafe boost”, such as by releasing one of your movement keys momentarily. Your “Prestrafe boost” will get below the maximum and the cycle repeats
 {{</hint>}}
