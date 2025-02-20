@@ -128,5 +128,21 @@ To simplify, if the player were to move an additional 16 units in their current 
 In most cases this works as intended; two examples that were not considered edges had platforms/walls so close that the player would not have fell or would need to be precisely placed so that the edge check is initially true but fails at some point after. It is not very feasible to detect exactly how far away a platform is nor is it useful to negate edge friction for a platform that is that close. Most players would naturally jump a bit before the edge to land on a platform that close. This is where the High Jump comes in.   
 There is a way to "trick" the game into thinking you are not next to an edge even when you are on a high up platform with nothing close. Remember the engine only checks in the direction you are moving, so if you are moving in a direction that causes the “edge check box” to touch something, you are not considered "next to an edge" regardless of how close you actually are to one. We can use this to maintain a normal speed. High Jumps are typically done by moving perpendicular to the edge you want to jump from while sticking very close it, and then only turning towards the edge for your pre-strafe. This minimizes the amount of time you are slowed down due to edge friction while still gaining some speed from the pre-strafe. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
 
+### Prestrafe (KZT version)
+KZT’s origin as a server plugin for CSGO gives it a unique implementation of Prestrafe. Prestrafe functions as a speed boost that is tracked separately from a player’s move speed, The player’s “final move speed” = “normal move speed” + “Prestrafe boost”. In KZT, the value stored in player’s “Prestrafe boost” is not affected by friction instead, it will gradually return to 0 if it hits its maximum of +25 or if the player stops Prestrafing while grounded. 
+{{< hint info >}}
+The amount your mouse has to move for a Prestrafe in KZT is more lenient compared to 1.6 Climb, your Prestrafe path can be closer to a straight line
+{{< hint info >}}
+You can get around the +25 rule by briefly failing to Prestrafe once you reach max “Prestrafe boost”, such as by releasing one of your movement keys momentarily. Your “Prestrafe boost” will get below the maximum and the cycle repeats
+{{</hint>}}
+
+### Prekeep (KZT only)
+KZT’s “Prestrafe boost” does not reset in the air. If you Prestrafe, jump, and Prestrafe as soon as you land you will keep the Prestrafe speed, hence the name Prekeep. 
+For example, a player is running at 250 speed, starts Prestrafing to 265 (really just 250 + 15 Prestrafe speed) jumps, Airstrafes to 300 (285 + 15 Prestrafe speed) and lands. 
+2 outcomes can occur.
+Outcome 1: The player does not immediately Prestrafe.  Friction slows “normal speed” from 285 to 250. Prestrafe rule slows “Prestrafe boost” from +15 to +0. The player has a final speed of 250 right after landing, which gives the appearance of vanilla physics.
+ Outcome 2: the player immediately Prestrafes upon landing. Friction slows “normal speed” from 285 to 250. Prestrafe rule does not activate and the +15 speed is kept. The player has a final speed of 265 right after landing and will continue to climb from there as the player Prestrafes. The player performed a Prekeep!
+
+
 ### Comboing 
 More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive.
