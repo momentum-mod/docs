@@ -13,9 +13,9 @@ This guide gives a general overview of all the steps required to officially port
 
 1. Zone the map in-game or in Hammer
 2. Make the required entity modifications using in-game entity tools and/or Hammer
-3. Use Lumper to apply entity modifications to the BSP and remove Valve assets
-4. Ensure the map is following our guidelines
-5. Upload the BSP and zone .json file to the Momentum Mod website
+3. Use [Lumper](https://github.com/momentum-mod/lumper/releases) to apply entity modifications to the BSP and remove Valve assets
+4. Ensure the map is following our [Submission Guidelines](/guide/mapping/submission_guidelines/)
+5. Upload the BSP and zone .json file to the [Momentum Mod website](https://momentum-mod.org/maps/submissions)
 
 # In-Game Zoning
 
@@ -174,7 +174,7 @@ Lumper also lets you review entities for anything that might be worth changing o
 
 ### Website Map Submission
 
-Maps submitted to the official website will only be approved if they follow our [Official Porting Guidelines](). **TODO: Add link**
+Maps submitted to the official website will only be approved if they follow our [Submission Guidelines](/guide/mapping/submission_guidelines/).
 
 1. Go to the [Momentum Mod Submission Page](https://momentum-mod.org/maps/submissions) and click the "Submit a Map" button to begin the submission.
 
