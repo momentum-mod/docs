@@ -9,7 +9,7 @@ tags:
 
 # Background
 
-This guide gives a general overview of all the steps required to officially port a map into Momentum Mod. There are multiple tools available that accomplish the same things, so it is up to the map porter to decide what works best for them. The general process for porting maps is the following:
+This guide gives an overview of all the steps required to officially port a map into Momentum Mod. There are multiple tools available that accomplish the same things, so it is up to the map porter to decide what works best for them. The general process for porting maps is the following:
 
 1. Zone the map in-game or in Hammer
 2. Make the required entity modifications using in-game entity tools and/or Hammer
@@ -103,22 +103,6 @@ Typically stages are considered complete when the player enters the start zone o
 
 Some entities must be modified to be compatible with Momentum Mod's version of Source engine or replaced with a more consistent/less exploitable version of the entity. Entities can be modified in-game with the `devui_show entitytools` command. This command will open an interface with various tools for quickly modifying and fixing map entities and exporting the changes to a Stripper config.
 
-### Drop Teleports
-
-In surf maps, it is common for mappers to use "cages" to reset the player's velocity after they fail or transition between stages. Players can sometimes exploit these cages with +left binds that allow them to spin in the small area to gain additional speed at the start of a stage.
-
-![Drop Teleport](/images/map_porting/drop_tele.png)
-
-Momentum Mod introduces the "Keep Negative Z Velocity Only" velocity mode option for `trigger_teleport` that prevents the player from air strafing while dropping from a stage teleport. All maps that use teleport cages must now use this new velocity mode to prevent exploits. This can be done with the in-game entity modification tools: `devui_show entitytools`. Open the "Teleport Velocity Mode" dropdown, select the destination that you want to change to a drop teleport, and then select the "Keep Negative Z" radio button.
-
-![Velocity Mode Tools](/images/map_porting/velocity_mode.png)
-
-### Landmark Teleports
-
-Landmark teleports on maps made for Source engine versions before CS:GO are no longer working correctly and need to be updated. The `UseLandmarkAngles` keyvalue needs to be set to 0 and the angles of the landmark entity need to match the destination entity. The in-game entity tools make this easy by listing all available landmark teleport triggers and giving you some options for fixing these triggers. In most cases, all teleports can be fixed by clicking the "Fix All Destination Angles" button. If you need to fix angles for a particular trigger, select it in the list and then click the "Fix Destination Angles" button.
-
-![Landmark Teleport](/images/map_porting/landmark_tele.png)
-
 ### Boost Ramps
 
 `trigger_push` entities that push the player into a ramp are very inconsistent and give different speeds depending on how you jump into it. Replace these with `trigger_setspeed` for a more consistent and less exploitable boost. You will have to tweak the values to make the boost similar in speed and trajectory to the original `trigger_push`. Enable the "Strict Mode" option to prevent the trigger from activating at all when the player jumps into it.
@@ -139,6 +123,30 @@ The player can sometimes activate a boost multiple times while falling into it w
 ### Jump Boosts
 
 Boosts that launch the player upwards with `OnEndTouch !activator,Addoutput,basevelocity # # #` should be updated to use the more consistent `OnJump` output. Sometimes mappers will also make jump pads that reduce the player's gravity. In these cases, it is recommended to replace these with a `trigger_setspeed` or `trigger_multiple` with an `OnJump !activator,Addoutput,basevelocity # # #` output.
+
+### Landmark Teleports
+
+Landmark teleports on maps made for Source engine versions before CS:GO are no longer working correctly and need to be updated. The `UseLandmarkAngles` keyvalue needs to be set to 0 and the angles of the landmark entity need to match the destination entity. The in-game entity tools make this easy by listing all available landmark teleport triggers and giving you some options for fixing these triggers. In most cases, all teleports can be fixed by clicking the "Fix All Destination Angles" button. If you need to fix angles for a particular trigger, select it in the list and then click the "Fix Destination Angles" button.
+
+![Landmark Teleport](/images/map_porting/landmark_tele.png)
+
+### Drop Teleports (Surf Only)
+
+In surf maps, it is common for mappers to use "cages" to reset the player's velocity after they fail or transition between stages. Players can sometimes exploit these cages with +left binds that allow them to spin in the small area to gain additional speed at the start of a stage.
+
+![Drop Teleport](/images/map_porting/drop_tele.png)
+
+Momentum Mod introduces the "Keep Negative Z Velocity Only" velocity mode option for `trigger_teleport` that prevents the player from air strafing while dropping from a stage teleport. All maps that use teleport cages must now use this new velocity mode to prevent exploits. This can be done with the in-game entity modification tools: `devui_show entitytools`. Open the "Teleport Velocity Mode" dropdown, select the destination that you want to change to a drop teleport, and then select the "Keep Negative Z" radio button.
+
+![Velocity Mode Tools](/images/map_porting/velocity_mode.png)
+
+### Jail Timers/Teleports (Surf Only)
+
+Old surf maps sometimes use a `logic_timer` to teleport all players to a jail after a few minutes. These timer entities and the associated teleport triggers should be removed using Lumper:
+
+![Lumper Timer](/images/map_porting/lumper_timer.png)
+
+![Lumper Teleports](/images/map_porting/lumper_teleports.png)
 
 ## Exporting Entity Modifications
 
@@ -171,6 +179,18 @@ There are a few more things to do before a map can be officially added to the ga
 Lumper also lets you review entities for anything that might be worth changing or removing from the map:
 
 ![Lumper Entity Review](/images/map_porting/lumper_entity_review.png)
+
+Sounds should be moved into specific folders in order to be compatible with the different volume sliders:
+| Channel | Folder |
+| -------- | ------- |
+| Map Sound Effects | sfx/ |
+| Ambient | ambient/ |
+| Music | music/ |
+| Movement | player/ |
+| Weapons | weapon/ |
+| UI | ui/ |
+
+![Lumper Sounds](/images/map_porting/lumper_sounds.png)
 
 ### Website Map Submission
 
