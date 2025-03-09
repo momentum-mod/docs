@@ -46,3 +46,6 @@ menu:
 markup:
   highlight:
     style: onedark
+  tableOfContents:
+    startLevel: 1
+    ordered: false # `true` adds numbering, looks awful
