@@ -236,16 +236,16 @@ body {
 
 .book-menu {
   ::-webkit-scrollbar {
-    width: 1px;
+    width: 6px;
   }
 
   ::-webkit-scrollbar-thumb {
     background: transparent;
-    width: 1px;
+    width: 6px;
   }
 
   :hover::-webkit-scrollbar-thumb {
     margin: 16px 0;
-    background: var(--gray-500);
+    background: var(--gray-300);
   }
 }
