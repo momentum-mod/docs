@@ -38,11 +38,7 @@ Bhopping has its own speed cap: **TBD (Momkz)**.      **380 (KZT)**,      **300 
 This cap is separate from the **max velocity** cap (how fast the engine lets you go before not bothering to give any more speed 3500 by default).  
 Any time you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
 as soon as they try to jump off the ground with this speed, the cap will activate. If the player reaches this cap and tries to jump again,  
-their speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.  
-{{< hint info >}}
-Friction is applied after the Bhop speed cap, so an imperfect Bhop will reduce your speed starting from the reset amount
-{{< /hint >}} 
-
+their speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.   
 However, this Bhop cap still allows the player to gain more speed than a Prestrafe hence, Bhopping has the potential to go further than a Long Jump.   
 Bhop jumps can also be required by the mapper by using "Bhop Blocks" that teleport you back if you try standing on them, same as the Bhop game mode. Conversely, mappers can also add triggers that disable Bhops inside an area.  
 
