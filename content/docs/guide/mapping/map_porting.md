@@ -114,15 +114,17 @@ Some entities must be modified to be compatible with Momentum Mod's version of S
 The player can sometimes activate a boost multiple times while falling into it with the "crouch boost" exploit. This exploit can be fixed by making push triggers more restrictive. There are various scenarios that require different approaches to fix crouch boosting:
 1. **Surf Ramp Boosts** - These boosts can be fixed by adding a cooldown so that the player has to wait before re-activating the trigger. This cooldown will add the following outputs to delay the trigger's re-activation: `OnEndTouch !self,Disable,,0` `OnEndTouch !self,Enable,,1`. Eventually when save states are implemented, you will be able to make these triggers activate only once until the player fails or restarts the stage by using the "Only Once" spawn flag.
 
-![Surf Ramp Boosts](/images/map_porting/surf_ramp_boost.png)
+![Surf Ramp Boost](/images/map_porting/surf_ramp_boost.png)
 
 2. **Floor Boosts** - In some cases, you can fix crouch boosting by making it so the boost only activates while the player is touching the ground. One option to fix this is to change the trigger into a `trigger_multiple` that boosts the player with `OnJump !activator,AddOutput,basevelocity # # #` output. Alternatively if you want to allow the player to get pushed continually, you can leave it as a `trigger_push`, but use a `filter_momentum_surface_collision` filter with the "Touching standable surfaces" option so the boost only applies on the ground. You should only use this option if the floor is completely flat, otherwise the boost will re-apply every time the player touches another surface. If you have the original vmf and can compile the map, changing the surface below the trigger_teleport into a func_conveyor is also an option.
 
-![Floor Boosts](/images/map_porting/floor_boost.png)
+![Floor Boost](/images/map_porting/floor_boost.png)
 
 ### Jump Boosts
 
 Boosts that launch the player upwards with `OnEndTouch !activator,Addoutput,basevelocity # # #` should be updated to use the more consistent `OnJump` output. Sometimes mappers will also make jump pads that reduce the player's gravity. In these cases, it is recommended to replace these with a `trigger_setspeed` or `trigger_multiple` with an `OnJump !activator,Addoutput,basevelocity # # #` output.
+
+![OnJump Boost](/images/map_porting/onjump_boost.png)
 
 ### Landmark Teleports
 
