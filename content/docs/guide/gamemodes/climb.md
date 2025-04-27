@@ -38,7 +38,7 @@ Bhopping has its own speed cap: **TBD (Momkz)**.      **380 (KZT)**,      **300 
 This cap is separate from the **max velocity** cap (how fast the engine lets you go before not bothering to give any more speed 3500 by default).  
 Any time you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
 as soon as they try to jump off the ground with this speed, the cap will activate. If the player reaches this cap and tries to jump again,  
-their speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.  
+their speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.   
 However, this Bhop cap still allows the player to gain more speed than a Prestrafe hence, Bhopping has the potential to go further than a Long Jump.   
 Bhop jumps can also be required by the mapper by using "Bhop Blocks" that teleport you back if you try standing on them, same as the Bhop game mode. Conversely, mappers can also add triggers that disable Bhops inside an area.  
 
@@ -107,12 +107,19 @@ In Climb modes with Stamina (1.6) Walking off gives no jump-land penalty to the 
 In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
 {{< /hint >}}
 
+### Drop Bhop
+Walking off or jumping off a platform and then bhopping on a platform below. In Climb modes without stamina (KZT) it functions identicaly to a standard Bhop although the timing to input jump is harder since the player is faller faster.  
+In Climb modes with Stamina (1.6) Walking off gives no jump-land penalty to the bhop while jumping off gives a reduced penalty (potentially none if the player fell far enough).
+{{< hint info >}}
+In 1.6 Climb, the Drop Bhop is futher categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
+{{< /hint >}}
+
 ### Comboing 
 More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive. 
  
 ### Weird Jump[1.6 Climb only]
-Walking off a platform and Bhopping upon landing. Recall that the jump-land penalty is only activated when a player jumps, so in this scenario no penalties are applied to the Bhop.  
-However, the Bhop speed cap is still checked as with all jumps. Don't go over 300 speed or it will reset to 240! Weird Jumps starting from a sufficiently tall platform give the best distance out of a single jump.
+walking off a platform and bhopping upon landing. Recall that the jump-land penalty is only called when a player jumps in this scenario no penalties are applied to the bhop.  
+However, the bhop speed cap is still checked as with all jumps. Don't go over 300 speed or it will reset to 240! Weird Jumps starting from a sufficiently tall platform give the best distance out of a single jump.
 
 ### Standup (1.6 Climb Only)
 For maximum airtime, it is best to stay crouched as you are about to land, but what if you need airtime but want to land in a standing position? If you are in a crouching position close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land.
@@ -137,11 +144,11 @@ It is a "Bhop" sequence comprised entirely of rapid Double Ducks. This lets you 
 Duck Roll’s effectiveness heavily depends on the map.  
 
 ### Count Jump [1.6 Climb only]
-Done by first gaining speed with a Prestrafe then Double Ducking (or Duck Rolling) to gain more speed in the air with Airstrafes, then finally Bhop upon landing. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. Optimized Count Jumps give the best distance of any jump on flat ground.
+Done by first gaining speed with a Prestrafe then Double Ducking (or Duck Rolling) to gain more speed in the air with Airstrafes, then finally bhop upon landing. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. This is also sometimes called a **Count Jump**. Optimized Count Jumps give the best distance of any jump on 1.6 Climb (assuming flat ground)
 
 {{< hint info >}}
-The Bhop done in the Count Jump does not have any jump-land penalties placed on it meaning the amount of speed taken away by imperfect Bhops is more forgiving. It's as if the player just ran and then jumped!  
-The Bhop speed cap is still checked but you won't be able to reach 300 speed unless you're doing very good strafing with 2 or more Double Ducks.   
+The bhop done in the Count Jump does not have any stamina penalties placed on it. It's as if the player just ran and then jumped!  
+The bhop speed cap is still checked but you won't be able to reach 300 speed unless you're doing very good strafing with 2 or more Double Ducks
 {{</hint>}}
 
 
@@ -162,11 +169,12 @@ move the box down 34 units while checking if it intersects with anything. If the
 To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  If not, edge friction is enabled
 ![high jump](/images/climb/High_Jump.png)  
 In most cases this works as intended; High jumps will gain less distance when jumping from the edge because of the slower takeoff speed. The obvious solution is to jump slightly before reaching the edge, this will give more distance but is it enough to cover the 16 units you lose out on? Generally yes, but there is a way to optimize this further.  
-Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately, we can't stay parallel when Prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide Prestrafe, make sure the angle you turn towards the edge is as shallow as possible. The game will use the shallow angle for edge detection which will return true later when compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
-Yet still there is even better and more intuitive method. Use Count Jumps! Friction is not applied in the air nor to a perfect Bhop. Initiate the first Double Duck before the edge and then Bhop on the edge. This will get way more distance then the previous method, in fact you can get more distance than even a Long Jump on ground level!
+Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately we can't stay parallel when prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide prestrafe, make sure the angle you turn towards the edge is as shallow as possible. The game will use the shallow angle for edge dectection which will return true later when compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
+Yet still there is even better and more intuitive method. Use Count Jumps! Edge friction does not apply in the air nor to a perfect bhop. Initiate the first Double Duck before the edge and then bhop on the edge. This will get way more distance then the previous method, in fact you can get more distance than even a Long Jump on ground level!
 
 {{< hint warning >}}
-Imperfect Bhops have a harsher penalty on the edge since friction will be doubled.
+Imperfect bhops have a harsher penalty on the edge since friction will be doubled.
+In practice, Count Jumps on a high platform will get less distance than ones on the ground
 {{< /hint >}}
 
 ### Prestrafe (KZT version)
@@ -188,6 +196,7 @@ Outcome 2: the player immediately Prestrafes upon landing. Friction slows “nor
 ### 66 unit Crouch Jumps (KZT only)
 In KZT, crouching right before a jump and right after are not equal. Starting a crouch one tick or more before the jump gives more height 66 units vs 64.84 units.  
 The trade-off is that the player loses speed as they transition into a crouch. The longer the player holds crouch the more speed is lost. These are best used when height is a priority over distance, since with imperfect execution more slow-down will occur than necessary, shortening the length of the jump.
+
 
 
 
