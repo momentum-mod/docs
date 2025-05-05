@@ -44,14 +44,14 @@ Bhop jumps can also be required by the mapper by using "Bhop Blocks" that telepo
 
 ### Surf
 
-Surf is very similar to its game mode counterpart. KZT  is 128 tick, MomClimb and 1.6 Climb are 100 tick while the Surf game mode is 66 tick. This means gaining speed is quicker and losing speed is harder in Climb compared to Surf.  
+Surf is very similar to its game mode counterpart. KZT is 128 tick, MomClimb and 1.6 Climb are 100 tick while the Surf game mode is 66 tick. This means gaining speed is quicker and losing speed is harder in Climb compared to Surf.  
 Maps made with MomClimb and KZT in mind can have traditional surf sections. The length and difficulty of these sections are entirely up to the map. Usually they are much shorter (sometimes only 1 ramp) compared to dedicated Surf maps.  
 1.6 Climb has a special version of Surf called **Slide**.  
 1.6 Climb has much lower air acceleration (10aa compared to MomClimb and KZT's 100aa). This means players can't as easily flick onto a ramp ("board") and generate speed or flick off a ramp and generate height.    
 Because of this "Slide" sections are usually brief and focus on keeping on the board rather than gaining enough speed to fly off.
-
+{{< hint info >}}
 Remember that in any movement mode you can always slide up gentle slopes with just 'W' while looking at the slope!
-
+{{< /hint >}}
 ### Stamina (Jump-Land Penalty) [1.6 Climb Only]
 
 Any time the player jumps (not when they are in the air for any other reason such as falling off something) a timer starts for about 1.31 seconds.
@@ -62,39 +62,56 @@ This means that jumping up to something slows you down longer and harder since y
 The slowdown affects both horizontal and vertical movement: running is slower but also your jump height is reduced
 {{< /hint >}}
 A Bhop, even a perfect one, does not circumvent the vertical movement penalty: Bhops will always get smaller height compared to a normal jump, unless the Bhop was done after falling long enough to expire the stamina timer, or the Bhop was done after walking off a platform rather than jumping off.  
-Thus, Bhops may not always give you the best distance or be able to reach high places, but it is important to keep the exceptions in mind.  
+Thus, Bhops usually do not give you the best distance or let you reach high places, but it is important to keep the exceptions in mind.  
 [for more technical details and exact values, refer to this doc](https://kzguide.gitlab.io/techniques/stamina/).
+{{< hint info >}}
+Imperfect Bhops are affected by the horizontal movement penalty which compounds with friction, mistiming Bhops carries a much steeper penalty compared to game modes without stamina like KZT, Bhop, or Surf
+{{< /hint >}}
 
 ---
 ## Advanced Techniques
 
 ### Wallrun/Wallstrafe
-Running against a wall at a shallow angle will grant you higher speeds similar to a Prestrafe. 
-There are 2 ways of doing this:
+Running against a wall at a shallow angle or Airstrafing perpendicular to a wall will grant you higher speeds. 
+For Wallruns, there are 2 common ways of setting up the correct angle:
 1. look slightly into the wall and press only W. 
 2. look slightly away from the wall and press W+A if the wall is to the left, W+D if it's to the right.  
-Method 2 also works in the air by Airstrafing into the wall with only A/D instead of W+A/D. 
-(Be careful! Continuing to move your mouse after contacting the wall can drain your speed if you look to far in or away!) 
+For Wallstrafes, while in the air bring your view parallel with the wall (you can either start parallel or Airstrafe until you're parallel), then hold only A/D. As long as you make contact with the wall you will gain speed.
+(Be careful! Continuing to move your mouse after contacting the wall can drain your speed if you look too far in or away!) 
 ![wallstrafe](/images/climb/Wallstrafe.png)  
 
 ### Fast Ladder Climbing 
-Ladders can be climbed by "walking into them". If you are directly facing the ladder hold W, if sideways A/D. If you face the ladder diagonally you can climb the ladder both ways. If you hold W and A/D the speeds add onto each other resulting in a much faster climb.    
+Ladders can be climbed by "walking into them". If you are directly facing or look up at the ladder hold W, if backwards or looking down S, if sideways A/D. Notice how it is possible to look up/down and sideways at the same time. If you hold W and A/D while being sideways and looking up the speeds add onto each other resulting in a much faster climb.    
 
 ### Ladder Jump
-The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more like surfing. The way you flick off dictates your trajectory, and whether you trade speed for height and vice versa.  However, unlike surfing there is no acceleration or deceleration on ladders, so speed changes instantly when you move your mouse or change inputs.
+The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more like surfing. Right before leaving the top of the ladder flick away, right if holding A and left for D (the opposite of how you Airstrafe!). How far you flick out determines how much height is traded for speed. After you leave the ladder, immediately switch strafe keys and start course-correcting and gaining extra speed with proper Airstrafing.
+{{< hint info >}}
+Unlike surfing, there is no acceleration or deceleration on ladders, even the smallest segment of ladder can instantly change your speed when you move your mouse or change inputs.
+Really it is only the top of the ladder (or wherever you decide the takeoff point is) that determines your speed and trajectory. Also, how far up/down you look also affects speed, height and trajectory
+{{</hint>}}
 
 ### Crouch Bhop
 Bhopping starting in a crouch position. If a jump is started from a standing position, crouching in the air will raise your collision box up 18 units (you tuck in your legs). If you start in a crouched position and jump you will not be able to get this extra 18 units of height.  
-This is great when trying to avoid map hazards like low ceilings, since you stay low to the ground while keeping a small collision box if you choose to stay crouched.  ![crouch bhop](/images/climb/Crouch_Bhop.png)
+This is great when trying to avoid map hazards like low ceilings, since you stay low to the ground while keeping a small collision box if you choose to stay crouched.  ![crouch Bhop](/images/climb/Crouch_Bhop.png)
 {{< hint info >}}
-Crouching will also limit your ability to turn in the air and thus gain speed as well.
+Jumping then crouching still keeps your head lower than a jump without any crouching despite getting more height
+{{< /hint >}}
+{{< hint warning >}}
+Crouching will limit your ability to turn in the air and thus gain speed as well
 {{< /hint >}}
 
 ### Drop Bhop
-Walking off or jumping off a platform and then bhopping on a platform below. In Climb modes without stamina (KZT) it functions identicaly to a standard Bhop although the timing to input jump is harder since the player is faller faster.  
+Walking off or jumping off a platform and then Bhopping on a platform below. In Climb modes without stamina (KZT) it functions identically to a standard Bhop although the timing to input jump is harder since the player is faller faster.  
+In Climb modes with Stamina (1.6) Walking off gives no jump-land penalty to the Bhop while jumping off gives a reduced penalty (potentially none if the player fell far enough).
+{{< hint info >}}
+In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
+{{< /hint >}}
+
+### Drop Bhop
+Walking off or jumping off a platform and then bhopping on a platform below. In Climb modes without stamina (KZT) it functions identically to a standard Bhop although the timing to input jump is harder since the player is faller faster.  
 In Climb modes with Stamina (1.6) Walking off gives no jump-land penalty to the bhop while jumping off gives a reduced penalty (potentially none if the player fell far enough).
 {{< hint info >}}
-In 1.6 Climb, the Drop Bhop is futher categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
+In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
 {{< /hint >}}
 
 ### Comboing 
@@ -152,7 +169,7 @@ move the box down 34 units while checking if it intersects with anything. If the
 To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  If not, edge friction is enabled
 ![high jump](/images/climb/High_Jump.png)  
 In most cases this works as intended; High jumps will gain less distance when jumping from the edge because of the slower takeoff speed. The obvious solution is to jump slightly before reaching the edge, this will give more distance but is it enough to cover the 16 units you lose out on? Generally yes, but there is a way to optimize this further.  
-Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately we can't stay parallel when prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide prestrafe, make sure the angle you turn towards the edge is as shallow as possible. The game will use the shallow angle for edge dectection which will return true later when compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
+Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately we can't stay parallel when prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide prestrafe, make sure the angle you turn towards the edge is as shallow as possible. The game will use the shallow angle for edge detection which will return true later when compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
 Yet still there is even better and more intuitive method. Use Count Jumps! Edge friction does not apply in the air nor to a perfect bhop. Initiate the first Double Duck before the edge and then bhop on the edge. This will get way more distance then the previous method, in fact you can get more distance than even a Long Jump on ground level!
 
 {{< hint warning >}}
@@ -175,6 +192,11 @@ For example, a player is running at 250 speed, starts Prestrafing to 265 (really
 2 outcomes can occur:  
 Outcome 1: The player does not immediately Prestrafe.  Friction slows “normal speed” from 285 to 250. Prestrafe rule slows “Prestrafe boost” from +15 to +0. The player has a final speed of 250 right after landing, which gives the appearance of vanilla physics.  
 Outcome 2: the player immediately Prestrafes upon landing. Friction slows “normal speed” from 285 to 250. Prestrafe rule does not activate and the +15 speed is kept. The player has a final speed of 265 right after landing and will continue to climb from there as the player Prestrafes. The player performed a Prekeep!
+
+### 66 unit Crouch Jumps (KZT only)
+In KZT, crouching right before a jump and right after are not equal. Starting a crouch one tick or more before the jump gives more height 66 units vs 64.84 units.  
+The trade-off is that the player loses speed as they transition into a crouch. The longer the player holds crouch the more speed is lost. These are best used when height is a priority over distance, since with imperfect execution more slow-down will occur than necessary, shortening the length of the jump.
+
 
 
 
