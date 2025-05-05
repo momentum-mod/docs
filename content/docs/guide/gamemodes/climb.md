@@ -72,7 +72,7 @@ Imperfect Bhops are affected by the horizontal movement penalty which compounds 
 ## Advanced Techniques
 
 ### Wallrun/Wallstrafe
-Running against a wall at a shallow angle or Airstrafing parallel to a wall will grant you higher speeds. 
+Running against a wall at a shallow angle or Airstrafing perpendicular to a wall will grant you higher speeds. 
 For Wallruns, there are 2 common ways of setting up the correct angle:
 1. look slightly into the wall and press only W. 
 2. look slightly away from the wall and press W+A if the wall is to the left, W+D if it's to the right.  
@@ -108,10 +108,10 @@ In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump 
 {{< /hint >}}
 
 ### Drop Bhop
-Walking off or jumping off a platform and then bhopping on a platform below. In Climb modes without stamina (KZT) it functions identicaly to a standard Bhop although the timing to input jump is harder since the player is faller faster.  
+Walking off or jumping off a platform and then bhopping on a platform below. In Climb modes without stamina (KZT) it functions identically to a standard Bhop although the timing to input jump is harder since the player is faller faster.  
 In Climb modes with Stamina (1.6) Walking off gives no jump-land penalty to the bhop while jumping off gives a reduced penalty (potentially none if the player fell far enough).
 {{< hint info >}}
-In 1.6 Climb, the Drop Bhop is futher categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
+In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
 {{< /hint >}}
 
 ### Comboing 
@@ -169,7 +169,7 @@ move the box down 34 units while checking if it intersects with anything. If the
 To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  If not, edge friction is enabled
 ![high jump](/images/climb/High_Jump.png)  
 In most cases this works as intended; High jumps will gain less distance when jumping from the edge because of the slower takeoff speed. The obvious solution is to jump slightly before reaching the edge, this will give more distance but is it enough to cover the 16 units you lose out on? Generally yes, but there is a way to optimize this further.  
-Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately we can't stay parallel when prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide prestrafe, make sure the angle you turn towards the edge is as shallow as possible. The game will use the shallow angle for edge dectection which will return true later when compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
+Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately we can't stay parallel when prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide prestrafe, make sure the angle you turn towards the edge is as shallow as possible. The game will use the shallow angle for edge detection which will return true later when compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
 Yet still there is even better and more intuitive method. Use Count Jumps! Edge friction does not apply in the air nor to a perfect bhop. Initiate the first Double Duck before the edge and then bhop on the edge. This will get way more distance then the previous method, in fact you can get more distance than even a Long Jump on ground level!
 
 {{< hint warning >}}
