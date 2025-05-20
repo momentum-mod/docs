@@ -1,10 +1,11 @@
 ---
-title: Submission Guidelines
+title: Map Submission
 categories:
   - guide
 tags:
   - mapping
   - guidelines
+weight: 1
 ---
 
 # Zoning Requirements
