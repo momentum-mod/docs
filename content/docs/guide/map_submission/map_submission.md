@@ -10,7 +10,7 @@ weight: 1
 
 # Introduction
 
-Momentum’s map submission system is how maps are officially added to Momentum Mod. Once approved, we host all map files and leaderboards, maps show up on the ingame map selector and website, and players are granted XP for playing them (and rank point, in the case of Ranked leaderboards).
+Momentum’s map submission system is how maps are officially added to Momentum Mod. Once approved, we host all map files and leaderboards, maps show up on the ingame map selector and website, and players are granted XP for playing them (and rank points, in the case of Ranked leaderboards).
 
 Map submission is open to everyone, but we have higher standard than say, GameBanana or Steam Workshop. Notably:
 
@@ -97,7 +97,7 @@ You should aim for 5 screenshots, of stuff that represents the map well. If in d
 
 ## Source Assets
 
-Assets from other Valve games may not be packed into maps. It’s common with ports for other games to pack assets e.g. CS:S assets when porting to CS:GO, since it’s very unlikely Valve would every crack down on servers hosting those maps, but we are not willing to take that risk with Momentum. If a map has assets from a game besides HL2 (which is shipped with Momentum), if the player doesn’t not have that game mounted:
+Assets from other Valve games may not be packed into maps. It’s common with ports for other games to pack assets e.g. CS:S assets when porting to CS:GO, since it’s very unlikely Valve would ever crack down on servers hosting those maps, but we are not willing to take that risk with Momentum. If a map includes assets from a game other than HL2 (which is bundled with Momentum), and the player does not have that game mounted:
 
 - Textures will be missing, by default replaced by flat colors approximating the average color of that texture. This should be playable, but visuals will be significantly degraded.
 - Models will fall back to a flat textured collision mesh based on the original model, which will be distributed with the game by 1.0.0. Again, playable, but with degraded visuals.
