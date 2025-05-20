@@ -23,3 +23,5 @@ weight: 3
 - Fill stage/bonus teleport hub areas with a cancel zone for safety.
 
 - Checkpoints should be placed where they can be hit consistently for better split comparisons. This means placing them in the middle of hallways rather than after a turn where the player can hit the checkpoint sooner or later depending on how much they cut the corner.
+
+![Checkpoint Placement Suggestions](/images/map_porting/zoning_checkpoint_placement.png)
