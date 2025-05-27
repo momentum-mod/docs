@@ -125,6 +125,8 @@ The player can sometimes activate a boost multiple times while falling into it w
 
 Boosts that launch the player upwards with `OnEndTouch !activator,Addoutput,basevelocity # # #` should be updated to use the more consistent `OnJump` output. Sometimes mappers will also make jump pads that reduce the player's gravity. In these cases, it is recommended to replace these with a `trigger_setspeed` or `trigger_multiple` with an `OnJump !activator,Addoutput,basevelocity # # #` output.
 
+**Note:** When using entity tools to add an `OnJump` output, the push direction will be incorrect if the `trigger_push` has an `angles` key value. This can be fixed by removing the `angles` key value with Lumper.
+
 ![OnJump Boost](/images/map_porting/onjump_boost.png)
 
 ### Landmark Teleports
@@ -206,6 +208,40 @@ Maps submitted to the official website will only be approved if they follow our 
 3. Fill out the rest of the required details. Use the `mom_screenshot_official` command to take screenshots with the official settings for map submissions.
 
 ![Website Map Submission](/images/map_porting/website_submission.png)
+
+# Common Issues with Older Maps
+
+When porting maps from older Source engine versions, there are a few issues that might come up due to incompatibilities with Strata Source.
+
+### HDR Skyboxes
+
+Skyboxes will sometimes fail to load in maps compiled with HDR. This is because the "sky" shader defaults to HDR, but will fail to load if the textures are not HDR. This issue can be fixed by setting the shader to "Sky_SDR".
+
+![HDR Skybox](/images/map_porting/hdr_skybox.png)
+
+![VTF Edit Sky SDR](/images/map_porting/vtfedit_sky_sdr.png)
+
+### Corrupt HDR Cubemaps
+
+Some maps like surf_cannonball have corrupted HDR cubemaps. The cause of this issue is unknown and there are no known ways to fix this without decompiling and recompiling the map.
+
+![Corrupt Cubemaps](/images/map_porting/corrupt_cubemaps.png)
+
+### Dark Refaction Textures
+
+Refaction textures in most maps do not render correctly. The cause of this issue is unknown and the only way to fix it currently is to recompile.
+
+![Corrupt Cubemaps](/images/map_porting/refraction_dark.png)
+
+![Corrupt Cubemaps](/images/map_porting/refaction_fixed.png)
+
+### Invalid VMT Files
+
+Strata Source has stricter VMT parsing rules and will not load VMTs with syntax errors. These invalid VMT files must be manually fixed in Lumper or VTFEdit in order for the textures to load in game.
+
+![Invalid VMT](/images/map_porting/invalid_vmt.png)
+
+![Invalid VMT Lumper](/images/map_porting/invalid_vmt_lumper.png)
 
 # Other Useful Porting Tools
 
