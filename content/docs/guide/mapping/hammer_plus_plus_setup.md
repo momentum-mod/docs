@@ -80,7 +80,7 @@ game        "csgo/mounted_content/momentum_content"
 4. Open Hammer++ and the content from these games should load now.
 
 {{< hint danger >}}
-**Warning:** If Hammer++ crashes on startup, you may have to delete the particles folders that were extracted from the .vpk files.
+If Hammer++ crashes on startup, you may have to delete the particles folders that were extracted from the .vpk files.
 {{< /hint >}}
 
 ## Lights.rad Setup
