@@ -227,9 +227,9 @@ Some maps like surf_cannonball have corrupted HDR cubemaps. The cause of this is
 
 ![Corrupt Cubemaps](/images/map_porting/corrupt_cubemaps.png)
 
-### Dark Refaction Textures
+### Dark Refraction Textures
 
-Refaction textures in most maps do not render correctly. The cause of this issue is unknown and the only way to fix it currently is to recompile.
+Refraction textures in most maps do not render correctly. The cause of this issue is unknown and the only way to fix it currently is to recompile.
 
 ![Corrupt Cubemaps](/images/map_porting/refraction_dark.png)
 
