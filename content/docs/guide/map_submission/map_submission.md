@@ -12,7 +12,7 @@ weight: 1
 
 Momentum’s map submission system is how maps are officially added to Momentum Mod. Once approved, we host all map files and leaderboards, maps show up on the ingame map selector and website, and players are granted XP for playing them (and rank points, in the case of Ranked leaderboards).
 
-Map submission is open to everyone, but we have higher standard than say, GameBanana or Steam Workshop. Notably:
+Map submission is open to everyone, but we have higher standard than e.g. GameBanana or Steam Workshop. Notably:
 
 - Submissions go through a minimum-week-long public testing period where other players can give feedback
 - Submissions must be approved by an approved "Map Reviewer"
@@ -22,9 +22,44 @@ The ultimate goal of this system is to avoid the need for leaderboard wipes, ens
 
 Map Submissions are either **ports** or **originals**, where a port is a map that’s previously been released in any other game.
 
-# The Pipeline
+If you any questions about map submission, porting, etc... please ask in the #map-porting channel in our Discord!
 
-## Stage 1: Submission
+# General Rules
+
+- No porn rooms.
+- No racism, homophobia etc...
+  - Submission is human-moderated and we’re not idiots, don’t submit obvious bait.
+- Spooky/horror vibes are fine but try keep gore to minimum.
+- Sponsors are generally fine (e.g. surf_summer, sponsored by Fnatic), but absolutely no gambling sites (CS skins etc.)
+
+## Source Assets
+
+**Assets from other Valve games may not be packed into maps.** It’s common with ports for other games to pack assets e.g. CS:S assets when porting to CS:GO, since it’s very unlikely Valve would ever crack down on servers hosting those maps, but we're not willing to take that risk with Momentum.
+
+If a map includes assets from a game other than HL2 (which is bundled with Momentum), and the player does not have that game mounted:
+- Textures will be missing, by default replaced by flat colors approximating the average color of that texture. This should be playable, but visuals will be significantly degraded.
+- Models will fall back to a flat textured collision mesh based on the original model, which will be distributed with the game by 1.0.0. Again, playable, but with degraded visuals.
+- Sounds will not play.
+
+We appreciate how annoying this is, especially for CS:S which costs money on Steam. If we had a way around this we would take it, but unless someone wants to remake all these assets (in a legally non-dubious way) there’s little more we can do.
+
+During submission you can specific what games your map uses assets from, which will be shown in game UI and used to warn users missing those assets.
+
+Of particular important are assets from less-common Source games (e.g. Portal 1/2), or CS:GO. In CS:GO's case, the assets require opting-in to a special CS2 branch on Steam, which most users won’t have done. Likewise for less common games, the vast majority of players won’t have those assets installed. We strongly recommend you don’t use those assets when making new maps, and it’s not our fault if players complain about missing textures.
+
+## Other Copyright Assets
+
+TODO: Need to draft this with team, complicated
+
+# Quality Guidelines
+
+Map leaderboards can be either ranked or unranked, where unranked maps don’t give ranked points in that gamemode. Whether it's ranked or not depends purely on gameplay quality, not visuals. Submitting lower-quality maps is okay, and we'll accept maps that are unranked in every gamemode they're playable in, so long as they're reasonably playable and some effort has been put in. Though this doesn't mean we want 100 identical bhop strafe spam maps!
+
+Maps should be made with at least one Momentum gamemode in mind, so no deathrun, trade maps or whatever. A notable exception are HL2 maps given they play well in various modes especially Ahop.
+
+Try to avoid overly dark maps. If you’re mapping on a higher than default brightness setting, it’s your fault if people find your map too dark. The mom_screenshot_official command forces your game to default brightness!
+
+# Preparing a map for submission
 
 To submit a map you'll need
 
@@ -40,11 +75,11 @@ To submit a map you'll need
 - A short description of the map
   - For ports, we usually use GameBanana description or similar if exists, though worth removing things related to stuff removed during porting like jails in Surf, or recommended server settings.
 - The original release date of the map
-  - For ports, try to find original date on GameBanana or similar. At worst, ask around and set to the first roughly the year you think it was released.
+  - For ports, try to find original date on GameBanana or similar. At worst, ask around and set to Jan 1st of the year you think it was released.
 
 ## TODO EVERYTHING ELSE
 
-# Leaderboards
+## Leaderboards
 
 Map leaderboards exist relative to a given gamemode (e.g. Surf) and track type + track num (e.g. Main track, Bonus 2, etc...). In the future this will also include styles (e.g. Half-Sideways).
 
@@ -77,7 +112,7 @@ There's also the following, rarer types of leaderboards:
   - Or for gamemodes that differ only in certain movement variables, e.g. a map with a Bhop leaderboard can never have a Surf leaderboard since that'd just be lower tickrate/airaccel bhop.
 - **In Submission** - At any point during map submission, we generate leaderboards for _every_ gamemode we don't rule out in the way we rule out Disabled leaderboards. Only gamemodes with leaderboards suggested by the submitter are visible in the Beta tab in the Map Selector.
 
-# Screenshots
+## Screenshots
 
 To take screenshots for your map, use the `mom_screenshot_official` command. Map screenshots feature heavily in our website and game UI so are standardized to a fixed resolution and aspect ratio.
 
@@ -91,44 +126,7 @@ This command will
 
 All graphic settings are restored to their previous values after the screenshot is taken.
 
-You should aim for 5 screenshots, of stuff that represents the map well. If in doubt, just have a look at screenshots of existing maps.
-
-# General Rules
-
-## Source Assets
-
-Assets from other Valve games may not be packed into maps. It’s common with ports for other games to pack assets e.g. CS:S assets when porting to CS:GO, since it’s very unlikely Valve would ever crack down on servers hosting those maps, but we are not willing to take that risk with Momentum. If a map includes assets from a game other than HL2 (which is bundled with Momentum), and the player does not have that game mounted:
-
-- Textures will be missing, by default replaced by flat colors approximating the average color of that texture. This should be playable, but visuals will be significantly degraded.
-- Models will fall back to a flat textured collision mesh based on the original model, which will be distributed with the game by 1.0.0. Again, playable, but with degraded visuals.
-- Sounds will not play.
-
-We appreciate how annoying this is, especially for CS:S which costs money on Steam. If we had a way around this we would take it, but unless someone wants to remake all these assets (in a legally non-dubious way) there’s little more we can do.
-
-During submission you can specific what games your map uses assets from, which will be shown in game UI and used to warn users missing those assets.
-
-Of particular important are assets from less-common Source games (e.g. Portal 1/2), or CS:GO. In CS:GO's case, the assets require opting-in to a special CS2 branch on Steam, which most users won’t have done. Likewise for less common games, the vast majority of players won’t have those assets installed. We strongly recommend you don’t use those assets when making new new maps, and it’s not our fault if players complain about missing textures.
-
-## Other Copyright Assets
-
-TODO: Need to draft this with team, complicated
-
-## Other Content
-
-- No porn rooms.
-- No racism, homophobia etc...
-  - Submission is human-moderated and we’re not idiots, don’t submit obvious bait.
-- Spooky/horror vibes are fine but try keep gore to minimum.
-
-If in doubt please ask in Discord!
-
-# Quality Guidelines
-
-Map leaderboards can be either ranked or unranked, where unranked maps don’t give ranked points in that gamemode. Whether it's ranked or not depends purely on gameplay quality, not visuals. Submitting lower-quality maps is okay, and we'll accept maps that are unranked in every gamemode they're playable in, so long as they're reasonably playable and some effort has been put in. Though this doesn't mean we want 100 identical bhop strafe spam maps!
-
-Maps should be made with at least one Momentum gamemode in mind, so no deathrun, trade maps or whatever. A notable exception are HL2 maps given they play well in various modes especially Ahop.
-
-Try to avoid overly dark maps. If you’re mapping on a higher than default brightness setting, it’s your fault if people find your map too dark. The mom_screenshot_official command forces your game to default brightness!
+You should aim for 5 screenshots, of stuff that represents the map well. If in doubt, have a look at screenshots of existing maps for examples.
 
 # Map Guidelines
 
@@ -148,6 +146,7 @@ Try to avoid overly dark maps. If you’re mapping on a higher than default brig
 - Consider changing gravity-based vertical boosters to basevelocity-based or trigger_setspeed if possible. Gravity boosters have an awkward acceleration profile which can be annoying, but sometimes removing the acceleration period by converting to basevel/setspeed doesn't work depending on the map.
 
 ### Teleports
+
 > TODO: Shouldn't all this be in porting guide?
 
 #### Fix Landmark Teleport Angles
@@ -165,12 +164,13 @@ Try to avoid overly dark maps. If you’re mapping on a higher than default brig
 - **Note:** When save states are implemented, they will reset entities after starting a stage segment which will make it easier to hit cycles more consistently.
 
 ## Sounds/Music
+
 > TODO: Lumper side of this is a porting guide thing, this just needs to be saying what folders to use.
 
 Use [Lumper](https://github.com/momentum-mod/lumper/releases) to re-categorize sounds based on their type. This is required for these sounds to be changed by volume sliders.
 
 | Channel           | Folder   |
-| ----------------- | -------- |
+|-------------------|----------|
 | Map Sound Effects | sfx/     |
 | Ambient           | ambient/ |
 | Music             | music/   |
@@ -179,7 +179,9 @@ Use [Lumper](https://github.com/momentum-mod/lumper/releases) to re-categorize s
 | UI                | ui/      |
 
 ## Collectibles
+
 > TODO: PORTING GUIDE!!
+
 - Convert complicated collectible system triggers to [Momentum's collectible system entities](/guide/collectibles/) (far less complicated and facilitates future collectibles HUD work)
 
 ## Entity class/property restrictions
