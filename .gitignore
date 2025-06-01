@@ -9,7 +9,8 @@ hugo.exe
 hugo.darwin
 hugo.linux
 
-### VSCode ###
+# Editors
 .vscode/*
 !.vscode/extensions.json
 *.code-workspace
+.idea/*
