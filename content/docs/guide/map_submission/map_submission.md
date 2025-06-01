@@ -26,15 +26,16 @@ approval as possible.
 Map Submissions are either **ports** or **originals**, where a port is a map that’s previously been released in any
 other game.
 
-If you any questions about map submission, porting, etc... please ask in the #map-porting channel in our Discord!
+If you have any questions about map submission, porting, etc... please ask in the #map-porting channel in our Discord!
 
 # General Rules
 
 - No porn rooms.
 - No racism, homophobia etc...
   - Submission is human-moderated and we’re not idiots, don’t submit obvious bait.
-- Spooky/horror vibes are fine but try keep gore to minimum.
-- Sponsors are generally fine (e.g. surf_summer, sponsored by Fnatic), but absolutely no gambling sites (CS skins etc.)
+- Spooky/horror vibes are fine but try to keep gore to minimum.
+- Sponsors are generally fine (e.g. surf_summer, sponsored by Fnatic), but absolutely none gambling sites (CS skins
+  etc.)
 
 ## Source Assets
 
@@ -55,7 +56,7 @@ We appreciate how annoying this is, especially for CS:S which costs money on Ste
 take it, but unless someone wants to remake all these assets (in a legally non-dubious way) there’s little more we can
 do.
 
-During submission you can specific what games your map uses assets from, which will be shown in game UI and used to warn
+During submission you can specify what games your map uses assets from, which will be shown in game UI and used to warn
 users missing those assets.
 
 Of particular important are assets from less-common Source games (e.g. Portal 1/2), or CS:GO. In CS:GO's case, the
