@@ -25,6 +25,7 @@ guide.
 - Checkpoints should be placed where they can be hit consistently for better split comparisons. This means placing them
   in the middle of hallways rather than after a turn where the player can hit the checkpoint sooner or later depending
   on how much they cut the corner.
+- Stages and bonuses should be given names if it helps make them more identifiable (either use the mapper's name or the stage's name if it has one).
 
 ![Checkpoint Placement Suggestions](/images/map_porting/zoning_checkpoint_placement.png)
 
