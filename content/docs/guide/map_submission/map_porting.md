@@ -158,7 +158,6 @@ Sounds should be moved into specific folders in order to be compatible with the 
 
 | Channel           | Folder   |
 | ----------------- | -------- |
-| Map Sound Effects | sfx/     |
 | Ambient           | ambient/ |
 | Music             | music/   |
 | Movement          | player/  |

@@ -222,7 +222,6 @@ required for these sounds to be changed by volume sliders.
 
 | Channel           | Folder   |
 | ----------------- | -------- |
-| Map Sound Effects | sfx/     |
 | Ambient           | ambient/ |
 | Music             | music/   |
 | Movement          | player/  |
