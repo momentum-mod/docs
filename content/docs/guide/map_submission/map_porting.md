@@ -8,11 +8,38 @@ tags:
 weight: 2
 ---
 
-# Background
+# Introduction
 
-This guide gives an overview of all the steps required to officially port a map into Momentum Mod. There are multiple
-tools available that accomplish the same things, so it is up to the map porter to decide what works best for them. The
-general process for porting maps is the following:
+This guide gives an overview of all the steps required to officially port a map into Momentum Mod.
+
+Porting is open to everyone, but the number one rule for porters is to **not** significantly change an existing map. We
+appreciate porting work but map ultimately belongs to the author, and porters should not make significant visual or
+gameplay changes on maps without the author's permission (including Easter eggs, sorry!).
+
+Please try not to rush through ports, and take time to read these docs. We're happy to help with any porting questions
+in the #map-porting channel of [our Discord](https://discord.gg/momentummod), ask there if you have any questions.
+
+## Reserving Maps / Getting Permission for Ports
+
+Our stance on whether to port an existing maps is **opt-out**, i.e. we assume it's okay to port a map unless a mapper
+explicitly tells us they don't want it ported. Momentum gamemodes are simply too old with too many inactive mappers for
+us to get permission in every case, so we've put a great deal of effort into getting porting as unobtrusive as possible.
+In the majority of cases, porting to Momentum involves far fewer changes than other games (CS:S → CS:GO, CS:S → TF2
+etc...). That being said,
+
+- Mappers can reserve porting this own map or opt out of having this map ported via
+  [this form](https://docs.google.com/forms/d/e/1FAIpQLSeheNDY5A960u6GtXCHtt3s_2vZJL3o5tMJ_ZNbYOpb6cx5nQ/viewform).
+  - Submissions to that form can be found on
+    [this spreadsheet](https://docs.google.com/spreadsheets/d/1KHeWfhGUNpN267CXtPvVdf2h7eQbjPUhWVkE5NimYhg/edit?gid=2051215588#gid=2051215588).
+    **Always** check that sheet first before starting a port. If you submit the map and it's been reserved / opted-out
+    of porting, we'll reject the submission.
+  - If someone has requested it not be ported, do _not_ spam them requesting to port it.
+- Try to verify whether a map has been release on a public forum (e.g. GameBanana, jump.tf forums) before porting.
+  - Don't port a map if it seems like it's been released for a single server, unless you can get explicit permission.
+- If in doubt, try your best to contact the original mapper.
+
+For mappers porting their own map, restrictions on visual/gameplay changes generally don't apply and you're welcome to
+recompile for Momentum -- it's your map.
 
 1. Zone the map in-game or in Hammer
 2. Make the required entity modifications using in-game entity tools and/or Hammer
