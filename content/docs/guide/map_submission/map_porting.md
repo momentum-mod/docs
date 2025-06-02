@@ -27,14 +27,14 @@ us to get permission in every case, so we've put a great deal of effort into get
 In the majority of cases, porting to Momentum involves far fewer changes than other games (CS:S → CS:GO, CS:S → TF2
 etc...). That being said,
 
-- Mappers can reserve porting this own map or opt out of having this map ported via
+- Mappers can reserve porting their own map or opt out of having their map ported via
   [this form](https://docs.google.com/forms/d/e/1FAIpQLSeheNDY5A960u6GtXCHtt3s_2vZJL3o5tMJ_ZNbYOpb6cx5nQ/viewform).
   - Submissions to that form can be found on
     [this spreadsheet](https://docs.google.com/spreadsheets/d/1KHeWfhGUNpN267CXtPvVdf2h7eQbjPUhWVkE5NimYhg/edit?gid=2051215588#gid=2051215588).
     **Always** check that sheet first before starting a port. If you submit the map and it's been reserved / opted-out
     of porting, we'll reject the submission.
-  - If someone has requested it not be ported, do _not_ spam them requesting to port it.
-- Try to verify whether a map has been release on a public forum (e.g. GameBanana, jump.tf forums) before porting.
+  - If someone has requested it to not be ported, do _not_ spam them requesting to port it.
+- Try to verify whether a map has been released on a public forum (e.g. GameBanana, jump.tf forums) before porting.
   - Don't port a map if it seems like it's been released for a single server, unless you can get explicit permission.
 - If in doubt, try your best to contact the original mapper.
 
