@@ -154,9 +154,16 @@ Lumper also lets you review entities for anything that might be worth changing o
 
 ![Lumper Entity Review](/images/map_porting/lumper_entity_review.png)
 
-Sounds should be moved into specific folders in order to be compatible with the different volume sliders: | Channel |
-Folder | | -------- | ------- | | Map Sound Effects | sfx/ | | Ambient | ambient/ | | Music | music/ | | Movement |
-player/ | | Weapons | weapon/ | | UI | ui/ |
+Sounds should be moved into specific folders in order to be compatible with the different volume sliders:
+
+| Channel           | Folder   |
+| ----------------- | -------- |
+| Map Sound Effects | sfx/     |
+| Ambient           | ambient/ |
+| Music             | music/   |
+| Movement          | player/  |
+| Weapons           | weapon/  |
+| UI                | ui/      |
 
 ![Lumper Sounds](/images/map_porting/lumper_sounds.png)
 
