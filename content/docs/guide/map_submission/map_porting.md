@@ -58,8 +58,7 @@ about a few:
 teleporters, spawn points, and triggers.
 
 They can be either **point** entities, which have a single position in the map, or **brush** entities, which are defined
-by a brush shape in the map. We can modify any properties in an entity _besides_ the position of a brush entity, such
-as a trigger.
+by a brush shape in the map.
 
 Entities are composed of _key-value pairs_, where the key is the name of the property and the value is its value.
 
