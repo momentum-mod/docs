@@ -79,9 +79,9 @@ otherwise the first `info_player_terrorist/counterterrorist` in the entity lump 
 This isn't a required modification, but porters are welcome to clean up the additional spawn points -- usually if you
 have multiple spawns, they're placed in a grid and none are quite centered. To do this, all you need to do is:
 
-- Delete all but one of the `info_player_terrorist/counterterrorist` entities.
-- Change its classname to `info_player_start` (though not really necessary).
-- Find the center of the room in-game, and set its `origin` to that coordinate.
+- Delete all but one of the `info_player_terrorist/counterterrorist` entities
+- Change its classname to `info_player_start` (though not really necessary)
+- Find the center of the room in-game, and set its `origin` to that coordinate
 
 ## The Pakfile Lump
 
@@ -102,51 +102,51 @@ and [Entspy](https://developer.valvesoftware.com/wiki/Entspy), but supports Stra
 specifically aimed at map porting and reviewing. It includes:
 
 - **Entity Editor** - Create and modify entities in the map
-- **Pakfile Explorer** - View and edit the pakfile as a file tree. Can be used to remove or pack assets, as well as
+- **Pakfile Explorer** - View and edit the pakfile as a file tree. It can be used to remove or pack assets, as well as
   automatically refactor references to assets in other lumps.
-- **Texture Browser** - View all textures map, similar to Hammer, great for moderation.
-- **Jobs** - Automated tasks that can be run on the BSP, such as
+- **Texture Browser** - View all textures in a map, similar to Hammer's texture browser. This is used for content review.
+- **Jobs** - Automated tasks that can be run on the BSP, such as:
   - Remove official Valve assets
   - Apply [Stripper](https://www.bailopan.net/stripper/) configs
   - Batch replace textures
-- **Entity Review** - Points out invalid or dangerous entities in the map
-- **Compressed BSP saving** - Saves the BSP in a compressed format, which is required for map submissions
+- **Entity Review** - Lists invalid or dangerous entities in the map
+- **Compressed BSP Saving** - Saves the BSP in a compressed format, which is required for map submissions
 - **Map Summary** - Reviews content the BSP according to map submission requirements
 
 ![Lumper Example](/images/map_porting/lumper_example.png)
 
 To use Lumper, download the latest release from the
-[Lumper releases page](https://github.com/momentum-mod/lumper/releases) (it contains an auto-updater!). Lumper is a
-standalone application, so you can run it without installing anything. Just extract the ZIP file and run from anywhere.
+[Lumper releases page](https://github.com/momentum-mod/lumper/releases). Lumper is a
+standalone application, so you can run it without installing anything. Just extract the ZIP file and run it from anywhere.
 
-{{< hint info >}} For Windows users, you can run the `RegisterLumperURLProtocol.ps1` with PowerShell to register the
-`lumper://` URL protocol. This allows you to open BSP files directly from dashboard map pages, useful for reviewing.
+{{< hint info >}} For Windows users, you can run `RegisterLumperURLProtocol.ps1` with PowerShell to register the
+`lumper://` URL protocol. This allows you to open BSP files directly from dashboard map pages, which is useful for reviewing.
 {{< /hint >}}
 
-You can use Lumper to open any BSP, modify accordingly, and save it.
+You can use Lumper to open any BSP file, modify it accordingly, and then save it.
 
-Please note that Lumper does _not_ currently contain an undo/redo buffer, so be careful when making changes, and save
-regularly -- Lumper will create backups file in the same directory by default.
+Please note that Lumper does _not_ currently have undo/redo functionality, so be careful when making changes. Save
+regularly -- Lumper will create backup files in the same directory by default.
 
 ### Game Sync
 
-When editing entities, it can be difficult to determine find specific entities in the Entity Editor. You can use
-`getpos` and `setpos` in-game alongside Entity Editor filters and entity `origin` properties to find entities, but we
+When editing entities, it can be difficult to find specific ones in the Entity Editor. You can use
+`getpos` and `setpos` in-game alongside Entity Editor filters and `origin` properties to find entities, but we
 also have a system called **Game Sync** which drastically improves this workflow.
 
-To enable game sync, launch the game on the current map loaded in Lumper, set `sv_cheats 1` then
+To enable game sync, launch the game on the current map loaded in Lumper, set `sv_cheats 1` and
 `mom_lumper_sync_enable 1`. Then, press the "Connect to Game Sync" button in the top-right corner of Lumper. You should
 be able to:
 
 - Sync your current in-game position with the "Spherical Radius" filter
 - Sync the entity you're currently looking at with the keyvalue filters
 - Teleport to entities by pressing the arrow icon on the Entity Editor list
-- Automatically export In-Game Entity Tool Stripper configs into Lumper
+- Automatically export Stripper configs from the in-game Entity Tools into Lumper
 
 ### Map Summary
 
-Lumper's "Map Summary" info box (_Tools > Map Summary_) is a quick way to summarize the current state of the map as you
-port. Map Reviewers will always use this tool to check the map before approving it, so it's a good idea to check it
+Lumper's "Map Summary" info box (_Tools > Map Summary_) is a quick way to summarize the current state of the map.
+Map reviewers will always use this tool to check the map before approving it, so it's a good idea to check it
 yourself as you go.
 
 ![Lumper Map Summaries](/images/map_porting/lumper_map_summary.png)
