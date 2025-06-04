@@ -338,13 +338,13 @@ to run the **Remove Game Assets** job.
 
 Sounds should be moved into specific folders in order to use the appropriate volume sliders:
 
-| Channel  | Folder   |
-| -------- | -------- |
-| Ambient  | ambient/ |
-| Music    | music/   |
-| Movement | player/  |
-| Weapons  | weapon/  |
-| UI       | ui/      |
+| Channel  | Folder         |
+| -------- | -------------- |
+| Ambient  | sound/ambient/ |
+| Music    | sound/music/   |
+| Movement | sound/player/  |
+| Weapons  | sound/weapon/  |
+| UI       | sound/ui/      |
 
 Lumper makes this process easy by automatically detecting entities and soundscapes that use these sounds (in fact it
 works for all assets!) and updating their paths. Simply drag-drop the sounds you want to move into the appropriate
