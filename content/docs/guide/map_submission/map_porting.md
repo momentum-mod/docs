@@ -41,7 +41,7 @@ etc...). That being said,
 For mappers porting their own map, restrictions on visual/gameplay changes generally don't apply and you're welcome to
 recompile for Momentum -- it's your map.
 
-# Source Maps 101
+# Source Map Basics
 
 Momentum map porting primarily about manipulating **BSP** file, the format for _compiled_ Source engine map. In rare
 cases it may be required to decompile a map to a **VMF** file to edit in Hammer (Source's map editor), but since
@@ -52,7 +52,7 @@ As a format BSPs are notoriously complex (see the [VDC page](<https://developer.
 consisting of numerous _lumps_ all with different data structures. Fortunately for us, porting we generally just care
 about a few:
 
-### Entity Lump
+### The Entity Lump
 
 [Entities](https://developer.valvesoftware.com/wiki/Entity) are responsible for the interactive parts of a map, such as
 teleporters, spawn points, and triggers.
@@ -61,7 +61,29 @@ They can be either **point** entities, which have a single position in the map, 
 by a brush shape in the map. We can modify any properties in an entity, _besides_ the position of a brush entity, such
 as a trigger.
 
-### Pakfile Lump
+Entities are simple _key-value pairs_, where the key is the name of the property and the value is its value.
+
+Here's an example `info_player_counterterrorist` entity in Lumper, taken from a CS:S map:
+
+![Lumper Example](/images/map_porting/lumper_info_ct.png)
+
+- `classname` designates the entity as a `info_player_counterterrorist`; all it takes to change the type of an entity is
+  to change that value.
+- `origin` is the position of the entity in the map, changing in Lumper/Hammer and saving/recompiling will change the
+  position of the entity, so where you spawn.
+- `angles` is the rotation of the entity when you spawn.
+
+Generally, we're not overly fussy with spawn points in maps -- if you have an `info_player_start` entity we use that,
+otherwise if multiple `info_player_terrorist/counterterrorist` entities we always use the first one in the entity lump.
+
+This isn't a required modification, but porters are welcome to clean up the additional spawn points -- usually if you
+have multiple spawns, they're place in a grid and none are quite centered. To do this, all you'd need to do is
+
+- delete all but one `info_player_terrorist/counterterrorist` entities
+- change its classname to `info_player_start` (though not really necessary)
+- find the center of the room in-game, and set it's `origin` to that coordinate.
+
+### The Pakfile Lump
 
 The [Pakfile](<https://developer.valvesoftware.com/wiki/BSP_(Source)#Pakfile>) lump contains all the map's assets, such
 as textures, sounds, and models. It's essentially a ZIP file stored inside the map. When the map is loaded, the game
@@ -161,7 +183,30 @@ Entity Editor.
 
 ![Example Entity Tools Export](/images/map_porting/lumper_entitytools_export.png)
 
-# Required Entity Modifications
+## Hammer
+
+Entities can also be modified in Hammer without having to recompile the entire BSP. This is done by decompiling the map,
+making the entity changes, and then compiling with the "Only entities" option checked. The BSP file has to be in the
+same directory as the vmf for this to work.
+
+![Only Entities](/images/map_porting/only_entities.png)
+
+# Required Modifications
+
+## Entity Review
+
+Lumper's entity review tool that will point out entities that are not supported by Momentum, or should always be
+replaced with a different entity.
+
+If an entity is marked as **Invalid** or **Warning** it'll generally have comments explaining issues and what to replace
+it with. Invalid entities **must** be replaced or removed, while warnings are just suggestions -- but don't ignore them!
+
+Pressing the "Edit" button on the right side of an entity in the Entity Review page takes you to the Entity Editor, and
+filters by just that entity. If you're not sure of the entity's purpose, teleporting in-game using
+[Game Sync](#game-sync) is helpful. You can also press the **VDC Reference** button on a page for that entity to see its
+docs on the Valve wiki. And if in doubt please, ask in the _#map-porting_ channel on Discord!
+
+## In-game Entity Modifications
 
 ### Boost Ramps
 
@@ -245,41 +290,55 @@ and the associated teleport triggers should be removed using Lumper:
 
 ![Lumper Teleports](/images/map_porting/lumper_teleports.png)
 
-## Other Tools for Entity Modifications
+## Textures
 
-### Hammer
+Maps will occasionally contain textures we don't want to include:
 
-Entities can also be modified in Hammer without having to recompile the entire BSP. This is done by decompiling the map,
-making the entity changes, and then compiling with the "Only entities" option checked. The BSP file has to be in the
-same directory as the vmf for this to work.
+- Pornography, racist memes, edgy stuff
+  - We're not overly strict about this -- relatively few maps we're aware of that have this issue, mainly old combat
+    surf maps with "porn rooms".
+  - If something seems questionable and you're not sure, just ask in Discord.
+- Obviously copyrighted assets from other games / other IP
+  - See [map submission guidelines](/guide/map_submission/map_submission/#other-copyright-assets)
+  - This is often hard to tell and case-by-case, just look out for anything _extremely_ glaring.
+  - Again, ask in Discord if in doubt.
 
-![Only Entities](/images/map_porting/only_entities.png)
+Lumper's **Texture Browser** is a fast way to quickly review all textures in the map, and can replace any bad textures
+with a placeholder.
 
-### Lumper
+![Lumper Texture Browser](/images/map_porting/lumper_texture_browser.png)
 
-> TODO!!!!
+The easiest way to replace a texture is to modify any VMTs files that refer to the VTF file in question.
 
-[Lumper](https://github.com/momentum-mod/lumper/releases) also has an entity editor that can be used to easily modify
-the key/values of entities.
+- Find any instances of VMTs files that refer to that VTF file in the Pakfile Explorer
+  - Currently we don't have automation for this, but it's usually relatively obvious
+- Replace the `$basetexture` value (maybe also `$bumpmap` and others) with some other texture on the map that won't look
+  out-of-place
+- Remove original the VTF file via Texture Browser / Pakfile Explorer
 
-![Lumper Entity Editor](/images/map_porting/lumper_entities.png)
+{{< hint info >}} Source engine textures are stored in **VTF** files, which are the actual image files, and **VMT**
+files, which are the material definitions for those textures.
 
-# Map Submission
+VMTs are text files that define how the texture is used in the game, such as its shader type, properties, and other
+settings. VMTs are _usually_ stored in the same directory as the VTF files, and have the same name as the VTF file, but
+with a `.vmt` extension.
 
-### Lumper Cleanup
+Note that multiple VMT files can refer to the same VTF file, so you may need to check multiple VMTs if the texture is
+used in multiple places. {{< /hint >}}
 
-There are a few more things to do before a map can be officially added to the game. Valve assets cannot be uploaded to
-the website and must be removed from the BSP's pack file. Fortunately,
-[Lumper](https://github.com/momentum-mod/lumper/releases) makes this process very simple and automated. You just need to
-run a job to remove the game assets:
+## Packed Game Assets
+
+The pakfile lump commonly contains licensed assets from Valve assets, which we
+[cannot include](/guide/map_submission/map_submission/#source-assets).
+
+Lumper contains a hash-based manifest file of all these assets, so removing them is very straightforward, just run the
+**Remove Game Assets** job.
 
 ![Remove Game Assets](/images/map_porting/lumper_remove_assets.png)
 
-Lumper also lets you review entities for anything that might be worth changing or removing from the map:
+## Sounds
 
-![Lumper Entity Review](/images/map_porting/lumper_entity_review.png)
-
-Sounds should be moved into specific folders in order to be compatible with the different volume sliders:
+Sounds should be moved into specific folders in order to use the appropriate volume sliders:
 
 | Channel  | Folder   |
 | -------- | -------- |
@@ -289,30 +348,18 @@ Sounds should be moved into specific folders in order to be compatible with the 
 | Weapons  | weapon/  |
 | UI       | ui/      |
 
-![Lumper Sounds](/images/map_porting/lumper_sounds.png)
+Lumper makes this process easy, by automatically detecting entities and soundscapes that use these sounds (in fact it
+works for all assets!) and updating their paths. Simply drag-drop the sounds you want to move into the appropriate
+folder/subfolder, then press "Yes" to the dialog that appears.
 
-### Website Map Submission
+_Note, path refactoring is very technically complex and has had issues in the past, worth testing in game_
 
-Maps submitted to the official website will only be approved if they follow our
-[Submission Guidelines](/guide/mapping/submission_guidelines/).
-
-1. Go to the [Momentum Mod Submission Page](https://momentum-mod.org/maps/submissions) and click the "Submit a Map"
-   button to begin the submission.
-
-2. Upload the BSP and zone .json file. Uploading the VMF is also recommended since it helps speed up the review process
-   in some cases.
-
-3. Fill out the rest of the required details. Use the `mom_screenshot_official` command to take screenshots with the
-   official settings for map submissions.
-
-![Website Map Submission](/images/map_porting/website_submission.png)
-
-# Common Issues with Older Maps
+# Common Issues Porting Older Maps
 
 When porting maps from older Source engine versions, there are a few issues that might come up due to incompatibilities
 with Strata Source.
 
-### HDR Skyboxes
+## HDR Skyboxes
 
 Skyboxes will sometimes fail to load in maps compiled with HDR. This is because the "sky" shader defaults to HDR, but
 will fail to load if the textures are not HDR. This issue can be fixed by setting the shader to "Sky_SDR".
@@ -321,14 +368,14 @@ will fail to load if the textures are not HDR. This issue can be fixed by settin
 
 ![VTF Edit Sky SDR](/images/map_porting/vtfedit_sky_sdr.png)
 
-### Corrupt HDR Cubemaps
+## Corrupt HDR Cubemaps
 
 Some maps like surf_cannonball have corrupted HDR cubemaps. The cause of this issue is unknown and there are no known
 ways to fix this without decompiling and recompiling the map.
 
 ![Corrupt Cubemaps](/images/map_porting/corrupt_cubemaps.png)
 
-### Dark Refraction Textures
+## Dark Refraction Textures
 
 Refraction textures in most maps do not render correctly. The cause of this issue is unknown and the only way to fix it
 currently is to recompile.
@@ -337,7 +384,7 @@ currently is to recompile.
 
 ![Corrupt Cubemaps](/images/map_porting/refaction_fixed.png)
 
-### Invalid VMT Files
+## Invalid VMT Files
 
 Strata Source has stricter VMT parsing rules and will not load VMTs with syntax errors. These invalid VMT files must be
 manually fixed in Lumper or VTFEdit in order for the textures to load in game.
@@ -345,8 +392,3 @@ manually fixed in Lumper or VTFEdit in order for the textures to load in game.
 ![Invalid VMT](/images/map_porting/invalid_vmt.png)
 
 ![Invalid VMT Lumper](/images/map_porting/invalid_vmt_lumper.png)
-
-# Other Useful Porting Tools
-
-- [Hammer++](/guide/mapping/hammer_plus_plus_setup/) - Improved Hammer editor
-- [CompilePal](https://github.com/ruarai/CompilePal/releases) - Improved expert compilation tools

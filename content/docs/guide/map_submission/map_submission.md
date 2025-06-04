@@ -215,18 +215,23 @@ existing maps for examples.
 
 ## Sounds/Music
 
-> TODO: Lumper side of this is a porting guide thing, this just needs to be saying what folders to use.
+Getting map sounds to be affected by the correct volume sliders has historically been very difficult; fortunately
+Momentum's sound mixer system makes this much easier.
 
-Use [Lumper](https://github.com/momentum-mod/lumper/releases) to re-categorize sounds based on their type. This is
-required for these sounds to be changed by volume sliders.
+In your sounds folder, put all sounds (where relevant) in the following subfolders (make sure to update
+entities/soundscapes paths). Momentum will then load those sounds in those mix groups and appropriate volume sliders
+should apply.
 
-| Channel           | Folder   |
-| ----------------- | -------- |
-| Ambient           | ambient/ |
-| Music             | music/   |
-| Movement          | player/  |
-| Weapons           | weapon/  |
-| UI                | ui/      |
+Sorry if it messes with pakfile organization, but it's a hard requirement: un-mutable music is notoriously annoying and
+it's essential for all map sound to use the right mix groups.
+
+| Channel  | Folder   |
+| -------- | -------- |
+| Ambient  | ambient/ |
+| Music    | music/   |
+| Movement | player/  |
+| Weapons  | weapon/  |
+| UI       | ui/      |
 
 ## Collectibles
 
