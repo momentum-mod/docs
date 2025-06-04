@@ -163,23 +163,23 @@ allowing you to test the changes without reloading the map.
 ![Lumper Map Summaries](/images/map_porting/entitytools_example.png)
 
 {{< hint info >}} Entity Tools uses ImGui which can have very small fonts on large monitors. You can use
-`devui_font_scale` to change the font size, `2` is a good value. {{< /hint >}}
+`devui_font_scale` to change the font size. {{< /hint >}}
 
 ### Exporting to Lumper
 
-Entity Tools changes in-game entity in real-time, but to permanently apply to a BSP, it generates a
-[Stripper](https://www.bailopan.net/stripper/) config file that can be used to use in [Lumper](#lumper).
+Entity Tools changes in-game entities in real-time. To permanently apply these changes to a BSP, it generates a
+[Stripper](https://www.bailopan.net/stripper/) config file that can be used in [Lumper](#lumper).
 
-To export changes made in the Entity Tools by clicking the "Export To File" button. The entity changes are then written
-into a \<mapname\>.cfg file in your `maps/entitytools_stripper` folder. To open in Lumper, go to the **Jobs** page,
-create a _Stripper (File)_ job, and load it from disk.
+You can export changes made with the Entity Tools by clicking the "Export To File" button. The entity changes are then written
+to a \<mapname\>.cfg file in your `maps/entitytools_stripper` folder. To use these files in Lumper, go to the **Jobs** page,
+create a _Stripper (File)_ job, and then load it from disk.
 
-Or, if you have Game Sync enabled, you can just click the "Export to Lumper" button in the Entity Tools, which will
+Alternatively if you have Game Sync enabled, you can click the "Export to Lumper" button in the Entity Tools, which will
 immediately create a _Stripper (Text)_ job.
 
 Once a job is created, you can run it by clicking the "Run" button. This will apply the changes to the BSP file in
-Lumper. You can see the applied changes in the logs panel, as well as in the modified entities (marked by \*) in the
-Entity Editor.
+Lumper. These changes will be displayed in the logs panel and modified entities will be marked as changed (indicated by \*)
+in the Entity Editor.
 
 ![Example Entity Tools Export](/images/map_porting/lumper_entitytools_export.png)
 
@@ -195,16 +195,16 @@ same directory as the vmf for this to work.
 
 ## Entity Review
 
-Lumper's entity review tool that will point out entities that are not supported by Momentum, or should always be
-replaced with a different entity.
+Lumper's entity review tool will point out entities that are not supported by Momentum, or should be replaced
+with a different entity.
 
-If an entity is marked as **Invalid** or **Warning** it'll generally have comments explaining issues and what to replace
-it with. Invalid entities **must** be replaced or removed, while warnings are just suggestions -- but don't ignore them!
+If an entity is marked as **Invalid** or **Warning**, it will generally have comments explaining the issue and what to
+replace it with. Invalid entities **must** be replaced or removed, while warnings are suggestions that are worth reviewing.
 
 Pressing the "Edit" button on the right side of an entity in the Entity Review page takes you to the Entity Editor, and
-filters by just that entity. If you're not sure of the entity's purpose, teleporting in-game using
+filters the list by that entity's classname. If you're not sure of the entity's purpose, teleporting in-game using
 [Game Sync](#game-sync) is helpful. You can also press the **VDC Reference** button on a page for that entity to see its
-docs on the Valve wiki. And if in doubt please, ask in the _#map-porting_ channel on Discord!
+docs on the Valve wiki. And if in doubt, please ask for help in the _#map-porting_ channel on Discord!
 
 ## In-game Entity Modifications
 
