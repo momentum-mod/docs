@@ -52,7 +52,7 @@ As a format BSPs are notoriously complex (see the [VDC page](<https://developer.
 consisting of numerous _lumps_ all with different data structures. Fortunately for us, porting we generally just care
 about a few:
 
-### The Entity Lump
+## The Entity Lump
 
 [Entities](https://developer.valvesoftware.com/wiki/Entity) are responsible for the interactive parts of a map, such as
 teleporters, spawn points, and triggers.
@@ -83,7 +83,7 @@ have multiple spawns, they're place in a grid and none are quite centered. To do
 - change its classname to `info_player_start` (though not really necessary)
 - find the center of the room in-game, and set it's `origin` to that coordinate.
 
-### The Pakfile Lump
+## The Pakfile Lump
 
 The [Pakfile](<https://developer.valvesoftware.com/wiki/BSP_(Source)#Pakfile>) lump contains all the map's assets, such
 as textures, sounds, and models. It's essentially a ZIP file stored inside the map. When the map is loaded, the game
