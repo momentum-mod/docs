@@ -13,7 +13,7 @@ weight: 2
 This guide gives an overview of all the steps required to officially port a map into Momentum Mod.
 
 Porting is open to everyone, but the number one rule for porters is to **not** significantly change an existing map. We
-appreciate porting work but map ultimately belongs to the author, and porters should not make significant visual or
+appreciate porting work but the map ultimately belongs to the author, and porters should not make significant visual or
 gameplay changes on maps without the author's permission (including Easter eggs, sorry!).
 
 Please try not to rush through ports, and take time to read these docs. We're happy to help with any porting questions
@@ -23,7 +23,7 @@ in the _#map-porting_ channel of [our Discord](https://discord.gg/momentummod), 
 
 Our stance on whether to port an existing maps is **opt-out**, i.e. we assume it's okay to port a map unless a mapper
 explicitly tells us they don't want it ported. Momentum gamemodes are simply too old with too many inactive mappers for
-us to get permission in every case, so we've put a great deal of effort into getting porting as unobtrusive as possible.
+us to get permission in every case, so we've put a great deal of effort into making porting as streamlined as possible.
 In the majority of cases, porting to Momentum involves far fewer changes than other games (CS:S → CS:GO, CS:S → TF2
 etc...). That being said,
 
@@ -33,7 +33,7 @@ etc...). That being said,
     [this spreadsheet](https://docs.google.com/spreadsheets/d/1KHeWfhGUNpN267CXtPvVdf2h7eQbjPUhWVkE5NimYhg/edit?gid=2051215588#gid=2051215588).
     **Always** check that sheet first before starting a port. If you submit the map and it's been reserved / opted-out
     of porting, we'll reject the submission.
-  - If someone has requested it to not be ported, do _not_ spam them requesting to port it.
+  - If someone has requested it to not be ported, do _not_ spam them with requests to port it.
 - Try to verify whether a map has been released on a public forum (e.g. GameBanana, jump.tf forums) before porting.
   - Don't port a map if it seems like it's been released for a single server, unless you can get explicit permission.
 - If in doubt, try your best to contact the original mapper.
@@ -43,13 +43,13 @@ recompile for Momentum -- it's your map.
 
 # Source Map Basics
 
-Momentum map porting primarily about manipulating **BSP** file, the format for _compiled_ Source engine map. In rare
+Momentum map porting is primarily about manipulating **BSP** file, the format for _compiled_ Source engine maps. In rare
 cases it may be required to decompile a map to a **VMF** file to edit in Hammer (Source's map editor), but since
-recompiling causes lighting recalculations and other small changes, we stick to modifying existing BSPs whenever
+recompiling causes lighting recalculations and other small changes, we prefer modifying existing BSPs whenever
 possible.
 
 As a format BSPs are notoriously complex (see the [VDC page](<https://developer.valvesoftware.com/wiki/BSP_(Source)>)),
-consisting of numerous _lumps_ all with different data structures. Fortunately for us, porting we generally just care
+consisting of numerous _lumps_ with different data structures. Fortunately for us, we generally only care
 about a few:
 
 ## The Entity Lump
@@ -58,45 +58,45 @@ about a few:
 teleporters, spawn points, and triggers.
 
 They can be either **point** entities, which have a single position in the map, or **brush** entities, which are defined
-by a brush shape in the map. We can modify any properties in an entity, _besides_ the position of a brush entity, such
+by a brush shape in the map. We can modify any properties in an entity _besides_ the position of a brush entity, such
 as a trigger.
 
-Entities are simple _key-value pairs_, where the key is the name of the property and the value is its value.
+Entities are composed of _key-value pairs_, where the key is the name of the property and the value is its value.
 
-Here's an example `info_player_counterterrorist` entity in Lumper, taken from a CS:S map:
+Here's an example of the `info_player_counterterrorist` entity in Lumper, taken from a CS:S map:
 
 ![Lumper Example](/images/map_porting/lumper_info_ct.png)
 
-- `classname` designates the entity as a `info_player_counterterrorist`; all it takes to change the type of an entity is
+- `classname` designates the entity as an `info_player_counterterrorist`; all it takes to change the type of an entity is
   to change that value.
-- `origin` is the position of the entity in the map, changing in Lumper/Hammer and saving/recompiling will change the
-  position of the entity, so where you spawn.
+- `origin` is the position of the entity in the map. Changing it in Lumper/Hammer and saving/recompiling will change the
+  position of the entity.
 - `angles` is the rotation of the entity when you spawn.
 
-Generally, we're not overly fussy with spawn points in maps -- if you have an `info_player_start` entity we use that,
-otherwise if multiple `info_player_terrorist/counterterrorist` entities we always use the first one in the entity lump.
+Generally, we're not overly fussy with spawn points in maps. `info_player_start` entities will be prioritized for spawn points,
+otherwise the first `info_player_terrorist/counterterrorist` in the entity lump will be used.
 
 This isn't a required modification, but porters are welcome to clean up the additional spawn points -- usually if you
-have multiple spawns, they're place in a grid and none are quite centered. To do this, all you'd need to do is
+have multiple spawns, they're placed in a grid and none are quite centered. To do this, all you need to do is:
 
-- delete all but one `info_player_terrorist/counterterrorist` entities
-- change its classname to `info_player_start` (though not really necessary)
-- find the center of the room in-game, and set it's `origin` to that coordinate.
+- Delete all but one of the `info_player_terrorist/counterterrorist` entities.
+- Change its classname to `info_player_start` (though not really necessary).
+- Find the center of the room in-game, and set its `origin` to that coordinate.
 
 ## The Pakfile Lump
 
-The [Pakfile](<https://developer.valvesoftware.com/wiki/BSP_(Source)#Pakfile>) lump contains all the map's assets, such
+The [Pakfile](<https://developer.valvesoftware.com/wiki/BSP_(Source)#Pakfile>) lump contains all of the map's assets, such
 as textures, sounds, and models. It's essentially a ZIP file stored inside the map. When the map is loaded, the game
-mounts those assets alongside the currently loaded assets from Momentum and other mounted games (e.g. CS:SS, TF2, etc.).
+mounts those assets in addition to the currently loaded assets from Momentum and other mounted games (e.g. CS:SS, TF2, etc.).
 
-The pakfile is also used to store cubemaps, which are used for environment reflections and lighting in the map,
-generated by the `buildcubemaps` command in-game.
+The pakfile also stores cubemaps, which are used for environment reflections and lighting in the map.
+These can be generated by the `buildcubemaps` command in-game.
 
 # The Toolkit
 
 ## Lumper
 
-The primary tool for porting maps is [Lumper](https://github.com/momentum-mod/lumper), a tool made by us specifically
+The primary tool for porting maps is [Lumper](https://github.com/momentum-mod/lumper), a tool made specifically
 for modifying BSP files. It functions as a successor to tools like [VIDE](https://developer.valvesoftware.com/wiki/VIDE)
 and [Entspy](https://developer.valvesoftware.com/wiki/Entspy), but supports Strata Source BSPs and contains features
 specifically aimed at map porting and reviewing. It includes:
