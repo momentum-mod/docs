@@ -212,8 +212,8 @@ docs on the Valve wiki. And if in doubt, please ask for help in the _#map-portin
 
 `trigger_push` entities that push the player into a ramp are very inconsistent and give different speeds depending on
 how you jump into it. Replace these with `trigger_setspeed` for a more consistent and less exploitable boost. You will
-have to tweak the values to make the boost similar in speed and trajectory to the original `trigger_push`. Enable the
-"Strict Mode" option to prevent the trigger from activating at all when the player jumps into it.
+have to walk directly into these triggers to get an accurate recording of their push speed and then use the
+"Convert to Set Speed" button to convert the boost.
 
 ![Ramp Boost](/images/map_porting/setspeed.png)
 
@@ -292,19 +292,18 @@ and the associated teleport triggers should be removed using Lumper:
 
 ## Textures
 
-Maps will occasionally contain textures we don't want to include:
+Maps will sometimes contain textures that we don't want to include:
 
 - Pornography, racist memes, edgy stuff
-  - We're not overly strict about this -- relatively few maps we're aware of that have this issue, mainly old combat
-    surf maps with "porn rooms".
-  - If something seems questionable and you're not sure, just ask in Discord.
-- Obviously copyrighted assets from other games / other IP
+  - We're not overly strict about this and very few maps have this type of content.
+  - If something seems questionable and you're not sure about it, just ask in Discord.
+- Obvious copyrighted assets from other games / other IP
   - See [map submission guidelines](/guide/map_submission/map_submission/#other-copyright-assets)
-  - This is often hard to tell and case-by-case, just look out for anything _extremely_ glaring.
+  - This is often hard to tell and is case-by-case. Just look out for anything _extremely_ glaring.
   - Again, ask in Discord if in doubt.
 
-Lumper's **Texture Browser** is a fast way to quickly review all textures in the map, and can replace any bad textures
-with a placeholder.
+Lumper's **Texture Browser** is a fast way to quickly review all textures in the map, and can be used to replace
+bad textures with placeholders.
 
 ![Lumper Texture Browser](/images/map_porting/lumper_texture_browser.png)
 
@@ -314,9 +313,9 @@ The easiest way to replace a texture is to modify any VMTs files that refer to t
   - Currently we don't have automation for this, but it's usually relatively obvious
 - Replace the `$basetexture` value (maybe also `$bumpmap` and others) with some other texture on the map that won't look
   out-of-place
-- Remove original the VTF file via Texture Browser / Pakfile Explorer
+- Remove the original VTF file via Texture Browser / Pakfile Explorer
 
-{{< hint info >}} Source engine textures are stored in **VTF** files, which are the actual image files, and **VMT**
+{{< hint info >}} Source engine textures are stored in **VTF** files, which are the image files, and **VMT**
 files, which are the material definitions for those textures.
 
 VMTs are text files that define how the texture is used in the game, such as its shader type, properties, and other
@@ -328,11 +327,11 @@ used in multiple places. {{< /hint >}}
 
 ## Packed Game Assets
 
-The pakfile lump commonly contains licensed assets from Valve assets, which we
+The pakfile lump often contains licensed Valve assets, which we
 [cannot include](/guide/map_submission/map_submission/#source-assets).
 
-Lumper contains a hash-based manifest file of all these assets, so removing them is very straightforward, just run the
-**Remove Game Assets** job.
+Lumper contains a hash-based manifest file of all these assets, so removing them is very straightforward. You just need
+to run the **Remove Game Assets** job.
 
 ![Remove Game Assets](/images/map_porting/lumper_remove_assets.png)
 
@@ -348,11 +347,11 @@ Sounds should be moved into specific folders in order to use the appropriate vol
 | Weapons  | weapon/  |
 | UI       | ui/      |
 
-Lumper makes this process easy, by automatically detecting entities and soundscapes that use these sounds (in fact it
+Lumper makes this process easy by automatically detecting entities and soundscapes that use these sounds (in fact it
 works for all assets!) and updating their paths. Simply drag-drop the sounds you want to move into the appropriate
 folder/subfolder, then press "Yes" to the dialog that appears.
 
-_Note, path refactoring is very technically complex and has had issues in the past, worth testing in game_
+_Note: Path refactoring is very technically complex and has had issues in the past, so it's worth testing in game_
 
 # Common Issues Porting Older Maps
 
