@@ -248,9 +248,6 @@ the more consistent `OnJump` output. Sometimes mappers will also make jump pads 
 these cases, it is recommended to replace these with a `trigger_setspeed` or `trigger_multiple` with an
 `OnJump !activator,Addoutput,basevelocity # # #` output.
 
-**Note:** When using entity tools to add an `OnJump` output, the push direction will be incorrect if the `trigger_push`
-has an `angles` key value. This can be fixed by removing the `angles` key value with Lumper.
-
 ![OnJump Boost](/images/map_porting/onjump_boost.png)
 
 ### Landmark Teleports
