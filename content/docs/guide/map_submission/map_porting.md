@@ -27,11 +27,11 @@ Our stance on whether to port an existing maps is **opt-out**, i.e. we assume it
   - Don't port a map if it seems like it's been released for a single server, unless you can get explicit permission.
 - If in doubt, try your best to contact the original mapper.
 
-For mappers porting their own map, restrictions on visual/gameplay changes generally don't apply and you're welcome to recompile for Momentum -- it's your map.
+For mappers porting their own map, restrictions on visual/gameplay changes generally don't apply and you're welcome to recompile for Momentum — it's your map.
 
 # Source Map Basics
 
-Momentum map porting is primarily about manipulating **BSP** file, the format for _compiled_ Source engine maps. In rare cases it may be required to decompile a map to a **VMF** file to edit in Hammer (Source's map editor), but since recompiling causes lighting recalculations and other small changes, we prefer modifying existing BSPs whenever possible.
+Momentum map porting is primarily about manipulating **BSP** files, the format for _compiled_ Source engine maps. In rare cases it may be required to decompile a map to a **VMF** file to edit in Hammer (Source's map editor), but since recompiling causes lighting recalculations and other small changes, we prefer modifying existing BSPs whenever possible.
 
 As a format BSPs are notoriously complex (see the [VDC page](<https://developer.valvesoftware.com/wiki/BSP_(Source)>)), consisting of numerous _lumps_ with different data structures. Fortunately for us, we generally only care about a few:
 
@@ -49,15 +49,17 @@ Here's an example of the `info_player_counterterrorist` entity in Lumper, taken 
 
 - `classname` designates the entity as an `info_player_counterterrorist`; all it takes to change the type of an entity is to change that value.
 - `origin` is the position of the entity in the map. Changing it in Lumper/Hammer and saving/recompiling will change the position of the entity.
-- `angles` is the rotation of the entity when you spawn.
+- `angles` is the rotation of the entity when it spawns.
 
 Generally, we're not overly fussy with spawn points in maps. `info_player_start` entities will be prioritized for spawn points, otherwise the first `info_player_terrorist/counterterrorist` in the entity lump will be used.
 
-This isn't a required modification, but porters are welcome to clean up the additional spawn points -- usually if you have multiple spawns, they're placed in a grid and none are quite centered. To do this, all you need to do is:
+This isn't a required modification, but porters are welcome to clean up the additional spawn points — usually if you have multiple spawns, they're placed in a grid and none are quite centered. To do this, all you need to do is:
 
 - Delete all but one of the `info_player_terrorist/counterterrorist` entities
 - Change its classname to `info_player_start` (though not really necessary)
 - Find the center of the room in-game, and set its `origin` to that coordinate
+
+> rio comment: Seems like this stuff about spawn point policy/tips should not be in the "basics" section. Also is redoing spawn points like this something we really need to do? Seems like it has nothing to do with porting and is arguably more involved than just changing KVs (with the in-game tools or otherwise).
 
 ## The Pakfile Lump
 
@@ -78,9 +80,9 @@ The primary tool for porting maps is [Lumper](https://github.com/momentum-mod/lu
   - Remove official Valve assets
   - Apply [Stripper](https://www.bailopan.net/stripper/) configs
   - Batch replace textures
-- **Entity Review** - Lists invalid or dangerous entities in the map
+- **Entity Review** - Lists invalid or problematic entities in the map
 - **Compressed BSP Saving** - Saves the BSP in a compressed format, which is required for map submissions
-- **Map Summary** - Reviews content the BSP according to map submission requirements
+- **Map Summary** - Reviews content in the BSP according to map submission requirements
 
 ![Lumper Example](/images/map_porting/lumper_example.png)
 
@@ -90,7 +92,7 @@ To use Lumper, download the latest release from the [Lumper releases page](https
 
 You can use Lumper to open any BSP file, modify it accordingly, and then save it.
 
-Please note that Lumper does _not_ currently have undo/redo functionality, so be careful when making changes. Save regularly -- Lumper will create backup files in the same directory by default.
+Please note that Lumper does _not_ currently have undo/redo functionality, so be careful when making changes. Save regularly — Lumper will create backup files in the same directory by default.
 
 ### Game Sync
 
@@ -99,9 +101,9 @@ When editing entities, it can be difficult to find specific ones in the Entity E
 To enable game sync, launch the game on the current map loaded in Lumper, set `sv_cheats 1` and `mom_lumper_sync_enable 1`. Then, press the "Connect to Game Sync" button in the top-right corner of Lumper. You should be able to:
 
 - Sync your current in-game position with the "Spherical Radius" filter
-- Sync the entity you're currently looking at with the keyvalue filters
+- Sync the entity you're currently looking at with the key-value filters
 - Teleport to entities by pressing the arrow icon on the Entity Editor list
-- Automatically export Stripper configs from the in-game Entity Tools into Lumper
+- Automatically import Stripper configs from the in-game Entity Tools into Lumper
 
 ### Map Summary
 
@@ -111,17 +113,17 @@ Lumper's "Map Summary" info box (_Tools > Map Summary_) is a quick way to summar
 
 ## In-Game Entity Tools
 
-Some entities must be modified to be compatible with Momentum Mod's version of Source engine or replaced with a more consistent/less exploitable version of the entity.
+Some entities must be modified or replaced to improve gameplay and promote competitive integrity according to Momentum Mod's standards.
 
 Entities can be modified in-game with the `devui_show entitytools` command. This command will open an interface with various tools for quickly modifying and fixing map entities, and can modify those entities in-game in real-time, allowing you to test the changes without reloading the map.
 
-![Lumper Map Summaries](/images/map_porting/entitytools_example.png)
+![Entity Tools Example](/images/map_porting/entitytools_example.png)
 
-{{< hint info >}} Entity Tools uses ImGui which can have very small fonts on large monitors. You can use `devui_font_scale` to change the font size. {{< /hint >}}
+{{< hint info >}} The Entity Tools use ImGui which can have very small fonts on large monitors. You can use `devui_font_scale` to change the font size. {{< /hint >}}
 
 ### Exporting to Lumper
 
-Entity Tools changes in-game entities in real-time. To permanently apply these changes to a BSP, it generates a [Stripper](https://www.bailopan.net/stripper/) config file that can be used in [Lumper](#lumper).
+The Entity Tools change in-game entities in real-time. To permanently apply these changes to a BSP, it generates a [Stripper](https://www.bailopan.net/stripper/) config file that can be used in [Lumper](#lumper).
 
 You can export changes made with the Entity Tools by clicking the "Export To File" button. The entity changes are then written to a \<mapname\>.cfg file in your `maps/entitytools_stripper` folder. To use these files in Lumper, go to the **Jobs** page, create a _Stripper (File)_ job, and then load it from disk.
 
@@ -151,69 +153,77 @@ Pressing the "Edit" button on the right side of an entity in the Entity Review p
 
 ### Boost Ramps
 
-`trigger_push` entities that push the player into a ramp are very inconsistent and give different speeds depending on how you jump into it. Replace these with `trigger_setspeed` for a more consistent and less exploitable boost. You will have to walk directly into these triggers to get an accurate recording of their push speed and then use the "Convert to Set Speed" button to convert the boost.
+`trigger_push` entities that push the player into a ramp are very inconsistent and give different speeds depending on how you jump into it. Replace these with `trigger_setspeed` for a more consistent and less exploitable boost.
+
+Running directly into a trigger_push and getting boosted by it will automatically record your resulting horizontal and vertical speed in the Entity Tools window. Clicking "Convert to Set Speed" will then perform the conversion, applying the best settings to replicate this boost consistently. The resulting `trigger_setspeed` may have a horizontal speed that differs from the original trigger, but in combination with the automatically detected vertical speed, the original boost is replicated accurately.
 
 ![Ramp Boost](/images/map_porting/setspeed.png)
 
-### Fixing Crouchboosts
+### Rapidly Reactivating Boost Triggers
 
-The player can sometimes activate a boost multiple times while falling into it with the "crouch boost" exploit. This exploit can be fixed by making push triggers more restrictive. There are various scenarios that require different approaches to fix crouch boosting:
+The player can sometimes activate a boost multiple times in quick succession with problematic techniques, including "crouchboosting". Different styles of boost triggers require different adjustments to fix this issue:
 
-1. **Surf Ramp Boosts** - These boosts can be fixed by adding a cooldown so that the player has to wait before re-activating the trigger. This cooldown will add the following outputs to delay the trigger's re-activation: `OnEndTouch !self,Disable,,0` `OnEndTouch !self,Enable,,1`. Eventually when save states are implemented, you will be able to make these triggers activate only once until the player fails or restarts the stage by using the "Only Once" spawn flag.
-
-![Surf Ramp Boost](/images/map_porting/surf_ramp_boost.png)
-
-2. **Floor Boosts** - In some cases, you can fix crouch boosting by making it so the boost only activates while the player is touching the ground. One option to fix this is to change the trigger into a `trigger_multiple` that boosts the player with `OnJump !activator,AddOutput,basevelocity # # #` output. Alternatively if you want to allow the player to get pushed continually, you can leave it as a `trigger_push`, but use a `filter_momentum_surface_collision` filter with the "Touching standable surfaces" option so the boost only applies on the ground. You should only use this option if the floor is completely flat, otherwise the boost will re-apply every time the player touches another surface. If you have the original vmf and can compile the map, changing the surface below the trigger_teleport into a func_conveyor is also an option.
+1. **Jump-based Boosts** - Boosts that are designed such that the player should be boosted when they jump on them should be converted into a `trigger_multiple` that boosts the player with an `OnJump` output, such as `OnJump !activator,AddOutput,basevelocity # # #`.
 
 ![Floor Boost](/images/map_porting/floor_boost.png)
 
+2. **Constant Push Floor Boosts** - If the boost is `trigger_push` based and it is important that the player is continuously pushed while inside it (not just when they jump or exit the trigger), you can leave it as a `trigger_push`, but use a `filter_momentum_surface_collision` filter with the "Touching standable surfaces" option so the boost only applies when the player is on the ground. You should only use this option if the floor is completely flat, otherwise the boost will re-apply every time the player touches another surface. If you have the original VMF and can recompile the map, removing the trigger and replacing the surface below it with a `func_conveyor` is also an option.
+
+3. **Surf Ramp Boosts and Other Airborne Boosts** - When there is no ground for the player to jump on, a boost can be fixed by adding a cooldown so the player has to wait before re-activating the trigger. The Entity Tools trigger cooldown option will configure the trigger to disable for one second when the player exits it.
+
+![Surf Ramp Boost](/images/map_porting/surf_ramp_boost.png)
+
 ### Jump Boosts
 
-Boosts that launch the player upwards with `OnEndTouch !activator,Addoutput,basevelocity # # #` should be updated to use the more consistent `OnJump` output. Sometimes mappers will also make jump pads that reduce the player's gravity. In these cases, it is recommended to replace these with a `trigger_setspeed` or `trigger_multiple` with an `OnJump !activator,Addoutput,basevelocity # # #` output.
+Boosts that should boost the player when they jump should use the new `OnJump` output instead of `OnEndTouch`. In addition to avoiding crouchboost exploits as mentioned previously, this also prevents other exploits. This goes for both basevelocity-based and gravity-based boosters.
 
 ![OnJump Boost](/images/map_porting/onjump_boost.png)
 
-### Landmark Teleports
+Some upward boosts briefly reverse the player's gravity instead of using basevelocity. This method may have a gradual and potentially awkward acceleration period. In particularly bad cases, consider converting these to the snappier basevelocity style. Note that the map geometry is sometimes built around the gravity acceleration period in a way that basevelocity cannot replace, so be sure to test this change well before committing it.
 
-Landmark teleports on maps made for Source engine versions before CS:GO are no longer working correctly and need to be updated. The `UseLandmarkAngles` keyvalue needs to be set to 0 and the angles of the landmark entity need to match the destination entity. The in-game entity tools make this easy by listing all available landmark teleport triggers and giving you some options for fixing these triggers. In most cases, all teleports can be fixed by clicking the "Fix All Destination Angles" button. If you need to fix angles for a particular trigger, select it in the list and then click the "Fix Destination Angles" button.
+### Drop Teleports
 
-![Landmark Teleport](/images/map_porting/landmark_tele.png)
-
-### Drop Teleports (Surf Only)
-
-In surf maps, it is common for mappers to use "cages" to reset the player's velocity after they fail or transition between stages. Players can sometimes exploit these cages with +left binds that allow them to spin in the small area to gain additional speed at the start of a stage.
+Some maps, most notably surf maps, teleport the player into a floating "cage" that is open on the bottom to reset the player's velocity after they fail or transition between stages.
 
 ![Drop Teleport](/images/map_porting/drop_tele.png)
 
-Momentum Mod introduces the "Keep Negative Z Velocity Only" velocity mode option for `trigger_teleport` that prevents the player from air strafing while dropping from a stage teleport. All maps that use teleport cages must now use this new velocity mode to prevent exploits. This can be done with the in-game entity modification tools: `devui_show entitytools`. Open the "Teleport Velocity Mode" dropdown, select the destination that you want to change to a drop teleport, and then select the "Keep Negative Z" radio button.
+Momentum Mod introduces the "Keep Negative Z Velocity Only" velocity mode option for `trigger_teleport` that removes any horizontal velocity or upward vertical velocity from entities when they are teleported. This is more robust than only relying on the cage, but more importantly, this activates some important behaviors in Momentum Mod:
+
+- When teleporting directly into a stage zone, it keeps the zone from activating until the player lands on the ground. This results in more competitively correct splits.
+- It prevents players from using air acceleration until they land on the ground, preventing an unfavorable technique to gain speed early.
+
+{{< hint info >}} These behaviors only activate when there is standable ground below the teleport destination, but you should still use "Keep Negative Z Velocity Only" for caged teleport destinations that are not above standable ground. {{< /hint >}}
+
+All teleports with caged teleport destinations should use this velocity mode. In the in-game Entity Tools, open the "Teleport Velocity Mode" dropdown, select the destination that you want to change to a drop teleport, and then select the "Keep Negative Z" radio button.
 
 ![Velocity Mode Tools](/images/map_porting/velocity_mode.png)
 
-### Jail Timers/Teleports (Surf Only)
+### Jail Timers
 
-Old surf maps sometimes use a `logic_timer` to teleport all players to a jail after a few minutes. These timer entities and the associated teleport triggers should be removed using Lumper:
+Some old surf maps use a `logic_timer` to teleport all players to a jail after a few minutes. These timer entities and the associated teleport triggers should be removed using Lumper:
 
 ![Lumper Timer](/images/map_porting/lumper_timer.png)
 
 ![Lumper Teleports](/images/map_porting/lumper_teleports.png)
 
+> rio comment: do the teleports really need to be removed? seems like a lot of extra work when removing the timer is enough
+
 ## Textures
 
 Maps will sometimes contain textures that we don't want to include:
 
-- Pornography, racist memes, edgy stuff
-  - We're not overly strict about this and very few maps have this type of content.
-  - If something seems questionable and you're not sure about it, just ask in Discord.
-- Obvious copyrighted assets from other games / other IP
+- Pornography, racism, or other "edgy" content
+  - If something seems questionable and you're not sure about it, ask in Discord.
+- Obvious copyrighted assets from other media
   - See [map submission guidelines](/guide/map_submission/map_submission/#other-copyright-assets)
-  - This is often hard to tell and is case-by-case. Just look out for anything _extremely_ glaring.
-  - Again, ask in Discord if in doubt.
+  - This can be hard to make a judgment call on. Just look out for anything _extremely_ glaring.
+  - Again, ask in Discord if you're unsure.
 
 Lumper's **Texture Browser** is a fast way to quickly review all textures in the map, and can be used to replace bad textures with placeholders.
 
 ![Lumper Texture Browser](/images/map_porting/lumper_texture_browser.png)
 
-The easiest way to replace a texture is to modify any VMTs files that refer to the VTF file in question.
+The easiest way to replace a texture is to modify any VMT files that refer to the VTF file in question.
 
 - Find any instances of VMTs files that refer to that VTF file in the Pakfile Explorer
   - Currently we don't have automation for this, but it's usually relatively obvious
@@ -228,7 +238,7 @@ Note that multiple VMT files can refer to the same VTF file, so you may need to 
 
 ## Packed Game Assets
 
-The pakfile lump often contains licensed Valve assets, which we [cannot include](/guide/map_submission/map_submission/#source-assets).
+The pakfile lump of many maps contain copyrighted Valve assets, which we [cannot include](/guide/map_submission/map_submission/#source-assets).
 
 Lumper contains a hash-based manifest file of all these assets, so removing them is very straightforward. You just need to run the **Remove Game Assets** job.
 
@@ -236,7 +246,7 @@ Lumper contains a hash-based manifest file of all these assets, so removing them
 
 ## Sounds
 
-Sounds should be moved into specific folders in order to use the appropriate volume sliders:
+The game allows players to set a volume level for each of several sound channels. Sound files packed in each map should be organized into specific folders corresponding to these sound channels:
 
 | Channel  | Folder         |
 | -------- | -------------- |
@@ -246,7 +256,7 @@ Sounds should be moved into specific folders in order to use the appropriate vol
 | Weapons  | sound/weapon/  |
 | UI       | sound/ui/      |
 
-Lumper makes this process easy by automatically detecting entities and soundscapes that use these sounds (in fact it works for all assets!) and updating their paths. Simply drag-drop the sounds you want to move into the appropriate folder/subfolder, then press "Yes" to the dialog that appears.
+Lumper makes this process easy by automatically detecting entities and soundscapes that use these sounds (in fact it works for all assets!) and updating their paths. Simply drag-and-drop the sounds you want to move into the appropriate folder, then press "Yes" on the dialog that appears.
 
 _Note: Path refactoring is very technically complex and has had issues in the past, so it's worth testing in game_
 
@@ -264,7 +274,7 @@ Skyboxes will sometimes fail to load in maps compiled with HDR. This is because 
 
 ## Corrupt HDR Cubemaps
 
-Some maps like surf_cannonball have corrupted HDR cubemaps. The cause of this issue is unknown and there are no known ways to fix this without decompiling and recompiling the map.
+Some maps have corrupted HDR cubemaps. The cause of this issue is unknown and there are no known ways to fix this without decompiling and recompiling the map.
 
 ![Corrupt Cubemaps](/images/map_porting/corrupt_cubemaps.png)
 
@@ -272,9 +282,9 @@ Some maps like surf_cannonball have corrupted HDR cubemaps. The cause of this is
 
 Refraction textures in most maps do not render correctly. The cause of this issue is unknown and the only way to fix it currently is to recompile.
 
-![Corrupt Cubemaps](/images/map_porting/refraction_dark.png)
+![Dark Refraction Textures](/images/map_porting/refraction_dark.png)
 
-![Corrupt Cubemaps](/images/map_porting/refaction_fixed.png)
+![Fixed Refraction Textures](/images/map_porting/refaction_fixed.png)
 
 ## Invalid VMT Files
 
