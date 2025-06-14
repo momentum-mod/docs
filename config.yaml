@@ -49,3 +49,6 @@ markup:
   tableOfContents:
     startLevel: 1
     ordered: false # `true` adds numbering, looks awful
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false

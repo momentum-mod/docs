@@ -1,0 +1,6 @@
+<p style="text-align: center;">
+	<img src="{{ .Destination | safeURL }}"
+	{{- with .PlainText }} alt="{{ . }}"{{ end -}}
+	{{- with .Title }} title="{{ . }}"{{ end -}}
+	>
+</p>
