@@ -59,8 +59,6 @@ This isn't a required modification, but porters are welcome to clean up the addi
 - Change its classname to `info_player_start` (though not really necessary)
 - Find the center of the room in-game, and set its `origin` to that coordinate
 
-> rio comment: Seems like this stuff about spawn point policy/tips should not be in the "basics" section. Also is redoing spawn points like this something we really need to do? Seems like it has nothing to do with porting and is arguably more involved than just changing KVs (with the in-game tools or otherwise).
-
 ## The Pakfile Lump
 
 The [Pakfile](<https://developer.valvesoftware.com/wiki/BSP_(Source)#Pakfile>) lump contains all of the map's assets, such as textures, sounds, and models. It's essentially a ZIP file stored inside the map. When the map is loaded, the game mounts those assets in addition to the currently loaded assets from Momentum and other mounted games (e.g. CS:SS, TF2, etc.).
@@ -205,8 +203,6 @@ Some old surf maps use a `logic_timer` to teleport all players to a jail after a
 ![Lumper Timer](/images/map_porting/lumper_timer.png)
 
 ![Lumper Teleports](/images/map_porting/lumper_teleports.png)
-
-> rio comment: do the teleports really need to be removed? seems like a lot of extra work when removing the timer is enough
 
 ## Textures
 
