@@ -68,17 +68,32 @@ The player can be in one of three states with ammo:
 2. Positive ammo - Can shoot, each shot will take 1 ammo.
 3. Zero ammo     - Out of ammo, cannot shoot.
 
-For example, to give infinite rockets, you would use:
+For example, to set the player's rockets to 4:
+![SetRockets Input](/images/ammo_system/set_rockets_input.png)
 
-`SetRockets -1`
+To give infinite rockets: `SetRockets -1`
 
-To add 30 plasma bolts, you would use:
+To add 30 plasma bolts: `AddPlasma 30`
 
-`AddPlasma 30`
+To take away 2 sticky bombs: `AddStickyBombs -2`
 
-To take away 2 sticky bombs, you would use:
+### Trigger Placement
 
-`AddStickyBombs -2`
+In RJ and SJ, proper trigger placement is required ensure the player starts the jump with the right amount of ammo.  
+Try to place triggers such that:  
+- It is impossible to miss or avoid any ammo triggers
+- The player's ammo is instantly refilled upon failing a jump
+- The player's ammo is refilled if they fire but don't leave the start of the jump
+- The player cannot get stuck somewhere with zero ammo and no access to an ammo trigger
+
+Here is an example trigger setup for a jump:  
+![Example ammo trigger setup](/images/ammo_system/set_rockets_setup_example.png)
+
+The vertical trigger in the hallway is an `OnStartTouch` output, and assures the player will be set to 4 rockets even if they skip over the floor trigger.  
+The flat trigger on the floor is 1 hammer unit tall and uses `OnTrigger` instead, and sets the player's rockets to 4 as long as they are on the ground. 
+
+> Remember to add an ammo trigger to the map's start zone so the player's ammo state is consistent at the start of each run!
+
 
 ## Ammo Limit
 

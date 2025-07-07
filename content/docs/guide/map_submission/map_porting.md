@@ -242,6 +242,12 @@ Lumper makes this process easy by automatically detecting entities and soundscap
 
 _Note: Path refactoring is very technically complex and has had issues in the past, so it's worth testing in game_
 
+## Limited Ammo Triggers
+
+Maps ported from TF2 for RJ and SJ sometimes have sections which limit the player's ammo. If infinite ammo throughout the map would significantly change the gameplay experience, consider adding ammo triggers to the map. Information concerning the ammo system in Momentum Mod can be found at [Ammo System](/guide/mapping/ammo_system).
+
+Certain triggers can be added to a bsp file without having to recompile the map with the help of generated stripper configs that can be executed in Lumper. Tools available to help create these stripper configs include [vmf_to_stripper](https://github.com/benjl/vmf_to_stripper/) and [zoneToTrigger](https://github.com/Natanxp2/zoneToTrigger).
+
 # Common Issues Porting Older Maps
 
 When porting maps from older Source engine versions, there are a few issues that might come up due to incompatibilities with Strata Source.
