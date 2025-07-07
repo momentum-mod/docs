@@ -242,6 +242,28 @@ Lumper makes this process easy by automatically detecting entities and soundscap
 
 _Note: Path refactoring is very technically complex and has had issues in the past, so it's worth testing in game_
 
+## Limited Regen Triggers
+
+Some jump maps from TF2 have sections in which the player's ammo is limited. By default, unlimited ammo is given to the player in rocket jump and sticky jump. If this would significantly change how the map plays, it is recommended to add limited ammo triggers to affected jumps.
+
+This can be accomplished with a `trigger_multiple` using the `SetRockets` or `SetStickyBombs` input on `!activator`:
+![SetRockets Input](/images/map_porting/set_rockets_input.png)
+
+The "My output named" field should usually be set to `OnStartTouch` to stop "regen cheating" (i.e. firing a rocket, then having your ammo reset so that you get an extra rocket during the jump).  
+If this is not an issue, `OnTrigger` can be used as well, and will reset the player's ammo as long as they are in the trigger.  
+To set the player's ammo back to unlimited, make a trigger with the parameter override set to `-1`.
+
+Try to place triggers such that:  
+- It is impossible to miss or avoid any ammo triggers
+- The player's ammo is instantly refilled upon failing a jump
+- The player's ammo is refilled if they fire but don't leave the start of the jump
+
+Here is an example trigger setup for a jump:  
+![Example regen trigger setup](/images/map_porting/set_rockets_setup_example.png)
+
+The vertical trigger in the hallway is an `OnStartTouch`, and assures the player will be set to 4 rockets even if they skip over the floor trigger.  
+The flat trigger on the floor is 1 hammer unit tall and uses `OnTrigger` instead, and sets the player's rockets to 4 as long as they are on the ground. 
+
 # Common Issues Porting Older Maps
 
 When porting maps from older Source engine versions, there are a few issues that might come up due to incompatibilities with Strata Source.
