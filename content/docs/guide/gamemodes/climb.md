@@ -86,7 +86,7 @@ For Wallstrafes, bring your view parallel with the wall (you can either start pa
 Ladders can be climbed by "walking into them". If you are directly facing or look up at the ladder hold W, if backwards or looking down S, if sideways A/D. Notice how it is possible to look up/down and sideways at the same time. If you hold W and A/D while being sideways and looking up the speeds add onto each other resulting in a much faster climb.    
 
 ### Ladder Jump
-The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more like surfing. Right before leaving the top of the ladder flick away, right if holding A and left for D *(the opposite of how you Airstrafe!)*. How far you flick out determines how much height is traded for speed. After you leave the ladder, immediately start course-correcting and gaining extra speed with proper Airstrafing.
+The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more like surfing. Right before leaving the top of the ladder flick away, right if holding A and left for D **(the opposite of how you Airstrafe!)**. How far you flick out determines how much height is traded for speed. After you leave the ladder, immediately start course-correcting and gaining extra speed with proper Airstrafing.
 {{< hint info >}}
 Unlike surfing, there is no acceleration or deceleration on ladders, even the smallest segment of ladder can instantly change your speed when you move your mouse or change inputs.
 Really it is only the top of the ladder (or wherever you decide the takeoff point is) that determines your speed and trajectory. Also, how far up/down you look also affects speed, height and trajectory
@@ -119,17 +119,17 @@ In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump 
 ### Comboing 
 More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive. 
  
-### Weird Jump[1.6 Climb only]
+### Weird Jump [1.6 Climb only]
 walking off a platform and bhopping upon landing. Recall that the jump-land penalty is only called when a player jumps in this scenario no penalties are applied to the bhop.  
 However, the bhop speed cap is still checked as with all jumps. Don't go over 300 speed or it will reset to 240! Weird Jumps starting from a sufficiently tall platform give the best distance out of a single jump.
 
-### Standup (1.6 Climb Only)
+### Standup [1.6 Climb Only]
 For maximum airtime, it is best to stay crouched as you are about to land, but what if you need airtime but want to land in a standing position? If you are in a crouching position close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land.
 {{< hint info >}}
 The faster you are falling, the shorter the grace period is
 {{< /hint >}}
 
-### Standup Bhop (1.6 Climb Only)
+### Standup Bhop [1.6 Climb Only]
 Combines a Standup with a Bhop. The result is you gain extra airtime and distance with your crouch, but your next jump is in the standing position meaning you can “tuck in your legs” again and get the extra 18 units of height. This technique is especially useful in 1.6 Climb since you will also bleed slightly more time off stamina by staying in the air longer.   
 Standup Bhops are not a replacement for regular Bhops or Crouch Bhops, since you may prefer to land sooner and jump sooner or need to avoid map hazards.  
 
@@ -179,8 +179,8 @@ Imperfect bhops have a harsher penalty on the edge since friction will be double
 In practice, Count Jumps on a high platform will get less distance than ones on the ground
 {{< /hint >}}
 
-### Prestrafe (KZT version)
-KZT’s origin as a server plugin for CSGO gives it a unique implementation of Prestrafe. Prestrafe functions as a speed boost that is tracked separately from a player’s move speed, The player’s “final move speed” = “normal move speed” + “Prestrafe boost”. In KZT, the value stored in player’s “Prestrafe boost” is not affected by friction instead, it will gradually return to 0 if it hits its maximum of +25 or if the player stops Prestrafing while grounded. 
+### Prestrafe [KZT version]
+KZT’s origin as a server plugin for CSGO gives it a unique implementation of Prestrafe. Prestrafe functions as a speed boost that is tracked separately from a player’s move speed, The player’s “final move speed” = “normal move speed” + “Prestrafe boost”. In KZT, the value stored in the player’s “Prestrafe boost” is not affected by friction instead, it will gradually return to 0 if it hits its maximum of +25 or if the player stops Prestrafing while grounded. 
 {{< hint info >}}
 The amount your mouse has to move for a Prestrafe in KZT is more lenient compared to 1.6 Climb, your Prestrafe path can be closer to a straight line
 {{</hint>}}
@@ -188,14 +188,14 @@ The amount your mouse has to move for a Prestrafe in KZT is more lenient compare
 You can get around the +25 rule by briefly failing to Prestrafe once you reach max “Prestrafe boost”, such as by releasing one of your movement keys momentarily. Your “Prestrafe boost” will get below the maximum and the cycle repeats
 {{</hint>}}
 
-### Prekeep (KZT only)
+### Prekeep [KZT only]
 KZT’s “Prestrafe boost” does not reset in the air. If you Prestrafe, jump, and Prestrafe as soon as you land you will keep the Prestrafe speed, hence the name Prekeep.  
 For example, a player is running at 250 speed, starts Prestrafing to 265 (really just 250 + 15 Prestrafe speed) jumps, Airstrafes to 300 (285 + 15 Prestrafe speed) and lands.  
 2 outcomes can occur:  
 Outcome 1: The player does not immediately Prestrafe.  Friction slows “normal speed” from 285 to 250. Prestrafe rule slows “Prestrafe boost” from +15 to +0. The player has a final speed of 250 right after landing, which gives the appearance of vanilla physics.  
 Outcome 2: the player immediately Prestrafes upon landing. Friction slows “normal speed” from 285 to 250. Prestrafe rule does not activate and the +15 speed is kept. The player has a final speed of 265 right after landing and will continue to climb from there as the player Prestrafes. The player performed a Prekeep!
 
-### 66 unit Crouch Jumps (KZT only)
+### 66 unit Crouch Jumps [KZT only]
 In KZT, crouching right before a jump and right after are not equal. Starting a crouch one tick or more before the jump gives more height 66 units vs 64.84 units.  
 The trade-off is that the player loses speed as they transition into a crouch. The longer the player holds crouch the more speed is lost. These are best used when height is a priority over distance, since with imperfect execution more slow-down will occur than necessary, shortening the length of the jump.
 
