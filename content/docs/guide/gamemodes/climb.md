@@ -26,7 +26,9 @@ Strafe is the most common focus for maps. Strafing can come in the form of Long 
 **Airstrafing** works in the same way as in the Bhop and Surf game modes; using a strafe key (A or D) while guiding the mouse off in that direction causes the player to receive more speed.  
 A **Prestrafe** is a technique that has been patched out of Counter-Strike since CSGO but has been re-added for the Climb game mode. While on the ground, players hold **both** the W and strafe keys and guide the mouse into the direction they are moving, right for W+D and left for W+A. Performing a Prestrafe correctly will let you gain speed on the ground. Gaining speed before the jump and while in the air lets you travel further. This is called a **Long Jump**. 
 Note that since Airstrafing causes the player to deviate from their intended destination (assuming it is straight in front of them), Long Jumps typically incorporates multiple left and right Airstrafes into a jump which counteract each other and keep the player close to a straight line. These multiple strafes in opposite directions gives the appearance of a "flicky" or "jittery" Airstrafe but a lot of practice goes into syncing the A and D keys with quick but smooth mouse movements.
-
+{{< hint info >}}
+If you're familiar with quake or defrag, the Prestrafe and Long Jump are analgous to the Circle strafe and Circle Jump respectively 
+{{< /hint >}}
 Sometimes you may not be able to take a direct line due to an obstruction.  
 The two most common forms of this are rounding a corner (often without being able to see the next platform) and 2 platforms separated by a thin wall.
 In this case, air strafing is not used to gain speed but as a form of air control. The principle is the same but typically smooth turns that stay close to the wall are needed (don't bump into the wall or else you will take out all your speed and fall straight down!).  
@@ -76,7 +78,7 @@ Running against a wall at a shallow angle or Airstrafing perpendicular to a wall
 For Wallruns, there are 2 common ways of setting up the correct angle:
 1. look slightly into the wall and press only W. 
 2. look slightly away from the wall and press W+A if the wall is to the left, W+D if it's to the right.  
-For Wallstrafes, while in the air bring your view parallel with the wall (you can either start parallel or Airstrafe until you're parallel), then hold only A/D. As long as you make contact with the wall you will gain speed.
+For Wallstrafes, bring your view parallel with the wall (you can either start parallel on the ground or bring it parallel while in the air), then hold only A/D. As long as you make contact with the wall you will gain speed.
 (Be careful! Continuing to move your mouse after contacting the wall can drain your speed if you look too far in or away!) 
 ![wallstrafe](/images/climb/Wallstrafe.png)  
 
@@ -84,7 +86,7 @@ For Wallstrafes, while in the air bring your view parallel with the wall (you ca
 Ladders can be climbed by "walking into them". If you are directly facing or look up at the ladder hold W, if backwards or looking down S, if sideways A/D. Notice how it is possible to look up/down and sideways at the same time. If you hold W and A/D while being sideways and looking up the speeds add onto each other resulting in a much faster climb.    
 
 ### Ladder Jump
-The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more like surfing. Right before leaving the top of the ladder flick away, right if holding A and left for D (the opposite of how you Airstrafe!). How far you flick out determines how much height is traded for speed. After you leave the ladder, immediately switch strafe keys and start course-correcting and gaining extra speed with proper Airstrafing.
+The speed you gain from fast ladder climbing is enough to fling you into the air! This technique does not have anything to do with inputting jump (which just pushes you off the ladder) and is more like surfing. Right before leaving the top of the ladder flick away, right if holding A and left for D *(the opposite of how you Airstrafe!)*. How far you flick out determines how much height is traded for speed. After you leave the ladder, immediately start course-correcting and gaining extra speed with proper Airstrafing.
 {{< hint info >}}
 Unlike surfing, there is no acceleration or deceleration on ladders, even the smallest segment of ladder can instantly change your speed when you move your mouse or change inputs.
 Really it is only the top of the ladder (or wherever you decide the takeoff point is) that determines your speed and trajectory. Also, how far up/down you look also affects speed, height and trajectory
@@ -166,10 +168,10 @@ In the direction you are moving (not facing), 36/18 units down and 16 units forw
 move the box down 34 units while checking if it intersects with anything. If there was nothing in its path, the player is next to an edge.  
 **[unit/unit -> units if standing/units if crouching]**
 {{< /hint >}}
-To simplify, if the player were to move an additional 16 units in their current direction, then fall straight down 70 units would they, at any time, collide with anything from the waist down?  If not, edge friction is enabled
+To simplify, if the player is next to and moving towards a gap they could fall through (even if it requires crouching under something), and the height of the fall is about the player's height or more then edge friction is enabled
 ![high jump](/images/climb/High_Jump.png)  
 In most cases this works as intended; High jumps will gain less distance when jumping from the edge because of the slower takeoff speed. The obvious solution is to jump slightly before reaching the edge, this will give more distance but is it enough to cover the 16 units you lose out on? Generally yes, but there is a way to optimize this further.  
-Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately we can't stay parallel when prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide prestrafe, make sure the angle you turn towards the edge is as shallow as possible. The game will use the shallow angle for edge detection which will return true later when compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a small square platform can't really be taken advantage of by this trick. 
+Remember the engine only checks in the direction you are moving, if you are moving parallel to an edge, you are not considered "next to an edge" regardless of how close you actually are to one. Unfortunately we can't stay parallel when prestrafing and the speed it offers is too good to pass up on. We must compromise, start facing parallel to the edge and perform a wide prestrafe, make sure the angle you turn towards the edge is as shallow as possible. Edge detection will return true later compared to running straight at the edge. The shape of the platform plays a big role in High Jumps, a tiny platform can't really be taken advantage of by this trick. 
 Yet still there is even better and more intuitive method. Use Count Jumps! Edge friction does not apply in the air nor to a perfect bhop. Initiate the first Double Duck before the edge and then bhop on the edge. This will get way more distance then the previous method, in fact you can get more distance than even a Long Jump on ground level!
 
 {{< hint warning >}}
