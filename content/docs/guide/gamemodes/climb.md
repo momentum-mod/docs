@@ -29,6 +29,9 @@ Note that since Airstrafing causes the player to deviate from their intended des
 {{< hint info >}}
 If you're familiar with quake or defrag, the Prestrafe and Long Jump are analgous to the Circle strafe and Circle Jump respectively 
 {{< /hint >}}
+{{< hint warning >}}
+Max running speed is 250. Max speed attainable with Prestrafe is about 275. Airstrafing has better acceleration and a much larger attainble speed when compared to Prestrafe.
+{{< /hint >}}
 Sometimes you may not be able to take a direct line due to an obstruction.  
 The two most common forms of this are rounding a corner (often without being able to see the next platform) and 2 platforms separated by a thin wall.
 In this case, air strafing is not used to gain speed but as a form of air control. The principle is the same but typically smooth turns that stay close to the wall are needed (don't bump into the wall or else you will take out all your speed and fall straight down!).  
@@ -113,8 +116,9 @@ In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump 
 More of a general term, this describes chaining jumps together in a fluid motion, which just like in fighting games, is not obligatory for casual play but is a cornerstone skill built off the fundamentals and is required to be competitive. 
  
 ### Weird Jump [1.6 Climb only]
-walking off a platform and bhopping upon landing. Recall that the jump-land penalty is only called when a player jumps in this scenario no penalties are applied to the bhop.  
-However, the bhop speed cap is still checked as with all jumps. Don't go over 300 speed or it will reset to 240! Weird Jumps starting from a sufficiently tall platform give the best distance out of a single jump.
+walking off a platform and bhopping upon landing. Remember that the jump-land penalty is only called when a player jumps. In this scenario, no penalties are applied to the bhop. 
+The goal is to airstrafe after walking off gaining speed prior to the bhop.  
+However, the bhop speed cap is still checked as with all jumps. Don't go over 300 speed or it will reset to 240!
 
 ### Standup [1.6 Climb Only]
 For maximum airtime, it is best to stay crouched as you are about to land, but what if you need airtime but want to land in a standing position? If you are in a crouching position close enough to the ground (less than 18 units away) the engine will not let you uncrouch since you'll clip into the floor, instead it waits until the moment you've hit the ground or more space has opened beneath you and uncrouches. This behavior gives you a grace period to execute a normally frame-perfect (or tick-perfect) outcome of being in a standing position as soon as you land.
@@ -135,11 +139,11 @@ This means you can gain speed with air strafing without worrying about slowing d
 
 ### Duck Roll [1.6 Climb only]
 Sometimes called Ground Strafing or G-Strafing  in Counter-Strike, Duck Roll is its given name in Half-life so for consistency's sake It will be called Duck Roll.  
-It is a "Bhop" sequence comprised entirely of rapid Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so even with more speed they may not reach a place a Bhop can. In Climb it is usually used after landing from a surf or slide to maintain high speed. Since Duck Rolls are just many Double Ducks, it is possible to perform a Standup version that requires holding crouch for a little bit after doing a Double Duck which preserves speed a little better. 
+It is a "Bhop" sequence comprised entirely of rapid Double Ducks. This lets you get past the Bhop speed cap since it is not considered a jump. It is very hard to maintain Duck Rolls given how much more frequently you must crouch compared to jumps in a Bhop sequence. Duck Rolls are vertically limited, so they are used to preserve speed rather than for platforming. In Climb it is usually used after landing from a surf or slide to maintain high speed. Since Duck Rolls are just many Double Ducks, it is possible to perform a Standup version that requires holding crouch for a little bit after doing a Double Duck which preserves speed a little better. 
 Duck Roll’s effectiveness heavily depends on the map.  
 
 ### Count Jump [1.6 Climb only]
-Done by first gaining speed with a Prestrafe then Double Ducking (or Duck Rolling) to gain more speed in the air with Airstrafes, then finally bhop upon landing. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. This is also sometimes called a **Count Jump**. Optimized Count Jumps give the best distance of any jump on 1.6 Climb (assuming flat ground)
+Done by Double Ducking (or Duck Rolling) to gain speed in the air with Airstrafes, then bhop upon landing. It can also be used in a Bhop sequence where doing another jump would result in over/under shooting the next platform, in this case the double duck is used as a "mini-jump" in the sequence and must be timed just like a Bhop. The Double Duck will also bleed time off of stamina. Optimized Count Jumps done with a Prestrafe tie Weird Jumps for the best distance of any jump on 1.6 Climb yet Count Jumps can be done on much more common terrain.
 
 {{< hint info >}}
 The bhop done in the Count Jump does not have any stamina penalties placed on it. It's as if the player just ran and then jumped!  
@@ -155,11 +159,11 @@ Currently, 1.6 Climb is the only Climb mode whose edge friction is different tha
 {{< /hint >}}
 {{< hint warning >}}
 You are considered to be next to an edge if:   
-In the direction you are moving (not facing), 36/18 units down and 16 units forward from the player’s origin  
+In the direction you are moving (not necessarily  facing), 36/18 units down and 16 units forward from the player’s origin  
 (This works out to be the bottom edge of your collision box) spawn a box of identical dimensions to the player’s collision box  
-(32 unit width, 32 unit depth, 72/36 unit height) whose origin is from that point,
-move the box down 34 units while checking if it intersects with anything. If there was nothing in its path, the player is next to an edge.  
-**[unit/unit -> units if standing/units if crouching]**
+(32 unit width, 32 unit depth, 72/36 unit height) whose origin is from that point, then
+move the box down 34 units while checking if it intersects with anything. If there was nothing in its path, the player is next to an edge.   
+[unit/unit -> units if standing/units if crouching]
 {{< /hint >}}
 To simplify, if the player is next to and moving towards a gap they could fall through (even if it requires crouching under something), and the height of the fall is about the player's height or more then edge friction is enabled
 ![high jump](/images/climb/High_Jump.png)  
@@ -173,7 +177,7 @@ In practice, Count Jumps on a high platform will get less distance than ones on 
 {{< /hint >}}
 
 ### Prestrafe [KZT version]
-KZT’s origin as a server plugin for CSGO gives it a unique implementation of Prestrafe. Prestrafe functions as a speed boost that is tracked separately from a player’s move speed, The player’s “final move speed” = “normal move speed” + “Prestrafe boost”. In KZT, the value stored in the player’s “Prestrafe boost” is not affected by friction instead, it will gradually return to 0 if it hits its maximum of +25 or if the player stops Prestrafing while grounded. 
+KZT’s origin as a server plugin for CSGO gives it a unique implementation of Prestrafe. Prestrafe functions as a speed boost that is tracked separately from a player’s move speed, The player’s “final move speed” = “normal move speed” + “Prestrafe boost”. In KZT, the value stored in the player’s “Prestrafe boost” is not affected by friction instead, it will gradually return to 0 if it hits its maximum of +25 or if the player stops Prestrafing while grounded. The player must be at max running speed (250) in order to enable Prestrafing.
 {{< hint info >}}
 The amount your mouse has to move for a Prestrafe in KZT is more lenient compared to 1.6 Climb, your Prestrafe path can be closer to a straight line
 {{</hint>}}
