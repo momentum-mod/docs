@@ -107,7 +107,7 @@ Crouching will limit your ability to turn in the air and thus gain speed as well
 
 ### Drop Bhop
 Walking off or jumping off a platform and then Bhopping on a platform below. In Climb modes without stamina (KZT) it functions identically to a standard Bhop although the timing to input jump is harder since the player is faller faster.  
-In Climb modes with Stamina (1.6) Walking off gives no jump-land penalty to the Bhop while jumping off gives a reduced penalty (potentially none if the player fell far enough).
+In Climb modes with Stamina (1.6) Walking off gives no jump-land penalty to the Bhop while jumping off gives a reduced penalty (potentially none if the player fell for long enough).
 {{< hint info >}}
 In 1.6 Climb, the Drop Bhop is further categorized. Walking off is a Weird Jump while jumping off is a Drop Bhop
 {{< /hint >}}
