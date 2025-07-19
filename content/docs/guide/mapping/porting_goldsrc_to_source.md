@@ -279,10 +279,15 @@ The transparent pixels of a texture still store color data. The blue halo effect
 Maps should not take more than a few minutes to do a full compile. If VVis is taking too much time during the compile process go through the map and opitmize it. This means adding complex geometry to a func_detail entity, or placing func_viscluster brush entities in areas with large numbers of visleaves.
 
 ## Finishing up
-If you have made it this far you should now have a complete or nearly complete port. Go through both your port and the original GoldSrc version ensuring you are satisfied with the result. Ultimately porting a map this way is not perfect. If the map plays well and there are no obvious visual issues do not hesitate to call a port finished; do not stress about any insignificant issues most players will never notice.
+If you have made it this far you should now have a complete or nearly complete port. Go through both your port and the original GoldSrc version ensuring you are satisfied with the result. 
+
+Now consider trimming down the map's name to something more modern. For example, concmap_mymap123_a3 could be shortened to conc_mymap123. This is necessary if your plan is to port the map for Momentum Mod. Depending on where you publish your port consider reusing the map's original info text file to provide a description and original release date. <br>
+
+Ultimately porting a map this way is not perfect. If the map plays well and there are no obvious visual issues do not hesitate to call a port finished; do not stress about any insignificant issues most players will never notice. <br>
+
 
 # Credits
 Zike1017 - Primary Author <br>
 Panzer - Some images, Xwad information <br>
-Ryan "Nemesis" Gregg - Old technical explanations on decompiling
+Ryan "Nemesis" Gregg - Old technical explanations on decompiling <br>
 Sam Vanheer - Author of the Half-Life Unified SDK map decompiler and technical explanations
