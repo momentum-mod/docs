@@ -161,8 +161,10 @@ The pros and cons of this decompiler are as follows:
 
 ### Decompiling with HUSK MD
 {{< hint info >}}This guide will only cover decompiling with HUSK MD. If you are intentionally using any of the other decompilers you must have a good reason and thus know what you are doing. {{< /hint >}}
-After downloading the program, open MapDecompilerGUI.exe in the HalfLife.UnifiedSdk.MapDecompiler folder. You can configure the options to your liking if you know what you are doing, otherwise the settings in the image below are recommended. <br>
-IMAGE HERE IMAGE HERE IMAGE HERE <br>
+After downloading the program, open MapDecompilerGUI.exe in the HalfLife.UnifiedSdk.MapDecompiler folder. You can configure the options to your liking if you know what you are doing, otherwise the settings in the image below are recommended. 
+
+![husk_md_decompile_settings](static/images/goldsrc_to_source_guide/husk_md_decompile_settings.PNG)
+
 With the settings configured go to the File menu in the top left and select Convert. Pick the map you want to decompile and the conversion will begin. When the program finishes, a .map file will be generated along with a .wad file containing any packed custom textures. 
 
 ## Converting the textures
@@ -180,11 +182,11 @@ Make sure you have the right version of VTFEdit installed, and then navigate to 
 
 In the newly opened window, start by clicking the "Options" button in the bottom left. 
 
-IMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
+![vtfedit_convert_wad_menu](static/images/goldsrc_to_source_guide/vtfedit_convert_wad_menu.PNG)
 
 Under "General" find the "Resize" section. Here find "Resize Method" and change it to "Biggest Power Of 2". Source requires the dimensions of textures to be powers of 2; GoldSrc does not have this requirement. Of the three choices for this setting "Biggest Power Of 2" usually gives the best results. 
 
-IMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
+![vtfedit_wad_conversion_options](static/images/goldsrc_to_source_guide/vtfedit_wad_conversion_options.png)
 
 Now exit the options menu and select a .wad file to be converted as well as a relevant folder for the output. Make sure "Create VMT Files" is checked as creating them manually is quite tedious. Because you are having VTFEdit automatically generate the .vmt files for your textures, make sure the output folder you are using is a working materials directory you can use with Hammer. If you generate .vmt files and then move them all to a different folder the .vmt files will be referencing the previous file path, so Hammer will not find them.
 
@@ -192,13 +194,11 @@ Furthermore all of the .vmt files generated will not preserve any of the propert
 
 {{< hint info >}}Expect to encounter issues during this proccess. If you are having issue with VTFEdit while converting textures refer to the relevant sections under "Common issues" at the bottom of this guide.{{< /hint >}}
 
-IMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
-
 Now is also a good time to convert your skybox textures. Custom skyboxes will be in the .zip file of the downloaded map. Default skyboxes are in Steam/SteamApps/Common/Half-Life/valve/gfx/env and Steam/SteamApps/Common/Half-Life/tfc/gfx/env for Half-life and Team Fortress Classic respectively. Find the 6 .tga files that correspond to a skybox and put them all in a folder somewhere.
 
 Now in VTFEDit navigate to Tools -> Convert Folder and fill out the relevant information in the window that opens. The resulting .vmt files will need to be edited accordingly to work as a skybox in Source. This is process is the same as setting up any other custom skybox for Source.
 
-IMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
+![vtfedit_convert_folder_menu](static/images/goldsrc_to_source_guide/vtfedit_convert_folder_menu.PNG)
 
 ### Converting texture with Xwad
 If you do not want to download VTFEdit, this process can also be done through a program called Xwad. Xwad is a command line application that is part of the Source SDK on Steam(Not 2007 nor 2013). It is found in the bin folder where other development tools are stored. You will need to either create a .bat file or use a terminal to interface with this program. 
@@ -223,8 +223,9 @@ Now click File -> Open, and open the .map file you are converting. Once it has l
 
 When you open the .vmf file you will see every brush is missing its texture. This is expected and a routine part of the porting process. There are two methods you can use to automatically apply all your textures to the relevant faces. 
 
-The first method is to open the .vmf file in any stock version of Hammer 4.x (HL2, TF2, CSS, etc.). Now navigate to File -> Convert WAD to VMT as shown in the image. This operation will scan your materials folder and apply textures to any faces with a matching name. This process goes through your materials folder alphabetically. If you have two textures that share the same name but in different folders, this process will apply the texture from the folder that comes first alphabetically. <br>
-IAMGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
+The first method is to open the .vmf file in any stock version of Hammer 4.x (HL2, TF2, CSS, etc.). Now navigate to File -> Convert WAD to VMT as shown in the image. This operation will scan your materials folder and apply textures to any faces with a matching name. This process goes through your materials folder alphabetically. If you have two textures that share the same name but in different folders, this process will apply the texture from the folder that comes first alphabetically.
+
+![convert_wad_to_vmt](static/images/goldsrc_to_source_guide/convert_wad_to_vmt.PNG)
 
 Alternatively you can use the optional software GoldSrc2Source for this step. Before running your .vmf file through this program read through each of the options and determine which you would like to use. Generally if you are using this program you want every setting enabled. Hover over the options to read more about them.
 
@@ -282,9 +283,9 @@ This entity also needs its FX Color set to "255 255 255" if it was originally "0
 Some sprite files may not convert perfectly and will require manually editing the texture itself. Once you have the texture use it like you would any other custom sprite texture. A reminder that by default Hammer hides sprite files when browsing for textures. Either edit the .fgd file to make them show up or manually enter the name of the file into the relevant key value of the env_sprite. In other words manually fill in the "Sprite Name" key value with `sprites/my_sprite.vmt`
 
 ### func_rotating, func_door_rotating
-These entities will be accompanied with a green cube using the "origin" texture on every face. In GoldSrc this was used to designate the point of rotation. This should be removed as this is now handled in the entity's key values. Make sure to remove any other invalid key values and change the Source equivalent key values to recreate the original behavior of the object.
+These entities will be accompanied with a green cube using the "origin" texture on every face as seen in the image below. In GoldSrc this was used to designate the point of rotation. This should be removed as this is now handled in the entity's key values. Make sure to remove any other invalid key values and change the Source equivalent key values to recreate the original behavior of the object.
 
-IMAGEHEREIMAGEHEREIMAGEHERE
+![goldsrc_port_origin_brush_for_rotating_entities](static/images/goldsrc_to_source_guide/goldsrc_port_origin_brush_for_rotating_entities.PNG)
 
 ### ambient_generic
 GoldSrc sounds usually are compatible with Source without any modification. Setup any GoldSrc sound like you would any other custom sound to use in your map.
@@ -301,13 +302,13 @@ Occasionally VTFEdit will stall on or fail to convert certain textures in a .wad
 
 Install SLADE and Open the troublesome .wad file. 
 
-IMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
+![slade_file_open](static/images/goldsrc_to_source_guide/slade_file_open.png)
 
-Read the output log of VTFEdit to find the texture causing issues; it is likely the last texture named. Select and delete this texture in SLADE and then save the .wad file. Repeat this process if VTFEdit stalls during the conversion again.
+Read the output log of VTFEdit to find the texture causing issues; it is likely the last texture named. Select and delete this texture in SLADE and then save the .wad file. Repeat this process if VTFEdit stalls during the conversion again. In the image below the "NULL" texture cannot be converted, so it is selected for deletion.
+
+![slade_wad_edit](static/images/goldsrc_to_source_guide/slade_wad_edit.png)
 
 The conversion of large wad .files in particular is prone to stalling. To remedy this, after the first stall in the conversion process note the last texture converted. Open the .wad file in SLADE. Now delete from the .wad file every texture that has already been converted. Save the .wad file and then continue the conversion. Repeat this process until you have all of the textures converted.
-
-IMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
 
 ### VTFEdit grayed out convert button
 Sometimes the Convert button in VTFEdit is grayed out despite the sections for both the .wad file and output folder being filled out. If this occurs try reselecting both the .wad file and the path for the output folder. If this does not work then change the paths for the .wad file and output folder to something else.
@@ -328,8 +329,11 @@ If you are using a texture for a texture light that you want to appear bright an
 ```
 
 ### Random black brush faces
-IMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHEREIMAGEHERE
-In any map with angled geometry you will likely find some faces of world geometry are black, while the rest of the surroundings are properly lit. When this occurs start by remaking the problematic brush ensuring all of its vertices are on grid. If this does not fix the issue do the same for any other nearby complex geometry. In general if you find a brush with a dimension that is not a whole number (e.g. 63.845), you should remake that brush.
+In any map with angled geometry you will likely find some faces of world geometry are black, while the rest of the surroundings are properly lit. An example of this scenario is shown in the image below. Note how the sand texture turns to black.
+
+When this occurs start by remaking the problematic brush ensuring all of its vertices are on grid. If this does not fix the issue do the same for any other nearby complex geometry. In general if you find a brush with a dimension that is not a whole number (e.g. 63.845), you should remake that brush.
+
+![goldsrc_port_bad_lighting_on_brush_face](static/images/goldsrc_to_source_guide/goldsrc_port_bad_lighting_on_brush_face.PNG)
 
 ### Map is dark or otherwise unlit
 Map wide lighting problems are usually due to one of two issues. One reason is that your map originally used texture lights. Texture light information is not saved from the decompile. You will have to go through the map, look for textures that look like they would emit light and then guess both the brightness and color.
@@ -337,8 +341,11 @@ Map wide lighting problems are usually due to one of two issues. One reason is t
 Otherwise try increasing your lightmap scale. Somewhere between 16 and 64 works for almost every map. When using texture lights this value will likely need to be on the higher end of this given range.
 
 ### Blue outlines on semi-transparent textures
-IMAGEHEREIMAGEHEREIMAGEHERE
-Textures partially made up of transparent sections will have an undesirable blue outline. This can be faintly seen around the holes in the fence texture in the provided image. The easiest fix is to find a comparable texture to replace it with. Fortress Forever in particular has numerous remakes of Half-life/Team Fortress Classic textures that serve as acceptable replacements. Otherwise the texture must be manually altered in your image-editing software of choice. The following paragraph should give you a better understanding of the problem to help you with fixing it.
+Textures partially made up of transparent sections will have an undesirable blue outline. This can be faintly seen around the holes in the fence texture in the provided image. 
+
+![goldsrc_transparent_texture_blue_halo](static/images/goldsrc_to_source_guide/goldsrc_transparent_texture_blue_halo.PNG)
+
+The easiest fix is to find a comparable texture to replace it with. Fortress Forever in particular has numerous remakes of Half-life/Team Fortress Classic textures that serve as acceptable replacements. Otherwise the texture must be manually altered in your image-editing software of choice. The following paragraph should give you a better understanding of the problem to help you with fixing it.
 
 The transparent pixels of a texture still store color data. The blue halo effect you see on textures with transparent parts is because those transparent pixels are still blue. When the game engine smoothes out the pixelated texture it draws from the colors of nearby pixels. This is where it finds the blue halo from. GoldSrc would interpret this blue as transparent. To fix this, color the transparent pixels with the average color of the rest of the texture and then make them transparent again. This will require some trial and error.
 
