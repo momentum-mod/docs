@@ -242,7 +242,7 @@ Now that you have a textured .vmf file you need to fix almost if not all of the 
 The only problem you should encounter with func_illusionary is that they will appear pitch black in-game. This is due to the FX Color being set to "0 0 0" after porting. Change this key value to "255 255 255" to fix this. If the entitiy was intended to be tinted a certain color, that value should be preserved properly.
 
 ### func_wall
-Similar to func_illusionary, func_wall will appear black if you do not change the FX Color to "255 255 255". 
+Similar to func_illusionary, func_wall will appear black if you do not change the FX Color to "255 255 255". Additionally some maps used func_wall entities with their FX Amount set to 0 for invisible walls. These should be replaced with regular brushes that use the tools texture, toolsinvisible, or in some cases a clip brush (toolsplayerclip or toolsclip).
 
 ### light, light_environment
 The brightness values used for GoldSrc will not give you the same result in Source. In general you will need to substantially increase the brightness of every light. Additionally, white lights will be exported as having RGB values of "255 255 128". While a select few maps have actually intended to use this yellow color for its lights, in almost every case the original light was white. Change the RGB values to "255 255 255" to restore the original white lighting.
@@ -314,7 +314,7 @@ The conversion of large wad .files in particular is prone to stalling. To remedy
 Sometimes the Convert button in VTFEdit is grayed out despite the sections for both the .wad file and output folder being filled out. If this occurs try reselecting both the .wad file and the path for the output folder. If this does not work then change the paths for the .wad file and output folder to something else.
 
 ### Missing clip brushes/invisible walls
-The decompilers are not capable of exporting clip brushes. You will have to go through the original map in-game and find where these should be to recreate them. This is easier if you are already familiar with the map and its game mode.
+The decompilers are not capable of exporting clip brushes. You will have to go through the original map in-game and find where these should be to recreate them. This is easier if you are already familiar with the map and its game mode. As mentioned previously in this guide, any func_wall entities being used as invisible walls should be replaced with world geometry using either of the toolsinvisible, toolsclip, or toolsplayerclip textures.
 
 ### Tiny holes in geometry
 The decompilers will often make tiny 1 unit or smaller holes in surfaces around or in complex geometry. Wherever you see a hole into the skybox/void you will have to remake the brush.
