@@ -30,7 +30,7 @@ If you have any questions about map submission, porting, etc... please ask in th
 - No racism, homophobia etc...
   - Submission is human-moderated and we’re not idiots, don’t submit obvious bait.
 - Spooky/horror vibes are fine but try to keep gore to minimum.
-- Sponsors are generally fine (e.g. surf_summer, sponsored by Fnatic), but absolutely none gambling sites (CS skins etc.)
+- Sponsors are generally fine (e.g. surf_summer, sponsored by Fnatic), but absolutely no gambling sites (CS skins etc.)
 
 ## Source Assets
 
@@ -130,6 +130,14 @@ All graphic settings are restored to their previous values after the screenshot 
 You should aim for 5 screenshots, of stuff that represents the map well. If in doubt, have a look at screenshots of existing maps for examples.
 
 # Map Guidelines
+
+## Compression
+
+BSP files can be compressed using either [BSPZIP](https://developer.valvesoftware.com/wiki/BSPZIP) or [Lumper](/guide/map_submission/map_porting/#lumper). This reduces file size on player's disks and significantly reduces hosting costs, so compression is _mandatory_.
+
+To compress a BSP with a Lumper, simple open it, check the _File > Save Compressed_ and save again.
+
+![Lumper Compression Option](/images/map_submission/lumper_compression.png)
 
 ## Entities
 
