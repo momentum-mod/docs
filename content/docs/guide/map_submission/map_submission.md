@@ -10,7 +10,7 @@ weight: 1
 
 # Introduction
 
-Momentum’s map submission system is how maps are officially added to Momentum Mod. Once approved, we host all map files and leaderboards, maps show up on the ingame map selector and website, and players are granted XP for playing them (and rank points, in the case of Ranked leaderboards).
+Momentum’s map submission system is how maps are officially added to Momentum Mod. Once approved, we host all map files and leaderboards, maps show up on the in-game map selector and website, and players are granted XP for playing them (and rank points, in the case of Ranked leaderboards).
 
 Map submission is open to everyone, but we have higher standard than e.g. GameBanana or Steam Workshop. Notably:
 
@@ -31,6 +31,23 @@ If you have any questions about map submission, porting, etc... please ask in th
   - Submission is human-moderated and we’re not idiots, don’t submit obvious bait.
 - Spooky/horror vibes are fine but try to keep gore to minimum.
 - Sponsors are generally fine (e.g. surf_summer, sponsored by Fnatic), but absolutely no gambling sites (CS skins etc.)
+
+## Naming
+
+### Prefixes
+
+Due to number of modes in Momentum with different approaches to map naming, plus the fact some maps are playable in multiple modes, we don't enforce strict gamemode prefixes, or rely on prefixes much in UI or code. In modes like Surf and Bhop, the vast majority of maps use `surf_`/`bhop_` as a prefix, whilst in Climb prefixes are historically all-over-the-place, and Defrag doesn't use prefixes at all. Trying to consolidate everything into a consistent scheme results in endless complications and may make those map names less recognizable to those familiar with them from other games.
+
+- For ports, maps should keep the same prefix/lack of prefix as their original game.
+  - The only exception is Rocket Jump and Sticky Jump, which should use `rj_` or `sj_` instead of `jump_`, unless the map is genuinely designed for both gamemodes equally (having an offclass route doesn't matter).
+- For new maps, should follow the convention for that gamemode, e.g. Surf should be `surf_` since the _vast_ majority of existing surf maps in those modes use that prefix, whilst Defrag doesn't have a prefix.
+  - For genuine hybrid-gamemode maps we're relatively open to anything, feel free to ask if unsure. Conventions may develop in the future, we'll see.
+
+### Suffixes
+
+Some versions of maps have prefixes like `_fix`, `_njv`, we remove those, since porting should always be taking into account fixes/removing jails anyway.
+
+Filename overlaps with other versions of maps from other games is inevitable, most Momentum ports require modifying the BSP in some way and we're not going to put `_mom` on everything! Maps can be updated during and after submission without changing names; the game handles versioning using file hashes, not file names.
 
 ## Source Assets
 
