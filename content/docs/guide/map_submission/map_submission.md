@@ -65,6 +65,8 @@ During submission you can specify what games your map uses assets from, which wi
 
 Of particular important are assets from less-common Source games (e.g. Portal 1/2), or CS:GO. In CS:GO's case, the assets require opting-in to a special CS2 branch on Steam, which most users won’t have done. Likewise for less common games, the vast majority of players won’t have those assets installed. We strongly recommend you don’t use those assets when making new maps, and it’s not our fault if players complain about missing textures.
 
+The _one_ case where we may allow packing official assets is from Source games we don't mount at all. For example, surf_mesa uses a stalactite prop from HL2: Episode 2, and visuals are significantly degraded without it. In that instance, we'll allow packing the single prop, but this is case-by-case and only acceptable for non-"Hero" assets, i.e. relatively generic, not a major part of that game's aesthetics.
+
 ## Other Copyright Assets
 
 TODO: Need to draft this with team, complicated
