@@ -25,7 +25,7 @@ Download: http://jack.hlfx.ru/en/features.html <br>
 J.A.C.K. is an alternative to GoldSrc Hammer with new features and abilities. You likely will not need these, but J.A.C.K. is still preferred over default GoldSrc Hammer as J.A.C.K. is able to open .map files that default GoldSrc Hammer cannot.
 ### VTFedit
 Download: https://github.com/NeilJed/VTFLib <br>
-VTFedit is a texture editing program that is generally useful for Source mapping. This is primary tool for converting GoldSrc textures into a format compatible with Source.
+VTFedit is a texture editing program that is generally useful for Source mapping. This is the primary tool for converting GoldSrc textures into a format compatible with Source.
 
 {{< hint info >}}Make sure you are using version 1.3.3 or older of VTFedit! While no longer maintained by its original author, newer forks of VTFedit have removed to ability the convert .wad files.{{< /hint >}}
 ## Optional software
