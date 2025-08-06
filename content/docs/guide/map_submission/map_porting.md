@@ -248,6 +248,12 @@ Maps ported from TF2 for RJ and SJ sometimes have sections which limit the playe
 
 Certain triggers can be added to a bsp file without having to recompile the map with the help of generated stripper configs that can be executed in Lumper. Tools available to help create these stripper configs include [vmf_to_stripper](https://github.com/benjl/vmf_to_stripper/) and [zoneToTrigger](https://github.com/Natanxp2/zoneToTrigger).
 
+## Stripper Configs
+
+Community servers often use Stripper configs for tweaking maps at runtime. Lumper can permanently apply the config using the "Stripper Config (File)" job, but **_do not blindly apply configs you find online_**! These configs can be useful as a reference, but it's almost always better to apply changes manually by editing the entity lump; many of the changes are not applicable to Momentum.
+
+- Tempus (RJ/SJ) https://github.com/waldotf/tempus_stripper_code
+
 # Common Issues Porting Older Maps
 
 When porting maps from older Source engine versions, there are a few issues that might come up due to incompatibilities with Strata Source.
