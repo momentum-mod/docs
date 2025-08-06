@@ -268,7 +268,7 @@ Skyboxes will sometimes fail to load in maps compiled with HDR. This is because 
 
 ## Corrupt HDR Cubemaps
 
-Some maps have corrupted HDR cubemaps. The cause of this issue is unknown and there are no known ways to fix this without decompiling and recompiling the map.
+Some maps from CS:S have corrupted HDR cubemaps in Momentum. If you notice this, you can try find working cubemaps from the CS:GO version. In cases we've seen they've been flat black textures, so you can replace HDR version with these VTFs (TODO: add these). [See this Github issue for discussion](https://github.com/momentum-mod/game/issues/2315#issuecomment-3097105058).
 
 ![Corrupt Cubemaps](/images/map_porting/corrupt_cubemaps.png)
 
