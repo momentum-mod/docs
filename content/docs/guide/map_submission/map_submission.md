@@ -142,7 +142,7 @@ Credits are split into 4 categories:
   - Bonus makers (good to include specific bonus numbers in the description)
   - Texture artists / modelers / assets
 - **Testers**
-  - Anyone that did significant testing
+  - Anyone that did significant testing during the map's development
   - Don't have to manually include everything that left reviews during public testing
 - **Special Thanks**
   - Miscellaneous, can be friends or whatever
