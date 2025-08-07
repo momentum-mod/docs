@@ -219,6 +219,8 @@ To compress a BSP with a Lumper, simple open it, check the _File > Save Compress
 
 ### Boosters
 
+# TODO: Move to porting guide!!
+
 - Convert segment start boosters to trigger_setspeed (avoid jump/duck strats). Also use the "strict mode" option wherever possible.
 - Repeatable trigger_push/trigger_multiple boost (crouch boost, quick circle back around, and/or quick exit + enter side of trigger):
   - Add a cooldown after exiting the boost if it is not on the ground:
@@ -230,9 +232,6 @@ To compress a BSP with a Lumper, simple open it, check the _File > Save Compress
   - Change `OnEndTouch` output to `OnJump`
 - Consider changing gravity-based vertical boosters to basevelocity-based or trigger_setspeed if possible. Gravity boosters have an awkward acceleration profile which can be annoying, but sometimes removing the acceleration period by converting to basevel/setspeed doesn't work depending on the map.
 
-### Teleports
-
-> TODO: Shouldn't all this be in porting guide?
 
 #### Fix Landmark Teleport Angles
 
@@ -247,6 +246,8 @@ To compress a BSP with a Lumper, simple open it, check the _File > Save Compress
 
 - Moving/rotating brushes should have cycles that are slow enough to be consistent. Otherwise they should be frozen, slowed down, or deleted.
 - **Note:** When save states are implemented, they will reset entities after starting a stage segment which will make it easier to hit cycles more consistently.
+
+# TODO: this can stay here
 
 ## Sounds/Music
 
