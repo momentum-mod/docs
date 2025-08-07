@@ -167,6 +167,44 @@ All graphic settings are restored to their previous values after the screenshot 
 
 You should aim for 5 screenshots, of stuff that represents the map well. If in doubt, have a look at screenshots of existing maps for examples.
 
+# The Submission Pipeline
+
+Maps go through several stages before being they can be approved:
+
+## Private Testing
+
+This is an opt-in stage for mappers that want to use our system to share a map with specific people. Maps will show up in the "Beta" map selector tab for you and anyone you invite.
+
+It's completely optional - obviously you can share maps manually without using Momentum stuff. Our site hopefully just makes sharing updates easier, plus leaderboards and replays work the same as the rest of Momentum.
+
+Zones are required due to how our backend works. At minimum you'll need to create a start and end zone to first submit the map, but these can be improved at any point later on. Maps can be in Private Testing for as long as you want, so long as the map is being actively worked on.
+
+Once you're ready for public testing, go to the Map Edit page, and change the status to Content Approval.
+
+## Content Approval
+
+Maps need basic approval from a mod or reviewer before being publicly visible. As soon you change a map to Content Approval we get notified internally and will review ASAP. Once approval, the map automatically enters Public Testing.
+
+## Public Testing
+
+Maps spend a minimum of 1 week in public testing, where any player can play the map in-game via the "Beta" tab in the map selector, and leave reviews via the map page on the dashboard.
+
+Some reviews are subjective and won't require fixing. For technical issues however official reviewers may mark a review "Requires Resolving", especially for flagging porting issues.
+
+## Final Approval
+
+Once a week of Public Testing has elapsed and all "Requires Resolving" reviews are resolved, you can transfer to Final Approval via the Map Edit page.
+
+During Final Approval a mod/admin sets which leaderboards are Ranked/Unranked/Disabled and what their tiers are. This will usually be in line with what you suggest, but could change if others disagree (TODO: Should have more docs on tiering in the future!).
+
+Once this is done the map is fully Approved and appears in the Ranked/Unranked tabs of the map selector depending on leaderboards for the player's current gamemode.
+
+{{< hint warning >}}
+
+Once a map is Approved you no longer have the ability to submit new versions or modify the map in any way, including leaderboards. Please make sure you're completely happy with stuff before you enter Final Approval!
+
+{{< /hint >}}
+
 # Map Guidelines
 
 ## Compression
