@@ -91,13 +91,11 @@ To submit a map you'll need
   - If you're submitting a WIP map to private testing, you at least need a minimal zone file with a main track start and end zone.
 - Up to 5 screenshots of the map (see [Screenshots](#screenshots))
 - Suggestions for tiers of each leaderboard and whether they'll be ranked or not (see [Leaderboards](#leaderboards))
-- Credits (see [Credits TODO!!!](#credits))
+- Credits (see [Credits](#credits))
 - A short description of the map
   - For ports, we usually use GameBanana description or similar if exists, though worth removing things related to stuff removed during porting like jails in Surf, or recommended server settings.
 - The original release date of the map
   - For ports, try to find original date on GameBanana or similar. At worst, ask around and set to Jan 1st of the year you think it was released.
-
-## TODO EVERYTHING ELSE
 
 ## Leaderboards
 
@@ -131,6 +129,27 @@ There's also the following, rarer types of leaderboards:
   - This is either for maps that are fundamentally impossible to beat in a certain mode, e.g. no Rocket Jump map can be beaten in Surf
   - Or for gamemodes that differ only in certain movement variables, e.g. a map with a Bhop leaderboard can never have a Surf leaderboard since that'd just be lower tickrate/airaccel bhop.
 - **In Submission** - At any point during map submission, we generate leaderboards for _every_ gamemode we don't rule out in the way we rule out Disabled leaderboards. Only gamemodes with leaderboards suggested by the submitter are visible in the Beta tab in the Map Selector.
+
+## Credits
+
+Credits are split into 4 categories:
+
+- **Authors**
+  - For collabs this can be multiple people
+  - Doesn't usually include artists, but can be if they were essential to overall vision of the map and they made lots of original stuff
+  - Shouldn't include bonus makers!
+- **Contributors**
+  - Bonus makers (good to include specific bonus numbers in the description)
+  - Texture artists / modelers / assets
+- **Testers**
+  - Anyone that did significant testing
+  - Don't have to manually include everything that left reviews during public testing
+- **Special Thanks**
+  - Miscellaneous, can be friends or whatever
+
+Credits are either genuine Momentum players, or "placeholders". Placeholders are Momentum accounts don't have a real Steam account associated with them -- generally people who've never created a Momentum account (by launching the game on Steam, or signing in to our [dashboard](https://dashboard.momentum-mod.org) for the first time). If you know that someone _doesn't_ have a Momentum account, it's still worth searching for their username since there may be an existing account for them already. If that person signs up for Momentum in the future, they should contact a moderator and any placeholder accounts referring them can be merged into their real account.
+
+Map porters don't need to add themselves to credits. For any map with type "Port" (as opposed to "Original"), the porter is the submitter of the map, which we track separately, whilst we try to limit credits to people involved when the map was first created. We'll have profile stats and badges in the future for tracking credits and porters! The one exception is when a map was significantly changed or restyled during porting.
 
 ## Screenshots
 
