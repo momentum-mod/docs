@@ -10,7 +10,7 @@ weight: 2
 
 # Introduction
 
-This guide gives an overview of all the steps required to officially port a map into Momentum Mod.
+This guide gives an overview of all the steps required to officially port a map to Momentum Mod.
 
 Porting is open to everyone, but the number one rule for porters is to **not** significantly change an existing map. We appreciate porting work but the map ultimately belongs to the author, and porters should not make significant visual or gameplay changes on maps without the author's permission (including Easter eggs, sorry!).
 
