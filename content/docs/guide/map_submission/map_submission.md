@@ -40,12 +40,12 @@ Due to number of modes in Momentum with different approaches to map naming, plus
 
 - For ports, maps should keep the same prefix/lack of prefix as their original game.
   - The only exception is Rocket Jump and Sticky Jump, which should use `rj_` or `sj_` instead of `jump_`, unless the map is genuinely designed for both gamemodes equally (having an offclass route doesn't matter).
-- For new maps, should follow the convention for that gamemode, e.g. Surf should be `surf_` since the _vast_ majority of existing surf maps in those modes use that prefix, whilst Defrag doesn't have a prefix.
+- For new maps, follow the convention for that gamemode, e.g. Surf should be `surf_` since the _vast_ majority of existing surf maps in those modes use that prefix, whilst Defrag doesn't have a prefix.
   - For genuine hybrid-gamemode maps we're relatively open to anything, feel free to ask if unsure. Conventions may develop in the future, we'll see.
 
 ### Suffixes
 
-Some versions of maps have prefixes like `_fix`, `_njv`, we remove those, since porting should always be taking into account fixes/removing jails anyway.
+Some versions of maps have sufffixes like `_fix`, `_njv`; we remove those, since porting should always be taking into account fixes/removing jails anyway.
 
 Filename overlaps with other versions of maps from other games is inevitable, most Momentum ports require modifying the BSP in some way and we're not going to put `_mom` on everything! Maps can be updated during and after submission without changing names; the game handles versioning using file hashes, not file names.
 
@@ -77,7 +77,7 @@ Map leaderboards can be either ranked or unranked, where unranked maps don’t g
 
 Maps should be made with at least one Momentum gamemode in mind, so no deathrun, trade maps or whatever. A notable exception are HL2 maps given they play well in various modes especially Ahop.
 
-Try to avoid overly dark maps. If you’re mapping on a higher than default brightness setting, it’s your fault if people find your map too dark. The mom_screenshot_official command forces your game to default brightness!
+Try to avoid overly dark maps. If you’re mapping on a higher than default brightness setting, it’s your fault if people find your map too dark. The `mom_screenshot_official` command forces your game to default brightness!
 
 # Preparing a map for submission
 
@@ -143,13 +143,13 @@ Credits are split into 4 categories:
   - Texture artists / modelers / assets
 - **Testers**
   - Anyone that did significant testing during the map's development
-  - Don't have to manually include everything that left reviews during public testing
+  - You don't have to manually include everyone that left reviews during public testing
 - **Special Thanks**
   - Miscellaneous, can be friends or whatever
 
 Credits are either genuine Momentum players, or "placeholders". Placeholders are Momentum accounts don't have a real Steam account associated with them -- generally people who've never created a Momentum account (by launching the game on Steam, or signing in to our [dashboard](https://dashboard.momentum-mod.org) for the first time). If you know that someone _doesn't_ have a Momentum account, it's still worth searching for their username since there may be an existing account for them already. If that person signs up for Momentum in the future, they should contact a moderator and any placeholder accounts referring them can be merged into their real account.
 
-Map porters don't need to add themselves to credits. For any map with type "Port" (as opposed to "Original"), the porter is the submitter of the map, which we track separately, whilst we try to limit credits to people involved when the map was first created. We'll have profile stats and badges in the future for tracking credits and porters! The one exception is when a map was significantly changed or restyled during porting.
+Map porters should, by default, not add themselves to credits. For any map with type "Port" (as opposed to "Original"), the porter is the submitter of the map, which we track separately. We try to limit credits to people involved when the map was first created, but we'll have profile stats and badges in the future for tracking credits and porters! The one exception is when a map was significantly changed or restyled during porting.
 
 ## Screenshots
 
@@ -211,7 +211,7 @@ Once a map is Approved you no longer have the ability to submit new versions or 
 
 BSP files can be compressed using either [BSPZIP](https://developer.valvesoftware.com/wiki/BSPZIP) or [Lumper](/guide/map_submission/map_porting/#lumper). This reduces file size on player's disks and significantly reduces hosting costs, so compression is _mandatory_.
 
-To compress a BSP with a Lumper, simple open it, check the _File > Save Compressed_ and save again.
+To compress a BSP with Lumper, simply open it, check the _File > Save Compressed_ box and save again.
 
 ![Lumper Compression Option](/images/map_submission/lumper_compression.png)
 
@@ -231,7 +231,6 @@ To compress a BSP with a Lumper, simple open it, check the _File > Save Compress
 - "Launch pad" boosters that can be activated from the side on the way up (e.g. rising platforms with jump boosts)
   - Change `OnEndTouch` output to `OnJump`
 - Consider changing gravity-based vertical boosters to basevelocity-based or trigger_setspeed if possible. Gravity boosters have an awkward acceleration profile which can be annoying, but sometimes removing the acceleration period by converting to basevel/setspeed doesn't work depending on the map.
-
 
 #### Fix Landmark Teleport Angles
 
