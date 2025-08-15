@@ -199,7 +199,7 @@ During Final Approval a mod/admin sets which leaderboards are Ranked/Unranked/Di
 
 Once this is done the map is fully Approved and appears in the Ranked/Unranked tabs of the map selector depending on leaderboards for the player's current gamemode.
 
-{{< hint warning >}}
+{{< hint danger >}}
 
 Once a map is Approved you no longer have the ability to submit new versions or modify the map in any way, including leaderboards. Please make sure you're completely happy with stuff before you enter Final Approval!
 
@@ -217,17 +217,10 @@ To compress a BSP with Lumper, simply open it, check the _File > Save Compressed
 
 ## Entities
 
-#### Fix Landmark Teleport Angles
-
-- Our trigger_teleport logic uses CS:GO's landmark teleport logic, which is different from older games. It is backwards compatible with older games, but achieving compatibility may require simple adjustments to entity props.
-- Landmark teleports originally made for older games may need to be changed to make the angles of the teleport destination and landmark entity match, and disable `UseLandmarkAngles` as well.
-
 ### Moving Brushes
 
 - Moving/rotating brushes should have cycles that are slow enough to be consistent. Otherwise they should be frozen, slowed down, or deleted.
 - **Note:** When save states are implemented, they will reset entities after starting a stage segment which will make it easier to hit cycles more consistently.
-
-# TODO: this can stay here
 
 ## Sounds/Music
 
@@ -235,7 +228,7 @@ Getting map sounds to be affected by the correct volume sliders has historically
 
 In your sounds folder, put all sounds (where relevant) in the following subfolders (make sure to update entities/soundscapes paths). Momentum will then load those sounds in those mix groups and appropriate volume sliders should apply.
 
-Sorry if it messes with pakfile organization, but it's a hard requirement: un-mutable music is notoriously annoying and it's essential for all map sound to use the right mix groups.
+This might mess with existing pakfile organization, but it's a hard requirement: un-mutable music is notoriously annoying, all map sounds must use the correct mix groups.
 
 | Channel  | Folder   |
 | -------- | -------- |
@@ -245,19 +238,8 @@ Sorry if it messes with pakfile organization, but it's a hard requirement: un-mu
 | Weapons  | weapon/  |
 | UI       | ui/      |
 
-## Collectibles
-
-> TODO: PORTING GUIDE!!
-
-- Convert complicated collectible system triggers to [Momentum's collectible system entities](/guide/collectibles/) (far less complicated and facilitates future collectibles HUD work)
-
-## Entity class/property restrictions
-
-- Use [Lumper's](https://github.com/momentum-mod/lumper/releases) entity review tool to check for entities that should be removed or replaced.
-
 ## Miscellaneous
 
-- (Surf Only) Remove jail timers and teleports from old maps.
 - Make sure the map isn't located far from the origin for no reason (should be reasonably centered in Hammer). This will minimize any potential for floating point errors, especially for new maps made with Strata's expanded coordinate limits.
 - Make sure the map has physics collisions and that the collisions do not have VPhysics shrinkage
   - **Not Yet Implemented:** Compiling without shrinkage will be a VBSP command line flag which our standard compile settings will include, and then Lumper can check a new flag in the physics lump to make sure this was used. Maps not compiled with Strata's VBSP will need to be re-run through our VBSP with a similar NYI flag (BSP input and BSP output).

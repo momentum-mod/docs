@@ -190,14 +190,32 @@ Some old surf maps use a `logic_timer` to teleport all players to a jail after a
 
 ![Lumper Teleports](/images/map_porting/lumper_teleports.png)
 
+### Fix Landmark Teleport Angles
+
+{{< hint warning >}} TODO: Are we really keeping this? Doesn't new behaviour make pretty redundant? If so could show Entity Tools usage {{< /hint >}}
+
+- Our trigger_teleport logic uses CS:GO's landmark teleport logic, which is different from older games. It is backwards compatible with older games, but achieving compatibility may require simple adjustments to entity props.
+- Landmark teleports originally made for older games may need to be changed to make the angles of the teleport destination and landmark entity match, and disable `UseLandmarkAngles` as well.
+
 ### func_button
 
 Many maps in TF2 use the `OnDamaged` output on buttons. In Momentum Mod, `OnDamaged` fires once per instance of damage. This means a button using this output will fire up to 9 times when shot by a shotgun.  
 If this causes unintended effects (such as incrementing a `math_counter` too many times), then the following changes will make the button fire the output only once upon being shot:
+
 - Enable the `Damage Activates` flag if not already enabled (by adding 512 to `spawnflags`)
 - Change `OnDamaged` outputs to `OnPressed`
 
 If buttons are taking forever to reset or moving when they shouldn't be, enable the `Don't Move` spawnflag as well (by adding 1 to `spawnflags`).
+
+### Moving Brushes
+
+Some maps have moving brushes which have cycles that are too fast to be hit consistently which effectively introduces RNG to competitive runs (e.g. surf_fruits stage 5 / strawberry). If there's community consensus on this (existing servers usually already have that), they should be frozen or deleted.
+
+### Collectibles
+
+Complicated collectible system triggers can be converted to [Momentum's collectible system entities](/guide/collectibles/). This is far less complicated and, facilitates future collectibles HUD work.
+
+If a map's collectibles amount to simply hitting several triggers in arbitrary order, it may work best to just zone with unordered checkpoints. This provides practically the gameplay, and is clearer in game UI!
 
 ### Stripper Configs
 
