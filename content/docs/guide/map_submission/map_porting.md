@@ -254,6 +254,15 @@ Community servers often use Stripper configs for tweaking maps at runtime. Lumpe
 
 - Tempus (RJ/SJ) https://github.com/waldotf/tempus_stripper_code
 
+## func_button
+
+Many maps in TF2 use the `OnDamaged` output on buttons. In Momentum Mod, `OnDamaged` fires once per instance of damage. This means a button using this output will fire up to 9 times when shot by a shotgun.  
+If this causes unintended effects (such as incrementing a `math_counter` too many times), then the following changes will make the button fire the output only once upon being shot:
+- Enable the `Damage Activates` flag if not already enabled (by adding 512 to `spawnflags`)
+- Change `OnDamaged` outputs to `OnPressed`  
+
+If buttons are taking forever to reset or moving when they shouldn't be, enable the `Don't Move` spawnflag as well (by adding 1 to `spawnflags`).
+
 # Common Issues Porting Older Maps
 
 When porting maps from older Source engine versions, there are a few issues that might come up due to incompatibilities with Strata Source.
