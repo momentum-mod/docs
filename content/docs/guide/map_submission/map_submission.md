@@ -126,8 +126,8 @@ There's also the following, rarer types of leaderboards:
   - Generated when no Ranked/Unranked leaderboard was set during Final Approval, but we don't automatically rule it out as Disabled.
   - If a hidden leaderboard gets popular, we can consider moving it to Unranked
 - **Disabled** - Has no leaderboard
-  - This is either for maps that are fundamentally impossible to beat in a certain mode, e.g. no Rocket Jump map can be beaten in Surf
-  - Or for gamemodes that differ only in certain movement variables, e.g. a map with a Bhop leaderboard can never have a Surf leaderboard since that'd just be lower tickrate/airaccel bhop.
+  - This is decided programmatically, and rules out certain combinations we don't want to allow.
+  - For example we don't allow Bhop on a Surf map, since that'd just be Surf with lower tickrate/airaccel (_100tick Surf_ might _be a thing in the future, but we're wary of potential leaderboards splitting. In the meantime, we don't want people using Bhop instead!_).
 - **In Submission** - At any point during map submission, we generate leaderboards for _every_ gamemode we don't rule out in the way we rule out Disabled leaderboards. Only gamemodes with leaderboards suggested by the submitter are visible in the Beta tab in the Map Selector.
 
 ## Credits
