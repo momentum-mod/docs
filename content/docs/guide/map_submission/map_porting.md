@@ -125,15 +125,15 @@ Entities can also be modified in Hammer without having to recompile the entire B
 
 # Required Modifications
 
-## Entity Review
+## Entities
+
+### Entity Review
 
 Lumper's entity review tool will point out entities that are not supported by Momentum, or should be replaced with a different entity.
 
 If an entity is marked as **Invalid** or **Warning**, it will generally have comments explaining the issue and what to replace it with. Invalid entities **must** be replaced or removed, while warnings are suggestions that are worth reviewing.
 
 Pressing the "Edit" button on the right side of an entity in the Entity Review page takes you to the Entity Editor, and filters the list by that entity's classname. If you're not sure of the entity's purpose, teleporting in-game using [Game Sync](#game-sync) is helpful. You can also press the **VDC Reference** button on a page for that entity to see its docs on the Valve wiki. And if in doubt, please ask for help in the _#map-porting_ channel on Discord!
-
-## In-game Entity Modifications
 
 ### Boost Ramps
 
@@ -189,6 +189,21 @@ Some old surf maps use a `logic_timer` to teleport all players to a jail after a
 ![Lumper Timer](/images/map_porting/lumper_timer.png)
 
 ![Lumper Teleports](/images/map_porting/lumper_teleports.png)
+
+### func_button
+
+Many maps in TF2 use the `OnDamaged` output on buttons. In Momentum Mod, `OnDamaged` fires once per instance of damage. This means a button using this output will fire up to 9 times when shot by a shotgun.  
+If this causes unintended effects (such as incrementing a `math_counter` too many times), then the following changes will make the button fire the output only once upon being shot:
+- Enable the `Damage Activates` flag if not already enabled (by adding 512 to `spawnflags`)
+- Change `OnDamaged` outputs to `OnPressed`
+
+If buttons are taking forever to reset or moving when they shouldn't be, enable the `Don't Move` spawnflag as well (by adding 1 to `spawnflags`).
+
+### Stripper Configs
+
+Community servers often use Stripper configs for tweaking maps at runtime. Lumper can permanently apply the config using the "Stripper Config (File)" job, but **_do not blindly apply configs you find online_**! These configs can be useful as a reference, but it's almost always better to apply changes manually by editing the entity lump; many of the changes are not applicable to Momentum.
+
+- Tempus (RJ/SJ) https://github.com/waldotf/tempus_stripper_code
 
 ## Textures
 
@@ -247,21 +262,6 @@ _Note: Path refactoring is very technically complex and has had issues in the pa
 Maps ported from TF2 for RJ and SJ sometimes have sections which limit the player's ammo. If infinite ammo throughout the map would significantly change the gameplay experience, consider adding ammo triggers to the map. Information concerning the ammo system in Momentum Mod can be found at [Ammo System](/guide/mapping/ammo_system).
 
 Certain triggers can be added to a bsp file without having to recompile the map with the help of generated stripper configs that can be executed in Lumper. Tools available to help create these stripper configs include [vmf_to_stripper](https://github.com/benjl/vmf_to_stripper/) and [zoneToTrigger](https://github.com/Natanxp2/zoneToTrigger).
-
-## Stripper Configs
-
-Community servers often use Stripper configs for tweaking maps at runtime. Lumper can permanently apply the config using the "Stripper Config (File)" job, but **_do not blindly apply configs you find online_**! These configs can be useful as a reference, but it's almost always better to apply changes manually by editing the entity lump; many of the changes are not applicable to Momentum.
-
-- Tempus (RJ/SJ) https://github.com/waldotf/tempus_stripper_code
-
-## func_button
-
-Many maps in TF2 use the `OnDamaged` output on buttons. In Momentum Mod, `OnDamaged` fires once per instance of damage. This means a button using this output will fire up to 9 times when shot by a shotgun.  
-If this causes unintended effects (such as incrementing a `math_counter` too many times), then the following changes will make the button fire the output only once upon being shot:
-- Enable the `Damage Activates` flag if not already enabled (by adding 512 to `spawnflags`)
-- Change `OnDamaged` outputs to `OnPressed`  
-
-If buttons are taking forever to reset or moving when they shouldn't be, enable the `Don't Move` spawnflag as well (by adding 1 to `spawnflags`).
 
 # Common Issues Porting Older Maps
 

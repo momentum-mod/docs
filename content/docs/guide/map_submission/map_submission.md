@@ -222,10 +222,6 @@ To compress a BSP with Lumper, simply open it, check the _File > Save Compressed
 - Our trigger_teleport logic uses CS:GO's landmark teleport logic, which is different from older games. It is backwards compatible with older games, but achieving compatibility may require simple adjustments to entity props.
 - Landmark teleports originally made for older games may need to be changed to make the angles of the teleport destination and landmark entity match, and disable `UseLandmarkAngles` as well.
 
-#### Drop Teleports (Surf Only)
-
-- Set VelocityMode => "Keep Negative Z Velocity Only" on most trigger_teleport entities. Stage teleports (except "staged-linear" maps like omnific) should have this set even if they already have a teleport box.
-
 ### Moving Brushes
 
 - Moving/rotating brushes should have cycles that are slow enough to be consistent. Otherwise they should be frozen, slowed down, or deleted.
