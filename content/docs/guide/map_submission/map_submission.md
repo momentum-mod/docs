@@ -217,21 +217,6 @@ To compress a BSP with Lumper, simply open it, check the _File > Save Compressed
 
 ## Entities
 
-### Boosters
-
-# TODO: Move to porting guide!!
-
-- Convert segment start boosters to trigger_setspeed (avoid jump/duck strats). Also use the "strict mode" option wherever possible.
-- Repeatable trigger_push/trigger_multiple boost (crouch boost, quick circle back around, and/or quick exit + enter side of trigger):
-  - Add a cooldown after exiting the boost if it is not on the ground:
-    - `OnEndTouch !self,Disable,,0`
-    - `OnEndTouch !self,Enable,,1`
-  - Convert to trigger_multiple `OnJump` (or possibly `OnLand`) if the boost is on the ground
-    - Alternatively, if the "constant push while on the ground" of trigger_push is desirable, it could become a trigger_push with surface collision filter. This is only recommended if the ground is completely flat. If there are multiple surfaces, then the boost will re-apply for every surface that you touch.
-- "Launch pad" boosters that can be activated from the side on the way up (e.g. rising platforms with jump boosts)
-  - Change `OnEndTouch` output to `OnJump`
-- Consider changing gravity-based vertical boosters to basevelocity-based or trigger_setspeed if possible. Gravity boosters have an awkward acceleration profile which can be annoying, but sometimes removing the acceleration period by converting to basevel/setspeed doesn't work depending on the map.
-
 #### Fix Landmark Teleport Angles
 
 - Our trigger_teleport logic uses CS:GO's landmark teleport logic, which is different from older games. It is backwards compatible with older games, but achieving compatibility may require simple adjustments to entity props.

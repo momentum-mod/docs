@@ -153,7 +153,7 @@ The player can sometimes activate a boost multiple times in quick succession wit
 
 2. **Constant Push Floor Boosts** - If the boost is `trigger_push` based and it is important that the player is continuously pushed while inside it (not just when they jump or exit the trigger), you can leave it as a `trigger_push`, but use a `filter_momentum_surface_collision` filter with the "Touching standable surfaces" option so the boost only applies when the player is on the ground. You should only use this option if the floor is completely flat, otherwise the boost will re-apply every time the player touches another surface. If you have the original VMF and can recompile the map, removing the trigger and replacing the surface below it with a `func_conveyor` is also an option.
 
-3. **Surf Ramp Boosts and Other Airborne Boosts** - When there is no ground for the player to jump on, a boost can be fixed by adding a cooldown so the player has to wait before re-activating the trigger. The Entity Tools trigger cooldown option will configure the trigger to disable for one second when the player exits it.
+3. **Surf Ramp Boosts and Other Airborne Boosts** - When there is no ground for the player to jump on, a boost can be fixed by temporarily disabling itself on exit, so the player has to wait before re-activating the trigger. This is achieved using `OnEndTouch` outputs, e.g. `OnEndTouch !self,Disable,,0` and `OnEndTouch !self,Enable,,1`. The Cooldown option in Entity Tools lets you easily create and configure this for existing triggers.
 
 ![Surf Ramp Boost](/images/map_porting/surf_ramp_boost.png)
 
