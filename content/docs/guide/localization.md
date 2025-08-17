@@ -66,7 +66,7 @@ At [the Project dashboard](https://poeditor.com/projects/view?id=156379), click 
 
 ![](/images/localization/loc-add-terms.jpg)
 
-Add the new term referenced in the code, and any context if you'd like to help explain how the term is being used.
+Add the new term referenced in the code, and context explaining how the term is being used. (Added context helps the translators a great deal!)
 
 ![](/images/localization/loc-new-term.jpg)
 
@@ -76,17 +76,19 @@ After the term is added, head to the English section, and give it the proper Eng
 
 For adding many terms at a time, common when making entirely new pages or components, it's easiest to add all the new terms to a JSON file and import them all at once.
 
-Create a JSON file in the below format, where terms are the token names (**without** a `#` at the start!) and definitions are the English strings.
+Create a JSON file in the below format, where terms are the token names (**without** a `#` at the start!) and definitions are the English strings. You can also directly supply context strings for the translators.
 
 ```json
 [
   {
     "term": "",
-    "definition": ""
+    "definition": "",
+    "context": ""
   },
   {
     "term": "",
-    "definition": ""
+    "definition": "",
+    "context": ""
   }
 ]
 ```
