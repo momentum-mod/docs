@@ -12,27 +12,31 @@ If you want to send the player in a specific direction, use a [catapult](/entity
 
 ## Keyvalues
 
-> **Keep horizontal speed** (KeepHorizontalSpeed&lt;**integer**&gt;)
+> **Horizontal speed mode** (HorizontalSpeedMode&lt;**integer**&gt;)
 
-Whether or not the trigger affects the player's horizontal (x/y axis) speed:
+How the trigger affects the player's horizontal (x/y axis) speed:
 
-- **0**: Affects horizontal speed. **(Default)**
-- **1**: Does not affect horizontal speed.
+- **0**: Ignore Mode: Does not affect horizontal speed. **(Default)**
+- **1**: Set Exact Mode: Sets the horizontal speed exactly to HorizontalSpeedAmount.
+- **2**: Increase Only Mode: Increases the horizontal speed by the HorizontalSpeedAmount.
+- **3**: Decrease Only Mode: Decreases the horizontal speed by the HorizontalSpeedAmount.
 
-> **Keep vertical speed** (KeepVerticalSpeed&lt;**integer**&gt;)
+> **Vertical speed mode** (VerticalSpeedMode&lt;**integer**&gt;)
 
-Whether or not the trigger affects the player's vertical (z axis) speed:
+How the trigger affects the player's vertical (z axis) speed:
 
-- **0**: Affects vertical speed. **(Default)**
-- **1**: Does not affect vertical speed.
+- **0**: Ignore Mode: Does not affect vertial speed. **(Default)**
+- **1**: Set Exact Mode: Sets the vertial speed exactly to VerticalSpeedAmount.
+- **2**: Increase Only Mode: Increases the vertical speed by the VerticalSpeedAmount.
+- **3**: Decrease Only Mode: Decreases the vertical speed by the VerticalSpeedAmount.
 
 > **Horizontal speed amount** (HorizontalSpeedAmount&lt;**float**&gt;)
 
-The horizontal speed to set the player to. **Defaults to 500u/s.**
+The horizontal speed used by HorizontalSpeedMode to change the speed. **Defaults to 500u/s.**
 
 > **Vertical speed amount** (VerticalSpeedAmount&lt;**float**&gt;)
 
-The vertical speed to set the player to. **Defaults to 100u/s.**
+The vertical speed used by VerticalSpeedMode to change the speed. **Defaults to 100u/s.**
 
 > **Direction** (Direction&lt;**angle**&gt;)
 
