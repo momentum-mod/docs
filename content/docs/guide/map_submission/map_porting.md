@@ -273,7 +273,9 @@ The game allows players to set a volume level for each of several sound channels
 
 Lumper makes this process easy by automatically detecting entities and soundscapes that use these sounds (in fact it works for all assets!) and updating their paths. Simply drag-and-drop the sounds you want to move into the appropriate folder, then press "Yes" on the dialog that appears.
 
-_Note: Path refactoring is very technically complex and has had issues in the past, so it's worth testing in game_
+![Lumper Sound Moving](/images/map_porting/lumper_sound_moving.png)
+
+_Note: Path refactoring is very technically complex and has had issues in the past, so it's worth checking logs make sense and testing in game_
 
 ## Limited Ammo Triggers
 
