@@ -99,15 +99,23 @@ Then, go to the Import page on the POEditor dashboard, upload that JSON file, an
 
 ### Changing Term Values
 
-If there's a term that should have its text updated, find it in the English section and update its value.
+If there's a term that should have its text updated, search for it on the **terms** page (only available to admins), click the translation button and update its value. Afterwards click on the term (and make sure "Set all translations as fuzzy" is selected) and click the Save button.
 
-This will automatically mark the term as Fuzzy, which will alert the other languages that there has been an update to the value, and that it needs re-translation.
+This will alert the other languages that there has been an update to the value, and that it needs re-translation.
+
+![](/images/localization/loc-cascade-fuzzy.jpg)
 
 ### Testing Strings from POEditor
 
 There's a helpful Python script to pull in the latest translation work, found inside `Momentum Mod Playtest/momentum/tools/`, called `get_poeditor_strings.py`.
 
-This script requires [the latest version of Python 3](https://www.python.org/downloads/), and [a readonly POEditor API token](https://poeditor.com/account/api) to be used correctly.
+This script requires [the latest version of Python 3](https://www.python.org/downloads/), the `requests` and `vdf` packages to be installed, and [a readonly POEditor API token](https://poeditor.com/account/api) to be used correctly.
+
+Install `requests` with `pip install requests`.
+
+Install `vdf` with `pip install vdf`.
+
+In the top-right of API Access settings, generate a readonly API key. When you copy it, make sure it is the whole key (as most of it is very blurred by default, and may be almost invisible if you have an extension such as Dark Reader enabled).
 
 To run this script, open a terminal and set the following variables:
 
@@ -126,7 +134,7 @@ export POEDITOR_API_KEY=<your read-only API key>
 ```
 
 {{< hint info >}}
-You may want to add these to your system variables so that you don't have to set them every time. On Windows this is via `Edit System Environment variables`, on Linux, via your `.bashrc` file.
+You may want to add these to your system variables so that you don't have to set them every time. On Windows this is via `Edit System Environment variables` (may require a restart to take effect), on Linux, via your `.bashrc` file.
 {{< /hint >}}
 
 And then you can call the script:
