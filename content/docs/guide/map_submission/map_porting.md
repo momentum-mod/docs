@@ -316,3 +316,15 @@ Strata Source has stricter VMT parsing rules and will not load VMTs with syntax 
 ![Invalid VMT](/images/map_porting/invalid_vmt.png)
 
 ![Invalid VMT Lumper](/images/map_porting/invalid_vmt_lumper.png)
+
+## Missing Shadows on CS:GO Maps
+
+Some CS:GO maps use cascaded shadow maps (CSM) to create more detailed shadows. If these maps do not use an `env_cascade_light` entity, then these detailed shadows will not display in Momentum Mod.
+
+![Missing CSM Entity](/images/map_porting/csm_broken.png)
+
+![Working CSM](/images/map_porting/csm_working.png)
+
+In order to fix this, add a `env_cascade_light` with Lumper:
+
+![CSM Lumper](/images/map_porting/csm_lumper.png)
