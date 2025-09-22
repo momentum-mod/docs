@@ -8,6 +8,10 @@ tags:
 weight: 3
 ---
 
+This checklist is intended for experienced map porters that already understand general porting concepts.
+
+For more in-depth information on map porting, please see the [map porting](../map_porting) and [zoning](../map_zoning) guides.
+
 # Step 1: Review zones
 
 - [ ] Zone points are placed precisely and well aligned to map geometry
@@ -25,8 +29,8 @@ weight: 3
 - [ ] (Optional) Stages and bonuses should have names where appropriate to make them easier to identify
 - [ ] (Surf only) Limit ground speed option should be enabled unless you are supposed to bhop in start zones
 - [ ] (Surf only) Carefully review intended bhop platforms and add allow bhop triggers if needed
-  - Sometimes allow bhop zones are needed for stage end platforms. Use `mom_bhop_area_debug 1` to check geometry.
-  - Review WR video for spine bhops or other intended bhop skips
+  - Sometimes allow bhop zones are needed for stage end platforms. Use `mom_bhop_area_debug 1` to check the geometry.
+  - Review WR video for ramp spine bhops or other intended bhop skips
 
 # Step 2: Review in-game entities with entity tools
 
@@ -34,13 +38,13 @@ weight: 3
 - [ ] **Boost Triggers Tool:** Check boost triggers for exploits (see [required entity conversions guide](../map_porting/#required-entity-modifications))
 - [ ] **Gravity Triggers Tool:** Gravity triggers should persist gravity changes when the player exits the volume in CS:S maps, but not in CS:GO maps
 - [ ] **Model Scale Fix Tool:** Check for any incorrectly sized props
-- [ ] **Bhop Trigger Fix Tool (Bhop only):** If the map uses mpbhop triggers, check if they have been converted
+- [ ] **Bhop Trigger Fix Tool (Bhop only):** If the map uses mpbhop triggers (triggers that force bhopping with targetname filters), check if they have been converted
 - [ ] **Bhop Block Fix Tool (Bhop only):** If the map uses func_button/func_door bhop platforms, check if they have been converted to func_bhop
 
 # Step 3: Other in-game things to review
 - [ ] Refraction textures don't have a dark tint (requires recompile?)
 - [ ] Maps don't have invalid textures, cubemaps, skyboxes or models
-- [ ] CS:GO maps have an `env_cascade_light` entity if necessary
+- [ ] CS:GO maps have an `env_cascade_light` entity if they use CSM shadows
 
 # Step 4: Lumper review
 - [ ] Check for invalid entities ("Entity Review" tab)
@@ -54,5 +58,6 @@ weight: 3
 - [ ] Date created should match the date on GameBanana
 - [ ] Credits should match GameBanana submission
 - [ ] Screenshots ideally should showcase iconic/memorable parts of the map. Taking similar screenshots to the ones on GameBanana is also recommended.
-- [ ] Remove _njv and _fix from map name
+- [ ] _njv or _fix suffix is removed from the map name
+- [ ] jump_ prefix is renamed to rj_ or sj_
 - [ ] Required games match what is displayed in Lumper
