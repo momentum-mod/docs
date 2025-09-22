@@ -39,20 +39,20 @@ In this case, air strafing is not used to gain speed but as a form of air contro
 ### Bunnyhop (Bhop)
 
 Bhop has reduced potential compared to the Bhop game mode.  
-Bhopping has its own speed cap: **TBD (Momkz)**.      **380 (KZT)**,      **300 (1.6 Climb)**. The default running speed in all Climb modes is 250.  
+Bhopping has its own speed cap: **TBD (MomKZ)**.      **380 (KZT)**,      **300 (1.6 Climb)**. The default running speed in all Climb modes is 250.  
 This cap is separate from the **max velocity** cap (how fast the engine lets you go before not bothering to give any more speed 3500 by default).  
 Any time you jump the Bhop speed cap will be used meaning even if the player gained speed purely through falling or surfing,  
 as soon as they try to jump off the ground with this speed, the cap will activate. If the player reaches this cap and tries to jump again,  
-their speed will be reset to:  **TBD (MomClimb)**,     **380 (KZT)**,       **240 (1.6 Climb)**.   
+their speed will be reset to:  **TBD (MomKZ)**,     **380 (KZT)**,       **240 (1.6 Climb)**.   
 However, this Bhop cap still allows the player to gain more speed than a Prestrafe hence, Bhopping has the potential to go further than a Long Jump.   
 Bhop jumps can also be required by the mapper by using "Bhop Blocks" that teleport you back if you try standing on them, same as the Bhop game mode. Conversely, mappers can also add triggers that disable Bhops inside an area.  
 
 ### Surf
 
-Surf is very similar to its game mode counterpart. KZT is 128 tick, MomClimb and 1.6 Climb are 100 tick while the Surf game mode is 66 tick. This means gaining speed is quicker and losing speed is harder in Climb compared to Surf.  
-Maps made with MomClimb and KZT in mind can have traditional surf sections. The length and difficulty of these sections are entirely up to the map. Usually they are much shorter (sometimes only 1 ramp) compared to dedicated Surf maps.  
+Surf is very similar to its game mode counterpart. KZT and MomKZ are 128 tick, and 1.6 Climb is 100 tick while the Surf game mode is 66 tick. This means gaining speed is quicker and losing speed is harder in Climb compared to Surf.  
+Maps made with MomKZ and KZT in mind can have traditional surf sections. The length and difficulty of these sections are entirely up to the map. Usually they are much shorter (sometimes only 1 ramp) compared to dedicated Surf maps.  
 1.6 Climb has a special version of Surf called **Slide**.  
-1.6 Climb has much lower air acceleration (10aa compared to MomClimb and KZT's 100aa). This means players can't as easily flick onto a ramp ("board") and generate speed or flick off a ramp and generate height.    
+1.6 Climb has much lower air acceleration (10aa compared to MomKZ and KZT's 100aa). This means players can't as easily flick onto a ramp ("board") and generate speed or flick off a ramp and generate height.    
 Because of this "Slide" sections are usually brief and focus on keeping on the board rather than gaining enough speed to fly off.
 {{< hint info >}}
 Remember that in any movement mode you can always slide up gentle slopes with just 'W' while looking at the slope!
@@ -153,7 +153,7 @@ The bhop speed cap is still checked but you won't be able to reach 300 speed unl
 
 ### High Jump [1.6 Climb only]
 Jumping off tall platforms (the player's height or taller) are called High Jumps. What makes High Jumps special? 
-In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomClimb)**,     **1 (KZT)**,       **2 (1.6 Climb)**. 
+In Source and Goldsrc there exists a property called **edge friction** it decides what factor that "normal" friction will be multiplied by when a player is close to an edge. If it is set higher than 1, you will slow down every time you are close to the edge of a platform. These are the edge frictions for each Climb mode:  **TBD (MomKZ)**,     **1 (KZT)**,       **2 (1.6 Climb)**. 
 {{< hint info >}}
 Currently, 1.6 Climb is the only Climb mode whose edge friction is different than the normal friction
 {{< /hint >}}
