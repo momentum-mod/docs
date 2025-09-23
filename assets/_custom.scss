@@ -167,11 +167,13 @@ blockquote {
     }
   }
 
-  p:has(> img:only-child) {
+  p:has(> img:only-child),
+  p:has(> video:only-child) {
     display: flex;
     justify-content: center;
 
-    > img {
+    > img,
+    > video {
       min-width: 0;
       max-width: 1024px;
       margin: 1em 0;

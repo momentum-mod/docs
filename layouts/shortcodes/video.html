@@ -1,7 +1,11 @@
-<video
-{{ if .Get "poster" }}poster="{{ .Get "poster" }}"{{ end }}
-{{ if ne (.Get "controls") "false" }}controls{{ end }}
-{{ if .Get "style" }}style="{{ .Get "style" | safeCSS }};"{{ end }}
->
-<source src="{{ .Get "src" }}" type="video/mp4">
-</video>
+<p>
+  <video
+  {{ if .Get "poster" }}poster="{{ .Get "poster" }}"{{ end }}
+  {{ if ne (.Get "controls") "false" }}controls{{ end }}
+  {{ if ne (.Get "loop") "false" }}loop{{ end }}
+  {{ if .Get "autoplay" }}autoplay{{ end }}
+  {{ if .Get "style" }}style="{{ .Get "style" | safeCSS }};"{{ end }}
+  >
+    <source src="{{ .Get "src" }}" type="video/mp4">
+  </video>
+</p>
