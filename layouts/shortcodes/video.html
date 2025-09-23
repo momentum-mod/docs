@@ -1,0 +1,7 @@
+<video
+{{ if .Get "poster" }}poster="{{ .Get "poster" }}"{{ end }}
+{{ if ne (.Get "controls") "false" }}controls{{ end }}
+{{ if .Get "style" }}style="{{ .Get "style" | safeCSS }};"{{ end }}
+>
+<source src="{{ .Get "src" }}" type="video/mp4">
+</video>
