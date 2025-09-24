@@ -25,7 +25,7 @@ Both need to be modified depending on how you activate them.
 
 1. Open entity tools by typing `devui_show entitytools` in console
     - You can bind this to a key for ease of access, `bind <key> "devui_show entitytools"` in console
-2. Open 'Boost Triggers' section and find the trigger you want to edit
+2. Open **Boost Triggers** section and find the trigger you want to edit
 
 {{<hint info>}}
 
@@ -151,7 +151,7 @@ This can cause issues when rapidly jumping/sliding up slopes or jumping up a led
 
 ### Rocket Jump
 Sometimes it's possible to hit a teleport while going upwards. This can lead to the player being launched off the platform right after failing.  
-You should not blindly edit these using 'Entity Tools' as that may lead to breaking teleport jumps.
+You should not blindly edit these using **Entity Tools** as that may lead to breaking teleport jumps.
 
 1. Identify the teleport in Lumper by using **Sync Target** or **Sync Pos** option in 'Entity Editor' tab
     - Sync Target will display all entities you are looking at in the game
@@ -194,7 +194,7 @@ If the player is meant to have modified gravity **only** when inside of the trig
 
 {{<hint info>}}
 
-It's also possible to resolve this using issue the 'Gravity Triggers' section in 'Entity Tools' and [exporting to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper).  
+It's also possible to resolve this using issue the 'Gravity Triggers' section in **Entity Tools** and [exporting to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper).  
 That however, only offers an option to modify **all** gravity trigges on the map.  
 Please make sure that this fix is applicable to **all of them** before using it.
 
@@ -205,15 +205,15 @@ Please make sure that this fix is applicable to **all of them** before using it.
 
     
 # Export to Lumper
-The changes made with 'Entity Tools' will be reverted once you exit the map.  
+The changes made with **Entity Tools** will be reverted once you exit the map.  
 Lumper can be used to apply these changes permanently.
-1. While still in 'Entity Tools' click 'Export To Lumper'
-    - This will automatically create a config with all changes you made and switch your tab to 'Jobs'
+1. While still in **Entity Tools** click **Export To Lumper**
+    - This will automatically create a config with all changes you made and switch your tab to **Jobs**
 2. Run the Job
 
 {{<hint info>}}
 
-Alternatively you can 'Export To File' and then apply it in Lumper using the 'Stripper(File)' job.  
+Alternatively you can **Export To File** and then apply it in Lumper using the **Stripper(File)** job.  
 These files are saved to **/momentum/maps/entitytools_stripper** folder.
 
 {{</hint>}}  
@@ -228,16 +228,16 @@ Vast majority of maps **will not** require any of these fixes.
 ## Old Bhop Platforms
 Some old bhop maps use **func_button** or **func_door** for bhop platform. These should be converted to **func_bhop**
 1. Open entity tools by typing `devui_show entitytools` in console
-2. Open the 'Bhop Block Fix' section
-    - If the number of 'Bhop Blockfix Entities' is **0** you don't need to fix anything
+2. Open the **Bhop Block Fix** section
+    - If the number of **Bhop Blockfix Entities** is **0** you don't need to fix anything
 3. Make sure the checkbox is ticked ( it should be by default )
 4. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
 
 ## Small Models
 Maps compiled on an old version of source engine can have models that are too small.
 1. Open entity tools by typing `devui_show entitytools` in console
-2. Open the 'Model Scale Fix' Section
-3. Click 'Fix All Model Scales'
+2. Open the **Model Scale Fix** Section
+3. Click **Fix All Model Scales**
 4. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
 
 ![Small Models Before](/images/map_porting/fix_model_scale_before.png)
@@ -251,9 +251,9 @@ You can apply them permanently to the **.bsp** with Lumper
 
 {{<hint danger>}}
 
-While these are sometimes useful, **a lot of them** are not applicable to Momentum Mod  
-Read through them carefully before deciding to apply them  
-If you're not sure if you should use them, please ask in **#map-porting** channel on our [Discord](https://discord.gg/momentummod)
+While these are sometimes useful, **a lot of them** are not applicable to Momentum Mod.  
+Read through them carefully before deciding to apply them.  
+If you're not sure if you should use them, please ask in **#map-porting** channel on our [Discord](https://discord.gg/momentummod).
 
 {{</hint>}}
 
@@ -266,8 +266,8 @@ If you're not sure if you should use them, please ask in **#map-porting** channe
 ![Apply Stripper Config](/images/map_porting/apply_stripper_config.png)
 
 ## Invalid VMT Files
-Momentum Mod uses stricter parsing rules than other source games  
-Fix **.vmt** of broken textures using the 'Pakfile Explorer' in Lumper
+Momentum Mod uses stricter parsing rules than other source games.  
+Fix **.vmt** of broken textures using the 'Pakfile Explorer' in Lumper.
 
 ![Invalid VMT](/images/map_porting/invalid_vmt.png)
 ![Invalid VMT Lumper](/images/map_porting/invalid_vmt_lumper.png)
@@ -284,8 +284,8 @@ Skyboxes will sometimes fail to load in maps compiled with HDR.
 ![HDR Skybox](/images/map_porting/hdr_skybox.png)
 
 ## Missing Shadows on CS:GO Maps
-Some CS:GO maps use cascaded shadow maps (CSM) to create more detailed shadows  
-In Momentum Mod **env_cascade_light** entity must exist for them to display properly
+Some CS:GO maps use cascaded shadow maps (CSM) to create more detailed shadows.  
+In Momentum Mod **env_cascade_light** entity must exist for them to display properly.
 
 1. Go to 'Entity Editor'
 2. Click the **+**
@@ -325,20 +325,20 @@ TODO: Rewrite if replacing textures with vtfs is added to lumper
 
 ## Misplaced / Missing triggers
 On very rare occassions maps can have missing or misplaced triggers.  
-It's possible to add any rectangular triggers to the map without decompiling by using community made tools and Lumper
+It's possible to add any rectangular triggers to the map without decompiling by using community made tools and Lumper.
 - [vmf_to_stripper](https://github.com/benjl/vmf_to_stripper/) - Allows for converting triggers made in hammer to a stripper config
 - [zoneToTrigger](https://github.com/Natanxp2/zoneToTrigger) - Allows for converting [Momentum Mod zones](/guide/map_submission/map_zoning/) to a stripper config
 
 {{<hint danger>}}
 
 Be very careful when modifying maps in this way.  
-It's best to contact the mapper to make sure they are fine with whatever you are trying to do  
-You can always ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod)
+It's best to contact the mapper to make sure they are fine with whatever you are trying to do.  
+You can always ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod).
 
 {{</hint>}}
 
 ## Collectibles
-Maps with collectibles can be ported in 2 ways
+Maps with collectibles can be ported in 2 ways:
 - Convert the collectible system triggers to [Momentum's collectible system entities](/guide/collectibles/)
 - [Zone the map](/guide/map_submission/map_zoning/) using unordered, required checkpoints
 

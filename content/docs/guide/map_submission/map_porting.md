@@ -147,7 +147,7 @@ You can skip this step if you didn't rename the map.
 ![Rename Cubemaps](/images/map_porting/rename_cubemaps.png)
 
 ## Step 4: Fix Entities
-1. Go to the **Entity Report** tab in Lumper
+1. Go to the **Entity Review** tab in Lumper
 2. Remove all **invalid** entities
     - Clicking the edit button on the right will bring you to **Entity Editor**. You may delete the entity there
 3. Fix other entities by following the comments in Lumper and guides listed below
