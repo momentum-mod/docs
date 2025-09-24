@@ -91,7 +91,7 @@ Fix them by multiplying the value of the **playerSpeed** key by 1.5
 These entites manage logic on the map. They need to be evaluated case-by-case and removed if necessary.
 
 ## logic_auto
-While logic_auto is generally necessary, some maps use it to set server variables. This is not allowed in Momentum Mod.
+While logic_auto has many use-cases, some maps use it to set server variables. This is not allowed in Momentum Mod.
 
 1. Look through outputs of every logic_auto
 2. Remove only outputs that have parameters starting with **sv_** or **mp_**
