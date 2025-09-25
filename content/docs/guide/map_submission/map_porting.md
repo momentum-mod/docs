@@ -10,16 +10,26 @@ weight: 2
 
 # Introduction
 This guide gives an overview of all the steps required to officially port a map to Momentum Mod.  
-The goal of porting is to make minimal changes necessary for the map to function.
+The goal of porting is two-fold:
+- Ensuring the map functions correctly
+- Conforming to a high standard of competitive integrity
 
-You are free to port any publically available map with some exceptions:
+{{<hint info>}}
+
+Maps should not be significantly modified.  
+It's very important to respect the spirit and intent of the map's design.
+
+{{</hint>}}
+
+You are free to port any publicly available map with some exceptions:
 - Mappers can reserve/block porting of their maps using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeheNDY5A960u6GtXCHtt3s_2vZJL3o5tMJ_ZNbYOpb6cx5nQ/viewform).
 - Before porting make sure the map isn't on [this spreadsheet](https://docs.google.com/spreadsheets/d/1KHeWfhGUNpN267CXtPvVdf2h7eQbjPUhWVkE5NimYhg/edit?gid=2051215588#gid=2051215588).
+- You are not free to port maps created only for specific servers without explicit permission.
 - When in doubt, contact the mapper ( please don't spam them )
 
-# Setup
 If you have any questions feel free to ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod)!
 
+# Setup
 1. Download [Lumper](https://github.com/momentum-mod/lumper), we will use it to modify the map
 2. Download the map you want to port (maps in **.bz2** format can be extracted using [7zip](https://www.7-zip.org/)):
     - [fastdl.me](https://main.fastdl.me/69.html) - Contains a huge collection of Surf, Bhop, and KZ maps
@@ -51,12 +61,20 @@ You are now fully set up to start porting the map!
 2. Use `mom_official_screenshot` in console to take screenshots. This command will automatically apply all relevant settings.  
     - Screenshots will be saved to **/momentum/screenshots**
     - You can bind the screenshot command to a key for ease of use in keybind settings or with console by typing `bind <key> mom_official_screenshot`
+
+{{<hint info>}}
+
+`mom_official_screenshot` among other things will set your **brightness** to **1** ( default ).  
+Maps should not require changing the brightness to be playable.  
+If you're porting your own map, please make sure it's properly lit.
+
+{{</hint>}}
     
 {{<hint warning>}}
 
 A **small amount** of maps might not look properly before fixes.  
-If you notice broken reflections, [cubemaps](/guide/map_submission/map_porting/#cubemaps) section of this guide will help with fixing them.  
-If there are other issues with models, textures or shadows, [Step 4.5: Other Fixes](/guide/map_submission/map_porting/#step-45-other-fixes) will guide you through fixing them.  
+If you notice broken reflections, [cubemaps](#cubemaps) section of this guide will help with fixing them.  
+If there are other issues with models, textures or shadows, [Step 4.5: Other Fixes](#step-45-other-fixes) will guide you through fixing them.  
 You should skip this step for now if necessary.
 
 {{</hint>}}
@@ -80,13 +98,16 @@ Valve's assets may still be used on maps however it is necessary to remove them 
 {{<hint info>}}
 
 Momentum Mod automatically mounts assets from CS:S, CS:GO, and Portal 2 so players with those games installed will still be able to see them even after removal.  
-In case the map you're porting contains a small amount of assets from other source games you may leave them packed by unticking relevant checkboxes.  
-Use the **Texture Browser** in Lumper to see which game each asset comes from.
+A small amount of "non-hero content" from Source games other than those listed above can remain packed. Untick relevant checkboxes if needed.  
+Use the **Texture Browser** in Lumper to see which game each texture comes from.  
+For other assets check the **Required Games** tab.
 
+{{</hint>}}
+{{<hint warning>}}
+When keeping  Valve assets packed, it is required that you list them in the **porting changelog** during [Map Submission](/guide/map_submission/map_submission/)
 {{</hint>}}
 
 ![Remove Game Assets](/images/map_porting/lumper_remove_assets.png)
-
 
 
 ## Step 3: Modify Remaining Assets and Fix Cubemaps
@@ -119,26 +140,18 @@ Please verify in game that modified textures are not broken and still looks good
     
 
 ### Sounds
-Sounds in Momentum Mod need to be categorized properly for volume sliders to work.  
+Music in Momentum Mod need to be categorized properly for volume sliders to work.  
 1. Go to the **Pakfile Explorer** in Lumper
 2. Scroll to the bottom to see if **/sound** folder exists
-3. If it does, listen to every sound and categorize them according to the following table
+3. If it does, listen to every sound to identify music files
     - You can use **Open in External Program** button or **Right Click → Export** the entire folder to listen to the sounds
-    - Right click on **/sound** → Create Directory , then drag and drop sounds into appropriate folders. Click **yes** on the pop-up
-    
-| Channel  | Folder         |
-| -------- | -------------- |
-| Ambient  | sound/ambient/ |
-| Music    | sound/music/   |
-| Movement | sound/player/  |
-| Weapons  | sound/weapon/  |
-| UI       | sound/ui/      |
+    - Right click on **/sound → Create Directory -> music**, then drag and drop sounds into it. Click **yes** on the pop-up
 
-![Moving Sounds](/images/map_porting/lumper_sound_moving.png)
+![Moving Sounds](/images/map_porting/lumper_moving_sounds.png)
 
 
 ### Cubemaps
-If you renamed the map during the [setup](/guide/map_submission/map_porting/#setup), reflections might be broken.  
+If you renamed the map during the [setup](#setup), reflections might be broken.  
 You can skip this step if you didn't rename the map.  
 1. Go to the **Pakfile Explorer** in Lumper
 2. Check if the map has **/materials/maps/<old_map_name>** folder
