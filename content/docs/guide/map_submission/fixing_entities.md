@@ -10,7 +10,7 @@ weight: 4
 
 # Introduction
 This guide provides a list of **required modifications** for entities when porting maps.  
-It also lists fixes for other [rare issues](/guide/map_submission/fixing_entities/#rare-issues) you may encounter when porting.  
+It also lists fixes for other [rare issues](#rare-issues) you may encounter when porting.  
 If the entity you are looking for is not in here please ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod).  
 Detailed information on entities can also be found on [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Main_Page).
 
@@ -45,14 +45,14 @@ On some maps it is necessary for the player to be constantly pushed while inside
 #### If the boost is applied in the air / while surfing
 3. Check the 'cooldown' box and type **1** in the textbox
 4. Click 'Apply Changes`
-5. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+5. [Export to Lumper](#export-to-lumper)
 
 ![Surf Ramp Boost](/images/map_porting/surf_ramp_boost.png)
 
 #### If the boost is applied while walking on the ground
 3. If the ground is completely smooth ( no ramps or bumps ), check **Standable Surface Collision Filter**
-4. If the ground is not smooth, add a cooldown to it with [the steps above](http://localhost:1313/guide/map_submission/fixing_entities/#if-the-boost-is-applied-in-the-air--while-surfing)
-5. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+4. If the ground is not smooth, add a cooldown to it with [the steps above](#if-the-boost-is-applied-in-the-air--while-surfing)
+5. [Export to Lumper](#export-to-lumper)
 
 ![Floor boost](/images/map_porting/floor_boost.png)
 
@@ -61,14 +61,14 @@ In this case modifications are required depending on how you activate the trigge
 
 #### If you activate the trigger by jumping on it:
 3. Click 'Convert to OnJump'
-4. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+4. [Export to Lumper](#export-to-lumper)
 
 ![OnJump Boost](/images/map_porting/onjump_boost.png)
 
 #### If you activate the trigger by flying/surfing into it:
 
-3. Add a cooldown with [the steps above](http://localhost:1313/guide/map_submission/fixing_entities/#if-the-boost-is-applied-in-the-air--while-surfing)
-4. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+3. Add a cooldown with [the steps above](#if-the-boost-is-applied-in-the-air--while-surfing)
+4. [Export to Lumper](#export-to-lumper)
 
 #### If you activate the trigger by walking into it:
 3. Fail the map/stage and don't move your mouse so you look directly at the trigger
@@ -77,7 +77,7 @@ In this case modifications are required depending on how you activate the trigge
 4. Walk into the trigger by pressing **W only**
     - The game will automatically get all relevant information after using the trigger in this way
 4. Click 'Convert to Set Speed'
-5. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+5. [Export to Lumper](#export-to-lumper)
 
 ![Convert To SetSpeed](/images/map_porting/convert_to_setspeed.png)
 
@@ -91,9 +91,9 @@ Fix them by multiplying the value of the **playerSpeed** key by 1.5
 These entites manage logic on the map. They need to be evaluated case-by-case and removed if necessary.
 
 ## logic_auto
-While logic_auto has many use-cases, some maps use it to set server variables. This is not allowed in Momentum Mod.
+While **logic_auto** has many use-cases, some maps use it to set server variables. This is not allowed in Momentum Mod.
 
-1. Look through outputs of every logic_auto
+1. Look through outputs of every **logic_auto**
 2. Remove only outputs that have parameters starting with **sv_** or **mp_**
     - Take note of **sv_maxvelocity** if present, you will need to set that value when zoning
     - If **sv_allowbunnyhopping 1** is present, you will need to consider globally allowing bhop on the map, this generally only matters for **Surf**
@@ -103,7 +103,7 @@ While logic_auto has many use-cases, some maps use it to set server variables. T
 
 ## logic_timer
 This entity is generally used for displaying time on Rocket Jump / Sticky Jump / KZ maps.  
-Old surf maps however, often use it to teleport players to jail after set amount of time.
+Old surf maps however, often use it to teleport players to jail after a set amount of time.
 If used for jail, this and all associated entities need to be removed.
 
 1. Determine if **logic_timer** is used for jail, either by playing the map or reading keyvalues such as **targetname**
@@ -123,8 +123,8 @@ This section lists various entities that have changed behavior in Momentum Mod a
 Teleports in Momentum Mod retain player speed by default. This needs to be changed depending on gamemode.
 
 ### Surf
-In surf it's important that teleports to map/stage/bonus start completely disable player movement until they hit the ground.  
-While it may seem that surf maps deal with that using small cages, Momentum Mod requires a different fix.
+In surf it's important to modify the way a player is teleported to the start of the map/stage/bonus for consistant timer behavior.  
+After applying this fix the timer will stop the moment the player hits the ground ( not when entering the zone ).  
 1. Open entity tools by typing `devui_show entitytools` in console
     - You can bind this to a key for ease of access, `bind <key> "devui_show entitytools"` in console
 2. Select a teleport destination. You can check where it's located by clicking 'Teleport to Destination'
@@ -135,7 +135,7 @@ While it may seem that surf maps deal with that using small cages, Momentum Mod 
     {{</hint>}}
 3. Select 'Keep Negative Z'
 4. Redo steps 2-3 for all appropriate destinations
-5. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+5. [Export to Lumper](#export-to-lumper)
 
 ![Keep Negative Z](/images/map_porting/keep_negative_z.png)
 
@@ -145,7 +145,7 @@ This can cause issues when rapidly jumping/sliding up slopes or jumping up a led
 1. Open entity tools by typing `devui_show entitytools` in console
 2. Open the 'Bhop trigger fix' section
 3. Click 'Fix Bhop Triggers'
-4. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+4. [Export to Lumper](#export-to-lumper)
 
 ![Fix Bhop Triggers](/images/map_porting/fix_bhop_triggers.png)
 
@@ -153,7 +153,7 @@ This can cause issues when rapidly jumping/sliding up slopes or jumping up a led
 Sometimes it's possible to hit a teleport while going upwards. This can lead to the player being launched off the platform right after failing.  
 You should not blindly edit these using **Entity Tools** as that may lead to breaking teleport jumps.
 
-1. Identify the teleport in Lumper by using **Sync Target** or **Sync Pos** option in 'Entity Editor' tab
+1. Identify the teleport in Lumper by using **Sync Target** or **Sync Pos** option in **Entity Editor** tab
     - Sync Target will display all entities you are looking at in the game
     - Sync Pos will display all entities in the specified radius around you
     - Sometimes it can be difficult to find proper triggers because of other entities overlapping them, ask on our [Discord](https://discord.gg/momentummod) in **#map-porting** channel if you need help
@@ -179,12 +179,12 @@ Sometimes **trigger_gravity** is meant to apply permanent gravity changes to the
 
 {{<hint warning>}}
 
-These changes are usually reverted later in the map. Make sure you modify all permanent gravity changes in this way.  
-If the player is meant to have modified gravity **only** when inside of the trigger, you don't need to modify it at all.
+Gravity triggers like that usually come in pairs, one to **modify the gravity**, one **to revert it**.
+Make sure you modify all relevant triggers when applying this fix
 
 {{</hint>}}
 
-1. Identify the trigger in Lumper by using **Sync Target** or **Sync Pos** option in 'Entity Editor' tab
+1. Identify the trigger in Lumper by using **Sync Target** or **Sync Pos** option in **Entity Editor** tab
     - Sync Target will display all entities you are looking at in the game
     - Sync Pos will display all entities in the specified radius around you
     - Sometimes it can be difficult to find proper triggers because of other entities overlapping them, ask on our [Discord](https://discord.gg/momentummod) in **#map-porting** channel if you need help
@@ -194,7 +194,7 @@ If the player is meant to have modified gravity **only** when inside of the trig
 
 {{<hint info>}}
 
-It's also possible to resolve this using issue the 'Gravity Triggers' section in **Entity Tools** and [exporting to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper).  
+It's also possible to resolve this issue using the **Gravity Triggers** section in **Entity Tools** and [exporting to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper).  
 That however, only offers an option to modify **all** gravity trigges on the map.  
 Please make sure that this fix is applicable to **all of them** before using it.
 
@@ -231,14 +231,16 @@ Some old bhop maps use **func_button** or **func_door** for bhop platform. These
 2. Open the **Bhop Block Fix** section
     - If the number of **Bhop Blockfix Entities** is **0** you don't need to fix anything
 3. Make sure the checkbox is ticked ( it should be by default )
-4. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+4. [Export to Lumper](#export-to-lumper)
 
 ## Small Models
 Maps compiled on an old version of source engine can have models that are too small.
 1. Open entity tools by typing `devui_show entitytools` in console
 2. Open the **Model Scale Fix** Section
+    - Teleport to props to see if they are the correct size
 3. Click **Fix All Model Scales**
-4. [Export to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper)
+    - TODO: Is there any scenario where applying this fix breaks models? If not it could be automated
+4. [Export to Lumper](#export-to-lumper)
 
 ![Small Models Before](/images/map_porting/fix_model_scale_before.png)
 ![Small Models After](/images/map_porting/fix_model_scale_after.png)
@@ -252,7 +254,18 @@ You can apply them permanently to the **.bsp** with Lumper
 {{<hint danger>}}
 
 While these are sometimes useful, **a lot of them** are not applicable to Momentum Mod.  
-Read through them carefully before deciding to apply them.  
+Certain configs fix mapper mistakes, such as broken/missing teleports
+- These are important and should **probably** be applied unless fixed by other means  
+
+Other configs add visual clarity, such as adding laser beams to visualize zones better.
+- These **should not** be applied  
+
+{{</hint>}}
+
+{{<hint info>}}
+
+Read through the config relevant for you map carefully before deciding to apply it.  
+Apply your best judgement regarding what configs are relevant to Momentum Mod.  
 If you're not sure if you should use them, please ask in **#map-porting** channel on our [Discord](https://discord.gg/momentummod).
 
 {{</hint>}}
@@ -287,7 +300,7 @@ Skyboxes will sometimes fail to load in maps compiled with HDR.
 Some CS:GO maps use cascaded shadow maps (CSM) to create more detailed shadows.  
 In Momentum Mod **env_cascade_light** entity must exist for them to display properly.
 
-1. Go to 'Entity Editor'
+1. Go to **Entity Editor**
 2. Click the **+**
     - This will create an empty entity showing as **\<missing classname!\>** in the list
 3. Fill out the new entity using the image below
