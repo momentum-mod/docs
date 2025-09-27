@@ -180,29 +180,23 @@ Sometimes **trigger_gravity** is meant to apply permanent gravity changes to the
 
 {{<hint warning>}}
 
-Gravity triggers like that usually come in pairs, one to **modify the gravity**, one **to revert it**.
-Make sure you modify all relevant triggers when applying this fix
+Gravity triggers like that usually come in pairs, one to **modify the gravity**, one **to revert it**.  
+Make sure you modify all relevant triggers when applying this fix.  
 
 {{</hint>}}
 
-1. Identify the trigger in Lumper by using **Sync Target** or **Sync Pos** option in **Entity Editor** tab
-    - Sync Target will display all entities you are looking at in the game
-    - Sync Pos will display all entities in the specified radius around you
-    - Sometimes it can be difficult to find proper triggers because of other entities overlapping them, ask on our [Discord](https://discord.gg/momentummod) in **#map-porting** channel if you need help
-2. Click on **Add KeyValue**
-3. In the **newproperty** field type **persist**
-4. In the **newvalue** field type **1**
+{{<hint danger>}}
 
-{{<hint info>}}
-
-It's also possible to resolve this issue using the **Gravity Triggers** section in **Entity Tools** and [exporting to Lumper](/guide/map_submission/fixing_entities/#export-to-lumper).  
-That however, only offers an option to modify **all** gravity trigges on the map.  
-Please make sure that this fix is applicable to **all of them** before using it.
-
+Do **NOT** apply this fix if the trigger is meant to modify gravity **only** when a player is inside of it's volume.
 
 {{</hint>}}
 
-![Fix Gravity Triggers](/images/map_porting/fix_gravity_triggers.png)
+1. Open entity tools by typing `devui_show entitytools` in console
+2. Go to the **Gravity Triggers** section.
+3. Identify triggers that are meant to modify gravity **permantently** and check **persist** for them.
+4. [Export to Lumper](#export-to-lumper)
+
+![Fix Gravity Triggers](/images/map_porting/gravity_persist.png)
 
     
 # Export to Lumper
