@@ -29,7 +29,7 @@ Both need to be modified depending on how you activate them.
 
 {{<hint info>}}
 
-**Entity tools** will list all boost triggers on the map. You can teleport to them by clicking 'Teleport to Trigger' and fix each one based on scenarios listed below.  
+**Entity tools** will list all boost triggers on the map. You can teleport to them by clicking **Teleport to Trigger** and fix each one based on scenarios listed below.  
 When making these changes it's perfectly fine to export them only once, when you are done with everything, however there is no downside to gradually saving your progress.
 
 {{</hint>}}
@@ -43,16 +43,17 @@ You can change the font size of **Entity Tools** by using `devui_font_scale` com
 On some maps it is necessary for the player to be constantly pushed while inside of the trigger.  
 
 #### If the boost is applied in the air / while surfing
-3. Check the 'cooldown' box and type **1** in the textbox
-4. Click 'Apply Changes`
+3. Check the **cooldown** box and type **1** in the textbox
+4. Click **Apply Changes**
 5. [Export to Lumper](#export-to-lumper)
 
-![Surf Ramp Boost](/images/map_porting/surf_ramp_boost.png)
+![Surf Ramp Boost](/images/map_porting/enforce_a_cooldown.png)
 
 #### If the boost is applied while walking on the ground
-3. If the ground is completely smooth ( no ramps or bumps ), check **Standable Surface Collision Filter**
-4. If the ground is not smooth, add a cooldown to it with [the steps above](#if-the-boost-is-applied-in-the-air--while-surfing)
-5. [Export to Lumper](#export-to-lumper)
+3. If the ground is:
+    - completely smooth ( no ramps or bumps ), check **Only activate when standing on the ground**
+    - not smooth ( has uneven ground or ramps ), add a cooldown to it with [the steps above](#if-the-boost-is-applied-in-the-air--while-surfing)
+4. [Export to Lumper](#export-to-lumper)
 
 ![Floor boost](/images/map_porting/floor_boost.png)
 
@@ -60,7 +61,7 @@ On some maps it is necessary for the player to be constantly pushed while inside
 In this case modifications are required depending on how you activate the trigger.
 
 #### If you activate the trigger by jumping on it:
-3. Click 'Convert to OnJump'
+3. Click **Convert to OnJump**
 4. [Export to Lumper](#export-to-lumper)
 
 ![OnJump Boost](/images/map_porting/onjump_boost.png)
@@ -76,7 +77,7 @@ In this case modifications are required depending on how you activate the trigge
     - If setting the angle manually use multiples of 90 such as `setang 180 0 0` or `setang 0 90 0` to orient yourself properly
 4. Walk into the trigger by pressing **W only**
     - The game will automatically get all relevant information after using the trigger in this way
-4. Click 'Convert to Set Speed'
+4. Click **Convert to Set Speed**
 5. [Export to Lumper](#export-to-lumper)
 
 ![Convert To SetSpeed](/images/map_porting/convert_to_setspeed.png)
@@ -127,24 +128,24 @@ In surf it's important to modify the way a player is teleported to the start of 
 After applying this fix the timer will stop the moment the player hits the ground ( not when entering the zone ).  
 1. Open entity tools by typing `devui_show entitytools` in console
     - You can bind this to a key for ease of access, `bind <key> "devui_show entitytools"` in console
-2. Select a teleport destination. You can check where it's located by clicking 'Teleport to Destination'
+2. Select a teleport destination. You can check where it's located by clicking **Teleport to Destination**
     {{<hint warning>}}
 
     Make sure you only select destinations at the start of a stage/map/bonus. Do not edit other teleports such as those mid-stage
 
     {{</hint>}}
-3. Select 'Keep Negative Z'
+3. Select **Keep Negative Z**
 4. Redo steps 2-3 for all appropriate destinations
 5. [Export to Lumper](#export-to-lumper)
 
-![Keep Negative Z](/images/map_porting/keep_negative_z.png)
+![Keep Negative Z](/images/map_porting/velocity_mode.png)
 
 ### Bhop
 Some maps force the player to constantly jump to not get teleported.   
 This can cause issues when rapidly jumping/sliding up slopes or jumping up a ledge when the triggers are sticking out.
 1. Open entity tools by typing `devui_show entitytools` in console
-2. Open the 'Bhop trigger fix' section
-3. Click 'Fix Bhop Triggers'
+2. Open the **Bhop Trigger Fix** section
+3. Click **Fix Bhop Triggers**
 4. [Export to Lumper](#export-to-lumper)
 
 ![Fix Bhop Triggers](/images/map_porting/fix_bhop_triggers.png)
@@ -158,16 +159,16 @@ You should not blindly edit these using **Entity Tools** as that may lead to bre
     - Sync Pos will display all entities in the specified radius around you
     - Sometimes it can be difficult to find proper triggers because of other entities overlapping them, ask on our [Discord](https://discord.gg/momentummod) in **#map-porting** channel if you need help
 2. Click on **Add KeyValue**
-3. In the 'newproperty' field type **velocitymode**
-4. In the 'newvalue' field type **1**  
+3. In the **newproperty** field type **velocitymode**
+4. In the **newvalue** field type **1**  
 
 ![Fix Preserving Speed](/images/map_porting/fix_preserving_speed.png)
 
 ## func_button
 Shooting a button to activate it in **Rocket Jump** can have a different effect in Momentum Mod compared to TF2.
 1. Check all func_button in Lumper
-2. Identify those that have an 'OnDamaged' output
-3. Change 'OnDamaged' to **OnPressed**
+2. Identify those that have an **OnDamaged** output
+3. Change **OnDamaged** to **OnPressed**
 3. Add **512** to **spawnflags** if it's not already enabled
     - To determine if this flag is enabled divide the value in **spawnflags** by 512 and round down the result. If it's **odd** the flag is enabled
 4. If the button is moving very slowly add **1** to **spawnflags** to disable it's movement  
@@ -189,8 +190,8 @@ Make sure you modify all relevant triggers when applying this fix
     - Sync Pos will display all entities in the specified radius around you
     - Sometimes it can be difficult to find proper triggers because of other entities overlapping them, ask on our [Discord](https://discord.gg/momentummod) in **#map-porting** channel if you need help
 2. Click on **Add KeyValue**
-3. In the 'newproperty' field type **persist**
-4. In the 'newvalue' field type **1**
+3. In the **newproperty** field type **persist**
+4. In the **newvalue** field type **1**
 
 {{<hint info>}}
 
@@ -271,8 +272,8 @@ If you're not sure if you should use them, please ask in **#map-porting** channe
 {{</hint>}}
 
 1. Download the **.cfg** file
-2. Go to 'Jobs' tab in Lumper
-3. Add the 'Stripper (File)' job
+2. Go to **Jobs** tab in Lumper
+3. Add the **Stripper (File)** job
 4. Provide the path to your downloaded **.cfg** and run the job
 
 ![Download Stripper Config](/images/map_porting/download_stripper_config.png)
@@ -280,14 +281,14 @@ If you're not sure if you should use them, please ask in **#map-porting** channe
 
 ## Invalid VMT Files
 Momentum Mod uses stricter parsing rules than other source games.  
-Fix **.vmt** of broken textures using the 'Pakfile Explorer' in Lumper.
+Fix **.vmt** of broken textures using the **Pakfile Explorer** in Lumper.
 
 ![Invalid VMT](/images/map_porting/invalid_vmt.png)
 ![Invalid VMT Lumper](/images/map_porting/invalid_vmt_lumper.png)
 
 ## Missing Skyboxes
 Skyboxes will sometimes fail to load in maps compiled with HDR.
-1. Go to 'Pakfile Explorer' tab
+1. Go to **Pakfile Explorer** tab
 2. Find the **.vmts** of the skybox
     - It will be in **/materials/skybox**
     - There will be 6 pairs of **.vmt** and **.vtf**, one for each side
@@ -315,12 +316,12 @@ Some maps from CS:S have corrupted reflections in Momentum Mod.
 In cases we've seen they've been flat blue/black textures.  
 1. Download the CS:GO version of the map
     - Check if it exists on [gamebanana](https://gamebanana.com/) or [surfheaven](https://surfheaven.eu/)
-2. Open it in lumper and go to the 'Pakfile Explorer' tab
+2. Open it in lumper and go to the **Pakfile Explorer** tab
 3. Export the entire **/materials/maps** folder
 4. Close Lumper
     - You may now delete the cs:go port you downloaded
 5. Open the map you were porting in Lumper
-6. In 'Pakfile Explorer' delete the entire **/materials/maps** folder
+6. In **Pakfile Explorer** delete the entire **/materials/maps** folder
 7. Right click on **/materials** and create a new **/maps** folder
 8. Right click on **/maps** → Import Directory
 9. Import the **maps** folder you extracted
