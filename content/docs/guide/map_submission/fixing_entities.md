@@ -249,7 +249,7 @@ You can apply them permanently to the **.bsp** with Lumper
 {{<hint danger>}}
 
 While these are sometimes useful, **a lot of them** are not applicable to Momentum Mod.  
-Certain configs fix mapper mistakes, such as broken/missing teleports
+Certain configs fix mapper mistakes, such as broken/missing teleports.
 - These are important and should **probably** be applied unless fixed by other means  
 
 Other configs add visual clarity, such as adding laser beams to visualize zones better.

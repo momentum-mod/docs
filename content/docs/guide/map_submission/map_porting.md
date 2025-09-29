@@ -21,11 +21,24 @@ It's very important to respect the spirit and intent of the map's design.
 
 {{</hint>}}
 
+
+
 You are free to port any publicly available map with some exceptions:
 - Mappers can reserve/block porting of their maps using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeheNDY5A960u6GtXCHtt3s_2vZJL3o5tMJ_ZNbYOpb6cx5nQ/viewform).
 - Before porting make sure the map isn't on [this spreadsheet](https://docs.google.com/spreadsheets/d/1KHeWfhGUNpN267CXtPvVdf2h7eQbjPUhWVkE5NimYhg/edit?gid=2051215588#gid=2051215588).
 - You are not free to port maps created only for specific servers without explicit permission.
 - When in doubt, contact the mapper ( please don't spam them )
+
+{{<expander title="Why aren't ports opt-in?">}}
+
+Due to a sheer amount of maps and how old some of they are, it's not feasible to reach out to every single mapper for their permission.  
+This makes it especially important not to modify existing ports too drastically - respect the original mapper's intentions!  
+  
+If mappers are active (usually on Steam/Discord) we encourage you to reach out to them.  
+  
+If a map gets ported that the original mapper is unhappy with, we'll try find a resolution that doesn't require resetting leaderboards, but ultimately if they want it removed that's up to them. (If this is the case for your map, please reach out on our [Discord](https://discord.gg/momentummod))
+
+{{</expander>}}
 
 If you have any questions feel free to ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod)!
 
@@ -128,7 +141,8 @@ If you are not sure whether you should resize/reencode them, it's better to leav
 {{<hint info>}}
 
 Compressed formats are **DXT1**, **DXT5**, and **BC7**.  
-When reencoding use **DXT1** for smallest filesize but **only** if the texture uses an **on/off** alpha channel ( no gradient ), otherwise use **BC7**.  
+When reencoding if a texture has **no alpha** and is **relatively flat** with **little detail** use **DXT1**. 
+For **more detailed** textures (e.g. containing text), use **BC7**.  
 Do **NOT** resize or reencode any animated textures or textures with multiple faces.  
 
 Please verify in game that modified textures are not broken and still looks good. 
