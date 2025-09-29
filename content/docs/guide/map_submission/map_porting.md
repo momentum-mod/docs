@@ -40,9 +40,22 @@ If a map gets ported that the original mapper is unhappy with, we'll try find a 
 
 {{</expander>}}
 
+# Setup
 If you have any questions feel free to ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod)!
 
-# Setup
+{{<expander title="What tools will we be using?">}}
+
+### Entity Tools
+These are in-game tools that can automate a lot of changes required for porting.  
+Every change made with **Entity Tools** will need to be saved into the **.bsp** with **Lumper**.  
+Details about using them will be covered in [Step 4: Fix Entities](#step-4-fix-entities).  
+
+### Lumper
+**Lumper** is a swiss army knife tool that allows for modifying all entities and packed assets within a map.  
+It will be used mainly for removing undesirable assets and saving entity changes made with **Entity Tools**.
+
+{{</expander>}}
+
 1. Download [Lumper](https://github.com/momentum-mod/lumper), we will use it to modify the map
 2. Download the map you want to port (maps in **.bz2** format can be extracted using [7zip](https://www.7-zip.org/)):
     - [fastdl.me](https://main.fastdl.me/69.html) - Contains a huge collection of Surf, Bhop, and KZ maps
@@ -204,9 +217,16 @@ Please look through them but more likely than not you will be ready to move on t
 
 ## Step 5: Compress the Map
 Compression will **significantly** reduce the filesize.
+
 1. Check **Save Compressed**
 2. Check **Update filename-specific Content**
 3. Click **Save**
+
+You should double check that your port has no remaining issues with the **Map Summary** tool.  
+You can find it in **Tools -> Map Summary** or by using the **CTRL + H** shortcut.  
+
+![Map Summary](/images/map_porting/lumper_map_summary.png)
+
 
 {{<hint info>}}
 
