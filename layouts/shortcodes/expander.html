@@ -1,0 +1,14 @@
+<!-- 
+  Shortcode for expandable sections, closed by default.
+  Provide `title` for title,
+  Icon defaults to MDI "information" but can be overridden with `icon` param,
+    using any image in static/icons/
+-->
+<div class="expander">
+  <button class="header" type="button" onclick="this.nextElementSibling.classList.toggle('open')">
+    <img class="icon" alt="Expander Icon"
+         src="/icons/{{ with .Get "icon" }}{{ . }}{{ else }}information{{ end }}.svg" />
+    <span class="title"> {{ .Get "title" }} </span>
+  </button>
+  <div class="content">{{ .Inner | markdownify }}</div>
+</div>
