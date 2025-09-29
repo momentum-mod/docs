@@ -31,5 +31,3 @@ This may change in the future, but for now, keep it about Momentum.
 Pull Requests are highly appreciated! Just branch off of master, make your edits, and open a Pull Request into master describing what you changed. Pages could be edited directly through GitHub, or you can download your fork and edit through a program like [Visual Studio Code](https://code.visualstudio.com/).
 
 If you need a guide for how to contribute, one can be found on the [how-to page](https://docs.momentum-mod.org/guide/create_docs_page/) on the documentation site. Another good resource is to simply look at existing posts, or past commits for reference. Furthermore, another good reference could be asking around in the [Momentum Mod Discord server](https://discord.gg/momentummod).
-
-We keep a [Prettier](https://prettier.io/) config, which isn't enforced but standardizes some small markdown things.
