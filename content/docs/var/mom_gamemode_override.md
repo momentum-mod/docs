@@ -18,7 +18,7 @@ If you wish to use this cvar with official maps, you should instead use the "Sta
 
 ## Gamemodes
 
-- **0** = OFF/NONE
+- **0** = Off/None
 - **1** = Surf
 - **2** = Bhop (CSS)
 - **3** = Bhop (Hl1)
