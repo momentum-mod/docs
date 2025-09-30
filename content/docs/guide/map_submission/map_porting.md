@@ -154,10 +154,9 @@ If you are not sure whether you should resize/reencode them, it's better to leav
 {{<hint info>}}
 
 Compressed formats are **DXT1**, **DXT5**, and **BC7**.  
-When reencoding if a texture has **no alpha** and is **relatively flat** with **little detail** use **DXT1**. 
+When reencoding if a texture has **no alpha** and is **relatively flat** with **little detail** use **DXT1**.  
 For **more detailed** textures (e.g. containing text), use **BC7**.  
-Do **NOT** resize or reencode any animated textures or textures with multiple faces.  
-
+Do **NOT** resize or reencode any **animated textures** or textures with **multiple faces**.  
 Please verify in game that modified textures are not broken and still looks good. 
 
 {{</hint>}}
@@ -194,12 +193,12 @@ You can skip this step if you didn't rename the map.
     - Some **warnings** can be fixed, some will need to be removed, and some can stay unchanged
     - Thanks to game sync, you can teleport to any entity simply by clicking the button next to it in **Entity Editor** tab
 
-| Boosters                                                                                    | Logic                                                             | Other                                                                       |
-| ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| [trigger_push](/guide/map_submission/fixing_entities/#trigger_push-and-trigger_multiple)    | [logic_auto](/guide/map_submission/fixing_entities/#logic_auto)   | [trigger_teleport](/guide/map_submission/fixing_entities/#trigger_teleport) |
-| [trigger_multiple](/guide/map_submission/fixing_entities/#trigger_push-and-trigger_multiple)| [logic_timer](/guide/map_submission/fixing_entities/#logic_timer) | [func_button](/guide/map_submission/fixing_entities/#func_button)           |
-| [trigger_catapult](/guide/map_submission/fixing_entities/#trigger_catapult)                 |                                                                   | [trigger_gravity](/guide/map_submission/fixing_entities/#trigger_gravity)   |
-
+| Boosters                                                                                    | Other                                                                       |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [trigger_push](/guide/map_submission/fixing_entities/#trigger_push-and-trigger_multiple)    | [trigger_teleport](/guide/map_submission/fixing_entities/#trigger_teleport) |
+| [trigger_multiple](/guide/map_submission/fixing_entities/#trigger_push-and-trigger_multiple)| [func_button](/guide/map_submission/fixing_entities/#func_button)           |
+| [trigger_catapult](/guide/map_submission/fixing_entities/#trigger_catapult)                 | [trigger_gravity](/guide/map_submission/fixing_entities/#trigger_gravity)   |
+|                                                                                             | [logic_timer](/guide/map_submission/fixing_entities/#logic_timer)           |
 
 ## Step 4.5: Other Fixes
 Vast majority of maps will **not** require any of the fixes covered in this section.  

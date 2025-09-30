@@ -88,34 +88,6 @@ Fix them by multiplying the value of the **playerSpeed** key by 1.5
 
 ![Fix Vertical Catapults](/images/map_porting/fix_vertical_catapults.png)
 
-# Logic
-These entites manage logic on the map. They need to be evaluated case-by-case and removed if necessary.
-
-## logic_auto
-While **logic_auto** has many use-cases, some maps use it to set server variables. This is not allowed in Momentum Mod.
-
-1. Look through outputs of every **logic_auto**
-2. Remove only outputs that have parameters starting with **sv_** or **mp_**
-    - Take note of **sv_maxvelocity** if present, you will need to set that value when zoning
-    - If **sv_allowbunnyhopping 1** is present, you will need to consider globally allowing bhop on the map, this generally only matters for **Surf**
-3. If by the end of that process the entity doesn't have any outputs, you can remove it completely
-
-![Delete Server Commands](/images/map_porting/delete_server_commands.png)
-
-## logic_timer
-This entity is generally used for displaying time on Rocket Jump / Sticky Jump / KZ maps.  
-Old surf maps however, often use it to teleport players to jail after a set amount of time.
-If used for jail, this and all associated entities need to be removed.
-
-1. Determine if **logic_timer** is used for jail, either by playing the map or reading keyvalues such as **targetname**
-2. If it's used for jail, copy the **Target Entity Name** to **Value** field
-    - Make sure to clear out all other search fields so that no entities are filtered out
-3. Remove **all** entities that come up
-4. Remove the original **logic_timer**
-
-![Lumper Timer](/images/map_porting/lumper_timer.png)
-
-![Lumper Teleports](/images/map_porting/lumper_teleports.png)
 
 # Other entities
 This section lists various entities that have changed behavior in Momentum Mod and require modifications.
@@ -124,14 +96,14 @@ This section lists various entities that have changed behavior in Momentum Mod a
 Teleports in Momentum Mod retain player speed by default. This needs to be changed depending on gamemode.
 
 ### Surf
-In surf it's important to modify the way a player is teleported to the start of the map/stage/bonus for consistant timer behavior.  
-After applying this fix the timer will stop the moment the player hits the ground ( not when entering the zone ).  
+In surf it's important to modify teleports that are meant to **stop player's momentum** for consistant timer behavior.  
+After applying this fix the timer will react the moment the player hits the ground ( not when entering a zone ).  
 1. Open entity tools by typing `devui_show entitytools` in console
-    - You can bind this to a key for ease of access, `bind <key> "devui_show entitytools"` in console
 2. Select a teleport destination. You can check where it's located by clicking **Teleport to Destination**
     {{<hint warning>}}
 
-    Make sure you only select destinations at the start of a stage/map/bonus. Do not edit other teleports such as those mid-stage
+    Make sure to **not edit** teleports that **shouldn't reset player's speed**.  
+    Those usually include **mid-stage** teleports or stage teleports on **old maps**.
 
     {{</hint>}}
 3. Select **Keep Negative Z**
@@ -197,6 +169,13 @@ Do **NOT** apply this fix if the trigger is meant to modify gravity **only** whe
 4. [Export to Lumper](#export-to-lumper)
 
 ![Fix Gravity Triggers](/images/map_porting/gravity_persist.png)
+
+## logic_timer
+This entity is generally used for displaying time on Rocket Jump / Sticky Jump / KZ maps.  
+Old surf maps however, often use it to teleport players to **jail** after a set amount of time.
+If used for **jail**, this entity needs to be removed.
+
+![Lumper Timer](/images/map_porting/lumper_timer.png)
 
     
 # Export to Lumper
