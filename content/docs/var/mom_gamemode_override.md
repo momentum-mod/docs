@@ -3,7 +3,7 @@ title: mom_gamemode_override
 categories:
   - var
 default_value: 0
-maximum_value: 10
+maximum_value: 13
 minimum_value: 0
 tags:
   - gamemode
