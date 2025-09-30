@@ -88,20 +88,18 @@ You are now fully set up to start porting the map!
     - Screenshots will be saved to **/momentum/screenshots**
     - You can bind the screenshot command to a key for ease of use in keybind settings or with console by typing `bind <key> mom_official_screenshot`
 
+{{<hint warning>}}
+
+If the map you're porting doesn't look correctly, skip this step for now.  
+Next steps will guide you through fixing the most common issues.
+
+{{</hint>}}
+
 {{<hint info>}}
 
 `mom_official_screenshot` among other things will set your **brightness** to **1** ( default ).  
 Maps should not require changing the brightness to be playable.  
 If you're porting your own map, please make sure it's properly lit.
-
-{{</hint>}}
-    
-{{<hint warning>}}
-
-A **small amount** of maps might not look properly before fixes.  
-If you notice broken reflections, [cubemaps](#cubemaps) section of this guide will help with fixing them.  
-If there are other issues with models, textures or shadows, [Step 4.5: Other Fixes](#step-45-other-fixes) will guide you through fixing them.  
-You should skip this step for now if necessary.
 
 {{</hint>}}
     
