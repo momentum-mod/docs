@@ -43,20 +43,11 @@ If a map gets ported that the original mapper is unhappy with, we'll try find a 
 # Setup
 If you have any questions feel free to ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod)!
 
-{{<expander title="What tools will we be using?">}}
+### Tools
+[Lumper](#lumper) - General porting toolkit. Only use for steps in the guide unless you know what you're doing.  
+[Entity Tools](#entity-tools) - In-game tools automating a lot of porting steps. Usage will be covered later in the guide. These are always preferred over Lumper.
 
-### Entity Tools
-These are in-game tools that can automate a lot of changes required for porting.  
-Every change made with **Entity Tools** will need to be saved into the **.bsp** with **Lumper**.  
-Details about using them will be covered in [Step 4: Fix Entities](#step-4-fix-entities).  
-
-### Lumper
-**Lumper** is a swiss army knife tool that allows for modifying all entities and packed assets within a map.  
-It will be used mainly for removing undesirable assets and saving entity changes made with **Entity Tools**.
-
-{{</expander>}}
-
-1. Download [Lumper](https://github.com/momentum-mod/lumper), we will use it to modify the map
+1. [Download](https://github.com/momentum-mod/lumper) Lumper
 2. Download the map you want to port (maps in **.bz2** format can be extracted using [7zip](https://www.7-zip.org/)):
     - [fastdl.me](https://main.fastdl.me/69.html) - Contains a huge collection of Surf, Bhop, and KZ maps
     - [ksf.surf](https://ksf.surf/) (preferred for Surf) - Main hub for competitive surf
