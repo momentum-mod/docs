@@ -13,6 +13,19 @@ Zones allow players to measure and submit times to the leaderboards.
 This guide focuses on zoning using Momentum Mod's **in-game tool**.   
 Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 
+# General Guidelines
+- Zones should **always** use teleport destinations **defined by the mapper** when possible.
+- Zones should **always** encompass the teleport destination it's using.
+- Regions of zones should **never** overlap
+    - Regions should also not touch if it's possible to connect them into a single zone
+- All points should **always** be snapped to map geometry whenever possible.
+- Checkpoints should be placed in a way that provides the **most consistant** time comparison.
+    - Place checkpoint in the middle/end of hallways rather than right after a turn
+    - Place checkpoints at the bottom of drops rather than at the top 
+
+![Checkpoint Placement Suggestions](/images/map_porting/zoning_checkpoint_placement2.png)
+
+
 # Setup
 1. Open console (**~** by default, key below ESC)
 2. Type `sv_cheats 1`
@@ -29,7 +42,7 @@ You can access it by **Right Clicking** Momentum Mod in your steam library and s
 
 ![Open Zoning Menu](/images/map_zoning/editor_tab.png)
 
-# General information
+# Basic information
 Zoning menu is split into 4 sections
 ### Left section
 This section is for creating the **main track** and **bonuses**.  
@@ -114,7 +127,7 @@ Middle/End of a hallway is generally preferred  over placing them right at the s
 
 Some maps have **multiple routes** a player can take, **multiple possible endings** or a a hole in geometry that the **zone needs to be placed around**.  
 In all of these cases the solution is to add additional regions to relevant zones.  
-Read the [Multiple Regions](#TODO) section for more information.
+Read the [Multiple Regions](#multiple-regions) section for more information.
 
 {{</hint>}}
 
