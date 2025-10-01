@@ -10,7 +10,7 @@ tags:
 ---
 
 Sets the gamemode used as a fallback when an appropriate gamemode cannot be determined automatically. 
-{{< mom_gamemode_override >}} takes precedence over this.
+{{< varref mom_gamemode_override >}} takes precedence over this.
 
 {{< hint info >}}
 If you wish to use this cvar with official maps, you should instead use the "Start Map In Specific Gamemode" option in the Map Selector's context menu.
