@@ -113,7 +113,7 @@ Valve's assets may still be used on maps however it is necessary to remove them 
 {{<hint info>}}
 
 Momentum Mod automatically mounts assets from CS:S, CS:GO, and Portal 2 so players with those games installed will still be able to see them even after removal.  
-A small amount of "non-hero content" from Source games other than those listed above can remain packed. Untick relevant checkboxes if needed.  
+A small amount of assets from Source games not listed above can remain packed but **only** if they are **relatively generic** and **not fundamental** to that game's aesthetic.  
 Use the **Texture Browser** in Lumper to see which game each texture comes from.  
 For other assets check the **Required Games** tab.
 
