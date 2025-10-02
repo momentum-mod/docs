@@ -45,8 +45,13 @@ You can access it by **Right Clicking** Momentum Mod in your steam library and s
 # Basic information
 Zoning menu is split into 4 sections
 ### Left section
-This section is for creating the **main track** and **bonuses**.  
+This section is for creating the **main track**, **bonuses**, and **global regions**.  
 Every **track** can have **stages**
+{{<hint info>}}
+
+[Global Regions](#global-regions) always affect the player, no matter what track they are playing on.
+
+{{</hint>}}
 ### Middle section
 This section is for creating **stages** ( called **courses** in RJ/SJ ).  
 Every **stage** measures time for **comparisons** and has it's own **leaderboard**!  
@@ -226,6 +231,23 @@ When in doubt, don't hesitate to ask for help in **#map-porting** channel on our
 ## Creating the End Zone
 Creating the **End Zone** is as simple as creating any other zone.  
 Click on **+End Zone** below **segments** of the track you're zoning to create it.
+
+{{<hint info>}}
+
+Every track can have only **One End Zone**.  
+If more are required, create them by using [Multiple Regions](#multiple-regions).
+
+{{</hint>}}
+
+{{<hint warning>}}
+
+In other games **End Zones** might be pushed back a couple units from the edge of the platform.  
+This is the case because of a bug that allowed players to activate the zone by hitting the side of a platform without landing on it.  
+This bug is **fixed** in Momentum Mod.  
+When creating **End Zones** make sure they are snapped to vertices like any other zone.
+
+{{</hint>}}
+
 ![Create End Zone](/images/map_zoning/zoning_end_zone.png)
 
 ## Creating Bonuses
