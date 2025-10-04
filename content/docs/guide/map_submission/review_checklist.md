@@ -70,7 +70,7 @@ For more in-depth information on map porting, please see the [map porting](../ma
   - For boosts at the start of tracks that were turned into `trigger_setspeed`, make sure the boost gives the same speed as when walking into the original trigger. Use the "Restore Original Trigger" and "Reload from BSP" buttons (if available) to easily do a before-and-after comparison. Also make sure these boosts have Strict Mode enabled, and do not use "Ignore" mode for vertical speed.
 - [ ] **Gravity Triggers Tool:** Gravity triggers should persist gravity changes when the player exits the volume in CS:S maps, but not in CS:GO maps
 - [ ] **Model Scale Fix Tool:** Check for any incorrectly sized props
-- [ ] **Bhop Trigger Fix Tool (Bhop only):** If the map uses mpbhop triggers (triggers that force bhopping with targetname filters), check if they have been converted
+- [ ] **Bhop Trigger Fix Tool (Bhop only):** If the map uses mpbhop triggers (triggers that force bhopping with targetname filters), check if they have been converted (bhop trigger fix entities should be 0)
 - [ ] **Bhop Block Fix Tool (Bhop only):** If the map uses func_button/func_door bhop platforms, check if they have been converted to func_bhop
 
 # Step 3: Other in-game things to review
