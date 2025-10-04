@@ -53,6 +53,7 @@ For more in-depth information on map porting, please see the [map porting](../ma
 - [ ] Max velocity should be the mapper intended value
   - This is sometimes found on a point_servercommand. Other times this is only listed where the map was downloaded from.
 - [ ] Cancel zones are used in hub/stage select areas if it is possible to return to hub area without teleporting with a command.
+- [ ] Cancel zones should be placed behind start zones so that the timer does not start in the spawn area.
 - [ ] Start/Stage zones with multiple regions in distinct locations with their own teleport destinations should assign each destination to the appropriate region, rather than using the same one for all regions.
 - [ ] When the map uses a filter entity to gate progress to the area a zone is in, the zone should be assigned that filter entity even if the zone cannot be physically reached without the filter due to a filtered teleport trigger in the way.
   - This is for general safety and also because it allows zones to be given a different appearance when they are untriggerable.
