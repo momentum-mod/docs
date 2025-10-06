@@ -47,7 +47,8 @@ For more in-depth information on map porting, please see the [map porting](../ma
 - [ ] Checkpoints are unskippable and marked "required" except where absolutely necessary.
   - Even when a map has skips, it is usually reasonable to place checkpoints in a way that they are not bypassable.
 - [ ] Checkpoints are marked "ordered" except where necessary, even if it does not appear physically possible to activate them in an arbitrary order.
-- [ ] Checkpoints with multiple regions positioned in mirrored paths should be equivalent
+- [ ] Checkpoints with multiple regions positioned in mirrored paths should be equivalent.
+- [ ] There should be no gaps between the sides of a checkpoint and the surrounding walls.
 
 ## Other
 - [ ] Max velocity should be the mapper intended value
