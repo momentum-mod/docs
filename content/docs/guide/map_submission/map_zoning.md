@@ -23,6 +23,15 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
     - Place checkpoint in the middle/end of hallways rather than right after a turn
     - Place checkpoints at the bottom of drops rather than at the top 
 
+### Zone Height
+- If a zone is **under a ceiling**, it should extend **all the way up** to the it
+- If there is **no ceiling above**, the zone should be **at least 256u** tall
+    - Zones can be taller than that if it fits the geometry of the map better
+- Start zone height should be set based on **gameplay and timing needs**
+    - If it's irrelevant to gameplay it should also follow the guidelines above
+- End zones that the player has to **fall into** can be as short as **1u**
+
+
 ![Checkpoint Placement Suggestions](/images/map_porting/zoning_checkpoint_placement2.png)
 
 
@@ -88,7 +97,7 @@ Every **stage** needs a start zone.
     - Make sure you are always snapping to vertices when possible
 3. Select the opposite corner of the starting platform
     - If the platform you're zoning is not rectangular see the [Freeform Mode](#freeform-mode) section
-4. Choose the height of your zone
+4. Choose the height of your zone ( please follow the [zone height requirements](#zone-height))
     - Make sure the **destination entity** is inside of your zone
     - It's usually above any starting platform ( grey box in the video below )
 
@@ -348,6 +357,12 @@ In rare cases when you have to create a custom one:
 {{</hint>}}
 
 ![Teleport Destination](/images/map_zoning/zoning_teleport_destination.png)
+
+## Filters
+Maps sometimes block players from progessing before certain triggers are hit.  
+In Momentum Mod additional protection should be given to zones, by disabling them unless the player meets filter conditions.   
+TODO: Mention negated filters when that's implemented.  
+TODO: Find a map where this could be demonstrated easily with a screenshot/video
 
 # Other Zoning Concepts
 ## Freeform Mode
