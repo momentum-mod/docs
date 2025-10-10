@@ -399,13 +399,12 @@ Simply click the **Edit Points** button and choose the side/vertex you want to e
 ## Allow Bhop
 This zone allows the player to bhop without losing speed when they normally wouldn't be able to.  
 While this can be used in every mode it's mostly relevant to **Surf**.  
-In Momentum Mod Bhopping in **Surf** is only possible when the game finds a 64x64 platform below the player (use `mom_bhop_area_debug 1` to see it).  
+In Momentum Mod, bhopping in **Surf** is only possible when the game finds a 64x64 platform below the player (use `mom_bhop_area_debug 1` to see it).  
 In areas where this is insufficient you should use **Allow Bhop** zones.  
 
 {{<hint warning>}}
 
-You might have to reload the map for these zones to take effect.  
-Remember to save your zones beforehand!
+**Allow Bhop Zones** as well as **Force Enable Bhop** property **won't work** while the zoning menu is open!
 
 {{</hint>}}
 
