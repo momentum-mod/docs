@@ -12,6 +12,10 @@ This checklist is intended for experienced map porters that already understand g
 
 For more in-depth information on map porting, please see the [map porting](../map_porting) and [zoning](../map_zoning) guides.
 
+First check:
+- [ ] The map has been in public testing for at least 7 days
+- [ ] The map hasn't already been ported by someone else
+
 # Step 1: Review zones
 
 ## Region Geometry
@@ -77,12 +81,14 @@ For more in-depth information on map porting, please see the [map porting](../ma
 - [ ] Refraction textures don't have a dark tint (requires recompile?)
 - [ ] Maps don't have invalid textures, cubemaps, skyboxes or models
 - [ ] CS:GO maps have an `env_cascade_light` entity if they use CSM shadows
+- [ ] Default spawn position and direction faced is ok (reload the map to check)
 
 # Step 4: Lumper review
 - [ ] Check for invalid entities ("Entity Review" tab)
 - [ ] Remove weapon strip entities unless adding/removing weapons is a part of the gameplay
 - [ ] Check for Valve assets in the pakfile
 - [ ] Check that any custom music files are categorized as such using the appropriate subdirectory
+- [ ] Check that there are no absurdly large textures (e.g. 4-megabyte plain color textures that could be compressed significantly)
 - [ ] (Surf only) Make sure there is no active "jail" system
 
 # Step 5: Submission page review
