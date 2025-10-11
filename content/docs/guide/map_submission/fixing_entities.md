@@ -19,9 +19,8 @@ Boosting players can be achieved in various ways and therefore triggers need to 
 This guide will teach you how to fix every common scenario.
 
 ## trigger_push and trigger_multiple
-**trigger_push** applies a constant boost to a player inside it's volume.  
-**trigger_multiple** can be used for many purposes, however here we only care about it when it gives the player a singular burst of speed.  
-Both need to be modified depending on how you activate them.
+Both **trigger_push** and **trigger_multiple** can be used for boosting the player.  
+They need to be converted depending on how the boost is applied.
 
 1. Open entity tools by typing `devui_show entitytools` in console
     - You can bind this to a key for ease of access, `bind <key> "devui_show entitytools"` in console
@@ -39,39 +38,22 @@ You can change the font size of **Entity Tools** by using `devui_font_scale` com
 
 {{</hint>}}
 
-### Scenario 1: Constant push is required
-On some maps it is necessary for the player to be constantly pushed while inside of the trigger.  
+### Scenario 1: The boost is applied in the air / while surfing
 
-#### If the boost is applied in the air / while surfing
 3. Check the **cooldown** box and type **1** in the textbox
 4. Click **Apply Changes**
 5. [Export to Lumper](#export-to-lumper)
-
 ![Surf Ramp Boost](/images/map_porting/enforce_a_cooldown.png)
 
-#### If the boost is applied while walking on the ground
-3. If the ground is:
-    - completely smooth ( no ramps or bumps ), check **Only activate when standing on the ground**
-    - not smooth ( has uneven ground or ramps ), add a cooldown to it with [the steps above](#if-the-boost-is-applied-in-the-air--while-surfing)
-4. [Export to Lumper](#export-to-lumper)
+### Scenario 2: The boost is applied by jumping on it
 
-![Floor boost](/images/map_porting/floor_boost.png)
-
-### Scenario 2: Only a single push matters
-In this case modifications are required depending on how you activate the trigger.
-
-#### If you activate the trigger by jumping on it:
 3. Click **Convert to OnJump**
 4. [Export to Lumper](#export-to-lumper)
-
 ![OnJump Boost](/images/map_porting/onjump_boost.png)
 
-#### If you activate the trigger by flying/surfing into it:
 
-3. Add a cooldown with [the steps above](#if-the-boost-is-applied-in-the-air--while-surfing)
-4. [Export to Lumper](#export-to-lumper)
 
-#### If you activate the trigger by walking into it:
+### Scenario 3: The boost is applied by walking into it
 3. Fail the map/stage and don't move your mouse so you look directly at the trigger
     - You can also set your angle by using `setang X Y Z` command in console
     - If setting the angle manually use multiples of 90 such as `setang 180 0 0` or `setang 0 90 0` to orient yourself properly
@@ -81,6 +63,16 @@ In this case modifications are required depending on how you activate the trigge
 5. [Export to Lumper](#export-to-lumper)
 
 ![Convert To SetSpeed](/images/map_porting/convert_to_setspeed.png)
+
+
+### Scenario 4: The boost is applied while walking / standing on the ground
+3. If the ground is:
+    - completely smooth ( no ramps or bumps ), check **Only activate when standing on the ground**
+    - not smooth ( has uneven ground or ramps ), add a cooldown to it with [the steps above](#scenario-1-the-boost-is-applied-in-the-air--while-surfing)
+4. [Export to Lumper](#export-to-lumper)
+
+![Floor boost](/images/map_porting/floor_boost.png)
+
 
 ## trigger_catapult
 All catapults that boost the player directly up will be broken in Momentum Mod.  
