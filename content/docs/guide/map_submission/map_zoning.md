@@ -342,7 +342,7 @@ This setting can also be used to simulate [Collectibles](/guide/collectibles/).
 ## Teleport Destination
 This is the spot player will be teleported to when restarting a run/stage.  
 Original teleport destinations set by the mapper are **highly preferred** over custom ones.  
-If the zone encompasses a **teleport destination** while zoning, it will be automatically selected for that zone.  
+If the zone encompasses a **teleport destination** during creation, it will be automatically selected.
 Sometimes multiple **teleport destinations** will be present in one zone, make sure the correct one is chosen and change it in **entity name** section if necessary.
 
 {{<hint warning>}}
