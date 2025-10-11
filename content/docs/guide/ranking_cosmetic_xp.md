@@ -47,7 +47,7 @@ Rank 10 = 1290 points = 43% of WR
 Points awarded is some equation of the form `A / (rank + B)`, where `A` is a scaling constant, and `B` is a smoothing constant.\
 We choose `A` = 50000, `B` = 49.\
 In this case the graph shows our equation `Points = 50000 / (rank + 49)`\
-![Formula Graph](https://i.imgur.com/wjoJYNg.png)
+![Formula Graph](/images/xp_and_rank/rank_graph.png)
 
 {{< hint info >}}
 X axis designates player rank on a map,\
