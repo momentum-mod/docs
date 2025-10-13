@@ -121,15 +121,6 @@ You can always [Edit Zones](#zone-editing) after creating them.
 **Stages** and **Checkpoints** are used differently depending on the gamemode.  
 Please follow the guide appropriate for your map.  
 
-
-
-{{<hint info>}}
-
-Use the same principle as outlined above to create these zones.  
-Click on **+Segment** or **+Checkpoint** depending on what's appropriate.  
-
-{{</hint>}}
-
 {{<hint info>}}
 
 Checkpoints should be placed where they can be hit consistently for better split comparisons.  
@@ -139,9 +130,7 @@ Middle/End of a hallway is generally preferred  over placing them right at the s
 
 {{<hint info>}}
 
-Some maps have **multiple routes** a player can take, **multiple possible endings** or a a hole in geometry that the **zone needs to be placed around**.  
-In all of these cases the solution is to add additional regions to relevant zones.  
-Read the [Multiple Regions](#multiple-regions) section for more information.
+When zoning **multiple routes** or **around a hole in geometry** you should be adding [Additional Regions](#multiple-regions) to a single zone.
 
 {{</hint>}}
 
