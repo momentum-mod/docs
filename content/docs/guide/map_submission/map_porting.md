@@ -31,7 +31,7 @@ You are free to port any publicly available map with some exceptions:
 
 {{<expander title="Why aren't ports opt-in?">}}
 
-Due to a sheer amount of maps and how old some of they are, it's not feasible to reach out to every single mapper for their permission.  
+Due to a sheer amount of maps and how old some of them are, it's not feasible to reach out to every single mapper for their permission.  
 This makes it especially important not to modify existing ports too drastically - respect the original mapper's intentions!  
   
 If mappers are active (usually on Steam/Discord) we encourage you to reach out to them.  

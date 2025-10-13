@@ -68,7 +68,7 @@ You can change the font size of **Entity Tools** by using `devui_font_scale` com
 ### Scenario 4: The boost is applied while walking / standing on the ground
 3. If the ground is:
     - completely smooth ( no ramps or bumps ), check **Only activate when standing on the ground**
-    - not smooth ( has uneven ground or ramps ), add a cooldown to it with [the steps above](#scenario-1-the-boost-is-applied-in-the-air--while-surfing)
+    - not smooth ( is uneven or has ramps ), add a cooldown to it with [the steps above](#scenario-1-the-boost-is-applied-in-the-air--while-surfing)
 4. [Export to Lumper](#export-to-lumper)
 
 ![Floor boost](/images/map_porting/floor_boost.png)
