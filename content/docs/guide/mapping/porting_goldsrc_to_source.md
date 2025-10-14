@@ -14,38 +14,47 @@ tags:
 
 Porting maps from Goldsrc to Source is not easy. Depending on the complexity of the map, be prepared to invest anywhere from 3 to 50+ hours into a single port. Prior experience with Valve's Hammer Editor is helpful, however porting maps is entirely doable without ever having used Hammer before. 
 
-This guide was primarily written in July of 2025. There is a small number of people who occasionally work on tools for the GoldSrc porting process, so depending on when you are reading this there may be some new ways to make the process easier. Search the web or ask in the Momentum Mod discord and you might find something useful.
+This guide was primarily written in July of 2025. There is a small number of people who occasionally work on tools for the GoldSrc porting process, so depending on when you are reading this there may be some new ways to make the process easier. Search the web or ask in the Momentum Mod Discord and you might find something useful.
 
 ## Necessary software
 ### Hammer++
-Download: https://ficool2.github.io/HammerPlusPlus-Website/ <br>
+Download: https://ficool2.github.io/HammerPlusPlus-Website/
+
 While technically any version of Source Hammer can be used, Hammer++ is recommended as it offers tools to speed up the porting process (e.g. brush merging, names of entities in the entity report).
 ### J.A.C.K.
-Download: http://jack.hlfx.ru/en/features.html <br>
+Download: http://jack.hlfx.ru/en/features.html 
+
 J.A.C.K. is an alternative to GoldSrc Hammer with new features and abilities. You likely will not need these, but J.A.C.K. is still preferred over default GoldSrc Hammer as J.A.C.K. is able to open .map files that default GoldSrc Hammer cannot.
 ### VTFedit
-Download: https://github.com/NeilJed/VTFLib <br>
+Download: https://github.com/NeilJed/VTFLib
+
 VTFedit is a texture editing program that is generally useful for Source mapping. This is the primary tool for converting GoldSrc textures into a format compatible with Source.
 
 {{< hint info >}}Make sure you are using version 1.3.3 or older of VTFedit! While no longer maintained by its original author, newer forks of VTFedit have removed to ability the convert .wad files.{{< /hint >}}
 ## Optional software
 ### SLADE
-Download: https://slade.mancubus.net/index.php?page=downloads <br>
+Download: https://slade.mancubus.net/index.php?page=downloads
+
 SLADE is a software primarily used for DOOM modding, but it is useful for porting as it lets you remove individual textures from a .wad file. This is important as occasionally when attempting to convert a .wad file the conversion will stall on a certain texture. If this happens SLADE allows you to remove the problematic texture.
 ### CompilePal
-Download: https://github.com/ruarai/CompilePal/releases <br>
+Download: https://github.com/ruarai/CompilePal/releases
+
 While not necessary for porting, if you are new to Source mapping this is the best way to compile your .vmf files into playable maps. Compiling through CompilePal allows you to keep working on the .vmf file while compiling, and this tool also automatically handles packing textures, models, and other custom content the map uses.
 ### Crowbar
-Download: https://steamcommunity.com/groups/CrowbarTool <br>
+Download: https://steamcommunity.com/groups/CrowbarTool
+
 Crowbar is a convenient tool to compile, decompile, and view Source and GoldSrc models. You only need this software if you will be porting any models with your map.
 ### GoldSrc2Source - Map Fixer
-Download: https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer <br>
+Download: https://www.moddb.com/games/half-life-source/downloads/goldsrc2source-map-fixer
+
 A mapping tool that you can use to automatically fix certain issues that arise in the porting process. It is capable of adjusting textures, updating Spawnflags, and replacing old GoldSrc mapping logic with Source's new I/O connections logic. Read the download page for more information. Unfortunately this program is not perfect, and some of its "fixes" do not actually help you finish porting a map.
 ### Half-Life Texture Tools
-Download: https://github.com/yuraj11/HL-Texture-Tools/releases <br>
+Download: https://github.com/yuraj11/HL-Texture-Tools/releases
+
 This software allows you to preview the textures contained in a .wad file. If you do not use HUSK MD this software is capable of extracting .wad files packed into a .bsp file.
 ### BSPTexRM
-Download: https://github.com/Litude/BSPTexRM/releases/tag/v1.0 <br>
+Download: https://github.com/Litude/BSPTexRM/releases/tag/v1.0
+
 This tool removes the bitmap entries from the textures lump of a map. The texture entries themselves are preserved. It is very unlikely you will need this tool. In rare circumstances however running a .bsp through this tool can be the difference in whether or not it will decompile.
 
 # Starting the port
@@ -81,7 +90,7 @@ The two methods of decompilation can be described as "Tree-Based" and "Face-To-B
 Face-To-Brush decompilation converts every single brush face into its own separate 1 unit thick brush. This method is the worse of the two due to the following reasons:
 - Texture z-fighting on every convex corner
 - Dozens of leaks
-- Generated map files typically exceed the Hammer brush limit<br>
+- Generated map files typically exceed the Hammer brush limit
 
 In almost every case a Tree-Based decompile is better to work with.
 
@@ -171,7 +180,7 @@ With the settings configured go to the File menu in the top left and select Conv
 
 Now you will need to collect all the .wad files your map uses textures from. You should have all the textures your map uses either from the .wad file generated by HUSK MD or from the downloaded map's .zip file.
 
-If you find yourself missing any additional textures they are likely Valve textures from Half-Life or Team Fortress Classic. The proper way to acquire these textures is to locate halflife.wad, tfc.wad, and tfc2.wad. These .wad files can be found in Steam/SteamApps/Common/Half-Life/valve and Steam/SteamApps/Common/Half-Life/tfc respectively. These 3 .wad files are not comprehensive; you may need textures from one of the other Valve .wad files. Additional Valve .wad files are found in the abovementioned file paths. <br>
+If you find yourself missing any additional textures they are likely Valve textures from Half-Life or Team Fortress Classic. The proper way to acquire these textures is to locate halflife.wad, tfc.wad, and tfc2.wad. These .wad files can be found in Steam/SteamApps/Common/Half-Life/valve and Steam/SteamApps/Common/Half-Life/tfc respectively. These 3 .wad files are not comprehensive; you may need textures from one of the other Valve .wad files. Additional Valve .wad files are found in the abovementioned file paths.
 
 With all of your .wad files collected, they will need to be converted into .vtf and .vmt files to be usable in Source. The easiest way to convert these textures is with VTFEdit.
 
@@ -201,7 +210,7 @@ Now in VTFEDit navigate to Tools -> Convert Folder and fill out the relevant inf
 ![vtfedit_convert_folder_menu](/images/goldsrc_to_source_guide/vtfedit_convert_folder_menu.PNG)
 
 ### Converting texture with Xwad
-If you do not want to download VTFEdit, this process can also be done through a program called Xwad. Xwad is a command line application that is part of the Source SDK on Steam(Not 2007 nor 2013). It is found in the bin folder where other development tools are stored. You will need to either create a .bat file or use a terminal to interface with this program. 
+If you do not want to download VTFEdit, this process can also be done through a program called Xwad. Xwad is a command line application that is part of the Source SDK on Steam (not the 2007 nor the 2013 version). It is found in the bin folder where other development tools are stored. You will need to either create a .bat file or use a terminal to interface with this program. 
 
 You will want to use the parameters -BaseDir (location of the game's folder where gameinfo.txt is stored) -WadFile (location of the .wad file) and -vtex (automatically calls vtex to convert the created .tga files into .vtf files). The combined arguments should look something like this:
 
@@ -361,7 +370,10 @@ Ultimately porting a map this way is not perfect. If the map plays well and ther
 
 
 # Credits
-Zike1017 - Primary Author <br>
-Panzer - Some images, Xwad information <br>
-Ryan "Nemesis" Gregg - Old technical explanations related to decompiling and porting <br>
-Sam Vanheer - Author of the Half-Life Unified SDK map decompiler and technical explanations <br>
+Zike1017 - Primary Author
+
+Panzer - Some images, Xwad information
+
+Ryan "Nemesis" Gregg - Old technical explanations related to decompiling and porting
+
+Sam Vanheer - Author of the Half-Life Unified SDK map decompiler and technical explanations
