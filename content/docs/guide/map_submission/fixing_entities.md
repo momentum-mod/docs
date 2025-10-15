@@ -176,6 +176,14 @@ Lumper can be used to apply these changes permanently.
 1. While still in **Entity Tools** click **Export To Lumper**
     - This will automatically create a config with all changes you made and switch your tab to **Jobs**
 2. Run the Job
+3. Click **File → Save** to save your changes
+
+{{<hint info>}}
+
+In order to check if everything was applied correctly you will have to reload the map in the game.  
+This can be achieved with `map <mapname>` or `reload` commands.
+
+{{</hint>}}
 
 {{<hint info>}}
 
