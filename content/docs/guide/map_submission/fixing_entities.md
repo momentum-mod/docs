@@ -132,9 +132,9 @@ These 2 filters are then combined into a **filter_multi**.
 All **trigger_teleport** using the original filter are modified to use the new **filter_multi**.  
 All **trigger_multiple** originally applying the **targetname** to the player have their outputs modified:
 1. Original **OnTrigger** outputs are converted to **OnLand**
-![Fix Bhop Triggers](/images/map_porting/bhopfix_details_output_changes.png)
+![Fix Bhop Triggers](/images/map_porting/bhop_triggerfix_details_output_changes.png)
 2. New outputs are added to fix improrer trigger activation
-![Fix Bhop Triggers](/images/map_porting/bhopfix_details_new_outputs.png)
+![Fix Bhop Triggers](/images/map_porting/bhop_triggerfix_details_new_outputs.png)
 {{</expander>}}
 
 ![Fix Bhop Triggers](/images/map_porting/fix_bhop_triggers.png)
@@ -231,6 +231,12 @@ Some old bhop maps use **func_button** or **func_door** for bhop platform. These
 2. Open the **Bhop Block Fix** section
     - If the number of **Bhop Blockfix Entities** is **0** you don't need to fix anything
 3. Make sure the checkbox is ticked ( it should be by default )
+4. [Export To Lumper](#export-to-lumper)
+
+{{<expander title="How is the entity modified?">}}
+All **func_door** are converted to **func_bhop**.
+![Block Fix](/images/map_porting/bhop_blockfix.png)
+{{</expander>}}
 
 ## Small Models
 Maps compiled on an old version of source engine can have models that are too small.
