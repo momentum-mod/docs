@@ -233,25 +233,18 @@ These files are saved to **/momentum/maps/entitytools_stripper** folder.
 # Modifications in Lumper
 
 ## func_button
-Shooting a button to activate it in **Rocket Jump** can have a different effect in Momentum Mod compared to TF2.
-1. Check all **func_button** in Lumper
-2. Identify those that have an **OnDamaged** output
-3. Change **OnDamaged** to **OnPressed**
-3. Add **512** to **spawnflags** if it's not already enabled
-    - To determine if this flag is enabled divide the value in **spawnflags** by 512 and round down the result. If it's **odd** the flag is enabled
-4. If the button is moving very slowly add **1** to **spawnflags** to disable it's movement  
+Some buttons reset their position **much slower** in Momentum Mod.  
+Add **1** to **spawnflags** in order to disable their movement
 
 ![Fix Buttons](/images/map_porting/fix_buttons.png)
 
 
 ## logic_timer
 This entity is generally used for displaying time on Rocket Jump / Sticky Jump / KZ maps.  
-Old surf maps however, often use it to teleport players to **jail** after a set amount of time.
+Old surf maps however, often use it to teleport players to **jail** after a set amount of time.  
 If used for **jail**, this entity needs to be removed.
 
 ![Lumper Timer](/images/map_porting/lumper_timer.png)
-
-    
 
 
 # Rare Issues
@@ -348,20 +341,6 @@ TODO: Rewrite if replacing textures with vtfs is added to lumper
 {{</hint>}}
 
 ![Corrupt Cubemaps](/images/map_porting/corrupt_cubemaps.png)
-
-## Misplaced / Missing triggers
-On very rare occassions maps can have missing or misplaced triggers.  
-It's possible to add any rectangular triggers to the map without decompiling by using community made tools and Lumper.
-- [vmf_to_stripper](https://github.com/benjl/vmf_to_stripper/) - Allows for converting triggers made in hammer to a stripper config
-- [zoneToTrigger](https://github.com/Natanxp2/zoneToTrigger) - Allows for converting [Momentum Mod zones](/guide/map_submission/map_zoning/) to a stripper config
-
-{{<hint danger>}}
-
-Be very careful when modifying maps in this way.  
-It's best to contact the mapper to make sure they are fine with whatever you are trying to do.  
-You can always ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod).
-
-{{</hint>}}
 
 ## Collectibles
 When porting maps with collectibles make sure that they function correctly **according to the mapper's original design**.  

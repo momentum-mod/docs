@@ -140,7 +140,6 @@ Music in Momentum Mod need to be categorized properly for volume sliders to work
 
 ![Moving Sounds](/images/map_porting/lumper_moving_sounds.png)
 
-
 ### Cubemaps
 If you renamed the map during the [setup](#setup), reflections might be broken.  
 You can skip this step if you didn't rename the map.  
