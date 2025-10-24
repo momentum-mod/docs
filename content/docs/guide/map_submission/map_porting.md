@@ -49,8 +49,8 @@ Please follow the [gldsrc porting guide](/guide/mapping/porting_goldsrc_to_sourc
 {{</hint>}}
 
 ### Tools
-[Lumper](#lumper) - General porting toolkit. Only use for steps in the guide unless you know what you're doing.  
-Entity Tools - In-game tools automating a lot of porting steps. Usage will be covered later in the guide. These are always preferred over Lumper.
+[Lumper](#TODO-LUMPER-DETAILS) - General porting toolkit. Only use for steps in the guide unless you know what you're doing.  
+**Entity Tools** - In-game tools automating a lot of porting steps. Usage will be covered later in the guide. These are always preferred over Lumper.
 
 ### Preparing the game for porting
 1. [Download](https://github.com/momentum-mod/lumper) Lumper
@@ -79,7 +79,7 @@ Momentum Mod [cannot legally redistribute](/guide/map_submission/map_submission/
 Valve's assets may still be used on maps however it is necessary to remove them from the **.bsp**.   
 
 1. Go to the **Jobs** tab in Lumper
-2. Add "Remove Game Assets" job
+2. Add **Remove Game Assets** job
 3. Run the job
 
 {{<expander title="Won't removing assets make the map look worse?">}}
@@ -109,10 +109,10 @@ When keeping  Valve assets packed, it is **required** that you list them in the 
 {{<expander title="What are the compressed formats and which ones do I use?">}}
 
 Compressed formats are **DXT1**, **DXT5**, and **BC7**.  
-When reencoding if a texture has **no alpha** and is **relatively flat** with **little detail** use **DXT1**.  
+When reencoding, if a texture has **no alpha** and is **relatively flat** with **little detail**, use **DXT1**.  
 For **more detailed** textures (e.g. containing text), use **BC7**.  
 Do **NOT** resize or reencode any **animated textures** or textures with **multiple faces**.  
-Please verify in game that modified textures are not broken and still looks good. 
+Please verify in the game that modified textures are not broken and still look good. 
 
 {{</expander>}}
 
@@ -133,7 +133,10 @@ Music in Momentum Mod need to be categorized properly for volume sliders to work
 2. Scroll to the bottom to see if **/sound** folder exists
 3. If it does, listen to every sound to identify music files
     - You can use **Open in External Program** button or **Right Click → Export** the entire folder to listen to the sounds
-    - Right click on **/sound → Create Directory -> music**, then drag and drop sounds into it. Click **yes** on the pop-up
+4. Remove all **copyrighted music**
+    - **Right Click → Delete**
+5. Move remaining music files into the **/music** folder
+    - **Right click on /sound → Create Directory -> music**, then drag and drop sounds into it. Click **yes** on the pop-up
 
 ![Moving Sounds](/images/map_porting/lumper_moving_sounds.png)
 
@@ -197,17 +200,3 @@ It will teach you how to add the **Start** and **Endzone**, **Bonuses**, **Stage
 You have successfully ported the map!  
 All that's left to do is **Submit the Files** and all relevant information.  
 Follow the [Map Submission Guide](/guide/map_submission/map_submission/)!
-
-
-
-
-
-
-
-
-
-
-
-
-
-

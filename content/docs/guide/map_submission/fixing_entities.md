@@ -9,11 +9,11 @@ weight: 3
 ---
 
 # Setup
-Some **fixes** or **required modifications** can be automated using in-game **Entity Tools**.  
+Some **fixes** and **required modifications** can be automated using in-game **Entity Tools**.  
 Changes made with **Entity Tools** need to be [Exported To Lumper](#export-to-lumper) and then saved in the **.bsp**.
 
 1. Open **Entity Tools** by typing `devui_show entitytools` in console
-2. Follow the rest of the guide to fix all relevant entities
+2. Go through each section of the **Entity Tools** and follow to guide to apply correct fixes
 
 {{<hint info>}}
 
@@ -27,17 +27,54 @@ When making these changes it's perfectly fine to [Export](#export-to-lumper) the
 
 {{</hint>}}
 
-# trigger_push and trigger_multiple
+# Entity Tools
+## Teleport Velocity Mode
+Teleports in Momentum Mod **retain player speed** by default.  
+This needs to be **sometimes changed** as explained in scenarios below.  
+Go through each **teleport destination** by clicking **Teleport To Destination** and apply relevant fixes.  
+{{<expander title="How is the entity modified?">}}
+**Entity Tools** match every trigger that teleports the player to chosen destination and add/change the **velocitymode** keyvalue.
+- 0: Retain Speed
+- 1: Reset Speed
+- 2: Keep Negative Z Velocity
+- 3: Redirect Velocity ( not available as an automatic conversion )
+{{</expander>}}
+
+### Keep Negative Z
+This mode is **generally** only relevant to **Surf**.  
+Apply it to all teleports that are meant to **completely stop** player's **horizontal** momentum.  
+
+{{<hint info>}}
+Use `r_drawclipbrushes 1` in console or `/clips` in chat to enable clip brushes.  
+If the **teleport destination** is inside of a clip box, you should apply this fix
+{{</hint>}}
+
+{{<hint warning>}}
+
+When the player hits a teleport with this mode selected:
+- They lose all control until they land on the ground  
+- Zones are not activated until the player hits the ground
+{{</hint>}}
+
+![Keep Negative Z](/images/map_porting/velocity_mode.png)
+
+### Reset
+Apply this mode to all teleports that are meant to completely reset player's momentum.  
+Examples include:
+- **Rocket Jump and Sticky Jump** teleports that launch the player off the **platform** when hit with an **upwards angle**
+- **Conc and Ahop** fail teleports
+
+![Fix Preserving Speed](/images/map_porting/fix_preserving_speed.png)
+
+## Boost Triggers
 Both **trigger_push** and **trigger_multiple** can be used for boosting the player.  
-They need to be converted depending on how the boost is applied.
+They need to be converted depending on how the boost is applied.  
+Teleport to **every trigger** and apply a modification **if it fits** into one of the **following scenarios**.
 
-1. Open the **Boost Triggers** section
-2. Teleport to every trigger and apply the appropriate modification based on following scenarios
+### Scenario 1: The boost is applied in the air / while surfing
 
-## Scenario 1: The boost is applied in the air / while surfing
-
-3. Check the **cooldown** box and type **1** in the textbox
-4. Click **Apply Changes**
+1. Check the **cooldown** box and type **1** in the textbox
+2. Click **Apply Changes**
 
 {{<expander title="How is the entity modified?">}}
 The chosen trigger has two **OnEndTouch** outputs added.  
@@ -47,22 +84,22 @@ Second one re-enables it after chosen duration.
 {{</expander>}}
 ![Surf Ramp Boost](/images/map_porting/booster_cooldown.png)
 
-## Scenario 2: The boost is applied by jumping on it
+### Scenario 2: The boost is applied by jumping on it
 
-3. Click **Convert to OnJump**
+1. Click **Convert to OnJump trigger_multiple**
 
 {{<expander title="How is the entity modified?">}}
 Matched trigger's **OnEndTouch** output is modified to **OnJump**
 {{</expander>}}
 ![OnJump Boost](/images/map_porting/onjump_boost.png)
 
-## Scenario 3: The boost is applied by walking into it
-3. Fail the map/stage and don't move your mouse so you look directly at the trigger
+### Scenario 3: The boost is applied by walking into it
+1. Fail the map/stage and don't move your mouse so you look directly at the trigger
     - You can also set your angle by using `setang X Y Z` command in console
     - If setting the angle manually use multiples of 90 such as `setang 0 180 0` or `setang 0 90 0` to orient yourself properly
-4. Walk into the trigger by pressing **W only**
+2. Walk into the trigger by pressing **W only**
     - The game will automatically get all relevant information after using the trigger in this way
-4. Click **Convert to Set Speed**
+3. Click **Convert to Set Speed**
 
 {{<expander title="How is the entity modified?">}}
 Chosen trigger is converted into **trigger_setspeed**.  
@@ -73,8 +110,8 @@ Example of the trigger conversion on **surf_fruits**:
 
 ![Convert To SetSpeed](/images/map_porting/convert_to_setspeed.png)
 
-## Scenario 4: The boost is applied while walking / standing on the ground
-3. If the ground is:
+### Scenario 4: The boost is applied while walking / standing on the ground
+1. If the ground is:
     - completely smooth ( no ramps or bumps ), check **Only activate when standing on the ground**
     - not smooth ( is uneven or has ramps ), add a cooldown to it with [the steps above](#scenario-1-the-boost-is-applied-in-the-air--while-surfing)
 
@@ -88,88 +125,13 @@ That filter is then applied to the chosen trigger by adding the **filtername** k
 
 ![Floor boost](/images/map_porting/floor_boost.png)
 
-# trigger_teleport
-Teleports in Momentum Mod retain player speed by default. This needs to be changed depending on gamemode.
 
-## Surf
-In surf it's important to modify teleports that are meant to **stop player's momentum** for consistant timer behavior.  
-After applying this fix the timer will react the moment the player hits the ground ( not when entering a zone ).  
-1. Select a teleport destination. You can check where it's located by clicking **Teleport to Destination**
-    {{<hint warning>}}
-
-    Make sure to **not edit** teleports that **shouldn't reset player's speed**.  
-    You can enable clip brushes ( `r_drawclipbrushes 1` in console or `/clips 1` in chat ) to see if the teleport destination is inside of a box ( convert it if so ).
-
-    {{</hint>}}
-2. Select **Keep Negative Z**
-3. Redo steps 2-3 for all appropriate destinations
-
-{{<expander title="How is the entity modified?">}}
-**Entity Tools** match every trigger that teleports the player to chosen destination and add/change the **velocitymode** keyvalue.
-- 0: Retain Speed
-- 1: Reset Speed
-- 2: Keep Negative Z Velocity
-- 3: Redirect Velocity ( not available as an automatic conversion )
-{{</expander>}}
-
-![Keep Negative Z](/images/map_porting/velocity_mode.png)
-
-## Bhop
-Some maps force the player to constantly jump to not get teleported.   
-This can cause issues when rapidly jumping/sliding up slopes or jumping up a ledge when the triggers are sticking out.
-1. Open entity tools by typing `devui_show entitytools` in console
-2. Open the **Bhop Trigger Fix** section
-3. Click **Fix Bhop Triggers**
-
-{{<expander title="How is the entity modified?">}}
-Maps forcing players to constantly bhop do so by using **filter_activator_name** and applying / removing it from the player after a delay using **OnTrigger** outputs.  
-
-**Entity Tools** add **filter_activator_context** to the bsp with keyvalues:  
-**Negated: 1**  
-**ResponseContext: _mom_leftground:\***  
-
-These 2 filters are then combined into a **filter_multi**.  
-All **trigger_teleport** using the original filter are modified to use the new **filter_multi**.  
-All **trigger_multiple** originally applying the **targetname** to the player have their outputs modified:
-1. Original **OnTrigger** outputs are converted to **OnLand**
-![Fix Bhop Triggers](/images/map_porting/bhop_triggerfix_details_output_changes.png)
-2. New outputs are added to fix improrer trigger activation
-![Fix Bhop Triggers](/images/map_porting/bhop_triggerfix_details_new_outputs.png)
-{{</expander>}}
-
-![Fix Bhop Triggers](/images/map_porting/fix_bhop_triggers.png)
-
-## Rocket Jump
-Sometimes it's possible to hit a teleport while going upwards. This can lead to the player being launched off the platform right after failing.  
-You should not blindly edit these using **Entity Tools** as that may lead to breaking teleport jumps.
-
-1. Identify the teleport in Lumper by using **Sync Target** or **Sync Pos** option in **Entity Editor** tab
-    - Sync Target will display all entities you are looking at in the game
-    - Sync Pos will display all entities in the specified radius around you
-    - Sometimes it can be difficult to find proper triggers because of other entities overlapping them, ask on our [Discord](https://discord.gg/momentummod) in **#map-porting** channel if you need help
-2. Click on **Add KeyValue**
-3. In the **newproperty** field type **velocitymode**
-4. In the **newvalue** field type **1**  
-
-![Fix Preserving Speed](/images/map_porting/fix_preserving_speed.png)
-
-# func_button
-Shooting a button to activate it in **Rocket Jump** can have a different effect in Momentum Mod compared to TF2.
-1. Check all **func_button** in Lumper
-2. Identify those that have an **OnDamaged** output
-3. Change **OnDamaged** to **OnPressed**
-3. Add **512** to **spawnflags** if it's not already enabled
-    - To determine if this flag is enabled divide the value in **spawnflags** by 512 and round down the result. If it's **odd** the flag is enabled
-4. If the button is moving very slowly add **1** to **spawnflags** to disable it's movement  
-
-![Fix Buttons](/images/map_porting/fix_buttons.png)
-
-# trigger_gravity
+## Gravity Triggers
 Sometimes **trigger_gravity** is meant to apply permanent gravity changes to the player.   
 
 {{<hint warning>}}
 
-Gravity triggers like that usually come in pairs, one to **modify the gravity**, one **to revert it**.  
+Gravity triggers like that usually come in pairs, **one to modify the gravity, one to revert it**.  
 Make sure you modify all relevant triggers when applying this fix.  
 
 {{</hint>}}
@@ -189,15 +151,62 @@ Do **NOT** apply this fix if the trigger is meant to modify gravity **only** whe
 
 ![Fix Gravity Triggers](/images/map_porting/gravity_persist.png)
 
-# logic_timer
-This entity is generally used for displaying time on Rocket Jump / Sticky Jump / KZ maps.  
-Old surf maps however, often use it to teleport players to **jail** after a set amount of time.
-If used for **jail**, this entity needs to be removed.
+## Model Scale Fix
+Maps compiled on an old version of source engine can have models that are too small.
+1. Open entity tools by typing `devui_show entitytools` in console
+2. Open the **Model Scale Fix** Section
+    - Teleport to props to see if they are the correct size
+3. Click **Fix All Model Scales**
 
-![Lumper Timer](/images/map_porting/lumper_timer.png)
+{{<hint info>}}
 
-    
-# Export to Lumper
+Either all models need this fix, or none of them do.  
+There are no known cases of models having to be fixed individually.
+
+{{</hint>}}
+
+{{<expander title="How is the entity modified?">}}
+**scaletype** keyvalue is changed to **1 ( Non-Hierachical )**
+{{</expander>}}
+
+![Small Models Before](/images/map_porting/fix_model_scale_before.png)
+![Small Models After](/images/map_porting/fix_model_scale_after.png)
+
+
+## Bhop Trigger Fix
+Some maps force the player to **constantly jump** to not get teleported.   
+This can cause issues when **rapidly jumping/sliding up slopes** or jumping up a ledge when the triggers are sticking out.  
+If this option is available in the **Entity Tools**, you should **always** use it.
+
+{{<expander title="How is the entity modified?">}}
+Maps forcing players to constantly bhop do so by using **filter_activator_name** and applying / removing it from the player after a delay using **OnTrigger** outputs.  
+
+**Entity Tools** add **filter_activator_context** to the bsp with keyvalues:  
+**Negated: 1**  
+**ResponseContext: _mom_leftground:\***  
+
+These 2 filters are then combined into a **filter_multi**.  
+All **trigger_teleport** using the original filter are modified to use the new **filter_multi**.  
+All **trigger_multiple** originally applying the **targetname** to the player have their outputs modified:
+1. Original **OnTrigger** outputs are converted to **OnLand**
+![Fix Bhop Triggers](/images/map_porting/bhop_triggerfix_details_output_changes.png)
+2. New outputs are added to fix improrer trigger activation
+![Fix Bhop Triggers](/images/map_porting/bhop_triggerfix_details_new_outputs.png)
+{{</expander>}}
+
+![Fix Bhop Triggers](/images/map_porting/fix_bhop_triggers.png)
+
+## Bhop Block Fix
+Some old bhop maps use **func_button** or **func_door** for bhop platform. These should be converted to **func_bhop**.  
+If this option is available in the **Entity Tools**, you should **always** use it.  
+
+
+{{<expander title="How is the entity modified?">}}
+All **func_door** are converted to **func_bhop**.
+![Block Fix](/images/map_porting/bhop_blockfix.png)
+{{</expander>}}
+
+## Export to Lumper
 The changes made with **Entity Tools** will be reverted once you exit the map.  
 Lumper can be used to apply these changes permanently.
 1. While still in **Entity Tools** click **Export To Lumper**
@@ -221,36 +230,33 @@ These files are saved to **/momentum/maps/entitytools_stripper** folder.
 ![Apply Patches](/images/map_porting/export_to_lumper.png)
 
 
+# Modifications in Lumper
+
+## func_button
+Shooting a button to activate it in **Rocket Jump** can have a different effect in Momentum Mod compared to TF2.
+1. Check all **func_button** in Lumper
+2. Identify those that have an **OnDamaged** output
+3. Change **OnDamaged** to **OnPressed**
+3. Add **512** to **spawnflags** if it's not already enabled
+    - To determine if this flag is enabled divide the value in **spawnflags** by 512 and round down the result. If it's **odd** the flag is enabled
+4. If the button is moving very slowly add **1** to **spawnflags** to disable it's movement  
+
+![Fix Buttons](/images/map_porting/fix_buttons.png)
+
+
+## logic_timer
+This entity is generally used for displaying time on Rocket Jump / Sticky Jump / KZ maps.  
+Old surf maps however, often use it to teleport players to **jail** after a set amount of time.
+If used for **jail**, this entity needs to be removed.
+
+![Lumper Timer](/images/map_porting/lumper_timer.png)
+
+    
+
+
 # Rare Issues
 Issues listed in this section are very rare and apply mostly to **old maps**.  
 Vast majority of maps **will not** require any of these fixes.  
-
-## Old Bhop Platforms
-Some old bhop maps use **func_button** or **func_door** for bhop platform. These should be converted to **func_bhop**
-1. Open entity tools by typing `devui_show entitytools` in console
-2. Open the **Bhop Block Fix** section
-    - If the number of **Bhop Blockfix Entities** is **0** you don't need to fix anything
-3. Make sure the checkbox is ticked ( it should be by default )
-4. [Export To Lumper](#export-to-lumper)
-
-{{<expander title="How is the entity modified?">}}
-All **func_door** are converted to **func_bhop**.
-![Block Fix](/images/map_porting/bhop_blockfix.png)
-{{</expander>}}
-
-## Small Models
-Maps compiled on an old version of source engine can have models that are too small.
-1. Open entity tools by typing `devui_show entitytools` in console
-2. Open the **Model Scale Fix** Section
-    - Teleport to props to see if they are the correct size
-3. Click **Fix All Model Scales**
-
-{{<expander title="How is the entity modified?">}}
-**scaletype** keyvalue is changed to **1 ( Non-Hierachical )**
-{{</expander>}}
-
-![Small Models Before](/images/map_porting/fix_model_scale_before.png)
-![Small Models After](/images/map_porting/fix_model_scale_after.png)
 
 ## Stripper Configs
 Community servers sometimes apply server side fixes to maps ( mainly applicable to Rocket Jump / Sticky Jump )  
@@ -358,7 +364,11 @@ You can always ask for help in **#map-porting** channel on our [Discord](https:/
 {{</hint>}}
 
 ## Collectibles
-Maps with collectibles can be ported in 2 ways:
+When porting maps with collectibles make sure that they function correctly **according to the mapper's original design**.  
+Verify that the state of collectibles is **properly reset** when restarting or switching tracks.  
+Some maps won't require any fixes.  
+
+Maps that do need to be fixed can be ported in 2 ways:
 - Convert the collectible system triggers to [Momentum's collectible system entities](/guide/collectibles/)
 - [Zone the map](/guide/map_submission/map_zoning/) using unordered, required checkpoints
 
@@ -366,7 +376,7 @@ Maps with collectibles can be ported in 2 ways:
 
 Converting collectibles to Momentum Mod's system can be complicated.  
 There is no one-way-fits-all solution.  
-Apply your best judgement when attempting it.
+If needed, please ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod)!
 
 {{</hint>}}
 
