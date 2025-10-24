@@ -5,7 +5,7 @@ categories:
 tags:
   - mapping
   - guidelines
-weight: 3
+weight: 5
 ---
 
 This checklist is intended for experienced map porters that already understand general porting concepts.
