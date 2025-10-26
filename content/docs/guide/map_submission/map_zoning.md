@@ -44,7 +44,7 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 
 {{<hint info>}}
 
-All zones will save to **/momentum/maps/zones/local**.  
+All zones will be saved to **/momentum/maps/zones/local** folder.  
 You can access it by **Right Clicking** Momentum Mod in your steam library and selecting **Manage → Browse local files**
 
 {{</hint>}}
@@ -136,7 +136,7 @@ When zoning **multiple routes** or **around a hole in geometry** you should be a
 
 {{<hint warning>}}
 
-For all **surf** maps make sure you set the correct [Safe Height](#safe-height) and [Allow Bhops](#allow-bhop) where necessary.
+For all **Surf** maps make sure you set the correct [Safe Height](#safe-height) and [Allow Bhops](#allow-bhop) where necessary.
 
 {{</hint>}}
 
@@ -331,7 +331,7 @@ This setting can also be used to simulate [Collectibles](/guide/collectibles/).
 ## Teleport Destination
 This is the spot player will be teleported to when restarting a run/stage.  
 Original teleport destinations set by the mapper are **highly preferred** over custom ones.  
-If the zone encompasses a **teleport destination** during creation, it will be automatically selected.
+If the zone encompasses a **teleport destination** during creation, it will be automatically selected.  
 Sometimes multiple **teleport destinations** will be present in one zone, make sure the correct one is chosen and change it in **entity name** section if necessary.
 
 {{<hint warning>}}
