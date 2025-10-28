@@ -200,12 +200,35 @@ All **trigger_multiple** originally applying the **targetname** to the player ha
 Some old bhop maps use **func_button** or **func_door** for bhop platform. These should be converted to **func_bhop**.  
 If this option is available in the **Entity Tools**, you should **always** use it.  
 
+{{<hint info>}}
+Checkbox for this fix is **automatically** ticked.  
+That **does not** mean the fix has been applied, you still need to [Export It To Lumper](#export-to-lumper).
+{{</hint>}}
+
 
 {{<expander title="How is the entity modified?">}}
 All **func_door** are converted to **func_bhop**.
-![Block Fix](/images/map_porting/bhop_blockfix.png)
+![Block Fix Lumper](/images/map_porting/bhop_blockfix.png)
 {{</expander>}}
 
+![Block Fix](/images/map_porting/entity_tools_bhop_blockfix.png)
+
+## CSM Fix
+Some **CS:GO** maps use cascaded shadow maps (CSM) to create more detailed shadows.  
+
+{{<expander title="How is the entity modified?">}}
+**env_cascade_light** is added to the **.bsp**
+![CSM Lumper](/images/map_porting/csm_lumper.png)
+{{</expander>}}
+
+{{<expander title="How to recognize broken shadows?">}}
+This fix should only be used for certain **CS:GO** maps.  
+The only way to know if the map needs it, is to compare shadows between **CS:GO** and **Momentum Mod**
+![Missing CSM Entity](/images/map_porting/csm_broken.png)
+![Working CSM](/images/map_porting/csm_working.png)
+{{</expander>}}
+
+![CSM Fix](/images/map_porting/entity_tools_csm_fix.png)
 ## Export to Lumper
 The changes made with **Entity Tools** will be reverted once you exit the map.  
 Lumper can be used to apply these changes permanently.
@@ -227,7 +250,7 @@ These files are saved to **/momentum/maps/entitytools_stripper** folder.
 
 {{</hint>}}  
 
-![Apply Patches](/images/map_porting/export_to_lumper.png)
+![Export To Lumper](/images/map_porting/export_to_lumper.png)
 
 
 # Modifications in Lumper
@@ -302,19 +325,7 @@ Skyboxes will sometimes fail to load in maps compiled with HDR.
 ![VTF Edit Sky SDR](/images/map_porting/lumper_sky_sdr.png)
 ![HDR Skybox](/images/map_porting/hdr_skybox.png)
 
-## Missing Shadows on CS:GO Maps
-Some CS:GO maps use cascaded shadow maps (CSM) to create more detailed shadows.  
-In Momentum Mod **env_cascade_light** entity must exist for them to display properly.
 
-1. Go to **Entity Editor**
-2. Click the **+**
-    - This will create an empty entity showing as **\<missing classname!\>** in the list
-3. Fill out the new entity using the image below
-    - Copy the origin value from any other entity
-    
-![CSM Lumper](/images/map_porting/csm_lumper.png)
-![Missing CSM Entity](/images/map_porting/csm_broken.png)
-![Working CSM](/images/map_porting/csm_working.png)
 
 ## Corrupt HDR Cubemaps
 Some maps from CS:S have corrupted reflections in Momentum Mod.  
@@ -333,7 +344,7 @@ In cases we've seen they've been flat blue/black textures.
 
 {{<hint info>}}
 
-If the CS:GO port doesn't exist you can manually delete → import → rename every single **.vtf** file in **/materials/maps** with [this file](https://cdn.discordapp.com/attachments/1370920480910999614/1402525150955700224/c-2569_4133_3847.hdr.vtf?ex=68d2da15&is=68d18895&hm=e1d55c87f0283e7bfde1b2b9372b62d6002314d937f157b7fff9112fd8d02841&)  
+If the CS:GO port doesn't exist you can manually **delete → import → rename** every single **.vtf** file in **/materials/maps** with [this file](https://cdn.discordapp.com/attachments/1370920480910999614/1402525150955700224/c-2569_4133_3847.hdr.vtf?ex=68d2da15&is=68d18895&hm=e1d55c87f0283e7bfde1b2b9372b62d6002314d937f157b7fff9112fd8d02841&)  
 You need to make sure all filenames match **exactly** after importing and renaming  
 The best way is to copy the **.bsp** for backup and open 2 Lumper windows side by side so that you can copy the filenames from one to the other  
 TODO: Rewrite if replacing textures with vtfs is added to lumper

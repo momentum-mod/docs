@@ -22,9 +22,9 @@ It's very important to respect the spirit and intent of the map's design.
 {{</hint>}}
 
 You are free to port any publicly available map with some exceptions:
-- Mappers can reserve/block porting of their maps using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeheNDY5A960u6GtXCHtt3s_2vZJL3o5tMJ_ZNbYOpb6cx5nQ/viewform).
-- Before porting make sure the map isn't on [this spreadsheet](https://docs.google.com/spreadsheets/d/1KHeWfhGUNpN267CXtPvVdf2h7eQbjPUhWVkE5NimYhg/edit?gid=2051215588#gid=2051215588).
-- You are not free to port maps created only for specific servers without explicit permission.
+- Mappers can reserve/block porting of their maps using [this form](https://docs.google.com/forms/d/e/1FAIpQLSeheNDY5A960u6GtXCHtt3s_2vZJL3o5tMJ_ZNbYOpb6cx5nQ/viewform)
+- Before porting make sure the map isn't on [this spreadsheet](https://docs.google.com/spreadsheets/d/1KHeWfhGUNpN267CXtPvVdf2h7eQbjPUhWVkE5NimYhg/edit?gid=2051215588#gid=2051215588)
+- You are not free to port maps created only for specific servers without explicit permission
 - When in doubt, contact the mapper ( please don't spam them )
 
 {{<expander title="Why aren't ports opt-in?">}}
@@ -93,7 +93,7 @@ For other assets check the **Required Games** tab.
 {{<hint warning>}}
 A small amount of assets from Source games other than CS:S, CS:GO, and Portal 2 can remain packed.  
 That can be done **only** if they are **relatively generic** and **not fundamental** to that game's aesthetic.  
-When keeping  Valve assets packed, it is **required** that you list them in the **porting changelog** during [Map Submission](/guide/map_submission/map_submission/)
+When keeping  Valve assets packed, it is **required** that you list them in the **porting changelog** during [Map Submission](/guide/map_submission/map_submission/).
 {{</hint>}}
 
 ![Remove Game Assets](/images/map_porting/lumper_remove_assets.png)
