@@ -76,11 +76,11 @@ First check:
 - [ ] **Model Scale Fix Tool:** Check for any incorrectly sized props
 - [ ] **Bhop Trigger Fix Tool (Bhop only):** If the map uses mpbhop triggers (triggers that force bhopping with targetname filters), check if they have been converted (bhop trigger fix entities should be 0)
 - [ ] **Bhop Block Fix Tool (Bhop only):** If the map uses func_button/func_door bhop platforms, check if they have been converted to func_bhop
+- [ ] **CSM Fix Tool:** CS:GO maps have an `env_cascade_light` entity if they use CSM shadows
 
 # Step 3: Other in-game things to review
 - [ ] Refraction textures don't have a dark tint (requires recompile?)
 - [ ] Maps don't have invalid textures, cubemaps, skyboxes or models
-- [ ] CS:GO maps have an `env_cascade_light` entity if they use CSM shadows
 - [ ] Default spawn position and direction faced is ok (reload the map to check)
 
 # Step 4: Lumper review
