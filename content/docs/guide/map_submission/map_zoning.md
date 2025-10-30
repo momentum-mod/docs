@@ -19,9 +19,12 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 - Regions of zones should **never** overlap
     - Regions should also not touch if it's possible to connect them into a single zone
 - All points should **always** be snapped to map geometry whenever possible.
-- Checkpoints should be placed in a way that provides the **most consistant** time comparison.
+- **Checkpoints** should be placed in a way that provides the **most consistant** time comparison
     - Place checkpoint in the middle/end of hallways rather than right after a turn
     - Place checkpoints at the bottom of drops rather than at the top 
+- **Checkpoints** in modes other than **RJ, SJ, and Conc** should generally be about 10s apart
+    - This does not have to be very precise, you can watch WR videos and place checkpoints in approximate spots
+
 
 ### Zone Height
 - If the zone is **right under a ceiling**, it should extend **all the way up** to it
