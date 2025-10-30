@@ -24,12 +24,12 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
     - Place checkpoints at the bottom of drops rather than at the top 
 
 ### Zone Height
-- If a zone is **under a ceiling**, it should extend **all the way up** to the it
+- If the zone is **right under a ceiling**, it should extend **all the way up** to it
 - If there is **no ceiling above**, the zone should be **at least 256u** tall
     - Zones can be taller than that if it fits the geometry of the map better
-- Start zone height should be set based on **gameplay and timing needs**
-    - If it's irrelevant to gameplay it should also follow the guidelines above
-- End zones that the player has to **fall into** can be as short as **1u**
+- **Start zone's height** should be set based on **gameplay and timing needs**
+    - Unless there is a reason, it should also follow the guidelines above
+- **End zones** that the player has to **fall into** can be as short as **1u**
 
 
 ![Checkpoint Placement Suggestions](/images/map_porting/zoning_checkpoint_placement2.png)
@@ -100,6 +100,7 @@ Every **stage** needs a start zone.
 4. Choose the height of your zone ( please follow the [zone height requirements](#zone-height))
     - Make sure the **destination entity** is inside of your zone
     - It's usually above any starting platform ( grey box in the video below )
+5. If necessary, change the [Safe Height](#safe-height) of your zone
 
 {{<hint info>}}
 
@@ -136,7 +137,7 @@ When zoning **multiple routes** or **around a hole in geometry** you should be a
 
 {{<hint warning>}}
 
-For all **Surf** maps make sure you set the correct [Safe Height](#safe-height) and [Allow Bhops](#allow-bhop) where necessary.
+On all **Surf** maps, make sure to create [Allow Bhop](#allow-bhop) zones where necessary.
 
 {{</hint>}}
 
@@ -298,11 +299,11 @@ You **have to** press **Enter** after entering the **Max Velocity**, otherwise i
 
 ## Safe Height
 Player needs to stand **at or below** the safe height to be able to start the run.  
-This setting is generally only relevant to **Surf**.  
-{{<hint info>}}
+This setting is generally only relevant to **Surf** and **Bhop**, other modes use **Full Height** by default.  
+{{<hint warning>}}
 
-Most maps won't require changing this property.  
-Leaving it at **Base for Surf** and **Full Height for Other Gamemodes** will be sufficient.
+Make sure that safe height encompasses any **small protrusions** in the **start zones**.  
+Pay special attention to **zone markings** on **Bhop maps** as those are often solid and require **raising the safe height by 2-3 units**.
 
 {{</hint>}}
 
