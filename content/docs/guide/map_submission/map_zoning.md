@@ -22,8 +22,9 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 - **Checkpoints** should be placed in a way that provides the **most consistant** time comparison
     - Place checkpoint in the middle/end of hallways rather than right after a turn
     - Place checkpoints at the bottom of drops rather than at the top 
-- **Checkpoints** in modes other than **RJ, SJ, and Conc** should generally be about 10s apart
-    - This does not have to be very precise, you can watch WR videos and place checkpoints in approximate spots
+- **Checkpoints** in modes other than **RJ, SJ, and Conc** should generally be at least 10s apart
+    - This does not have to be very precise, it's fine to place checkpoints at longer intervals if that fits the gameplay better.
+    - You can watch WR videos and place checkpoints in approximate spots
 
 
 ### Zone Height
