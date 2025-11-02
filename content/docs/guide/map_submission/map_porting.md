@@ -84,14 +84,14 @@ Valve's assets may still be used on maps however it is necessary to remove them 
 
 {{<expander title="Won't removing assets make the map look worse?">}}
 
-Momentum Mod automatically mounts assets from CS:S, CS:GO, and Portal 2 so players with those games installed will still be able to see them even after removal.  
+Momentum Mod automatically mounts assets from CS:S, CS:GO, TF2 and Portal 2 so players with those games installed will still be able to see them even after removal.  
 Use the **Texture Browser** in Lumper to see which game each texture comes from.  
 For other assets check the **Required Games** tab.  
 
 {{</expander>}}
 
 {{<hint warning>}}
-A small amount of assets from Source games other than CS:S, CS:GO, and Portal 2 can remain packed.  
+A small amount of assets from Source games other than CS:S, CS:GO, TF2 and Portal 2 can remain packed.  
 That can be done **only** if they are **relatively generic** and **not fundamental** to that game's aesthetic.  
 When keeping  Valve assets packed, it is **required** that you list them in the **porting changelog** during [Map Submission](/guide/map_submission/map_submission/).
 {{</hint>}}
@@ -168,7 +168,7 @@ You can find it in **Tools -> Map Summary** or by using the **CTRL + H** shortcu
 ![Map Summary](/images/map_porting/lumper_map_summary.png)
 
 ## Step 5: Take Screenshots
-1. Fly around the map in noclip (**g** by default, `noclip` in console) to find good spots to screenshots
+1. Fly around the map in noclip (**g** by default, `noclip` in console) to find good spots to screenshot
     - You can use maximum of 5 screenshots, 1 for the thumbnail, 4 for the gallery
 2. Use `mom_official_screenshot` in console to take screenshots. This command will automatically apply all relevant settings.  
     - Screenshots will be saved to **/momentum/screenshots**
