@@ -14,7 +14,7 @@ This guide focuses on zoning using Momentum Mod's **in-game tool**.
 Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 
 # General Guidelines
-- Zones should **always** use teleport destinations **defined by the mapper** when possible.
+- Zones with teleport destinations should **always** use entities **defined by the mapper** when possible.
 - Zones should **always** encompass the teleport destination it's using.
 - Regions of zones should **never** overlap
     - Regions should also not touch if it's possible to connect them into a single zone
@@ -45,6 +45,10 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 3. Press **Tab** to open leaderboards
 4. Right click to get mouse control and click the button in **bottom left**
     - You also open this menu with `mom_zoning_enable 1` in console
+
+{{<hint info>}}
+You can **right click** to **toggle mouse control** while the **zoning menu** is open
+{{</hint>}}
 
 {{<hint info>}}
 
@@ -94,8 +98,7 @@ Every **stage** needs a start zone.
 1. Noclip to the start of the map
     - **g** by default or `noclip` in console 
 1. Click **+ Main**
-    - You can right click to **toggle mouse control** while the **zoning menu** is open
-    - This will automatically create the **main track**, **stage 1** and put you in the **zoning mode**
+    - This will automatically create the **main track**, **stage 1** and put you in the **zoning mode** 
 2. Select one corner of the starting platform
     - The zoning tool will automatically detect vertices and snap to them ( blue indicators in the video below )
     - Make sure you are always snapping to vertices when possible
@@ -103,7 +106,8 @@ Every **stage** needs a start zone.
     - If the platform you're zoning is not rectangular see the [Freeform Mode](#freeform-mode) section
 4. Choose the height of your zone ( please follow the [zone height requirements](#zone-height))
     - Make sure the **destination entity** is inside of your zone
-    - It's usually above any starting platform ( grey box in the video below )
+    - The entity will turn green when encompassed by the region
+    - The entity is usually above any starting platform ( grey box in the video below )
 5. If necessary, change the [Safe Height](#safe-height) of your zone
 
 {{<hint info>}}
@@ -258,7 +262,7 @@ Creating Bonuses is the exact same process as creating the **Main Track**.
 Start By clicking on **+Bonus** to create it.  
 {{<hint info>}}
 
-**Vast** majority ( if not all ) bonuses are essentially short, linear maps.  
+**Vast** majority ( if not all ) of bonuses are essentially short, linear maps.  
 Follow the same principles as in [Surf: Linear](/guide/map_submission/map_zoning/#surf-linear) or [Rocket / Sticky Jump: No Courses](/guide/map_submission/map_zoning/#rocket--sticky-jump-no-courses) zoning.
 
 {{</hint>}}
@@ -294,7 +298,7 @@ You can set the **Max Velocity** in **Main Track** properties.
 
 {{<hint danger>}}
 
-You **have to** press **Enter** after entering the **Max Velocity**, otherwise it won't save.
+You **have to** press **Enter** after inputting **Max Velocity**, otherwise it won't save.
 
 {{</hint>}}
 
@@ -384,7 +388,10 @@ Clicking on **+Defrag Modifier Bonus** will create the bonus and allow for editi
 
 ## Zone Editing
 Any zone can be edited after it's creation.  
-Simply click the **Edit Points** button and choose the side/vertex you want to edit.  
+Simply click the **Edit Points** button and choose the point you want to edit.  
+- Corners - Allow you to edit the XY position of an individual vertex
+- Edges - Allow you to create additional vertices
+- Sides - Allow you to move a side along it's axis
 {{<video src="/videos/map_zoning/editing_zones.mp4">}}
 
 
