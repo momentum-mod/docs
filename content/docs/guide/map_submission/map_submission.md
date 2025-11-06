@@ -61,7 +61,7 @@ Only upload files that have changed.
 
 ## Final Review
 Maps in **final review** need to be approved by an **Official Reviewer** before moving forward.  
-**Official Reviewers** ensure that the map conforms to technical standards outlined in [Map Porting](https://docs.momentum-mod.org/guide/map_submission/map_porting/) and [Map Zoning](https://docs.momentum-mod.org/guide/map_submission/map_zoning/) guides.  
+**Official Reviewers** ensure that the map conforms to technical standards outlined in [Map Porting](/guide/map_submission/map_porting/) and [Map Zoning](https://docs.momentum-mod.org/guide/map_submission/map_zoning/) guides.  
 
 {{<hint info>}}
 [Map Review Checklist](https://docs.momentum-mod.org/guide/map_submission/review_checklist/) that **Official Reviewers** follow is public.  
@@ -103,6 +103,7 @@ You **should not** decompile existing maps to provide this file.
 ### Map Name
 This field is automatically filled after uploading the **.bsp**.  
 Map Name should be **the same** as the name of the **.bsp**.  
+When renaming maps reflections might break, make sure to follow the [Cubemaps](/guide/map_submission/map_porting/#cubemaps) section of the [Map Porting Guide](/guide/map_submission/map_porting/) to fix them.
 
 Map Names should be modified for Momentum Mod in the following ways:
 - All version information **affixes** should be removed. Examples include **_a12**, **_njv**, **_ksf**, **fix**, **_b2**, etc.
@@ -146,6 +147,7 @@ You can find those on [Jump.tf Forum](https://jump.tf/forum/), [Gamebanana](http
 Descriptions however, should sometimes be modified:
 - **Do not include** any credits, you should instead fill out the [Credits](#credits) section instead
 - **Do not include** any settings required for the game to function in other games
+- **Do not include** any promotions for servers in other games
 
 If there is no original description, **write your own**.  
 Just **one or two sentences** is enough, it does not have to be elaborate
@@ -173,10 +175,11 @@ While you **may not use those screenshots directly**, feel free to **recreate th
 
 ## Credits
 Credit section is split into 4 categories.  
-Make sure you fill them out correctly using [Gamebanana](https://gamebanana.com/), [Jump.tf Forum](https://jump.tf/forum/), **Steam Workshop** or **In-Game Credit Textures**.
+Make sure you fill them out correctly using [Gamebanana](https://gamebanana.com/), [Jump.tf Forum](https://jump.tf/forum/), **Steam Workshop** or **In-Game Credit Textures**.  
+Porters **should not** include themselves in credits.  
 - **Authors**
   - For collabs this can be multiple people
-  - Doesn't usually include artists, but can be if they were essential to overall vision of the map and they made lots of original stuff
+  - Doesn't usually include artists, but can be if they were essential to overall vision of the map and made a lot of original stuff
   - Shouldn't include bonus mappers!
 - **Contributors**
   - Bonus mappers - provide the information on which bonus they made in the credit description **( not map description )**
@@ -198,14 +201,14 @@ Hidden leaderboards are treated as **Unranked**.
 
 The primary types of leaderboards are:
 - **Ranked** - Runs **contribute** to overall rank points
-  - Shown in the **Ranked**" tab in the Map Selector
+  - Shown in the **Ranked** tab in the Map Selector
 - **Unranked** - Runs **don't contribute** to player's rank points
   - Shown in the **Unranked** tab in the Map Selector
   - If an **Unranked leaderboard** gets popular, we will consider moving it to **Ranked**
 
 Ranking status depends on the **quality of the track** but these 2 rules always apply:
-- In surf, **bhop only** bonuses should be **Unranked**. They **should also not have** Bhop leaderboards
-- In other modes, **single stage** bonuses should be **Unranked**
+- In Surf, **bhop only** bonuses should be **Unranked**. They **should also not have** Bhop leaderboards
+- In Other Modes, **single stage** bonuses should be **Unranked**
     - Full course bonuses can be **Ranked** (eg. sj_garbage b1)
 
 ### Tiers
