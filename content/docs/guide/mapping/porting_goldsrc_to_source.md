@@ -258,17 +258,31 @@ The brightness values used for GoldSrc will not give you the same result in Sour
 
 The light_environment will also have a similar problem with its color. If you see a light_environment with RGB values of "255 255 128" you almost always should change them to "255 255 255". The brightness of the light_environment is also going to be too low for both the "Brightness" and "Ambient" fields. Furthermore, the angle of the sun will be listed an as invalid key value. Delete this key value and use this number in the "Pitch" field.
 
-Some maps also used a light_spot pointing at a target instead of a light_environment. This setup should be deleted, and the properties of the light_spot should be applied to a light_environment.
+Some maps also used a light_spot instead of a light_environment to generate skybox lighting. If you see an out of place light_spot entity with a positive "sky" key value you should delete it and replace it with a proper light_environment.
 
 ### light_spot
 This entity changed between GoldSrc and Source. Inspecting the ported entity will show numerous invalid key values that will need to be converted to the relevant Source equivalents. This entity also suffers from the same color and brightness issues mentioned above for regular lights. Again, consult the relevant [Valve Developer Wiki](https://developer.valvesoftware.com/wiki/Main_Page) pages if you are struggling to fix and update these key values.
 
+As mentioned above, if you see an oddly placed light_spot with a positive "sky" key value you should delete it and setup a proper light_environment.
+
 ### trigger_push
-In general you will want to replace all trigger_push entities with either [trigger_catapult](/entity/trigger_catapult/) or [trigger_setspeed](/entity/trigger_setspeed/), because trigger_push entities are not very consistent. The amount of speed they ultimately give the player passing through can be a bit random. 
+{{< hint info >}}Following the Half-Life 25th anniversary update, trigger_push behavior is broken! As of November 2025, trigger_push entities give significantly more speed than intended.{{< /hint >}}
 
-Regardless of which entity you end up using, ported trigger_push entities will have an "angles" key value that rotates the brush. The value used here is supposed to be used as the push/launch direction. The angles key value will need to be removed completely so the brush itself is not rotated.
+Start by making sure the right flags are set for the trigger_push. This usually is only "Clients" if only the player needs to be pushed. Sometimes you will find trigger_push entities that are designed to affect other objects like conc grenades for instance. In this case you should select the "Everything" flag.
 
-Finally, verify that the relevant flags are set for the entity. Typically these are "Clients" or "Everything" depending on the game mode.
+Next look for an invalid "angles" key value in the entity's properties. The angles listed here are to be used as the push/launch direction for the trigger_push. Make sure you delete the invalid "angles" key value once you have properly set the entitiy's push/launch direction. If you do not delete this key value the brush itself will be rotated which is almost never the original author's intent.
+
+At this point you now have working trigger_push entities. You should load up your map and test their behavior. Check to see if you are getting a consistent, desirable boost/launch. Check to see if the player can stop/stall inside the push_trigger by either holding the "S" key or repeatedly jumping. If everything is in working order you can stop here and move on to fixing other things, but this rarely is the case. If you find a boost works even 90% of the time you should modify it to make it work 100% of the time. If a level was designed to be challenging, but is trivialized by stopping in place this should also be addressed. You must also consider whether or not the player is to manually jump as they reach the end of the boost, or if they will already have enough speed to get where they are supposed to go without additional input. Depending on the geometry around the boost setup you are working with (straight ahead, up a ramp, down a ramp, etc.) there are a few different approaches to choose for a fix. The following image is an example from [conc_baal](https://dashboard.momentum-mod.org/maps/conc_baal). Feel free to look around at the trigger_push entities in this map either in the game or in Hammer.
+
+![push_and_catapult_example](/images/goldsrc_to_source_guide/push_and_catapult_example.png)
+
+Obvserve the short flat section followed by a curve the player is to slide up. Here the flat section and the first angled segment are covered in a 1 unit tall trigger_push. Looking at the arrow you can see it sends the player perfectly horizontal. The final 2 angled segments of the structure have a 1 unit tall [trigger_catapult](/entity/trigger_catapult/) on them. Looking at the arrow you can see it launches the player upwards at an angle (55 degrees to be exact). This setup accomplished two objectives. First it prevents the player from being able to stop on the flat part leading up to the slope. Second it ensures the player has a more consistent launch speed by having their final speed set by the catapult instead of constantly being pushed by the trigger_push. Assuming you are mapping for Momentum Mod, a variation of this setup would be to make the structure a [func_slide](/entity/func_slide/) which keeps the player moving, and then place a [trigger_setspeed](/entity/trigger_setspeed/) at the end of the ramp to give consistent boost to the player.
+
+Here is another example, this time from [conc_xbr](https://dashboard.momentum-mod.org/maps/conc_xbr). The same thought process applied here. The player comes from the left down the ramp to be launched up and to the right. A trigger_push is used to keep the player moving forward as well as to push the player down so they stay "stuck" to the ramp. A catapult launches them forward at the end with a consistent velocity. This setup could also instead be done with one or both of [func_slide](/entity/func_slide/) and [trigger_setspeed](/entity/trigger_setspeed/).
+
+![push_and_catapult_example2](/images/goldsrc_to_source_guide/push_and_catapult_example2.png)
+
+The end goal is to get something that is consistent and plays well within the map. It is not that important to get the exact angle and exact speed a map had in GoldSrc. This is especially true given you cannot test the original GoldSrc behavior due to the changes made in the 25th anniversary update.
 
 ### trigger_teleport, info_teleport_destination
 The only necessary fix for trigger_teleport entities is to set the "Clients" flag. Momentum Mod also provides additional functionality for [trigger_teleport](/entity/trigger_teleport/) entities such as resetting velocity on teleport. Properly configuring these new settings can improve a map's gameplay experience.
@@ -279,7 +293,7 @@ Consider modernizing the info_teleport_destinations on the map you are porting. 
 Momentum Mod will use info_player_start—or if not found info_player_teamspawn—to set the player's spawn. Delete any extra instances of these entities so that only one of either remains in your map. 
 
 ### func_water
-Any instances of func_water entities should be deleted and replaced with Source water. For maps with multiple heights of water in one visible set, use a water texture that does not have reflections. The Half-Life 2 texture, "nature/water_canals03_dx70" is a good replacement in many scenarios, but searching "dx70" in the Hammer texture browser will show some more options.
+Any instances of func_water entities should be deleted and replaced with Source water. For maps with multiple heights of water in one visible set, use a water texture that does not have reflections. The Half-Life 2 texture, "nature/water_canals03_dx70" is a good replacement in many scenarios, but searching "dx70" in the Hammer texture browser will show some more options. If you are having trouble with waterfalls or lava see the relevant sections further down in the guide.
 
 ### i_t_g, info_tfgoal, health, ammo
 GoldSrc uses these entities to give players extra health and ammo. These entities will need to be deleted and potentially replaced. Momentum Mod uses its own ammo system via trigger_multiple entities and player I/O. See the [Ammo System](/guide/mapping/ammo_system/) page for more information. Before you replicate the map's original limited health/ammo consider if it actually is necessary in the first place. Some old maps have limited health/ammo, yet the restriction has no impact on gameplay. Some mappers only used limited health/ammo because they did not know how to make the entire map have unlimited health/ammo.
@@ -345,9 +359,16 @@ When this occurs start by remaking the problematic brush ensuring all of its ver
 ![goldsrc_port_bad_lighting_on_brush_face](/images/goldsrc_to_source_guide/goldsrc_port_bad_lighting_on_brush_face.PNG)
 
 ### Map is dark or otherwise unlit
-Map wide lighting problems are usually due to one of two issues. One reason is that your map originally used texture lights. Texture light information is not saved from the decompile. You will have to go through the map, look for textures that look like they would emit light and then guess both the brightness and color.
+Map wide lighting problems are usually due to one of two issues. One reason is that your map originally used texture lights. Texture light information is not saved from the decompile. You will have to go through the map, look for textures that look like they would emit light and then guess both the brightness and color. To setup texture lights you will need a [.rad file](https://developer.valvesoftware.com/wiki/RAD_file) placed in the same location as your game's gameinfo.txt file. For example this would be in ```\steamapps\common\Team Fortress 2\tf``` for Team Fortress 2. Below is an example .rad file used for [conc_totobro_plus](https://dashboard.momentum-mod.org/maps/conc_totobro_plus).
 
-Otherwise try increasing your lightmap scale. Somewhere between 16 and 64 works for almost every map. When using texture lights this value will likely need to be on the higher end of this given range.
+```
+hl1/~light3b 235 235 255 1200
+hl1/~LIGHT3A 255 130 130 650 
+tfc/~tm_white 255 255 255 200 
+hl1/+0~tnnl_lgt4 255 255 220 2000
+```
+
+The other issue you might be facing is your lightmap scale is too low. Making every texture have a lightmap scale between 16 and 64 works for almost every map. When using texture lights this value will likely need to be on the higher end of this range.
 
 ### Blue outlines on semi-transparent textures
 Textures partially made up of transparent sections will have an undesirable blue outline. This can be faintly seen around the holes in the fence texture in the provided image. 
@@ -357,6 +378,40 @@ Textures partially made up of transparent sections will have an undesirable blue
 The easiest fix is to find a comparable texture to replace it with. Fortress Forever in particular has numerous remakes of Half-life/Team Fortress Classic textures that serve as acceptable replacements. Otherwise the texture must be manually altered in your image-editing software of choice. The following paragraph should give you a better understanding of the problem to help you with fixing it.
 
 The transparent pixels of a texture still store color data. The blue halo effect you see on textures with transparent parts is because those transparent pixels are still blue. When the game engine smoothes out the pixelated texture it draws from the colors of nearby pixels. This is where it finds the blue halo from. GoldSrc would interpret this blue as transparent. To fix this, color the transparent pixels with the average color of the rest of the texture and then make them transparent again. This will require some trial and error.
+
+### Waterfalls
+Waterfalls are ususually found as a water texture applied to a func_conveyor and sometimes accompanied by smoke/steam at the base to immitate the splashing of real water. For the water texture you will want to replace the GoldSrc original with something else. Tophattwaffle's [water source textures](https://www.tophattwaffle.com/downloads/water-source-textures/) are great replacements to use. This download also includes splashing particle effects you can use to replace the smoke/steam used originally in your GoldSrc map. Do note that Tophattwaffle made a mistake when making some of these particle effects. A few of the included particles in this download will not render if the player if more than 1000 units away. If this is a problem either edit the .pcf file yourself or extract it from the map, [conc_rome](https://dashboard.momentum-mod.org/maps/conc_rome).
+
+One issue you will run into is if you want to use a transparent water texture (like Tophattwaffle's) and then also have some sort of splash effect at the base of the waterfall. Source does not know how to sort overlapping transparent textures. This causes either an undesirable flickering, or your splash effect appearing behind the waterfall. Either you can simply not use a splash effect or use an opaque water texture. If you are looking for inspiration or simply assets to extract with [lumper](https://github.com/momentum-mod/lumper/releases/) check out [conc_rome](https://dashboard.momentum-mod.org/maps/conc_rome) or [conc_yggdrasil](https://dashboard.momentum-mod.org/maps/conc_yggdrasil). The former featuring two different setups for a waterfall with a splash particle, the latter featuring waterfalls without a splash particle. 
+
+Here are two examples from conc_rome:
+
+![opaque_waterfall_example](/images/goldsrc_to_source_guide/opaque_waterfall_example.PNG)
+
+![transparent_waterfall_example](/images/goldsrc_to_source_guide/transparent_waterfall_example.PNG)
+
+### Lava and lavafalls
+You may come across pools of lava setup as func_water brush entities or lavafalls setup as func_conveyor entities. These do not work the same way in Source as they did in GoldSrc. To fix either of these first make sure you have either converted a GoldSrc lava texture to a .vtf file with a corresponding .vmt file or found a suitable replacement texture. 
+
+For lavafalls you will want to add a [material proxy](https://developer.valvesoftware.com/wiki/Material_proxies), specifically [TextureScroll](https://developer.valvesoftware.com/wiki/List_of_material_proxies) to the .vmt file of your lava texture. You may have to tweak the value of textureScrollRate to get the desired look. Below is an example .vmt file.
+
+```
+"LightmappedGeneric"
+{
+	"$basetexture" "tfc/scrollarc"
+	"proxies"
+    {
+        "TextureScroll"
+            {
+            "Texturescrollvar" "$Basetexturetransform"
+            "Texturescrollrate" "10"
+            "texturescrollangle" "270"
+            }
+    }
+}
+```
+
+Pools of lava are a bit trickier. If you want to recreate the swirling/bubbling effect of GoldSrc liquids you either need to make your own custom animated texture or use a [flow map](https://developer.valvesoftware.com/wiki/Water_(shader)#Flowing_water). You can see what this looks like on [conc_yggdrasil](https://dashboard.momentum-mod.org/maps/conc_yggdrasil). Feel free to extract the lava texture from this map using [lumper](https://github.com/momentum-mod/lumper/releases/) for your own porting needs.
 
 ### Excessive compile time
 Maps should not take more than a few minutes to do a full compile. If VVis is taking too much time during the compile process go through the map and opitmize it. This means adding complex geometry to a func_detail entity, or placing func_viscluster brush entities in areas with large numbers of visleaves.
