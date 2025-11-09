@@ -386,9 +386,9 @@ One issue you will run into is if you want to use a transparent water texture (l
 
 Here are two examples from conc_rome:
 
-![opaque_waterfall_example](/images/goldsrc_to_source_guide/opaque_waterfall_example.PNG)
+![opaque_waterfall_example](/images/goldsrc_to_source_guide/opaque_waterfall_example.png)
 
-![transparent_waterfall_example](/images/goldsrc_to_source_guide/transparent_waterfall_example.PNG)
+![transparent_waterfall_example](/images/goldsrc_to_source_guide/transparent_waterfall_example.png)
 
 ### Lava and lavafalls
 You may come across pools of lava setup as func_water brush entities or lavafalls setup as func_conveyor entities. These do not work the same way in Source as they did in GoldSrc. To fix either of these first make sure you have either converted a GoldSrc lava texture to a .vtf file with a corresponding .vmt file or found a suitable replacement texture. 
