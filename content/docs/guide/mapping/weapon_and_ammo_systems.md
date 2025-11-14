@@ -51,9 +51,9 @@ Each ammo type supports two related inputs:
 | DF Grenade Launcher        | `SetGrenades`, `AddGrenades`           | `grenades `   |
 | DF Machine Gun             | `SetBullets`, `AddBullets`             | `bullets`     |
 | DF Shotgun                 | `SetShells`, `AddShells`               | `shells`      |
-| DF Lightning Gun           | `SetCells`, `AddCells`                 | `cells`       |
+| DF Lightning Gun           | `SetLightning`, `AddLightning`         | `lightning`   |
 | DF Railgun                 | `SetRails`, `AddRails`                 | `rails`       |
-| DF Plasma Gun              | `SetPlasma`, `AddPlasma`               | `plasma`      |
+| DF Plasma Gun              | `SetCells`, `AddCells`                 | `cells`       |
 | DF BFG                     | `SetBfgRockets`, `AddBfgRockets`       | `bfg_rockets` |
 
 
