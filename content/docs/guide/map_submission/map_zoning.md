@@ -405,9 +405,9 @@ Clicking on **+Defrag Modifier Bonus** will create the bonus and allow for editi
 ## Zone Editing
 Any zone can be edited after it's creation.  
 Simply click the **Edit Points** button and choose the point you want to edit.  
-- Corners - Allow you to edit the XY position of an individual vertex
-- Edges - Allow you to create additional vertices
-- Sides - Allow you to move a side along it's axis
+- **Corners** - Allow you to edit the XY position of an individual vertex
+- **Edges** - Allow you to create additional vertices
+- **Sides** - Allow you to move a side along it's axis
     - The zone must be a rectangle to use this option.
 {{<video src="/videos/map_zoning/editing_zones.mp4">}}
 
