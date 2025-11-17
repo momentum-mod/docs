@@ -13,30 +13,37 @@ Zones allow players to measure and submit times to the leaderboards.
 This guide focuses on zoning using Momentum Mod's **in-game tool**.   
 Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 
+## Glossary
+| Term                            | Definition                                                                                                 |
+|---------------------------------|------------------------------------------------------------------------------------------------------------|
+| **Track**                       | A timed part of the map with a start and an end, and a leaderboard for players to compete on.              |
+| **Main Track**                  | The main track of a map. Every map has exactly one Main Track.                                             |
+| **Bonus Track**                 | A Track distinct from the Main Track, often shorter than the Main Track.                                   |
+| **Segment / Stage / Course**    | A section within the Main Track which has its own leaderboard.                                             |
+| **Zone**                        | A trigger that controls the run timer when players enter or exit it.                                       |
+| **Region**                      | A volume component of a Zone. Each Zone is made of one or more Regions, which may be in different areas.   |
+| **Checkpoint**                  | A type of zone used within a Segment that activates a timer split when touched; it does not save progress. |
+| **Global Region**               | A special type of region that applies to all tracks; some manipulate more than just the timer.             |
+| **Region Teleport Destination** | The location and rotation the player is teleported to when using a command to restart or change tracks.    |
+
+## Examples
+![Zone Example 1](/images/map_zoning/zones_example_1.png)
+
 # General Guidelines
-- Zones with teleport destinations should **always** use entities **defined by the mapper** when possible.
-- Zones should **always** encompass the teleport destination it's using.
-- Regions of zones should **never** overlap
-    - Regions should also not touch if it's possible to connect them into a single zone
-- All points should **always** be snapped to map geometry whenever possible.
-- **Checkpoints** should be placed in a way that provides the **most consistant** time comparison
-    - Place checkpoint in the middle/end of hallways rather than right after a turn
-    - Place checkpoints at the bottom of drops rather than at the top 
-- **Checkpoints** in modes other than **RJ, SJ, and Conc** should generally be at least 10s apart
-    - This does not have to be very precise, it's fine to place checkpoints at longer intervals if that fits the gameplay better.
-    - You can watch WR videos and place checkpoints in approximate spots
+## Checkpoint placement
+**Checkpoints** should be placed in a way that provides the **most consistant** time comparison  
+- Place checkpoint in the middle/end of hallways rather than right after a turn
+- Place checkpoints at the bottom of drops rather than at the top 
 
+![Checkpoint Placement Suggestions](/images/map_porting/zoning_checkpoint_placement2.png)
 
-### Zone Height
+## Zone Height
 - If the zone is **right under a ceiling**, it should extend **all the way up** to it
 - If there is **no ceiling above**, the zone should be **at least 256u** tall
     - Zones can be taller than that if it fits the geometry of the map better
 - **Start zone's height** should be set based on **gameplay and timing needs**
     - Unless there is a reason, it should also follow the guidelines above
 - **End zones** that the player has to **fall into** can be as short as **1u**
-
-
-![Checkpoint Placement Suggestions](/images/map_porting/zoning_checkpoint_placement2.png)
 
 
 # Setup
@@ -63,23 +70,16 @@ You can access it by **Right Clicking** Momentum Mod in your steam library and s
 Zoning menu is split into 4 sections
 ### Left section
 This section is for creating the **main track**, **bonuses**, and **global regions**.  
-Every **track** can have **stages**
+**Main track** can have multiple **segments**
 {{<hint info>}}
 
 [Global Regions](#global-regions) always affect the player, no matter what track they are playing on.
 
 {{</hint>}}
 ### Middle section
-This section is for creating **stages** ( called **courses** in RJ/SJ ).  
-Every **stage** measures time for **comparisons** and has it's own **leaderboard**!  
-Every **stage** can have it's own **checkpoints**.
-
-{{<hint info>}}
-
-In the zoning menu **stages** are called **segments**.  
-That is because of difference in uses between gamemodes.
-
-{{</hint>}}
+This section is for creating **segments** ( **stages** in Surf, **courses** in RJ/SJ ) and the **end zone**.  
+Every **segment** measures time for **comparisons** and has it's own **leaderboard**!  
+Every **segment** can have it's own **checkpoints**.
 
 ### Right section
 This section is for creating **checkpoints**.  
@@ -94,21 +94,29 @@ They are covered [later in the guide](#setting-zone-properties).
 # Basic Zoning
 
 ## Creating the Start Zone
-Every **stage** needs a start zone. 
-1. Noclip to the start of the map
-    - **g** by default or `noclip` in console 
+Every **segment** needs a **start zone**.  
+Every **start zone** needs to have an associated **teleport destination entity**
+{{<hint info>}}
+- Entities **defined by the mapper** should **always** be used if they exist. They will be **chosen automatically** when creating a zone encompassing them.
+- Entities should **always** be encompassed by the start zone
+{{</hint>}}
+
+1. Go to the start of the map
 1. Click **+ Main**
-    - This will automatically create the **main track**, **stage 1** and put you in the **zoning mode** 
+    - This will automatically create the **main track**, **segment 1** and put you in the **zone edit mode** 
 2. Select one corner of the starting platform
     - The zoning tool will automatically detect vertices and snap to them ( blue indicators in the video below )
-    - Make sure you are always snapping to vertices when possible
+    - Make sure you are **always** snapping to vertices if possible
 3. Select the opposite corner of the starting platform
     - If the platform you're zoning is not rectangular see the [Freeform Mode](#freeform-mode) section
 4. Choose the height of your zone ( please follow the [zone height requirements](#zone-height))
-    - Make sure the **destination entity** is inside of your zone
-    - The entity will turn green when encompassed by the region
+    - The entity will **turn green** when encompassed by the region
     - The entity is usually above any starting platform ( grey box in the video below )
 5. If necessary, change the [Safe Height](#safe-height) of your zone
+
+{{<hint warning>}}
+Start zones should **always** use teleport destination entities **defined by the mapper** when they exist.
+{{</hint>}}
 
 {{<hint info>}}
 
@@ -126,59 +134,60 @@ You can always [Edit Zones](#zone-editing) after creating them.
 {{<video src="/videos/map_zoning/create_start_zone.mp4">}}
 
 
-## Creating Stages and Checkpoints
-**Stages** and **Checkpoints** are used differently depending on the gamemode.  
+## Creating Segments and Checkpoints
+**Segments** and **Checkpoints** are used differently depending on the gamemode.  
 Please follow the guide appropriate for your map.  
 
 {{<hint info>}}
 
-Checkpoints should be placed where they can be hit consistently for better split comparisons.  
-Middle/End of a hallway is generally preferred  over placing them right at the start. 
-
-{{</hint>}}
-
-{{<hint info>}}
-
-When zoning **multiple routes** or **around a hole in geometry** you should be adding [Additional Regions](#multiple-regions) to a single zone.
+When zoning **multiple routes** or **around a hole in geometry** instead of creating extra zones, you should be adding [Additional Regions](#multiple-regions) to a single zone.
 
 {{</hint>}}
 
 {{<hint warning>}}
 
-On all **Surf** maps, make sure to create [Allow Bhop](#allow-bhop) zones where necessary.
+On **Surf** maps, make sure to create [Allow Bhop](#allow-bhop) zones where necessary.
 
 {{</hint>}}
 
-- [Surf: Linear](/guide/map_submission/map_zoning/#surf-linear)
+- [Surf: Linear / Bhop](/guide/map_submission/map_zoning/#surf-linear--bhop)
 - [Surf: Staged](/guide/map_submission/map_zoning/#surf-staged)
 - [Surf: Staged-Linear](/guide/map_submission/map_zoning/#surf-staged-linear)
-- [Rocket / Sticky Jump: No Courses](/guide/map_submission/map_zoning/#rocket--sticky-jump-no-courses)
-- [Rocket / Sticky Jump: With Courses](/guide/map_submission/map_zoning/#rocket--sticky-jump-with-courses)
+- [RJ / SJ / Conc: No Courses](#rj--sj--conc-no-courses)
+- [RJ / SJ / Conc: With Courses](#rj--sj--conc-with-courses)
 - [Other Gamemodes](/guide/map_submission/map_zoning/#other-gamemodes)
 
-### Surf: Linear
-Linear Surf maps should have **1 stage** and **checkpoints** placed throughout the map for **comparisons**.  
+### Surf: Linear / Bhop
+Linear Surf / Bhop maps should have **1 segment** and **checkpoints** placed throughout the map for **comparisons**.  
+
+{{<hint info>}}
+
+**Checkpoints** should generally be at least 10s apart
+- This does not have to be very precise, it's fine to place checkpoints at longer intervals if that fits the gameplay better.
+- You can watch WR videos and place checkpoints in approximate spots
+
+{{</hint>}}
 **Example: surf_atonement zones**
 ![Linear Surf Zones](/images/map_zoning/zoning_surf_linear.png)
 
 ### Surf: Staged
-Staged Surf maps should have a seperate **stage zone** ( called **segment** in the zoning menu ) for every **stage**.  
-Those **stage zones** can have **checkpoints** for better comparisons ( usually only used for **really long** stages ).  
+Staged Surf maps should have a seperate **segment** for every **stage**.  
+**Segments** for very long stages can have **additional Checkpoints** added within them for **extra timer splits** when comparing runs.  
 **Example: surf_tuscany zones**
 ![Staged Surf Zones](/images/map_zoning/zoning_surf_staged.png)
 
 ### Surf: Staged-Linear
-Staged-Linear Surf maps should be zoned **mostly** the same way as [Staged Surf](/guide/map_submission/map_zoning/#surf-staged) maps.  
-The only exception being that **Limit Ground Speed** needs to be unchecked for **every stage**.  
+Staged-Linear Surf maps should be zoned **mostly** the same way as [Staged Surf](#surf-staged) maps.  
+The only exception being that **Limit Ground Speed** needs to be unchecked for **every segment**.  
 **Example: surf_anzchamps zones**
 ![Staged-Linear Surf Zones](/images/map_zoning/zoning_surf_staged_linear.png)
 
-### Rocket / Sticky Jump: No Courses
+### RJ / SJ / Conc: No Courses
 Rocket / Sticky Jump maps without any **courses** should have **1 segment** and a **checkpoint** at the start of **every jump**.  
 **Example: rj_summer zones**
 ![RJ/SJ No Courses Zones](/images/map_zoning/zoning_rocket_sticky_jump_no_courses.png)
 
-### Rocket / Sticky Jump: With Courses
+### RJ / SJ / Conc: With Courses
 Rocket / Sticky Jump maps usually teleport the player back to the hub upon completion of a **course**.  
 {{<hint warning>}}
 
@@ -190,7 +199,7 @@ If you have any questions please ask in **#map-porting** channel on our [Discord
 
 1. Uncheck **End segment at next segment start** in **main track** properties
     - This will make the time submit when the player enters **last checkpoint** on a **course** except for the **last course**
-    - **Last course** time will **always** submit when player enters the [End Zone](/guide/map_submission/map_zoning/#creating-the-end-zone)
+    - **Last course** time will **always** submit when player enters the [End Zone](#creating-the-end-zone)
 ![RJ/SJ Courses Properties](/images/map_zoning/zoning_rocket_sticky_jump_courses_properties.png)
 2. For every **course except last**:
     1. Create a **new segment** at the first jump
@@ -205,15 +214,8 @@ If you have any questions please ask in **#map-porting** channel on our [Discord
 ![RJ/SJ Courses](/images/map_zoning/zoning_rocket_sticky_jump_courses.png)
 
 ### Other Gamemodes
-Vast majority of maps for gamemodes other than **Surf** and **Rocket / Sticky Jump** will use a **single stage** with **checkpoints**.  
-That means they should be zoned identically to [Surf: Linear](/guide/map_submission/map_zoning/#surf-linear) maps.  
-
-{{<hint info >}}
-
-The only difference is that for modes other than Surf the **Limit ground speed** checkbox will be automatically **unchecked**.  
-That is the correct behavior so you don't have to worry about it.
-
-{{</hint>}} 
+Vast majority of maps for gamemodes other than those described above will use a **single segment** with **checkpoints**.  
+That means they should be zoned identically to [Surf: Linear / Bhop](http://localhost:1313/guide/map_submission/map_zoning/#surf-linear--bhop) maps. 
 
 {{<hint warning>}}
 
@@ -225,10 +227,7 @@ When zoning **Defrag** maps, also make sure to make checkpoints [not required](#
 
 Of course there are exceptions to this rule.  
 There is nothing stopping maps for other gamemodes to be staged.  
-The reason they are not is simply because of the way different communities create maps.  
-Some exceptions are:
-- **bhop_sqee** ( Multiple long courses. Every course is a seperate stage because they are fun to compete on individually )
-- **df_parkourushi** ( Long parkour courses. In defrag due to technical limitations every course was made to be a seperate map. In Momentum Mod they can be stages )   
+The reason they are not is simply because of the way different communities create and play maps.  
 
 In case you encounter these exceptions, apply your best judgement to which method of zoning from above to use.  
 When in doubt, don't hesitate to ask for help in **#map-porting** channel on our [Discord](https://discord.gg/momentummod).
@@ -242,7 +241,7 @@ Click on **+End Zone** below **segments** of the track you're zoning to create i
 {{<hint info>}}
 
 Every track can have only **One End Zone**.  
-If more are required, create them by using [Multiple Regions](#multiple-regions).
+If the track needs to end in multiple separate areas, add [Additional Regions](#multiple-regions) to the **End Zone**.
 
 {{</hint>}}
 
@@ -262,14 +261,14 @@ Creating Bonuses is the exact same process as creating the **Main Track**.
 Start By clicking on **+Bonus** to create it.  
 {{<hint info>}}
 
-**Vast** majority ( if not all ) of bonuses are essentially short, linear maps.  
-Follow the same principles as in [Surf: Linear](/guide/map_submission/map_zoning/#surf-linear) or [Rocket / Sticky Jump: No Courses](/guide/map_submission/map_zoning/#rocket--sticky-jump-no-courses) zoning.
+Bonuses are essentially short, linear maps.  
+Follow the same principles as in [Surf: Linear / Bhop](#surf-linear--bhop) or [RJ / SJ / Conc: No Courses](#rj--sj--conc-no-courses) zoning.
 
 {{</hint>}}
 
 {{<hint info>}}
 
-For **Defrag** specific bonuses read the [Defrag Modifier Bonuses](#defrag-modifier-bonuses) section.
+For bonuses on Defrag maps which are **copies of the Main Track** but with additional gameplay modifiers read the [Defrag Modifier Bonuses](#defrag-modifier-bonuses) section.
 
 {{</hint>}}
 
@@ -277,24 +276,37 @@ For **Defrag** specific bonuses read the [Defrag Modifier Bonuses](#defrag-modif
 ![Creating Bonues](/images/map_zoning/zoning_bonuses.png)
 
 ## Creating Cancel Zones
-In order for players to switch tracks by walking into another start zone ( such as walking from **Main Track** to a **Bonus** ), they need to stop their timer first.  
-**Cancel zones** stop the timer automatically when they are entered.  
-They can either be **global** or **per segment**.  
+**Cancel zones** in Momentum Mod are used for two main reasons:
+1. **Preventing hub abuse**
+
+    Some maps place teleports to each stage inside the hub.  
+    Without a **cancel zone**, players could go back to the hub from the start zone, trigger zones on every stage, and finish only the last one to submit an invalid time.
+
+2. **Allowing for clean track switching**
+
+    On some maps, players can walk between the main track and bonuses without noclip.  
+    A timer for another track **cannot prime** while a different track timer is running.  
+    **Cancel zones** are used to **stop the active timer automatically** when entered.
+
+{{<hint info>}}
+Cancel zones can either be **global** or **per segment**.
+{{</hint>}}
 **Example: surf_bugs zones** ( a **cancel zone** is stopping player's timer before walking into bonuses )
 ![Cancel Zones Example](/images/map_zoning/zoning_cancel_zone_example.png)
 
 
 # Setting Zone Properties
 ## Max Velocity
-By default the **Max Velocity** is limited to **3500** for most gamemodes.  
-Some **Surf** and **Bhop** maps are designed for higher speeds.  
-You can set the **Max Velocity** in **Main Track** properties. 
+This setting changes maximum allowed velocity on **the entire map** ( not only the main track ).
+- **Empty Field**: Uses gamemode defaults
+- **Value is 0**: Uncapped velocity
+- **Any other value**: Caps maximum velocity to that value
 
-{{<hint warning>}}
-
-**Max Velocity** always applies to the **entire map**, not only the Main Track.
-
-{{</hint>}}
+{{<expander title="What are the defaults for each gamemode?">}}
+**Surf / RJ / SJ / Ahop**: 3500  
+**Conc**: 2000  
+**Others**: Uncapped
+{{</expander>}}
 
 {{<hint danger>}}
 
@@ -306,7 +318,7 @@ You **have to** press **Enter** after inputting **Max Velocity**, otherwise it w
 
 
 ## Safe Height
-Player needs to stand **at or below** the safe height to be able to start the run.  
+The player needs to stand **at or below** the safe height to be able to prime the timer before starting.  
 This setting is generally only relevant to **Surf** and **Bhop**, other modes use **Full Height** by default.  
 {{<hint warning>}}
 
@@ -341,7 +353,7 @@ This setting can also be used to simulate [Collectibles](/guide/collectibles/).
 This is the spot player will be teleported to when restarting a run/stage.  
 Original teleport destinations set by the mapper are **highly preferred** over custom ones.  
 If the zone encompasses a **teleport destination** during creation, it will be automatically selected.  
-Sometimes multiple **teleport destinations** will be present in one zone, make sure the correct one is chosen and change it in **entity name** section if necessary.
+Sometimes multiple **teleport destinations** will be present in one zone, choose the one the map sends the player to when they **fail a section**.
 
 {{<hint warning>}}
 
@@ -370,19 +382,23 @@ Click **Middle Mouse Button** while zoning to switch between modes.
 
 ## Box Mode
 **Box Mode** allows for creation of zones in mid-air, when there is no geometry to rely on.  
-Click **Middle Mouse Button** while zoning to switch between modes.  
-You can [Edit the zone](#zone-editing) after placing it.
+Start by placing the box in the air and then [edit it](#zone-editing) to expand the zone as needed.  
+To switch to this mode, click the **Middle Mouse Button** twice while zoning, **before placing any points**.  
 ![Box Mode](/images/map_zoning/zoning_box_mode.png)
 
 ## Multiple Regions
 Every zone can have multiple, disconnected regions.  
 This can be used to zone multiple **routes**, **starting points**, **ends**, or to create **holes in zone geometry**.  
-Click the **+** button in zone properties to add a region.  
+Click the **+** button in **zone properties** to add a region.  
+{{<hint warning>}}
+- Regions should **never** overlap
+- Regions should **not touch** if it's possible to connect them into a single zone
+{{</hint>}}
 ![Multiple Regions](/images/map_zoning/zoning_multiple_regions.png)
 
 ## Defrag Modifier Bonuses
 Bonuses in **Defrag** require a different approach than in other modes.  
-They use the same **Start and End Zones** as the **Main Track**, but apply **modifiers** to the player.  
+They use the **same zones** as the **Main Track**, but apply **modifiers** to the player.  
 Clicking on **+Defrag Modifier Bonus** will create the bonus and allow for editing specific **modifiers**.
 ![Defrag Modifier Bonuses](/images/map_zoning/zoning_defrag_modifier_bonus.png)
 
@@ -392,8 +408,8 @@ Simply click the **Edit Points** button and choose the point you want to edit.
 - Corners - Allow you to edit the XY position of an individual vertex
 - Edges - Allow you to create additional vertices
 - Sides - Allow you to move a side along it's axis
+    - The zone must be a rectangle to use this option.
 {{<video src="/videos/map_zoning/editing_zones.mp4">}}
-
 
 
 # Global Regions
@@ -405,7 +421,7 @@ In areas where this is insufficient you should use **Allow Bhop** zones.
 
 {{<hint warning>}}
 
-**Allow Bhop Zones** as well as **Force Enable Bhop** property **won't work** while the zoning menu is open!
+The effects of "Allow Bhop" Zones as well as the "Force Enable Bhop" property are not active while in zoning mode.
 
 {{</hint>}}
 
