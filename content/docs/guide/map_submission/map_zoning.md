@@ -276,7 +276,8 @@ For bonuses on Defrag maps which are **copies of the Main Track** but with addit
 ![Creating Bonues](/images/map_zoning/zoning_bonuses.png)
 
 ## Creating Cancel Zones
-**Cancel zones** in Momentum Mod are used for two main reasons:
+**Cancel zones** automatically **stop the active timer** when entered.  
+They are used for two main reasons:  
 1. **Preventing hub abuse**
 
     Some maps place teleports to each stage inside the hub.  
@@ -286,7 +287,6 @@ For bonuses on Defrag maps which are **copies of the Main Track** but with addit
 
     On some maps, players can walk between the main track and bonuses without noclip.  
     A timer for another track **cannot prime** while a different track timer is running.  
-    **Cancel zones** are used to **stop the active timer automatically** when entered.
 
 {{<hint info>}}
 Cancel zones can either be **global** or **per segment**.
