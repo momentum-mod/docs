@@ -28,6 +28,7 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
 
 ## Examples
 ![Zone Example 1](/images/map_zoning/zones_example_1.png)
+![Zone Example 2](/images/map_zoning/zones_example_2.png)
 
 # General Guidelines
 ## Checkpoint placement
@@ -285,8 +286,8 @@ They are used for two main reasons:
 
 2. **Allowing for clean track switching**
 
-    On some maps, players can walk between the main track and bonuses without noclip.  
-    A timer for another track **cannot prime** while a different track timer is running.  
+    On some maps, players can **walk** between the main track and bonuses **without noclip**.  
+    A **cancel zone** is used to ensure player's don't accidentally keep a timer running for a track they are **no longer playing**.
 
 {{<hint info>}}
 Cancel zones can either be **global** or **per segment**.
@@ -331,20 +332,22 @@ Pay special attention to **zone markings** on **Bhop maps** as those are often s
 ![Safe Height Property](/images/map_zoning/zoning_safeheight_example.png)
 
 ## Required Checkpoints
-Uncheck **Checkpoints Required** in **Segment** properties to allow players to submit times without hitting every checkpoint.
+When zoning, you should do your best to make sure checkpoints are **not skippable**.  
+If avoiding skippable checkpoints would force an **unreasonably long gap** between them, it’s acceptable to make those checkpoints **optional** instead.  
+Uncheck **Checkpoints Required** in **Segment** properties to achieve this.
 
 {{<hint info>}}
 
-Some maps might include **large skips** that will make the player not hit every checkpoint.  
-Additionally most **Defrag** maps don't require checkpoints to be hit.  
+Most **Defrag** maps don't require checkpoints to be hit and so they should be made **optional by default**.  
+There exist exceptions, where checkpoints **can be used to gate progress**, however other methods are generally preferable ( e.g. filters or collectibles )
 
 {{</hint>}}
 
 ![Required Checkpoints](/images/map_zoning/zoning_checkpoints_required.png)
 
 ## Unordered Checkpoints
-Some maps allow the player to choose the order in which they complete it.  
-This setting can also be used to simulate [Collectibles](/guide/collectibles/).
+Some new maps are meant to use checkpoint zones to require players to **activate certain areas** to beat the map, while allowing them to route them in **any order they want**.  
+Disable the **Checkpoints ordered** setting for these maps.
 
 ![Ordered Checkpoints](/images/map_zoning/zoning_checkpoints_ordered.png)
 
