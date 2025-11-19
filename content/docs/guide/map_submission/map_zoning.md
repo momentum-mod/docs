@@ -218,9 +218,12 @@ If you have any questions please ask in **#map-porting** channel on our [Discord
 Vast majority of maps for gamemodes other than those described above will use a **single segment** with **checkpoints**.  
 That means they should be zoned identically to [Surf: Linear / Bhop](http://localhost:1313/guide/map_submission/map_zoning/#surf-linear--bhop) maps. 
 
-{{<hint warning>}}
+{{<hint info>}}
 
-When zoning **Defrag** maps, also make sure to make checkpoints [not required](#required-checkpoints)
+In **Defrag**, checkpoints should be set as [not required](#required-checkpoints) by default.  
+That **doesn't mean** however that their placement is less important.  
+Checkpoints are **the most useful when they cannot be skipped** and so even on Defrag maps you should do your best to ensure that is the case.  
+There exist exceptions, where checkpoints **can be used to gate progress**, however other methods are generally preferable ( e.g. filters or collectibles )
 
 {{</hint>}}
 
@@ -287,7 +290,7 @@ They are used for two main reasons:
 2. **Allowing for clean track switching**
 
     On some maps, players can **walk** between the main track and bonuses **without noclip**.  
-    A **cancel zone** is used to ensure player's don't accidentally keep a timer running for a track they are **no longer playing**.
+    A **cancel zone** between track start zones ensures players can switch to a different track by **just walking to it**, instead of **using a teleport command**.
 
 {{<hint info>}}
 Cancel zones can either be **global** or **per segment**.
@@ -335,13 +338,6 @@ Pay special attention to **zone markings** on **Bhop maps** as those are often s
 When zoning, you should do your best to make sure checkpoints are **not skippable**.  
 If avoiding skippable checkpoints would force an **unreasonably long gap** between them, it’s acceptable to make those checkpoints **optional** instead.  
 Uncheck **Checkpoints Required** in **Segment** properties to achieve this.
-
-{{<hint info>}}
-
-Most **Defrag** maps don't require checkpoints to be hit and so they should be made **optional by default**.  
-There exist exceptions, where checkpoints **can be used to gate progress**, however other methods are generally preferable ( e.g. filters or collectibles )
-
-{{</hint>}}
 
 ![Required Checkpoints](/images/map_zoning/zoning_checkpoints_required.png)
 
