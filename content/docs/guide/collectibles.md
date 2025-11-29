@@ -30,6 +30,10 @@ Collectibles will not work if they are not named.
 {{< /hint >}}
 ![Example Button](/images/collectibles_guide/button_collectible_io_1.png)
 
+## Clearing Collectibles
+
+You can use the `ClearCollectibles` input to remove collectibles from a player. For example: `OnStartTouch` `!activator` `ClearCollectibles`.
+
 ## The Collectible Filter
 
 The [`filter_momentum_collectibles`](/entity/filter_momentum_collectibles) entity is used to control gameplay based on how many collectibles the player has earned. Unlike other filters which examine the activator, [`filter_momentum_collectibles`](/entity/filter_momentum_collectibles) simply looks at how many collectibles the player has, and passes if it exceeds a certain number. You can use this filter to enable teleporters or unlock buttons. To use it, simply place one in your map, give it a name, and set the minimum required collectible count. Then, set its name as the filter for the entity you want to be controlled by collectibles.
