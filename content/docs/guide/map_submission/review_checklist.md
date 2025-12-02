@@ -55,11 +55,12 @@ First check:
 - [ ] There should be no gaps between the sides of a checkpoint and the surrounding walls.
 
 ## Other
+- [ ] The position and yaw of start, stage, and bonus TP destinations are ok (preview position with zoning menu)
 - [ ] Max velocity should be the mapper intended value
   - This is sometimes found on a point_servercommand. Other times this is only listed where the map was downloaded from.
 - [ ] Cancel zones are used in hub/stage select areas if it is possible to return to hub area without teleporting with a command.
 - [ ] Start/Stage zones with multiple regions in distinct locations with their own teleport destinations should assign each destination to the appropriate region, rather than using the same one for all regions.
-- [ ] When the map uses a filter entity to gate progress to the area a zone is in, the zone should be assigned that filter entity even if the zone cannot be physically reached without the filter due to a filtered teleport trigger in the way.
+- [ ] When the map uses a filter entity to gate progress to the area a zone is in, the zone should be assigned that filter entity even if the zone cannot be physically reached without the filter due to a filtered teleport trigger in the way. If the filter has Negated value of 1, then it should be negated in the zoning menu.
   - This is for general safety and also because it allows zones to be given a different appearance when they are untriggerable.
 - [ ] (Optional) Stages and bonuses may have names where appropriate to make them easier to identify. Names should only be used when they are intuitive and in the spirit of the map, like the fruit-themed stages of surf_fruits. Track names should not just be used as mapper credits in a collaborative map.
 - [ ] (Surf only) "Limit ground speed" option should be enabled for stages unless you are supposed to bhop in start zones during a full map run
@@ -79,9 +80,9 @@ First check:
 - [ ] **CSM Fix Tool:** CS:GO maps have an `env_cascade_light` entity if they use CSM shadows
 
 # Step 3: Other in-game things to review
-- [ ] Refraction textures don't have a dark tint (requires recompile?)
-- [ ] Maps don't have invalid textures, cubemaps, skyboxes or models
-- [ ] Default spawn position and direction faced is ok (reload the map to check)
+- [ ] Maps don't have invalid textures, cubemaps (unless from TF2), skyboxes or models
+- [ ] Default spawn position and direction faced (yaw) is ok (reload the map to check)
+- [ ] Reset triggers don't face the player backwards when hit (UseLandmarkAngles is set to 1 where this would otherwise occur).
 
 # Step 4: Lumper review
 - [ ] Check for invalid entities ("Entity Review" tab)
@@ -92,10 +93,11 @@ First check:
 - [ ] (Surf only) Make sure there is no active "jail" system
 
 # Step 5: Submission page review
+- [ ] Required games match what is displayed in Lumper
+- [ ] The submission type is Port if the map first released in another game/server
 - [ ] Description should mostly match GameBanana submission
 - [ ] Date created should match the date on GameBanana
 - [ ] Credits should match GameBanana submission
 - [ ] Screenshots ideally should showcase iconic/memorable parts of the map. Taking similar screenshots to the ones on GameBanana is also recommended.
 - [ ] Extra suffixes like _njv, _fix, or _ksf that are not required to fully distinguish the map are removed from the map name.
 - [ ] jump_ prefix is renamed to rj_ or sj_
-- [ ] Required games match what is displayed in Lumper
