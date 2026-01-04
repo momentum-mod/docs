@@ -75,7 +75,7 @@ Please follow the [gldsrc porting guide](/guide/mapping/porting_goldsrc_to_sourc
 # Porting 
 ## Step 1: Remove Valve Assets
 Maps may include packed materials, models, and other asset ( similar to a **.zip** file).  
-Momentum Mod [cannot legally redistribute](/guide/map_submission/map_submission/#source-assets) Valve's assets.  
+Momentum Mod **cannot legally redistribute Valve's assets**.  
 Valve's assets may still be used on maps however it is necessary to remove them from the **.bsp**.   
 
 1. Go to the **Jobs** tab in Lumper
