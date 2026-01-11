@@ -46,7 +46,6 @@ Zoning using **Hammer** is briefly covered in [this section](#hammer-zoning)
     - Unless there is a reason, it should also follow the guidelines above
 - **End zones** that the player has to **fall into** can be as short as **1u**
 
-
 # Setup
 1. Open console (**~** by default, key below ESC)
 2. Type `sv_cheats 1`
@@ -415,8 +414,25 @@ Simply click the **Edit Points** button and choose the point you want to edit.
 ## Allow Bhop
 This zone allows the player to bhop without losing speed when they normally wouldn't be able to.  
 While this can be used in every mode it's mostly relevant to **Surf**.  
-In Momentum Mod, bhopping in **Surf** is only possible when the game finds a 64x64 platform below the player (use `mom_bhop_area_debug 1` to see it).  
-In areas where this is insufficient you should use **Allow Bhop** zones.  
+Autohop in Surf is **disabled** by default.  
+**On Surf maps** You should add **Allow Bhop** zones to every **non-gameplay area**, **end of stage platform** and any **platform that should be bhopped on mid-stage**
+
+{{<hint info>}}
+
+**Allow Bhop** zones should be **at least 16u tall** or extend **at least 16u above the highest point** of a slanted surface.  
+While they are **not visible by default** it's important to make them look good for players that choose to have them visible.  
+Both **16u** and **32u** are standard heights for flat surfaces depending on which looks better.    
+**Non-gameplay areas** are generally fully surrounded with the **Allow Bhop** zone going **up to the ceiling/skybox**.  
+On some **End platforms** matching the **End Zone height** looks the best.  
+While the aesthetics are very subjective and strict rules aren't enforced, please keep what you're doing **consistent**.
+
+{{</hint>}}
+
+{{<hint info>}}
+
+Non-gameplay areas are any areas that aren't available when running the map. They include hubs, secrets, end rooms etc.
+
+{{</hint>}}
 
 {{<hint warning>}}
 
@@ -424,7 +440,7 @@ The effects of "Allow Bhop" Zones as well as the "Force Enable Bhop" property ar
 
 {{</hint>}}
 
-**Example: surf_bugs zones** (normally the player wouldn't be able to bhop on this platform, but the **Allow Bhop** zone overrides this behavior).
+**Example: surf_kvas zones** (hub area is fully surrounded with the **Allow Bhop** zone extending all the way to the skybox).
 ![Allow Bhop](/images/map_zoning/zoning_allow_bhop.png)
 
 
