@@ -11,12 +11,12 @@ tags:
 
 ![HUD Menu](/images/custom-hud-menus_guide/custom-hud-menus-header.png)
 
-This guide covers how to make a custom HUD menu, such as the saveloc or ruler menus.
-Note that this does *not* cover how to make custom Panorama menus more generally, just **Static HUD menus**, which are controlled by `slot0-9` keys and mimick the VGUI panels commonly used on game servers for e.g. `!nominate`, `!votemap`.
+This guide covers how to make a custom HUD menu, such as the saveloc or ruler menus.  
+Note that this **does not** cover how to make custom Panorama menus more generally, just **Static HUD menus**, which are controlled by `slot0-9` keys and mimick the VGUI panels commonly used on game servers for e.g. `!nominate`, `!votemap`.
 
 ## HUD menus overview
 
-HUD menus are a nice way to add many commands/cvars into a single menu.
+HUD menus are a nice way to add many commands/cvars into a single menu.  
 There are a few HUD menus that ship with the game:
 
 - Saveloc menu
@@ -25,13 +25,13 @@ There are a few HUD menus that ship with the game:
 
 You can create however many custom menus as you'd like, but only one can be displayed at a time.
 
-To open a HUD menu, use {{< cmdref HUD_menu_show >}}.
+To open a HUD menu, use {{< cmdref HUD_menu_show >}}.  
 The parameter for this command will autofill with all the available HUD menus.
 
 ## File reading/writing
 
-HUD menus utilize Valve developed data format known as KeyValues3 (KV3). They are stored in and read from `cfg/menus/` as `.kv3` files
-Files with the suffix `_default` are not read from unless their counterpart does not exist.
+HUD menus utilize Valve developed data format known as KeyValues3 (KV3). They are stored in and read from `cfg/menus/` as `.kv3` files.  
+Files with the suffix `_default` are not read from unless their counterpart does not exist.  
 In which case, it will be copied and have the suffix removed for reading.
 
 ## Custom HUD menus how-to
@@ -44,8 +44,8 @@ A simple HUD menu with just one command looks like:
   main_commands =
   [
     {
-      "label"   "Some command"
-      "command" "mom_some_command"
+      "label" = "Some command"
+      "command" = "mom_some_command"
     }
   ]
 }
@@ -61,16 +61,16 @@ Adding more commands is then as simple as:
   main_commands =
   [
     {
-      "label"   "Some command"
-      "command" "mom_some_command"
+      "label" = "Some command"
+      "command" = "mom_some_command"
     },
     {
-      "label"   "Some other command"
-      "command" "mom_some_other_command"
+      "label" = "Some other command"
+      "command" = "mom_some_other_command"
     },
     {
-      "label"   "Some other command"
-      "command" "mom_some_other_command"
+      "label" = "Some other command"
+      "command" = "mom_some_other_command"
     },
     ...
   ]
@@ -84,12 +84,12 @@ There is the ability to execute a command on close as well, via the `"close_comm
 ```
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
-  "close_command" "mom_some_command"
+  "close_command" = "mom_some_command"
   main_commands =
   [
     {
-      "label"   "Some command"
-      "command" "mom_some_command"
+      "label" = "Some command"
+      "command" = "mom_some_command"
     },
     ...
   ]
