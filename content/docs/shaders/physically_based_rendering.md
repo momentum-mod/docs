@@ -8,96 +8,88 @@ tags:
 
 ![PBR Guide](/images/guide_headers/guide_pbr_shader.jpg)
 
-The Physically Based Rendering (PBR) shader is a powerful new shader that provides more realistic and versatile rendering of brushes and models within Momentum Mod whilst using fewer textures and needing fewer VMT tweaks.
+The Physically Based Rendering (PBR) shader is a powerful new tool for Strata Source that provides more realistic and versatile rendering of brushes, displacements and models whilst using fewer textures and needing fewer VMT tweaks.
 
-PBR extends Source's shading capacity by storing additional Metalness, Roughness and Ambient Occlusion maps in independent channels of an additional texture called the MRAO.
-
-Additionally, it uses the alpha channel of the normal map as a height input for parallax maps.
+> The original repo can be found on [GitHub](https://github.com/thexa4/source-pbr).
+---
 
 This guide will be a general overview of its use and how to set up textures for it from scratch.
 
-> The original repo can be found on [GitHub](https://github.com/thexa4/source-pbr).
 
 ## Prerequisites
 
 To make proper use of this Guide you should:
 
-- Be on Momentum 0.8.4 or newer
-- Be able to create PBR textures/work with the PBR Metal/Rough workflow
-- Have either Substance Painter and/or Designer, and have some experience with them for making PBR textures from scratch
-- Know how to create textures such as Ambient Occlusion via baking if you're not using Substance Painter and/or Designer to create them instead
-- Photoshop if you're not using Substance Painter/Designer and already have PBR textures (Metallic, Roughness, AO) that you need to create an MRAO from
+- Know and understand the PBR Metal/Rough workflow.
+- Have access to any material authoring suite, like Substance Painter / Designer or the excellent [Material Maker](https://github.com/RodZill4/material-maker), and have some experience with them for making PBR textures from scratch.
+- Any image manipulation program if you're not using a material authoring suite and already have PBR textures that you need to create an MRAO from.
+- You'll need, at the very least:
+| Color Maps | MRAO Maps | Normal Maps | Emission Maps |
+| ---------- | --------- | ----------- | ------------- |
+| ![Color Map](/images/pbr_guide/concrete01_mossy_C.jpg) | ![MRAO Map](/images/pbr_guide/concrete01_MRAO.jpg) | ![Normal Map](/images/pbr_guide/concrete01_N.png) | ![Emission Map](/images/pbr_guide/concrete01_E.jpg) |
+| An albedo/color map with optional transparency in the texture's alpha channel. This means that no lighting information, such as baked AO, should exist in the texture. Recommended suffix: **_color** or **_C**. | Since we use a metal/rough setup (as opposed to a spec/gloss workflow), we pack the Metal, Roughness and Ambient Occlusion grayscale maps into one, called the MRAO map. Recommended suffix: **_MRAO**. | A normal map and, if Parallax Occlusion is desired with the material, a height map defined in the alpha channel. Recommended suffix: **_normal** or **_N**. | If needed, an emission texture (note that it's not a mask). Recommended suffix: **_emission** or **_E**. |
 
-Not all tools are covered but hopefully this guide may help with the general process.
+- Finally, an environmental map. **THIS IS REQUIRED!** Preferably just using `env_cubemap` (don't forget to build cubemaps for your map!).
 
-Since the PBR Shader uses the PBR workflow, most textures will have to be remade or otherwise edited to work properly.
 
-## VMT Example - Model
+## VMT Example
 
-Here is an example VMT, something you would use on a model:
-
-```
-PBR
-{
-	$basetexture "models\props\pbr_asset_d"
-	$mraotexture "models\props\pbr_asset_mrao"
-	$bumpmap "models\props\pbr_asset_n"
-	$emissiontexture "models\props\pbr_asset_e"
-
-	$envmap "env_cubemap"
-	$model "1"
-}
-```
-
-`$basetexture` will be the Base Colour texture.  
-`$mraotexture` will be the MRAO texture.  
-`$bumpmap` will be for the Normal texture.  
-`$emissiontexture` will be for any glowing sections of the model.
-
-{{< hint danger >}}
-The emission texture is a colour texture, not a mask.
-{{< /hint >}}
-
-`$envmap` should just be left as `env_cubemap`.
-
-{{< hint info >}}
-`$model 1` **_must_** be added for models to work!
-{{< /hint >}}
-
-## VMT Example - Brush
-
-Here is another example using parallax, intended for use on a brush:
+Here is an example VMT:
 
 ```
 PBR
 {
-	$basetexture "example\pbr_asset_d"
-	$mraotexture "example\pbr_asset_mrao"
-	$bumpmap "example\pbr_asset_n"
+    $baseTexture        concrete/concrete01_C
+    $MRAOTexture        concrete/concrete01_MRAO
+    $emissionTexture    concrete/concrete01_E
+    $bumpMap            concrete/concrete01_N
 
-	$envmap "env_cubemap"
-	$parallax "1"
-	$parallaxdepth "0.03"
-	$parallaxcenter "0.0"
+    $parallax           1
+    $parallaxCenter     0
+    $parallaxDepth      .05
+
+    $envMap             env_cubemap
+
+    %keywords           concrete,PBR,brutalist
 }
+
 ```
 
 {{< hint info >}}
-The parallax option requires that a height map is embedded into the alpha channel of the normal map.  
-You can check out one way of doing so [below](#texture-creation---designer).
+If using PBR for a model, `$model 1` **_must_** be added for it to work!
 {{< /hint >}}
 
-`$parallax` simply enables the parallax effect.
-`$parallaxdepth` specifies how 'deep' the parallax effect will go.
-`$parallaxcenter` adjusts the centre-point of the parallax effect, nudging it closer or further away from the surface.
+![Momentum Mod Screenshot](/images/pbr_guide/mmod_screenshot.jpg)
+
+As you can see, defining a PBR material is much simpler than defining and tuning a VLG or LMG shader. PBR is, however, restrictive for NPR (non-photorealistic rendering), if you are envisioning more painterly or cartoonish visuals, it's best to use the classic shaders.
 
 {{< hint warning >}}
-Parallax Occlusion has its limitations and things to be wary of. The parallax shader has a limited number of layers to create the depth effect.
+Parallax Occlusion has its limitations and things to be wary of. The parallax effect has a limited number of layers by default, but you can increase it with `$parallaxScale <multiplier>`. Note that increasing this number will degrade performance for some players!.
+
+Another thing you might notice is that the depth effect continues past the edge of the face it's applied to, depending on the effect you're after, the solution is a balancing act between the authored height map, `$parallaxCenter`, and `$parallaxDepth`. See [the Strata Wiki](https://wiki.stratasource.org/material/pbr/pbrshader) for help with all the available parameters.
 {{< /hint >}}
 
-If you make the height value too intense, these layers become very easy to notice and ruin the effect, as shown below.
-![Visible layers of Parallax](/images/pbr_guide/pbr_layer_example.jpg)
-Another thing you might notice is that the depth effect continues past the edge of the brush, which can look very strange as well, and is more noticeable on higher depth settings.
+
+## Texture Creation - Material Maker
+
+![Material Maker](/images/pbr_guide/material_maker_nodegraph.jpg)
+
+![Material Maker - Height and Normal](/images/pbr_guide/material_maker_normal-height.jpg)
+
+Material Maker's PBR workflow is already metal/rough, so you don't need to do anything extra on that department.
+In order to pack the MRAO and Normal + Height maps, you will have to use the _Decompose_ and _Combine_ nodes to split and merge a texture's channels, respectively. See the image above for how it's done for the Normal + Height maps, there's no native node to _only_ set an alpha channel, but there is a community node that can do it.
+
+{{< hint danger >}}
+Make sure you convert the incoming normal map to DirectX with a _Convert Normal Map_ node with _From/To DirectX_ set. Otherwise, you will get a two-channel normal map with an inverted green channel!
+
+Material Maker uses a Depth map input for the parallax occlusion effect instead of a Height map! Consider this when exporting.
+{{</ hint >}}
+
+Since there's no "to Source Engine quick export" support, you'll have to add the _Export_ nodes on the final outputs of your node setup, then use the `File > Export Material > Quick Export` function.
+
+{{< hint warning >}}
+On the current version (1.6), there's a bug with the UV mapping of the cube model, be sure to change it if you plan to use the preview viewport!
+{{</ hint >}}
 
 ## Texture Creation - Painter
 
@@ -131,13 +123,17 @@ Both processes are shown below. The MRAO is colour-coded to make it easier to fo
 
 You should then have the 3 minimum textures needed for the shader.
 
-## Manual MRAO Creation in Photoshop (Channel Packing)
+## Manual MRAO Creation in an image manipulation program (Channel Packing)
 
-If you have several textures you want to create an MRAO from and you don't have Substance Designer, you can create it manually in something like Photoshop.
+If you have several textures you want to create an MRAO from and you don't have any material authoring suite, you can create it manually in something like Photoshop or GIMP.
 
-The process is simple; you just need all 3 textures required to make an MRAO. The end result should look somewhat similar to this:
+The process is simple; you just need all 3 grayscale textures required to make an MRAO.
 
-![Final Resulting MRAO](/images/pbr_guide/channel_pack_final_result.jpg)
+### Photoshop:
+
+{{< hint warning >}}
+This is one method to merge multiple grayscale images into one color image in Photoshop, and this was written quite some time ago, so the precise or more efficient steps might be different.
+{{< /hint >}}
 
 The only layers you need are those of the 3 textures; add them all, check their properties, and look for these checkboxes:
 
@@ -163,4 +159,19 @@ Ambient Occlusion:
 - G Unchecked
 - B Checked
 
-Afterwards, you should have a strange, but colourful looking image that you can save and make use of with the PBR shader.
+### GIMP:
+
+1. If you see the "Create a New Image" dialog, expand the "Advanced Options" dropdown and change _Color space:_ to _Grayscale_.
+   If you opened the image in GIMP directly, go to `Image > Mode > Grayscale`, instead.
+
+2. Add all grayscale images as layers.
+
+3. Go to `Colors > Components > Compose...`
+
+4. A window will open (see below), from here assign your Metalness map to the Red channel, Roughness to the Green channel and Ambient Occlusion to the Blue Channel.
+
+![GIMP Compose Window](/images/pbr_guide/GIMP_compose_channels.jpg)
+
+Whatever program you chose, you should have a strange, but colourful looking image that you can save and make use of with the PBR shader.
+
+![Channel Packing Result](/images/pbr_guide/channel_pack_final_result.jpg)
