@@ -1,4 +1,4 @@
-baseURL: 'https://docs.momentum-mod.org/'
+baseURL: "https://docs.momentum-mod.org/"
 title: Momentum Mod Documentation
 description: Momentum Mod Documentation
 theme: hugo-book
@@ -10,11 +10,11 @@ params:
   BookToC: true
   BookRepo: https://github.com/momentum-mod/docs
   BookCommitPath: commit
-  BookDateFormat: 'Jan 2, 2006'
+  BookDateFormat: "Jan 2, 2006"
   BookEditPath: edit/master
   BookComments: false
-  BookLogo: 'images/masthead.png'
-  # This isn't part of Hugo-Book, it's a hack we do to use to use a different 
+  BookLogo: "images/masthead.png"
+  # This isn't part of Hugo-Book, it's a hack we do to use to use a different
   # string here than the `title` property. ("Momentum Mod Documentation" in
   # the branding looks bad.)
   BrandTitle: Documentation
@@ -25,7 +25,7 @@ permalinks:
   # Hugo pages are grouped into "archetype" so the docs pages need to live in
   # content/docs/ rather than just content/. So this slice removes the "docs"
   # bit from the URL. Hugo is neat!
-  docs: /:sections[1:]/:filename/
+  docs: /:sections[1:]/:contentbasename/
 menu:
   after:
     - name: Tags
@@ -35,13 +35,13 @@ menu:
       pageRef: /categories/
       weight: 20
     - name: Main Site
-      url: 'https://momentum-mod.org'
+      url: "https://momentum-mod.org"
       weight: 30
     - name: Github
-      url: 'https://github.com/momentum-mod'
+      url: "https://github.com/momentum-mod"
       weight: 40
     - name: Discord
-      url: 'https://discord.gg/momentummod'
+      url: "https://discord.gg/momentummod"
       weight: 50
 markup:
   highlight:
