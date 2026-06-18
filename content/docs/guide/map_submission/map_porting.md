@@ -59,7 +59,7 @@ Please follow the [gldsrc porting guide](/guide/mapping/porting_goldsrc_to_sourc
     - [gamebana.com](https://gamebanana.com/) - General modding forum. Often contains information required for submission such as credits, description, and release date
     - [ksf.surf](https://ksf.surf/) (preferred for Surf) - Main hub for competitive surf
     - [jump.tf](https://jump.tf/forum/) (preferred for RJ/SJ) - Main RJ/SJ forum
-    - [femboy.kz](https://files.femboy.kz/fastdl/csgo/maps/) - CS:GO KZ maps  
+    - [femboy.kz](https://files.femboykz.com/fastdl/csgo/maps/) - CS:GO KZ maps  
 3. Rename the map
     - Some map names include version info like _a13, _b2, _njv etc. Rename the **.bsp** file to remove it
     - RJ/SJ maps use **jump_** prefix. This should be changed to **rj_** or **sj_** depending on for which gamemode the map was originally made 
