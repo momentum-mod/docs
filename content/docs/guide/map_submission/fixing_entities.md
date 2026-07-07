@@ -379,4 +379,35 @@ If you're not sure about this, please ask in **#map-porting** channel on our [Di
 ![Moving Brushes](/images/map_porting/moving_brushes.gif)
 
 
- 
+## Bhop Triggers Used as Fail Triggers
+
+On some older maps, a single `trigger_teleport` was set up to act as both a bhop trigger
+*and* a fail/reset teleport. This causes an issue where players can bhop freely inside
+the trigger without being teleported, when a separate fail teleport should be catching
+them instead.
+
+To fix this, we need to duplicate the trigger in the raw entity data, turning it into two
+distinct triggers: one for the bhop, and one dedicated fail teleport.
+
+### Steps
+
+1. Enable cheats and Lumper's Game Sync, then connect Lumper to your currently open map: `sv_cheats 1; mom_lumper_sync 1;`
+2. With the map open in-game, hit **Connect to Game Sync** in Lumper.
+3. Find a trigger that's being used for both purposes. You can identify it by bhopping inside the trigger's volume — if you're not teleported, it's a dual-purpose trigger. ![In Game Trigger](/images/map_porting/bhop_triggerfix_failfix_showtrigger.png)
+4. Look at the trigger in-game, then switch to Lumper and enable **Sync Target**. 
+   Two triggers should appear. Select the `trigger_teleport`, and copy the value to the right of `model` (eg. `*18`).  ![Lumper Demo Trigger](/images/map_porting/bhop_triggerfix_failfix_demo_trigger.png)
+5. In Lumper, go to **Raw Entities**, hit `Ctrl+F`, and search for the value you copied. 
+   Make sure you match the full value exactly — this will be different for every trigger. 
+6. Copy everything between (and including) the braces `{ }` for that entity. ![Lumper Copying Trigger](/images/map_porting/bhop_triggerfix_failfix_details_before.png)
+7. Paste the duplicated entity block back into the raw entities, then edit it: 
+   - **Remove the `filtername` value** — this makes the new trigger apply on touch,
+     rather than only applying after checking that you're standing still/not bhopping.
+   - **Lower the trigger** slightly by subtracting roughly 4–8 units from the Z
+     coordinate in its `origin` value. This prevents the new fail trigger from
+     overlapping the bhop blocks and constantly teleporting the player. ![Lumper New Trigger](/images/map_porting/bhop_triggerfix_failfix_details_after.png)
+8. Save the BSP, then type `reload` in console to reload the map and test. Confirm the
+   fail teleport now works correctly alongside the original bhop trigger.
+
+These steps need to be carried out for every impacted trigger.
+
+
