@@ -49,11 +49,12 @@ Please follow the [gldsrc porting guide](/guide/mapping/porting_goldsrc_to_sourc
 {{</hint>}}
 
 ### Tools
-[Lumper](#TODO-LUMPER-DETAILS) - General porting toolkit. Only use for steps in the guide unless you know what you're doing.  
-**Entity Tools** - In-game tools automating a lot of porting steps. Usage will be covered later in the guide. These are always preferred over Lumper.
+[Momentum Porter](https://github.com/Panzerhandschuh/MomentumPorter) - Converts the map, applies every fix that is the same for all maps (see [What Momentum Porter does](#what-momentum-porter-does)), installs it and lists what is left for you to do.  
+[Lumper](#TODO-LUMPER-DETAILS) - General porting toolkit, for the remaining manual steps. Only use for steps in the guide unless you know what you're doing.  
+**Entity Tools** - In-game tools for the entity changes that need a decision per map. Usage will be covered later in the guide. These are always preferred over Lumper.
 
 ### Preparing the game for porting
-1. [Download](https://github.com/momentum-mod/lumper) Lumper
+1. Download [Momentum Porter](https://github.com/Panzerhandschuh/MomentumPorter/releases) and [Lumper](https://github.com/momentum-mod/lumper)
 2. Download the map you want to port (maps in **.bz2** format can be extracted using [7zip](https://www.7-zip.org/)): 
     - [fastdl.me](https://main.fastdl.me/69.html) - Contains a huge collection of Surf, Bhop, and KZ maps
     - [gamebana.com](https://gamebanana.com/) - General modding forum. Often contains information required for submission such as credits, description, and release date
@@ -63,20 +64,41 @@ Please follow the [gldsrc porting guide](/guide/mapping/porting_goldsrc_to_sourc
 3. Rename the map
     - Some map names include version info like _a13, _b2, _njv etc. Rename the **.bsp** file to remove it
     - RJ/SJ maps use **jump_** prefix. This should be changed to **rj_** or **sj_** depending on for which gamemode the map was originally made 
-4. Put the map (**.bsp**) in **/momentum/maps** folder
-    - You can access it by **right clicking** Momentum Mod in your steam library and selecting **Manage → Browse local files**
-5. Open the map using [Lumper](https://github.com/momentum-mod/lumper)
+4. Drop the map (**.bsp**) onto Momentum Porter and click **Run**
+    - It detects the game the map was made for, converts its entities, applies the fixes listed [below](#what-momentum-porter-does), installs the map into **/momentum/maps** and lists the remaining steps in its **Next steps** tab, each linked to this guide
+    - A map that still needs entity changes in game is marked in the queue; the **Report** tab says what was changed and what to look at
+5. Open the installed map (**/momentum/maps**) using [Lumper](https://github.com/momentum-mod/lumper)
+    - You can access the folder by **right clicking** Momentum Mod in your steam library and selecting **Manage → Browse local files**
 6. Open the map in Momentum Mod by opening the console (**~** by default, key below ESC) and typing `map <map name>`
 7. Open the console again and enable cheats (`sv_cheats 1`) as well as Lumper synchronization (`mom_lumper_sync 1`)
 8. Click the **Connect to Game Sync** button in Lumper
 
 ![Lumper Example](/images/map_porting/connect_to_game_sync.png)
 
+### What Momentum Porter does
+Everything that is the same for every map is done when the map is ported, so the steps below only cover what's left:
+- Converts the entities of **Kreedz Climbing** and **GOKZ** maps to Momentum's, and writes GOKZ maps' timer entities as a zone file
+- Applies the entity fixes that are always correct: the [Bhop Trigger Fix](/guide/map_submission/fixing_entities/#bhop-trigger-fix) and [Model Scale Fix](/guide/map_submission/fixing_entities/#model-scale-fix) on CS:S maps, the [Bhop Block Fix](/guide/map_submission/fixing_entities/#bhop-block-fix) on maps named **bhop_** or **kz_**, the [CSM Fix](/guide/map_submission/fixing_entities/#csm-fix) on CS:GO maps, and **persist** on the [gravity triggers](/guide/map_submission/fixing_entities/#gravity-triggers) of maps from games that kept gravity changes (every game before CS:GO)
+- Removes entities that do nothing in Momentum Mod and that Lumper would mark **invalid**: level transitions, **point_servercommand** (the commands it ran are listed in the report, since they often hold the mapper's max velocity), **env_global** (unless a **logic_auto** reads it), Counter-Strike round entities such as **func_buyzone**, and the rest of Lumper's deny list
+- Removes packed files that Momentum Mod mounts anyway from **CS:S, CS:GO, TF2, Portal 2 and HL2**, for the games installed on your PC ([Step 1](#step-1-remove-valve-assets) covers the rest)
+- Compresses the map
+- Reviews the entities the way the [Entity Tools](/guide/map_submission/fixing_entities/) and the [review checklist](/guide/map_submission/review_checklist/) would, and lists the ones that need a decision in game (teleport velocity modes, boosts, landmark teleports, jails, weapons)
+
+{{<hint info>}}
+
+To check a map that has been through the Entity Tools, use the clipboard button on it in Momentum Porter's queue, or `MomentumPorter-CLI review <map.bsp>`.  
+It tells you which required fixes are still missing.
+
+{{</hint>}}
+
 # Porting 
 ## Step 1: Remove Valve Assets
 Maps may include packed materials, models, and other asset ( similar to a **.zip** file).  
 Momentum Mod **cannot legally redistribute Valve's assets**.  
 Valve's assets may still be used on maps however it is necessary to remove them from the **.bsp**.   
+
+Momentum Porter already removed the packed files that are identical to the ones in **CS:S, CS:GO, TF2, Portal 2 and HL2**, for the games installed on your PC (its report lists how many, and warns about files that differ from the game's copy).  
+Run Lumper's job as well, to catch assets from games you don't have installed:
 
 1. Go to the **Jobs** tab in Lumper
 2. Add **Remove Game Assets** job
@@ -150,13 +172,16 @@ You can skip this step if you didn't rename the map.
 ![Rename Cubemaps](/images/map_porting/rename_cubemaps.png)
 
 ## Step 3: Fix Entities
+Momentum Porter removed the **invalid** entities that do nothing in Momentum Mod (see [what it does](#what-momentum-porter-does)) and lists the entities that need a decision in its **Next steps** tab.
 1. Go to the **Entity Review** tab in **Lumper**
-2. Remove all **invalid** entities
+2. Remove any remaining **invalid** entities
     - Clicking the edit button on the right will bring you to **Entity Editor**. You can delete entities there by clicking the **trash icon**
+    - Invalid entities that are still there need **replacing** rather than deleting (deprecated Momentum triggers, **env_surface_teleport**); the comment says what with
 3. Fix other entities by following the [Entities Guide](/guide/map_submission/fixing_entities/#setup) and comments in **Lumper**
 
 ## Step 4: Compress the Map
-Compression will **significantly** reduce the filesize.
+Compression will **significantly** reduce the filesize.  
+Momentum Porter writes the map compressed; keep it that way when saving your changes in Lumper.
 
 1. Check **Save Compressed**
 2. Check **Update filename-specific Content**

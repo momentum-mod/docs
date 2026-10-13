@@ -15,6 +15,7 @@ For more in-depth information on map porting, please see the [map porting](../ma
 First check:
 - [ ] The map has been in public testing for at least 7 days
 - [ ] The map hasn't already been ported by someone else
+- [ ] [Momentum Porter](/guide/map_submission/map_porting/#what-momentum-porter-does)'s review of the submitted **.bsp** (the clipboard button on it in the queue, or `MomentumPorter-CLI review <map.bsp>`) reports no required fixes missing
 
 # Step 1: Review zones
 
@@ -57,7 +58,7 @@ First check:
 ## Other
 - [ ] The position and yaw of start, stage, and bonus TP destinations are ok (preview position with zoning menu)
 - [ ] Max velocity should be the mapper intended value
-  - This is sometimes found on a point_servercommand. Other times this is only listed where the map was downloaded from.
+  - This is sometimes found on a point_servercommand, which Momentum Porter removes and whose commands it lists in its report. Other times this is only listed where the map was downloaded from.
 - [ ] Cancel zones are used in hub/stage select areas if it is possible to return to hub area without teleporting with a command.
 - [ ] Start/Stage zones with multiple regions in distinct locations with their own teleport destinations should assign each destination to the appropriate region, rather than using the same one for all regions.
 - [ ] When the map uses a filter entity to gate progress to the area a zone is in, the zone should be assigned that filter entity even if the zone cannot be physically reached without the filter due to a filtered teleport trigger in the way. If the filter has Negated value of 1, then it should be negated in the zoning menu.
@@ -70,14 +71,16 @@ First check:
 
 # Step 2: Review in-game entities with entity tools
 
+Momentum Porter applies the fixes marked *(automatic)* when it ports a map, and its review reports any it couldn't; they only need confirming.
+
 - [ ] **Teleport Velocity Mode Tool:** Teleport destinations are marked as "Keep Negative Z" when the map design intends to stop the players horizontal velocity, including when there is a floating "cage".
-- [ ] **Boost Triggers Tool:** Check boost triggers for exploits (see [required entity conversions guide](../map_porting/#required-entity-modifications))
+- [ ] **Boost Triggers Tool:** Check boost triggers for exploits (see [the entities guide](../fixing_entities/#boost-triggers))
   - For boosts at the start of tracks that were turned into `trigger_setspeed`, make sure the boost gives the same speed as when walking into the original trigger. Use the "Restore Original Trigger" and "Reload from BSP" buttons (if available) to easily do a before-and-after comparison. Also make sure these boosts have Strict Mode enabled, and do not use "Ignore" mode for vertical speed.
-- [ ] **Gravity Triggers Tool:** Gravity triggers should persist gravity changes when the player exits the volume in CS:S maps, but not in CS:GO maps
-- [ ] **Model Scale Fix Tool:** Check for any incorrectly sized props
-- [ ] **Bhop Trigger Fix Tool (Bhop only):** If the map uses mpbhop triggers (triggers that force bhopping with targetname filters), check if they have been converted (bhop trigger fix entities should be 0)
-- [ ] **Bhop Block Fix Tool (Bhop only):** If the map uses func_button/func_door bhop platforms, check if they have been converted to func_bhop
-- [ ] **CSM Fix Tool:** CS:GO maps have an `env_cascade_light` entity if they use CSM shadows
+- [ ] **Gravity Triggers Tool** *(automatic)*: Gravity triggers persist gravity changes when the player exits the volume in maps from games before CS:GO (CS:S, KZ Mod, GoldSrc), but not in CS:GO maps. Check that none were meant to change gravity only inside the trigger.
+- [ ] **Model Scale Fix Tool** *(automatic for CS:S)*: Check for any incorrectly sized props
+- [ ] **Bhop Trigger Fix Tool (Bhop only)** *(automatic for CS:S)*: If the map uses mpbhop triggers (triggers that force bhopping with targetname filters), check if they have been converted (bhop trigger fix entities should be 0)
+- [ ] **Bhop Block Fix Tool (Bhop only)** *(automatic for bhop_/kz_ and GoldSrc maps)*: If the map uses func_button/func_door bhop platforms, check if they have been converted to func_bhop
+- [ ] **CSM Fix Tool** *(automatic for CS:GO)*: CS:GO maps have an `env_cascade_light` entity if they use CSM shadows
 
 # Step 3: Other in-game things to review
 - [ ] Maps don't have invalid textures, cubemaps (unless from TF2), skyboxes or models
@@ -86,8 +89,10 @@ First check:
 
 # Step 4: Lumper review
 - [ ] Check for invalid entities ("Entity Review" tab)
+  - Momentum Porter removes the ones that do nothing in Momentum (level transitions, point_servercommand, env_global, Counter-Strike round entities); any left need replacing rather than deleting
 - [ ] Remove weapon strip entities unless adding/removing weapons is a part of the gameplay
 - [ ] Check for Valve assets in the pakfile
+  - Momentum Porter removes files identical to the mounted games' (CS:S, CS:GO, TF2, Portal 2, HL2) for the games installed where it ran, so check for the other games
 - [ ] Check that any custom music files are categorized as such using the appropriate subdirectory
 - [ ] Check that there are no absurdly large textures (e.g. 4-megabyte plain color textures that could be compressed significantly)
 - [ ] (Surf only) Make sure there is no active "jail" system

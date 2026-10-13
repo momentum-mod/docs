@@ -9,11 +9,14 @@ weight: 3
 ---
 
 # Setup
-Some **fixes** and **required modifications** can be automated using in-game **Entity Tools**.  
+The fixes that are the same for every map ([Model Scale](#model-scale-fix), [Bhop Trigger](#bhop-trigger-fix), [Bhop Block](#bhop-block-fix) and [CSM](#csm-fix) fixes, [gravity trigger](#gravity-triggers) persistence, invalid entity removal) are applied by [Momentum Porter](/guide/map_submission/map_porting/#what-momentum-porter-does) when the map is ported.  
+The in-game **Entity Tools** are for the changes that need a decision per map: [teleport velocity modes](#teleport-velocity-mode) and [boost triggers](#boost-triggers), and the automatic fixes on the rare maps the porter couldn't apply them to.  
+Momentum Porter's **Next steps** tab lists which of these its review found in the map.  
 Changes made with **Entity Tools** need to be [Exported To Lumper](#export-to-lumper) and then saved in the **.bsp**.
 
 1. Open **Entity Tools** by typing `devui_show entitytools` in console
-2. Go through each section of the **Entity Tools** and follow to guide to apply correct fixes
+2. Go through each section of the **Entity Tools** and follow the guide to apply correct fixes
+    - Entities the porter already changed are marked **P** in the tools' lists
 
 {{<hint info>}}
 
@@ -127,23 +130,17 @@ That filter is then applied to the chosen trigger by adding the **filtername** k
 
 
 ## Gravity Triggers
-Sometimes **trigger_gravity** is meant to apply permanent gravity changes to the player.   
+In every game before **CS:GO** (and in GoldSrc) a **trigger_gravity**'s change stayed with the player after leaving the trigger, while Momentum Mod, like CS:GO, reverts it.  
+Momentum Porter sets **persist** on every gravity trigger of maps from those games, so they keep behaving as they did; **CS:GO** maps are left alone.  
 
 {{<hint warning>}}
 
 Gravity triggers like that usually come in pairs, **one to modify the gravity, one to revert it**.  
-Make sure you modify all relevant triggers when applying this fix.  
+When changing them by hand, make sure you modify all relevant triggers.  
 
 {{</hint>}}
 
-{{<hint danger>}}
-
-Do **NOT** apply this fix if the trigger is meant to modify gravity **only** when a player is inside of it's volume.
-
-{{</hint>}}
-
-1. Go to the **Gravity Triggers** section.
-2. Identify triggers that are meant to modify gravity **permantently** and check **persist** for them.
+Use the **Gravity Triggers** section only to **untick persist** on a trigger that is meant to modify gravity **only** while the player is inside its volume (rare), or to tick it on a CS:GO map that needs it.
 
 {{<expander title="How is the entity modified?">}}
 **persist: 1** keyvalue is added to the chosen trigger
@@ -152,7 +149,11 @@ Do **NOT** apply this fix if the trigger is meant to modify gravity **only** whe
 ![Fix Gravity Triggers](/images/map_porting/gravity_persist.png)
 
 ## Model Scale Fix
-Maps compiled on an old version of source engine can have models that are too small.
+Maps compiled on an old version of source engine can have models that are too small.  
+Momentum Porter applies this fix to every scaled prop of a **CS:S** map, skipping props that have a collision model (they never had the problem).  
+If it couldn't check for collision models (CS:S isn't installed), it fixes them all and says so in its report.  
+
+Only do it by hand when the porter's report lists scaled props it left alone:
 1. Open entity tools by typing `devui_show entitytools` in console
 2. Open the **Model Scale Fix** Section
     - Teleport to props to see if they are the correct size
@@ -176,7 +177,8 @@ There are no known cases of models having to be fixed individually.
 ## Bhop Trigger Fix
 Some maps force the player to **constantly jump** to not get teleported.   
 This can cause issues when **rapidly jumping/sliding up slopes** or jumping up a ledge when the triggers are sticking out.  
-If this option is available in the **Entity Tools**, you should **always** use it.
+Momentum Porter applies this fix to **CS:S** bhop maps when it ports them, so the **Entity Tools** should list **0** bhop triggers.  
+If the option is still available in the **Entity Tools** (the map uses more than one teleport filter, which the porter leaves alone and reports), you should **always** use it.
 
 {{<expander title="How is the entity modified?">}}
 Maps forcing players to constantly bhop do so by using **filter_activator_name** and applying / removing it from the player after a delay using **OnTrigger** outputs.  
@@ -198,7 +200,8 @@ All **trigger_multiple** originally applying the **targetname** to the player ha
 
 ## Bhop Block Fix
 Some old bhop maps use **func_button** or **func_door** for bhop platform. These should be converted to **func_bhop**.  
-If this option is available in the **Entity Tools**, you should **always** use it.  
+Momentum Porter converts them when it ports a map named **bhop_** or **kz_** (the maps Momentum Mod's own block fix runs on) or a GoldSrc map, so they are already **func_bhop** in the **.bsp**.  
+If the option is still available in the **Entity Tools** (a map with another prefix, or blocks the porter didn't recognise), you should **always** use it.  
 
 {{<hint info>}}
 Checkbox for this fix is **automatically** ticked.  
@@ -215,6 +218,7 @@ All **func_door** are converted to **func_bhop**.
 
 ## CSM Fix
 Some **CS:GO** maps use cascaded shadow maps (CSM) to create more detailed shadows.  
+Momentum Porter adds the entity to every **CS:GO** map it ports that has a **light_environment**, so this is only needed by hand for maps without one.  
 
 {{<expander title="How is the entity modified?">}}
 **env_cascade_light** is added to the **.bsp**
@@ -254,6 +258,13 @@ These files are saved to **/momentum/maps/entitytools_stripper** folder.
 
 
 # Modifications in Lumper
+
+{{<hint info>}}
+
+Momentum Porter already removed the entities that do nothing in Momentum Mod and that Lumper marks **invalid**: **trigger_changelevel**, **trigger_transition**, **point_servercommand** (its commands are listed in the porter's report), **env_global** (unless a **logic_auto** reads its state), **game_ui**, **logic_console** and the Counter-Strike round entities (**func_buyzone**, **func_bomb_target**, **info_map_parameters**...).  
+What's left in Lumper's **Entity Review** needs a decision, as below.
+
+{{</hint>}}
 
 ## func_button
 Some buttons reset their position **much slower** in Momentum Mod.  
