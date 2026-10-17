@@ -104,6 +104,8 @@ A tier 4 map with 295 completions:
 | ------ | ----- | ----- | ----- | --- | --- | --- |
 | Points | 4,010 | 2,780 | 1,140 | 406 | 233 | 57  |
 
+See [here](https://www.desmos.com/calculator/imogf90t2i) for an interactive graph using this values.
+
 ## Stages and Bonuses
 
 Stages and bonuses use the same calculation as the main track, but their points are scaled down so that they don't outweigh the main track:
