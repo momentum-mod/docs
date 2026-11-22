@@ -5,7 +5,6 @@ categories:
 tags:
   - meta
   - contributing
-math: true
 ---
 
 All pages on this site are hosted in the [Momentum Mod docs GitHub repository](https://github.com/momentum-mod/docs). The site uses [Hugo](https://gohugo.io/) with the [Hugo Book](https://github.com/alex-shpak/hugo-book), and is entirely open source.
@@ -124,16 +123,6 @@ Controls the position of the page in the side menu. The lower the weight, the hi
 
 Overrides the value of `title` used at the top of the page. For when a page should have a longer title on the page itself, but use `title` in the menu.
 
-#### `math`
-
-Enables math typesetting using [KaTeX](https://katex.org/). By setting `math` to `true`, any blocks enclosed with `$$` will be treated as LaTeX code. For example,
-
-```$$ e^{ \pm i\theta } = \cos \theta \pm i\sin \theta $$```
-
-will be rendered as
-
-$$ e^{ \pm i\theta } = \cos \theta \pm i\sin \theta $$
-
 #### `requires_mapping`
 
 If `true`, displays a warning at the top of the page that the `-mapping` launch option is required. _(will be removed in the future when `-mapping` mode is removed)_
@@ -226,6 +215,26 @@ You can apply specific CSS styling to `<img>` elements using `{{</* img style="C
 #### color
 
 You can apply specific CSS color codes to text using `{{</* color */>}}`. E.g. `{{</* color color="lightgreen" text="green" */>}}` renders as {{< color color="lightgreen" text="green" >}}.
+
+#### Math
+
+Math is typeset with [KaTeX](https://katex.org/) when the site is built, so it works on any page without extra setup. Write the formula in LaTeX.
+
+For a formula on its own line, use a `katex` code block:
+
+````md
+```katex
+e^{ \pm i\theta } = \cos \theta \pm i\sin \theta
+```
+````
+
+is displayed as
+
+```katex
+e^{ \pm i\theta } = \cos \theta \pm i\sin \theta
+```
+
+For math inside a sentence, use the `katex` shortcode. For example, `{{</* katex */>}}\theta{{</* /katex */>}}` renders as {{< katex >}}\theta{{< /katex >}}.
 
 #### Others
 
