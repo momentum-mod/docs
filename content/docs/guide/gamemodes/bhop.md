@@ -5,7 +5,6 @@ categories:
 tags:
   - gamemode
   - bhop
-math: true
 ---
 
 ## What is Bhop?
@@ -47,6 +46,8 @@ Now, in order to prevent players from gaining infinite speed simply by holding W
 
 To calculate the smallest angle a player can accelerate at in order for this acceleration to get around the speed cap with the expression 
 
-$$ acos (\frac{limit}{\vert{speed}\vert}\) $$
+```katex
+\operatorname{acos}\left(\frac{limit}{\vert speed \vert}\right)
+```
 
 This minimal angle is desireable as the smaller the angle the greater the contribution to forward speed.

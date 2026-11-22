@@ -1,0 +1,14 @@
+{{- /*
+  Override of the hugo-book render hook: renders KaTeX as HTML (with MathML for
+  accessibility) instead of MathML only, so it uses KaTeX fonts and looks the
+  same in every browser.
+*/ -}}
+{{- $attributes := merge
+  (dict
+    "displayMode" true
+    "output" "htmlAndMathml")
+  .Attributes
+-}}
+{{- if .Inner -}}
+  {{ transform.ToMath .Inner $attributes }}
+{{- end -}}

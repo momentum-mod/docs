@@ -1,11 +1,1 @@
-{{ if .Params.math }}{{ partial "katex.html" . }}{{ end }}
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        });
-    });
-</script>
+<link rel="stylesheet" href="{{ "katex/katex.min.css" | relURL }}" />
