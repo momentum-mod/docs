@@ -1,0 +1,17 @@
+{{- /*
+  Override of the hugo-book `katex` shortcode: renders KaTeX as HTML (with
+  MathML for accessibility) instead of MathML only, so it uses KaTeX fonts and
+  looks the same in every browser.
+*/ -}}
+{{- $attributes := merge
+  (dict
+    "output" "htmlAndMathml")
+  (cond .IsNamedParams .Params dict)
+-}}
+{{- if .Get "display" -}}
+  {{- warnf "KaTeX param 'display' is deprecated, use 'displayMode'"}}
+  {{- $attributes = merge $attributes (dict "displayMode" true) -}}
+{{- end -}}
+{{- if .Inner -}}
+  {{- transform.ToMath .Inner $attributes -}}
+{{- end -}}
