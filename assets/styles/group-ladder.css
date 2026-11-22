@@ -1,0 +1,313 @@
+/* Styles for the `group-ladder` shortcode (group system explorer). */
+
+.group-ladder {
+  /* Group colours match the in-game group pills. */
+  --gl-top: rgba(61, 0, 112, 0.545);
+  --gl-top-text: rgb(190, 113, 255);
+  --gl-g1: rgba(125, 0, 0, 0.586);
+  --gl-g1-text: rgb(255, 110, 110);
+  --gl-g2: rgba(115, 80, 0, 0.735);
+  --gl-g2-text: rgb(255, 200, 80);
+  --gl-g3: rgba(0, 100, 30, 0.721);
+  --gl-g3-text: rgb(120, 255, 160);
+  --gl-g4: rgba(15, 50, 100, 0.716);
+  --gl-g4-text: rgb(150, 190, 255);
+  --gl-g5: rgb(175, 179, 192);
+  --gl-g5-text: rgb(255, 255, 255);
+  --gl-g6: rgba(45, 47, 54, 0.859);
+  --gl-g6-text: rgb(190, 195, 208);
+  --gl-log: var(--color-accent-info, #1896d3);
+  --gl-good: #2fa86b;
+
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 0.5rem;
+  background: var(--gray-100);
+  font-size: var(--font-size-smaller);
+}
+
+.group-ladder input,
+.group-ladder select,
+.group-ladder button {
+  font: inherit;
+  color: var(--body-font-color);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background: var(--body-background);
+}
+
+.group-ladder input,
+.group-ladder select {
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+}
+
+.group-ladder input:focus-visible,
+.group-ladder select:focus-visible,
+.group-ladder button:focus-visible {
+  outline: 2px solid var(--gl-log);
+  outline-offset: 1px;
+}
+
+.group-ladder button {
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+}
+
+.group-ladder button:hover {
+  background: var(--gray-200);
+}
+
+.group-ladder label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 500;
+}
+
+.group-ladder small {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+/* Inputs */
+
+.gl-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+}
+
+/* Summary values */
+
+.gl-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.gl-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  background: var(--body-background);
+}
+
+.gl-stats > div > span {
+  font-size: var(--font-size-smallest);
+  opacity: 0.75;
+}
+
+.gl-stats b {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.15rem;
+}
+
+/* Rank bar */
+
+.gl-bar-wrap {
+  margin: 0.5rem 0 0.75rem;
+}
+
+.gl-bar {
+  position: relative;
+  height: 2.75rem;
+  overflow: hidden;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  background: var(--body-background);
+}
+
+.gl-seg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-right: 1px solid var(--body-background);
+  background: var(--seg, var(--gl-log));
+}
+
+.gl-seg.top {
+  background: var(--gl-top);
+}
+
+.gl-seg.none {
+  border-right: 0;
+  background: repeating-linear-gradient(135deg, var(--gray-200) 0 6px, transparent 6px 12px);
+}
+
+.gl-seg > span {
+  color: var(--seg-text, var(--body-font-color));
+  font-size: var(--font-size-smallest);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.gl-seg.top > span {
+  color: var(--gl-top-text);
+}
+
+.gl-lookup {
+  margin: 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--gl-log);
+  border-radius: var(--border-radius);
+  background: var(--body-background);
+}
+
+/* Tables */
+
+.gl-scroll {
+  overflow-x: auto;
+}
+
+.group-ladder table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+.group-ladder table tr th,
+.group-ladder table tr td {
+  padding: 0.35rem 0.6rem;
+  border: 0;
+  border-bottom: 1px solid var(--gray-200);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.group-ladder thead th {
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.group-ladder tbody tr:nth-child(2n) {
+  background: none;
+}
+
+.group-ladder table tr th:first-child,
+.group-ladder table tr td:first-child {
+  text-align: left;
+}
+
+.gl-dash {
+  margin: 0 0.5rem;
+}
+
+.gl-groups tbody th {
+  font-weight: 700;
+}
+
+.gl-groups tr.me {
+  outline: 2px solid var(--gl-log);
+  outline-offset: -2px;
+}
+
+.gl-groups tr.empty {
+  opacity: 0.55;
+}
+
+.gl-swatch {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-right: 0.5rem;
+  vertical-align: -0.05rem;
+  border-radius: 2px;
+  background: var(--seg, var(--gl-log));
+}
+
+.gl-groups tr.top .gl-swatch {
+  background: var(--gl-top);
+}
+
+.gl-groups tr.none .gl-swatch {
+  background: repeating-linear-gradient(135deg, var(--gray-300) 0 3px, transparent 3px 6px);
+}
+
+.gl-climb {
+  color: var(--gl-good);
+  font-weight: 700;
+}
+
+.gl-climb.low {
+  color: var(--color-accent-warning, #f3841c);
+}
+
+.gl-climb.vlow {
+  color: var(--color-accent-danger, #ff4d4d);
+}
+
+.gl-dim {
+  opacity: 0.5;
+}
+
+/* Parameters */
+
+.gl-params {
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  background: var(--body-background);
+}
+
+.gl-params summary {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.gl-params p {
+  margin: 0.5rem 0;
+  opacity: 0.8;
+}
+
+.gl-modified {
+  margin-left: 0.5rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--color-accent-warning, #f3841c);
+  font-size: var(--font-size-smallest);
+  font-weight: 500;
+}
+
+.gl-param-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.gl-param-grid fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+}
+
+.gl-param-grid legend {
+  padding: 0 0.25rem;
+  font-size: var(--font-size-smallest);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.group-ladder math {
+  font-size: 1.1em;
+}

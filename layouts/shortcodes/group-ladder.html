@@ -1,0 +1,72 @@
+{{- $m := dict "output" "htmlAndMathml" -}}
+{{- $css := resources.Get "styles/group-ladder.css" | minify | fingerprint -}}
+{{- $js := resources.Get "js/group-ladder.js" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<div class="group-ladder">
+  <div class="gl-inputs">
+    <label>
+      <span>Completions on the map ({{ transform.ToMath "X" $m }})</span>
+      <input type="number" data-x value="1000" min="1" inputmode="numeric">
+    </label>
+    <label>
+      <span>Your rank <small>(optional)</small></span>
+      <input type="number" data-rank min="1" inputmode="numeric" placeholder="e.g. 237">
+    </label>
+    <label>
+      <span>Bar scale</span>
+      <select data-scale>
+        <option value="linear">Linear</option>
+        <option value="log">Logarithmic</option>
+      </select>
+    </label>
+  </div>
+
+  <details class="gl-params">
+    <summary>Parameters <span class="gl-modified" data-modified hidden>modified</span></summary>
+    <p>These are the values the game uses. Change them to see how each one shapes the ladder.</p>
+    <div class="gl-param-grid">
+      <fieldset>
+        <legend>G1 anchor</legend>
+        <label><span>{{ transform.ToMath "p_1" $m }} G1 share of completions (%)</span><input type="number" data-param="p1" value="2" min="0.5" max="20" step="0.5"></label>
+        <label><span>{{ transform.ToMath "F_1" $m }} minimum G1 cutoff (rank)</span><input type="number" data-param="f1" value="15" min="11" max="200"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Ladder shape</legend>
+        <label><span>{{ transform.ToMath "n" $m }} log-spaced groups</span><input type="number" data-param="nc" value="6" min="1" max="12"></label>
+        <label><span>{{ transform.ToMath "q" $m }} ladder end (% of completions)</span><input type="number" data-param="q" value="67" min="10" max="100"></label>
+        <label><span>{{ transform.ToMath "k" $m }} extra linear groups</span><input type="number" data-param="nt" value="0" min="0" max="6"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Limits</legend>
+        <label><span>{{ transform.ToMath "g" $m }} grouping limit (% of completions)</span><input type="number" data-param="gc" value="67" min="10" max="100"></label>
+        <label><span>{{ transform.ToMath "M" $m }} always-grouped ranks</span><input type="number" data-param="mg" value="100" min="0" max="1000"></label>
+        <label><span>{{ transform.ToMath "w" $m }} minimum group size</span><input type="number" data-param="w" value="5" min="1" max="50"></label>
+      </fieldset>
+    </div>
+    <button type="button" data-reset-params>Reset to game values</button>
+  </details>
+
+  <div class="gl-stats">
+    <div><span>{{ transform.ToMath "c_1" $m }} G1 cutoff</span><b data-out="c1"></b></div>
+    <div><span>{{ transform.ToMath "Q" $m }} ladder end</span><b data-out="Q"></b></div>
+    <div><span>{{ transform.ToMath "\\mathrm{cap}" $m }} last grouped rank</span><b data-out="cap"></b></div>
+    <div><span>{{ transform.ToMath "r" $m }} cutoff ratio</span><b data-out="r"></b></div>
+    <div><span>Groups</span><b data-out="groups"></b></div>
+  </div>
+
+  <div class="gl-bar-wrap">
+    <div class="gl-bar" data-bar></div>
+  </div>
+
+  <p class="gl-lookup" data-lookup aria-live="polite" hidden></p>
+
+  <div class="gl-scroll">
+    <table class="gl-groups">
+      <thead>
+        <tr><th>Group</th><th>Ranks</th><th>Number of Players</th><th>Share of map</th><th>Climb</th></tr>
+      </thead>
+      <tbody data-groups></tbody>
+    </table>
+  </div>
+</div>
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
